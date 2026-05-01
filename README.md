@@ -4,9 +4,20 @@ A safe, offline coding tutorial for ages 7+. Teaches the same workflow grown-ups
 
 ## Install (Windows)
 
-1. Double-click `KidsCodeAcademy.exe`. That's it.
+**Option 1 — One-line PowerShell installer (downloads + verifies + launches):**
 
-The exe sits at `C:\Users\computer\Desktop\AI\KidsCodeAcademy.exe`.
+```powershell
+irm https://raw.githubusercontent.com/awesomo913/KidsCodeAcademy/main/install.ps1 | iex
+```
+
+The installer drops `KidsCodeAcademy.exe` on your Desktop, verifies the SHA-256 against the pinned hash, and launches it. No admin rights, no registry edits.
+
+**Option 2 — Manual download:**
+
+1. Grab the EXE from the [Releases page](https://github.com/awesomo913/KidsCodeAcademy/releases/latest).
+2. Double-click `KidsCodeAcademy.exe`. That's it.
+
+Verify by hash (optional): `Get-FileHash KidsCodeAcademy.exe -Algorithm SHA256` should match the value pinned in [install.ps1](install.ps1).
 
 ## What's inside
 
