@@ -1,4 +1,4 @@
-"""Generate app icons for CC Kids Academy.
+"""Generate app icons for Kids Code Academy.
 
 Produces PNGs in ./icons/:
   icon-192.png           — small launcher

@@ -1,7 +1,7 @@
-# CC Kids Academy — Project Rules
+# Kids Code Academy — Project Rules
 
 Project-local rules that override the parent `CLAUDE.md` for files inside
-`C:\Users\computer\Desktop\AI\cc-kids-academy\`.
+`C:\Users\computer\Desktop\AI\KidsCodeAcademy\`.
 
 ## Audience hard-rules
 - **The end user is a 7-year-old.** Every user-visible string must be readable at 2nd-grade level.
@@ -21,6 +21,6 @@ Project-local rules that override the parent `CLAUDE.md` for files inside
 
 ## Build hard-rules
 - `python build.py` is the only supported build path. Never invoke `pyinstaller` directly.
-- Final exe lives at `C:/Users/computer/Desktop/AI/CC-Kids-Academy.exe`. Don't rename.
+- Final exe lives at `C:/Users/computer/Desktop/AI/KidsCodeAcademy.exe`. Don't rename.
 - Use `uv pip` per global rules. Never `pip`.
-- Run `bash ~/.claude/scripts/check-gui-integrity.sh "C:/Users/computer/Desktop/AI/cc-kids-academy"` before pushing.
+- Run `bash ~/.claude/scripts/check-gui-integrity.sh "C:/Users/computer/Desktop/AI/KidsCodeAcademy"` before pushing.

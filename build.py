@@ -1,10 +1,10 @@
-"""Build pipeline for CC Kids Academy.
+"""Build pipeline for Kids Code Academy.
 
 Steps:
   1. Generate icons + procedural mascot frames + sfx wavs
   2. Pre-render lesson narration to wav (TTS) -- skipped if --no-audio
-  3. Run PyInstaller -> single-file CC-Kids-Academy.exe
-  4. Copy exe to ../CC-Kids-Academy.exe (next to ClaudeCodeMastery.exe)
+  3. Run PyInstaller -> single-file KidsCodeAcademy.exe
+  4. Copy exe to ../KidsCodeAcademy.exe (next to ClaudeCodeMastery.exe)
   5. Clean dist/, build/, *.spec
 
 Run: python build.py
@@ -24,7 +24,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger("build")
 
 ROOT = Path(__file__).resolve().parent
-PROJECT_NAME = "CC-Kids-Academy"
+PROJECT_NAME = "KidsCodeAcademy"
 ENTRYPOINT = "app.py"
 
 

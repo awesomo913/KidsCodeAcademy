@@ -1,6 +1,6 @@
-# CC Kids Academy — Breakdown
+# Kids Code Academy — Breakdown
 **Created:** 2026-05-01
-**Location:** `C:\Users\computer\Desktop\AI\cc-kids-academy`
+**Location:** `C:\Users\computer\Desktop\AI\KidsCodeAcademy`
 **Language/Stack:** Python 3.11 (pywebview wrapper) + single-file vanilla HTML/CSS/JS, packaged via PyInstaller into a standalone Windows `.exe`.
 
 ---
@@ -14,13 +14,13 @@ A safe, offline coding tutorial for a 7-year-old. Teaches the same dev workflow 
 - **Build the EXE:** `python build.py` (~90s end-to-end including TTS prebake)
   - `python build.py --no-audio` to skip TTS (~30s)
   - `python build.py --no-package` to refresh assets only
-- **Ship target:** `C:\Users\computer\Desktop\AI\CC-Kids-Academy.exe` (~48 MB)
+- **Ship target:** `C:\Users\computer\Desktop\AI\KidsCodeAcademy.exe` (~48 MB)
 - **Requirements:** Windows 10+, Python 3.11. WebView2 runtime ships with Windows 11.
 
 ## 3. Architecture & File Structure
 
 ```
-cc-kids-academy/
+KidsCodeAcademy/
 ├── app.py                              # pywebview wrapper + JSBridge for kid_projects save
 ├── index.html                          # single-file UI, mini-game engine, mascot, sandbox AI, parent corner
 ├── build.py                            # asset gen → TTS prebake → PyInstaller → publish → clean
@@ -53,7 +53,7 @@ cc-kids-academy/
 2. `index.html` boots → `LessonStore.load()` fetches each `lessons/*.json` → `UI.renderSidebar()` builds the lesson list with locked / unlocked / completed states.
 3. Click a lesson → `UI.openLesson(id)` renders mascot + speech bubble + audio controls + chat (if `lesson.sandbox.helpers`) + game area.
 4. Mini-game completion → `UI.completeLesson(id)` writes to `localStorage`, plays sticker SFX, swaps mascot to `cheer`.
-5. Lesson 16 saves the kid's edited SVG to `%APPDATA%\CC-Kids-Academy\kid_projects\` via `JSBridge.save_kid_project`.
+5. Lesson 16 saves the kid's edited SVG to `%APPDATA%\KidsCodeAcademy\kid_projects\` via `JSBridge.save_kid_project`.
 
 ## 4. Key Decisions & Why
 - **Forked the existing `cc-mastery-pwa` engine pattern instead of starting fresh** — same pywebview + single-HTML model the adult app uses. Cuts shipping pipeline rebuild work to zero.
@@ -75,7 +75,7 @@ cc-kids-academy/
 - Built Parent Corner with PIN gate, transcript log, progress reset.
 - Built Lesson 16 capstone: live color-swap of inline-SVG "Bubby's World" with save-to-AppData.
 - Built `gen_sfx.py` (8 procedural .wav files) and `prebake_audio.py` (pyttsx3 SAPI narration for all 16 lessons).
-- Built `build.py` pipeline → ships `CC-Kids-Academy.exe` (~48 MB) next to `ClaudeCodeMastery.exe`.
+- Built `build.py` pipeline → ships `KidsCodeAcademy.exe` (~48 MB) next to `ClaudeCodeMastery.exe`.
 - Verified exe launches, loads `index.html` from PyInstaller `_MEIPASS`.
 - Skipped/deferred for v2: real Bytey art, ElevenLabs voice quality, PWA + APK builds, full Sprite Editor / Bubby's Game snapshots in `vendor/`, locale-swap support.
 - Known issues: only Lesson 2 + Lesson 8 ship sandbox AI scripts in v1; other lessons can have their `sandbox` block added without code change.

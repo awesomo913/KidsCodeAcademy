@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>CC Kids Academy</title>
+<title>Kids Code Academy</title>
 <style>
 :root {
   --bg-1: #fff5d6;
@@ -346,11 +346,42 @@ button { font-family: inherit; cursor: pointer; }
 .success { color: var(--accent-4); font-weight: 700; }
 .muted { color: var(--ink-soft); }
 </style>
+  <meta property="og:title" content="KidsCodeAcademy" />
+  <meta property="og:description" content="---" />
+  <meta property="og:site_name" content="Revolutionary Designs" />
+  <meta property="og:url" content="https://github.com/awesomo913/KidsCodeAcademy" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="KidsCodeAcademy" />
+  <meta name="twitter:description" content="---" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "KidsCodeAcademy",
+  "description": "---",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "author": {
+    "@type": "Organization",
+    "name": "Revolutionary Designs",
+    "url": "https://github.com/awesomo913",
+    "email": "solidgoldbarsinmycloset@gmail.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Revolutionary Designs"
+  },
+  "license": "https://spdx.org/licenses/MIT.html",
+  "codeRepository": "https://github.com/awesomo913/KidsCodeAcademy",
+  "programmingLanguage": "Python"
+}
+  </script>
 </head>
 <body data-theme="day">
 
 <header class="topbar">
-  <h1>CC Kids Academy</h1>
+  <h1>Kids Code Academy</h1>
   <span class="tag" id="streakTag">0 stickers</span>
   <span class="spacer"></span>
   <button id="readBtn" class="ghost" title="Read aloud">Read aloud</button>
@@ -455,10 +486,10 @@ function isHexOrNamed(c) {
  *  Storage / Progress
  * ============================================================ */
 const Store = {
-  K_PROG: "cckids.progress.v1",
-  K_PIN: "cckids.pin.v1",
-  K_TRANS: "cckids.transcripts.v1",
-  K_THEME: "cckids.theme.v1",
+  K_PROG: "kca.progress.v1",
+  K_PIN: "kca.pin.v1",
+  K_TRANS: "kca.transcripts.v1",
+  K_THEME: "kca.theme.v1",
   load(k, fb) {
     try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; }
     catch { return fb; }

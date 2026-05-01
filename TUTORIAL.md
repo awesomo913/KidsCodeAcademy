@@ -1,4 +1,4 @@
-# CC Kids Academy — Tutorial
+# Kids Code Academy — Tutorial
 **Last updated:** 2026-05-01 (v0.1.0)
 
 ---
@@ -7,7 +7,7 @@
 
 Get a 7-year-old learning to code in under 60 seconds.
 
-1. Double-click `C:\Users\computer\Desktop\AI\CC-Kids-Academy.exe`.
+1. Double-click `C:\Users\computer\Desktop\AI\KidsCodeAcademy.exe`.
 2. The window opens. Bytey the robot waves. The first lesson is already on screen.
 3. Click **▶ Play**. Bytey reads the lesson out loud.
 4. Click the right answer in the mini-game. Earn a sticker. Move on to Lesson 2.
@@ -51,7 +51,7 @@ There are 6 game types woven through the lessons:
 ### Lesson 16 — First Real Project
 - **What it does** — kid picks a part of "Bubby's World" (Hero / Ground / Block) and a color, then saves the result.
 - **How to do it** — tap a part, tap a color swatch, tap **Save my world**.
-- **Result** — an SVG file lands at `C:\Users\<you>\AppData\Roaming\CC-Kids-Academy\kid_projects\bubbys_world_<timestamp>.svg`. Open it in any browser to admire.
+- **Result** — an SVG file lands at `C:\Users\<you>\AppData\Roaming\KidsCodeAcademy\kid_projects\bubbys_world_<timestamp>.svg`. Open it in any browser to admire.
 
 ### Parent Corner
 - **What it does** — PIN-gated dashboard for the parent.
@@ -100,4 +100,4 @@ There are 6 game types woven through the lessons:
 
 ### 2026-05-01 — v0.1.0
 - Added: 16 lessons, mascot animation, read-aloud audio, 6 mini-game types, sandbox AI for Lessons 2 + 8, Parent Corner with PIN, Lesson 16 save-a-copy.
-- Shipped: `CC-Kids-Academy.exe` (~48 MB) on Windows.
+- Shipped: `KidsCodeAcademy.exe` (~48 MB) on Windows.

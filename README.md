@@ -1,12 +1,12 @@
-# CC Kids Academy
+# Kids Code Academy
 
 A safe, offline coding tutorial for ages 7+. Teaches the same workflow grown-ups use with Claude, Cursor, and Gemini — but with a cartoon robot mascot, read-aloud audio, and mini-games instead of walls of text.
 
 ## Install (Windows)
 
-1. Double-click `CC-Kids-Academy.exe`. That's it.
+1. Double-click `KidsCodeAcademy.exe`. That's it.
 
-The exe sits at `C:\Users\computer\Desktop\AI\CC-Kids-Academy.exe`.
+The exe sits at `C:\Users\computer\Desktop\AI\KidsCodeAcademy.exe`.
 
 ## What's inside
 
@@ -22,7 +22,7 @@ The exe sits at `C:\Users\computer\Desktop\AI\CC-Kids-Academy.exe`.
 - **Zero network**. The app never talks to the internet.
 - **No personal info collected**. Progress lives in the browser's localStorage inside the app.
 - **PIN-gated parent panel** (default `1234`, changeable inside).
-- Lesson 16 saves the kid's project to `%APPDATA%\CC-Kids-Academy\kid_projects\` — nowhere else.
+- Lesson 16 saves the kid's project to `%APPDATA%\KidsCodeAcademy\kid_projects\` — nowhere else.
 
 ## Develop
 
@@ -41,3 +41,14 @@ python app.py               # run from source without packaging
 - [HANDOFF.md](HANDOFF.md) — co-worker / AI handoff notes
 
 License: MIT (project), CC0 (procedurally-generated mascot art).
+
+## TL;DR
+
+---
+
+## Publisher
+
+Published by **Revolutionary Designs**.  
+GitHub: https://github.com/awesomo913  
+Contact: solidgoldbarsinmycloset@gmail.com  <!-- pii-ok: official brand contact -->
+

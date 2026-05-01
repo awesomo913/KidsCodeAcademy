@@ -1,4 +1,4 @@
-"""CC Kids Academy — sandboxed coding tutorial for ages 7+.
+"""Kids Code Academy — sandboxed coding tutorial for ages 7+.
 
 Loads the kid-themed tutorial HTML in a native pywebview window.
 All AI helpers (Claude / Cursor / Gemini) are pre-scripted JSON — zero network.
@@ -18,7 +18,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s: %(message)s",
 )
-log = logging.getLogger("cc-kids-academy")
+log = logging.getLogger("KidsCodeAcademy")
 
 # Crash logger (Crash Logger Rule). Best-effort; never block app launch on import.
 try:
@@ -30,7 +30,7 @@ try:
 except Exception as _exc:  # pragma: no cover
     log.info("crash_logger not available: %s", _exc)
 
-APP_TITLE = "CC Kids Academy"
+APP_TITLE = "Kids Code Academy"
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 860
 MIN_WIDTH = 800
@@ -48,7 +48,7 @@ def get_base_dir() -> Path:
 def get_user_data_dir() -> Path:
     """Writable per-user folder for kid project saves (Lesson 16)."""
     appdata = os.environ.get("APPDATA") or str(Path.home() / "AppData" / "Roaming")
-    user_dir = Path(appdata) / "CC-Kids-Academy" / "kid_projects"
+    user_dir = Path(appdata) / "KidsCodeAcademy" / "kid_projects"
     user_dir.mkdir(parents=True, exist_ok=True)
     return user_dir
 
