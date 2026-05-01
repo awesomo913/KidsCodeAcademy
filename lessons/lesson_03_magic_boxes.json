@@ -1,0 +1,24 @@
+{
+  "id": 3,
+  "title": "Magic Boxes",
+  "goal": "A variable is a box with a name. Put something in, get it back later.",
+  "sticker_emoji": "📦",
+  "mascot_lines": [
+    "Imagine a box labeled NAME.",
+    "We put 'Sam' inside the box.",
+    "Now whenever we say NAME, the computer thinks 'Sam'.",
+    "Boxes hold things for us. Drag the right thing into each box!"
+  ],
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Drag each thing into its labeled box.",
+      "pairs": [
+        { "left": "🐱", "right": "PET" },
+        { "left": "🍕", "right": "FOOD" },
+        { "left": "Sam", "right": "NAME" },
+        { "left": "7", "right": "AGE" }
+      ]
+    }
+  }
+}

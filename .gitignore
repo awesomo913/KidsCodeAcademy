@@ -1,0 +1,29 @@
+# Build artifacts
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtualenvs
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local-only secrets (none should exist here, but defensive)
+.env
+.env.*
+
+# DO NOT IGNORE — kept in repo per CLAUDE.md GUI Integrity Rule:
+# !assets/
+# !lessons/
+# !sandbox_ai/
+# !icons/
+# !parent/
+# !vendor/

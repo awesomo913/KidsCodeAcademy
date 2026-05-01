@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "title": "Talking to Claude",
+  "goal": "Type a wish to a pretend AI helper. Watch it answer!",
+  "sticker_emoji": "💬",
+  "mascot_lines": [
+    "Claude is a robot friend who reads what you type.",
+    "You ask, and Claude tries to help.",
+    "Try the chat box: type 'make me a star' and press Ask."
+  ],
+  "sandbox": {
+    "helpers": ["claude"],
+    "hint": "Type 'make me a star' or 'draw a heart'.",
+    "complete_after": 1,
+    "auto_complete": false
+  },
+  "game": {
+    "type": "type-this-word",
+    "payload": {
+      "prompt": "Now you try! Type the magic words below.",
+      "target_display": "make me a star",
+      "targets": ["star"],
+      "hint_wrong": "Try typing the word star."
+    }
+  }
+}

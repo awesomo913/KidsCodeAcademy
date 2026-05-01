@@ -1,0 +1,29 @@
+{
+  "id": 8,
+  "title": "Three Helpers",
+  "goal": "Claude reads big projects. Cursor edits files fast. Gemini knows lots. Pick the right helper for the job!",
+  "sticker_emoji": "🤝",
+  "mascot_lines": [
+    "Claude is the BIG-PICTURE robot. Great for plans and reading lots.",
+    "Cursor is the FAST-EDIT robot. Great for fixing one line.",
+    "Gemini knows LOTS. Great for facts and pictures.",
+    "Try asking each one the same question — see how the answers differ!"
+  ],
+  "sandbox": {
+    "helpers": ["claude", "cursor", "gemini"],
+    "hint": "Try 'make me a story' on each helper. Notice how each replies in its own way.",
+    "complete_after": 0,
+    "auto_complete": false
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Match the job to the helper.",
+      "pairs": [
+        { "left": "Read 50 files and plan", "right": "Claude" },
+        { "left": "Fix one tiny line", "right": "Cursor" },
+        { "left": "Tell me about pandas", "right": "Gemini" }
+      ]
+    }
+  }
+}

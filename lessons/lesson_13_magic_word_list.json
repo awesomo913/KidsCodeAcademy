@@ -1,0 +1,23 @@
+{
+  "id": 13,
+  "title": "The Magic Word List",
+  "goal": "Skills are special words that give a helper new powers.",
+  "sticker_emoji": "🪄",
+  "mascot_lines": [
+    "Claude has a list of magic words called SKILLS.",
+    "Say 'draw a cat' and the cat-skill appears!",
+    "Match each magic word to its power."
+  ],
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Match the skill name to what it does.",
+      "pairs": [
+        { "left": "/loop", "right": "Repeat a task" },
+        { "left": "/save", "right": "Push to cloud" },
+        { "left": "/draw", "right": "Make a picture" },
+        { "left": "/read", "right": "Read out loud" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CC Kids Academy</title>
+<style>
+:root {
+  --bg-1: #fff5d6;
+  --bg-2: #ffd6ec;
+  --bg-3: #d6e7ff;
+  --panel: #ffffff;
+  --panel-2: #fff9ec;
+  --ink: #1a1a3a;
+  --ink-soft: #4d4d70;
+  --accent: #ff5a78;
+  --accent-2: #6b8cff;
+  --accent-3: #ffb84d;
+  --accent-4: #5acf95;
+  --locked: #cfd1e0;
+  --shadow: 0 6px 0 rgba(26,26,58,0.12);
+  --shadow-2: 0 8px 24px rgba(26,26,58,0.10);
+  --r-lg: 22px;
+  --r-md: 14px;
+  --r-sm: 10px;
+  --font: "Fredoka", "Baloo 2", "Comic Sans MS", "Segoe UI", system-ui, sans-serif;
+  --dur: 220ms;
+}
+[data-theme="night"] {
+  --bg-1: #1b2244;
+  --bg-2: #2a1d4a;
+  --bg-3: #142042;
+  --panel: #2c2f55;
+  --panel-2: #232753;
+  --ink: #f6f7ff;
+  --ink-soft: #b9bee0;
+  --locked: #4a4c70;
+  --shadow: 0 6px 0 rgba(0,0,0,0.4);
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2) 60%, var(--bg-3));
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 18px;
+  min-height: 100vh;
+}
+button { font-family: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 2px; border-radius: 6px; }
+
+.topbar {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 22px;
+  background: var(--panel);
+  border-bottom: 4px solid var(--accent-3);
+  position: sticky; top: 0; z-index: 30;
+}
+.topbar h1 {
+  font-size: 26px; margin: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.topbar .spacer { flex: 1; }
+.topbar button {
+  font-size: 18px; padding: 10px 16px;
+  border: none; border-radius: var(--r-md);
+  background: var(--accent-3); color: var(--ink);
+  box-shadow: var(--shadow);
+  transition: transform var(--dur), box-shadow var(--dur);
+}
+.topbar button:hover { transform: translateY(-2px); }
+.topbar button:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(26,26,58,0.12); }
+.topbar .ghost { background: transparent; color: var(--ink); box-shadow: none; }
+
+.layout {
+  display: grid; grid-template-columns: 320px 1fr; gap: 20px;
+  padding: 20px; max-width: 1400px; margin: 0 auto;
+}
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+.sidebar { display: flex; flex-direction: column; gap: 12px; }
+.lesson-card {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow);
+  border: 3px solid transparent;
+  transition: transform var(--dur), border-color var(--dur);
+  cursor: pointer;
+}
+.lesson-card:hover { transform: translateX(4px); border-color: var(--accent-2); }
+.lesson-card.locked { opacity: 0.55; cursor: not-allowed; }
+.lesson-card.locked:hover { transform: none; border-color: transparent; }
+.lesson-card.active { border-color: var(--accent); background: var(--panel-2); }
+.lesson-card .num {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent-2); color: white;
+  display: grid; place-items: center;
+  font-weight: 700;
+}
+.lesson-card.completed .num { background: var(--accent-4); }
+.lesson-card.locked .num { background: var(--locked); }
+.lesson-card .title { flex: 1; font-weight: 600; }
+.lesson-card .badge { font-size: 18px; }
+
+.main {
+  background: var(--panel);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-2);
+  padding: 24px; min-height: 600px;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.main h2 { margin: 0; font-size: 30px; color: var(--accent); }
+.main .goal { color: var(--ink-soft); margin: 0; }
+
+.stage { display: grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: start; }
+@media (max-width: 720px) { .stage { grid-template-columns: 1fr; } }
+.mascot {
+  width: 200px; height: 200px;
+  background-image: url("assets/mascot/idle_01.png");
+  background-size: contain; background-repeat: no-repeat; background-position: center;
+  image-rendering: -webkit-optimize-contrast;
+}
+.mascot.bob { animation: mascot-bob 2.4s ease-in-out infinite; }
+@keyframes mascot-bob { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-6px);} }
+
+.bubble {
+  position: relative;
+  background: var(--panel-2);
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-lg);
+  padding: 18px 22px;
+  font-size: 22px; line-height: 1.4;
+  min-height: 90px;
+}
+.bubble::before {
+  content: "";
+  position: absolute; left: -16px; top: 28px;
+  width: 0; height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 16px solid var(--accent-2);
+}
+
+.audio-row { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+.btn-big {
+  font-size: 20px; padding: 14px 22px;
+  border-radius: var(--r-md);
+  background: var(--accent); color: white;
+  border: none; box-shadow: var(--shadow);
+  transition: transform var(--dur);
+}
+.btn-big:hover { transform: translateY(-2px); }
+.btn-big:active { transform: translateY(2px); }
+.btn-big.alt { background: var(--accent-2); }
+.btn-big.go { background: var(--accent-4); }
+.btn-big[disabled] { opacity: 0.5; cursor: not-allowed; }
+
+.game {
+  background: var(--panel-2);
+  border: 3px dashed var(--accent-3);
+  border-radius: var(--r-lg);
+  padding: 20px; min-height: 220px;
+}
+.game h3 { margin: 0 0 14px; }
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+.choice {
+  padding: 22px;
+  background: var(--panel);
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-md);
+  font-size: 20px;
+  text-align: center; cursor: pointer;
+  transition: transform var(--dur), background var(--dur);
+}
+.choice:hover { transform: translateY(-3px); background: var(--bg-1); }
+.choice.right { background: var(--accent-4); color: white; border-color: var(--accent-4); }
+.choice.wrong { background: #ffd6d6; border-color: var(--accent); }
+
+.match-row { display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-around; }
+.match-col { display: flex; flex-direction: column; gap: 10px; min-width: 180px; }
+.match-item {
+  padding: 14px 18px;
+  background: var(--panel);
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-md);
+  cursor: grab; user-select: none;
+  font-size: 18px; text-align: center;
+}
+.match-item.matched { background: var(--accent-4); color: white; border-color: var(--accent-4); cursor: default; }
+.match-target {
+  padding: 14px 18px;
+  background: var(--bg-1);
+  border: 3px dashed var(--accent-3);
+  border-radius: var(--r-md);
+  min-height: 56px; font-size: 18px; text-align: center;
+}
+.match-target.over { background: var(--bg-2); border-style: solid; }
+.match-target.filled { background: var(--accent-4); color: white; border-color: var(--accent-4); border-style: solid; }
+
+.type-row { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.type-row input[type="text"] {
+  font-family: inherit; font-size: 22px;
+  padding: 12px 16px;
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-md);
+  width: 100%; max-width: 460px;
+}
+.hint { color: var(--ink-soft); font-size: 16px; }
+
+.block-tray, .block-slots {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  padding: 12px;
+  background: var(--bg-1);
+  border-radius: var(--r-md);
+  min-height: 64px;
+}
+.block-slots { background: var(--bg-2); margin-top: 14px; min-height: 64px; }
+.block {
+  padding: 12px 16px;
+  background: var(--accent-2);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: grab; user-select: none;
+}
+.block.placed { background: var(--accent-4); cursor: default; }
+
+.seq-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.seq-item {
+  padding: 14px 18px;
+  background: var(--panel);
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-md);
+  cursor: grab;
+  display: flex; align-items: center; gap: 12px;
+}
+.seq-item .grip { color: var(--ink-soft); font-size: 18px; }
+
+.chat {
+  background: var(--panel-2);
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-lg);
+  padding: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.chat-log { min-height: 100px; max-height: 260px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+.chat-msg { padding: 10px 14px; border-radius: var(--r-md); max-width: 80%; }
+.chat-msg.you { align-self: flex-end; background: var(--accent-2); color: white; }
+.chat-msg.bot { align-self: flex-start; background: var(--panel); border: 2px solid var(--accent-2); }
+.chat-row { display: flex; gap: 8px; }
+.chat-row input {
+  flex: 1; font-family: inherit; font-size: 18px;
+  padding: 10px 14px;
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-md);
+}
+.helper-tabs { display: flex; gap: 6px; }
+.helper-tab {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--locked);
+  color: var(--ink);
+  border: none; cursor: pointer; font-weight: 600;
+}
+.helper-tab.active { background: var(--accent); color: white; }
+.svg-stage {
+  margin-top: 10px;
+  background: white;
+  border-radius: var(--r-md);
+  min-height: 120px;
+  display: grid; place-items: center;
+  border: 2px dashed var(--accent-3);
+}
+
+.sticker-flash {
+  position: fixed; inset: 0;
+  display: none;
+  align-items: center; justify-content: center;
+  background: rgba(26,26,58,0.5);
+  z-index: 50;
+}
+.sticker-flash.show { display: flex; }
+.sticker-card {
+  background: var(--panel);
+  border-radius: var(--r-lg);
+  padding: 30px 36px;
+  text-align: center;
+  box-shadow: var(--shadow-2);
+  animation: pop 480ms cubic-bezier(.18,.89,.32,1.28);
+}
+.sticker-card .star { font-size: 88px; filter: drop-shadow(0 4px 0 rgba(26,26,58,0.18)); }
+.sticker-card h3 { margin: 8px 0; font-size: 28px; color: var(--accent); }
+@keyframes pop {
+  0% { transform: scale(0.4) rotate(-8deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(26,26,58,0.6);
+  display: none;
+  align-items: center; justify-content: center;
+  z-index: 40; padding: 20px;
+}
+.overlay.show { display: flex; }
+.overlay-card {
+  background: var(--panel);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  width: 100%; max-width: 640px;
+  max-height: 80vh; overflow-y: auto;
+}
+.overlay-card h2 { margin-top: 0; }
+.transcript-box {
+  background: var(--panel-2);
+  border-radius: var(--r-md);
+  padding: 12px;
+  font-size: 14px;
+  max-height: 220px; overflow-y: auto;
+}
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+
+.color-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.swatch {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 3px solid var(--ink-soft);
+  cursor: pointer;
+}
+.swatch.selected { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.kbd { display: inline-block; padding: 2px 8px; background: var(--bg-2); border-radius: 6px; font-family: monospace; }
+.tag { display: inline-block; padding: 2px 8px; background: var(--accent-3); color: var(--ink); border-radius: 999px; font-size: 14px; font-weight: 600; }
+.success { color: var(--accent-4); font-weight: 700; }
+.muted { color: var(--ink-soft); }
+</style>
+</head>
+<body data-theme="day">
+
+<header class="topbar">
+  <h1>CC Kids Academy</h1>
+  <span class="tag" id="streakTag">0 stickers</span>
+  <span class="spacer"></span>
+  <button id="readBtn" class="ghost" title="Read aloud">Read aloud</button>
+  <button id="themeBtn" class="ghost" title="Day / Night">Night</button>
+  <button id="parentBtn" class="ghost" title="Parent Corner">Parent Corner</button>
+</header>
+
+<main class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <section class="main" id="lessonView">
+    <div class="muted">Loading...</div>
+  </section>
+</main>
+
+<div class="sticker-flash" id="stickerFlash" role="dialog" aria-label="You earned a sticker">
+  <div class="sticker-card">
+    <div class="star" id="stickerEmoji">&#11088;</div>
+    <h3 id="stickerTitle">Nice work!</h3>
+    <p class="muted" id="stickerSub">You earned a sticker.</p>
+    <button class="btn-big go" id="stickerOk">Yay!</button>
+  </div>
+</div>
+
+<div class="overlay" id="parentOverlay" role="dialog" aria-label="Parent Corner">
+  <div class="overlay-card">
+    <h2>Parent Corner</h2>
+    <div id="parentLocked">
+      <p>Enter your 4-digit PIN. (Default: <span class="kbd">1234</span> &mdash; change it on the inside.)</p>
+      <input id="pinInput" type="password" inputmode="numeric" maxlength="4"
+             style="font-size:24px;padding:10px;border-radius:10px;border:3px solid var(--accent-2);width:140px;letter-spacing:8px;" />
+      <button id="pinSubmit" class="btn-big">Unlock</button>
+      <p id="pinError" class="muted"></p>
+    </div>
+    <div id="parentUnlocked" style="display:none;">
+      <h3>Progress</h3>
+      <p id="parentProgress" class="muted"></p>
+      <h3>Sandbox transcripts</h3>
+      <div id="parentTranscripts" class="transcript-box muted"><em>No conversations yet.</em></div>
+      <h3>Settings</h3>
+      <div class="row" style="margin-bottom:10px;">
+        <label>Change PIN: <input id="pinNew" type="password" inputmode="numeric" maxlength="4"
+               style="font-size:18px;padding:6px;border-radius:8px;border:2px solid var(--accent-2);width:90px;" /></label>
+        <button id="pinChange" class="btn-big alt">Save PIN</button>
+      </div>
+      <div class="row">
+        <button id="resetBtn" class="btn-big" style="background:#999;">Reset all progress</button>
+        <button id="closeParent" class="btn-big alt">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<audio id="sfxClick"     src="assets/sfx/click.wav"      preload="auto"></audio>
+<audio id="sfxDing"      src="assets/sfx/ding.wav"       preload="auto"></audio>
+<audio id="sfxLevel"     src="assets/sfx/level_up.wav"   preload="auto"></audio>
+<audio id="sfxStar"      src="assets/sfx/star_award.wav" preload="auto"></audio>
+<audio id="sfxOops"      src="assets/sfx/oops.wav"       preload="auto"></audio>
+<audio id="sfxPage"      src="assets/sfx/page_flip.wav"  preload="auto"></audio>
+<audio id="sfxHi"        src="assets/sfx/mascot_hi.wav"  preload="auto"></audio>
+<audio id="sfxType"      src="assets/sfx/type_pop.wav"   preload="auto"></audio>
+<audio id="lessonAudio"  preload="auto"></audio>
+
+<script>
+"use strict";
+
+/* ============================================================
+ *  DOM helpers — never use innerHTML on caller-supplied strings.
+ * ============================================================ */
+function el(tag, attrs, ...kids) {
+  const node = document.createElement(tag);
+  if (attrs) {
+    for (const k in attrs) {
+      const v = attrs[k];
+      if (v == null) continue;
+      if (k === "class") node.className = v;
+      else if (k === "style" && typeof v === "object") Object.assign(node.style, v);
+      else if (k === "dataset" && typeof v === "object") Object.assign(node.dataset, v);
+      else if (k.startsWith("on") && typeof v === "function") node.addEventListener(k.slice(2), v);
+      else node.setAttribute(k, v);
+    }
+  }
+  for (const kid of kids) {
+    if (kid == null || kid === false) continue;
+    node.appendChild(typeof kid === "string" ? document.createTextNode(kid) : kid);
+  }
+  return node;
+}
+function svgEl(tag, attrs) {
+  const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
+  if (attrs) for (const k in attrs) node.setAttribute(k, attrs[k]);
+  return node;
+}
+function clearNode(n) { while (n.firstChild) n.removeChild(n.firstChild); }
+function isHexOrNamed(c) {
+  if (typeof c !== "string") return false;
+  if (/^#[0-9a-fA-F]{3,8}$/.test(c)) return true;
+  if (/^[a-zA-Z]{3,20}$/.test(c)) return true; // named colors
+  return false;
+}
+
+/* ============================================================
+ *  Storage / Progress
+ * ============================================================ */
+const Store = {
+  K_PROG: "cckids.progress.v1",
+  K_PIN: "cckids.pin.v1",
+  K_TRANS: "cckids.transcripts.v1",
+  K_THEME: "cckids.theme.v1",
+  load(k, fb) {
+    try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; }
+    catch { return fb; }
+  },
+  save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+};
+
+const Progress = {
+  state: Store.load(Store.K_PROG, { completed: {}, stickers: 0, last: null }),
+  isCompleted(id) { return !!this.state.completed[id]; },
+  complete(id) {
+    if (this.state.completed[id]) return;
+    this.state.completed[id] = new Date().toISOString();
+    this.state.stickers += 1;
+    this.state.last = id;
+    Store.save(Store.K_PROG, this.state);
+  },
+  reset() {
+    this.state = { completed: {}, stickers: 0, last: null };
+    Store.save(Store.K_PROG, this.state);
+    Store.save(Store.K_TRANS, []);
+  },
+};
+
+const Transcripts = {
+  list: Store.load(Store.K_TRANS, []),
+  push(entry) {
+    this.list.push({ ...entry, ts: new Date().toISOString() });
+    if (this.list.length > 200) this.list = this.list.slice(-200);
+    Store.save(Store.K_TRANS, this.list);
+  },
+};
+
+/* ============================================================
+ *  Audio
+ * ============================================================ */
+const Audio_ = {
+  sfx(name) {
+    const a = document.getElementById("sfx" + name);
+    if (!a) return;
+    try { a.currentTime = 0; a.play().catch(() => {}); } catch {}
+  },
+  playLesson(src, onEnd) {
+    const a = document.getElementById("lessonAudio");
+    a.onended = onEnd || null;
+    a.src = src + "?_=" + Date.now();
+    a.play().catch(() => {});
+  },
+  stop() {
+    const a = document.getElementById("lessonAudio");
+    a.pause(); a.currentTime = 0;
+  },
+};
+
+/* ============================================================
+ *  Mascot animation state machine
+ * ============================================================ */
+const Mascot = {
+  el: null, state: "idle", timer: null,
+  setEl(node) { this.el = node; this.set("idle"); },
+  set(state) {
+    this.state = state;
+    this._stop();
+    const counts = { idle: 8, wave: 6, cheer: 6, think: 4 };
+    const fps = state === "idle" ? 4 : 8;
+    const total = counts[state] || 8;
+    let i = 0;
+    const tick = () => {
+      const n = String((i % total) + 1).padStart(2, "0");
+      this.el.style.backgroundImage = `url("assets/mascot/${state}_${n}.png")`;
+      i++;
+    };
+    tick();
+    this.timer = setInterval(tick, 1000 / fps);
+  },
+  _stop() { if (this.timer) { clearInterval(this.timer); this.timer = null; } },
+};
+
+/* ============================================================
+ *  Lesson + sandbox loaders
+ * ============================================================ */
+const LESSON_IDS = [
+  "lesson_01_what_is_a_computer",
+  "lesson_02_talking_to_claude",
+  "lesson_03_magic_boxes",
+  "lesson_04_sticky_note_rule",
+  "lesson_05_ask_then_build",
+  "lesson_06_loops_are_repeats",
+  "lesson_07_if_then_choices",
+  "lesson_08_three_helpers",
+  "lesson_09_sneaky_notes",
+  "lesson_10_save_and_share",
+  "lesson_11_check_your_work",
+  "lesson_12_robot_brain",
+  "lesson_13_magic_word_list",
+  "lesson_14_tokens_are_snacks",
+  "lesson_15_show_a_friend",
+  "lesson_16_first_real_project",
+];
+
+const LessonStore = {
+  index: [],
+  byId: {},
+  async load() {
+    for (const id of LESSON_IDS) {
+      const data = await fetchJSON(`lessons/${id}.json`);
+      if (data) {
+        this.index.push(id);
+        this.byId[id] = data;
+      }
+    }
+  },
+  isUnlocked(id) {
+    const i = this.index.indexOf(id);
+    if (i <= 0) return true;
+    if (i <= 6) return Progress.isCompleted(this.index[i - 1]);
+    return Progress.isCompleted(this.index[6]);
+  },
+};
+
+async function fetchJSON(path) {
+  try {
+    const r = await fetch(path + "?_=" + Date.now());
+    if (!r.ok) throw new Error(r.status);
+    return await r.json();
+  } catch (e) {
+    console.warn("fetch failed", path, e);
+    return null;
+  }
+}
+
+const Sandbox = {
+  cache: {},
+  async load(helper, lessonNum) {
+    if (!/^[a-z]+$/.test(helper)) return null;
+    const key = `${helper}/${lessonNum}`;
+    if (this.cache[key]) return this.cache[key];
+    const data = await fetchJSON(`sandbox_ai/${helper}/lesson_${String(lessonNum).padStart(2, "0")}.json`);
+    this.cache[key] = data;
+    return data;
+  },
+  match(input, script) {
+    if (!script) return null;
+    const t = (input || "").toLowerCase().trim();
+    for (const m of script.matches || []) {
+      for (const k of m.keywords || []) {
+        if (t.includes(String(k).toLowerCase())) return m;
+      }
+    }
+    return { reply_lines: [script.fallback || "Hmm, try something else!"], typing_delay_ms: 600, side_effect: null };
+  },
+};
+
+/* ============================================================
+ *  SVG side-effects — built via DOM API; color whitelisted.
+ * ============================================================ */
+const SVG = {
+  draw(stage, action) {
+    clearNode(stage);
+    if (!action) return;
+    if (action.action === "draw_svg") {
+      const color = isHexOrNamed(action.color) ? action.color : "gold";
+      const node = this._shape(action.shape, color);
+      if (node) stage.appendChild(node);
+    } else if (action.action === "show_text") {
+      const txt = el("div", { style: { fontSize: "48px", color: isHexOrNamed(action.color) ? action.color : "var(--accent)" } },
+        String(action.text || ""));
+      stage.appendChild(txt);
+    }
+  },
+  _shape(shape, c) {
+    const svg = svgEl("svg", { viewBox: "-50 -50 100 100", width: "120", height: "120" });
+    const stroke = "#1a1a3a";
+    if (shape === "star") {
+      svg.appendChild(svgEl("polygon", {
+        points: "0,-44 13,-13 44,-13 19,7 28,40 0,21 -28,40 -19,7 -44,-13 -13,-13",
+        fill: c, stroke, "stroke-width": "2",
+      }));
+    } else if (shape === "heart") {
+      svg.appendChild(svgEl("path", {
+        d: "M0 30 C-40 10, -40 -30, -10 -30 C-2 -30, 0 -22, 0 -16 C0 -22, 2 -30, 10 -30 C40 -30, 40 10, 0 30 Z",
+        fill: c, stroke, "stroke-width": "2",
+      }));
+    } else if (shape === "circle") {
+      svg.appendChild(svgEl("circle", { cx: 0, cy: 0, r: 40, fill: c, stroke, "stroke-width": "2" }));
+    } else if (shape === "square") {
+      svg.appendChild(svgEl("rect", { x: -36, y: -36, width: 72, height: 72, rx: 8, fill: c, stroke, "stroke-width": "2" }));
+    } else if (shape === "triangle") {
+      svg.appendChild(svgEl("polygon", { points: "0,-40 38,30 -38,30", fill: c, stroke, "stroke-width": "2" }));
+    } else if (shape === "rainbow") {
+      svg.setAttribute("viewBox", "-100 -50 200 100");
+      svg.setAttribute("width", "200");
+      svg.setAttribute("height", "100");
+      const cols = ["#ff5a78", "#ffb84d", "#ffd700", "#5acf95", "#6b8cff", "#a067ff"];
+      cols.forEach((col, i) => {
+        const r = 70 - i * 4;
+        svg.appendChild(svgEl("path", {
+          d: `M${-r} 30 A${r} ${r} 0 0 1 ${r} 30`,
+          fill: "none", stroke: col, "stroke-width": "6",
+        }));
+      });
+    } else {
+      const t = svgEl("text", { x: 0, y: 8, "text-anchor": "middle", "font-size": "20", fill: c });
+      t.textContent = String(shape || "?");
+      svg.appendChild(t);
+    }
+    return svg;
+  },
+};
+
+/* ============================================================
+ *  Mini-game engine (6 types)
+ * ============================================================ */
+const KidGame = {
+  run(spec, onComplete) {
+    const host = document.getElementById("gameArea");
+    clearNode(host);
+    if (!spec) {
+      host.appendChild(el("p", { class: "muted" }, "(No game for this lesson — just listen and click Done.)"));
+      const b = el("button", { class: "btn-big go", onclick: () => onComplete(true) }, "Done");
+      host.appendChild(b);
+      return;
+    }
+    const fn = this._handlers[spec.type];
+    if (!fn) {
+      host.appendChild(el("p", { class: "muted" }, `Unknown game type: ${spec.type}`));
+      return;
+    }
+    fn.call(this, host, spec.payload || {}, onComplete);
+  },
+
+  _handlers: {
+
+    "click-the-thing"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Click the right one!"));
+      const grid = el("div", { class: "choice-grid" });
+      host.appendChild(grid);
+      (p.choices || []).forEach(c => {
+        const btn = el("button", {
+          class: "choice",
+          onclick: () => {
+            if (c.right) {
+              btn.classList.add("right");
+              Audio_.sfx("Ding");
+              setTimeout(() => done(true), 600);
+            } else {
+              btn.classList.add("wrong");
+              Audio_.sfx("Oops");
+              setTimeout(() => btn.classList.remove("wrong"), 600);
+            }
+          },
+        }, String(c.label));
+        grid.appendChild(btn);
+      });
+    },
+
+    "drag-to-match"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Drag the matches!"));
+      const wrap = el("div", { class: "match-row" });
+      host.appendChild(wrap);
+      const left = el("div", { class: "match-col" });
+      const right = el("div", { class: "match-col" });
+      wrap.appendChild(left); wrap.appendChild(right);
+
+      const items = (p.pairs || []).map((pair, idx) => ({ ...pair, idx, matched: false }));
+      const order = items.slice().sort(() => Math.random() - 0.5);
+
+      order.forEach(item => {
+        const li = el("div", { class: "match-item", draggable: "true", dataset: { idx: String(item.idx) } }, String(item.left));
+        li.addEventListener("dragstart", e => e.dataTransfer.setData("text/plain", String(item.idx)));
+        left.appendChild(li);
+      });
+
+      items.forEach(item => {
+        const t = el("div", { class: "match-target", dataset: { idx: String(item.idx) } }, String(item.right));
+        t.addEventListener("dragover", e => { e.preventDefault(); t.classList.add("over"); });
+        t.addEventListener("dragleave", () => t.classList.remove("over"));
+        t.addEventListener("drop", e => {
+          e.preventDefault(); t.classList.remove("over");
+          const dragged = e.dataTransfer.getData("text/plain");
+          if (dragged === t.dataset.idx) {
+            t.classList.add("filled");
+            const src = left.querySelector(`[data-idx="${dragged}"]`);
+            if (src) { src.classList.add("matched"); src.draggable = false; }
+            items[item.idx].matched = true;
+            Audio_.sfx("Ding");
+            if (items.every(x => x.matched)) setTimeout(() => done(true), 600);
+          } else {
+            Audio_.sfx("Oops");
+          }
+        });
+        right.appendChild(t);
+      });
+    },
+
+    "type-this-word"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Type the word!"));
+      if (p.target_display) {
+        const tgt = el("p", null,
+          "Try typing: ",
+          el("span", { class: "kbd", style: { fontSize: "22px" } }, String(p.target_display))
+        );
+        host.appendChild(tgt);
+      }
+      const row = el("div", { class: "type-row" });
+      host.appendChild(row);
+      const inp = el("input", { type: "text", placeholder: "Type here...", maxlength: "80" });
+      const btn = el("button", { class: "btn-big" }, "Send");
+      const hint = el("div", { class: "hint" });
+      row.appendChild(inp); row.appendChild(btn); row.appendChild(hint);
+
+      const targets = (p.targets || []).map(t => String(t).toLowerCase());
+      const submit = () => {
+        const v = (inp.value || "").trim().toLowerCase();
+        Audio_.sfx("Type");
+        if (!v) return;
+        if (targets.some(t => v.includes(t))) {
+          clearNode(hint);
+          hint.appendChild(el("span", { class: "success" }, "Yes! You got it."));
+          Audio_.sfx("Ding");
+          setTimeout(() => done(true), 700);
+        } else {
+          hint.textContent = p.hint_wrong || "Try again — read the hint above!";
+          Audio_.sfx("Oops");
+        }
+      };
+      btn.addEventListener("click", submit);
+      inp.addEventListener("keydown", e => { if (e.key === "Enter") submit(); });
+      setTimeout(() => inp.focus(), 50);
+    },
+
+    "place-blocks"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Place the blocks in order!"));
+      const tray = el("div", { class: "block-tray" });
+      const slots = el("div", { class: "block-slots" });
+      host.appendChild(tray); host.appendChild(slots);
+
+      const correct = (p.solution || []).slice();
+      const placed = [];
+      const shuffle = (p.blocks || []).slice().sort(() => Math.random() - 0.5);
+      shuffle.forEach(label => {
+        const node = el("div", { class: "block", draggable: "true" }, String(label));
+        node.addEventListener("dragstart", e => e.dataTransfer.setData("text/plain", String(label)));
+        tray.appendChild(node);
+      });
+
+      slots.addEventListener("dragover", e => e.preventDefault());
+      slots.addEventListener("drop", e => {
+        e.preventDefault();
+        const label = e.dataTransfer.getData("text/plain");
+        const next = correct[placed.length];
+        if (label === next) {
+          const node = [...tray.children].find(n => n.textContent === label);
+          if (node) {
+            node.classList.add("placed");
+            node.draggable = false;
+            slots.appendChild(node);
+            placed.push(label);
+            Audio_.sfx("Ding");
+            if (placed.length === correct.length) setTimeout(() => done(true), 600);
+          }
+        } else {
+          Audio_.sfx("Oops");
+        }
+      });
+    },
+
+    "sequence-the-steps"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Put the steps in order!"));
+      const list = el("ul", { class: "seq-list" });
+      host.appendChild(list);
+
+      const correct = (p.steps || []).slice();
+      const order = correct.slice().sort(() => Math.random() - 0.5);
+
+      let dragIdx = -1;
+      const rebuild = () => {
+        clearNode(list);
+        order.forEach((step, i) => {
+          const li = el("li", { class: "seq-item", draggable: "true", dataset: { i: String(i) } },
+            el("span", { class: "grip" }, "≡"),
+            el("span", null, String(step))
+          );
+          li.addEventListener("dragstart", () => { dragIdx = i; });
+          li.addEventListener("dragover", e => e.preventDefault());
+          li.addEventListener("drop", e => {
+            e.preventDefault();
+            const target = parseInt(li.dataset.i, 10);
+            if (dragIdx < 0 || dragIdx === target) return;
+            const tmp = order[dragIdx]; order[dragIdx] = order[target]; order[target] = tmp;
+            rebuild();
+          });
+          list.appendChild(li);
+        });
+      };
+      rebuild();
+
+      const btn = el("button", {
+        class: "btn-big go",
+        style: { marginTop: "12px" },
+        onclick: () => {
+          if (order.every((s, i) => s === correct[i])) {
+            Audio_.sfx("Ding"); done(true);
+          } else {
+            Audio_.sfx("Oops");
+            btn.textContent = "Not yet — try again";
+            setTimeout(() => btn.textContent = "Check", 900);
+          }
+        },
+      }, "Check");
+      host.appendChild(btn);
+    },
+
+    "guided-talk"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Show your friend!"));
+      const lines = (p.lines || []).map(String);
+      let i = 0;
+      const display = el("div", { class: "bubble", style: { fontSize: "26px" } }, lines[0] || "");
+      host.appendChild(display);
+      const row = el("div", { style: { marginTop: "12px" } });
+      host.appendChild(row);
+      const back = el("button", { class: "btn-big alt", onclick: () => {
+        i = Math.max(0, i - 1); display.textContent = lines[i] || "";
+      } }, "Back");
+      const next = el("button", { class: "btn-big", onclick: () => {
+        if (i < lines.length - 1) { i += 1; display.textContent = lines[i]; Audio_.sfx("Page"); }
+        else { Audio_.sfx("Ding"); done(true); }
+      } }, "Next");
+      row.appendChild(back); row.appendChild(document.createTextNode(" ")); row.appendChild(next);
+    },
+  },
+};
+
+/* ============================================================
+ *  Lesson 16 — Sprite/Bubby color swap, save copy via JS bridge
+ * ============================================================ */
+const Lesson16 = {
+  build(host, lesson, done) {
+    clearNode(host);
+    host.appendChild(el("h3", null, "Pick a color and change a real game!"));
+
+    const stage = el("div", { style: { display: "flex", gap: "20px", flexWrap: "wrap", alignItems: "flex-start" } });
+    host.appendChild(stage);
+
+    const preview = el("div", { style: {
+      flex: "1", minWidth: "280px", background: "white", border: "3px solid var(--accent-2)",
+      borderRadius: "14px", padding: "14px",
+    }});
+    stage.appendChild(preview);
+
+    const svg = svgEl("svg", { viewBox: "-100 -60 200 120", width: "100%", height: "220", id: "l16svg" });
+    const ground = svgEl("rect", { x: -100, y: 20, width: 200, height: 40, fill: "#5acf95", id: "l16ground" });
+    const hero = svgEl("circle", { cx: -30, cy: -10, r: 20, fill: "#ff5a78", id: "l16hero" });
+    const block = svgEl("rect", { x: 20, y: -20, width: 30, height: 30, fill: "#ffb84d", id: "l16block" });
+    const label = svgEl("text", { x: 0, y: -40, "text-anchor": "middle", "font-family": "sans-serif", "font-size": "14", fill: "#1a1a3a" });
+    label.textContent = "Bubby's World";
+    svg.appendChild(ground); svg.appendChild(hero); svg.appendChild(block); svg.appendChild(label);
+    preview.appendChild(svg);
+
+    const ctrl = el("div", { style: { flex: "1", minWidth: "240px", display: "flex", flexDirection: "column", gap: "12px" } });
+    stage.appendChild(ctrl);
+
+    const labels = ["Hero", "Ground", "Block"];
+    const refs = [hero, ground, block];
+    const palette = ["#ff5a78", "#ffb84d", "#5acf95", "#6b8cff", "#a067ff", "#ffd700", "#1a1a3a", "#ffffff"];
+    let active = 0;
+
+    const targetButtons = labels.map((lab, i) => {
+      const b = el("button", { class: "choice", style: { fontSize: "18px" }, onclick: () => {
+        active = i;
+        targetButtons.forEach((x, j) => x.classList.toggle("selected", j === i));
+      } }, lab);
+      if (i === 0) b.classList.add("selected");
+      ctrl.appendChild(b);
+      return b;
+    });
+
+    const colorRow = el("div", { class: "color-row" });
+    ctrl.appendChild(colorRow);
+    palette.forEach(c => {
+      const sw = el("div", { class: "swatch", style: { background: c }, onclick: () => {
+        refs[active].setAttribute("fill", c);
+        Audio_.sfx("Click");
+      } });
+      colorRow.appendChild(sw);
+    });
+
+    const save = el("button", { class: "btn-big go", onclick: async () => {
+      const serializer = new XMLSerializer();
+      const svgText = serializer.serializeToString(svg);
+      const name = `bubbys_world_${Date.now()}.svg`;
+      const ok = await saveKidProject(name, svgText);
+      if (ok) {
+        Audio_.sfx("Star");
+        done(true);
+      } else {
+        // Even if save fails (web preview), still complete — kid did the work
+        done(true);
+      }
+    } }, "Save my world");
+    ctrl.appendChild(save);
+  },
+};
+
+async function saveKidProject(name, data) {
+  if (window.pywebview && window.pywebview.api && window.pywebview.api.save_kid_project) {
+    try {
+      const res = await window.pywebview.api.save_kid_project(name, data);
+      return res && res.ok;
+    } catch { return false; }
+  }
+  return false;
+}
+
+/* ============================================================
+ *  UI rendering
+ * ============================================================ */
+const UI = {
+  current: null,
+
+  renderSidebar() {
+    const sb = document.getElementById("sidebar");
+    clearNode(sb);
+    LessonStore.index.forEach((id, i) => {
+      const lesson = LessonStore.byId[id];
+      const completed = Progress.isCompleted(id);
+      const unlocked = LessonStore.isUnlocked(id);
+      const card = el("div", {
+        class: "lesson-card" +
+          (completed ? " completed" : "") +
+          (!unlocked ? " locked" : "") +
+          (this.current === id ? " active" : ""),
+        onclick: () => {
+          if (!unlocked) { Audio_.sfx("Oops"); return; }
+          this.openLesson(id);
+        },
+      });
+      card.appendChild(el("div", { class: "num" }, String(i + 1)));
+      card.appendChild(el("div", { class: "title" }, String(lesson.title || id)));
+      card.appendChild(el("div", { class: "badge" }, completed ? "⭐" : (unlocked ? "" : "🔒")));
+      sb.appendChild(card);
+    });
+    document.getElementById("streakTag").textContent =
+      `${Progress.state.stickers} sticker${Progress.state.stickers === 1 ? "" : "s"}`;
+  },
+
+  openLesson(id) {
+    this.current = id;
+    Audio_.stop();
+    const lesson = LessonStore.byId[id];
+    const view = document.getElementById("lessonView");
+    clearNode(view);
+
+    view.appendChild(el("h2", null, String(lesson.title || "")));
+    view.appendChild(el("p", { class: "goal" }, String(lesson.goal || "")));
+
+    const stage = el("div", { class: "stage" });
+    view.appendChild(stage);
+    const mEl = el("div", { class: "mascot bob" });
+    stage.appendChild(mEl);
+    Mascot.setEl(mEl);
+    Mascot.set(lesson.id === 1 ? "wave" : "idle");
+
+    const bubbleWrap = el("div");
+    stage.appendChild(bubbleWrap);
+    const bubble = el("div", { class: "bubble", id: "lessonBubble" },
+      (lesson.mascot_lines || [""]).map(String).join("  "));
+    bubbleWrap.appendChild(bubble);
+
+    const audioRow = el("div", { class: "audio-row" });
+    bubbleWrap.appendChild(audioRow);
+    const playBtn = el("button", { class: "btn-big", onclick: () => {
+      Mascot.set("think");
+      Audio_.playLesson(
+        lesson.narration_audio || `assets/audio/lesson_${String(lesson.id).padStart(2, "0")}.wav`,
+        () => Mascot.set("idle")
+      );
+    } }, "▶ Play");
+    const stopBtn = el("button", { class: "btn-big alt", onclick: () => { Audio_.stop(); Mascot.set("idle"); } }, "■ Stop");
+    audioRow.appendChild(playBtn); audioRow.appendChild(stopBtn);
+
+    if (lesson.sandbox && Array.isArray(lesson.sandbox.helpers) && lesson.sandbox.helpers.length) {
+      view.appendChild(this.buildChat(lesson));
+    }
+
+    const game = el("div", { class: "game", id: "gameArea" });
+    view.appendChild(game);
+
+    if (lesson.id === 16) {
+      Lesson16.build(game, lesson, ok => ok && this.completeLesson(id));
+    } else {
+      KidGame.run(lesson.game, ok => ok && this.completeLesson(id));
+    }
+
+    this.renderSidebar();
+    Audio_.sfx("Page");
+  },
+
+  buildChat(lesson) {
+    const wrap = el("div", { class: "chat" });
+    const tabs = el("div", { class: "helper-tabs" });
+    wrap.appendChild(tabs);
+    const log = el("div", { class: "chat-log" });
+    wrap.appendChild(log);
+    const row = el("div", { class: "chat-row" });
+    const inp = el("input", { type: "text", placeholder: "Ask the helper...", maxlength: "80" });
+    const send = el("button", { class: "btn-big" }, "Ask");
+    row.appendChild(inp); row.appendChild(send);
+    wrap.appendChild(row);
+    const svgStage = el("div", { class: "svg-stage" });
+    wrap.appendChild(svgStage);
+    const hint = el("div", { class: "muted", style: { fontSize: "14px" } },
+      String(lesson.sandbox.hint || "Try a prompt — the helper has pretend answers ready!"));
+    wrap.appendChild(hint);
+
+    let helper = String(lesson.sandbox.helpers[0]);
+    let attempts = 0;
+
+    lesson.sandbox.helpers.forEach((h, i) => {
+      const name = String(h);
+      const t = el("button", {
+        class: "helper-tab" + (i === 0 ? " active" : ""),
+        onclick: () => {
+          helper = name;
+          [...tabs.children].forEach(x => x.classList.remove("active"));
+          t.classList.add("active");
+          clearNode(log); attempts = 0;
+        },
+      }, name[0].toUpperCase() + name.slice(1));
+      tabs.appendChild(t);
+    });
+
+    const ask = async () => {
+      const v = (inp.value || "").trim();
+      if (!v) return;
+      const you = el("div", { class: "chat-msg you" }, v);
+      log.appendChild(you);
+      log.scrollTop = log.scrollHeight;
+      Audio_.sfx("Type");
+      Transcripts.push({ lesson: lesson.id, helper, you: v });
+
+      const script = await Sandbox.load(helper, lesson.id);
+      const m = Sandbox.match(v, script);
+      if (m && m.side_effect) SVG.draw(svgStage, m.side_effect);
+
+      const bot = el("div", { class: "chat-msg bot" }, "...");
+      log.appendChild(bot);
+      const text = ((m && m.reply_lines) || []).map(String).join(" ");
+      let i = 0;
+      const speed = (m && m.typing_delay_ms) ? Math.max(20, m.typing_delay_ms / Math.max(1, text.length)) : 25;
+      const tick = setInterval(() => {
+        bot.textContent = text.slice(0, ++i);
+        log.scrollTop = log.scrollHeight;
+        if (i >= text.length) clearInterval(tick);
+      }, speed);
+      inp.value = "";
+      attempts += 1;
+      if (lesson.sandbox.complete_after && attempts >= lesson.sandbox.complete_after) {
+        setTimeout(() => {
+          if (!Progress.isCompleted(lesson.id) && lesson.sandbox.auto_complete) {
+            this.completeLesson(lesson.id);
+          }
+        }, 1200);
+      }
+    };
+    send.addEventListener("click", ask);
+    inp.addEventListener("keydown", e => { if (e.key === "Enter") ask(); });
+    return wrap;
+  },
+
+  completeLesson(id) {
+    const lesson = LessonStore.byId[id];
+    Progress.complete(id);
+    Audio_.sfx("Star");
+    Audio_.sfx("Level");
+    Mascot.set("cheer");
+    setTimeout(() => Mascot.set("idle"), 1800);
+    document.getElementById("stickerEmoji").textContent = String(lesson.sticker_emoji || "⭐");
+    document.getElementById("stickerTitle").textContent = "Sticker earned!";
+    document.getElementById("stickerSub").textContent = `Lesson "${lesson.title}" complete.`;
+    document.getElementById("stickerFlash").classList.add("show");
+    this.renderSidebar();
+  },
+};
+
+/* ============================================================
+ *  Parent Corner
+ * ============================================================ */
+const Parent = {
+  open() {
+    document.getElementById("parentLocked").style.display = "";
+    document.getElementById("parentUnlocked").style.display = "none";
+    document.getElementById("pinInput").value = "";
+    document.getElementById("pinError").textContent = "";
+    document.getElementById("parentOverlay").classList.add("show");
+    setTimeout(() => document.getElementById("pinInput").focus(), 50);
+  },
+  close() { document.getElementById("parentOverlay").classList.remove("show"); },
+  unlock() {
+    const stored = Store.load(Store.K_PIN, "1234");
+    const v = document.getElementById("pinInput").value;
+    if (v === stored) {
+      document.getElementById("parentLocked").style.display = "none";
+      document.getElementById("parentUnlocked").style.display = "";
+      this._fill();
+    } else {
+      document.getElementById("pinError").textContent = "Wrong PIN. Try again.";
+    }
+  },
+  _fill() {
+    const total = LessonStore.index.length;
+    const done = Object.keys(Progress.state.completed).length;
+    document.getElementById("parentProgress").textContent =
+      `${done} / ${total} lessons complete · ${Progress.state.stickers} stickers earned`;
+    const tBox = document.getElementById("parentTranscripts");
+    clearNode(tBox);
+    if (!Transcripts.list.length) {
+      tBox.appendChild(el("em", null, "No conversations yet."));
+    } else {
+      Transcripts.list.slice(-50).forEach((t, i, arr) => {
+        const block = el("div", null,
+          el("strong", null, `L${t.lesson} (${t.helper})`),
+          " · ",
+          el("small", null, String(t.ts || "").slice(0, 16).replace("T", " ")),
+          el("br"),
+          `"${String(t.you || "")}"`
+        );
+        tBox.appendChild(block);
+        if (i < arr.length - 1) tBox.appendChild(el("hr", { style: { border: "none", borderTop: "1px dashed #ccc", margin: "6px 0" } }));
+      });
+    }
+  },
+  changePin() {
+    const v = (document.getElementById("pinNew").value || "").trim();
+    if (!/^\d{4}$/.test(v)) { alert("PIN must be 4 digits."); return; }
+    Store.save(Store.K_PIN, v);
+    document.getElementById("pinNew").value = "";
+    alert("PIN updated.");
+  },
+};
+
+/* ============================================================
+ *  Boot
+ * ============================================================ */
+async function main() {
+  const theme = Store.load(Store.K_THEME, "day");
+  document.body.dataset.theme = theme;
+  document.getElementById("themeBtn").textContent = theme === "day" ? "Night" : "Day";
+  document.getElementById("themeBtn").addEventListener("click", () => {
+    const t = document.body.dataset.theme === "day" ? "night" : "day";
+    document.body.dataset.theme = t;
+    Store.save(Store.K_THEME, t);
+    document.getElementById("themeBtn").textContent = t === "day" ? "Night" : "Day";
+  });
+
+  document.getElementById("readBtn").addEventListener("click", () => {
+    if (!UI.current) return;
+    const lesson = LessonStore.byId[UI.current];
+    Mascot.set("think");
+    Audio_.playLesson(
+      lesson.narration_audio || `assets/audio/lesson_${String(lesson.id).padStart(2, "0")}.wav`,
+      () => Mascot.set("idle")
+    );
+  });
+
+  document.getElementById("parentBtn").addEventListener("click", () => Parent.open());
+  document.getElementById("pinSubmit").addEventListener("click", () => Parent.unlock());
+  document.getElementById("pinInput").addEventListener("keydown", e => { if (e.key === "Enter") Parent.unlock(); });
+  document.getElementById("closeParent").addEventListener("click", () => Parent.close());
+  document.getElementById("pinChange").addEventListener("click", () => Parent.changePin());
+  document.getElementById("resetBtn").addEventListener("click", () => {
+    if (!confirm("Reset all kid progress and PIN?")) return;
+    Progress.reset();
+    Store.save(Store.K_PIN, "1234");
+    Transcripts.list = [];
+    UI.renderSidebar();
+    Parent._fill();
+  });
+  document.getElementById("stickerOk").addEventListener("click", () => {
+    document.getElementById("stickerFlash").classList.remove("show");
+  });
+
+  await LessonStore.load();
+  if (!LessonStore.index.length) {
+    const v = document.getElementById("lessonView");
+    clearNode(v);
+    v.appendChild(el("p", null, "Couldn't load lessons. Make sure the lessons/ folder is bundled."));
+    return;
+  }
+  UI.renderSidebar();
+  const startId = (Progress.state.last && LessonStore.byId[Progress.state.last])
+    ? Progress.state.last : LessonStore.index[0];
+  UI.openLesson(startId);
+  Audio_.sfx("Hi");
+}
+
+window.addEventListener("DOMContentLoaded", main);
+</script>
+</body>
+</html>

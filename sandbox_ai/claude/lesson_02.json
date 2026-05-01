@@ -1,0 +1,49 @@
+{
+  "helper": "claude",
+  "lesson_id": 2,
+  "fallback": "Hmm, try typing 'make me a star' or 'draw a heart'!",
+  "matches": [
+    {
+      "keywords": ["star"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Sure! Here is one shiny star, coming up..."],
+      "side_effect": { "action": "draw_svg", "shape": "star", "color": "gold" }
+    },
+    {
+      "keywords": ["heart", "love"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Aww, a heart! Here you go."],
+      "side_effect": { "action": "draw_svg", "shape": "heart", "color": "#ff5a78" }
+    },
+    {
+      "keywords": ["circle", "ball", "sun"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["A round circle, ta-da!"],
+      "side_effect": { "action": "draw_svg", "shape": "circle", "color": "#ffb84d" }
+    },
+    {
+      "keywords": ["rainbow"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["A rainbow! Look at all those colors."],
+      "side_effect": { "action": "draw_svg", "shape": "rainbow", "color": "gold" }
+    },
+    {
+      "keywords": ["triangle"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["A triangle, three sides!"],
+      "side_effect": { "action": "draw_svg", "shape": "triangle", "color": "#6b8cff" }
+    },
+    {
+      "keywords": ["square", "box"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["A square box just for you."],
+      "side_effect": { "action": "draw_svg", "shape": "square", "color": "#5acf95" }
+    },
+    {
+      "keywords": ["hi", "hello", "hey"],
+      "typing_delay_ms": 600,
+      "reply_lines": ["Hi! I'm Claude. What shape should I draw?"],
+      "side_effect": null
+    }
+  ]
+}

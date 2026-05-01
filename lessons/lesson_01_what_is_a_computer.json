@@ -1,0 +1,23 @@
+{
+  "id": 1,
+  "title": "What Is a Computer?",
+  "goal": "Computers do exactly what you tell them — not what you wish for.",
+  "sticker_emoji": "🖥️",
+  "mascot_lines": [
+    "Hi! I'm Bytey, your robot friend.",
+    "A computer is a really fast helper. It cannot guess what you want.",
+    "It only does what we tell it. Let's find one together!"
+  ],
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which one is a computer?",
+      "choices": [
+        { "label": "🍎 Apple", "right": false },
+        { "label": "💻 Laptop", "right": true },
+        { "label": "🐶 Dog", "right": false },
+        { "label": "🌳 Tree", "right": false }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": 9,
+  "title": "Don't Trust Sneaky Notes",
+  "goal": "Some pages whisper instructions. Always ask a grown-up first.",
+  "sticker_emoji": "🛡️",
+  "mascot_lines": [
+    "Sometimes a page says: 'Click here NOW!'",
+    "That might be a sneaky note. We don't have to listen.",
+    "If something feels weird, ask a grown-up.",
+    "Pick the safe choice below."
+  ],
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "A pop-up says 'Type your password to win 1000 stars!' What do you do?",
+      "choices": [
+        { "label": "🔐 Type my password!", "right": false },
+        { "label": "🙅 Close it and tell a grown-up", "right": true },
+        { "label": "📣 Share it with my friends", "right": false },
+        { "label": "🤖 Type a fake password", "right": false }
+      ]
+    }
+  }
+}

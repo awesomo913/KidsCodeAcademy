@@ -1,0 +1,24 @@
+{
+  "id": 7,
+  "title": "If-Then Choices",
+  "goal": "Computers ask questions too. If A, then B. Else C.",
+  "sticker_emoji": "🤔",
+  "mascot_lines": [
+    "If it's raining, take an umbrella.",
+    "Else, wear sunglasses.",
+    "That's an IF-THEN-ELSE.",
+    "Pick the right answer below!"
+  ],
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "If the cookie is hot, what should you do?",
+      "choices": [
+        { "label": "🥵 Eat it fast!", "right": false },
+        { "label": "❄️ Wait for it to cool", "right": true },
+        { "label": "🐘 Sit on it", "right": false },
+        { "label": "🌊 Drop it in the ocean", "right": false }
+      ]
+    }
+  }
+}

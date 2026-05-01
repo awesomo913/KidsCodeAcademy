@@ -1,0 +1,19 @@
+{
+  "id": 11,
+  "title": "Check Your Work",
+  "goal": "Did it really work? Click. Test. Try again. THEN say done.",
+  "sticker_emoji": "✅",
+  "mascot_lines": [
+    "Saying 'done' too early makes builders sad.",
+    "First we CHECK. Click everything. Try the buttons.",
+    "Only THEN we say done.",
+    "Put the steps in order."
+  ],
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Put the 'check your work' steps in order:",
+      "steps": ["Make the change", "Click and try it", "Notice if it broke", "Say done"]
+    }
+  }
+}

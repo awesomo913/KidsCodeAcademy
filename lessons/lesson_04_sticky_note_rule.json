@@ -1,0 +1,20 @@
+{
+  "id": 4,
+  "title": "The Sticky Note Rule",
+  "goal": "Robots forget. We write a sticky note so they remember what we like.",
+  "sticker_emoji": "📝",
+  "mascot_lines": [
+    "Robots like Claude have short memories.",
+    "We write a sticky note (grown-ups call it CLAUDE.md).",
+    "On it we put: I like X. I do NOT like Y.",
+    "Stack the sticky notes in the right order!"
+  ],
+  "game": {
+    "type": "place-blocks",
+    "payload": {
+      "prompt": "Build the sticky note. Drag the words into the right order.",
+      "blocks": ["I LIKE", "DOGS", "I DON'T LIKE", "BROCCOLI"],
+      "solution": ["I LIKE", "DOGS", "I DON'T LIKE", "BROCCOLI"]
+    }
+  }
+}
