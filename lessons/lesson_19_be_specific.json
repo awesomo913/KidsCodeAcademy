@@ -22,27 +22,23 @@
     }
   },
   "game": {
-    "type": "click-the-thing",
+    "type": "prompt-grader",
     "payload": {
-      "prompt": "Which prompt is the MOST specific?",
-      "choices": [
-        {
-          "label": "Make a thing.",
-          "right": false
-        },
-        {
-          "label": "Make a small red dog with one floppy ear.",
-          "right": true
-        },
-        {
-          "label": "A dog!",
-          "right": false
-        },
-        {
-          "label": "Idk.",
-          "right": false
-        }
-      ]
+      "prompt": "Type a clear, specific prompt for a robot:",
+      "goal": "Use details like size, color, and special parts.",
+      "rubric": {
+        "minWords": 6,
+        "mustInclude": [
+          "small",
+          "red"
+        ],
+        "mustHaveExample": false,
+        "idealLength": [
+          6,
+          30
+        ],
+        "passingStars": 4
+      }
     }
   }
 }

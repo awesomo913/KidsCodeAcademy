@@ -23,27 +23,14 @@
     }
   },
   "game": {
-    "type": "click-the-thing",
+    "type": "sprite-mover",
     "payload": {
-      "prompt": "What is a hitbox?",
-      "choices": [
-        {
-          "label": "A real picture you can see",
-          "right": false
-        },
-        {
-          "label": "An invisible square that bumps things",
-          "right": true
-        },
-        {
-          "label": "A song the game plays",
-          "right": false
-        },
-        {
-          "label": "A place to keep snacks",
-          "right": false
-        }
-      ]
+      "prompt": "Click 'Hitboxes' to see the bump boxes! Then reach the flag.",
+      "levelId": "hitbox_demo",
+      "options": {
+        "showHitboxToggle": true,
+        "debugDefault": true
+      }
     }
   }
 }

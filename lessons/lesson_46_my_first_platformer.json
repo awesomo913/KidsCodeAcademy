@@ -23,16 +23,13 @@
     }
   },
   "game": {
-    "type": "sequence-the-steps",
+    "type": "sprite-mover",
     "payload": {
-      "prompt": "Build a platformer. Order the steps:",
-      "steps": [
-        "Pick a hero sprite",
-        "Build the level",
-        "Turn on gravity",
-        "Add score and lives",
-        "Test the game"
-      ]
+      "prompt": "Bring it all together. Avoid bad guys, grab coins, reach the flag!",
+      "levelId": "enemy_demo",
+      "options": {
+        "showHitboxToggle": true
+      }
     }
   }
 }

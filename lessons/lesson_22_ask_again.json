@@ -22,27 +22,22 @@
     }
   },
   "game": {
-    "type": "click-the-thing",
+    "type": "prompt-grader",
     "payload": {
-      "prompt": "Robot drew a HUGE star. You wanted small. Which reply is best?",
-      "choices": [
-        {
-          "label": "Wrong!",
-          "right": false
-        },
-        {
-          "label": "Make it small, half the size, please.",
-          "right": true
-        },
-        {
-          "label": "No.",
-          "right": false
-        },
-        {
-          "label": "Try again.",
-          "right": false
-        }
-      ]
+      "prompt": "The robot drew a HUGE star. Reply with a clear fix:",
+      "goal": "Tell the robot WHAT to change (e.g. make it small).",
+      "rubric": {
+        "minWords": 4,
+        "mustInclude": [
+          "small"
+        ],
+        "mustHaveExample": false,
+        "idealLength": [
+          4,
+          25
+        ],
+        "passingStars": 4
+      }
     }
   }
 }

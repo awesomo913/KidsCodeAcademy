@@ -22,27 +22,13 @@
     }
   },
   "game": {
-    "type": "click-the-thing",
+    "type": "sprite-mover",
     "payload": {
-      "prompt": "Which key moves the hero RIGHT?",
-      "choices": [
-        {
-          "label": "← Left arrow",
-          "right": false
-        },
-        {
-          "label": "→ Right arrow",
-          "right": true
-        },
-        {
-          "label": "↑ Up arrow",
-          "right": false
-        },
-        {
-          "label": "Q key",
-          "right": false
-        }
-      ]
+      "prompt": "Use arrow keys (or A/D) to walk. Up/W/Space to jump. Reach the green flag!",
+      "levelId": "starter",
+      "options": {
+        "showHitboxToggle": false
+      }
     }
   }
 }

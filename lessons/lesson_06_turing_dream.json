@@ -23,27 +23,33 @@
     }
   },
   "game": {
-    "type": "click-the-thing",
+    "type": "history-scene",
     "payload": {
-      "prompt": "Which part of Turing's pretend machine holds the symbols?",
-      "choices": [
-        {
-          "label": "📼 Tape",
-          "right": true
-        },
-        {
-          "label": "🪑 Chair",
-          "right": false
-        },
-        {
-          "label": "🍎 Apple",
-          "right": false
-        },
-        {
-          "label": "🎈 Balloon",
-          "right": false
+      "prompt": "Watch the scene, then answer the question!",
+      "scene": {
+        "id": "turing",
+        "check": {
+          "prompt": "What did the head do across the tape?",
+          "choices": [
+            {
+              "label": "Read each square one at a time",
+              "right": true
+            },
+            {
+              "label": "Threw the tape away",
+              "right": false
+            },
+            {
+              "label": "Sang a song",
+              "right": false
+            },
+            {
+              "label": "Erased everything",
+              "right": false
+            }
+          ]
         }
-      ]
+      }
     }
   }
 }

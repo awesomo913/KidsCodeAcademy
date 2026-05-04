@@ -22,27 +22,20 @@
     }
   },
   "game": {
-    "type": "click-the-thing",
+    "type": "prompt-grader",
     "payload": {
-      "prompt": "Which prompt SHOWS instead of just tells?",
-      "choices": [
-        {
-          "label": "Make a name.",
-          "right": false
-        },
-        {
-          "label": "Make a name like this: Bytey, Sparky, Whiskers.",
-          "right": true
-        },
-        {
-          "label": "Names please.",
-          "right": false
-        },
-        {
-          "label": "Just one name.",
-          "right": false
-        }
-      ]
+      "prompt": "Type a prompt that SHOWS with an example:",
+      "goal": "Use the word 'like' or a colon (:) so the robot can copy the shape.",
+      "rubric": {
+        "minWords": 5,
+        "mustInclude": [],
+        "mustHaveExample": true,
+        "idealLength": [
+          5,
+          35
+        ],
+        "passingStars": 4
+      }
     }
   }
 }

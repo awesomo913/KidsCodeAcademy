@@ -22,15 +22,33 @@
     }
   },
   "game": {
-    "type": "sequence-the-steps",
+    "type": "history-scene",
     "payload": {
-      "prompt": "Order these math steps to act like a tiny brain:",
-      "steps": [
-        "Start at 0",
-        "Add 1",
-        "Check if more than 5",
-        "If yes, stop"
-      ]
+      "prompt": "Watch the scene, then answer the question!",
+      "scene": {
+        "id": "math",
+        "check": {
+          "prompt": "In the scene, what did 2 + 3 become?",
+          "choices": [
+            {
+              "label": "5 →",
+              "right": true
+            },
+            {
+              "label": "7",
+              "right": false
+            },
+            {
+              "label": "A picture",
+              "right": false
+            },
+            {
+              "label": "0",
+              "right": false
+            }
+          ]
+        }
+      }
     }
   }
 }

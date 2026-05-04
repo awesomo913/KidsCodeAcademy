@@ -23,15 +23,14 @@
     }
   },
   "game": {
-    "type": "sequence-the-steps",
+    "type": "sprite-mover",
     "payload": {
-      "prompt": "Hero walked off the edge. Order what happens:",
-      "steps": [
-        "The floor stops",
-        "Gravity pulls down",
-        "Hero falls",
-        "Hero lands on lower floor"
-      ]
+      "prompt": "Try the gravity slider. Higher = harder to jump. Reach the flag!",
+      "levelId": "jump_practice",
+      "options": {
+        "showHitboxToggle": true,
+        "gravitySlider": true
+      }
     }
   }
 }

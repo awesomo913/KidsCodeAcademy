@@ -1099,6 +1099,7 @@ const Celebration = {
   ACTION_WORDS: [
     "AWESOME!", "WOW!", "BRILLIANT!", "AMAZING!", "YOU DID IT!",
     "FANTASTIC!", "SUPER!", "STELLAR!", "WOOHOO!", "MAGNIFICENT!",
+    "MAMA MIA!",  // shows ~10% of the time as the rare easter-egg word
   ],
   canvas: null,
   ctx: null,
@@ -1927,6 +1928,192 @@ const KidGame = {
       } }, "Next");
       row.appendChild(back); row.appendChild(document.createTextNode(" ")); row.appendChild(next);
     },
+
+    /* === v0.3.1: prompt-grader =============================
+     * Free-form textarea + rubric scoring 1-5 stars.
+     *
+     * payload.rubric:
+     *   minWords: int — penalize under this many words
+     *   mustInclude: string[] — keywords scored as +1 each (case-insensitive)
+     *   mustHaveExample: bool — looks for "like", "such as", or ":"
+     *   idealLength: [min, max] — penalize outside this range
+     *   passingStars: int (default 4)
+     */
+    "prompt-grader"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Type a great prompt!"));
+      const goal = el("p", { class: "muted" }, p.goal || "Use clear, specific words. Add an example if you can!");
+      host.appendChild(goal);
+
+      const ta = el("textarea", {
+        rows: "4", maxlength: "240",
+        style: {
+          width: "100%", fontFamily: "inherit", fontSize: "18px",
+          padding: "10px 14px", borderRadius: "var(--r-md)",
+          border: "3px solid var(--accent-2)", resize: "vertical",
+        },
+      });
+      ta.placeholder = "Type your prompt here...";
+      host.appendChild(ta);
+
+      const row = el("div", { class: "row", style: { marginTop: "10px" } });
+      host.appendChild(row);
+      const submit = el("button", { class: "btn-big" }, "Grade me");
+      const stars = el("div", { style: { fontSize: "32px", letterSpacing: "4px" } }, "");
+      const fb = el("div", { class: "hint", style: { fontSize: "16px", marginTop: "8px" } });
+      row.appendChild(submit); row.appendChild(stars);
+      host.appendChild(fb);
+
+      const rubric = p.rubric || {};
+      const passing = rubric.passingStars || 4;
+      let attempts = 0;
+
+      const grade = () => {
+        const text = (ta.value || "").trim();
+        if (!text) { fb.textContent = "Type something first!"; Audio_.sfx("Oops"); return; }
+        Tracker.click();
+        Audio_.sfx("Type");
+        attempts += 1;
+
+        let score = 0;
+        const tips = [];
+        const words = text.split(/\s+/).filter(Boolean);
+
+        // Word count
+        if (rubric.minWords && words.length < rubric.minWords) {
+          tips.push(`Use at least ${rubric.minWords} words.`);
+        } else {
+          score += 1;
+        }
+        // Ideal length
+        if (rubric.idealLength) {
+          const [lo, hi] = rubric.idealLength;
+          if (words.length < lo) tips.push("A bit too short.");
+          else if (words.length > hi) tips.push("A little too long — try shorter.");
+          else score += 1;
+        } else { score += 1; }
+        // Must-include keywords
+        const includes = (rubric.mustInclude || []).map(s => String(s).toLowerCase());
+        if (includes.length) {
+          const hits = includes.filter(k => text.toLowerCase().includes(k)).length;
+          if (hits === includes.length) { score += 2; }
+          else if (hits > 0) { score += 1; tips.push(`Try adding the word(s): ${includes.filter(k => !text.toLowerCase().includes(k)).join(", ")}.`); }
+          else { tips.push(`Add the word(s): ${includes.join(", ")}.`); }
+        } else { score += 2; }
+        // Example detection
+        if (rubric.mustHaveExample) {
+          const hasExample = /\b(like|such as)\b|:/i.test(text);
+          if (hasExample) { score += 1; }
+          else { tips.push("Add an example with 'like' or ':'."); }
+        } else { score += 1; }
+
+        score = Math.max(1, Math.min(5, score));
+        stars.textContent = "⭐".repeat(score) + "☆".repeat(5 - score);
+        InFlight.touchState({ typed: text, lastScore: score });
+
+        if (score >= passing) {
+          clearNode(fb);
+          fb.appendChild(el("span", { class: "success" }, "Nice prompt! You got it."));
+          Audio_.sfx("Ding");
+          setTimeout(() => done(true), 700);
+        } else {
+          // Each failed try = retry (small grade penalty per Tracker.retry)
+          if (attempts > 1) Tracker.retry();
+          fb.textContent = tips.slice(0, 2).join(" ") || "Keep trying!";
+          Audio_.sfx("Oops");
+        }
+      };
+      submit.addEventListener("click", grade);
+      setTimeout(() => ta.focus(), 50);
+    },
+
+    /* === v0.3.1: history-scene =============================
+     * Animated SVG/canvas timeline scenes for Chapter 2.
+     */
+    "history-scene"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Watch the story!"));
+      const sceneId = (p.scene && p.scene.id) || "math";
+      const stage = el("div", {
+        style: {
+          background: "white", border: "3px dashed var(--accent-3)",
+          borderRadius: "var(--r-md)", padding: "16px",
+          minHeight: "240px", display: "grid", placeItems: "center",
+        },
+      });
+      host.appendChild(stage);
+      stage.appendChild(HistoryScenes.build(sceneId));
+
+      const ctrl = el("div", { class: "row", style: { marginTop: "12px" } });
+      host.appendChild(ctrl);
+      const playBtn = el("button", { class: "btn-big" }, "▶ Play scene");
+      const replayBtn = el("button", { class: "btn-big alt" }, "↻ Replay");
+      ctrl.appendChild(playBtn); ctrl.appendChild(replayBtn);
+
+      let scenePlayed = false;
+      const play = () => {
+        Tracker.click();
+        HistoryScenes.play(sceneId, stage);
+        scenePlayed = true;
+      };
+      playBtn.addEventListener("click", play);
+      replayBtn.addEventListener("click", play);
+
+      const check = (p.scene && p.scene.check) || null;
+      if (check && Array.isArray(check.choices)) {
+        host.appendChild(el("h4", { style: { marginTop: "16px" } }, check.prompt || "What did you learn?"));
+        const grid = el("div", { class: "choice-grid" });
+        host.appendChild(grid);
+        check.choices.forEach(c => {
+          const btn = el("button", {
+            class: "choice", onclick: () => {
+              Tracker.click();
+              if (c.right && scenePlayed) {
+                btn.classList.add("right"); Audio_.sfx("Ding");
+                setTimeout(() => done(true), 600);
+              } else {
+                Tracker.retry(); btn.classList.add("wrong"); Audio_.sfx("Oops");
+                setTimeout(() => btn.classList.remove("wrong"), 600);
+              }
+            },
+          }, String(c.label));
+          grid.appendChild(btn);
+        });
+      } else {
+        const finish = el("button", {
+          class: "btn-big go", style: { marginTop: "10px" },
+          onclick: () => { if (scenePlayed) done(true); else { Audio_.sfx("Oops"); play(); } },
+        }, "I watched it");
+        host.appendChild(finish);
+      }
+    },
+
+    /* === v0.3.1: sprite-mover =============================
+     * Real-time canvas platformer demo. Arrow keys move hero,
+     * AABB collision, gravity, optional hitbox overlay.
+     */
+    "sprite-mover"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Move the hero. Reach the flag!"));
+      const game = SpriteMover.build({
+        level: p.level || (p.levelId ? KCALevels[p.levelId] : null) || KCALevels.starter,
+        opts: p.options || {},
+        onWin: () => { Audio_.sfx("Ding"); done(true); },
+      });
+      host.appendChild(game.dom);
+      game.bindKeys();
+    },
+
+    /* === v0.3.1: level-painter =============================
+     * 12x8 tile grid editor. Palette: ground/coin/spike/flag/empty.
+     * Save → kca.kid_levels.v1 + AppData via JSBridge.
+     * Play → hands grid to sprite-mover.
+     */
+    "level-painter"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Paint your own level!"));
+      const editor = LevelPainter.build({
+        startLevel: p.startLevel || KCALevels.starter,
+        onSave: () => { Audio_.sfx("Star"); done(true); },
+      });
+      host.appendChild(editor.dom);
+    },
   },
 };
 
@@ -2013,6 +2200,905 @@ async function saveKidProject(name, data) {
   }
   return false;
 }
+
+/* ============================================================
+ *  Cinematic (v0.3.1) — Lesson 55 reveal scene.
+ *
+ *  Plays after the kid solves the final iteration. Abstract sprites morph
+ *  into full Mario-style art over ~6 seconds. "MAMA MIA!" celebration word
+ *  is then forced. NO Mario-IP text appears; the reveal is purely visual.
+ * ============================================================ */
+const Cinematic = {
+  active: false,
+  el: null,
+
+  play(onDone) {
+    if (this.active) return;
+    this.active = true;
+    const layer = el("div", {
+      class: "celebration show",
+      style: {
+        background: "rgba(0,0,0,0.85)",
+        zIndex: "75",
+      },
+    });
+    this.el = layer;
+    document.body.appendChild(layer);
+
+    const stage = el("div", {
+      style: {
+        background: "#0a1640",
+        borderRadius: "var(--r-lg)",
+        padding: "20px",
+        maxWidth: "720px",
+        width: "90%",
+      },
+    });
+    layer.appendChild(stage);
+
+    const title = el("h2", {
+      style: { color: "#fff", textAlign: "center", margin: "0 0 12px", fontSize: "22px" },
+    }, "Look what you built...");
+    stage.appendChild(title);
+
+    const svg = svgEl("svg", { viewBox: "0 0 384 256", width: "100%", style: "background:#1f6dd6;border-radius:12px;display:block" });
+    stage.appendChild(svg);
+
+    // Build abstract version (matches the in-game canvas colors at lesson 50-54)
+    // World layout
+    const ground = svgEl("rect", { x: 0, y: 224, width: 384, height: 32, fill: "#a06a3f", id: "cin-ground" });
+    svg.appendChild(ground);
+    // Bricks
+    const bricks = [];
+    for (let i = 0; i < 6; i++) {
+      const b = svgEl("rect", { x: 80 + i * 32, y: 192, width: 32, height: 32, fill: "#a06a3f", stroke: "#7a4f2c", "stroke-width": "2", id: `cin-brick-${i}` });
+      svg.appendChild(b);
+      bricks.push(b);
+    }
+    // Hero (red square initially)
+    const hero = svgEl("rect", { x: 32, y: 192, width: 22, height: 28, fill: "#ff5a78", id: "cin-hero" });
+    svg.appendChild(hero);
+    const heroOveralls = svgEl("rect", { x: 32, y: 206, width: 22, height: 14, fill: "#3a4a8a", id: "cin-overalls" });
+    svg.appendChild(heroOveralls);
+    // Coin (gold dot initially)
+    const coin = svgEl("circle", { cx: 200, cy: 144, r: 8, fill: "#ffd700", stroke: "#b48800", "stroke-width": "2", id: "cin-coin" });
+    svg.appendChild(coin);
+    // Enemy (brown blob)
+    const enemy = svgEl("rect", { x: 280, y: 196, width: 24, height: 28, fill: "#a06a3f", id: "cin-enemy" });
+    svg.appendChild(enemy);
+    // Flag (stick + green triangle)
+    const flagPole = svgEl("rect", { x: 350, y: 176, width: 4, height: 48, fill: "#1a1a3a", id: "cin-pole" });
+    svg.appendChild(flagPole);
+    const flagTri = svgEl("polygon", { points: "354,180 366,186 354,192", fill: "#5acf95", id: "cin-flag" });
+    svg.appendChild(flagTri);
+
+    // Caption
+    const caption = el("p", {
+      style: { color: "#fff", textAlign: "center", margin: "12px 0 0", fontSize: "18px", minHeight: "24px" },
+      id: "cin-caption",
+    }, "");
+    stage.appendChild(caption);
+
+    // Animate the reveal — staggered transitions
+    const lines = [
+      "First we made a plain world...",
+      "Then we polished it up...",
+      "And now look what you helped build!",
+    ];
+
+    let step = 0;
+    const tick = () => {
+      step += 1;
+      caption.textContent = lines[Math.min(step - 1, lines.length - 1)] || "";
+
+      if (step === 1) {
+        // Hero gets a hat shape (red cap arc) and a face
+        const cap = svgEl("path", { d: "M30 188 Q 43 178, 56 188 L 56 196 L 30 196 Z", fill: "#d63131" });
+        svg.appendChild(cap);
+        // Cap brim
+        const brim = svgEl("rect", { x: 28, y: 196, width: 28, height: 4, fill: "#a01818" });
+        svg.appendChild(brim);
+        // Face / mustache
+        const face = svgEl("rect", { x: 34, y: 200, width: 18, height: 8, fill: "#f4c896" });
+        svg.appendChild(face);
+        const mustache = svgEl("rect", { x: 34, y: 206, width: 18, height: 3, fill: "#3a2a1a" });
+        svg.appendChild(mustache);
+        Audio_.sfx("FwPop");
+      } else if (step === 2) {
+        // Coin becomes a "?" question block (gold square with ? glyph)
+        coin.setAttribute("display", "none");
+        const qbox = svgEl("rect", { x: 192, y: 136, width: 24, height: 24, fill: "#ff9b00", stroke: "#7a4400", "stroke-width": "2" });
+        svg.appendChild(qbox);
+        const qchar = svgEl("text", { x: 204, y: 154, "text-anchor": "middle", "font-size": "18", "font-weight": "900", fill: "#1a1a3a" });
+        qchar.textContent = "?";
+        svg.appendChild(qchar);
+        Audio_.sfx("FwBurst");
+      } else if (step === 3) {
+        // Enemy becomes a mushroom-shape bad guy (brown cap + cream body)
+        enemy.setAttribute("display", "none");
+        const eCap = svgEl("ellipse", { cx: 292, cy: 200, rx: 14, ry: 10, fill: "#7a3f2a" });
+        svg.appendChild(eCap);
+        const eBody = svgEl("rect", { x: 280, y: 200, width: 24, height: 22, fill: "#f4c896" });
+        svg.appendChild(eBody);
+        // Eyes
+        svg.appendChild(svgEl("circle", { cx: 285, cy: 208, r: 2, fill: "#1a1a3a" }));
+        svg.appendChild(svgEl("circle", { cx: 299, cy: 208, r: 2, fill: "#1a1a3a" }));
+        // Tiny feet
+        svg.appendChild(svgEl("rect", { x: 280, y: 220, width: 8, height: 4, fill: "#1a1a3a" }));
+        svg.appendChild(svgEl("rect", { x: 296, y: 220, width: 8, height: 4, fill: "#1a1a3a" }));
+        Audio_.sfx("Boing");
+      } else if (step === 4) {
+        // Flag becomes a green pipe at the right edge
+        flagPole.setAttribute("display", "none");
+        flagTri.setAttribute("display", "none");
+        const pipe = svgEl("rect", { x: 340, y: 176, width: 36, height: 48, fill: "#2eaf3a", stroke: "#1a6f22", "stroke-width": "3" });
+        svg.appendChild(pipe);
+        const pipeLip = svgEl("rect", { x: 336, y: 172, width: 44, height: 12, fill: "#2eaf3a", stroke: "#1a6f22", "stroke-width": "3" });
+        svg.appendChild(pipeLip);
+        Audio_.sfx("Tada");
+      } else if (step === 5) {
+        // Bricks get the patterned look
+        bricks.forEach((b, i) => {
+          b.setAttribute("fill", "#d68035");
+          // Add brick lines
+          const lineY = 192 + 16;
+          const ln = svgEl("line", { x1: 80 + i * 32, y1: lineY, x2: 112 + i * 32, y2: lineY, stroke: "#7a4400", "stroke-width": "2" });
+          svg.appendChild(ln);
+        });
+        // Princess silhouette in the distance
+        const castle = svgEl("rect", { x: 360, y: 140, width: 18, height: 36, fill: "#888" });
+        svg.appendChild(castle);
+        const princess = svgEl("rect", { x: 366, y: 152, width: 6, height: 14, fill: "#f8a8d8" });
+        svg.appendChild(princess);
+        Audio_.sfx("Yay");
+      } else if (step === 6) {
+        // Final: big text reveal
+        const reveal = el("div", {
+          style: {
+            color: "#ffd700", textAlign: "center", marginTop: "16px",
+            fontSize: "clamp(28px, 6vw, 48px)", fontWeight: "900",
+            textShadow: "0 4px 0 rgba(0,0,0,0.5)",
+            animation: "wordPulse 1s ease-in-out infinite alternate",
+          },
+        }, "It's-a YOUR game!");
+        stage.appendChild(reveal);
+        // Hidden voice clip
+        Audio_.sfx("Extra");
+      } else {
+        // Done — let it sit for a beat then close + celebrate
+        clearInterval(timer);
+        setTimeout(() => {
+          this.close();
+          if (typeof onDone === "function") onDone();
+        }, 2200);
+      }
+    };
+
+    const timer = setInterval(tick, 1100);
+    tick();
+  },
+
+  close() {
+    if (this.el && this.el.parentNode) this.el.parentNode.removeChild(this.el);
+    this.el = null;
+    this.active = false;
+  },
+};
+
+/* ============================================================
+ *  HistoryScenes (v0.3.1) — animated SVG/canvas scenes for Chapter 2.
+ *
+ *  Each scene_id maps to a stage builder + a play() function that animates
+ *  a few elements via requestAnimationFrame. Hand-drawn primitives only —
+ *  no external SVGs, all generated.
+ * ============================================================ */
+const HistoryScenes = {
+  current: null,    // { id, stage, raf }
+  stop() {
+    if (this.current && this.current.raf) cancelAnimationFrame(this.current.raf);
+    this.current = null;
+  },
+  build(id) {
+    const wrap = el("div", { style: { width: "100%", maxWidth: "640px" } });
+    const svg = svgEl("svg", { viewBox: "0 0 320 200", width: "100%", style: "max-height:240px" });
+    svg.dataset.sceneId = id;
+    wrap.appendChild(svg);
+    this._renderInitial(svg, id);
+    return wrap;
+  },
+  _renderInitial(svg, id) {
+    clearNode(svg);
+    // Sky + ground baseline shared across scenes
+    svg.appendChild(svgEl("rect", { x: 0, y: 0, width: 320, height: 160, fill: "#d6e7ff" }));
+    svg.appendChild(svgEl("rect", { x: 0, y: 160, width: 320, height: 40, fill: "#5acf95" }));
+    if (id === "math") {
+      // Two numbers + a plus sign waiting to animate
+      const tA = svgEl("text", { x: 80, y: 100, "text-anchor": "middle", "font-size": "36", "font-weight": "800", fill: "#1a1a3a", id: "scene-A" });
+      tA.textContent = "2";
+      const tPlus = svgEl("text", { x: 160, y: 100, "text-anchor": "middle", "font-size": "36", "font-weight": "800", fill: "#ff5a78" });
+      tPlus.textContent = "+";
+      const tB = svgEl("text", { x: 240, y: 100, "text-anchor": "middle", "font-size": "36", "font-weight": "800", fill: "#1a1a3a", id: "scene-B" });
+      tB.textContent = "3";
+      svg.appendChild(tA); svg.appendChild(tPlus); svg.appendChild(tB);
+    } else if (id === "turing") {
+      // A long tape with squares + a head
+      for (let i = 0; i < 8; i++) {
+        const sq = svgEl("rect", { x: 30 + i * 32, y: 90, width: 30, height: 30, fill: "#fff", stroke: "#1a1a3a", "stroke-width": "2" });
+        svg.appendChild(sq);
+        const t = svgEl("text", { x: 45 + i * 32, y: 112, "text-anchor": "middle", "font-size": "20", "font-weight": "700", fill: "#1a1a3a" });
+        t.textContent = ["1", "0", "1", "1", "0", "1", "0", "0"][i];
+        svg.appendChild(t);
+      }
+      const head = svgEl("polygon", { points: "30,75 60,75 45,90", fill: "#ff5a78", id: "scene-head" });
+      svg.appendChild(head);
+    } else if (id === "perceptron") {
+      // Inputs (circles) on left -> central neuron -> output
+      const cy = 100;
+      const inputY = [60, 100, 140];
+      inputY.forEach((y, i) => {
+        const c = svgEl("circle", { cx: 60, cy: y, r: 14, fill: "#6b8cff", stroke: "#1a1a3a", "stroke-width": "2" });
+        svg.appendChild(c);
+        svg.appendChild(svgEl("line", { x1: 74, y1: y, x2: 156, y2: cy, stroke: "#999", "stroke-width": "2" }));
+      });
+      const neuron = svgEl("circle", { cx: 170, cy: cy, r: 22, fill: "#ffb84d", stroke: "#1a1a3a", "stroke-width": "3", id: "scene-neuron" });
+      svg.appendChild(neuron);
+      svg.appendChild(svgEl("line", { x1: 192, y1: cy, x2: 250, y2: cy, stroke: "#999", "stroke-width": "2" }));
+      const out = svgEl("text", { x: 270, y: cy + 8, "text-anchor": "middle", "font-size": "18", "font-weight": "700", fill: "#1a1a3a", id: "scene-out" });
+      out.textContent = "?";
+      svg.appendChild(out);
+    } else if (id === "training") {
+      // Target dot + a guess line moving toward it
+      const target = svgEl("circle", { cx: 250, cy: 80, r: 14, fill: "#5acf95", stroke: "#1a1a3a", "stroke-width": "2" });
+      svg.appendChild(target);
+      const guess = svgEl("circle", { cx: 70, cy: 130, r: 12, fill: "#ff5a78", stroke: "#1a1a3a", "stroke-width": "2", id: "scene-guess" });
+      svg.appendChild(guess);
+      const tag = svgEl("text", { x: 160, y: 50, "text-anchor": "middle", "font-size": "16", fill: "#4d4d70", id: "scene-tag" });
+      tag.textContent = "guess → check → fix";
+      svg.appendChild(tag);
+    } else if (id === "attention") {
+      // Three words with arrows showing 'looks at' relations
+      const words = ["She", "Mom", "smiles"];
+      words.forEach((w, i) => {
+        const x = 60 + i * 100;
+        const t = svgEl("text", { x, y: 90, "text-anchor": "middle", "font-size": "22", "font-weight": "700", fill: "#1a1a3a" });
+        t.textContent = w;
+        svg.appendChild(t);
+      });
+      const arrow = svgEl("path", { d: "M60 70 Q 120 30 160 70", stroke: "#ff5a78", "stroke-width": "3", fill: "none", "stroke-linecap": "round", id: "scene-arrow", "stroke-dasharray": "4 4" });
+      svg.appendChild(arrow);
+    } else if (id === "llm") {
+      // A growing brain with words flying in
+      const brain = svgEl("ellipse", { cx: 160, cy: 100, rx: 50, ry: 40, fill: "#a067ff", stroke: "#1a1a3a", "stroke-width": "3", id: "scene-brain" });
+      svg.appendChild(brain);
+      ["the", "a", "and", "is", "go"].forEach((w, i) => {
+        const t = svgEl("text", {
+          x: 30 + i * 60, y: 50, "text-anchor": "middle", "font-size": "16", fill: "#1a1a3a", id: `scene-word-${i}`,
+        });
+        t.textContent = w;
+        svg.appendChild(t);
+      });
+    }
+  },
+  play(id, stage) {
+    this.stop();
+    const svg = stage.querySelector("svg");
+    if (!svg) return;
+    this._renderInitial(svg, id);
+    const ctx = { svg, t: 0, lastTs: 0 };
+    const dur = 5000;
+    const step = (ts) => {
+      if (!ctx.lastTs) ctx.lastTs = ts;
+      ctx.t += ts - ctx.lastTs;
+      ctx.lastTs = ts;
+      const k = Math.min(1, ctx.t / dur);
+      this._frame(id, svg, k);
+      if (k < 1) ctx.raf = requestAnimationFrame(step);
+      else this.current = null;
+    };
+    this.current = { id, stage, raf: 0 };
+    this.current.raf = requestAnimationFrame(step);
+  },
+  _frame(id, svg, k) {
+    if (id === "math") {
+      const a = svg.querySelector("#scene-A"), b = svg.querySelector("#scene-B");
+      if (a && b && k > 0.4) {
+        a.textContent = "5";
+        b.textContent = "→";
+        // Replace plus with equals when k > 0.6
+        const ps = svg.querySelectorAll("text");
+        ps.forEach(t => { if (t.textContent === "+") t.textContent = "="; });
+      }
+    } else if (id === "turing") {
+      const head = svg.querySelector("#scene-head");
+      if (head) {
+        const x = 30 + Math.floor(k * 7) * 32;
+        head.setAttribute("points", `${x},75 ${x + 30},75 ${x + 15},90`);
+      }
+    } else if (id === "perceptron") {
+      const neuron = svg.querySelector("#scene-neuron");
+      const out = svg.querySelector("#scene-out");
+      if (neuron) {
+        neuron.setAttribute("fill", k < 0.5 ? "#ffb84d" : (k < 0.8 ? "#ffd700" : "#5acf95"));
+      }
+      if (out) out.textContent = k < 0.5 ? "?" : (k < 0.8 ? "..." : "YES");
+    } else if (id === "training") {
+      const guess = svg.querySelector("#scene-guess");
+      if (guess) {
+        const cx = 70 + (250 - 70) * k;
+        const cy = 130 - (130 - 80) * k;
+        guess.setAttribute("cx", String(cx));
+        guess.setAttribute("cy", String(cy));
+      }
+    } else if (id === "attention") {
+      const arr = svg.querySelector("#scene-arrow");
+      if (arr) {
+        arr.setAttribute("stroke-dashoffset", String(80 - k * 80));
+        arr.setAttribute("stroke-dasharray", k > 0.7 ? "0" : "4 4");
+      }
+    } else if (id === "llm") {
+      const brain = svg.querySelector("#scene-brain");
+      if (brain) {
+        brain.setAttribute("rx", String(50 + k * 30));
+        brain.setAttribute("ry", String(40 + k * 20));
+      }
+      // Words drift toward center
+      for (let i = 0; i < 5; i++) {
+        const w = svg.querySelector(`#scene-word-${i}`);
+        if (w) {
+          const startX = 30 + i * 60;
+          const x = startX + (160 - startX) * k;
+          const y = 50 + (100 - 50) * k;
+          w.setAttribute("x", String(x));
+          w.setAttribute("y", String(y));
+          w.setAttribute("opacity", String(1 - k * 0.7));
+        }
+      }
+    }
+  },
+};
+
+/* ============================================================
+ *  KCALevels (v0.3.1) — sample levels for sprite-mover + level-painter.
+ *
+ *  Each level: 12 cols × 8 rows. Tiles:
+ *    "." = empty (sky)
+ *    "#" = ground/brick
+ *    "c" = coin
+ *    "x" = spike
+ *    "f" = flag (goal)
+ *    "h" = hero spawn (only one per level)
+ *    "e" = enemy patrol
+ * ============================================================ */
+const KCALevels = {
+  starter: {
+    grid: [
+      "............",
+      "............",
+      "..c.........",
+      "............",
+      "....c.c.....",
+      "h.........f.",
+      "############",
+      "############",
+    ],
+  },
+  jump_practice: {
+    grid: [
+      "............",
+      "..........c.",
+      "..c.......##",
+      "...##.......",
+      "......c.....",
+      "h..####....f",
+      "############",
+      "############",
+    ],
+  },
+  hitbox_demo: {
+    grid: [
+      "............",
+      "............",
+      "....c.......",
+      "...x........",
+      "h....c.....f",
+      "############",
+      "############",
+      "############",
+    ],
+  },
+  enemy_demo: {
+    grid: [
+      "............",
+      "............",
+      "...c....c...",
+      "............",
+      "h..e..e....f",
+      "############",
+      "############",
+      "############",
+    ],
+  },
+};
+
+/* ============================================================
+ *  Physics (v0.3.1) — tiny AABB collision + gravity for sprite-mover.
+ *
+ *  Public API:
+ *    new Physics(level) - parses grid + heroSpawn, exposes tiles + dims
+ *    step(hero, dt, input, gravity) - mutates hero state in place
+ *    reachedFlag(hero) - true if hero AABB overlaps flag tile
+ *
+ *  Hero shape: { x, y, w, h, vx, vy, onGround }
+ *  Tile size: 32px. Grid is 12 cols x 8 rows = 384 x 256 px world.
+ * ============================================================ */
+const TILE = 32;
+const GRID_COLS = 12;
+const GRID_ROWS = 8;
+
+class Physics {
+  constructor(level) {
+    this.grid = (level && level.grid) || KCALevels.starter.grid;
+    this.flag = null;
+    this.heroSpawn = { x: 16, y: 16 };
+    this.coins = new Set();      // "x,y" tile keys
+    this.enemies = [];
+    for (let r = 0; r < this.grid.length; r++) {
+      for (let c = 0; c < this.grid[r].length; c++) {
+        const ch = this.grid[r][c];
+        if (ch === "h") this.heroSpawn = { x: c * TILE + 4, y: r * TILE };
+        else if (ch === "f") this.flag = { x: c * TILE, y: r * TILE };
+        else if (ch === "c") this.coins.add(`${c},${r}`);
+        else if (ch === "e") this.enemies.push({ x: c * TILE + 4, y: r * TILE, w: 24, h: 24, dir: 1 });
+      }
+    }
+  }
+
+  isSolid(col, row) {
+    if (col < 0 || col >= GRID_COLS) return true;
+    if (row < 0) return false;
+    if (row >= GRID_ROWS) return true;
+    const ch = this.grid[row] && this.grid[row][col];
+    return ch === "#";
+  }
+
+  isHazard(col, row) {
+    const ch = this.grid[row] && this.grid[row][col];
+    return ch === "x";
+  }
+
+  tileAt(px, py) {
+    return { col: Math.floor(px / TILE), row: Math.floor(py / TILE) };
+  }
+
+  /* AABB sweep collision: move x then y, snap on contact. */
+  step(hero, dt, input, gravity) {
+    // Horizontal input
+    const speed = 130;
+    hero.vx = 0;
+    if (input.left) hero.vx = -speed;
+    if (input.right) hero.vx = speed;
+    // Jump
+    if (input.jump && hero.onGround) {
+      hero.vy = -310;
+      hero.onGround = false;
+    }
+    // Gravity
+    hero.vy += gravity * dt;
+    if (hero.vy > 600) hero.vy = 600;
+
+    // Move X
+    hero.x += hero.vx * dt;
+    this._resolveAxis(hero, "x");
+    // Move Y
+    hero.y += hero.vy * dt;
+    this._resolveAxis(hero, "y");
+
+    // Update enemies (simple patrol with edge detection)
+    for (const e of this.enemies) {
+      e.x += e.dir * 50 * dt;
+      const aheadCol = Math.floor((e.x + (e.dir > 0 ? e.w : 0)) / TILE);
+      const belowAheadRow = Math.floor((e.y + e.h + 4) / TILE);
+      if (!this.isSolid(aheadCol, belowAheadRow) || this.isSolid(aheadCol, Math.floor(e.y / TILE))) {
+        e.dir = -e.dir;
+      }
+    }
+  }
+
+  _resolveAxis(hero, axis) {
+    const minCol = Math.floor(hero.x / TILE);
+    const maxCol = Math.floor((hero.x + hero.w - 1) / TILE);
+    const minRow = Math.floor(hero.y / TILE);
+    const maxRow = Math.floor((hero.y + hero.h - 1) / TILE);
+    for (let r = minRow; r <= maxRow; r++) {
+      for (let c = minCol; c <= maxCol; c++) {
+        if (!this.isSolid(c, r)) continue;
+        const tx = c * TILE, ty = r * TILE;
+        if (axis === "x") {
+          if (hero.vx > 0) hero.x = tx - hero.w;
+          else if (hero.vx < 0) hero.x = tx + TILE;
+          hero.vx = 0;
+        } else {
+          if (hero.vy > 0) { hero.y = ty - hero.h; hero.onGround = true; hero.vy = 0; }
+          else if (hero.vy < 0) { hero.y = ty + TILE; hero.vy = 0; }
+        }
+      }
+    }
+    // Falling off the bottom = die
+    if (axis === "y" && hero.y > GRID_ROWS * TILE) hero.dead = true;
+    // Touched a hazard tile
+    if (axis === "y") {
+      for (let r = minRow; r <= maxRow; r++) {
+        for (let c = minCol; c <= maxCol; c++) {
+          if (this.isHazard(c, r)) hero.dead = true;
+        }
+      }
+    }
+  }
+
+  reachedFlag(hero) {
+    if (!this.flag) return false;
+    return hero.x < this.flag.x + TILE && hero.x + hero.w > this.flag.x &&
+           hero.y < this.flag.y + TILE && hero.y + hero.h > this.flag.y;
+  }
+
+  collectCoinAt(hero) {
+    const cx = hero.x + hero.w / 2, cy = hero.y + hero.h / 2;
+    const col = Math.floor(cx / TILE), row = Math.floor(cy / TILE);
+    const key = `${col},${row}`;
+    if (this.coins.has(key)) {
+      this.coins.delete(key);
+      return true;
+    }
+    return false;
+  }
+
+  enemyHit(hero) {
+    for (const e of this.enemies) {
+      if (hero.x < e.x + e.w && hero.x + hero.w > e.x &&
+          hero.y < e.y + e.h && hero.y + hero.h > e.y) return true;
+    }
+    return false;
+  }
+}
+
+/* ============================================================
+ *  SpriteMover (v0.3.1) — real-time canvas hero with level + physics.
+ *  Returns { dom, bindKeys() }.
+ * ============================================================ */
+const SpriteMover = {
+  build({ level, opts, onWin }) {
+    const dom = el("div", { style: { display: "flex", flexDirection: "column", gap: "10px" } });
+
+    const canvas = el("canvas", { width: "384", height: "256", style: { width: "100%", maxWidth: "640px", background: "#d6e7ff", borderRadius: "var(--r-md)", border: "3px solid var(--accent-2)" } });
+    dom.appendChild(canvas);
+
+    const ctrls = el("div", { class: "row" });
+    dom.appendChild(ctrls);
+    const restartBtn = el("button", { class: "btn-big alt" }, "↻ Restart");
+    let showHitbox = !!opts.debugDefault;
+    const hitboxBtn = (opts.showHitboxToggle !== false) ? el("button", { class: "btn-big alt" }, "📦 Hitboxes") : null;
+    let gravity = opts.gravity || 800;
+    let gravityLabel = null;
+    let gravityRange = null;
+    if (opts.gravitySlider) {
+      gravityLabel = el("span", { class: "muted" }, "Gravity: " + gravity);
+      gravityRange = el("input", { type: "range", min: "200", max: "1500", step: "50", value: String(gravity) });
+      gravityRange.addEventListener("input", () => {
+        gravity = parseInt(gravityRange.value, 10) || 800;
+        if (gravityLabel) gravityLabel.textContent = "Gravity: " + gravity;
+        InFlight.touchState({ gravity });
+      });
+    }
+    ctrls.appendChild(restartBtn);
+    if (hitboxBtn) ctrls.appendChild(hitboxBtn);
+    if (gravityLabel) { ctrls.appendChild(gravityLabel); ctrls.appendChild(gravityRange); }
+
+    const hint = el("p", { class: "muted", style: { fontSize: "14px", margin: "4px 0" } },
+      "Use ← → arrow keys (or A/D) to move. ↑ or W or Space to jump.");
+    dom.appendChild(hint);
+
+    const ctx = canvas.getContext("2d");
+    const physics = new Physics(level);
+    let hero = { x: physics.heroSpawn.x, y: physics.heroSpawn.y, w: 22, h: 28, vx: 0, vy: 0, onGround: false, dead: false };
+    let alive = true;
+    let won = false;
+    let lastTs = 0;
+    const input = { left: false, right: false, jump: false };
+
+    const reset = () => {
+      hero = { x: physics.heroSpawn.x, y: physics.heroSpawn.y, w: 22, h: 28, vx: 0, vy: 0, onGround: false, dead: false };
+      // Reset coins by reparsing
+      physics.coins.clear();
+      for (let r = 0; r < physics.grid.length; r++) {
+        for (let c = 0; c < physics.grid[r].length; c++) {
+          if (physics.grid[r][c] === "c") physics.coins.add(`${c},${r}`);
+        }
+      }
+      won = false;
+    };
+    restartBtn.addEventListener("click", () => { Tracker.click(); Tracker.retry(); reset(); });
+    if (hitboxBtn) hitboxBtn.addEventListener("click", () => { showHitbox = !showHitbox; });
+
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Tiles
+      for (let r = 0; r < physics.grid.length; r++) {
+        for (let c = 0; c < physics.grid[r].length; c++) {
+          const ch = physics.grid[r][c];
+          const x = c * TILE, y = r * TILE;
+          if (ch === "#") {
+            ctx.fillStyle = "#a06a3f";
+            ctx.fillRect(x, y, TILE, TILE);
+            ctx.strokeStyle = "#7a4f2c";
+            ctx.lineWidth = 2;
+            ctx.strokeRect(x + 1, y + 1, TILE - 2, TILE - 2);
+          } else if (ch === "x") {
+            ctx.fillStyle = "#888";
+            ctx.beginPath();
+            ctx.moveTo(x, y + TILE);
+            for (let i = 0; i < 4; i++) {
+              ctx.lineTo(x + i * 8 + 4, y + TILE - 16);
+              ctx.lineTo(x + i * 8 + 8, y + TILE);
+            }
+            ctx.closePath();
+            ctx.fill();
+          } else if (ch === "f") {
+            ctx.fillStyle = "#1a1a3a";
+            ctx.fillRect(x + 14, y, 4, TILE);
+            ctx.fillStyle = "#5acf95";
+            ctx.beginPath();
+            ctx.moveTo(x + 18, y + 2);
+            ctx.lineTo(x + 30, y + 8);
+            ctx.lineTo(x + 18, y + 14);
+            ctx.closePath();
+            ctx.fill();
+          }
+        }
+      }
+      // Coins (subtle "?" hint as easter egg, but renders as gold circle)
+      physics.coins.forEach(key => {
+        const [cc, rr] = key.split(",").map(Number);
+        const cx = cc * TILE + TILE / 2, cy = rr * TILE + TILE / 2;
+        ctx.fillStyle = "#ffd700";
+        ctx.beginPath(); ctx.arc(cx, cy, 8, 0, Math.PI * 2); ctx.fill();
+        ctx.strokeStyle = "#b48800"; ctx.lineWidth = 2; ctx.stroke();
+        ctx.fillStyle = "#1a1a3a";
+        ctx.font = "bold 10px sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("?", cx, cy);
+      });
+      // Enemies
+      for (const e of physics.enemies) {
+        ctx.fillStyle = "#a06a3f";
+        ctx.beginPath();
+        ctx.arc(e.x + e.w / 2, e.y + e.h / 2, 12, Math.PI, 0);
+        ctx.lineTo(e.x + e.w, e.y + e.h);
+        ctx.lineTo(e.x, e.y + e.h);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#fff";
+        ctx.fillRect(e.x + 5, e.y + 8, 4, 4);
+        ctx.fillRect(e.x + 15, e.y + 8, 4, 4);
+        if (showHitbox) {
+          ctx.strokeStyle = "rgba(255,0,0,0.7)"; ctx.lineWidth = 2;
+          ctx.strokeRect(e.x, e.y, e.w, e.h);
+        }
+      }
+      // Hero — red square with overall hint
+      ctx.fillStyle = hero.dead ? "#888" : "#ff5a78";
+      ctx.fillRect(hero.x, hero.y, hero.w, hero.h);
+      ctx.fillStyle = "#3a4a8a";
+      ctx.fillRect(hero.x, hero.y + 14, hero.w, 14);  // "overalls"
+      if (showHitbox) {
+        ctx.strokeStyle = "rgba(0,255,0,0.8)"; ctx.lineWidth = 2;
+        ctx.strokeRect(hero.x, hero.y, hero.w, hero.h);
+      }
+    };
+
+    const loop = (ts) => {
+      if (!alive) return;
+      if (!lastTs) lastTs = ts;
+      const dt = Math.min(0.033, (ts - lastTs) / 1000);
+      lastTs = ts;
+      if (!won && !hero.dead) {
+        physics.step(hero, dt, input, gravity);
+        if (physics.collectCoinAt(hero)) Audio_.sfx("Ding");
+        if (physics.enemyHit(hero)) hero.dead = true;
+        if (physics.reachedFlag(hero)) {
+          won = true;
+          Audio_.sfx("Tada");
+          setTimeout(() => onWin && onWin(), 250);
+        }
+      }
+      if (hero.dead && !won) {
+        // After 1s, auto-respawn
+        setTimeout(() => { if (alive && !won) reset(); }, 800);
+        hero.dead = false;
+        Tracker.retry();
+        Audio_.sfx("Oops");
+      }
+      draw();
+      requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
+
+    return {
+      dom,
+      bindKeys() {
+        const onKey = (down) => (e) => {
+          if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A") { input.left = down; e.preventDefault(); }
+          else if (e.key === "ArrowRight" || e.key === "d" || e.key === "D") { input.right = down; e.preventDefault(); }
+          else if (e.key === "ArrowUp" || e.key === "w" || e.key === "W" || e.key === " ") {
+            if (down && !input.jump) Tracker.click();
+            input.jump = down; e.preventDefault();
+          }
+        };
+        const dn = onKey(true), up = onKey(false);
+        document.addEventListener("keydown", dn);
+        document.addEventListener("keyup", up);
+        // Auto-cleanup when canvas leaves DOM
+        const obs = new MutationObserver(() => {
+          if (!document.body.contains(canvas)) {
+            alive = false;
+            document.removeEventListener("keydown", dn);
+            document.removeEventListener("keyup", up);
+            obs.disconnect();
+          }
+        });
+        obs.observe(document.body, { childList: true, subtree: true });
+      },
+    };
+  },
+};
+
+/* ============================================================
+ *  LevelPainter (v0.3.1) — 12x8 grid editor with palette.
+ *  Save → kca.kid_levels.v1 + AppData. Play → hands to SpriteMover.
+ * ============================================================ */
+const LevelPainter = {
+  K_LEVELS: "kca.kid_levels.v1",
+
+  build({ startLevel, onSave }) {
+    const dom = el("div", { style: { display: "flex", flexDirection: "column", gap: "10px" } });
+
+    // Make a deep copy of starting grid
+    const startGrid = (startLevel && startLevel.grid) || KCALevels.starter.grid;
+    const grid = startGrid.map(row => row.split(""));
+
+    const palette = [
+      { ch: ".", label: "Sky",    color: "#d6e7ff" },
+      { ch: "#", label: "Brick",  color: "#a06a3f" },
+      { ch: "c", label: "Coin",   color: "#ffd700" },
+      { ch: "x", label: "Spike",  color: "#888" },
+      { ch: "f", label: "Flag",   color: "#5acf95" },
+      { ch: "h", label: "Hero",   color: "#ff5a78" },
+      { ch: "e", label: "Bad guy", color: "#a06a3f" },
+    ];
+    let activeChar = "#";
+
+    const palWrap = el("div", { class: "row", style: { gap: "6px" } });
+    dom.appendChild(palWrap);
+    const palBtns = palette.map(p => {
+      const b = el("button", {
+        class: "choice", style: { fontSize: "14px", padding: "6px 10px", background: p.color },
+        onclick: () => {
+          Tracker.click();
+          activeChar = p.ch;
+          palBtns.forEach(x => x.classList.remove("selected"));
+          b.classList.add("selected");
+        },
+      }, p.label);
+      if (p.ch === activeChar) b.classList.add("selected");
+      palWrap.appendChild(b);
+      return b;
+    });
+
+    const canvas = el("canvas", { width: "384", height: "256", style: { width: "100%", maxWidth: "640px", background: "#d6e7ff", borderRadius: "var(--r-md)", border: "3px solid var(--accent-3)", cursor: "crosshair" } });
+    dom.appendChild(canvas);
+    const ctx = canvas.getContext("2d");
+
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let r = 0; r < GRID_ROWS; r++) {
+        for (let c = 0; c < GRID_COLS; c++) {
+          const ch = grid[r] && grid[r][c];
+          const p = palette.find(x => x.ch === ch);
+          ctx.fillStyle = p ? p.color : "#d6e7ff";
+          ctx.fillRect(c * TILE, r * TILE, TILE, TILE);
+          ctx.strokeStyle = "rgba(0,0,0,0.10)";
+          ctx.lineWidth = 1;
+          ctx.strokeRect(c * TILE, r * TILE, TILE, TILE);
+          // Mini glyph for non-block tiles
+          if (ch === "h") { ctx.fillStyle = "#3a4a8a"; ctx.fillRect(c * TILE + 6, r * TILE + 16, 20, 14); }
+          else if (ch === "f") { ctx.fillStyle = "#1a1a3a"; ctx.fillRect(c * TILE + 14, r * TILE + 4, 4, 24); }
+          else if (ch === "c") { ctx.fillStyle = "#1a1a3a"; ctx.font = "bold 12px sans-serif"; ctx.textAlign = "center"; ctx.fillText("?", c * TILE + 16, r * TILE + 22); }
+          else if (ch === "x") {
+            ctx.fillStyle = "#555";
+            ctx.beginPath();
+            for (let i = 0; i < 3; i++) {
+              ctx.moveTo(c * TILE + 4 + i * 10, r * TILE + 28);
+              ctx.lineTo(c * TILE + 9 + i * 10, r * TILE + 14);
+              ctx.lineTo(c * TILE + 14 + i * 10, r * TILE + 28);
+            }
+            ctx.fill();
+          } else if (ch === "e") {
+            ctx.fillStyle = "#fff"; ctx.fillRect(c * TILE + 8, r * TILE + 12, 4, 4); ctx.fillRect(c * TILE + 18, r * TILE + 12, 4, 4);
+          }
+        }
+      }
+    };
+
+    const paintAt = (clientX, clientY) => {
+      const rect = canvas.getBoundingClientRect();
+      const scale = canvas.width / rect.width;
+      const px = (clientX - rect.left) * scale;
+      const py = (clientY - rect.top) * scale;
+      const c = Math.floor(px / TILE);
+      const r = Math.floor(py / TILE);
+      if (c < 0 || c >= GRID_COLS || r < 0 || r >= GRID_ROWS) return;
+      // Hero is unique — clear previous if placing a new one
+      if (activeChar === "h") {
+        for (let rr = 0; rr < GRID_ROWS; rr++) for (let cc = 0; cc < GRID_COLS; cc++) {
+          if (grid[rr][cc] === "h") grid[rr][cc] = ".";
+        }
+      }
+      grid[r][c] = activeChar;
+      InFlight.touchState({ painted: true });
+      draw();
+    };
+    let painting = false;
+    canvas.addEventListener("mousedown", e => { painting = true; Tracker.click(); paintAt(e.clientX, e.clientY); });
+    canvas.addEventListener("mousemove", e => { if (painting) paintAt(e.clientX, e.clientY); });
+    canvas.addEventListener("mouseup", () => { painting = false; });
+    canvas.addEventListener("mouseleave", () => { painting = false; });
+    canvas.addEventListener("touchstart", e => { painting = true; const t = e.touches[0]; paintAt(t.clientX, t.clientY); e.preventDefault(); });
+    canvas.addEventListener("touchmove", e => { if (painting) { const t = e.touches[0]; paintAt(t.clientX, t.clientY); e.preventDefault(); } });
+    canvas.addEventListener("touchend", () => { painting = false; });
+
+    const ctrls = el("div", { class: "row" });
+    dom.appendChild(ctrls);
+    const playBtn = el("button", { class: "btn-big" }, "▶ Play it");
+    const saveBtn = el("button", { class: "btn-big go" }, "💾 Save my level");
+    ctrls.appendChild(playBtn); ctrls.appendChild(saveBtn);
+
+    let playPanel = null;
+    playBtn.addEventListener("click", () => {
+      Tracker.click();
+      if (playPanel) playPanel.remove();
+      const level = { grid: grid.map(row => row.join("")) };
+      const game = SpriteMover.build({
+        level,
+        opts: { showHitboxToggle: true },
+        onWin: () => { Audio_.sfx("Star"); },
+      });
+      playPanel = el("div", { style: { marginTop: "10px" } });
+      playPanel.appendChild(el("p", { class: "muted" }, "Reach the flag to test your level!"));
+      playPanel.appendChild(game.dom);
+      dom.appendChild(playPanel);
+      game.bindKeys();
+    });
+
+    saveBtn.addEventListener("click", async () => {
+      Tracker.click();
+      const stamp = Date.now();
+      const name = `kid_level_${stamp}.json`;
+      const payload = { grid: grid.map(row => row.join("")), savedAt: new Date().toISOString() };
+      // localStorage
+      const list = Store.load(this.K_LEVELS, []);
+      list.push({ name, ...payload });
+      Store.save(this.K_LEVELS, list.slice(-50));
+      // AppData via JSBridge
+      await saveKidProject(name, JSON.stringify(payload, null, 2));
+      Audio_.sfx("Star");
+      const ok = el("p", { class: "success", style: { marginTop: "8px" } }, `Saved as ${name}!`);
+      dom.appendChild(ok);
+      setTimeout(() => { ok.remove(); onSave && onSave(); }, 1200);
+    });
+
+    draw();
+    return { dom };
+  },
+};
 
 /* ============================================================
  *  UI rendering
@@ -2257,7 +3343,26 @@ const UI = {
     Audio_.sfx("Tada");
     Mascot.set("cheer", { revertAfterMs: 2400, revertTo: "idle" });
 
-    Celebration.fire(lesson, sessionRec);
+    // Lesson 55: secret-Mario reveal cinematic plays FIRST, then celebration
+    // forces the "MAMA MIA!" action word.
+    const fireCelebration = () => {
+      if (lesson.id === 55) {
+        // Force the rare easter-egg word for the finale
+        const orig = Celebration.ACTION_WORDS;
+        Celebration.ACTION_WORDS = ["MAMA MIA!"];
+        Celebration.fire(lesson, sessionRec);
+        Celebration.ACTION_WORDS = orig;
+      } else {
+        Celebration.fire(lesson, sessionRec);
+      }
+    };
+
+    if (lesson.id === 55) {
+      Cinematic.play(() => fireCelebration());
+    } else {
+      fireCelebration();
+    }
+
     this.renderSidebar();
 
     // Schedule auto-advance to the next unlocked uncompleted lesson.

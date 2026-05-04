@@ -23,21 +23,33 @@
     }
   },
   "game": {
-    "type": "place-blocks",
+    "type": "history-scene",
     "payload": {
-      "prompt": "Build the sentence in order:",
-      "blocks": [
-        "It",
-        "guesses",
-        "the",
-        "next word"
-      ],
-      "solution": [
-        "It",
-        "guesses",
-        "the",
-        "next word"
-      ]
+      "prompt": "Watch the scene, then answer the question!",
+      "scene": {
+        "id": "llm",
+        "check": {
+          "prompt": "What happened to the words during the scene?",
+          "choices": [
+            {
+              "label": "They drifted into a big brain",
+              "right": true
+            },
+            {
+              "label": "They disappeared off-screen",
+              "right": false
+            },
+            {
+              "label": "They turned into numbers",
+              "right": false
+            },
+            {
+              "label": "They got bigger and bigger",
+              "right": false
+            }
+          ]
+        }
+      }
     }
   }
 }

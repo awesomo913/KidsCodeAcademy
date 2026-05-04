@@ -22,15 +22,33 @@
     }
   },
   "game": {
-    "type": "sequence-the-steps",
+    "type": "history-scene",
     "payload": {
-      "prompt": "Order the back-and-forth learning loop:",
-      "steps": [
-        "Guess the answer",
-        "Check if it is right",
-        "Fix what was wrong",
-        "Try again"
-      ]
+      "prompt": "Watch the scene, then answer the question!",
+      "scene": {
+        "id": "training",
+        "check": {
+          "prompt": "Where did the guess move toward?",
+          "choices": [
+            {
+              "label": "The green target",
+              "right": true
+            },
+            {
+              "label": "The clouds",
+              "right": false
+            },
+            {
+              "label": "Off the screen",
+              "right": false
+            },
+            {
+              "label": "The ground",
+              "right": false
+            }
+          ]
+        }
+      }
     }
   }
 }
