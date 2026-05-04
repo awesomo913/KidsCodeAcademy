@@ -31,10 +31,10 @@ LESSONS_DIR = ROOT / "lessons"
 OUT_DIR = ROOT / "assets" / "audio"
 RAW_DIR = ROOT / "assets" / "audio_raw"
 
-# Voice tuning — slower + gentler than v0.1 (was 165 wpm)
-RATE_WPM = 148
+# Voice tuning — even gentler in v0.3 (v0.2 was 148 wpm / 5500Hz)
+RATE_WPM = 140
 LEADING_SILENCE_MS = 250
-LPF_CUTOFF_HZ = 5500.0
+LPF_CUTOFF_HZ = 4800.0
 POST_GAIN = 1.10
 
 
@@ -104,6 +104,23 @@ def _post_process(in_path: Path, out_path: Path) -> None:
         w.writeframes(out_int16)
 
 
+def _collect_hint_jobs(data: dict, num: str) -> list[tuple[str, str]]:
+    """Return list of (raw_filename, text) for tier 2 + tier 3 hint narrations.
+
+    Tier 1 ("highlight") has no audio — it's a visual underline. Tier 2 and 3
+    get their own short wavs so the kid can hear the hint read aloud.
+    """
+    jobs: list[tuple[str, str]] = []
+    hints = data.get("hints") or {}
+    tier2 = (hints.get("tier2") or {}).get("rephrase")
+    tier3 = (hints.get("tier3") or {}).get("nudge")
+    if tier2:
+        jobs.append((f"lesson_{num}_hint_2.wav", str(tier2).strip()))
+    if tier3:
+        jobs.append((f"lesson_{num}_hint_3.wav", str(tier3).strip()))
+    return jobs
+
+
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     RAW_DIR.mkdir(parents=True, exist_ok=True)
@@ -114,23 +131,34 @@ def main() -> None:
 
     engine = _load_engine()
 
-    # Pass 1: queue every save_to_file, then one runAndWait
+    # Pass 1: queue every save_to_file (lesson narration + hint narrations),
+    # then one runAndWait. Avoids the SAPI hang from per-call runAndWait.
     queued: list[tuple[Path, Path]] = []
     for lf in lesson_files:
         data = json.loads(lf.read_text(encoding="utf-8"))
+        num = lf.stem.split("_")[1]
+
+        # Lesson narration
         lines = data.get("mascot_lines") or []
         text = " ... ".join(str(line) for line in lines).strip()
-        if not text:
-            log.warning("lesson %s has no mascot_lines, skipping", lf.name)
-            continue
-        num = lf.stem.split("_")[1]
-        raw_path = RAW_DIR / f"lesson_{num}.wav"
-        engine.save_to_file(text, str(raw_path))
-        final_path = OUT_DIR / f"lesson_{num}.wav"
-        queued.append((raw_path, final_path))
-        log.info("queued %s", lf.name)
+        if text:
+            raw_path = RAW_DIR / f"lesson_{num}.wav"
+            engine.save_to_file(text, str(raw_path))
+            queued.append((raw_path, OUT_DIR / f"lesson_{num}.wav"))
+            log.info("queued narration: %s", lf.name)
+        else:
+            log.warning("lesson %s has no mascot_lines, skipping narration", lf.name)
 
-    log.info("flushing engine for %d lessons...", len(queued))
+        # Hint narrations (tier 2 + tier 3)
+        for raw_name, hint_text in _collect_hint_jobs(data, num):
+            if not hint_text:
+                continue
+            raw_path = RAW_DIR / raw_name
+            engine.save_to_file(hint_text, str(raw_path))
+            queued.append((raw_path, OUT_DIR / raw_name))
+            log.info("queued hint: %s", raw_name)
+
+    log.info("flushing engine for %d clips...", len(queued))
     engine.runAndWait()
     engine.stop()
     log.info("flush complete; post-processing...")

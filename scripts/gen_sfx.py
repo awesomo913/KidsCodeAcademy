@@ -24,8 +24,8 @@ log = logging.getLogger("gen_sfx")
 
 OUT = Path(__file__).resolve().parent.parent / "assets" / "sfx"
 SR: int = 22050
-PEAK_AMP: float = 0.42  # leave headroom before saturation
-LPF_CUTOFF_HZ: float = 5200.0  # roll off harshness above this
+PEAK_AMP: float = 0.35  # gentler than v0.2 (was 0.42); reduces saturation harmonics
+LPF_CUTOFF_HZ: float = 4500.0  # roll off harshness more aggressively (was 5200)
 
 
 @dataclass(frozen=True)
@@ -35,7 +35,7 @@ class Note:
     velocity: float = 1.0  # per-note amplitude scalar (0..1)
 
 
-def _adsr(i: int, total: int, attack_ms: float = 28.0, release_ms: float = 220.0) -> float:
+def _adsr(i: int, total: int, attack_ms: float = 45.0, release_ms: float = 240.0) -> float:
     """Smooth ADSR. Linear attack, exponential release. Sustain at 1.0."""
     attack_n = max(1, int(SR * attack_ms / 1000.0))
     release_n = max(1, int(SR * release_ms / 1000.0))
@@ -50,14 +50,19 @@ def _adsr(i: int, total: int, attack_ms: float = 28.0, release_ms: float = 220.0
 
 
 def _harmonic_voice(t: float, freq_hz: float) -> float:
-    """Fundamental + 2 partials. Warmer than a pure sine."""
+    """Fundamental + lower 2nd partial + tiny 4th partial.
+
+    v0.3 tuning: 3rd harmonic dropped (was 0.18) to remove metallic edge.
+    2nd reduced 0.40 -> 0.30 for a softer fundamental-led tone.
+    4th at 0.05 adds gentle body without brightness.
+    """
     fund = math.sin(2.0 * math.pi * freq_hz * t)
-    p2 = 0.40 * math.sin(2.0 * math.pi * 2.0 * freq_hz * t)
-    p3 = 0.18 * math.sin(2.0 * math.pi * 3.0 * freq_hz * t)
-    return fund + p2 + p3
+    p2 = 0.30 * math.sin(2.0 * math.pi * 2.0 * freq_hz * t)
+    p4 = 0.05 * math.sin(2.0 * math.pi * 4.0 * freq_hz * t)
+    return fund + p2 + p4
 
 
-def _soft_saturate(x: float, drive: float = 1.15) -> float:
+def _soft_saturate(x: float, drive: float = 1.05) -> float:
     """tanh-based soft clip. drive < 1.0 = transparent, > 1.0 = warmer."""
     return math.tanh(x * drive) / math.tanh(drive)
 
@@ -234,6 +239,31 @@ def tada() -> None:
     _save("tada.wav", _synth_notes(seq, 0.50))
 
 
+def boing() -> None:
+    # Cartoonish jump SFX — fast pitch sweep then short tail.
+    # Used by Chapter 7 polish demo + Chapter 9 jump iteration (easter egg hint).
+    seq = [
+        Note(294.0, 0.05, 0.7),   # low D
+        Note(440.0, 0.04, 0.85),
+        Note(659.25, 0.04, 1.0),  # high E
+        Note(523.25, 0.10, 0.6),  # tail
+    ]
+    _save("boing.wav", _synth_notes(seq, 0.30))
+
+
+def celebration_extra() -> None:
+    """Hidden voice clip used as the surprise 'MAMA MIA' celebration moment.
+
+    Filename intentionally generic — does NOT mention Mario. The clip itself
+    is just two cheerful notes; the action-word text supplies the wording.
+    """
+    seq = [
+        Note(880.00, 0.15, 0.85),
+        Note(1318.51, 0.30, 1.0),
+    ]
+    _save("celebration_extra.wav", _synth_notes(seq, 0.50))
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     # v0.1 sounds — re-rendered with warmer pipeline
@@ -250,6 +280,9 @@ def main() -> None:
     firework_burst()
     huge_yay()
     tada()
+    # v0.3 additions
+    boing()
+    celebration_extra()
 
 
 if __name__ == "__main__":

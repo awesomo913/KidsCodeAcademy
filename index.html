@@ -332,28 +332,42 @@ button { font-family: inherit; cursor: pointer; }
   60% { transform: scale(1.08) rotate(2deg); }
   100% { transform: scale(1) rotate(0); opacity: 1; }
 }
+/* Action-word v0.3: split into outer pulse + inner gradient layers to prevent
+ * sub-pixel shimmer from animating background-position on a background-clip:text
+ * element while the confetti rAF runs. Outer = transform-only; inner = gradient.
+ */
 .action-word {
+  display: inline-block;
   font-size: clamp(48px, 9vw, 92px);
   line-height: 1;
   font-weight: 900;
   letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  animation: wordPulse 1.2s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.action-word .grad {
+  display: inline-block;
   background: linear-gradient(90deg, var(--accent), var(--accent-3), var(--accent-2), var(--accent-4));
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow: 0 6px 0 rgba(26,26,58,0.10);
-  animation: wordPulse 1.2s ease-in-out infinite alternate, wordHue 3s ease-in-out infinite;
-  text-transform: uppercase;
-  margin: 0 0 12px;
+  animation: wordHue 4s linear infinite;
+  will-change: background-position;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  transform: translateZ(0);  /* force own GPU layer, decouples rasterization */
 }
 @keyframes wordPulse {
   0% { transform: scale(1) rotate(-2deg); }
   100% { transform: scale(1.07) rotate(2deg); }
 }
 @keyframes wordHue {
-  0%,100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 .celebration-card .star { font-size: 72px; filter: drop-shadow(0 4px 0 rgba(26,26,58,0.18)); }
 .celebration-card h3 { margin: 6px 0; font-size: 26px; color: var(--accent); }
@@ -490,6 +504,117 @@ button { font-family: inherit; cursor: pointer; }
 .tag { display: inline-block; padding: 2px 8px; background: var(--accent-3); color: var(--ink); border-radius: 999px; font-size: 14px; font-weight: 600; }
 .success { color: var(--accent-4); font-weight: 700; }
 .muted { color: var(--ink-soft); }
+
+/* === v0.3 Hint Ladder ====================================== */
+.help-fab {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--accent-3);
+  color: var(--ink);
+  border: none;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font-size: 26px;
+  z-index: 5;
+  transition: transform var(--dur);
+}
+.help-fab:hover { transform: scale(1.08); }
+.help-fab:active { transform: scale(0.95); }
+.hint-panel {
+  background: var(--panel);
+  border: 3px solid var(--accent-3);
+  border-radius: var(--r-md);
+  padding: 14px 16px;
+  margin-top: 12px;
+  display: none;
+  font-size: 18px;
+}
+.hint-panel.show { display: block; animation: pop 360ms cubic-bezier(.18,.89,.32,1.28); }
+.hint-panel mark { background: var(--accent-3); color: var(--ink); padding: 2px 4px; border-radius: 4px; }
+.hint-panel .tier-label {
+  display: inline-block;
+  background: var(--accent-3);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 13px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+.hint-panel .hint-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.hint-panel .hint-actions .btn-big { font-size: 16px; padding: 8px 14px; }
+@keyframes pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* === v0.3 Auto-advance countdown bar ======================= */
+.autoadvance-bar {
+  height: 4px;
+  background: var(--accent-3);
+  border-radius: 999px;
+  margin-top: 10px;
+  transform-origin: left center;
+  transform: scaleX(1);
+  transition: transform 3s linear;
+}
+.autoadvance-bar.run { transform: scaleX(0); }
+
+/* === v0.3 Chapter sidebar accordion ======================== */
+.chapter-head {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--panel-2);
+  border: 3px solid transparent;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: left;
+}
+.chapter-head:hover { border-color: var(--accent-2); }
+.chapter-head.locked { opacity: 0.55; cursor: not-allowed; }
+.chapter-head .ch-emoji { font-size: 22px; }
+.chapter-head .ch-title { flex: 1; }
+.chapter-head .ch-prog { font-size: 13px; color: var(--ink-soft); font-weight: 600; }
+.chapter-head .ch-chev {
+  width: 14px; height: 14px;
+  display: inline-block;
+  border-right: 3px solid var(--ink-soft);
+  border-bottom: 3px solid var(--ink-soft);
+  transform: rotate(-45deg);
+  transition: transform var(--dur);
+  margin-right: 4px;
+}
+.chapter-head.expanded .ch-chev { transform: rotate(45deg); }
+.chapter-body { display: none; flex-direction: column; gap: 10px; padding: 8px 0 4px 12px; }
+.chapter-body.expanded { display: flex; }
+
+/* === v0.3 Boot replay dialog =============================== */
+.boot-dialog {
+  position: fixed; inset: 0;
+  display: none;
+  align-items: center; justify-content: center;
+  background: rgba(26,26,58,0.6);
+  z-index: 80;
+  padding: 20px;
+}
+.boot-dialog.show { display: flex; }
+.boot-dialog .card {
+  background: var(--panel);
+  border-radius: var(--r-lg);
+  padding: 24px 28px;
+  max-width: 460px;
+  text-align: center;
+  box-shadow: var(--shadow-2);
+}
+.boot-dialog .card h3 { color: var(--accent); margin: 0 0 10px; }
+.boot-dialog .card .row { justify-content: center; }
 </style>
   <meta property="og:title" content="Kids Code Academy" />
   <meta property="og:description" content="Sandboxed coding tutorial for ages 7+. Cartoon mascot, read-aloud audio, mini-games. Teaches the workflow used with Claude, Cursor, and Gemini." />
@@ -556,7 +681,7 @@ button { font-family: inherit; cursor: pointer; }
 
 <div class="celebration" id="celebration" role="dialog" aria-label="Celebration">
   <div class="celebration-card">
-    <h2 class="action-word" id="celebrationWord">AWESOME!</h2>
+    <h2 class="action-word"><span class="grad" id="celebrationWord">AWESOME!</span></h2>
     <div class="star" id="celebrationEmoji">&#11088;</div>
     <h3 id="celebrationTitle">Lesson Complete!</h3>
     <p class="lesson-title muted" id="celebrationLessonTitle"></p>
@@ -566,7 +691,20 @@ button { font-family: inherit; cursor: pointer; }
       <span id="celebrationGradeScore">100</span>
     </div>
     <div class="row" style="justify-content:center;gap:8px;margin-top:10px;">
-      <button class="btn-big go" id="celebrationOk">Yay! Next →</button>
+      <button class="btn-big alt" id="celebrationStay">Stay here</button>
+      <button class="btn-big go" id="celebrationOk">Next →</button>
+    </div>
+    <div class="autoadvance-bar" id="autoAdvanceBar"></div>
+  </div>
+</div>
+
+<div class="boot-dialog" id="bootDialog" role="dialog" aria-label="Resume lesson">
+  <div class="card">
+    <h3>Welcome back!</h3>
+    <p id="bootDialogText" class="muted">Want to keep going?</p>
+    <div class="row" style="margin-top:12px;">
+      <button class="btn-big go" id="bootResume">Yes, keep going</button>
+      <button class="btn-big alt" id="bootFresh">Start fresh</button>
     </div>
   </div>
 </div>
@@ -640,9 +778,12 @@ button { font-family: inherit; cursor: pointer; }
 <audio id="sfxType"      src="assets/sfx/type_pop.wav"       preload="auto"></audio>
 <audio id="sfxFwPop"     src="assets/sfx/firework_pop.wav"   preload="auto"></audio>
 <audio id="sfxFwBurst"   src="assets/sfx/firework_burst.wav" preload="auto"></audio>
-<audio id="sfxYay"       src="assets/sfx/huge_yay.wav"       preload="auto"></audio>
-<audio id="sfxTada"      src="assets/sfx/tada.wav"           preload="auto"></audio>
+<audio id="sfxYay"       src="assets/sfx/huge_yay.wav"           preload="auto"></audio>
+<audio id="sfxTada"      src="assets/sfx/tada.wav"               preload="auto"></audio>
+<audio id="sfxBoing"     src="assets/sfx/boing.wav"              preload="auto"></audio>
+<audio id="sfxExtra"     src="assets/sfx/celebration_extra.wav"  preload="auto"></audio>
 <audio id="lessonAudio"  preload="auto"></audio>
+<audio id="hintAudio"    preload="auto"></audio>
 
 <script>
 "use strict";
@@ -757,8 +898,16 @@ const Tracker = {
       retries: 0,
     };
   },
-  click() { if (this.current) this.current.clicks += 1; },
-  retry() { if (this.current) this.current.retries += 1; },
+  click() {
+    if (!this.current) return;
+    this.current.clicks += 1;
+    InFlight.touch();
+  },
+  retry() {
+    if (!this.current) return;
+    this.current.retries += 1;
+    InFlight.touch();
+  },
   finish(success) {
     if (!this.current) return null;
     const end = Date.now();
@@ -776,7 +925,7 @@ const Tracker = {
     this.current = null;
     return rec;
   },
-  abort() { this.current = null; },
+  abort() { this.current = null; InFlight.clear(); },
 };
 
 /* ============================================================
@@ -795,6 +944,11 @@ const Grade = {
   scoreSession(cur, success) {
     let score = 100;
     score -= Math.min(60, (cur.retries || 0) * 8);
+    // Hint Ladder penalty (v0.3): tier 1 free, tier 2 -2, tier 3 -5.
+    // hintsUsed stores the highest tier viewed: 0/1/2/3.
+    const hintsUsed = cur.hintsUsed || 0;
+    if (hintsUsed >= 2) score -= 2;
+    if (hintsUsed >= 3) score -= 3;  // additional -3 (cumulative -5)
     const seconds = (Date.now() - cur.start) / 1000;
     if (seconds > 90) score -= Math.min(20, Math.floor(seconds - 90));
     if (!success) score = Math.min(40, score);
@@ -864,26 +1018,79 @@ const Audio_ = {
 /* ============================================================
  *  Mascot animation state machine
  * ============================================================ */
+/* requestAnimationFrame-driven Mascot (v0.3): single shared rAF loop, frame preload,
+ * pendingTimer for revert-to-idle scheduling, document.hidden cancellation. Removes
+ * the v0.2 setInterval flicker between state transitions.
+ */
 const Mascot = {
-  el: null, state: "idle", timer: null,
-  setEl(node) { this.el = node; this.set("idle"); },
-  set(state) {
-    this.state = state;
-    this._stop();
-    const counts = { idle: 8, wave: 6, cheer: 6, think: 4 };
-    const fps = state === "idle" ? 4 : 8;
-    const total = counts[state] || 8;
-    let i = 0;
-    const tick = () => {
-      const n = String((i % total) + 1).padStart(2, "0");
-      this.el.style.backgroundImage = `url("assets/mascot/${state}_${n}.png")`;
-      i++;
-    };
-    tick();
-    this.timer = setInterval(tick, 1000 / fps);
+  el: null,
+  state: "idle",
+  frames: { idle: 8, wave: 6, cheer: 6, think: 4 },
+  preloaded: {},        // state -> Image[]
+  raf: 0,
+  frameIdx: 0,
+  lastFrameTs: 0,
+  pendingTimer: 0,
+
+  preload() {
+    for (const state in this.frames) {
+      this.preloaded[state] = [];
+      for (let i = 1; i <= this.frames[state]; i++) {
+        const img = new Image();
+        img.src = `assets/mascot/${state}_${String(i).padStart(2, "0")}.png`;
+        this.preloaded[state].push(img);
+      }
+    }
   },
-  _stop() { if (this.timer) { clearInterval(this.timer); this.timer = null; } },
+
+  setEl(node) { this.el = node; this.set("idle"); },
+
+  set(state, opts) {
+    if (this.pendingTimer) { clearTimeout(this.pendingTimer); this.pendingTimer = 0; }
+    this.state = state;
+    this.frameIdx = 0;
+    this.lastFrameTs = 0;
+    this._paint();
+    if (!this.raf) this._loop();
+
+    if (opts && opts.revertAfterMs) {
+      const revertTo = opts.revertTo || "idle";
+      this.pendingTimer = setTimeout(() => this.set(revertTo), opts.revertAfterMs);
+    }
+  },
+
+  _paint() {
+    if (!this.el) return;
+    const total = this.frames[this.state] || 8;
+    const n = String((this.frameIdx % total) + 1).padStart(2, "0");
+    this.el.style.backgroundImage = `url("assets/mascot/${this.state}_${n}.png")`;
+  },
+
+  _loop() {
+    const fps = this.state === "idle" ? 4 : 8;
+    const stepMs = 1000 / fps;
+    const tick = (now) => {
+      if (document.hidden) {
+        this.raf = 0;  // pause when tab hidden
+        return;
+      }
+      if (now - this.lastFrameTs >= stepMs) {
+        this.lastFrameTs = now;
+        this.frameIdx += 1;
+        this._paint();
+      }
+      this.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+  },
 };
+
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden && Mascot.el && !Mascot.raf) {
+    Mascot.lastFrameTs = 0;
+    Mascot._loop();
+  }
+});
 
 /* ============================================================
  *  Celebration — confetti canvas + giant action word + firework SFX
@@ -1006,25 +1213,346 @@ const Celebration = {
 };
 
 /* ============================================================
+ *  Hint Ladder (v0.3) — authored hints in lesson JSON.
+ *
+ *  Tier 1: visual highlight of a keyword in the prompt (free, no penalty)
+ *  Tier 2: rephrased question, simpler (cost: -2 score)
+ *  Tier 3: stronger nudge (cost: -5 score)
+ *
+ *  Tier 2 + 3 narration is pre-baked at build time -> assets/audio/lesson_NN_hint_T.wav
+ *  Help button appears top-right of #gameArea when lesson has any hints authored.
+ * ============================================================ */
+const Hints = {
+  current: null,        // { lesson, panel, tier }
+  open(lesson) {
+    if (!lesson || !lesson.hints) return;
+    const game = document.getElementById("gameArea");
+    if (!game) return;
+    // Clear any old panel
+    const existing = game.querySelector(".hint-panel");
+    if (existing) existing.remove();
+    this.current = { lesson, panel: null, tier: 0 };
+    this._showTier(1);
+  },
+  _showTier(n) {
+    const lesson = this.current && this.current.lesson;
+    if (!lesson) return;
+    const hints = lesson.hints || {};
+    const game = document.getElementById("gameArea");
+    let panel = game.querySelector(".hint-panel");
+    if (!panel) {
+      panel = el("div", { class: "hint-panel" });
+      game.appendChild(panel);
+    }
+    clearNode(panel);
+
+    // Tier label
+    panel.appendChild(el("div", { class: "tier-label" }, `Hint ${n} of 3`));
+
+    if (n === 1) {
+      // Highlight a keyword from the prompt — no spoken hint, just visual
+      const kw = (hints.tier1 && hints.tier1.highlight) || "";
+      const promptText = (lesson.game && lesson.game.payload && lesson.game.payload.prompt) || lesson.goal || "";
+      const para = el("p");
+      if (kw && promptText.toLowerCase().includes(String(kw).toLowerCase())) {
+        const idx = promptText.toLowerCase().indexOf(String(kw).toLowerCase());
+        para.appendChild(document.createTextNode(promptText.slice(0, idx)));
+        para.appendChild(el("mark", null, promptText.slice(idx, idx + kw.length)));
+        para.appendChild(document.createTextNode(promptText.slice(idx + kw.length)));
+      } else {
+        para.textContent = promptText;
+      }
+      panel.appendChild(para);
+      panel.appendChild(el("p", { class: "muted", style: { fontSize: "14px" } },
+        "Look at the highlighted word. What does it mean?"));
+    } else if (n === 2 || n === 3) {
+      const tierKey = n === 2 ? "tier2" : "tier3";
+      const tier = hints[tierKey] || {};
+      const text = (n === 2 ? tier.rephrase : tier.nudge) || "Hmm, no hint authored yet for this lesson.";
+      panel.appendChild(el("p", { style: { fontSize: "20px" } }, String(text)));
+      // Play hint narration if available
+      const num = String(lesson.id).padStart(2, "0");
+      this._playHint(`assets/audio/lesson_${num}_hint_${n}.wav`);
+    }
+
+    // Action buttons
+    const actions = el("div", { class: "hint-actions" });
+    const tryAgain = el("button", { class: "btn-big alt", onclick: () => this.close() }, "Try again");
+    actions.appendChild(tryAgain);
+    if (n < 3) {
+      const more = el("button", { class: "btn-big", onclick: () => {
+        const next = n + 1;
+        this._showTier(next);
+        this._applyPenalty(next);
+        this.current.tier = next;
+      } }, n === 1 ? "Show me more →" : "Even more help →");
+      actions.appendChild(more);
+    }
+    panel.appendChild(actions);
+    panel.classList.add("show");
+    this.current.panel = panel;
+    if (n === 1 && Tracker.current) Tracker.current.hintsUsed = Math.max(Tracker.current.hintsUsed || 0, 1);
+
+    // Mascot thinks for a moment
+    Mascot.set("think", { revertAfterMs: 1200, revertTo: "idle" });
+  },
+  _applyPenalty(tier) {
+    if (!Tracker.current) return;
+    Tracker.current.hintsUsed = Math.max(Tracker.current.hintsUsed || 0, tier);
+    InFlight.touch();
+  },
+  _playHint(src) {
+    const a = document.getElementById("hintAudio");
+    if (!a) return;
+    a.src = src + "?_=" + Date.now();
+    a.play().catch(() => {});
+  },
+  close() {
+    const game = document.getElementById("gameArea");
+    if (!game) return;
+    const panel = game.querySelector(".hint-panel");
+    if (panel) panel.classList.remove("show");
+    setTimeout(() => { if (panel && panel.parentNode) panel.remove(); }, 200);
+  },
+};
+
+/* ============================================================
+ *  AutoAdvance (v0.3) — auto-progress to next lesson after celebration.
+ *
+ *  Holds 3s after celebration shows, plays countdown bar, then opens next
+ *  unlocked uncompleted lesson. "Stay here" cancels the timer.
+ * ============================================================ */
+const AutoAdvance = {
+  K_CFG: "kca.autoadvance.v1",
+  timer: 0,
+  cfg() { return Store.load(this.K_CFG, { ms: 3000, enabled: true }); },
+  setMs(ms) { Store.save(this.K_CFG, { ms: Math.max(0, Math.min(10000, ms)), enabled: ms > 0 }); },
+
+  start(onFire) {
+    const cfg = this.cfg();
+    if (!cfg.enabled || cfg.ms <= 0) return;
+    this.cancel();
+    const bar = document.getElementById("autoAdvanceBar");
+    if (bar) {
+      bar.classList.remove("run");
+      // Force a reflow so the transition fires
+      void bar.offsetWidth;
+      bar.style.transitionDuration = (cfg.ms / 1000) + "s";
+      bar.classList.add("run");
+    }
+    this.timer = setTimeout(() => {
+      this.timer = 0;
+      onFire();
+    }, cfg.ms);
+  },
+  cancel() {
+    if (this.timer) { clearTimeout(this.timer); this.timer = 0; }
+    const bar = document.getElementById("autoAdvanceBar");
+    if (bar) bar.classList.remove("run");
+  },
+};
+
+/* ============================================================
+ *  InFlight (v0.3) — crash safety / mid-lesson save.
+ *
+ *  Persists Tracker state + per-game-type minimal `gameState` to
+ *  localStorage on every meaningful interaction. On boot, if a fresh
+ *  in-flight record exists (within 24h), offer to resume.
+ * ============================================================ */
+const InFlight = {
+  K: "kca.in_flight.v1",
+  TTL_MS: 24 * 60 * 60 * 1000,
+  _writeQueued: false,
+
+  touchState(partial) {
+    if (!Tracker.current) return;
+    Tracker.current.gameState = { ...(Tracker.current.gameState || {}), ...(partial || {}) };
+    this.touch();
+  },
+  touch() {
+    if (!Tracker.current) return;
+    if (this._writeQueued) return;
+    this._writeQueued = true;
+    const flush = () => {
+      this._writeQueued = false;
+      this._save();
+    };
+    if (typeof requestIdleCallback === "function") {
+      requestIdleCallback(flush, { timeout: 250 });
+    } else {
+      setTimeout(flush, 250);
+    }
+  },
+  _save() {
+    if (!Tracker.current) return;
+    const cur = Tracker.current;
+    const rec = {
+      schemaVersion: 1,
+      lessonId: cur.lessonId,
+      lessonNum: cur.lessonNum,
+      lessonTitle: cur.lessonTitle,
+      gameType: cur.gameType,
+      start: cur.start,
+      lastTouched: Date.now(),
+      clicks: cur.clicks || 0,
+      retries: cur.retries || 0,
+      hintsUsed: cur.hintsUsed || 0,
+      gameState: cur.gameState || {},
+    };
+    Store.save(this.K, rec);
+  },
+  clear() {
+    try { localStorage.removeItem(this.K); } catch {}
+  },
+  load() {
+    const rec = Store.load(this.K, null);
+    if (!rec) return null;
+    if (Date.now() - (rec.lastTouched || 0) > this.TTL_MS) {
+      this.clear();
+      return null;
+    }
+    return rec;
+  },
+  /* Restore Tracker.current from a persisted record so per-handler restoreState
+   * has the right counters when it repaints saved progress. */
+  resume(rec) {
+    Tracker.current = {
+      lessonId: rec.lessonId,
+      lessonNum: rec.lessonNum,
+      lessonTitle: rec.lessonTitle,
+      gameType: rec.gameType,
+      start: rec.start,
+      clicks: rec.clicks || 0,
+      retries: rec.retries || 0,
+      hintsUsed: rec.hintsUsed || 0,
+      gameState: rec.gameState || {},
+    };
+  },
+};
+
+/* ============================================================
+ *  Chapters (v0.3) — sidebar accordion grouping.
+ *
+ *  Lesson IDs map to chapters. Each chapter renders as a collapsible
+ *  section. Expand state persists in localStorage. Locked chapters
+ *  are visible but greyed out.
+ * ============================================================ */
+const CHAPTERS = [
+  { id: "ch1", title: "Computer & AI",        emoji: "🖥️", lessonNums: [1, 2, 3, 4] },
+  { id: "ch2", title: "How AI Got Here",      emoji: "📜", lessonNums: [5, 6, 7, 8, 9, 10] },
+  { id: "ch3", title: "Meet Every Helper",    emoji: "🤖", lessonNums: [11, 12, 13, 14, 15, 16, 17] },
+  { id: "ch4", title: "Talking Smart",        emoji: "💬", lessonNums: [18, 19, 20, 21, 22, 23] },
+  { id: "ch5", title: "Memory & Spells",      emoji: "🪄", lessonNums: [24, 25, 26, 27] },
+  { id: "ch6", title: "When Things Break",    emoji: "🔧", lessonNums: [28, 29, 30, 31] },
+  { id: "ch7", title: "Make a Game",          emoji: "🎮", lessonNums: [32, 33, 34, 35, 36, 37, 38, 39, 40, 41] },
+  { id: "ch8", title: "Ship It!",             emoji: "🚀", lessonNums: [42, 43, 44, 45, 46, 47, 48] },
+  { id: "ch9", title: "The Big Build",        emoji: "🌟", lessonNums: [49, 50, 51, 52, 53, 54, 55] },
+];
+
+const ChapterUI = {
+  K: "kca.ui.chapters.v1",
+  state() { return Store.load(this.K, {}); },
+  setExpanded(id, expanded) {
+    const s = this.state();
+    s[id] = expanded ? "expanded" : "collapsed";
+    Store.save(this.K, s);
+  },
+  isExpanded(id) {
+    return this.state()[id] === "expanded";
+  },
+  /* Returns true if a chapter is unlocked: chapter 1 always; later chapters need
+   * the prior chapter's last lesson completed (or per-lesson logic if any prior
+   * chapter has a free-pick gate). Using a simple linear gate is fine for v0.3. */
+  isChapterUnlocked(chapter) {
+    const idx = CHAPTERS.findIndex(c => c.id === chapter.id);
+    if (idx <= 0) return true;
+    const prev = CHAPTERS[idx - 1];
+    // Tolerate partial-authored states: a not-yet-authored lesson does not block.
+    return prev.lessonNums.every(n => {
+      const lid = LessonStore.idForNum(n);
+      return !lid || Progress.isCompleted(lid);
+    });
+  },
+  expandFor(lessonNum) {
+    const ch = CHAPTERS.find(c => c.lessonNums.includes(lessonNum));
+    if (!ch) return;
+    this.setExpanded(ch.id, true);
+  },
+};
+
+/* ============================================================
  *  Lesson + sandbox loaders
  * ============================================================ */
+/* Full v0.3.0 lesson registry — 55 slots across 9 chapters.
+ * IDs not yet authored as files will be filtered out by LessonStore.load() (fetch fails silently).
+ * Authoring fills these slots progressively; chapter sidebar renders only chapters with at least one
+ * loaded lesson, so partial states still display cleanly.
+ */
 const LESSON_IDS = [
+  // Chapter 1 — Hello, Computer & Hello, AI
   "lesson_01_what_is_a_computer",
   "lesson_02_talking_to_claude",
   "lesson_03_magic_boxes",
   "lesson_04_sticky_note_rule",
-  "lesson_05_ask_then_build",
-  "lesson_06_loops_are_repeats",
-  "lesson_07_if_then_choices",
-  "lesson_08_three_helpers",
-  "lesson_09_sneaky_notes",
-  "lesson_10_save_and_share",
-  "lesson_11_check_your_work",
-  "lesson_12_robot_brain",
-  "lesson_13_magic_word_list",
-  "lesson_14_tokens_are_snacks",
-  "lesson_15_show_a_friend",
-  "lesson_16_first_real_project",
+  // Chapter 2 — How AI Got Here
+  "lesson_05_math_made_thinking",
+  "lesson_06_turing_dream",
+  "lesson_07_perceptron_pet",
+  "lesson_08_back_and_forth_learning",
+  "lesson_09_word_attention",
+  "lesson_10_llm_is_born",
+  // Chapter 3 — Meet Every Helper
+  "lesson_11_claude_in_depth",
+  "lesson_12_cursor_in_depth",
+  "lesson_13_gemini_in_depth",
+  "lesson_14_codex_in_depth",
+  "lesson_15_opencode_in_depth",
+  "lesson_16_ollama_local",
+  "lesson_17_pick_the_helper",
+  // Chapter 4 — Talking Smart
+  "lesson_18_ask_then_build",
+  "lesson_19_be_specific",
+  "lesson_20_show_dont_tell",
+  "lesson_21_one_at_a_time",
+  "lesson_22_ask_again",
+  "lesson_23_sneaky_notes",
+  // Chapter 5 — Memory & Spells
+  "lesson_24_robot_memory",
+  "lesson_25_my_memory_rules",
+  "lesson_26_magic_spells",
+  "lesson_27_make_a_skill",
+  // Chapter 6 — When Things Break
+  "lesson_28_check_your_work",
+  "lesson_29_read_the_error",
+  "lesson_30_tell_what_happened",
+  "lesson_31_try_a_different_way",
+  // Chapter 7 — Make a Game
+  "lesson_32_what_is_a_world",
+  "lesson_33_input_action_result",
+  "lesson_34_sprites_and_costumes",
+  "lesson_35_move_my_hero",
+  "lesson_36_hitboxes",
+  "lesson_37_gravity",
+  "lesson_38_score_lives",
+  "lesson_39_levels",
+  "lesson_40_win_lose",
+  "lesson_41_polish",
+  // Chapter 8 — Ship It!
+  "lesson_42_idea_to_plan",
+  "lesson_43_color_editor",
+  "lesson_44_level_editor",
+  "lesson_45_ask_ai_for_feature",
+  "lesson_46_my_first_platformer",
+  "lesson_47_show_a_friend",
+  "lesson_48_save_and_share",
+  // Chapter 9 — The Big Build (secret)
+  "lesson_49_the_wish",
+  "lesson_50_iter1_hero_floor",
+  "lesson_51_iter2_jump",
+  "lesson_52_iter3_coins_score",
+  "lesson_53_iter4_bad_guy",
+  "lesson_54_iter5_powerup",
+  "lesson_55_iter6_flag_reveal",
 ];
 
 const LessonStore = {
@@ -1039,16 +1567,39 @@ const LessonStore = {
       }
     }
   },
+  /* v0.3 unlock: chapter 1 is linear; chapters 2-9 are free-pick after the
+   * previous chapter is complete. Tolerates partial-authored states (a missing
+   * lesson does not block its chapter from opening). */
   isUnlocked(id) {
-    const i = this.index.indexOf(id);
-    if (i <= 0) return true;
-    if (i <= 6) return Progress.isCompleted(this.index[i - 1]);
-    return Progress.isCompleted(this.index[6]);
+    if (typeof CHAPTERS === "undefined") {
+      // Fallback to v0.2 linear logic if CHAPTERS not loaded yet
+      const i = this.index.indexOf(id);
+      return i <= 0;
+    }
+    const lessonNum = parseInt((id.match(/^lesson_(\d+)/) || [, "0"])[1], 10);
+    const chapter = CHAPTERS.find(c => c.lessonNums.includes(lessonNum));
+    if (!chapter) return false;
+
+    // Chapter 1: strictly linear within the chapter.
+    if (chapter.id === "ch1") {
+      const prevNum = lessonNum - 1;
+      if (prevNum < 1) return true;
+      const prevId = this.idForNum(prevNum);
+      return !prevId || Progress.isCompleted(prevId);
+    }
+
+    // Chapters 2-9: chapter must be unlocked. Lessons inside a chapter are free-pick.
+    return ChapterUI.isChapterUnlocked(chapter);
   },
   numToTitle(num) {
     const lid = `lesson_${String(num).padStart(2, "0")}`;
     const matchKey = Object.keys(this.byId).find(k => k.startsWith(lid));
     return matchKey ? (this.byId[matchKey].title || matchKey) : lid;
+  },
+  /* v0.3: map lesson number (1..55) -> registered lesson id, or null if not yet authored. */
+  idForNum(num) {
+    const prefix = `lesson_${String(num).padStart(2, "0")}_`;
+    return this.index.find(id => id.startsWith(prefix)) || null;
   },
 };
 
@@ -1472,39 +2023,80 @@ const UI = {
   renderSidebar() {
     const sb = document.getElementById("sidebar");
     clearNode(sb);
-    LessonStore.index.forEach((id, i) => {
-      const lesson = LessonStore.byId[id];
-      const completed = Progress.isCompleted(id);
-      const unlocked = LessonStore.isUnlocked(id);
-      const card = el("div", {
-        class: "lesson-card" +
-          (completed ? " completed" : "") +
-          (!unlocked ? " locked" : "") +
-          (this.current === id ? " active" : ""),
+
+    CHAPTERS.forEach(chapter => {
+      // Resolve the lessons that actually exist in this chapter
+      const chapterLessons = chapter.lessonNums
+        .map(n => LessonStore.idForNum(n))
+        .filter(Boolean);
+
+      // Skip empty chapters in v0.3 partial states (lessons not yet authored)
+      if (!chapterLessons.length) return;
+
+      const isChapterUnlocked = ChapterUI.isChapterUnlocked(chapter);
+      const completedCount = chapterLessons.filter(id => Progress.isCompleted(id)).length;
+      const isExpanded = ChapterUI.isExpanded(chapter.id) ||
+        chapterLessons.includes(this.current);  // auto-expand chapter that holds current lesson
+
+      const head = el("button", {
+        class: "chapter-head" + (isExpanded ? " expanded" : "") + (isChapterUnlocked ? "" : " locked"),
         onclick: () => {
-          if (!unlocked) { Audio_.sfx("Oops"); return; }
-          this.openLesson(id);
+          if (!isChapterUnlocked) { Audio_.sfx("Oops"); return; }
+          ChapterUI.setExpanded(chapter.id, !isExpanded);
+          this.renderSidebar();
         },
+      },
+        el("span", { class: "ch-emoji" }, chapter.emoji),
+        el("span", { class: "ch-title" }, chapter.title),
+        el("span", { class: "ch-prog" }, `${completedCount}/${chapterLessons.length}`),
+        el("span", { class: "ch-chev" })
+      );
+      sb.appendChild(head);
+
+      const body = el("div", { class: "chapter-body" + (isExpanded ? " expanded" : "") });
+      sb.appendChild(body);
+
+      if (!isExpanded) return;
+
+      chapterLessons.forEach((id, i) => {
+        const lesson = LessonStore.byId[id];
+        const completed = Progress.isCompleted(id);
+        const unlocked = LessonStore.isUnlocked(id);
+        const card = el("div", {
+          class: "lesson-card" +
+            (completed ? " completed" : "") +
+            (!unlocked ? " locked" : "") +
+            (this.current === id ? " active" : ""),
+          onclick: () => {
+            if (!unlocked) { Audio_.sfx("Oops"); return; }
+            this.openLesson(id);
+          },
+        });
+        card.appendChild(el("div", { class: "num" }, String(lesson.id || i + 1)));
+        card.appendChild(el("div", { class: "title" }, String(lesson.title || id)));
+        card.appendChild(el("div", { class: "badge" }, completed ? "⭐" : (unlocked ? "" : "🔒")));
+        body.appendChild(card);
       });
-      card.appendChild(el("div", { class: "num" }, String(i + 1)));
-      card.appendChild(el("div", { class: "title" }, String(lesson.title || id)));
-      card.appendChild(el("div", { class: "badge" }, completed ? "⭐" : (unlocked ? "" : "🔒")));
-      sb.appendChild(card);
     });
+
     document.getElementById("streakTag").textContent =
       `${Progress.state.stickers} sticker${Progress.state.stickers === 1 ? "" : "s"}`;
   },
 
-  openLesson(id) {
-    // If a session was in flight on a previous lesson, abort it
-    if (Tracker.current) Tracker.abort();
+  openLesson(id, opts) {
+    const isResume = !!(opts && opts.resume);
+
+    // If a different lesson was in flight (and this isn't a resume), abort it.
+    if (!isResume && Tracker.current && Tracker.current.lessonId !== id) {
+      Tracker.abort();
+    }
 
     this.current = id;
     Audio_.stop();
     const lesson = LessonStore.byId[id];
 
-    // Start a fresh session for tracking
-    Tracker.start(lesson);
+    // Resume keeps Tracker.current as set by InFlight.resume; otherwise fresh start.
+    if (!isResume) Tracker.start(lesson);
 
     const view = document.getElementById("lessonView");
     clearNode(view);
@@ -1545,8 +2137,18 @@ const UI = {
       view.appendChild(this.buildChat(lesson));
     }
 
-    const game = el("div", { class: "game", id: "gameArea" });
+    const game = el("div", { class: "game", id: "gameArea", style: { position: "relative" } });
     view.appendChild(game);
+
+    // Help button — only render if the lesson actually authored hints
+    if (lesson.hints && (lesson.hints.tier1 || lesson.hints.tier2 || lesson.hints.tier3)) {
+      const help = el("button", {
+        class: "help-fab",
+        title: "Need a hint?",
+        onclick: (e) => { e.stopPropagation(); Tracker.click(); Hints.open(lesson); },
+      }, "🤔");
+      game.appendChild(help);
+    }
 
     if (lesson.id === 16) {
       Lesson16.build(game, lesson, ok => ok && this.completeLesson(id));
@@ -1556,6 +2158,14 @@ const UI = {
 
     this.renderSidebar();
     Audio_.sfx("Page");
+
+    // Scroll reset (v0.3 fix): after layout, snap every plausible scroll container
+    // back to top. Run inside rAF so the DOM has reflowed before we measure.
+    requestAnimationFrame(() => {
+      view.scrollTop = 0;
+      if (view.parentElement) view.parentElement.scrollTop = 0;
+      window.scrollTo(0, 0);
+    });
   },
 
   buildChat(lesson) {
@@ -1636,16 +2246,38 @@ const UI = {
     const lesson = LessonStore.byId[id];
     Progress.complete(id);
 
-    // Close out the tracker session and persist it
+    // Close out the tracker session and persist it. Clears in-flight save so
+    // we don't re-prompt the kid on next boot.
     const sessionRec = Tracker.finish(true);
+    InFlight.clear();
 
-    // Mascot does an extended cheer
+    // Mascot does an extended cheer (auto-reverts via Mascot's pendingTimer — no race)
     Audio_.sfx("Tada");
-    Mascot.set("cheer");
-    setTimeout(() => Mascot.set("idle"), 2400);
+    Mascot.set("cheer", { revertAfterMs: 2400, revertTo: "idle" });
 
     Celebration.fire(lesson, sessionRec);
     this.renderSidebar();
+
+    // Schedule auto-advance to the next unlocked uncompleted lesson.
+    // Skip on Lesson 7 (gates the chapters 2-7 unlock — let the kid see the chapter list)
+    // and Lesson 55 (final reveal — let the kid sit with it).
+    const skipAuto = (lesson.id === 7) || (lesson.id === 55);
+    if (!skipAuto) AutoAdvance.start(() => this._goNext());
+  },
+
+  _goNext() {
+    Celebration.close();
+    AutoAdvance.cancel();
+    const cur = this.current;
+    if (!cur) return;
+    const idx = LessonStore.index.indexOf(cur);
+    for (let n = idx + 1; n < LessonStore.index.length; n++) {
+      const nextId = LessonStore.index[n];
+      if (LessonStore.isUnlocked(nextId) && !Progress.isCompleted(nextId)) {
+        this.openLesson(nextId);
+        return;
+      }
+    }
   },
 };
 
@@ -1718,8 +2350,11 @@ const Parent = {
       row.appendChild(el("div", { class: "lid" }, "L" + s.lessonNum));
       row.appendChild(el("div", { class: "lname" }, String(s.lessonTitle || "")));
       row.appendChild(el("div", { class: "stat" }, this._fmtDuration((s.durationMs || 0) / 1000)));
+      const hintLabel = s.hintsUsed
+        ? ` · ${s.hintsUsed} hint${s.hintsUsed === 1 ? "" : "s"}`
+        : "";
       row.appendChild(el("div", { class: "stat" },
-        `${s.clicks || 0} click${s.clicks === 1 ? "" : "s"} · ${s.retries || 0} retr${s.retries === 1 ? "y" : "ies"}`));
+        `${s.clicks || 0} click${s.clicks === 1 ? "" : "s"} · ${s.retries || 0} retr${s.retries === 1 ? "y" : "ies"}${hintLabel}`));
       row.appendChild(el("div", { class: "grade " + (s.grade || "") }, `${s.grade || "?"} (${s.score || 0})`));
       host.appendChild(row);
     });
@@ -1788,6 +2423,7 @@ const Parent = {
  * ============================================================ */
 async function main() {
   Celebration.init();
+  Mascot.preload();
 
   const theme = Store.load(Store.K_THEME, "day");
   document.body.dataset.theme = theme;
@@ -1828,19 +2464,35 @@ async function main() {
   document.querySelectorAll(".parent-tab").forEach(b => {
     b.addEventListener("click", () => Parent.showTab(b.dataset.tab));
   });
+  // Celebration: "Next →" advances now (cancels auto-advance and goes); "Stay here" cancels and stays
   document.getElementById("celebrationOk").addEventListener("click", () => {
+    AutoAdvance.cancel();
+    UI._goNext();
+  });
+  document.getElementById("celebrationStay").addEventListener("click", () => {
+    AutoAdvance.cancel();
     Celebration.close();
-    // Try to advance to next unlocked lesson
-    const cur = UI.current;
-    if (!cur) return;
-    const idx = LessonStore.index.indexOf(cur);
-    for (let n = idx + 1; n < LessonStore.index.length; n++) {
-      const nextId = LessonStore.index[n];
-      if (LessonStore.isUnlocked(nextId) && !Progress.isCompleted(nextId)) {
-        UI.openLesson(nextId);
-        return;
-      }
-    }
+  });
+
+  // Boot replay dialog buttons
+  document.getElementById("bootResume").addEventListener("click", () => {
+    document.getElementById("bootDialog").classList.remove("show");
+    const rec = InFlight.load();
+    if (!rec) return;
+    InFlight.resume(rec);
+    UI.openLesson(rec.lessonId, { resume: true });
+    // Per-handler restoreState wiring will run inside KidGame handlers in a later patch.
+    // For v0.3.0 alpha: counters survive (clicks, retries, hintsUsed) so grade math is fair;
+    // visual state restoration is per-handler and ships next.
+  });
+  document.getElementById("bootFresh").addEventListener("click", () => {
+    InFlight.clear();
+    document.getElementById("bootDialog").classList.remove("show");
+    // Open the most recent completed lesson, or lesson 1
+    const startId = (Progress.state.last && LessonStore.byId[Progress.state.last])
+      ? Progress.state.last : LessonStore.index[0];
+    UI.openLesson(startId);
+    Audio_.sfx("Hi");
   });
 
   await LessonStore.load();
@@ -1851,6 +2503,17 @@ async function main() {
     return;
   }
   UI.renderSidebar();
+
+  // Boot: if an unfinished lesson is in flight (within 24h), prompt to resume.
+  const inFlight = InFlight.load();
+  if (inFlight && inFlight.lessonId && LessonStore.byId[inFlight.lessonId]) {
+    const lessonTitle = LessonStore.byId[inFlight.lessonId].title || inFlight.lessonId;
+    document.getElementById("bootDialogText").textContent =
+      `Want to keep going from "${lessonTitle}"? You were in the middle of it.`;
+    document.getElementById("bootDialog").classList.add("show");
+    return;  // wait for kid to choose Resume or Fresh
+  }
+
   const startId = (Progress.state.last && LessonStore.byId[Progress.state.last])
     ? Progress.state.last : LessonStore.index[0];
   UI.openLesson(startId);
