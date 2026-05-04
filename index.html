@@ -773,6 +773,15 @@ button { font-family: inherit; cursor: pointer; }
 
       <div class="parent-pane" data-pane="settings">
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
+          <strong style="font-size:17px;">🔊 Auto-play narration</strong>
+          <p class="muted" style="font-size:14px;margin:6px 0 10px;">
+            Bytey starts reading each lesson out loud about 1.5 seconds after it appears. Turn off to require a manual ▶ Play tap.
+          </p>
+          <div class="row">
+            <button id="autoplayToggle" class="btn-big alt">Auto-play: ON</button>
+          </div>
+        </div>
+        <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
           <strong style="font-size:17px;">🔍 Parent Preview Mode</strong>
           <p class="muted" style="font-size:14px;margin:6px 0 10px;">
             Browse any lesson without changing your kid's progress. Auto-clears when the app closes.
@@ -2245,6 +2254,27 @@ async function saveKidProject(name, data) {
 }
 
 /* ============================================================
+ *  AutoPlay (v0.3.3) — auto-play narration ~1.5s after a lesson opens.
+ *
+ *  Persisted in localStorage as `kca.autoplay.v1` ({ enabled, delayMs }).
+ *  Default: enabled, 1500 ms.
+ *  Skipped when PreviewMode is on (parent browsing should not blast audio).
+ *  Cancelled by: lesson change, manual Play / Stop click, mascot read-aloud
+ *  button click. UI._autoPlayTimer holds the pending timeout id.
+ * ============================================================ */
+const AutoPlay = {
+  K: "kca.autoplay.v1",
+  load() {
+    return Store.load(this.K, { enabled: true, delayMs: 1500 });
+  },
+  save(cfg) { Store.save(this.K, cfg); },
+  isEnabled() { return !!this.load().enabled; },
+  delayMs() { return Math.max(500, Math.min(5000, this.load().delayMs || 1500)); },
+  setEnabled(on) { const cfg = this.load(); cfg.enabled = !!on; this.save(cfg); },
+  setDelay(ms) { const cfg = this.load(); cfg.delayMs = ms; this.save(cfg); },
+};
+
+/* ============================================================
  *  PreviewMode (v0.3.2) — Parent's "preview every lesson" toggle.
  *
  *  When ON:
@@ -3195,6 +3225,13 @@ const LevelPainter = {
  * ============================================================ */
 const UI = {
   current: null,
+  _autoPlayTimer: 0,
+  _cancelAutoPlay() {
+    if (this._autoPlayTimer) {
+      clearTimeout(this._autoPlayTimer);
+      this._autoPlayTimer = 0;
+    }
+  },
 
   renderSidebar() {
     const sb = document.getElementById("sidebar");
@@ -3267,6 +3304,7 @@ const UI = {
       Tracker.abort();
     }
 
+    this._cancelAutoPlay();   // any pending narration timer for the previous lesson
     this.current = id;
     Audio_.stop();
     const lesson = LessonStore.byId[id];
@@ -3295,19 +3333,37 @@ const UI = {
 
     const audioRow = el("div", { class: "audio-row" });
     bubbleWrap.appendChild(audioRow);
-    const playBtn = el("button", { class: "btn-big", onclick: () => {
-      Tracker.click();
+    const playLessonAudio = () => {
       Mascot.set("think");
       Audio_.playLesson(
         lesson.narration_audio || `assets/audio/lesson_${String(lesson.id).padStart(2, "0")}.wav`,
         () => Mascot.set("idle")
       );
+    };
+    const playBtn = el("button", { class: "btn-big", onclick: () => {
+      Tracker.click();
+      this._cancelAutoPlay();   // manual Play overrides any pending auto-play
+      playLessonAudio();
     } }, "▶ Play");
     const stopBtn = el("button", { class: "btn-big alt", onclick: () => {
       Tracker.click();
-      Audio_.stop(); Mascot.set("idle");
+      this._cancelAutoPlay();
+      Audio_.stop();
+      Mascot.set("idle");
     } }, "■ Stop");
     audioRow.appendChild(playBtn); audioRow.appendChild(stopBtn);
+
+    // Auto-play (v0.3.3): schedule narration ~1.5s after lesson appears,
+    // unless disabled in Settings or PreviewMode is on. Stored on UI so
+    // _cancelAutoPlay can clear it from anywhere.
+    this._cancelAutoPlay();
+    if (AutoPlay.isEnabled() && !PreviewMode.isOn()) {
+      this._autoPlayTimer = setTimeout(() => {
+        this._autoPlayTimer = 0;
+        // Sanity: make sure the kid is still on this lesson
+        if (this.current === id) playLessonAudio();
+      }, AutoPlay.delayMs());
+    }
 
     if (lesson.sandbox && Array.isArray(lesson.sandbox.helpers) && lesson.sandbox.helpers.length) {
       view.appendChild(this.buildChat(lesson));
@@ -3664,6 +3720,7 @@ async function main() {
   document.getElementById("readBtn").addEventListener("click", () => {
     if (!UI.current) return;
     Tracker.click();
+    UI._cancelAutoPlay();   // manual read-aloud overrides any pending auto-play
     const lesson = LessonStore.byId[UI.current];
     Mascot.set("think");
     Audio_.playLesson(
@@ -3677,6 +3734,20 @@ async function main() {
   document.getElementById("pinInput").addEventListener("keydown", e => { if (e.key === "Enter") Parent.unlock(); });
   document.getElementById("closeParent").addEventListener("click", () => Parent.close());
   document.getElementById("pinChange").addEventListener("click", () => Parent.changePin());
+
+  // Auto-play narration toggle (v0.3.3)
+  const autoplayBtn = document.getElementById("autoplayToggle");
+  const refreshAutoplayBtn = () => {
+    const on = AutoPlay.isEnabled();
+    autoplayBtn.textContent = on ? "Auto-play: ON" : "Auto-play: OFF";
+    autoplayBtn.classList.toggle("go", on);
+    autoplayBtn.classList.toggle("alt", !on);
+  };
+  refreshAutoplayBtn();
+  autoplayBtn.addEventListener("click", () => {
+    AutoPlay.setEnabled(!AutoPlay.isEnabled());
+    refreshAutoplayBtn();
+  });
 
   // Parent Preview Mode (v0.3.2)
   const previewToggle = document.getElementById("previewToggle");
