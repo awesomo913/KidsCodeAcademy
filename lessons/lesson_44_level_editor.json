@@ -1,0 +1,36 @@
+{
+  "id": 44,
+  "chapter": "ch8",
+  "title": "Level Editor Capstone",
+  "goal": "Build YOUR level. Save it. Play it.",
+  "sticker_emoji": "🛠️",
+  "mascot_lines": [
+    "TIME TO BUILD YOUR OWN LEVEL.",
+    "Pick floor blocks, coins, spikes, a flag.",
+    "Make it fun. Make it tricky.",
+    "Then PLAY it!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "fun"
+    },
+    "tier2": {
+      "rephrase": "Order the steps to make a good level."
+    },
+    "tier3": {
+      "nudge": "Floor first. Then coins to grab. Then a challenge. Then a flag at the end!"
+    }
+  },
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Order the level-building steps:",
+      "steps": [
+        "Place the floor blocks",
+        "Add 5 coins to grab",
+        "Add 1 spike for a challenge",
+        "Add a flag at the end"
+      ]
+    }
+  }
+}

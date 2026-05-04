@@ -1,0 +1,48 @@
+{
+  "id": 17,
+  "chapter": "ch3",
+  "title": "Pick the Right Helper",
+  "goal": "Different jobs need different friends.",
+  "sticker_emoji": "🤝",
+  "mascot_lines": [
+    "You have lots of helpers now!",
+    "Claude. Cursor. Gemini. Codex. OpenCode. Ollama.",
+    "Each is best at a different job.",
+    "Pick the right friend for the job!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "right friend"
+    },
+    "tier2": {
+      "rephrase": "Big plan? Claude. Quick edit? Cursor. Fact? Gemini. Local? Ollama."
+    },
+    "tier3": {
+      "nudge": "Plan a long story = Claude. Fact about cats = Gemini. Fix one line = Cursor!"
+    }
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Match each job to the best helper:",
+      "pairs": [
+        {
+          "left": "Plan a long story",
+          "right": "Claude"
+        },
+        {
+          "left": "Fix one tiny line",
+          "right": "Cursor"
+        },
+        {
+          "left": "Tell me about pandas",
+          "right": "Gemini"
+        },
+        {
+          "left": "Help me without WiFi",
+          "right": "Ollama"
+        }
+      ]
+    }
+  }
+}

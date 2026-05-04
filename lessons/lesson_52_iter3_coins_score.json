@@ -1,0 +1,54 @@
+{
+  "id": 52,
+  "chapter": "ch9",
+  "title": "Iteration 3: Coins & Score",
+  "goal": "Bug! The coin stays after pickup. Fix it.",
+  "sticker_emoji": "🪙",
+  "mascot_lines": [
+    "Now we add coins!",
+    "BUG: pick up a coin, score goes up, but the coin STAYS.",
+    "So the score keeps going up forever!",
+    "Need to make the coin disappear when grabbed."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "disappear"
+    },
+    "tier2": {
+      "rephrase": "Pick the fix that makes the coin go away after pickup."
+    },
+    "tier3": {
+      "nudge": "Look for words like 'remove' or 'disappear' or 'hide' the coin."
+    }
+  },
+  "sandbox": {
+    "helpers": [
+      "claude"
+    ],
+    "hint": "Ask: 'why does my coin stay after I pick it up?'"
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Coin gives score but stays forever. Pick the fix:",
+      "choices": [
+        {
+          "label": "Make the coin smaller",
+          "right": false
+        },
+        {
+          "label": "Remove the coin from the world after pickup",
+          "right": true
+        },
+        {
+          "label": "Add more coins",
+          "right": false
+        },
+        {
+          "label": "Make the coin sing",
+          "right": false
+        }
+      ]
+    }
+  }
+}

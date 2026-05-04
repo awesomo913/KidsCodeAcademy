@@ -14,11 +14,34 @@
     "payload": {
       "prompt": "Drag each thing into its labeled box.",
       "pairs": [
-        { "left": "🐱", "right": "PET" },
-        { "left": "🍕", "right": "FOOD" },
-        { "left": "Sam", "right": "NAME" },
-        { "left": "7", "right": "AGE" }
+        {
+          "left": "🐱",
+          "right": "PET"
+        },
+        {
+          "left": "🍕",
+          "right": "FOOD"
+        },
+        {
+          "left": "Sam",
+          "right": "NAME"
+        },
+        {
+          "left": "7",
+          "right": "AGE"
+        }
       ]
+    }
+  },
+  "hints": {
+    "tier1": {
+      "highlight": "labeled box"
+    },
+    "tier2": {
+      "rephrase": "Each box has a name. Match the picture to the name that fits."
+    },
+    "tier3": {
+      "nudge": "A cat goes with PET. Sam is a name. 7 is a number. Pizza is food. Drag each one home!"
     }
   }
 }

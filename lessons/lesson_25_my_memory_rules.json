@@ -1,0 +1,36 @@
+{
+  "id": 25,
+  "chapter": "ch5",
+  "title": "Write My Own Memory Rules",
+  "goal": "Add your own rule and watch the robot remember.",
+  "sticker_emoji": "✍️",
+  "mascot_lines": [
+    "Your turn! Pick a rule for the robot.",
+    "Type it short and clear.",
+    "Then the robot will remember it forever.",
+    "Try a color you like!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "favorite color"
+    },
+    "tier2": {
+      "rephrase": "Type a sentence about your favorite color."
+    },
+    "tier3": {
+      "nudge": "Try: 'My favorite color is blue' (or any color you like!)."
+    }
+  },
+  "game": {
+    "type": "type-this-word",
+    "payload": {
+      "prompt": "Type a rule about your favorite color:",
+      "target_display": "My favorite color is _____",
+      "targets": [
+        "color is",
+        "color"
+      ],
+      "hint_wrong": "Use the word 'color' in your sentence."
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": 49,
+  "chapter": "ch9",
+  "title": "The Wish",
+  "goal": "Tell the AI what kind of game you want to make.",
+  "sticker_emoji": "🌟",
+  "mascot_lines": [
+    "Last chapter! THIS is where it all comes together.",
+    "We are going to make a REAL game.",
+    "First, you have to tell the AI what you want.",
+    "What kind of game? What can the hero do?"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "jump"
+    },
+    "tier2": {
+      "rephrase": "Type a wish that includes 'jump' and 'world'."
+    },
+    "tier3": {
+      "nudge": "Try: 'I want a hero who can run and jump in a world with levels'."
+    }
+  },
+  "sandbox": {
+    "helpers": [
+      "claude"
+    ],
+    "hint": "Tell Claude what kind of game you want!"
+  },
+  "game": {
+    "type": "type-this-word",
+    "payload": {
+      "prompt": "Tell Claude your wish. Use the word 'jump' in your message:",
+      "target_display": "I want a hero who can ___ and ___ in a world with ___",
+      "targets": [
+        "jump"
+      ],
+      "hint_wrong": "Use the word 'jump' somewhere in your wish."
+    }
+  }
+}

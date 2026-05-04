@@ -1,0 +1,55 @@
+{
+  "id": 45,
+  "chapter": "ch8",
+  "title": "Ask AI to Add a Feature",
+  "goal": "Tell Claude what feature you want. Pick the best plan.",
+  "sticker_emoji": "💡",
+  "mascot_lines": [
+    "Want a new thing in your game?",
+    "Just ASK!",
+    "Tell Claude what you want.",
+    "Claude will give you a plan.",
+    "Pick the plan that fits your game best!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "double jump"
+    },
+    "tier2": {
+      "rephrase": "Pick the request that gives Claude the most clear feature idea."
+    },
+    "tier3": {
+      "nudge": "More words about the feature = better plan from Claude!"
+    }
+  },
+  "sandbox": {
+    "helpers": [
+      "claude"
+    ],
+    "hint": "Try asking Claude to plan a 'double jump' or 'speed boost' feature."
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which message asks Claude best for a new feature?",
+      "choices": [
+        {
+          "label": "Stuff.",
+          "right": false
+        },
+        {
+          "label": "Plan a double-jump for my hero with a small wiggle.",
+          "right": true
+        },
+        {
+          "label": "Make it cooler.",
+          "right": false
+        },
+        {
+          "label": "Idk.",
+          "right": false
+        }
+      ]
+    }
+  }
+}

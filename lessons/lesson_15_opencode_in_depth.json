@@ -1,0 +1,45 @@
+{
+  "id": 15,
+  "chapter": "ch3",
+  "title": "OpenCode, the Free Helper",
+  "goal": "OpenCode is open — anyone can see how it works.",
+  "sticker_emoji": "🔓",
+  "mascot_lines": [
+    "Some helpers are CLOSED.",
+    "You can use them, but not peek inside.",
+    "OpenCode is OPEN.",
+    "Anyone can see how it works. Anyone can fix it!",
+    "Open is great for learning."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "see inside"
+    },
+    "tier2": {
+      "rephrase": "Open helpers let you peek inside. Closed ones don't."
+    },
+    "tier3": {
+      "nudge": "OpenCode is OPEN. ChatGPT is CLOSED. Drag each one home!"
+    }
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Open or closed? Drag each helper to the right side:",
+      "pairs": [
+        {
+          "left": "OpenCode",
+          "right": "🔓 OPEN"
+        },
+        {
+          "left": "Ollama",
+          "right": "🔓 OPEN"
+        },
+        {
+          "left": "ChatGPT",
+          "right": "🔒 CLOSED"
+        }
+      ]
+    }
+  }
+}

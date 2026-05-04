@@ -1,0 +1,36 @@
+{
+  "id": 5,
+  "chapter": "ch2",
+  "title": "Math Made Thinking",
+  "goal": "Numbers and rules can act like a tiny brain.",
+  "sticker_emoji": "🧮",
+  "mascot_lines": [
+    "Long ago, smart people had a big idea.",
+    "What if numbers and rules could think?",
+    "They wrote little steps on paper.",
+    "That paper was the FIRST robot brain."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "math steps"
+    },
+    "tier2": {
+      "rephrase": "Watch the scene. Then put the math steps in the right order."
+    },
+    "tier3": {
+      "nudge": "First we ADD, then we CHECK if it is more than five."
+    }
+  },
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Order these math steps to act like a tiny brain:",
+      "steps": [
+        "Start at 0",
+        "Add 1",
+        "Check if more than 5",
+        "If yes, stop"
+      ]
+    }
+  }
+}

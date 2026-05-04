@@ -1,0 +1,38 @@
+{
+  "id": 46,
+  "chapter": "ch8",
+  "title": "My First Platformer",
+  "goal": "Combine sprite, hitbox, gravity, score, and 1 level.",
+  "sticker_emoji": "🦘",
+  "mascot_lines": [
+    "TIME FOR THE BIG ONE.",
+    "Take everything you learned.",
+    "Sprite. Hitbox. Gravity. Score. Level.",
+    "Mix them all into ONE game.",
+    "You. Are. A. Builder."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "order"
+    },
+    "tier2": {
+      "rephrase": "Order the steps to make a platformer game."
+    },
+    "tier3": {
+      "nudge": "Hero first. Then world. Then physics. Then score. Then test!"
+    }
+  },
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Build a platformer. Order the steps:",
+      "steps": [
+        "Pick a hero sprite",
+        "Build the level",
+        "Turn on gravity",
+        "Add score and lives",
+        "Test the game"
+      ]
+    }
+  }
+}

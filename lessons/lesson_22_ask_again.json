@@ -1,0 +1,48 @@
+{
+  "id": 22,
+  "chapter": "ch4",
+  "title": "Ask Again When It's Wrong",
+  "goal": "If the answer is wrong, say WHAT was wrong.",
+  "sticker_emoji": "🔄",
+  "mascot_lines": [
+    "Sometimes the robot gets it wrong.",
+    "Don't just say 'no'.",
+    "Tell the robot WHAT is wrong.",
+    "And give it a new try!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "what is wrong"
+    },
+    "tier2": {
+      "rephrase": "Pick the answer that tells the robot WHAT to fix."
+    },
+    "tier3": {
+      "nudge": "Vague: 'wrong'. Better: 'too big, make it small'."
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Robot drew a HUGE star. You wanted small. Which reply is best?",
+      "choices": [
+        {
+          "label": "Wrong!",
+          "right": false
+        },
+        {
+          "label": "Make it small, half the size, please.",
+          "right": true
+        },
+        {
+          "label": "No.",
+          "right": false
+        },
+        {
+          "label": "Try again.",
+          "right": false
+        }
+      ]
+    }
+  }
+}

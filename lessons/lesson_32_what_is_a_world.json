@@ -1,0 +1,48 @@
+{
+  "id": 32,
+  "chapter": "ch7",
+  "title": "What Is a Game World?",
+  "goal": "A world is a stage with a floor, sky, and stuff.",
+  "sticker_emoji": "🌍",
+  "mascot_lines": [
+    "A game world is like a tiny stage.",
+    "There is a floor to walk on.",
+    "A sky above. Maybe some clouds.",
+    "And stuff to bump into and grab!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "parts"
+    },
+    "tier2": {
+      "rephrase": "Pick the part that is NOT in a normal game world."
+    },
+    "tier3": {
+      "nudge": "Floor, sky, hero, blocks — all in. What does NOT belong?"
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which is NOT a part of a game world?",
+      "choices": [
+        {
+          "label": "Floor",
+          "right": false
+        },
+        {
+          "label": "Sky",
+          "right": false
+        },
+        {
+          "label": "Hero",
+          "right": false
+        },
+        {
+          "label": "Math homework",
+          "right": true
+        }
+      ]
+    }
+  }
+}

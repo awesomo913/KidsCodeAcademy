@@ -1,0 +1,48 @@
+{
+  "id": 20,
+  "chapter": "ch4",
+  "title": "Show, Don't Just Tell",
+  "goal": "Add an example so the robot copies the shape.",
+  "sticker_emoji": "🪞",
+  "mascot_lines": [
+    "Sometimes telling is not enough.",
+    "Show the robot a small example.",
+    "Then it copies the SHAPE of what you want.",
+    "Like a kid following a recipe!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "example"
+    },
+    "tier2": {
+      "rephrase": "Pick the message that gives the robot a tiny example to copy."
+    },
+    "tier3": {
+      "nudge": "Examples often start with 'like this:' and show a sample."
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which prompt SHOWS instead of just tells?",
+      "choices": [
+        {
+          "label": "Make a name.",
+          "right": false
+        },
+        {
+          "label": "Make a name like this: Bytey, Sparky, Whiskers.",
+          "right": true
+        },
+        {
+          "label": "Names please.",
+          "right": false
+        },
+        {
+          "label": "Just one name.",
+          "right": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": 37,
+  "chapter": "ch7",
+  "title": "Falling Down: Gravity",
+  "goal": "Gravity pulls the hero down unless something holds them.",
+  "sticker_emoji": "⬇️",
+  "mascot_lines": [
+    "Drop a ball. It falls.",
+    "Why? GRAVITY!",
+    "Games have pretend gravity too.",
+    "If nothing holds the hero up, they FALL.",
+    "The floor holds them. So do bricks."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "gravity"
+    },
+    "tier2": {
+      "rephrase": "Order the steps when a hero walks off a platform edge."
+    },
+    "tier3": {
+      "nudge": "First the floor ends. Then gravity kicks in. Then the hero falls. Then they land!"
+    }
+  },
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Hero walked off the edge. Order what happens:",
+      "steps": [
+        "The floor stops",
+        "Gravity pulls down",
+        "Hero falls",
+        "Hero lands on lower floor"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": 11,
+  "chapter": "ch3",
+  "title": "Claude, the Big-Picture Helper",
+  "goal": "Claude reads lots and plans careful steps.",
+  "sticker_emoji": "📚",
+  "mascot_lines": [
+    "Meet Claude. Claude reads BIG things.",
+    "Claude makes plans. Step one, step two, step three.",
+    "Ask Claude to plan a story.",
+    "Claude will think first, THEN write."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "plan"
+    },
+    "tier2": {
+      "rephrase": "Claude is the planner. Ask Claude for a 3-step plan."
+    },
+    "tier3": {
+      "nudge": "Use the words 'plan a story' or 'three steps' in your prompt."
+    }
+  },
+  "sandbox": {
+    "helpers": [
+      "claude"
+    ],
+    "hint": "Try: 'plan a 3-step bedtime story'."
+  },
+  "game": {
+    "type": "guided-talk",
+    "payload": {
+      "prompt": "Read about Claude out loud:",
+      "lines": [
+        "Claude is the big-picture helper.",
+        "Claude reads lots of pages at once.",
+        "Claude likes to PLAN before doing.",
+        "Ask Claude to make a plan!"
+      ]
+    }
+  }
+}

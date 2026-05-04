@@ -1,0 +1,49 @@
+{
+  "id": 36,
+  "chapter": "ch7",
+  "title": "Invisible Hitboxes",
+  "goal": "A hitbox is the see-through square that bumps.",
+  "sticker_emoji": "📦",
+  "mascot_lines": [
+    "Look closely!",
+    "Around every sprite is an invisible BOX.",
+    "It is called a HITBOX.",
+    "When two hitboxes touch — BUMP!",
+    "Hitboxes are how the game knows things touched."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "touch"
+    },
+    "tier2": {
+      "rephrase": "A hitbox is invisible, but it makes things bump. Pick the true thing."
+    },
+    "tier3": {
+      "nudge": "Hitboxes are squares around sprites that the game uses to detect bumps."
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "What is a hitbox?",
+      "choices": [
+        {
+          "label": "A real picture you can see",
+          "right": false
+        },
+        {
+          "label": "An invisible square that bumps things",
+          "right": true
+        },
+        {
+          "label": "A song the game plays",
+          "right": false
+        },
+        {
+          "label": "A place to keep snacks",
+          "right": false
+        }
+      ]
+    }
+  }
+}

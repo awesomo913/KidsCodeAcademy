@@ -1,0 +1,37 @@
+{
+  "id": 21,
+  "chapter": "ch4",
+  "title": "One Step at a Time",
+  "goal": "Big jobs split into little steps.",
+  "sticker_emoji": "🪜",
+  "mascot_lines": [
+    "Big jobs are scary.",
+    "Robots get tired with HUGE asks.",
+    "Chop the job into small steps.",
+    "Tiny steps win every time!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "small steps"
+    },
+    "tier2": {
+      "rephrase": "Order the small steps a robot would take to make a game."
+    },
+    "tier3": {
+      "nudge": "First a hero. Then a world. Then add stuff. Then a way to win."
+    }
+  },
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Chop 'make a game' into 5 little steps:",
+      "steps": [
+        "Pick a hero",
+        "Build the world",
+        "Add things to do",
+        "Add a way to win",
+        "Test the game"
+      ]
+    }
+  }
+}

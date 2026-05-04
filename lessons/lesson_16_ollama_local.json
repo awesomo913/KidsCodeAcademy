@@ -1,0 +1,49 @@
+{
+  "id": 16,
+  "chapter": "ch3",
+  "title": "Ollama: A Robot On YOUR Computer",
+  "goal": "A LOCAL robot lives in your computer. No WiFi. Just slower.",
+  "sticker_emoji": "🏠",
+  "mascot_lines": [
+    "Most robots live online. They need WiFi.",
+    "Ollama is different. Ollama lives RIGHT HERE.",
+    "Right inside your computer.",
+    "No WiFi? Ollama still works.",
+    "It is a little slower. But it is YOURS!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "computer"
+    },
+    "tier2": {
+      "rephrase": "Ollama lives WHERE? On your computer or online?"
+    },
+    "tier3": {
+      "nudge": "Local means HOME. Ollama's home is your computer!"
+    }
+  },
+  "sandbox": {
+    "helpers": [
+      "claude"
+    ],
+    "hint": "Type 'hi' and see what your local helper says!"
+  },
+  "game": {
+    "type": "place-blocks",
+    "payload": {
+      "prompt": "Build the sentence:",
+      "blocks": [
+        "Ollama",
+        "lives",
+        "on my",
+        "computer"
+      ],
+      "solution": [
+        "Ollama",
+        "lives",
+        "on my",
+        "computer"
+      ]
+    }
+  }
+}

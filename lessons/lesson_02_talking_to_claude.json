@@ -9,7 +9,9 @@
     "Try the chat box: type 'make me a star' and press Ask."
   ],
   "sandbox": {
-    "helpers": ["claude"],
+    "helpers": [
+      "claude"
+    ],
     "hint": "Type 'make me a star' or 'draw a heart'.",
     "complete_after": 1,
     "auto_complete": false
@@ -19,8 +21,21 @@
     "payload": {
       "prompt": "Now you try! Type the magic words below.",
       "target_display": "make me a star",
-      "targets": ["star"],
+      "targets": [
+        "star"
+      ],
       "hint_wrong": "Try typing the word star."
+    }
+  },
+  "hints": {
+    "tier1": {
+      "highlight": "star"
+    },
+    "tier2": {
+      "rephrase": "You need to type the magic words. Look at the gray box for the words."
+    },
+    "tier3": {
+      "nudge": "Type the small words from the box, exactly like you see them."
     }
   }
 }

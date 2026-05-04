@@ -13,11 +13,34 @@
     "payload": {
       "prompt": "Which one is a computer?",
       "choices": [
-        { "label": "🍎 Apple", "right": false },
-        { "label": "💻 Laptop", "right": true },
-        { "label": "🐶 Dog", "right": false },
-        { "label": "🌳 Tree", "right": false }
+        {
+          "label": "🍎 Apple",
+          "right": false
+        },
+        {
+          "label": "💻 Laptop",
+          "right": true
+        },
+        {
+          "label": "🐶 Dog",
+          "right": false
+        },
+        {
+          "label": "🌳 Tree",
+          "right": false
+        }
       ]
+    }
+  },
+  "hints": {
+    "tier1": {
+      "highlight": "computer"
+    },
+    "tier2": {
+      "rephrase": "A computer is a smart box that does what you tell it. Which picture looks like that?"
+    },
+    "tier3": {
+      "nudge": "It is not a fruit, an animal, or a plant. It has buttons!"
     }
   }
 }

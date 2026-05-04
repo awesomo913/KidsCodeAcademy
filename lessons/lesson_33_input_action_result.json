@@ -1,0 +1,37 @@
+{
+  "id": 33,
+  "chapter": "ch7",
+  "title": "Press, Move, Happen",
+  "goal": "Input → action → result. That's a game.",
+  "sticker_emoji": "🎮",
+  "mascot_lines": [
+    "Every game is the same shape:",
+    "You PRESS. Hero MOVES. Something HAPPENS.",
+    "Press right. Hero walks right.",
+    "Bump a coin. Score goes up!",
+    "Three steps. Always the same."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "order"
+    },
+    "tier2": {
+      "rephrase": "Order the three steps: input, action, result."
+    },
+    "tier3": {
+      "nudge": "First the kid does something. Then the hero. Then the game!"
+    }
+  },
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Order: press, move, happen.",
+      "steps": [
+        "Press the right arrow",
+        "Hero moves right",
+        "Hero touches a coin",
+        "Score goes up!"
+      ]
+    }
+  }
+}

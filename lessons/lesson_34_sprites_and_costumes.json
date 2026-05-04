@@ -1,0 +1,48 @@
+{
+  "id": 34,
+  "chapter": "ch7",
+  "title": "Sprites and Costumes",
+  "goal": "A sprite is a little picture that has a job.",
+  "sticker_emoji": "🐱",
+  "mascot_lines": [
+    "A sprite is a tiny picture in a game.",
+    "The hero is a sprite. Coins are sprites. Bad guys are sprites.",
+    "Each sprite has a costume — what it looks like.",
+    "Same sprite can have many costumes!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "costume"
+    },
+    "tier2": {
+      "rephrase": "Match each sprite to its job in the game."
+    },
+    "tier3": {
+      "nudge": "Hero walks. Coin gives points. Bad guy hurts. Floor holds you up."
+    }
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Match the sprite to its job:",
+      "pairs": [
+        {
+          "left": "🦸 Hero",
+          "right": "Walks and jumps"
+        },
+        {
+          "left": "🪙 Coin",
+          "right": "Adds score"
+        },
+        {
+          "left": "👾 Bad guy",
+          "right": "Takes a heart"
+        },
+        {
+          "left": "🟫 Brick",
+          "right": "Holds you up"
+        }
+      ]
+    }
+  }
+}

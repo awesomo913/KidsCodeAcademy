@@ -1,0 +1,53 @@
+{
+  "id": 54,
+  "chapter": "ch9",
+  "title": "Iteration 5: Power-Up",
+  "goal": "Bug! Power-up stays after death. Reset on death.",
+  "sticker_emoji": "🌟",
+  "mascot_lines": [
+    "We added a power-up! Hero gets BIGGER.",
+    "BUG: hero loses a heart, but stays big forever!",
+    "Power-up should reset when hero dies."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "reset"
+    },
+    "tier2": {
+      "rephrase": "Pick the fix that makes the hero shrink back when they die."
+    },
+    "tier3": {
+      "nudge": "Look for 'reset to small on death'."
+    }
+  },
+  "sandbox": {
+    "helpers": [
+      "claude"
+    ],
+    "hint": "Ask: 'why does my hero stay big after dying?'"
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Hero stays big after dying. Pick the fix:",
+      "choices": [
+        {
+          "label": "Reset hero to small when they lose a heart",
+          "right": true
+        },
+        {
+          "label": "Make the hero glow",
+          "right": false
+        },
+        {
+          "label": "Remove the power-up forever",
+          "right": false
+        },
+        {
+          "label": "Add more hearts",
+          "right": false
+        }
+      ]
+    }
+  }
+}

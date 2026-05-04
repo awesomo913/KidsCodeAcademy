@@ -1,0 +1,49 @@
+{
+  "id": 38,
+  "chapter": "ch7",
+  "title": "Score, Lives, and Hearts",
+  "goal": "Win adds points. Lose takes a heart.",
+  "sticker_emoji": "❤️",
+  "mascot_lines": [
+    "Two big numbers in most games:",
+    "SCORE goes up when you do good things.",
+    "LIVES (or hearts) go down when you mess up.",
+    "Lose all hearts? Game over!",
+    "Get points, save hearts. That's the trick!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "heart"
+    },
+    "tier2": {
+      "rephrase": "Match each thing that happens to what changes."
+    },
+    "tier3": {
+      "nudge": "Coin → score up. Spike → heart down. Win flag → win!"
+    }
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Match each game event to what changes:",
+      "pairs": [
+        {
+          "left": "🪙 Grab a coin",
+          "right": "Score +1"
+        },
+        {
+          "left": "🌵 Touch a spike",
+          "right": "Heart -1"
+        },
+        {
+          "left": "🚩 Reach the flag",
+          "right": "You win!"
+        },
+        {
+          "left": "💚 Find a 1UP mushroom",
+          "right": "+1 extra life"
+        }
+      ]
+    }
+  }
+}

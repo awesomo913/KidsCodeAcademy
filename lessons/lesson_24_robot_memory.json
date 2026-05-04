@@ -1,0 +1,40 @@
+{
+  "id": 24,
+  "chapter": "ch5",
+  "title": "The Robot's Memory Book",
+  "goal": "A file called CLAUDE.md is a memory the robot reads first.",
+  "sticker_emoji": "📓",
+  "mascot_lines": [
+    "Robots forget. They have tiny memories.",
+    "But! You can give them a memory BOOK.",
+    "Grown-ups call it CLAUDE.md.",
+    "The robot reads it every time. So it never forgets your rules!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "memory"
+    },
+    "tier2": {
+      "rephrase": "Stack three rules into a pretend memory book."
+    },
+    "tier3": {
+      "nudge": "Each block is one rule the robot will remember forever."
+    }
+  },
+  "game": {
+    "type": "place-blocks",
+    "payload": {
+      "prompt": "Build a memory book by stacking rules in order:",
+      "blocks": [
+        "I LIKE DOGS",
+        "USE SHORT WORDS",
+        "ALWAYS BE KIND"
+      ],
+      "solution": [
+        "I LIKE DOGS",
+        "USE SHORT WORDS",
+        "ALWAYS BE KIND"
+      ]
+    }
+  }
+}

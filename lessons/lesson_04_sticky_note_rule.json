@@ -13,8 +13,29 @@
     "type": "place-blocks",
     "payload": {
       "prompt": "Build the sticky note. Drag the words into the right order.",
-      "blocks": ["I LIKE", "DOGS", "I DON'T LIKE", "BROCCOLI"],
-      "solution": ["I LIKE", "DOGS", "I DON'T LIKE", "BROCCOLI"]
+      "blocks": [
+        "I LIKE",
+        "DOGS",
+        "I DON'T LIKE",
+        "BROCCOLI"
+      ],
+      "solution": [
+        "I LIKE",
+        "DOGS",
+        "I DON'T LIKE",
+        "BROCCOLI"
+      ]
+    }
+  },
+  "hints": {
+    "tier1": {
+      "highlight": "I LIKE"
+    },
+    "tier2": {
+      "rephrase": "Stack the words. Start with what you LIKE, then say what you do NOT like."
+    },
+    "tier3": {
+      "nudge": "First two blocks tell the robot one thing you love. Last two tell it something you do not love."
     }
   }
 }

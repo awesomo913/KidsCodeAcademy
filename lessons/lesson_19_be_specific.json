@@ -1,0 +1,48 @@
+{
+  "id": 19,
+  "chapter": "ch4",
+  "title": "Be Super Specific",
+  "goal": "A fuzzy ask gets a fuzzy answer. Add details!",
+  "sticker_emoji": "🎯",
+  "mascot_lines": [
+    "Watch this. I say 'a dog'. The robot draws... ANY dog.",
+    "Now I say 'a small red dog with one floppy ear'.",
+    "WAY better dog!",
+    "Details give the robot a target."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "details"
+    },
+    "tier2": {
+      "rephrase": "Pick the message that has the most clear details."
+    },
+    "tier3": {
+      "nudge": "Look for size, color, and special parts. More words = clearer picture."
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which prompt is the MOST specific?",
+      "choices": [
+        {
+          "label": "Make a thing.",
+          "right": false
+        },
+        {
+          "label": "Make a small red dog with one floppy ear.",
+          "right": true
+        },
+        {
+          "label": "A dog!",
+          "right": false
+        },
+        {
+          "label": "Idk.",
+          "right": false
+        }
+      ]
+    }
+  }
+}

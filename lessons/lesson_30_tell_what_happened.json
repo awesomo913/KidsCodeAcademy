@@ -1,0 +1,49 @@
+{
+  "id": 30,
+  "chapter": "ch6",
+  "title": "Tell the Robot What Happened",
+  "goal": "'It crashed' is fuzzy. Add WHAT and WHEN.",
+  "sticker_emoji": "📣",
+  "mascot_lines": [
+    "When you tell a grown-up about a bug,",
+    "say WHAT happened, and WHEN.",
+    "Not just 'it crashed'.",
+    "But: 'it crashed when I clicked Save'.",
+    "WAY more useful for fixing!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "WHEN"
+    },
+    "tier2": {
+      "rephrase": "Pick the bug report that tells WHAT and WHEN."
+    },
+    "tier3": {
+      "nudge": "Look for two things: a thing that broke, AND a thing the kid did."
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which bug report is best?",
+      "choices": [
+        {
+          "label": "It is broken!",
+          "right": false
+        },
+        {
+          "label": "Help.",
+          "right": false
+        },
+        {
+          "label": "The score went to zero when I touched a coin.",
+          "right": true
+        },
+        {
+          "label": "Idk what happened.",
+          "right": false
+        }
+      ]
+    }
+  }
+}

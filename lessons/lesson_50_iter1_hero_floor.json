@@ -1,0 +1,54 @@
+{
+  "id": 50,
+  "chapter": "ch9",
+  "title": "Iteration 1: Hero & Floor",
+  "goal": "Bug! The hero falls through the world. Fix the floor.",
+  "sticker_emoji": "🧱",
+  "mascot_lines": [
+    "Claude built version one.",
+    "Uh oh — the hero falls FOREVER.",
+    "The collision with the floor is wrong.",
+    "Ask Claude what's wrong. Then pick the fix."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "floor"
+    },
+    "tier2": {
+      "rephrase": "The bug is about the floor. Pick the fix that adds floor collision."
+    },
+    "tier3": {
+      "nudge": "The hero needs to STOP when it touches the floor. Look for 'stop on floor'."
+    }
+  },
+  "sandbox": {
+    "helpers": [
+      "claude"
+    ],
+    "hint": "Ask: 'why does my hero fall forever?'"
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Hero falls forever. Pick the fix:",
+      "choices": [
+        {
+          "label": "Make the hero blue",
+          "right": false
+        },
+        {
+          "label": "Add: stop the hero when it touches the floor",
+          "right": true
+        },
+        {
+          "label": "Remove the floor",
+          "right": false
+        },
+        {
+          "label": "Add more coins",
+          "right": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": 41,
+  "chapter": "ch7",
+  "title": "Make It Feel Good",
+  "goal": "Wiggles, sounds, and flashes make a game feel alive.",
+  "sticker_emoji": "✨",
+  "mascot_lines": [
+    "Polish is the secret sauce.",
+    "Tiny wiggles when the hero jumps.",
+    "Boing sounds. Sparkles when you score.",
+    "Same game, but feels SO much better!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "polish"
+    },
+    "tier2": {
+      "rephrase": "Pick the part that is POLISH, not core gameplay."
+    },
+    "tier3": {
+      "nudge": "Sounds, sparkles, wiggles — these are extras that make it feel good!"
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which one is POLISH (not core gameplay)?",
+      "choices": [
+        {
+          "label": "Hero can walk",
+          "right": false
+        },
+        {
+          "label": "Boing sound when you jump",
+          "right": true
+        },
+        {
+          "label": "Score goes up",
+          "right": false
+        },
+        {
+          "label": "Coin makes points",
+          "right": false
+        }
+      ]
+    }
+  }
+}

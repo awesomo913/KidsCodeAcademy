@@ -1,0 +1,49 @@
+{
+  "id": 26,
+  "chapter": "ch5",
+  "title": "Skills Are Magic Spells",
+  "goal": "A skill is a special trick the robot can learn.",
+  "sticker_emoji": "🪄",
+  "mascot_lines": [
+    "Robots can learn special tricks.",
+    "We call them SKILLS. Like magic spells!",
+    "/draw = make a picture.",
+    "/save = put it in the cloud.",
+    "/loop = do it again and again."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "magic word"
+    },
+    "tier2": {
+      "rephrase": "Each spell starts with a / and does a special job. Match them!"
+    },
+    "tier3": {
+      "nudge": "/draw makes pictures. /save sends to cloud. /loop repeats."
+    }
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Match each magic word to its job:",
+      "pairs": [
+        {
+          "left": "/draw",
+          "right": "Make a picture"
+        },
+        {
+          "left": "/save",
+          "right": "Push to cloud"
+        },
+        {
+          "left": "/loop",
+          "right": "Do it again and again"
+        },
+        {
+          "left": "/read",
+          "right": "Read out loud"
+        }
+      ]
+    }
+  }
+}

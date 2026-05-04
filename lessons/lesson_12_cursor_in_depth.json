@@ -1,0 +1,48 @@
+{
+  "id": 12,
+  "chapter": "ch3",
+  "title": "Cursor, the Fast-Edit Helper",
+  "goal": "Cursor sits in your code and changes one tiny part.",
+  "sticker_emoji": "✏️",
+  "mascot_lines": [
+    "Meet Cursor. Cursor is fast.",
+    "Cursor lives inside your code.",
+    "Need to fix one line? Ask Cursor.",
+    "Done. Saved. On to the next thing!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "one line"
+    },
+    "tier2": {
+      "rephrase": "Cursor changes small parts fast. Pick the line that needs fixing."
+    },
+    "tier3": {
+      "nudge": "The line with a typo or a wrong word is the one to fix!"
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Cursor needs to fix one tiny thing. Which line has a typo?",
+      "choices": [
+        {
+          "label": "Hello, world!",
+          "right": false
+        },
+        {
+          "label": "Hellpp, world!",
+          "right": true
+        },
+        {
+          "label": "Goodbye!",
+          "right": false
+        },
+        {
+          "label": "Have a nice day!",
+          "right": false
+        }
+      ]
+    }
+  }
+}

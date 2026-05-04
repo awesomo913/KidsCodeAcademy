@@ -1,0 +1,37 @@
+{
+  "id": 27,
+  "chapter": "ch5",
+  "title": "Make Your Own Spell",
+  "goal": "Give your spell a name, a job, and steps.",
+  "sticker_emoji": "🎩",
+  "mascot_lines": [
+    "Want to make your OWN spell?",
+    "First: pick a name. Like /smile.",
+    "Then: tell when to use it.",
+    "Then: list the steps it does.",
+    "BOOM. Custom spell unlocked!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "order"
+    },
+    "tier2": {
+      "rephrase": "Order the parts you write to make a spell."
+    },
+    "tier3": {
+      "nudge": "First name, then when, then steps. The spell needs all three!"
+    }
+  },
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Order the parts of a spell:",
+      "steps": [
+        "Name (like /smile)",
+        "When to use it",
+        "Steps it does",
+        "Done!"
+      ]
+    }
+  }
+}

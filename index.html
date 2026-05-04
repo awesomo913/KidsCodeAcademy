@@ -2140,7 +2140,15 @@ const UI = {
     const game = el("div", { class: "game", id: "gameArea", style: { position: "relative" } });
     view.appendChild(game);
 
-    // Help button — only render if the lesson actually authored hints
+    if (lesson.id === 43) {
+      // Lesson 43 = Color Editor (the v0.2 Lesson 16 capstone, renumbered)
+      Lesson16.build(game, lesson, ok => ok && this.completeLesson(id));
+    } else {
+      KidGame.run(lesson.game, ok => ok && this.completeLesson(id));
+    }
+
+    // Help button — added AFTER game renders (KidGame.run clears the host first).
+    // Renders only when the lesson authored hints.
     if (lesson.hints && (lesson.hints.tier1 || lesson.hints.tier2 || lesson.hints.tier3)) {
       const help = el("button", {
         class: "help-fab",
@@ -2148,12 +2156,6 @@ const UI = {
         onclick: (e) => { e.stopPropagation(); Tracker.click(); Hints.open(lesson); },
       }, "🤔");
       game.appendChild(help);
-    }
-
-    if (lesson.id === 16) {
-      Lesson16.build(game, lesson, ok => ok && this.completeLesson(id));
-    } else {
-      KidGame.run(lesson.game, ok => ok && this.completeLesson(id));
     }
 
     this.renderSidebar();

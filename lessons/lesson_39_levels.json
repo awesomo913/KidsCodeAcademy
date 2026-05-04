@@ -1,0 +1,38 @@
+{
+  "id": 39,
+  "chapter": "ch7",
+  "title": "Build a Level",
+  "goal": "A level is a layout of blocks, coins, and bad guys.",
+  "sticker_emoji": "🗺️",
+  "mascot_lines": [
+    "A level is the SHAPE of the world.",
+    "Where the floor is. Where the coins go.",
+    "Where the bad guys hide.",
+    "Designers PAINT levels on a grid.",
+    "You can paint your own!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "order"
+    },
+    "tier2": {
+      "rephrase": "Order the steps to build a fun level."
+    },
+    "tier3": {
+      "nudge": "First make the floor. Then add stuff. Then test. Then fix what is too hard!"
+    }
+  },
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Order the steps to build a level:",
+      "steps": [
+        "Make the floor",
+        "Add coins to grab",
+        "Add bad guys",
+        "Add a flag at the end",
+        "Play it and fix what is too hard"
+      ]
+    }
+  }
+}

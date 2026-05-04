@@ -1,0 +1,49 @@
+{
+  "id": 7,
+  "chapter": "ch2",
+  "title": "The First Robot Brain Cell",
+  "goal": "One pretend brain cell says yes or no.",
+  "sticker_emoji": "🧠",
+  "mascot_lines": [
+    "Inside your head, you have brain cells.",
+    "Robots have pretend ones too.",
+    "One pretend brain cell looks at numbers.",
+    "Then it says YES or NO. That is all!",
+    "Many of them stacked together can do BIG things."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "yes or no"
+    },
+    "tier2": {
+      "rephrase": "A perceptron only knows two answers. Match each input to its answer."
+    },
+    "tier3": {
+      "nudge": "Hot food = yes for cool, no for eat. Use your nose!"
+    }
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "A robot brain cell says YES or NO. Drag each thing to its answer:",
+      "pairs": [
+        {
+          "left": "🌧️ It is raining",
+          "right": "YES bring umbrella"
+        },
+        {
+          "left": "☀️ Big sunny day",
+          "right": "NO umbrella needed"
+        },
+        {
+          "left": "🥵 Hot pizza",
+          "right": "YES wait to cool"
+        },
+        {
+          "left": "🥶 Cold ice cream",
+          "right": "NO eat it now"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": 53,
+  "chapter": "ch9",
+  "title": "Iteration 4: Bad Guy",
+  "goal": "Bug! The bad guy walks off the edge. Fix patrol.",
+  "sticker_emoji": "👾",
+  "mascot_lines": [
+    "Now we add a bad guy. It walks left and right.",
+    "BUG: it walks RIGHT OFF the platform!",
+    "It needs to TURN AROUND when it sees the edge."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "turn around"
+    },
+    "tier2": {
+      "rephrase": "Pick the rule that makes the bad guy turn at edges."
+    },
+    "tier3": {
+      "nudge": "Look for 'if next tile is empty, turn around'."
+    }
+  },
+  "sandbox": {
+    "helpers": [
+      "claude"
+    ],
+    "hint": "Ask: 'why does my bad guy fall off the edge?'"
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Bad guy walks off the edge. Pick the fix:",
+      "choices": [
+        {
+          "label": "Make it invisible",
+          "right": false
+        },
+        {
+          "label": "If the next tile is empty, turn around",
+          "right": true
+        },
+        {
+          "label": "Make it jump",
+          "right": false
+        },
+        {
+          "label": "Move the floor",
+          "right": false
+        }
+      ]
+    }
+  }
+}

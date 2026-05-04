@@ -1,0 +1,36 @@
+{
+  "id": 8,
+  "chapter": "ch2",
+  "title": "Back-and-Forth Learning",
+  "goal": "Robots get smart by guessing, missing, and trying again.",
+  "sticker_emoji": "🔁",
+  "mascot_lines": [
+    "How do robots get smart? They GUESS.",
+    "They guess, they miss, and they fix.",
+    "Then they guess again. A little better.",
+    "Do that a million times. Boom! Smart robot!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "order"
+    },
+    "tier2": {
+      "rephrase": "Put the steps a robot uses to get smart in order."
+    },
+    "tier3": {
+      "nudge": "Always guess BEFORE you check, and check BEFORE you fix."
+    }
+  },
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Order the back-and-forth learning loop:",
+      "steps": [
+        "Guess the answer",
+        "Check if it is right",
+        "Fix what was wrong",
+        "Try again"
+      ]
+    }
+  }
+}

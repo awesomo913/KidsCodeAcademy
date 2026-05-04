@@ -1,0 +1,43 @@
+{
+  "id": 10,
+  "chapter": "ch2",
+  "title": "And Then Came Big Language Models",
+  "goal": "Big language models are word-guessers grown HUGE.",
+  "sticker_emoji": "🌟",
+  "mascot_lines": [
+    "Take all those tricks. Mix them up.",
+    "Make the robot's brain HUGE.",
+    "Show it a billion books.",
+    "And what do you get? Claude! Gemini! Cursor!",
+    "All they really do is GUESS the next word. Really, really well!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "next word"
+    },
+    "tier2": {
+      "rephrase": "An LLM is just a robot that guesses what word comes next."
+    },
+    "tier3": {
+      "nudge": "Stack the four word-blocks: It / guesses / the / next-word."
+    }
+  },
+  "game": {
+    "type": "place-blocks",
+    "payload": {
+      "prompt": "Build the sentence in order:",
+      "blocks": [
+        "It",
+        "guesses",
+        "the",
+        "next word"
+      ],
+      "solution": [
+        "It",
+        "guesses",
+        "the",
+        "next word"
+      ]
+    }
+  }
+}

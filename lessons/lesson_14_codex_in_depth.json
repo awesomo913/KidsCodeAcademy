@@ -1,0 +1,36 @@
+{
+  "id": 14,
+  "chapter": "ch3",
+  "title": "Codex, the Tiny Coder",
+  "goal": "Codex is a small helper that writes short code in your terminal.",
+  "sticker_emoji": "💻",
+  "mascot_lines": [
+    "Meet Codex. Codex is small but mighty.",
+    "Codex lives in a black box called a TERMINAL.",
+    "Type a wish. Codex types code!",
+    "Great for small jobs that you do over and over."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "terminal"
+    },
+    "tier2": {
+      "rephrase": "Codex works step by step in a terminal. Order the steps."
+    },
+    "tier3": {
+      "nudge": "First read the wish. Then write code. Then save. Then run!"
+    }
+  },
+  "game": {
+    "type": "sequence-the-steps",
+    "payload": {
+      "prompt": "Order Codex's steps:",
+      "steps": [
+        "Read your wish",
+        "Write the code",
+        "Save the file",
+        "Run the code"
+      ]
+    }
+  }
+}

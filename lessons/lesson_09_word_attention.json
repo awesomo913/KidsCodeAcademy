@@ -1,0 +1,45 @@
+{
+  "id": 9,
+  "chapter": "ch2",
+  "title": "Words That Look at Each Other",
+  "goal": "A new trick let robots read whole sentences at once.",
+  "sticker_emoji": "👀",
+  "mascot_lines": [
+    "Old robots read words ONE at a time.",
+    "Then a new trick came along.",
+    "Now words can LOOK at each other.",
+    "The word 'it' looks back to find what 'it' means.",
+    "This made robots SO much smarter!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "looks at"
+    },
+    "tier2": {
+      "rephrase": "Match each word to the word it looks at to know what it means."
+    },
+    "tier3": {
+      "nudge": "She/he look back to find a name. It looks at things."
+    }
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Each little word looks at another word. Match them up!",
+      "pairs": [
+        {
+          "left": "Sam is happy. He smiles.",
+          "right": "He → Sam"
+        },
+        {
+          "left": "Mom hugged Lily. She is small.",
+          "right": "She → Lily"
+        },
+        {
+          "left": "I bought a cat. It purrs.",
+          "right": "It → cat"
+        }
+      ]
+    }
+  }
+}

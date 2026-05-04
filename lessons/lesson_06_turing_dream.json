@@ -1,0 +1,49 @@
+{
+  "id": 6,
+  "chapter": "ch2",
+  "title": "Turing's Big Dream",
+  "goal": "A man drew a machine that could pretend to be smart.",
+  "sticker_emoji": "📜",
+  "mascot_lines": [
+    "Meet Alan Turing. He had a wild idea.",
+    "He drew a machine on paper.",
+    "It read symbols on a long tape.",
+    "He said: this could pretend to think.",
+    "He was right. We still use his ideas today!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "tape"
+    },
+    "tier2": {
+      "rephrase": "Pick the part of Turing's machine that holds the symbols."
+    },
+    "tier3": {
+      "nudge": "It is a long, skinny thing. Like a roll of paper."
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which part of Turing's pretend machine holds the symbols?",
+      "choices": [
+        {
+          "label": "📼 Tape",
+          "right": true
+        },
+        {
+          "label": "🪑 Chair",
+          "right": false
+        },
+        {
+          "label": "🍎 Apple",
+          "right": false
+        },
+        {
+          "label": "🎈 Balloon",
+          "right": false
+        }
+      ]
+    }
+  }
+}

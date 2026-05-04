@@ -1,0 +1,54 @@
+{
+  "id": 55,
+  "chapter": "ch9",
+  "title": "Iteration 6: Flag & Finish",
+  "goal": "Last bug! The flag fires too early. Fix collision. Then... see what you built.",
+  "sticker_emoji": "🚩",
+  "mascot_lines": [
+    "LAST iteration! We add the flag.",
+    "BUG: flag fires when you JUST walk past it.",
+    "It should only fire when you TOUCH it.",
+    "After we fix this... look what we made together."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "touch"
+    },
+    "tier2": {
+      "rephrase": "Pick the fix that makes the flag fire only on touch."
+    },
+    "tier3": {
+      "nudge": "The flag needs proper hitbox-on-hitbox checking — not just 'walked past'."
+    }
+  },
+  "sandbox": {
+    "helpers": [
+      "claude"
+    ],
+    "hint": "Ask: 'why does my flag fire when I just walk past it?'"
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Flag fires too early. Pick the fix:",
+      "choices": [
+        {
+          "label": "Use real hitbox-on-hitbox collision",
+          "right": true
+        },
+        {
+          "label": "Make the flag bigger",
+          "right": false
+        },
+        {
+          "label": "Make the flag invisible",
+          "right": false
+        },
+        {
+          "label": "Remove the flag",
+          "right": false
+        }
+      ]
+    }
+  }
+}

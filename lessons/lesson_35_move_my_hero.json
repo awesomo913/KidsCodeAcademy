@@ -1,0 +1,48 @@
+{
+  "id": 35,
+  "chapter": "ch7",
+  "title": "Move My Hero",
+  "goal": "Use arrow keys to walk a hero around a stage.",
+  "sticker_emoji": "🏃",
+  "mascot_lines": [
+    "TIME TO MOVE!",
+    "Use the arrow keys.",
+    "Left arrow = walk left. Right arrow = walk right.",
+    "Reach the FLAG to win!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "arrow"
+    },
+    "tier2": {
+      "rephrase": "Click on the game first, then press the right arrow key."
+    },
+    "tier3": {
+      "nudge": "Right arrow → hero goes right. Hold it down to keep going!"
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which key moves the hero RIGHT?",
+      "choices": [
+        {
+          "label": "← Left arrow",
+          "right": false
+        },
+        {
+          "label": "→ Right arrow",
+          "right": true
+        },
+        {
+          "label": "↑ Up arrow",
+          "right": false
+        },
+        {
+          "label": "Q key",
+          "right": false
+        }
+      ]
+    }
+  }
+}

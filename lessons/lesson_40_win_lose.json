@@ -1,0 +1,45 @@
+{
+  "id": 40,
+  "chapter": "ch7",
+  "title": "Win Screen, Lose Screen",
+  "goal": "Every game needs a way to end.",
+  "sticker_emoji": "🏁",
+  "mascot_lines": [
+    "Games need to END.",
+    "If you reach the flag — WIN screen!",
+    "If hearts run out — LOSE screen.",
+    "If time runs out — LOSE screen.",
+    "Pick the right ending for each thing!"
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "ending"
+    },
+    "tier2": {
+      "rephrase": "Match each game ending to the screen it shows."
+    },
+    "tier3": {
+      "nudge": "Reaching the flag = win. Out of hearts = lose. Out of time = lose."
+    }
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Match each ending to the screen it shows:",
+      "pairs": [
+        {
+          "left": "🚩 Reached the flag",
+          "right": "Win screen"
+        },
+        {
+          "left": "💔 Hearts at zero",
+          "right": "Lose screen"
+        },
+        {
+          "left": "⏱️ Out of time",
+          "right": "Lose screen"
+        }
+      ]
+    }
+  }
+}

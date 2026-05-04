@@ -1,0 +1,44 @@
+{
+  "id": 13,
+  "chapter": "ch3",
+  "title": "Gemini, the Big-Library Helper",
+  "goal": "Gemini knows facts and can look at pictures.",
+  "sticker_emoji": "🌐",
+  "mascot_lines": [
+    "Meet Gemini. Gemini knows LOTS.",
+    "Gemini learned from a giant library.",
+    "Show Gemini a picture. It can tell you what it is!",
+    "Ask Gemini a fact. It will share what it knows."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "facts"
+    },
+    "tier2": {
+      "rephrase": "Gemini is great for facts. Match each helper to its job."
+    },
+    "tier3": {
+      "nudge": "Big plan = Claude. Quick edit = Cursor. Fact = Gemini."
+    }
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Match each helper to its best job:",
+      "pairs": [
+        {
+          "left": "Plan a treehouse",
+          "right": "Claude"
+        },
+        {
+          "left": "Fix a typo fast",
+          "right": "Cursor"
+        },
+        {
+          "left": "How big is the moon?",
+          "right": "Gemini"
+        }
+      ]
+    }
+  }
+}

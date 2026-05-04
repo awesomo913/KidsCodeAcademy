@@ -1,0 +1,48 @@
+{
+  "id": 31,
+  "chapter": "ch6",
+  "title": "Try a Different Way",
+  "goal": "If one path is blocked, ask for another.",
+  "sticker_emoji": "🛤️",
+  "mascot_lines": [
+    "Stuck? Don't bash your head!",
+    "Tell the robot: 'let's try a different way'.",
+    "It will try a NEW path.",
+    "There is always more than one road."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "different"
+    },
+    "tier2": {
+      "rephrase": "Pick the reply that asks the robot for a NEW way."
+    },
+    "tier3": {
+      "nudge": "The phrase 'let's try a different way' is a magic unsticker!"
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "First way did not work. What do you say next?",
+      "choices": [
+        {
+          "label": "I quit!",
+          "right": false
+        },
+        {
+          "label": "Let's try a different way.",
+          "right": true
+        },
+        {
+          "label": "Same thing again, please.",
+          "right": false
+        },
+        {
+          "label": "...",
+          "right": false
+        }
+      ]
+    }
+  }
+}

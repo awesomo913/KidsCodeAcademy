@@ -1,0 +1,48 @@
+{
+  "id": 29,
+  "chapter": "ch6",
+  "title": "Read the Red Words",
+  "goal": "Errors are clues, not yelling.",
+  "sticker_emoji": "🟥",
+  "mascot_lines": [
+    "When things break, the screen turns RED.",
+    "Don't panic! Red words are CLUES.",
+    "They tell you what part broke.",
+    "Read them slow. Find the helper word."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "name"
+    },
+    "tier2": {
+      "rephrase": "Find the part that names the problem."
+    },
+    "tier3": {
+      "nudge": "Look for words like 'NameError' or 'is not defined' — those name the problem!"
+    }
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which part of this error names the problem?\n\"NameError: 'kitten' is not defined on line 3\"",
+      "choices": [
+        {
+          "label": "line 3",
+          "right": false
+        },
+        {
+          "label": "NameError",
+          "right": true
+        },
+        {
+          "label": "kitten",
+          "right": false
+        },
+        {
+          "label": "is not defined",
+          "right": false
+        }
+      ]
+    }
+  }
+}

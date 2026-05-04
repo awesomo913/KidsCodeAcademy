@@ -1,0 +1,54 @@
+{
+  "id": 51,
+  "chapter": "ch9",
+  "title": "Iteration 2: Jump",
+  "goal": "Bug! The hero floats up forever. Fix the jump.",
+  "sticker_emoji": "🦘",
+  "mascot_lines": [
+    "Now we add jump.",
+    "BUG: hero floats up forever when you hold the arrow.",
+    "A jump should be ONE push, not a forever push.",
+    "Then gravity wins."
+  ],
+  "hints": {
+    "tier1": {
+      "highlight": "one push"
+    },
+    "tier2": {
+      "rephrase": "A jump happens ONCE per press. Pick the right description."
+    },
+    "tier3": {
+      "nudge": "Jump is a one-time push UP. After that, gravity wins!"
+    }
+  },
+  "sandbox": {
+    "helpers": [
+      "claude"
+    ],
+    "hint": "Ask: 'why does my hero float up forever?'"
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Pick the right way a jump should work:",
+      "choices": [
+        {
+          "label": "Hero goes up forever while you hold the arrow",
+          "right": false
+        },
+        {
+          "label": "Hero gets ONE big push up, then falls back down",
+          "right": true
+        },
+        {
+          "label": "Hero teleports to the sky",
+          "right": false
+        },
+        {
+          "label": "Hero goes sideways",
+          "right": false
+        }
+      ]
+    }
+  }
+}
