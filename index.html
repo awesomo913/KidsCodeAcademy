@@ -595,6 +595,27 @@ button { font-family: inherit; cursor: pointer; }
 .chapter-body { display: none; flex-direction: column; gap: 10px; padding: 8px 0 4px 12px; }
 .chapter-body.expanded { display: flex; }
 
+/* === v0.3.2 Parent Preview Mode banner ====================== */
+.preview-banner {
+  position: sticky; top: 0;
+  background: linear-gradient(90deg, #ffe680, #ffb84d);
+  color: #1a1a3a;
+  padding: 8px 14px;
+  text-align: center;
+  font-weight: 700;
+  z-index: 35;
+  box-shadow: 0 2px 0 rgba(26,26,58,0.18);
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  flex-wrap: wrap;
+}
+.preview-banner-btn {
+  background: #1a1a3a; color: #fff;
+  border: none; padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 700; cursor: pointer;
+}
+.preview-banner-btn:hover { background: #3a3a6a; }
+
 /* === v0.3 Boot replay dialog =============================== */
 .boot-dialog {
   position: fixed; inset: 0;
@@ -751,6 +772,17 @@ button { font-family: inherit; cursor: pointer; }
       </div>
 
       <div class="parent-pane" data-pane="settings">
+        <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
+          <strong style="font-size:17px;">🔍 Parent Preview Mode</strong>
+          <p class="muted" style="font-size:14px;margin:6px 0 10px;">
+            Browse any lesson without changing your kid's progress. Auto-clears when the app closes.
+          </p>
+          <div class="row">
+            <button id="previewToggle" class="btn-big alt">Turn ON</button>
+            <button id="previewPick" class="btn-big" style="display:none;">Pick a lesson...</button>
+          </div>
+          <div id="previewPicker" style="display:none;margin-top:10px;max-height:240px;overflow-y:auto;background:var(--panel);padding:8px;border-radius:var(--r-sm);"></div>
+        </div>
         <div class="row" style="margin-bottom:10px;">
           <label>Change PIN: <input id="pinNew" type="password" inputmode="numeric" maxlength="4"
                  style="font-size:18px;padding:6px;border-radius:8px;border:2px solid var(--accent-2);width:90px;" /></label>
@@ -843,6 +875,8 @@ const Progress = {
   state: Store.load(Store.K_PROG, { completed: {}, stickers: 0, last: null }),
   isCompleted(id) { return !!this.state.completed[id]; },
   complete(id) {
+    // Parent Preview Mode: don't touch the kid's progress.
+    if (typeof PreviewMode !== "undefined" && PreviewMode.isOn()) return;
     if (this.state.completed[id]) return;
     this.state.completed[id] = new Date().toISOString();
     this.state.stickers += 1;
@@ -921,7 +955,10 @@ const Tracker = {
       score,
       grade,
     };
-    Sessions.push(rec);
+    // Parent Preview Mode: don't push to Sessions (no kid telemetry pollution).
+    if (!(typeof PreviewMode !== "undefined" && PreviewMode.isOn())) {
+      Sessions.push(rec);
+    }
     this.current = null;
     return rec;
   },
@@ -1372,6 +1409,8 @@ const InFlight = {
   },
   touch() {
     if (!Tracker.current) return;
+    // Parent Preview Mode: skip in-flight save so the kid's resume point isn't disturbed.
+    if (typeof PreviewMode !== "undefined" && PreviewMode.isOn()) return;
     if (this._writeQueued) return;
     this._writeQueued = true;
     const flush = () => {
@@ -1465,6 +1504,7 @@ const ChapterUI = {
    * the prior chapter's last lesson completed (or per-lesson logic if any prior
    * chapter has a free-pick gate). Using a simple linear gate is fine for v0.3. */
   isChapterUnlocked(chapter) {
+    if (typeof PreviewMode !== "undefined" && PreviewMode.isOn()) return true;
     const idx = CHAPTERS.findIndex(c => c.id === chapter.id);
     if (idx <= 0) return true;
     const prev = CHAPTERS[idx - 1];
@@ -1570,8 +1610,10 @@ const LessonStore = {
   },
   /* v0.3 unlock: chapter 1 is linear; chapters 2-9 are free-pick after the
    * previous chapter is complete. Tolerates partial-authored states (a missing
-   * lesson does not block its chapter from opening). */
+   * lesson does not block its chapter from opening).
+   * v0.3.2: Parent Preview Mode bypasses all gating. */
   isUnlocked(id) {
+    if (typeof PreviewMode !== "undefined" && PreviewMode.isOn()) return true;
     if (typeof CHAPTERS === "undefined") {
       // Fallback to v0.2 linear logic if CHAPTERS not loaded yet
       const i = this.index.indexOf(id);
@@ -1819,7 +1861,8 @@ const KidGame = {
       };
       btn.addEventListener("click", submit);
       inp.addEventListener("keydown", e => { if (e.key === "Enter") submit(); });
-      setTimeout(() => inp.focus(), 50);
+      // preventScroll keeps auto-advance from scrolling the input into view
+      setTimeout(() => inp.focus({ preventScroll: true }), 50);
     },
 
     "place-blocks"(host, p, done) {
@@ -2023,7 +2066,7 @@ const KidGame = {
         }
       };
       submit.addEventListener("click", grade);
-      setTimeout(() => ta.focus(), 50);
+      setTimeout(() => ta.focus({ preventScroll: true }), 50);
     },
 
     /* === v0.3.1: history-scene =============================
@@ -2200,6 +2243,53 @@ async function saveKidProject(name, data) {
   }
   return false;
 }
+
+/* ============================================================
+ *  PreviewMode (v0.3.2) — Parent's "preview every lesson" toggle.
+ *
+ *  When ON:
+ *    - Every lesson renders unlocked (chapter gates bypassed)
+ *    - Progress.complete() is a no-op
+ *    - Tracker.finish() skips Sessions.push (no telemetry)
+ *    - Progress.state.last is NOT updated (kid's resume point preserved)
+ *    - A banner shows at the top of the screen
+ *
+ *  Stored in sessionStorage so it auto-clears when the EXE/tab closes —
+ *  parent doesn't have to remember to turn it off.
+ * ============================================================ */
+const PreviewMode = {
+  K: "kca.preview.session",
+  isOn() {
+    try { return sessionStorage.getItem(this.K) === "1"; }
+    catch { return false; }
+  },
+  enable() {
+    try { sessionStorage.setItem(this.K, "1"); } catch {}
+    this._render();
+  },
+  disable() {
+    try { sessionStorage.removeItem(this.K); } catch {}
+    this._render();
+  },
+  toggle() { this.isOn() ? this.disable() : this.enable(); },
+  _render() {
+    let banner = document.getElementById("previewBanner");
+    if (this.isOn()) {
+      if (!banner) {
+        banner = el("div", { id: "previewBanner", class: "preview-banner" });
+        banner.appendChild(el("span", null, "🔍 Parent Preview Mode — progress not saved. "));
+        const link = el("button", {
+          class: "preview-banner-btn",
+          onclick: () => { PreviewMode.disable(); UI.renderSidebar(); UI._resumeKidLesson(); },
+        }, "Resume kid's lesson");
+        banner.appendChild(link);
+        document.body.insertBefore(banner, document.body.firstChild);
+      }
+    } else if (banner) {
+      banner.remove();
+    }
+  },
+};
 
 /* ============================================================
  *  Cinematic (v0.3.1) — Lesson 55 reveal scene.
@@ -3247,12 +3337,13 @@ const UI = {
     this.renderSidebar();
     Audio_.sfx("Page");
 
-    // Scroll reset (v0.3 fix): after layout, snap every plausible scroll container
-    // back to top. Run inside rAF so the DOM has reflowed before we measure.
+    // Scroll reset (v0.3.2): three layers — synchronous now, then again on rAF
+    // after layout, then once more on next frame (handles edge cases where the
+    // celebration overlay close triggers a second reflow).
+    this._scrollReset();
     requestAnimationFrame(() => {
-      view.scrollTop = 0;
-      if (view.parentElement) view.parentElement.scrollTop = 0;
-      window.scrollTo(0, 0);
+      this._scrollReset();
+      requestAnimationFrame(() => this._scrollReset());
     });
   },
 
@@ -3375,6 +3466,9 @@ const UI = {
   _goNext() {
     Celebration.close();
     AutoAdvance.cancel();
+    // Belt-and-suspenders scroll reset BEFORE rendering new lesson, in case
+    // the celebration overlay close + DOM swap left the body scrolled down.
+    this._scrollReset();
     const cur = this.current;
     if (!cur) return;
     const idx = LessonStore.index.indexOf(cur);
@@ -3385,6 +3479,30 @@ const UI = {
         return;
       }
     }
+  },
+
+  /* v0.3.2: hard-reset every plausible scroll container to top.
+   * Auto-advance was leaving the user scrolled to the bottom of the previous
+   * lesson because window/documentElement/body each track scroll independently
+   * across a celebration overlay show/hide. */
+  _scrollReset() {
+    try { window.scrollTo({ top: 0, left: 0, behavior: "instant" }); } catch { window.scrollTo(0, 0); }
+    if (document.documentElement) document.documentElement.scrollTop = 0;
+    if (document.body) document.body.scrollTop = 0;
+    const view = document.getElementById("lessonView");
+    if (view) {
+      view.scrollTop = 0;
+      if (view.parentElement) view.parentElement.scrollTop = 0;
+    }
+  },
+
+  /* v0.3.2: parent preview mode → flip back to kid's progress and reopen
+   * their most-recent or next-unlocked lesson. */
+  _resumeKidLesson() {
+    const last = Progress.state.last && LessonStore.byId[Progress.state.last]
+      ? Progress.state.last
+      : LessonStore.index.find(id => !Progress.isCompleted(id)) || LessonStore.index[0];
+    if (last) this.openLesson(last);
   },
 };
 
@@ -3559,6 +3677,52 @@ async function main() {
   document.getElementById("pinInput").addEventListener("keydown", e => { if (e.key === "Enter") Parent.unlock(); });
   document.getElementById("closeParent").addEventListener("click", () => Parent.close());
   document.getElementById("pinChange").addEventListener("click", () => Parent.changePin());
+
+  // Parent Preview Mode (v0.3.2)
+  const previewToggle = document.getElementById("previewToggle");
+  const previewPick = document.getElementById("previewPick");
+  const previewPicker = document.getElementById("previewPicker");
+  const refreshPreviewUI = () => {
+    const on = PreviewMode.isOn();
+    previewToggle.textContent = on ? "Turn OFF (resume kid)" : "Turn ON";
+    previewToggle.classList.toggle("go", !on);
+    previewToggle.classList.toggle("alt", on);
+    previewPick.style.display = on ? "" : "none";
+    previewPicker.style.display = "none";
+  };
+  refreshPreviewUI();
+  previewToggle.addEventListener("click", () => {
+    PreviewMode.toggle();
+    UI.renderSidebar();
+    if (!PreviewMode.isOn()) UI._resumeKidLesson();
+    refreshPreviewUI();
+  });
+  previewPick.addEventListener("click", () => {
+    const open = previewPicker.style.display !== "none";
+    if (open) { previewPicker.style.display = "none"; return; }
+    clearNode(previewPicker);
+    CHAPTERS.forEach(ch => {
+      const head = el("div", { style: { fontWeight: "700", margin: "8px 0 4px", color: "var(--accent)" } },
+        `${ch.emoji} ${ch.title}`);
+      previewPicker.appendChild(head);
+      ch.lessonNums.forEach(n => {
+        const lid = LessonStore.idForNum(n);
+        if (!lid) return;
+        const lesson = LessonStore.byId[lid];
+        const row = el("button", {
+          class: "btn-big alt",
+          style: { display: "block", width: "100%", textAlign: "left", marginBottom: "4px", fontSize: "14px", padding: "6px 10px" },
+          onclick: () => {
+            previewPicker.style.display = "none";
+            Parent.close();
+            UI.openLesson(lid);
+          },
+        }, `L${n}: ${lesson.title || lid}`);
+        previewPicker.appendChild(row);
+      });
+    });
+    previewPicker.style.display = "";
+  });
   document.getElementById("resetBtn").addEventListener("click", () => {
     if (!confirm("Reset all kid progress and PIN?")) return;
     Progress.reset();
