@@ -1,0 +1,29 @@
+{
+  "id": 56,
+  "chapter": "ch10",
+  "title": "What's a Good Idea?",
+  "goal": "A good idea solves a real problem someone has.",
+  "sticker_emoji": "💡",
+  "mascot_lines": [
+    "Big builders start with a good idea.",
+    "A good idea solves a REAL problem someone has.",
+    "Not just any idea! Pick one that helps."
+  ],
+  "hints": {
+    "tier1": {"highlight": "real problem"},
+    "tier2": {"rephrase": "Pick the idea that helps a real person with a real problem."},
+    "tier3": {"nudge": "Look for the one that helps someone do a thing they cannot do well today."}
+  },
+  "game": {
+    "type": "click-the-thing",
+    "payload": {
+      "prompt": "Which idea is the most useful?",
+      "choices": [
+        {"label": "🎨 An app that paints my dog blue every Tuesday", "right": false},
+        {"label": "📋 An app that helps Mom remember the grocery list", "right": true},
+        {"label": "🧀 An app that names every cheese in my fridge", "right": false},
+        {"label": "🎵 An app that makes a buzz noise nonstop", "right": false}
+      ]
+    }
+  }
+}

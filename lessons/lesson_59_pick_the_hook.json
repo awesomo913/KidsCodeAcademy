@@ -1,0 +1,30 @@
+{
+  "id": 59,
+  "chapter": "ch10",
+  "title": "Pick the Hook",
+  "goal": "Great games HOOK you in. Each thing in a game makes you feel something.",
+  "sticker_emoji": "🪝",
+  "mascot_lines": [
+    "Why do some games glue you to the screen?",
+    "Because they HOOK you!",
+    "Each thing in a game makes you feel something.",
+    "Match the game thing to the feeling it gives you!"
+  ],
+  "hints": {
+    "tier1": {"highlight": "feeling"},
+    "tier2": {"rephrase": "Each game feature makes the player feel a feeling. Match them up."},
+    "tier3": {"nudge": "Power-ups make you feel POWERFUL. Surprises make you CURIOUS. Tough bosses make you PROUD when you win."}
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Match each game feature to the feeling it gives you:",
+      "pairs": [
+        {"left": "🎁 Surprise rewards", "right": "Curious"},
+        {"left": "🌈 Beautiful art", "right": "Wonder"},
+        {"left": "💪 Power-ups", "right": "Powerful"},
+        {"left": "👾 A tough boss", "right": "Proud (when you win!)"}
+      ]
+    }
+  }
+}

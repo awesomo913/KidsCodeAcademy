@@ -1,0 +1,32 @@
+{
+  "id": 58,
+  "chapter": "ch10",
+  "title": "Idea Spark",
+  "goal": "Type your own idea. Bytey will ask you questions to help you think.",
+  "sticker_emoji": "✨",
+  "mascot_lines": [
+    "Your turn! Tell me YOUR idea.",
+    "I will ask you questions about it.",
+    "There are no wrong answers here.",
+    "When you are ready, click Save my idea!"
+  ],
+  "hints": {
+    "tier1": {"highlight": "idea"},
+    "tier2": {"rephrase": "Just type any idea. Big or small! Bytey will help you think it through."},
+    "tier3": {"nudge": "Stuck? Try: 'I want to make a game where ___'."}
+  },
+  "game": {
+    "type": "idea-spark",
+    "payload": {
+      "prompt": "Tell Bytey your idea!",
+      "hook": "I want to make a...",
+      "questions": [
+        "Cool! Who would use this?",
+        "What is the special part — what makes yours different?",
+        "What would you call it?"
+      ],
+      "minTurns": 4,
+      "saveAs": "my_idea_{timestamp}.txt"
+    }
+  }
+}

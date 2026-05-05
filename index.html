@@ -873,6 +873,7 @@ const Store = {
   K_TRANS: "kca.transcripts.v1",
   K_THEME: "kca.theme.v1",
   K_SESSIONS: "kca.sessions.v1",
+  K_IDEAS: "kca.ideas.v1",
   load(k, fb) {
     try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; }
     catch { return fb; }
@@ -1585,6 +1586,7 @@ const CHAPTERS = [
   { id: "ch7", title: "Make a Game",          emoji: "🎮", lessonNums: [32, 33, 34, 35, 36, 37, 38, 39, 40, 41] },
   { id: "ch8", title: "Ship It!",             emoji: "🚀", lessonNums: [42, 43, 44, 45, 46, 47, 48] },
   { id: "ch9", title: "The Big Build",        emoji: "🌟", lessonNums: [49, 50, 51, 52, 53, 54, 55] },
+  { id: "ch10", title: "Idea Lab",            emoji: "💡", lessonNums: [56, 57, 58, 59, 60] },
 ];
 
 const ChapterUI = {
@@ -1692,6 +1694,12 @@ const LESSON_IDS = [
   "lesson_53_iter4_bad_guy",
   "lesson_54_iter5_powerup",
   "lesson_55_iter6_flag_reveal",
+  // Chapter 10 — Idea Lab (creativity + imagination)
+  "lesson_56_whats_a_good_idea",
+  "lesson_57_listen_for_problems",
+  "lesson_58_idea_spark",
+  "lesson_59_pick_the_hook",
+  "lesson_60_make_your_game",
 ];
 
 const LessonStore = {
@@ -2254,6 +2262,38 @@ const KidGame = {
         onSave: () => { Audio_.sfx("Star"); done(true); },
       });
       host.appendChild(editor.dom);
+    },
+
+    /* === v0.3.5: idea-spark =================================
+     * Free-form creativity sandbox. Kid types an idea, Bytey asks N
+     * scripted reflective follow-up questions, kid answers each in turn.
+     * Final "Save my idea!" persists the design doc to AppData via
+     * JSBridge.save_kid_project AND mirrors a summary into kca.ideas.v1.
+     *
+     * payload:
+     *   prompt:      one-line lesson prompt
+     *   hook:        placeholder text for kid's first input
+     *   questions:   ordered array of follow-ups (~3-4 entries)
+     *   minTurns:    int — answers required before Save unlocks (default = questions.length + 1)
+     *   saveAs:      filename template (e.g. "my_idea_{timestamp}.txt")
+     */
+    "idea-spark"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Tell Bytey your idea!"));
+      const session = IdeaSpark.build({
+        hook: p.hook || "I want to make a...",
+        questions: Array.isArray(p.questions) ? p.questions.slice() : [
+          "Who would use this?",
+          "What is the special part nobody else thought of?",
+          "What would you call it?",
+        ],
+        minTurns: typeof p.minTurns === "number"
+          ? p.minTurns
+          : ((p.questions && p.questions.length) || 3) + 1,
+        saveAs: p.saveAs || "my_idea_{timestamp}.txt",
+        lessonId: (UI && UI.current) || "",
+        onSaved: () => { Audio_.sfx("Star"); done(true); },
+      });
+      host.appendChild(session.dom);
     },
   },
 };
@@ -3310,6 +3350,267 @@ const LevelPainter = {
 };
 
 /* ============================================================
+ *  Reflect_ (v0.3.5) — optional creativity sandbox after lesson success.
+ *
+ *  Some lessons author a `reflect` block: { prompt, hook, questions, saveAs }.
+ *  After the kid completes the lesson but before celebration fires, this
+ *  shows a friendly overlay: "Bytey wonders: <prompt>" with [Yes, write it down!]
+ *  and [Skip for now] buttons. Skip continues straight to celebration.
+ *  Yes opens an IdeaSpark inline session inside the overlay; on save, the
+ *  resolved callback fires and celebration takes over.
+ *
+ *  We store completed reflects in kca.reflects.v1 so the same kid is not
+ *  re-nagged about the same lesson on replay.
+ *
+ *  Underscore in the name avoids collision with the global Reflect object.
+ * ============================================================ */
+const Reflect_ = {
+  K: "kca.reflects.v1",
+
+  /** Has the kid already seen + dismissed/saved this reflect prompt? */
+  _alreadyDone(lessonId) {
+    const seen = Store.load(this.K, {});
+    return !!(seen && seen[lessonId]);
+  },
+  _markDone(lessonId, action) {
+    const seen = Store.load(this.K, {});
+    seen[lessonId] = { action, ts: new Date().toISOString() };
+    Store.save(this.K, seen);
+  },
+
+  shouldOffer(lesson) {
+    if (!lesson || !lesson.reflect) return false;
+    if (typeof PreviewMode !== "undefined" && PreviewMode.isOn()) return false;
+    if (this._alreadyDone(lesson.id)) return false;
+    return true;
+  },
+
+  offer(lesson, onResolved) {
+    const r = lesson.reflect || {};
+    const overlay = el("div", { class: "boot-dialog show", id: "reflectOverlay" });
+    const card = el("div", { class: "card", style: { maxWidth: "560px", textAlign: "center" } });
+    overlay.appendChild(card);
+
+    card.appendChild(el("h3", null, "Bytey wonders..."));
+    card.appendChild(el("p", { class: "muted", style: { fontSize: "18px" } },
+      String(r.prompt || "Want to write down YOUR idea?")));
+
+    const row = el("div", { class: "row", style: { justifyContent: "center" } });
+    card.appendChild(row);
+
+    const yesBtn = el("button", { class: "btn-big go" }, "Yes, write it down!");
+    const skipBtn = el("button", { class: "btn-big alt" }, "Skip for now");
+    row.appendChild(yesBtn); row.appendChild(skipBtn);
+
+    const close = (action) => {
+      this._markDone(lesson.id, action);
+      if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+      if (typeof onResolved === "function") onResolved();
+    };
+
+    skipBtn.addEventListener("click", () => { Audio_.sfx("Click"); close("skip"); });
+
+    yesBtn.addEventListener("click", () => {
+      Audio_.sfx("Click");
+      // Replace card content with an inline IdeaSpark session.
+      clearNode(card);
+      card.appendChild(el("h3", null, "Tell Bytey your idea!"));
+      const session = IdeaSpark.build({
+        hook: r.hook || "I want to make a...",
+        questions: Array.isArray(r.questions) ? r.questions.slice() : [
+          "Who would use this?",
+          "What's the special part?",
+        ],
+        minTurns: typeof r.minTurns === "number"
+          ? r.minTurns
+          : ((r.questions && r.questions.length) || 2) + 1,
+        saveAs: r.saveAs || "idea_{timestamp}.txt",
+        lessonId: "lesson_" + String(lesson.id || "").padStart(2, "0") + "_reflect",
+        onSaved: () => close("saved"),
+      });
+      card.appendChild(session.dom);
+      // Allow kid to back out if they change their mind
+      const back = el("button", {
+        class: "btn-big alt",
+        style: { marginTop: "8px" },
+        onclick: () => { Audio_.sfx("Click"); close("backed_out"); },
+      }, "Never mind, skip");
+      card.appendChild(back);
+    });
+
+    document.body.appendChild(overlay);
+  },
+};
+
+/* ============================================================
+ *  IdeaSpark (v0.3.5) — creativity sandbox.
+ *
+ *  Renders a chat-like UI where the kid types an idea, then Bytey asks N
+ *  authored follow-up questions in sequence. Each kid response is saved
+ *  to the running session. After minTurns answers, "Save my idea!" unlocks.
+ *  Save persists to %APPDATA%/KidsCodeAcademy/kid_projects/<saveAs>.txt
+ *  via the existing JSBridge.save_kid_project AND mirrors a summary
+ *  record into kca.ideas.v1 for Parent Corner inspection.
+ *
+ *  Hard rules:
+ *    - No grading. No right/wrong.
+ *    - Bytey questions are authored, not generated. Predictable + safe.
+ *    - Kid input capped at 200 chars per turn.
+ *    - All saved files are plain text the kid can re-read in Notepad.
+ * ============================================================ */
+const IdeaSpark = {
+  build({ hook, questions, minTurns, saveAs, lessonId, onSaved }) {
+    const dom = el("div", { class: "chat", style: { background: "var(--panel-2)" } });
+
+    const log = el("div", { class: "chat-log", style: { maxHeight: "300px" } });
+    dom.appendChild(log);
+
+    const row = el("div", { class: "chat-row" });
+    const inp = el("input", {
+      type: "text",
+      placeholder: hook || "I want to make a...",
+      maxlength: "200",
+    });
+    const sendBtn = el("button", { class: "btn-big" }, "Tell Bytey");
+    row.appendChild(inp); row.appendChild(sendBtn);
+    dom.appendChild(row);
+
+    const saveBtn = el("button", {
+      class: "btn-big go",
+      style: { marginTop: "10px", display: "none" },
+    }, "💾 Save my idea!");
+    dom.appendChild(saveBtn);
+
+    const hint = el("div", {
+      class: "muted",
+      style: { fontSize: "14px", marginTop: "6px" },
+    }, "Anything is okay! There are no wrong ideas here.");
+    dom.appendChild(hint);
+
+    // Append a chat bubble — written via DOM API per CLAUDE.md no-innerHTML rule.
+    const addBubble = (kind, text) => {
+      const cls = kind === "you" ? "chat-msg you" : "chat-msg bot";
+      const node = el("div", { class: cls }, String(text || ""));
+      log.appendChild(node);
+      log.scrollTop = log.scrollHeight;
+      return node;
+    };
+
+    const typeOutBubble = (text, delayMs = 600) => {
+      const node = el("div", { class: "chat-msg bot" }, "...");
+      log.appendChild(node);
+      log.scrollTop = log.scrollHeight;
+      const speed = Math.max(20, delayMs / Math.max(1, text.length));
+      let i = 0;
+      const tick = setInterval(() => {
+        node.textContent = text.slice(0, ++i);
+        log.scrollTop = log.scrollHeight;
+        if (i >= text.length) clearInterval(tick);
+      }, speed);
+      return node;
+    };
+
+    // Bytey's intro
+    typeOutBubble("Hi! Tell me your idea — I'll ask you a few questions about it.");
+
+    /** Each turn: one question by Bytey, one answer by kid. */
+    const turns = [];
+    let qIdx = 0;
+    let saved = false;
+
+    const enableSaveIfReady = () => {
+      if (turns.length >= (minTurns || 3)) {
+        saveBtn.style.display = "";
+      }
+    };
+
+    const askNext = () => {
+      const q = questions[qIdx];
+      if (!q) {
+        // Out of authored questions — Bytey wraps with a soft prompt
+        typeOutBubble("Cool! Anything else you want to add? Or click Save my idea!");
+        enableSaveIfReady();
+        return;
+      }
+      typeOutBubble(String(q));
+      qIdx += 1;
+    };
+
+    const submit = () => {
+      const text = (inp.value || "").trim();
+      if (!text) { Audio_.sfx("Oops"); return; }
+      Tracker.click();
+      Audio_.sfx("Type");
+      addBubble("you", text);
+      // Pair with the most recently asked question (qIdx-1) — first turn has no prior question
+      const pairedQuestion = qIdx === 0 ? hook : (questions[qIdx - 1] || "");
+      turns.push({ q: pairedQuestion, a: text });
+      InFlight.touchState({ ideaTurns: turns.length });
+      inp.value = "";
+      // Bytey replies with the next question (typewriter)
+      setTimeout(() => askNext(), 400);
+      enableSaveIfReady();
+    };
+
+    sendBtn.addEventListener("click", submit);
+    inp.addEventListener("keydown", e => { if (e.key === "Enter") submit(); });
+    setTimeout(() => inp.focus({ preventScroll: true }), 80);
+
+    const buildDesignDoc = () => {
+      const lines = [];
+      lines.push("=== My Idea (Kids Code Academy) ===");
+      lines.push("Saved: " + new Date().toISOString());
+      lines.push("Lesson: " + (lessonId || "unknown"));
+      lines.push("");
+      turns.forEach((t, i) => {
+        lines.push(`Q${i + 1}: ${t.q || "(starter)"}`);
+        lines.push(`A${i + 1}: ${t.a}`);
+        lines.push("");
+      });
+      return lines.join("\n");
+    };
+
+    const fileNameFor = () => {
+      const stamp = String(Date.now());
+      // Strip any path-like chars defensively. JSBridge ALSO strips, this is just neat.
+      return String(saveAs || "my_idea_{timestamp}.txt").replace("{timestamp}", stamp);
+    };
+
+    saveBtn.addEventListener("click", async () => {
+      if (saved) return;
+      Tracker.click();
+      const name = fileNameFor();
+      const data = buildDesignDoc();
+
+      // Mirror to localStorage (capped at 100 entries — drop oldest).
+      const list = Store.load(Store.K_IDEAS, []);
+      list.push({
+        lessonId,
+        savedAt: new Date().toISOString(),
+        fileName: name,
+        turns: turns.slice(),
+      });
+      Store.save(Store.K_IDEAS, list.slice(-100));
+
+      // Save to AppData via JSBridge. In browser preview window.pywebview is
+      // undefined and saveKidProject returns false — we still complete the
+      // lesson so dev preview is testable.
+      let savedToDisk = false;
+      try { savedToDisk = await saveKidProject(name, data); } catch {}
+
+      saved = true;
+      saveBtn.disabled = true;
+      saveBtn.textContent = savedToDisk ? "Saved ✓" : "Saved!";
+      addBubble("bot", "Awesome! I saved your idea. You can read it later in your kid_projects folder.");
+      Audio_.sfx("Star");
+      setTimeout(() => onSaved && onSaved(), 700);
+    });
+
+    return { dom };
+  },
+};
+
+/* ============================================================
  *  UI rendering
  * ============================================================ */
 const UI = {
@@ -3593,19 +3894,27 @@ const UI = {
       }
     };
 
-    if (lesson.id === 55) {
-      Cinematic.play(() => fireCelebration());
+    // Reflect (v0.3.5): if this lesson has an authored reflect block AND the
+    // kid hasn't already done it before, offer a creativity sandbox BEFORE
+    // celebration. Skip → straight to celebration. Save → IdeaSpark inline,
+    // then celebration. Auto-advance is suspended until reflect is dismissed.
+    const skipAuto = (lesson.id === 7) || (lesson.id === 55);
+    const proceedToCelebration = () => {
+      if (lesson.id === 55) {
+        Cinematic.play(() => fireCelebration());
+      } else {
+        fireCelebration();
+      }
+      if (!skipAuto) AutoAdvance.start(() => this._goNext());
+    };
+
+    if (Reflect_.shouldOffer(lesson)) {
+      Reflect_.offer(lesson, /* onResolved */ proceedToCelebration);
     } else {
-      fireCelebration();
+      proceedToCelebration();
     }
 
     this.renderSidebar();
-
-    // Schedule auto-advance to the next unlocked uncompleted lesson.
-    // Skip on Lesson 7 (gates the chapters 2-7 unlock — let the kid see the chapter list)
-    // and Lesson 55 (final reveal — let the kid sit with it).
-    const skipAuto = (lesson.id === 7) || (lesson.id === 55);
-    if (!skipAuto) AutoAdvance.start(() => this._goNext());
   },
 
   _goNext() {

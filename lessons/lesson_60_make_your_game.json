@@ -1,0 +1,33 @@
+{
+  "id": 60,
+  "chapter": "ch10",
+  "title": "Make Your Game",
+  "goal": "Design YOUR dream game. Bytey will help you think it through.",
+  "sticker_emoji": "🎮",
+  "mascot_lines": [
+    "Last lesson — and the BEST one!",
+    "Tell me about your DREAM game.",
+    "I will ask you about the world, the hero, and the special move.",
+    "We will save your design doc when you are done!"
+  ],
+  "hints": {
+    "tier1": {"highlight": "dream game"},
+    "tier2": {"rephrase": "What kind of game would YOU love to play? Type it and Bytey will help."},
+    "tier3": {"nudge": "Stuck? Try: 'A game where you ___ and the bad guys ___'."}
+  },
+  "game": {
+    "type": "idea-spark",
+    "payload": {
+      "prompt": "Tell Bytey about your dream game!",
+      "hook": "My dream game is...",
+      "questions": [
+        "Who is the hero, and what can they do?",
+        "What does the world look like?",
+        "What is the special move only YOUR hero has?",
+        "What is the very last level like?"
+      ],
+      "minTurns": 5,
+      "saveAs": "my_game_{timestamp}.txt"
+    }
+  }
+}

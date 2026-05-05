@@ -1,0 +1,29 @@
+{
+  "id": 57,
+  "chapter": "ch10",
+  "title": "Listen for Problems",
+  "goal": "Hear someone's problem and imagine the program that helps.",
+  "sticker_emoji": "👂",
+  "mascot_lines": [
+    "Builders LISTEN. They hear a problem and think:",
+    "What program could fix this?",
+    "Match each problem to the kind of program that helps!"
+  ],
+  "hints": {
+    "tier1": {"highlight": "problem"},
+    "tier2": {"rephrase": "Each card tells you a problem. Match it to the helper program."},
+    "tier3": {"nudge": "Lost photos need a finder. Forgotten lists need a list. Rain needs a weather check."}
+  },
+  "game": {
+    "type": "drag-to-match",
+    "payload": {
+      "prompt": "Match each problem to the kind of program that helps:",
+      "pairs": [
+        {"left": "Mom keeps forgetting the grocery list", "right": "📋 A list app"},
+        {"left": "Dad has 100 photos and can't find one", "right": "🔍 A photo finder"},
+        {"left": "My sister doesn't know if it's raining", "right": "🌧️ A weather app"},
+        {"left": "I want to practice times tables", "right": "🧮 A math game"}
+      ]
+    }
+  }
+}
