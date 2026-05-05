@@ -877,7 +877,96 @@ const Store = {
     try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; }
     catch { return fb; }
   },
-  save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  save(k, v) {
+    try { localStorage.setItem(k, JSON.stringify(v)); } catch {}
+    // v0.3.4: every save also schedules a debounced flush to AppData state.json
+    // via JSBridge. This is the durability fallback if WebView2 storage gets
+    // wiped (PyInstaller's _MEI temp churn used to invalidate localStorage).
+    if (typeof Persistence !== "undefined") Persistence.scheduleFlush();
+  },
+};
+
+/* ============================================================
+ *  Persistence (v0.3.4) — file-backed mirror of all kca.* localStorage.
+ *
+ *  WHY: pywebview defaults `private_mode=True`, which wipes localStorage on
+ *  close. Combined with PyInstaller --onefile (which extracts to a different
+ *  _MEI temp dir each launch), kid progress evaporated. We've now also fixed
+ *  app.py to use private_mode=False + a stable storage_path, but this layer
+ *  provides defense-in-depth: even if WebView2 storage breaks for any reason,
+ *  state.json restores everything on next boot.
+ *
+ *  Flow:
+ *    - Store.save()  -> Persistence.scheduleFlush()  (debounced 500ms)
+ *    - flush()       -> JSBridge.save_state(JSON.stringify(allKcaKeys))
+ *    - boot          -> hydrate() reads JSBridge.load_state() and writes
+ *                       any missing keys back into localStorage BEFORE
+ *                       any module reads its initial state.
+ *    - Reset button  -> JSBridge.clear_state()  (only place file gets wiped)
+ * ============================================================ */
+const Persistence = {
+  _flushTimer: 0,
+  _flushPending: false,
+
+  _allKcaKeys() {
+    const out = {};
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith("kca.")) out[k] = localStorage.getItem(k);
+    }
+    return out;
+  },
+
+  scheduleFlush() {
+    if (this._flushTimer) return;
+    this._flushTimer = setTimeout(() => {
+      this._flushTimer = 0;
+      this.flushNow();
+    }, 500);
+  },
+
+  async flushNow() {
+    if (this._flushPending) return;
+    if (!(window.pywebview && window.pywebview.api && window.pywebview.api.save_state)) return;
+    this._flushPending = true;
+    try {
+      const blob = JSON.stringify(this._allKcaKeys());
+      await window.pywebview.api.save_state(blob);
+    } catch (e) {
+      console.warn("Persistence.flushNow failed", e);
+    } finally {
+      this._flushPending = false;
+    }
+  },
+
+  /* Boot-time hydrate. Called BEFORE any module reads its initial state.
+   * If localStorage already has any kca.* keys, we trust localStorage as
+   * authoritative (most recent writes win). Only restore keys that are
+   * absent in localStorage from the file. */
+  async hydrate() {
+    if (!(window.pywebview && window.pywebview.api && window.pywebview.api.load_state)) return;
+    let raw;
+    try { raw = await window.pywebview.api.load_state(); }
+    catch (e) { console.warn("Persistence.hydrate failed", e); return; }
+    if (!raw) return;
+    let parsed;
+    try { parsed = JSON.parse(raw); }
+    catch (e) { console.warn("state.json invalid JSON, ignoring"); return; }
+    if (!parsed || typeof parsed !== "object") return;
+    let restored = 0;
+    for (const k in parsed) {
+      if (!k.startsWith("kca.")) continue;
+      if (localStorage.getItem(k) != null) continue;  // localStorage wins
+      try { localStorage.setItem(k, parsed[k]); restored += 1; } catch {}
+    }
+    if (restored > 0) console.info(`[Persistence] restored ${restored} key(s) from state.json`);
+  },
+
+  async clearFile() {
+    if (!(window.pywebview && window.pywebview.api && window.pywebview.api.clear_state)) return;
+    try { await window.pywebview.api.clear_state(); }
+    catch (e) { console.warn("Persistence.clearFile failed", e); }
+  },
 };
 
 const Progress = {
@@ -3702,9 +3791,28 @@ const Parent = {
 /* ============================================================
  *  Boot
  * ============================================================ */
+async function _waitForPywebview(timeoutMs = 2000) {
+  const start = Date.now();
+  while (Date.now() - start < timeoutMs) {
+    if (window.pywebview && window.pywebview.api && window.pywebview.api.load_state) return true;
+    await new Promise(r => setTimeout(r, 50));
+  }
+  return false;
+}
+
 async function main() {
   Celebration.init();
   Mascot.preload();
+
+  // v0.3.4 — wait for pywebview JSBridge to mount, then hydrate localStorage
+  // from %APPDATA%/KidsCodeAcademy/state.json before any module reads state.
+  // After hydration, force-refresh Progress/Sessions/Transcripts (their initial
+  // state was snapshotted at script-parse time, before localStorage was populated).
+  await _waitForPywebview();
+  await Persistence.hydrate();
+  Progress.state = Store.load(Store.K_PROG, { completed: {}, stickers: 0, last: null });
+  Sessions.list = Store.load(Store.K_SESSIONS, []);
+  Transcripts.list = Store.load(Store.K_TRANS, []);
 
   const theme = Store.load(Store.K_THEME, "day");
   document.body.dataset.theme = theme;
@@ -3794,12 +3902,15 @@ async function main() {
     });
     previewPicker.style.display = "";
   });
-  document.getElementById("resetBtn").addEventListener("click", () => {
+  document.getElementById("resetBtn").addEventListener("click", async () => {
     if (!confirm("Reset all kid progress and PIN?")) return;
     Progress.reset();
     Store.save(Store.K_PIN, "1234");
     Transcripts.list = [];
     Sessions.list = [];
+    // Wipe the file mirror too — otherwise next boot would re-hydrate the kid's
+    // progress from disk and undo the parent's reset.
+    if (typeof Persistence !== "undefined") await Persistence.clearFile();
     UI.renderSidebar();
     Parent._fill();
   });

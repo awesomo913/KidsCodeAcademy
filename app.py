@@ -45,16 +45,48 @@ def get_base_dir() -> Path:
     return Path(__file__).resolve().parent
 
 
+def _appdata_root() -> Path:
+    """Stable per-user app data root: %APPDATA%/KidsCodeAcademy/."""
+    appdata = os.environ.get("APPDATA") or str(Path.home() / "AppData" / "Roaming")
+    root = Path(appdata) / "KidsCodeAcademy"
+    root.mkdir(parents=True, exist_ok=True)
+    return root
+
+
 def get_user_data_dir() -> Path:
     """Writable per-user folder for kid project saves (Lesson 16)."""
-    appdata = os.environ.get("APPDATA") or str(Path.home() / "AppData" / "Roaming")
-    user_dir = Path(appdata) / "KidsCodeAcademy" / "kid_projects"
+    user_dir = _appdata_root() / "kid_projects"
     user_dir.mkdir(parents=True, exist_ok=True)
     return user_dir
 
 
+def get_state_file() -> Path:
+    """File-backed mirror of the kid's localStorage. Belt-and-suspenders persistence
+    in case the WebView2 storage gets wiped (PyInstaller --onefile changes the
+    _MEI temp path on every launch, which used to invalidate WebView2 storage).
+    """
+    return _appdata_root() / "state.json"
+
+
+def get_webview_storage_path() -> Path:
+    """Stable storage_path for pywebview's WebView2 user data folder.
+    Default pywebview private_mode=True wipes localStorage on close — we override
+    it with a real persistent directory under %APPDATA%.
+    """
+    p = _appdata_root() / "webview_data"
+    p.mkdir(parents=True, exist_ok=True)
+    return p
+
+
 class JSBridge:
-    """JS-callable bridge for the kid_projects save flow."""
+    """JS-callable bridge.
+
+    Exposes:
+      - save_kid_project(name, data)   — Lesson 16 SVG saves
+      - save_state(json_blob)          — mirror localStorage to state.json
+      - load_state() -> str            — read state.json (empty if missing)
+      - clear_state()                  — wipe state.json (Reset all progress)
+    """
 
     def get_user_dir(self) -> str:
         return str(get_user_data_dir())
@@ -70,6 +102,45 @@ class JSBridge:
             log.warning("save_kid_project failed: %s", exc)
             return {"ok": False, "error": str(exc)}
         return {"ok": True, "path": str(target)}
+
+    def save_state(self, json_blob: str) -> dict:
+        """Atomically write state.json. JS calls this on every progress update."""
+        if not isinstance(json_blob, str):
+            return {"ok": False, "error": "json_blob must be a string"}
+        # Cap at 4 MB defensively — kid state should never approach this
+        if len(json_blob) > 4 * 1024 * 1024:
+            return {"ok": False, "error": "state too large"}
+        target = get_state_file()
+        tmp = target.with_suffix(".json.tmp")
+        try:
+            tmp.write_text(json_blob, encoding="utf-8")
+            os.replace(tmp, target)  # atomic on Windows + POSIX
+        except OSError as exc:
+            log.warning("save_state failed: %s", exc)
+            return {"ok": False, "error": str(exc)}
+        return {"ok": True, "path": str(target)}
+
+    def load_state(self) -> str:
+        """Return state.json contents as a string (empty if no file)."""
+        target = get_state_file()
+        if not target.is_file():
+            return ""
+        try:
+            return target.read_text(encoding="utf-8")
+        except OSError as exc:
+            log.warning("load_state failed: %s", exc)
+            return ""
+
+    def clear_state(self) -> dict:
+        """Delete state.json. Called only on explicit Reset all progress."""
+        target = get_state_file()
+        try:
+            if target.is_file():
+                target.unlink()
+        except OSError as exc:
+            log.warning("clear_state failed: %s", exc)
+            return {"ok": False, "error": str(exc)}
+        return {"ok": True}
 
 
 def main() -> None:
@@ -92,7 +163,17 @@ def main() -> None:
         min_size=(MIN_WIDTH, MIN_HEIGHT),
         js_api=JSBridge(),
     )
-    webview.start()
+    storage_path = str(get_webview_storage_path())
+    log.info("webview storage_path=%s (private_mode=False)", storage_path)
+    # private_mode=False keeps localStorage across launches.
+    # storage_path pins WebView2's user data folder so PyInstaller's _MEI churn
+    # never points it at a stale temp directory.
+    try:
+        webview.start(private_mode=False, storage_path=storage_path)
+    except TypeError:
+        # Older pywebview that lacks one of these kwargs — fall back gracefully.
+        log.warning("webview.start kwargs unsupported; trying minimal call")
+        webview.start()
 
 
 if __name__ == "__main__":
