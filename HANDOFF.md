@@ -65,6 +65,7 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 
 ## 6. Plan (what's next)
 
+- [ ] **DEFERRED 2026-05-07: Pi runner enrollment.** Code shipped (commit `1da88e3`); user paused on `setup_remote.sh` because Pi sudo password kept rejecting. Pick up by debugging sudo first (`whoami`, `sudo -v`, `localectl status`, `passwd` rotation), then re-run the bootstrap one-liner. Workflow `pi-build.yml` will register on first runner heartbeat.
 - [ ] Add sandbox AI scripts for the remaining lessons that mention helpers (currently only Lessons 2 and 8 ship with scripts).
 - [ ] Commission or download real Bytey artwork; drop frames into `assets/mascot/` (no code change).
 - [ ] Upgrade voice — replace pyttsx3 with ElevenLabs (10-line `_synthesize` swap in `prebake_audio.py`).
