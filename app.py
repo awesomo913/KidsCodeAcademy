@@ -156,6 +156,43 @@ class JSBridge:
         return {"ok": True}
 
 
+def _start_local_http_server(serve_dir: Path) -> int:
+    """Spin up a tiny loopback HTTP server pointed at serve_dir; return the
+    randomly-assigned port.
+
+    Why: on Linux/Pi, WebKitGTK 2.40+ sandboxes file:// URLs and silently
+    blocks fetch() of sibling resources (lessons/*.json, assets/*.wav).
+    Loading the bundle over http://127.0.0.1:<port>/ sidesteps that —
+    everything runs from a real origin. Same code path works on Windows too;
+    no functional difference, and it future-proofs against any
+    WebView2 file-URL tightening down the road.
+    """
+    import http.server
+    import socketserver
+    import threading
+
+    serve_dir_str = str(serve_dir)
+
+    class _Handler(http.server.SimpleHTTPRequestHandler):
+        def __init__(self, *a: object, **kw: object) -> None:
+            super().__init__(*a, directory=serve_dir_str, **kw)
+
+        def log_message(self, fmt: str, *args: object) -> None:
+            # Silence the per-request stderr spam — pywebview's window already
+            # logs the page URL on load.
+            pass
+
+    server = socketserver.TCPServer(("127.0.0.1", 0), _Handler)
+    port = server.server_address[1]
+    thread = threading.Thread(
+        target=server.serve_forever,
+        name="kca-http",
+        daemon=True,
+    )
+    thread.start()
+    return port
+
+
 def main() -> None:
     base_dir = get_base_dir()
     html_path = base_dir / HTML_FILENAME
@@ -164,12 +201,13 @@ def main() -> None:
         log.error("Could not find %s at %s", HTML_FILENAME, html_path)
         sys.exit(1)
 
-    file_url = f"file:///{str(html_path).replace(os.sep, '/')}"
-    log.info("loading %s", file_url)
+    port = _start_local_http_server(base_dir)
+    url = f"http://127.0.0.1:{port}/{HTML_FILENAME}"
+    log.info("local http server on port %d, loading %s", port, url)
 
     webview.create_window(
         APP_TITLE,
-        url=file_url,
+        url=url,
         width=WINDOW_WIDTH,
         height=WINDOW_HEIGHT,
         resizable=True,
