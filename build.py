@@ -1,15 +1,21 @@
 """Build pipeline for Kids Code Academy.
 
+Cross-platform: Windows -> KidsCodeAcademy.exe; Linux/Pi -> KidsCodeAcademy (binary).
+
 Steps:
   1. Generate icons + procedural mascot frames + sfx wavs
-  2. Pre-render lesson narration to wav (TTS) -- skipped if --no-audio
-  3. Run PyInstaller -> single-file KidsCodeAcademy.exe
-  4. Copy exe to ../KidsCodeAcademy.exe (next to ClaudeCodeMastery.exe)
+  2. Pre-render lesson narration to wav (TTS) — skipped if --no-audio.
+     Auto-skipped on Linux/Pi (audio is already pre-baked + committed; pyttsx3 +
+     SAPI Zira is Windows-only and we don't want espeak's robotic voice).
+  3. Run PyInstaller -> single binary
+  4. Copy binary to ../KidsCodeAcademy(.exe)
   5. Clean dist/, build/, *.spec
 
-Run: python build.py
-       python build.py --no-audio       (skip TTS, useful for fast iteration)
-       python build.py --no-package     (skip pyinstaller)
+Run:
+       python build.py                  # full build (default for the host platform)
+       python build.py --no-audio       # skip TTS, useful for fast iteration
+       python build.py --no-package     # skip pyinstaller
+       python build.py --target=pi      # explicit Pi build (otherwise auto-detected)
 """
 from __future__ import annotations
 
@@ -26,6 +32,14 @@ log = logging.getLogger("build")
 ROOT = Path(__file__).resolve().parent
 PROJECT_NAME = "KidsCodeAcademy"
 ENTRYPOINT = "app.py"
+
+
+def _is_windows() -> bool:
+    return sys.platform.startswith("win")
+
+
+def _binary_name() -> str:
+    return f"{PROJECT_NAME}.exe" if _is_windows() else PROJECT_NAME
 
 
 def run(cmd: list[str], cwd: Path | None = None) -> None:
@@ -45,15 +59,15 @@ def step_audio() -> None:
     try:
         run([sys.executable, "scripts/prebake_audio.py"])
     except subprocess.CalledProcessError as exc:
-        log.warning("prebake_audio failed (%s) -- continuing without TTS", exc)
+        log.warning("prebake_audio failed (%s) — continuing without TTS", exc)
 
 
 def step_package() -> None:
-    log.info("=== step 3: pyinstaller ===")
-    sep = ";" if sys.platform.startswith("win") else ":"
+    log.info("=== step 3: pyinstaller (target=%s) ===", "win" if _is_windows() else sys.platform)
+    sep = ";" if _is_windows() else ":"
     cmd = [
         sys.executable, "-m", "PyInstaller",
-        "--noconfirm", "--onefile", "--windowed",
+        "--noconfirm", "--onefile",
         "--name", PROJECT_NAME,
         "--add-data", f"index.html{sep}.",
         "--add-data", f"lessons{sep}lessons",
@@ -63,21 +77,46 @@ def step_package() -> None:
         "--add-data", f"parent{sep}parent",
         "--add-data", f"vendor{sep}vendor",
     ]
-    icon = ROOT / "icons" / "app.ico"
-    if icon.is_file():
-        cmd += ["--icon", str(icon)]
+
+    if _is_windows():
+        # --windowed suppresses the Windows console. On Linux/Pi we keep stdout
+        # visible so kid/parent can see startup logs in case GTK fails to load.
+        cmd.append("--windowed")
+        icon = ROOT / "icons" / "app.ico"
+        if icon.is_file():
+            cmd += ["--icon", str(icon)]
+    else:
+        # Linux: use PNG for the icon (PyInstaller accepts .png on Linux).
+        icon = ROOT / "icons" / "icon-512.png"
+        if icon.is_file():
+            cmd += ["--icon", str(icon)]
+        # WebKitGTK runtime libs ship via OS packages; we don't bundle them.
+
     cmd.append(ENTRYPOINT)
     run(cmd)
 
 
 def step_publish() -> None:
-    log.info("=== step 4: copying exe to Desktop/AI/ ===")
-    src = ROOT / "dist" / f"{PROJECT_NAME}.exe"
+    binary = _binary_name()
+    log.info("=== step 4: copying %s to Desktop ===", binary)
+    src = ROOT / "dist" / binary
     if not src.is_file():
         log.error("expected %s not found", src)
         return
-    target = ROOT.parent / f"{PROJECT_NAME}.exe"
+
+    if _is_windows():
+        # Lands next to ClaudeCodeMastery.exe on the dev machine
+        target = ROOT.parent / binary
+    else:
+        # Pi/Linux: drop on the user's Desktop if it exists, else home dir.
+        desktop = Path.home() / "Desktop"
+        target_dir = desktop if desktop.is_dir() else Path.home()
+        target = target_dir / binary
+
     shutil.copy2(src, target)
+    if not _is_windows():
+        # Make it executable for double-click on Pi/Linux file managers
+        target.chmod(0o755)
     log.info("copied -> %s", target)
 
 
@@ -101,11 +140,23 @@ def main() -> None:
     parser.add_argument("--no-audio", action="store_true", help="skip TTS prebake")
     parser.add_argument("--no-package", action="store_true", help="skip pyinstaller + publish")
     parser.add_argument("--no-clean", action="store_true", help="leave dist/ and build/ folders")
+    parser.add_argument("--target", choices=["auto", "win", "pi", "linux", "mac"], default="auto",
+                        help="explicit target (default: auto-detect from host)")
     args = parser.parse_args()
 
+    if args.target != "auto":
+        log.info("explicit target=%s requested (host=%s)", args.target, sys.platform)
+
     step_assets()
+
+    # Audio: skip on non-Windows by default (pyttsx3 + SAPI Zira is Windows-only;
+    # the wavs in assets/audio/ are already pre-baked and committed to the repo).
     if not args.no_audio:
-        step_audio()
+        if _is_windows():
+            step_audio()
+        else:
+            log.info("=== step 2: skipping TTS prebake (non-Windows host) ===")
+
     if not args.no_package:
         step_package()
         step_publish()

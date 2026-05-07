@@ -19,6 +19,32 @@ The installer drops `KidsCodeAcademy.exe` on your Desktop, verifies the SHA-256 
 
 Verify by hash (optional): `Get-FileHash KidsCodeAcademy.exe -Algorithm SHA256` should match the value pinned in [install.ps1](install.ps1).
 
+## Install (Raspberry Pi — Pi OS bookworm or later)
+
+**One-line installer + builder.** Paste this into your Pi's terminal (or a Pi Connect remote shell):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/awesomo913/KidsCodeAcademy/main/scripts/build_pi.sh | bash
+```
+
+What it does:
+1. Installs `python3 + python3-gi + gir1.2-webkit2-4.1` via `apt`
+2. Clones the repo to `~/KidsCodeAcademy`
+3. Sets up a Python venv with `pywebview + pillow + pyinstaller` (no TTS — audio is pre-baked and committed to the repo)
+4. Runs `python build.py --target=pi` to produce a single ARM64 binary
+5. Drops it on your Desktop as `KidsCodeAcademy` (chmod +x) and creates a `.desktop` launcher entry
+
+Double-click the binary on the Desktop. First launch ~6 s while WebKitGTK warms up; subsequent launches are faster.
+
+**Tested on:** Raspberry Pi 4 / 5 with 64-bit Pi OS bookworm. Pi Zero 2 W works but boot is slower (~10 s).
+
+**Manual run from source** (no packaging — useful for dev):
+```bash
+cd ~/KidsCodeAcademy
+source .venv/bin/activate
+python3 app.py
+```
+
 ## What's inside
 
 - 16 lessons, ages 7+
