@@ -44,6 +44,21 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 - Verified: `KidsCodeAcademy.exe` (48 MB) launches cleanly, loads `index.html` from `_MEIPASS`, lessons render, mini-games dispatch, mascot animates, sticker overlay fires.
 - Shipped: `C:\Users\computer\Desktop\AI\KidsCodeAcademy.exe` (v0.1.0).
 
+### 2026-05-07 — Pi port + durable remote-control channels (v0.4.0)
+- User vision: "build the pi version" → kid's Raspberry Pi (`92ed86ff-feb2-4c87-aed6-5d7ca29c2390`) becomes a target alongside Windows.
+- User decisions:
+  - Pi build path: `scripts/build_pi.sh` — apt deps (python3-gi, WebKit2GTK 4.1/4.0, libgirepository 1.0/2.0 with fallbacks) + `--system-site-packages` venv + `python build.py --target=pi --no-audio` → single-file ELF binary at `~/Desktop/KidsCodeAcademy`.
+  - Persistence parity: state.json mirror works under `~/.local/share/KidsCodeAcademy/` on Linux.
+  - Black-canvas fix: WebKitGTK 2.40+ sandboxes `file://`. `app.py` now spins up a loopback `http.server` on a random port and points the window at `http://127.0.0.1:<port>/index.html` — works identically on Windows and Pi.
+  - Desktop icon: PCManFM ignores ELF metadata; `build_pi.sh` writes a `.desktop` launcher with explicit `Icon=` + `gio set metadata::trusted` so the Bytey icon shows up on the Pi desktop.
+  - Remote-control channels: BOTH Tailscale SSH (live) + GitHub Actions self-hosted runner (durable async). Pi Connect screen-share rejected as primary because each session needs the kid's manual approval and the broken-app focus traps blocked recovery.
+- Implementation:
+  - `scripts/setup_remote.sh` — idempotent one-shot: installs Tailscale, runs `tailscale up --ssh`, downloads + configures GHA runner (auto-detects `arm`/`arm64`/`x64` from `dpkg --print-architecture`), installs as systemd service.
+  - `.github/workflows/pi-build.yml` — `runs-on: [self-hosted, raspberry-pi]`. Builds via `KCA_SKIP_CLONE=1 bash scripts/build_pi.sh`, headless-launches under `xvfb-run` with a `KCA_HEADLESS_QUIT_SECS` self-close, optional 5-cycle persistence verify, uploads `launch.log` + crash logs as artifacts.
+  - `app.py` — added `KCA_HEADLESS_QUIT_SECS` env-var-driven self-close (timer fires `window.destroy()` after N seconds) and JSBridge `save_state` / `load_state` boundary logging so workflow artifacts capture persistence proof.
+  - `scripts/verify_persistence.py` — cross-platform: `_appdata_root()` and `_default_exe_path()` branch on `os.name`/`sys.platform`; `_kill_exe()` uses `taskkill` on Windows, `pkill -f` on Linux/macOS.
+- Result: From any future conversation I can dispatch a Pi build with `gh workflow run pi-build.yml --ref main` (durable, queues if Pi is off) and SSH live with `ssh pipc@kids-code-academy-pi` (when Pi is on). No more screen-share dependency.
+
 ## 5. Credit & Authorship
 
 > **The user designed this product.** The user defined goals, the audience (a specific 7-year-old), feature priorities (cartoon mascot + read-aloud + mini-games), the safety posture (zero network, sandbox-only AI), the platform target (Windows `.exe`), the build-on-existing-engine decision, and the depth of Lesson 16. Claude (Opus 4.7, 2026-05-01 session) implemented the code to those specifications, generated procedural placeholder art and audio, and wired the build pipeline. The user reviewed each major decision via interactive questions before any code was written. This is the user's product; AI was a tool.
@@ -69,3 +84,57 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 - [ ] Read this project's `CLAUDE.md` — the audience hard-rules and the no-`innerHTML` rule
 - [ ] Check `logs/session_*.log` for any unresolved crashes
 - [ ] Read parent workspace `CLAUDE.md` — auto-git-push, GUI integrity, no-PII rules
+
+## 8. Remote operations (Pi)
+
+The kid's Pi exposes two control channels, both bootstrapped by `scripts/setup_remote.sh` (run ONCE on the Pi). Channels survive Pi reboots via systemd; do not need re-auth per session.
+
+### Durable async channel — GitHub Actions self-hosted runner
+
+Use this 95% of the time. Survives Pi being offline (workflows queue up to 24h).
+
+```bash
+# Trigger a build + headless smoke test on the Pi
+gh workflow run pi-build.yml --ref main \
+    -f headless-launch-secs=15 \
+    -f run-persistence=false
+
+# Watch the latest run live
+gh run watch
+
+# List recent runs
+gh run list --workflow pi-build.yml --limit 5
+
+# Inspect a specific run's logs
+gh run view <run-id> --log
+
+# Download diagnostic artifacts (launch.log, crash logs, state.json)
+gh run download <run-id>
+```
+
+The workflow's manual-dispatch inputs:
+- `headless-launch-secs` (number, default 10) — seconds to run the binary under xvfb-run before self-close. Set 0 to skip the launch test entirely (build-only).
+- `run-persistence` (bool, default false) — run the 5-cycle persistence verify after build. Adds ~2 min.
+- `ref` (string, default '') — git ref to build. Defaults to the triggering branch.
+
+### Live interactive channel — Tailscale SSH
+
+Use this for poking around when the Pi is on and you need a real shell. No sshd config; Tailscale's built-in SSH handles auth via the tailnet.
+
+```bash
+ssh pipc@kids-code-academy-pi 'uname -a'
+ssh pipc@kids-code-academy-pi 'tail -n 50 ~/Desktop/AI/KidsCodeAcademy/logs/session_*.log'
+ssh pipc@kids-code-academy-pi 'pkill -f KidsCodeAcademy'  # kill a hung instance
+```
+
+If the hostname doesn't resolve, fall back to the Tailscale IP shown by `tailscale status` on the Pi.
+
+### Bootstrap (run once, on the Pi)
+
+If the Pi has not been bootstrapped yet — paste this in any terminal on the Pi (no GUI required):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/awesomo913/KidsCodeAcademy/main/scripts/setup_remote.sh | bash
+```
+
+The script is idempotent — safe to re-run if a channel needs repair.

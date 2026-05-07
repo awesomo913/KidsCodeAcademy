@@ -43,14 +43,32 @@ log = logging.getLogger("verify-persistence")
 
 
 def _appdata_root() -> Path:
-    appdata = os.environ.get("APPDATA") or str(Path.home() / "AppData" / "Roaming")
-    return Path(appdata) / "KidsCodeAcademy"
+    """Cross-platform per-user app data dir — mirrors app.py's _appdata_root()."""
+    if os.name == "nt":  # Windows
+        appdata = os.environ.get("APPDATA") or str(Path.home() / "AppData" / "Roaming")
+        return Path(appdata) / "KidsCodeAcademy"
+    if sys.platform == "darwin":  # macOS
+        return Path.home() / "Library" / "Application Support" / "KidsCodeAcademy"
+    # Linux / Raspberry Pi
+    xdg = os.environ.get("XDG_DATA_HOME")
+    base = Path(xdg) if xdg else (Path.home() / ".local" / "share")
+    return base / "KidsCodeAcademy"
+
+
+def _default_exe_path() -> Path:
+    """Where build.py's publish step puts the binary, per platform."""
+    if os.name == "nt":
+        return Path(r"C:/Users/computer/Desktop/AI/KidsCodeAcademy.exe")
+    # Linux/macOS: build.py publishes to ~/Desktop or ~/ if no Desktop
+    desktop = Path.home() / "Desktop"
+    target_dir = desktop if desktop.is_dir() else Path.home()
+    return target_dir / "KidsCodeAcademy"
 
 
 STATE_FILE = _appdata_root() / "state.json"
 BACKUP_FILE = _appdata_root() / "state.json.bak.verify"
-EXE_PATH = Path(r"C:/Users/computer/Desktop/AI/KidsCodeAcademy.exe")
-EXE_NAME = "KidsCodeAcademy.exe"
+EXE_PATH = _default_exe_path()
+EXE_NAME = "KidsCodeAcademy.exe" if os.name == "nt" else "KidsCodeAcademy"
 MARKER_KEY = "kca._verify_marker"
 MARKER_VALUE = "abc-123-FIXTURE"
 BOOT_WAIT_SECS = 5.0
@@ -120,13 +138,28 @@ def _read_state() -> dict[str, str]:
 
 
 def _kill_exe() -> None:
-    # /F = force, /IM = image name. Multiple instances killed in one call.
-    subprocess.run(
-        ["taskkill", "/F", "/IM", EXE_NAME],
-        check=False,
-        capture_output=True,
-    )
-    # Give Windows a moment to release the file handles
+    """Force-kill any running instance of the EXE.
+
+    Cross-platform: Windows uses ``taskkill /F /IM`` (matches image name);
+    Linux/macOS use ``pkill -f`` (matches the full command line, so the
+    absolute path used by ``_launch_exe`` still hits).
+    """
+    if os.name == "nt":
+        # /F = force, /IM = image name. Multiple instances killed in one call.
+        subprocess.run(
+            ["taskkill", "/F", "/IM", EXE_NAME],
+            check=False,
+            capture_output=True,
+        )
+    else:
+        # -f matches against full command line — covers absolute-path launches.
+        # Exit code 1 just means "no matching process" — harmless here.
+        subprocess.run(
+            ["pkill", "-f", EXE_NAME],
+            check=False,
+            capture_output=True,
+        )
+    # Give the OS a moment to release file handles
     time.sleep(0.5)
 
 

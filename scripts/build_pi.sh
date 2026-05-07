@@ -61,12 +61,23 @@ sudo apt-get install -y --no-install-recommends libgirepository1.0-dev \
     || { echo "FATAL: neither libgirepository1.0-dev nor 2.0-dev available"; exit 1; }
 
 # --------------------------------------------------------------- 2. clone/pull
-echo "==> [2/5] Fetching repo..."
-if [ -d "$REPO_DIR/.git" ]; then
-    git -C "$REPO_DIR" fetch --depth 1 origin "$BRANCH"
-    git -C "$REPO_DIR" reset --hard "origin/$BRANCH"
+# When invoked from GitHub Actions, the runner already checked out the repo at
+# $GITHUB_WORKSPACE; cloning a second time wastes time + can shadow the right
+# branch. KCA_SKIP_CLONE=1 makes us trust REPO_DIR as-is.
+if [ "${KCA_SKIP_CLONE:-0}" = "1" ]; then
+    echo "==> [2/5] KCA_SKIP_CLONE=1 — using existing checkout at $REPO_DIR"
+    if [ ! -d "$REPO_DIR" ]; then
+        echo "FATAL: KCA_SKIP_CLONE=1 but $REPO_DIR does not exist"
+        exit 1
+    fi
 else
-    git clone --depth 1 --branch "$BRANCH" "$REPO_URL" "$REPO_DIR"
+    echo "==> [2/5] Fetching repo..."
+    if [ -d "$REPO_DIR/.git" ]; then
+        git -C "$REPO_DIR" fetch --depth 1 origin "$BRANCH"
+        git -C "$REPO_DIR" reset --hard "origin/$BRANCH"
+    else
+        git clone --depth 1 --branch "$BRANCH" "$REPO_URL" "$REPO_DIR"
+    fi
 fi
 
 cd "$REPO_DIR"

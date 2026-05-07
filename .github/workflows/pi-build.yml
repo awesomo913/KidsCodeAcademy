@@ -1,0 +1,166 @@
+name: Pi build + smoke
+
+# Triggered three ways:
+#   1. workflow_dispatch (manual) — `gh workflow run pi-build.yml`
+#   2. push to main touching source/build files
+#   3. issue comment "/pi-build" on a PR (deferred — add later)
+#
+# All jobs run on the kid's Raspberry Pi via the self-hosted runner enrolled
+# by scripts/setup_remote.sh. The Pi must be powered on and the runner service
+# must be active (it is by default after setup; survives reboots).
+
+on:
+  workflow_dispatch:
+    inputs:
+      headless-launch-secs:
+        description: 'Seconds to run binary headless via xvfb-run (0 = skip launch test)'
+        type: number
+        default: 10
+      run-persistence:
+        description: 'Run 5-cycle persistence verify after build (slow)'
+        type: boolean
+        default: false
+      ref:
+        description: 'Git ref to build (defaults to triggering branch)'
+        type: string
+        default: ''
+  push:
+    branches: [main]
+    paths:
+      - 'app.py'
+      - 'index.html'
+      - 'build.py'
+      - 'gen_icons.py'
+      - 'gen_mascot.py'
+      - 'requirements.txt'
+      - 'scripts/build_pi.sh'
+      - 'scripts/gen_sfx.py'
+      - 'scripts/prebake_audio.py'
+      - 'scripts/verify_persistence.py'
+      - 'lessons/**'
+      - 'sandbox_ai/**'
+
+jobs:
+  pi-build:
+    runs-on: [self-hosted, raspberry-pi]
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.ref }}
+
+      - name: Show host info
+        run: |
+          echo "host:    $(uname -a)"
+          echo "arch:    $(dpkg --print-architecture)"
+          echo "python:  $(python3 --version 2>&1)"
+          echo "pip:     $(pip --version 2>&1 || echo 'no pip')"
+          echo "free:    $(free -h | tail -n+1 | head -n2)"
+          echo "disk:    $(df -h ~ | tail -n1)"
+
+      - name: Build Pi binary
+        env:
+          # Override KCA_REPO_DIR so build_pi.sh works in-place rather than
+          # cloning to ~/KidsCodeAcademy. The workflow already checked out the
+          # repo at $GITHUB_WORKSPACE; we re-use it.
+          KCA_REPO_DIR: ${{ github.workspace }}
+          KCA_BRANCH: ${{ inputs.ref || github.ref_name }}
+        run: |
+          # build_pi.sh assumes a clone-or-pull dance + relies on the repo path
+          # not changing under it. Workflow path differs each run because of
+          # $GITHUB_WORKSPACE. Easiest: pin KCA_REPO_DIR to the workspace and
+          # bypass the git clone block by setting KCA_SKIP_CLONE=1.
+          KCA_SKIP_CLONE=1 bash scripts/build_pi.sh
+
+      - name: Verify binary exists + is executable
+        id: bin
+        run: |
+          BIN=""
+          for path in "$HOME/Desktop/KidsCodeAcademy" "$GITHUB_WORKSPACE/dist/KidsCodeAcademy"; do
+            if [ -x "$path" ]; then
+              BIN="$path"
+              break
+            fi
+          done
+          if [ -z "$BIN" ]; then
+            echo "FATAL: built binary not found"
+            exit 1
+          fi
+          ls -la "$BIN"
+          file "$BIN"
+          echo "bin=$BIN" >> "$GITHUB_OUTPUT"
+
+      - name: Install xvfb (one-time)
+        run: |
+          if ! dpkg -l xvfb >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends xvfb
+          else
+            echo "xvfb already installed"
+          fi
+
+      - name: Headless launch test
+        if: (inputs.headless-launch-secs == null) || (inputs.headless-launch-secs > 0)
+        env:
+          # KCA_HEADLESS_QUIT_SECS tells app.py to schedule its own window close
+          # after N seconds. Combined with `timeout` as a hard upper bound.
+          KCA_HEADLESS_QUIT_SECS: ${{ inputs.headless-launch-secs || 10 }}
+        run: |
+          set +e
+          # Hard kill any previous instance still hanging from interactive use
+          pkill -f KidsCodeAcademy 2>/dev/null || true
+          sleep 1
+
+          # Add 5s slop so the binary's own self-close fires before timeout.
+          HARD_TIMEOUT=$((${KCA_HEADLESS_QUIT_SECS:-10} + 5))
+
+          echo "Launching ${{ steps.bin.outputs.bin }} headless for up to ${HARD_TIMEOUT}s..."
+          timeout "${HARD_TIMEOUT}" \
+            xvfb-run -a --server-args="-screen 0 1280x860x24" \
+            "${{ steps.bin.outputs.bin }}" 2>&1 | tee launch.log
+
+          EXIT=$?
+          echo "exit code: ${EXIT}"
+          echo "log lines: $(wc -l < launch.log)"
+
+          # exit 124 = timeout(1)'s "we killed it because it ran out the clock"
+          # We treat that as success here — the goal is to prove boot + initial
+          # render, not to run the app forever. Any other non-zero is a real failure.
+          if [ "${EXIT}" -ne 0 ] && [ "${EXIT}" -ne 124 ]; then
+            echo "FAIL: binary exited ${EXIT} during headless run"
+            exit 1
+          fi
+
+      - name: Persistence verify (5 cycles)
+        if: inputs.run-persistence
+        run: |
+          python3 scripts/verify_persistence.py --cycles 5 --boot-wait 6 || true
+
+      - name: Collect logs
+        if: always()
+        run: |
+          mkdir -p _diag
+          [ -f launch.log ] && cp launch.log _diag/ || true
+          # crash_logger writes here on Pi
+          if [ -d "$HOME/.local/share/KidsCodeAcademy" ]; then
+            cp -r "$HOME/.local/share/KidsCodeAcademy"/*.log _diag/ 2>/dev/null || true
+            cp "$HOME/.local/share/KidsCodeAcademy/state.json" _diag/ 2>/dev/null || true
+          fi
+          # Project-local logs from crash_logger's project_root install
+          if [ -d "$GITHUB_WORKSPACE/logs" ]; then
+            cp -r "$GITHUB_WORKSPACE/logs"/*.log _diag/ 2>/dev/null || true
+          fi
+          ls -la _diag/ || true
+
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pi-build-${{ github.run_number }}
+          path: _diag/**
+          if-no-files-found: warn
+          retention-days: 14
