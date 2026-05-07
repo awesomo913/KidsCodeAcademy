@@ -40,5 +40,760 @@
       "What is the very last challenge in your game?"
     ],
     "saveAs": "idea_platformer_{timestamp}.txt"
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "sprite-mover",
+        "payload": {
+          "prompt": "Bring it all together. Avoid bad guys, grab coins, reach the flag!",
+          "levelId": "enemy_demo",
+          "options": {
+            "showHitboxToggle": true
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is my first platformer?",
+          "options": [
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": true
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": true
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": false
+            },
+            {
+              "text": "Reaching the flag often wins.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": true
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about my first platformer. What should he say?",
+          "options": [
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": true
+            },
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about my first platformer is a GOOD rule?",
+          "options": [
+            {
+              "text": "Reaching the flag often wins.",
+              "correct": true
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": true
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": true
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            },
+            {
+              "text": "Reaching the flag often wins.",
+              "correct": true
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": true
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "Falling off is a way to win.",
+              "correct": true
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": false
+            },
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": true
+            },
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "Reaching the flag often wins.",
+              "correct": false
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": false
+            },
+            {
+              "text": "Platformers never have a hero.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": true
+            },
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about my first platformer. What should he say?",
+          "options": [
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about my first platformer. What should he say?",
+          "options": [
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            },
+            {
+              "text": "Reaching the flag often wins.",
+              "correct": true
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about my first platformer. What should he say?",
+          "options": [
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": true
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about my first platformer. What should he say?",
+          "options": [
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": true
+            },
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about my first platformer. What should he say?",
+          "options": [
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": true
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about my first platformer is a GOOD rule?",
+          "options": [
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            },
+            {
+              "text": "Reaching the flag often wins.",
+              "correct": true
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about my first platformer is a GOOD rule?",
+          "options": [
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": true
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about my first platformer is a GOOD rule?",
+          "options": [
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": true
+            },
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about my first platformer is a GOOD rule?",
+          "options": [
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": true
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            },
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about my first platformer is a GOOD rule?",
+          "options": [
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is my first platformer?",
+          "options": [
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is my first platformer?",
+          "options": [
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": true
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is my first platformer?",
+          "options": [
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": true
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is my first platformer?",
+          "options": [
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": true
+            },
+            {
+              "text": "Platformers never have a hero.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is my first platformer?",
+          "options": [
+            {
+              "text": "Flags are hidden forever.",
+              "correct": false
+            },
+            {
+              "text": "Reaching the flag often wins.",
+              "correct": true
+            },
+            {
+              "text": "Rewards are bad.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

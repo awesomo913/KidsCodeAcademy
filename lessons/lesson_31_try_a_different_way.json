@@ -44,5 +44,904 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "First way did not work. What do you say next?",
+          "choices": [
+            {
+              "label": "I quit!",
+              "right": false
+            },
+            {
+              "label": "Let's try a different way.",
+              "right": true
+            },
+            {
+              "label": "Same thing again, please.",
+              "right": false
+            },
+            {
+              "label": "...",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is trying a different way?",
+          "options": [
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": true
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": false
+            },
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help.",
+              "correct": true
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about trying a different way. What should he say?",
+          "options": [
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": true
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": true
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": true
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": true
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": true
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": true
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "New angles never help.",
+              "correct": true
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": false
+            },
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": false
+            },
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": true
+            },
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": false
+            },
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "A new angle finds new clues.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": true
+            },
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about trying a different way. What should he say?",
+          "options": [
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about trying a different way. What should he say?",
+          "options": [
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": true
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about trying a different way. What should he say?",
+          "options": [
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": true
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about trying a different way. What should he say?",
+          "options": [
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": true
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about trying a different way. What should he say?",
+          "options": [
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": true
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": true
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": true
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "Trying again is brave.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is trying a different way?",
+          "options": [
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is trying a different way?",
+          "options": [
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": true
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is trying a different way?",
+          "options": [
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": true
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is trying a different way?",
+          "options": [
+            {
+              "text": "A new angle finds new clues.",
+              "correct": true
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is trying a different way?",
+          "options": [
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "New angles never help.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": true
+            },
+            {
+              "text": "Trying again is for quitters.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

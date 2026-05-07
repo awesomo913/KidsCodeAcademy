@@ -50,5 +50,774 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Hero falls forever. Pick the fix:",
+          "choices": [
+            {
+              "label": "Make the hero blue",
+              "right": false
+            },
+            {
+              "label": "Add: stop the hero when it touches the floor",
+              "right": true
+            },
+            {
+              "label": "Remove the floor",
+              "right": false
+            },
+            {
+              "label": "Add more coins",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": true
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            },
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": true
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": false
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": true
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 1: hero on the floor. What should he say?",
+          "options": [
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": true
+            },
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": true
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            },
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": true
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": true
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": true
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            },
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": true
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Floors are decoration only.",
+              "correct": true
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": false
+            },
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": false
+            },
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": false
+            },
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": true
+            },
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": false
+            },
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": false
+            },
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": false
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": false
+            },
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": false
+            },
+            {
+              "text": "Skip placing the hero.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": true
+            },
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": false
+            },
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about iter 1: hero on the floor. What should he say?",
+          "options": [
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about iter 1: hero on the floor. What should he say?",
+          "options": [
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": true
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about iter 1: hero on the floor. What should he say?",
+          "options": [
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": true
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 1: hero on the floor. What should he say?",
+          "options": [
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": true
+            },
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about iter 1: hero on the floor. What should he say?",
+          "options": [
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": true
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": true
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            },
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": true
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            },
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": true
+            },
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "options": [
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": true
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            },
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": true
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": true
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": true
+            },
+            {
+              "text": "Skip placing the hero.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Tiny steps hide bugs.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": true
+            },
+            {
+              "text": "Never test what you wrote.",
+              "correct": false
+            },
+            {
+              "text": "Floors are decoration only.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

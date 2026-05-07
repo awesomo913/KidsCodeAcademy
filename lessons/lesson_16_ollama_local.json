@@ -45,5 +45,517 @@
         "computer"
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "place-blocks",
+        "payload": {
+          "prompt": "Build the sentence:",
+          "blocks": [
+            "Ollama",
+            "lives",
+            "on my",
+            "computer"
+          ],
+          "solution": [
+            "Ollama",
+            "lives",
+            "on my",
+            "computer"
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is Ollama on your computer?",
+          "options": [
+            {
+              "text": "Ollama lets a helper live on your own laptop.",
+              "correct": true
+            },
+            {
+              "text": "Ollama eats your homework.",
+              "correct": false
+            },
+            {
+              "text": "Ollama needs a magic stone to work.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about Ollama on your computer?",
+          "options": [
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers do not need the internet.",
+              "correct": true
+            },
+            {
+              "text": "Ollama always uses the slowest helper.",
+              "correct": false
+            },
+            {
+              "text": "Ollama needs a magic stone to work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Ollama on your computer.",
+          "options": [
+            {
+              "text": "Ollama lets a helper live on your own laptop.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers feel fast for small tasks.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers only run online.",
+              "correct": true
+            },
+            {
+              "text": "We can pick which helper to load.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about Ollama on your computer. What should he say?",
+          "options": [
+            {
+              "text": "Ollama eats your homework.",
+              "correct": false
+            },
+            {
+              "text": "We can pick which helper to load.",
+              "correct": true
+            },
+            {
+              "text": "Ollama needs a magic stone to work.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about Ollama on your computer is a GOOD rule?",
+          "options": [
+            {
+              "text": "Local helpers feel fast for small tasks.",
+              "correct": true
+            },
+            {
+              "text": "Ollama eats your homework.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            },
+            {
+              "text": "Ollama always uses the slowest helper.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about Ollama on your computer?",
+          "options": [
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers do not need the internet.",
+              "correct": true
+            },
+            {
+              "text": "Ollama eats your homework.",
+              "correct": false
+            },
+            {
+              "text": "Ollama always uses the slowest helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about Ollama on your computer?",
+          "options": [
+            {
+              "text": "Ollama always uses the slowest helper.",
+              "correct": false
+            },
+            {
+              "text": "Ollama keeps your words on your machine.",
+              "correct": true
+            },
+            {
+              "text": "Ollama copies your words to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Ollama eats your homework.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about Ollama on your computer?",
+          "options": [
+            {
+              "text": "Ollama needs a magic stone to work.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            },
+            {
+              "text": "Ollama copies your words to the moon.",
+              "correct": false
+            },
+            {
+              "text": "We can pick which helper to load.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about Ollama on your computer?",
+          "options": [
+            {
+              "text": "Ollama always uses the slowest helper.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers feel fast for small tasks.",
+              "correct": true
+            },
+            {
+              "text": "Ollama copies your words to the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about Ollama on your computer?",
+          "options": [
+            {
+              "text": "Ollama copies your words to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Ollama lets a helper live on your own laptop.",
+              "correct": true
+            },
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            },
+            {
+              "text": "Ollama eats your homework.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about Ollama on your computer.",
+          "options": [
+            {
+              "text": "Local helpers only run online.",
+              "correct": true
+            },
+            {
+              "text": "We can pick which helper to load.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers do not need the internet.",
+              "correct": false
+            },
+            {
+              "text": "Ollama lets a helper live on your own laptop.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about Ollama on your computer.",
+          "options": [
+            {
+              "text": "Local helpers do not need the internet.",
+              "correct": false
+            },
+            {
+              "text": "Ollama keeps your words on your machine.",
+              "correct": false
+            },
+            {
+              "text": "Ollama always uses the slowest helper.",
+              "correct": true
+            },
+            {
+              "text": "Ollama lets a helper live on your own laptop.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Ollama on your computer.",
+          "options": [
+            {
+              "text": "Ollama lets a helper live on your own laptop.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers do not need the internet.",
+              "correct": false
+            },
+            {
+              "text": "Ollama keeps your words on your machine.",
+              "correct": false
+            },
+            {
+              "text": "Ollama eats your homework.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about Ollama on your computer.",
+          "options": [
+            {
+              "text": "Local helpers feel fast for small tasks.",
+              "correct": false
+            },
+            {
+              "text": "We can pick which helper to load.",
+              "correct": false
+            },
+            {
+              "text": "Ollama keeps your words on your machine.",
+              "correct": false
+            },
+            {
+              "text": "Ollama needs a magic stone to work.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about Ollama on your computer.",
+          "options": [
+            {
+              "text": "We can pick which helper to load.",
+              "correct": false
+            },
+            {
+              "text": "Ollama copies your words to the moon.",
+              "correct": true
+            },
+            {
+              "text": "Ollama lets a helper live on your own laptop.",
+              "correct": false
+            },
+            {
+              "text": "Ollama keeps your words on your machine.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about Ollama on your computer. What should he say?",
+          "options": [
+            {
+              "text": "Ollama needs a magic stone to work.",
+              "correct": false
+            },
+            {
+              "text": "Ollama copies your words to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Ollama always uses the slowest helper.",
+              "correct": false
+            },
+            {
+              "text": "We can pick which helper to load.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about Ollama on your computer. What should he say?",
+          "options": [
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            },
+            {
+              "text": "Local helpers feel fast for small tasks.",
+              "correct": true
+            },
+            {
+              "text": "Ollama eats your homework.",
+              "correct": false
+            },
+            {
+              "text": "Ollama copies your words to the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about Ollama on your computer. What should he say?",
+          "options": [
+            {
+              "text": "Ollama copies your words to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Ollama eats your homework.",
+              "correct": false
+            },
+            {
+              "text": "Ollama lets a helper live on your own laptop.",
+              "correct": true
+            },
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about Ollama on your computer. What should he say?",
+          "options": [
+            {
+              "text": "Local helpers do not need the internet.",
+              "correct": true
+            },
+            {
+              "text": "Ollama needs a magic stone to work.",
+              "correct": false
+            },
+            {
+              "text": "Ollama always uses the slowest helper.",
+              "correct": false
+            },
+            {
+              "text": "Ollama eats your homework.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about Ollama on your computer. What should he say?",
+          "options": [
+            {
+              "text": "Local helpers only run online.",
+              "correct": false
+            },
+            {
+              "text": "Ollama eats your homework.",
+              "correct": false
+            },
+            {
+              "text": "Ollama keeps your words on your machine.",
+              "correct": true
+            },
+            {
+              "text": "Ollama copies your words to the moon.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

@@ -38,5 +38,892 @@
         "Ask Claude to make a plan!"
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "guided-talk",
+        "payload": {
+          "prompt": "Read about Claude out loud:",
+          "lines": [
+            "Claude is the big-picture helper.",
+            "Claude reads lots of pages at once.",
+            "Claude likes to PLAN before doing.",
+            "Ask Claude to make a plan!"
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is Claude in depth?",
+          "options": [
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": true
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about Claude in depth. What should he say?",
+          "options": [
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": true
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": true
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": true
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": true
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "Claude works only when it rains.",
+              "correct": true
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": false
+            },
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": true
+            },
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": false
+            },
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": false
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about Claude in depth. What should he say?",
+          "options": [
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about Claude in depth. What should he say?",
+          "options": [
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": true
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about Claude in depth. What should he say?",
+          "options": [
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about Claude in depth. What should he say?",
+          "options": [
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about Claude in depth. What should he say?",
+          "options": [
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": true
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": true
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": true
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is Claude in depth?",
+          "options": [
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is Claude in depth?",
+          "options": [
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is Claude in depth?",
+          "options": [
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": true
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is Claude in depth?",
+          "options": [
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": true
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is Claude in depth?",
+          "options": [
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": true
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude works only when it rains.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": true
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": true
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": true
+            },
+            {
+              "text": "Claude refuses to follow rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

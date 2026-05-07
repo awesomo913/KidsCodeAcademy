@@ -10,20 +10,686 @@
     "Match each problem to the kind of program that helps!"
   ],
   "hints": {
-    "tier1": {"highlight": "problem"},
-    "tier2": {"rephrase": "Each card tells you a problem. Match it to the helper program."},
-    "tier3": {"nudge": "Lost photos need a finder. Forgotten lists need a list. Rain needs a weather check."}
+    "tier1": {
+      "highlight": "problem"
+    },
+    "tier2": {
+      "rephrase": "Each card tells you a problem. Match it to the helper program."
+    },
+    "tier3": {
+      "nudge": "Lost photos need a finder. Forgotten lists need a list. Rain needs a weather check."
+    }
   },
   "game": {
     "type": "drag-to-match",
     "payload": {
       "prompt": "Match each problem to the kind of program that helps:",
       "pairs": [
-        {"left": "Mom keeps forgetting the grocery list", "right": "📋 A list app"},
-        {"left": "Dad has 100 photos and can't find one", "right": "🔍 A photo finder"},
-        {"left": "My sister doesn't know if it's raining", "right": "🌧️ A weather app"},
-        {"left": "I want to practice times tables", "right": "🧮 A math game"}
+        {
+          "left": "Mom keeps forgetting the grocery list",
+          "right": "📋 A list app"
+        },
+        {
+          "left": "Dad has 100 photos and can't find one",
+          "right": "🔍 A photo finder"
+        },
+        {
+          "left": "My sister doesn't know if it's raining",
+          "right": "🌧️ A weather app"
+        },
+        {
+          "left": "I want to practice times tables",
+          "right": "🧮 A math game"
+        }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "drag-to-match",
+        "payload": {
+          "prompt": "Match each problem to the kind of program that helps:",
+          "pairs": [
+            {
+              "left": "Mom keeps forgetting the grocery list",
+              "right": "📋 A list app"
+            },
+            {
+              "left": "Dad has 100 photos and can't find one",
+              "right": "🔍 A photo finder"
+            },
+            {
+              "left": "My sister doesn't know if it's raining",
+              "right": "🌧️ A weather app"
+            },
+            {
+              "left": "I want to practice times tables",
+              "right": "🧮 A math game"
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is listening for problems?",
+          "options": [
+            {
+              "text": "Problems hide in everyday gripes.",
+              "correct": true
+            },
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            },
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            },
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            },
+            {
+              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "correct": true
+            },
+            {
+              "text": "Don't ask why.",
+              "correct": false
+            },
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "Problems hide in everyday gripes.",
+              "correct": false
+            },
+            {
+              "text": "Big problems often have small fixes.",
+              "correct": false
+            },
+            {
+              "text": "Memory beats writing things down.",
+              "correct": true
+            },
+            {
+              "text": "Ask why the problem matters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about listening for problems. What should he say?",
+          "options": [
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            },
+            {
+              "text": "Ask why the problem matters.",
+              "correct": true
+            },
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            },
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about listening for problems is a GOOD rule?",
+          "options": [
+            {
+              "text": "Big problems often have small fixes.",
+              "correct": true
+            },
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            },
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            },
+            {
+              "text": "Don't ask why.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            },
+            {
+              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "correct": true
+            },
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            },
+            {
+              "text": "Don't ask why.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "Don't ask why.",
+              "correct": false
+            },
+            {
+              "text": "Write down the problem so you remember.",
+              "correct": true
+            },
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            },
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            },
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            },
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            },
+            {
+              "text": "Ask why the problem matters.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "Don't ask why.",
+              "correct": false
+            },
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            },
+            {
+              "text": "Big problems often have small fixes.",
+              "correct": true
+            },
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            },
+            {
+              "text": "Problems hide in everyday gripes.",
+              "correct": true
+            },
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            },
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "Memory beats writing things down.",
+              "correct": true
+            },
+            {
+              "text": "Ask why the problem matters.",
+              "correct": false
+            },
+            {
+              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "correct": false
+            },
+            {
+              "text": "Problems hide in everyday gripes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "correct": false
+            },
+            {
+              "text": "Write down the problem so you remember.",
+              "correct": false
+            },
+            {
+              "text": "Don't ask why.",
+              "correct": true
+            },
+            {
+              "text": "Problems hide in everyday gripes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "Problems hide in everyday gripes.",
+              "correct": false
+            },
+            {
+              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "correct": false
+            },
+            {
+              "text": "Write down the problem so you remember.",
+              "correct": false
+            },
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "Big problems often have small fixes.",
+              "correct": false
+            },
+            {
+              "text": "Ask why the problem matters.",
+              "correct": false
+            },
+            {
+              "text": "Write down the problem so you remember.",
+              "correct": false
+            },
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "Ask why the problem matters.",
+              "correct": false
+            },
+            {
+              "text": "Don't listen to anyone.",
+              "correct": true
+            },
+            {
+              "text": "Problems hide in everyday gripes.",
+              "correct": false
+            },
+            {
+              "text": "Write down the problem so you remember.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about listening for problems. What should he say?",
+          "options": [
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            },
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            },
+            {
+              "text": "Don't ask why.",
+              "correct": false
+            },
+            {
+              "text": "Ask why the problem matters.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about listening for problems. What should he say?",
+          "options": [
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            },
+            {
+              "text": "Big problems often have small fixes.",
+              "correct": true
+            },
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            },
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about listening for problems. What should he say?",
+          "options": [
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            },
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            },
+            {
+              "text": "Problems hide in everyday gripes.",
+              "correct": true
+            },
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about listening for problems. What should he say?",
+          "options": [
+            {
+              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "correct": true
+            },
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            },
+            {
+              "text": "Don't ask why.",
+              "correct": false
+            },
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about listening for problems. What should he say?",
+          "options": [
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            },
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            },
+            {
+              "text": "Write down the problem so you remember.",
+              "correct": true
+            },
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about listening for problems is a GOOD rule?",
+          "options": [
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            },
+            {
+              "text": "Big problems often have small fixes.",
+              "correct": true
+            },
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            },
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about listening for problems is a GOOD rule?",
+          "options": [
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            },
+            {
+              "text": "Problems hide in everyday gripes.",
+              "correct": true
+            },
+            {
+              "text": "Don't ask why.",
+              "correct": false
+            },
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about listening for problems is a GOOD rule?",
+          "options": [
+            {
+              "text": "Don't ask why.",
+              "correct": false
+            },
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            },
+            {
+              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "correct": true
+            },
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about listening for problems is a GOOD rule?",
+          "options": [
+            {
+              "text": "Write down the problem so you remember.",
+              "correct": true
+            },
+            {
+              "text": "Don't ask why.",
+              "correct": false
+            },
+            {
+              "text": "Memory beats writing things down.",
+              "correct": false
+            },
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about listening for problems is a GOOD rule?",
+          "options": [
+            {
+              "text": "Big problems need only big fixes.",
+              "correct": false
+            },
+            {
+              "text": "Problems are always loud and obvious.",
+              "correct": false
+            },
+            {
+              "text": "Don't listen to anyone.",
+              "correct": false
+            },
+            {
+              "text": "Ask why the problem matters.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

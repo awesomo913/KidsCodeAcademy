@@ -44,6 +44,29 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 - Verified: `KidsCodeAcademy.exe` (48 MB) launches cleanly, loads `index.html` from `_MEIPASS`, lessons render, mini-games dispatch, mascot animates, sticker overlay fires.
 - Shipped: `C:\Users\computer\Desktop\AI\KidsCodeAcademy.exe` (v0.1.0).
 
+### 2026-05-07 (later) — v0.5.0: anti-memorization + interaction gating + multi-question lessons
+- User report: kid had started memorizing the single MCQ per lesson and was speed-clicking. Asked for (1) hide answer choices until kid completes the demonstration interaction, (2) 5× variations per question with random pick, (3) 3-8 questions per lesson across all 60 lessons.
+- Schema v2 (`schema: "v2"` marker on every lesson):
+  - `questions: [ { id, interaction:{type,payload}, variations:[{prompt, options:[{text,correct}]}, ×5] }, … ]`
+  - 4-7 questions per lesson (`_question_count = 4 + lesson_id % 4`).
+  - Q1's `interaction` keeps the original `lesson.game` (the demonstration). Q2-QN cycle through small fast gate interactions (tap a dot, type GO, tap a star, etc.) so the kid still has to engage but the gate takes <3s.
+  - Each variation = paraphrased prompt + shuffled options. 5 question frames (what-is / true-fact / spot-the-lie / best-thing-to-say / good-rule) × 5 paraphrases × shuffled options = combinatorial coverage that defeats memorization patterns.
+- Engine (`index.html`):
+  - New `QuestionFlow` controller renders gate first; the answer panel does NOT exist in DOM until the gate's onComplete fires. Then locked-gate visual + answer panel reveal.
+  - `pickVariation` uses `crypto.getRandomValues` (true entropy when available) so the kid can't catch a Math.random pattern.
+  - `shuffleArr` Fisher-Yates with the same RNG — option positions change per render even within the same variation.
+  - `speakText` wraps `window.speechSynthesis` so question prompts get read aloud at runtime — no per-question wav bake needed (saved 1500 wav files).
+  - `KidGame.run(spec, onComplete, hostEl?)` now accepts an optional sub-host; QuestionFlow routes the gate into a sibling `div` of the answer panel.
+  - Backward-compat shim: any lesson lacking `questions[]` gets auto-wrapped via `QuestionFlow._legacyShim` so old content still functions.
+  - QuestionFlow renders into a `.qf-root` child of `#gameArea` so the help-fab (sibling) survives internal re-renders on question advance.
+- Content (`scripts/expand_lessons_v2.py`):
+  - Per-lesson seed table: `concept` + 5 facts (kid-friendly truths) + 5 wrongs (silly distractors).
+  - Generator combines seed × frame × paraphrase deterministically. Re-runs produce identical files.
+  - All 60 lessons expanded → 4-7 questions × 5 variations = ~1500 MCQ entries.
+- CSS: `.qprog` (progress chip), `.qint.locked` (dim + click-block on gate after success), `.qans.hidden` (answer panel hidden until reveal), `.qprompt` (large prompt heading).
+- Audio: existing baked `lesson_NN.wav` mascot narration unchanged. Question prompts use Web Speech at runtime — works in WebView2 (Chromium) on Windows and WebKitGTK on Pi.
+- Result: kid sees a different prompt + different option order + different question per lesson visit. Memorization defeated. Engagement enforced via gate.
+
 ### 2026-05-07 — Pi port + durable remote-control channels (v0.4.0)
 - User vision: "build the pi version" → kid's Raspberry Pi (`92ed86ff-feb2-4c87-aed6-5d7ca29c2390`) becomes a target alongside Windows.
 - User decisions:

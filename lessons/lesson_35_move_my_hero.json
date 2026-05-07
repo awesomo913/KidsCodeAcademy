@@ -30,5 +30,890 @@
         "showHitboxToggle": false
       }
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "sprite-mover",
+        "payload": {
+          "prompt": "Use arrow keys (or A/D) to walk. Up/W/Space to jump. Reach the green flag!",
+          "levelId": "starter",
+          "options": {
+            "showHitboxToggle": false
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is moving my hero?",
+          "options": [
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": true
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": true
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs every frame.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": true
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about moving my hero. What should he say?",
+          "options": [
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": true
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "Movement runs every frame.",
+              "correct": true
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": true
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": true
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs every frame.",
+              "correct": true
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": true
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "Adding moves you up only.",
+              "correct": true
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": false
+            },
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": false
+            },
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": false
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": true
+            },
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": false
+            },
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": false
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "Movement runs every frame.",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": false
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "We subtract to move left.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": true
+            },
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": false
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about moving my hero. What should he say?",
+          "options": [
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about moving my hero. What should he say?",
+          "options": [
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs every frame.",
+              "correct": true
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about moving my hero. What should he say?",
+          "options": [
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": true
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about moving my hero. What should he say?",
+          "options": [
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": true
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about moving my hero. What should he say?",
+          "options": [
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": true
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs every frame.",
+              "correct": true
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": true
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": true
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "We add to position to move right.",
+              "correct": true
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is moving my hero?",
+          "options": [
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is moving my hero?",
+          "options": [
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": true
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is moving my hero?",
+          "options": [
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": true
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is moving my hero?",
+          "options": [
+            {
+              "text": "We subtract to move left.",
+              "correct": true
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is moving my hero?",
+          "options": [
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs every frame.",
+              "correct": true
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Adding moves you up only.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": true
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Movement runs every frame.",
+              "correct": true
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and stops.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": true
+            },
+            {
+              "text": "Speed never matters.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

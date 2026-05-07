@@ -33,5 +33,763 @@
         "Share with someone"
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "sequence-the-steps",
+        "payload": {
+          "prompt": "Order the steps from idea to ship:",
+          "steps": [
+            "Have the idea",
+            "Make a 5-step plan",
+            "Build step 1",
+            "Test it",
+            "Share with someone"
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is idea to plan?",
+          "options": [
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": true
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            },
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": true
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": false
+            },
+            {
+              "text": "Ideas without plans rarely ship.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": true
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about idea to plan. What should he say?",
+          "options": [
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": true
+            },
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about idea to plan is a GOOD rule?",
+          "options": [
+            {
+              "text": "Ideas without plans rarely ship.",
+              "correct": true
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            },
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": true
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "Plans help us not get lost.",
+              "correct": true
+            },
+            {
+              "text": "Plans never help.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help.",
+              "correct": false
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            },
+            {
+              "text": "Ideas without plans rarely ship.",
+              "correct": true
+            },
+            {
+              "text": "Plans never help.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "Plans never help.",
+              "correct": false
+            },
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": true
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "Plans must never change.",
+              "correct": true
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": false
+            },
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": false
+            },
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": false
+            },
+            {
+              "text": "Plans help us not get lost.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": true
+            },
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": false
+            },
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": false
+            },
+            {
+              "text": "Plans help us not get lost.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "Ideas without plans rarely ship.",
+              "correct": false
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": false
+            },
+            {
+              "text": "Plans help us not get lost.",
+              "correct": false
+            },
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "Plans can change as we learn.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help.",
+              "correct": true
+            },
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": false
+            },
+            {
+              "text": "Plans help us not get lost.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about idea to plan. What should he say?",
+          "options": [
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about idea to plan. What should he say?",
+          "options": [
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            },
+            {
+              "text": "Ideas without plans rarely ship.",
+              "correct": true
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about idea to plan. What should he say?",
+          "options": [
+            {
+              "text": "Plans never help.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": true
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about idea to plan. What should he say?",
+          "options": [
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": true
+            },
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about idea to plan. What should he say?",
+          "options": [
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Plans help us not get lost.",
+              "correct": true
+            },
+            {
+              "text": "Plans never help.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about idea to plan is a GOOD rule?",
+          "options": [
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            },
+            {
+              "text": "Ideas without plans rarely ship.",
+              "correct": true
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about idea to plan is a GOOD rule?",
+          "options": [
+            {
+              "text": "Plans never help.",
+              "correct": false
+            },
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": true
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about idea to plan is a GOOD rule?",
+          "options": [
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help.",
+              "correct": false
+            },
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": true
+            },
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about idea to plan is a GOOD rule?",
+          "options": [
+            {
+              "text": "Plans help us not get lost.",
+              "correct": true
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            },
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about idea to plan is a GOOD rule?",
+          "options": [
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help.",
+              "correct": false
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is idea to plan?",
+          "options": [
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is idea to plan?",
+          "options": [
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": true
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is idea to plan?",
+          "options": [
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Plans help us not get lost.",
+              "correct": true
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is idea to plan?",
+          "options": [
+            {
+              "text": "Plans can change as we learn.",
+              "correct": true
+            },
+            {
+              "text": "An idea is the same as a plan.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is idea to plan?",
+          "options": [
+            {
+              "text": "A plan is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Ideas without plans rarely ship.",
+              "correct": true
+            },
+            {
+              "text": "Ideas always ship by themselves.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

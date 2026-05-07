@@ -50,5 +50,529 @@
         }
       }
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "history-scene",
+        "payload": {
+          "prompt": "Watch the scene, then answer the question!",
+          "scene": {
+            "id": "training",
+            "check": {
+              "prompt": "Where did the guess move toward?",
+              "choices": [
+                {
+                  "label": "The green target",
+                  "right": true
+                },
+                {
+                  "label": "The clouds",
+                  "right": false
+                },
+                {
+                  "label": "Off the screen",
+                  "right": false
+                },
+                {
+                  "label": "The ground",
+                  "right": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is back-and-forth learning?",
+          "options": [
+            {
+              "text": "We learn by trying, missing, and trying again.",
+              "correct": true
+            },
+            {
+              "text": "Asking questions is rude.",
+              "correct": false
+            },
+            {
+              "text": "If you fail once you should stop forever.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about back-and-forth learning?",
+          "options": [
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            },
+            {
+              "text": "Helpers learn from feedback we give them.",
+              "correct": true
+            },
+            {
+              "text": "Practice makes things harder.",
+              "correct": false
+            },
+            {
+              "text": "If you fail once you should stop forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about back-and-forth learning.",
+          "options": [
+            {
+              "text": "We learn by trying, missing, and trying again.",
+              "correct": false
+            },
+            {
+              "text": "Asking is a strong way to learn.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": true
+            },
+            {
+              "text": "Practice makes patterns easy to see.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about back-and-forth learning. What should he say?",
+          "options": [
+            {
+              "text": "Asking questions is rude.",
+              "correct": false
+            },
+            {
+              "text": "Practice makes patterns easy to see.",
+              "correct": true
+            },
+            {
+              "text": "If you fail once you should stop forever.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about back-and-forth learning is a GOOD rule?",
+          "options": [
+            {
+              "text": "Asking is a strong way to learn.",
+              "correct": true
+            },
+            {
+              "text": "Asking questions is rude.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            },
+            {
+              "text": "Practice makes things harder.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about back-and-forth learning?",
+          "options": [
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            },
+            {
+              "text": "Helpers learn from feedback we give them.",
+              "correct": true
+            },
+            {
+              "text": "Asking questions is rude.",
+              "correct": false
+            },
+            {
+              "text": "Practice makes things harder.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about back-and-forth learning?",
+          "options": [
+            {
+              "text": "Practice makes things harder.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes are clues that help us improve.",
+              "correct": true
+            },
+            {
+              "text": "Helpers learn nothing from feedback.",
+              "correct": false
+            },
+            {
+              "text": "Asking questions is rude.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about back-and-forth learning?",
+          "options": [
+            {
+              "text": "If you fail once you should stop forever.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            },
+            {
+              "text": "Helpers learn nothing from feedback.",
+              "correct": false
+            },
+            {
+              "text": "Practice makes patterns easy to see.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about back-and-forth learning?",
+          "options": [
+            {
+              "text": "Practice makes things harder.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            },
+            {
+              "text": "Asking is a strong way to learn.",
+              "correct": true
+            },
+            {
+              "text": "Helpers learn nothing from feedback.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about back-and-forth learning?",
+          "options": [
+            {
+              "text": "Helpers learn nothing from feedback.",
+              "correct": false
+            },
+            {
+              "text": "We learn by trying, missing, and trying again.",
+              "correct": true
+            },
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            },
+            {
+              "text": "Asking questions is rude.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about back-and-forth learning.",
+          "options": [
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": true
+            },
+            {
+              "text": "Practice makes patterns easy to see.",
+              "correct": false
+            },
+            {
+              "text": "Helpers learn from feedback we give them.",
+              "correct": false
+            },
+            {
+              "text": "We learn by trying, missing, and trying again.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about back-and-forth learning.",
+          "options": [
+            {
+              "text": "Helpers learn from feedback we give them.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes are clues that help us improve.",
+              "correct": false
+            },
+            {
+              "text": "Practice makes things harder.",
+              "correct": true
+            },
+            {
+              "text": "We learn by trying, missing, and trying again.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about back-and-forth learning.",
+          "options": [
+            {
+              "text": "We learn by trying, missing, and trying again.",
+              "correct": false
+            },
+            {
+              "text": "Helpers learn from feedback we give them.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes are clues that help us improve.",
+              "correct": false
+            },
+            {
+              "text": "Asking questions is rude.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about back-and-forth learning.",
+          "options": [
+            {
+              "text": "Asking is a strong way to learn.",
+              "correct": false
+            },
+            {
+              "text": "Practice makes patterns easy to see.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes are clues that help us improve.",
+              "correct": false
+            },
+            {
+              "text": "If you fail once you should stop forever.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about back-and-forth learning.",
+          "options": [
+            {
+              "text": "Practice makes patterns easy to see.",
+              "correct": false
+            },
+            {
+              "text": "Helpers learn nothing from feedback.",
+              "correct": true
+            },
+            {
+              "text": "We learn by trying, missing, and trying again.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes are clues that help us improve.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about back-and-forth learning. What should he say?",
+          "options": [
+            {
+              "text": "If you fail once you should stop forever.",
+              "correct": false
+            },
+            {
+              "text": "Helpers learn nothing from feedback.",
+              "correct": false
+            },
+            {
+              "text": "Practice makes things harder.",
+              "correct": false
+            },
+            {
+              "text": "Practice makes patterns easy to see.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about back-and-forth learning. What should he say?",
+          "options": [
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            },
+            {
+              "text": "Asking is a strong way to learn.",
+              "correct": true
+            },
+            {
+              "text": "Asking questions is rude.",
+              "correct": false
+            },
+            {
+              "text": "Helpers learn nothing from feedback.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about back-and-forth learning. What should he say?",
+          "options": [
+            {
+              "text": "Helpers learn nothing from feedback.",
+              "correct": false
+            },
+            {
+              "text": "Asking questions is rude.",
+              "correct": false
+            },
+            {
+              "text": "We learn by trying, missing, and trying again.",
+              "correct": true
+            },
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about back-and-forth learning. What should he say?",
+          "options": [
+            {
+              "text": "Helpers learn from feedback we give them.",
+              "correct": true
+            },
+            {
+              "text": "If you fail once you should stop forever.",
+              "correct": false
+            },
+            {
+              "text": "Practice makes things harder.",
+              "correct": false
+            },
+            {
+              "text": "Asking questions is rude.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about back-and-forth learning. What should he say?",
+          "options": [
+            {
+              "text": "Mistakes mean you are bad at it.",
+              "correct": false
+            },
+            {
+              "text": "Asking questions is rude.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes are clues that help us improve.",
+              "correct": true
+            },
+            {
+              "text": "Helpers learn nothing from feedback.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

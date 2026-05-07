@@ -11,20 +11,937 @@
     "Match the game thing to the feeling it gives you!"
   ],
   "hints": {
-    "tier1": {"highlight": "feeling"},
-    "tier2": {"rephrase": "Each game feature makes the player feel a feeling. Match them up."},
-    "tier3": {"nudge": "Power-ups make you feel POWERFUL. Surprises make you CURIOUS. Tough bosses make you PROUD when you win."}
+    "tier1": {
+      "highlight": "feeling"
+    },
+    "tier2": {
+      "rephrase": "Each game feature makes the player feel a feeling. Match them up."
+    },
+    "tier3": {
+      "nudge": "Power-ups make you feel POWERFUL. Surprises make you CURIOUS. Tough bosses make you PROUD when you win."
+    }
   },
   "game": {
     "type": "drag-to-match",
     "payload": {
       "prompt": "Match each game feature to the feeling it gives you:",
       "pairs": [
-        {"left": "🎁 Surprise rewards", "right": "Curious"},
-        {"left": "🌈 Beautiful art", "right": "Wonder"},
-        {"left": "💪 Power-ups", "right": "Powerful"},
-        {"left": "👾 A tough boss", "right": "Proud (when you win!)"}
+        {
+          "left": "🎁 Surprise rewards",
+          "right": "Curious"
+        },
+        {
+          "left": "🌈 Beautiful art",
+          "right": "Wonder"
+        },
+        {
+          "left": "💪 Power-ups",
+          "right": "Powerful"
+        },
+        {
+          "left": "👾 A tough boss",
+          "right": "Proud (when you win!)"
+        }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "drag-to-match",
+        "payload": {
+          "prompt": "Match each game feature to the feeling it gives you:",
+          "pairs": [
+            {
+              "left": "🎁 Surprise rewards",
+              "right": "Curious"
+            },
+            {
+              "left": "🌈 Beautiful art",
+              "right": "Wonder"
+            },
+            {
+              "left": "💪 Power-ups",
+              "right": "Powerful"
+            },
+            {
+              "left": "👾 A tough boss",
+              "right": "Proud (when you win!)"
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is picking the hook?",
+          "options": [
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": true
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "The hook makes people try your thing.",
+              "correct": true
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about picking the hook.",
+          "options": [
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": false
+            },
+            {
+              "text": "A hook can be a question or a wow.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": true
+            },
+            {
+              "text": "Show the hook in the first few seconds.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about picking the hook. What should he say?",
+          "options": [
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "Show the hook in the first few seconds.",
+              "correct": true
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about picking the hook is a GOOD rule?",
+          "options": [
+            {
+              "text": "A hook can be a question or a wow.",
+              "correct": true
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "The hook makes people try your thing.",
+              "correct": true
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "Hooks should be honest, not tricky.",
+              "correct": true
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "Show the hook in the first few seconds.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "A hook can be a question or a wow.",
+              "correct": true
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": true
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about picking the hook.",
+          "options": [
+            {
+              "text": "Hooks must trick people.",
+              "correct": true
+            },
+            {
+              "text": "Show the hook in the first few seconds.",
+              "correct": false
+            },
+            {
+              "text": "The hook makes people try your thing.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about picking the hook.",
+          "options": [
+            {
+              "text": "The hook makes people try your thing.",
+              "correct": false
+            },
+            {
+              "text": "Hooks should be honest, not tricky.",
+              "correct": false
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": true
+            },
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about picking the hook.",
+          "options": [
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": false
+            },
+            {
+              "text": "The hook makes people try your thing.",
+              "correct": false
+            },
+            {
+              "text": "Hooks should be honest, not tricky.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about picking the hook.",
+          "options": [
+            {
+              "text": "A hook can be a question or a wow.",
+              "correct": false
+            },
+            {
+              "text": "Show the hook in the first few seconds.",
+              "correct": false
+            },
+            {
+              "text": "Hooks should be honest, not tricky.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about picking the hook.",
+          "options": [
+            {
+              "text": "Show the hook in the first few seconds.",
+              "correct": false
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": true
+            },
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": false
+            },
+            {
+              "text": "Hooks should be honest, not tricky.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about picking the hook. What should he say?",
+          "options": [
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "Show the hook in the first few seconds.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about picking the hook. What should he say?",
+          "options": [
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "A hook can be a question or a wow.",
+              "correct": true
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about picking the hook. What should he say?",
+          "options": [
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": true
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about picking the hook. What should he say?",
+          "options": [
+            {
+              "text": "The hook makes people try your thing.",
+              "correct": true
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about picking the hook. What should he say?",
+          "options": [
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "Hooks should be honest, not tricky.",
+              "correct": true
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about picking the hook is a GOOD rule?",
+          "options": [
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "A hook can be a question or a wow.",
+              "correct": true
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about picking the hook is a GOOD rule?",
+          "options": [
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": true
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about picking the hook is a GOOD rule?",
+          "options": [
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "The hook makes people try your thing.",
+              "correct": true
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about picking the hook is a GOOD rule?",
+          "options": [
+            {
+              "text": "Hooks should be honest, not tricky.",
+              "correct": true
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about picking the hook is a GOOD rule?",
+          "options": [
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "Show the hook in the first few seconds.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is picking the hook?",
+          "options": [
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is picking the hook?",
+          "options": [
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "The hook makes people try your thing.",
+              "correct": true
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is picking the hook?",
+          "options": [
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "Hooks should be honest, not tricky.",
+              "correct": true
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is picking the hook?",
+          "options": [
+            {
+              "text": "Show the hook in the first few seconds.",
+              "correct": true
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is picking the hook?",
+          "options": [
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "A hook can be a question or a wow.",
+              "correct": true
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "The hook makes people try your thing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "Hooks should be honest, not tricky.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "Hooks must trick people.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            },
+            {
+              "text": "Show the hook in the first few seconds.",
+              "correct": true
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "A hook can be a question or a wow.",
+              "correct": true
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "Hooks must be long stories.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about picking the hook?",
+          "options": [
+            {
+              "text": "A hook is the catchy first part.",
+              "correct": true
+            },
+            {
+              "text": "Hooks scare people away.",
+              "correct": false
+            },
+            {
+              "text": "A hook is the last part.",
+              "correct": false
+            },
+            {
+              "text": "Save the hook for the end.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

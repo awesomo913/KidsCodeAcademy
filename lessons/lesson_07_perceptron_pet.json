@@ -51,5 +51,910 @@
         }
       }
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "history-scene",
+        "payload": {
+          "prompt": "Watch the scene, then answer the question!",
+          "scene": {
+            "id": "perceptron",
+            "check": {
+              "prompt": "What did the brain cell answer at the end?",
+              "choices": [
+                {
+                  "label": "YES",
+                  "right": true
+                },
+                {
+                  "label": "MAYBE",
+                  "right": false
+                },
+                {
+                  "label": "PIZZA",
+                  "right": false
+                },
+                {
+                  "label": "Nothing",
+                  "right": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is the perceptron pet?",
+          "options": [
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "It learns by looking at lots of examples.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the perceptron pet.",
+          "options": [
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": false
+            },
+            {
+              "text": "Many perceptrons together make a big brain.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": true
+            },
+            {
+              "text": "It can be trained to spot a pattern.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the perceptron pet. What should he say?",
+          "options": [
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "It can be trained to spot a pattern.",
+              "correct": true
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the perceptron pet is a GOOD rule?",
+          "options": [
+            {
+              "text": "Many perceptrons together make a big brain.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "It learns by looking at lots of examples.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "It says yes or no based on what it sees.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "It can be trained to spot a pattern.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "Many perceptrons together make a big brain.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": true
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about the perceptron pet.",
+          "options": [
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": true
+            },
+            {
+              "text": "It can be trained to spot a pattern.",
+              "correct": false
+            },
+            {
+              "text": "It learns by looking at lots of examples.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about the perceptron pet.",
+          "options": [
+            {
+              "text": "It learns by looking at lots of examples.",
+              "correct": false
+            },
+            {
+              "text": "It says yes or no based on what it sees.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": true
+            },
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the perceptron pet.",
+          "options": [
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": false
+            },
+            {
+              "text": "It learns by looking at lots of examples.",
+              "correct": false
+            },
+            {
+              "text": "It says yes or no based on what it sees.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about the perceptron pet.",
+          "options": [
+            {
+              "text": "Many perceptrons together make a big brain.",
+              "correct": false
+            },
+            {
+              "text": "It can be trained to spot a pattern.",
+              "correct": false
+            },
+            {
+              "text": "It says yes or no based on what it sees.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about the perceptron pet.",
+          "options": [
+            {
+              "text": "It can be trained to spot a pattern.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": true
+            },
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": false
+            },
+            {
+              "text": "It says yes or no based on what it sees.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about the perceptron pet. What should he say?",
+          "options": [
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "It can be trained to spot a pattern.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about the perceptron pet. What should he say?",
+          "options": [
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "Many perceptrons together make a big brain.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about the perceptron pet. What should he say?",
+          "options": [
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": true
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the perceptron pet. What should he say?",
+          "options": [
+            {
+              "text": "It learns by looking at lots of examples.",
+              "correct": true
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about the perceptron pet. What should he say?",
+          "options": [
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "It says yes or no based on what it sees.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about the perceptron pet is a GOOD rule?",
+          "options": [
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "Many perceptrons together make a big brain.",
+              "correct": true
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about the perceptron pet is a GOOD rule?",
+          "options": [
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about the perceptron pet is a GOOD rule?",
+          "options": [
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "It learns by looking at lots of examples.",
+              "correct": true
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about the perceptron pet is a GOOD rule?",
+          "options": [
+            {
+              "text": "It says yes or no based on what it sees.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the perceptron pet is a GOOD rule?",
+          "options": [
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "It can be trained to spot a pattern.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is the perceptron pet?",
+          "options": [
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is the perceptron pet?",
+          "options": [
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "It learns by looking at lots of examples.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is the perceptron pet?",
+          "options": [
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "It says yes or no based on what it sees.",
+              "correct": true
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is the perceptron pet?",
+          "options": [
+            {
+              "text": "It can be trained to spot a pattern.",
+              "correct": true
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is the perceptron pet?",
+          "options": [
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "Many perceptrons together make a big brain.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "It learns by looking at lots of examples.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "It says yes or no based on what it sees.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "A perceptron only says maybe.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            },
+            {
+              "text": "It can be trained to spot a pattern.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "Many perceptrons together make a big brain.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons are made of water.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about the perceptron pet?",
+          "options": [
+            {
+              "text": "A perceptron is a tiny learning machine.",
+              "correct": true
+            },
+            {
+              "text": "Perceptrons learn by sleeping.",
+              "correct": false
+            },
+            {
+              "text": "A perceptron is a kind of cookie.",
+              "correct": false
+            },
+            {
+              "text": "Perceptrons live inside our shoes.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

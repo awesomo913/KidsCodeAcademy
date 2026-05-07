@@ -41,5 +41,519 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "drag-to-match",
+        "payload": {
+          "prompt": "Match each ending to the screen it shows:",
+          "pairs": [
+            {
+              "left": "🚩 Reached the flag",
+              "right": "Win screen"
+            },
+            {
+              "left": "💔 Hearts at zero",
+              "right": "Lose screen"
+            },
+            {
+              "left": "⏱️ Out of time",
+              "right": "Lose screen"
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is win and lose?",
+          "options": [
+            {
+              "text": "Winning means you reached the goal.",
+              "correct": true
+            },
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": false
+            },
+            {
+              "text": "Winning means giving up.",
+              "correct": false
+            },
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            },
+            {
+              "text": "Losing means the rules said you stopped.",
+              "correct": true
+            },
+            {
+              "text": "Fairness ruins a game.",
+              "correct": false
+            },
+            {
+              "text": "Winning means giving up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Winning means you reached the goal.",
+              "correct": false
+            },
+            {
+              "text": "Losing teaches us how to try again.",
+              "correct": false
+            },
+            {
+              "text": "Games don't need win or lose.",
+              "correct": true
+            },
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about win and lose. What should he say?",
+          "options": [
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": false
+            },
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": true
+            },
+            {
+              "text": "Winning means giving up.",
+              "correct": false
+            },
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about win and lose is a GOOD rule?",
+          "options": [
+            {
+              "text": "Losing teaches us how to try again.",
+              "correct": true
+            },
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": false
+            },
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            },
+            {
+              "text": "Fairness ruins a game.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            },
+            {
+              "text": "Losing means the rules said you stopped.",
+              "correct": true
+            },
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": false
+            },
+            {
+              "text": "Fairness ruins a game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "Fairness ruins a game.",
+              "correct": false
+            },
+            {
+              "text": "Win and lose make a game a game.",
+              "correct": true
+            },
+            {
+              "text": "Losing has no rules.",
+              "correct": false
+            },
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "Winning means giving up.",
+              "correct": false
+            },
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            },
+            {
+              "text": "Losing has no rules.",
+              "correct": false
+            },
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "Fairness ruins a game.",
+              "correct": false
+            },
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            },
+            {
+              "text": "Losing teaches us how to try again.",
+              "correct": true
+            },
+            {
+              "text": "Losing has no rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "Losing has no rules.",
+              "correct": false
+            },
+            {
+              "text": "Winning means you reached the goal.",
+              "correct": true
+            },
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            },
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Games don't need win or lose.",
+              "correct": true
+            },
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": false
+            },
+            {
+              "text": "Losing means the rules said you stopped.",
+              "correct": false
+            },
+            {
+              "text": "Winning means you reached the goal.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Losing means the rules said you stopped.",
+              "correct": false
+            },
+            {
+              "text": "Win and lose make a game a game.",
+              "correct": false
+            },
+            {
+              "text": "Fairness ruins a game.",
+              "correct": true
+            },
+            {
+              "text": "Winning means you reached the goal.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Winning means you reached the goal.",
+              "correct": false
+            },
+            {
+              "text": "Losing means the rules said you stopped.",
+              "correct": false
+            },
+            {
+              "text": "Win and lose make a game a game.",
+              "correct": false
+            },
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Losing teaches us how to try again.",
+              "correct": false
+            },
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": false
+            },
+            {
+              "text": "Win and lose make a game a game.",
+              "correct": false
+            },
+            {
+              "text": "Winning means giving up.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": false
+            },
+            {
+              "text": "Losing has no rules.",
+              "correct": true
+            },
+            {
+              "text": "Winning means you reached the goal.",
+              "correct": false
+            },
+            {
+              "text": "Win and lose make a game a game.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about win and lose. What should he say?",
+          "options": [
+            {
+              "text": "Winning means giving up.",
+              "correct": false
+            },
+            {
+              "text": "Losing has no rules.",
+              "correct": false
+            },
+            {
+              "text": "Fairness ruins a game.",
+              "correct": false
+            },
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about win and lose. What should he say?",
+          "options": [
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            },
+            {
+              "text": "Losing teaches us how to try again.",
+              "correct": true
+            },
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": false
+            },
+            {
+              "text": "Losing has no rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about win and lose. What should he say?",
+          "options": [
+            {
+              "text": "Losing has no rules.",
+              "correct": false
+            },
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": false
+            },
+            {
+              "text": "Winning means you reached the goal.",
+              "correct": true
+            },
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about win and lose. What should he say?",
+          "options": [
+            {
+              "text": "Losing means the rules said you stopped.",
+              "correct": true
+            },
+            {
+              "text": "Winning means giving up.",
+              "correct": false
+            },
+            {
+              "text": "Fairness ruins a game.",
+              "correct": false
+            },
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about win and lose. What should he say?",
+          "options": [
+            {
+              "text": "Games don't need win or lose.",
+              "correct": false
+            },
+            {
+              "text": "Losing teaches us nothing.",
+              "correct": false
+            },
+            {
+              "text": "Win and lose make a game a game.",
+              "correct": true
+            },
+            {
+              "text": "Losing has no rules.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

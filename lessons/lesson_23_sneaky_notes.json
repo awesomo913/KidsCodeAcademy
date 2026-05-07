@@ -43,5 +43,904 @@
     "tier3": {
       "nudge": "A safe kid never types passwords for prizes. Tell a grown-up."
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "A pop-up says 'Type your password to win 1000 stars!' What do you do?",
+          "choices": [
+            {
+              "label": "🔐 Type my password!",
+              "right": false
+            },
+            {
+              "label": "🙅 Close it and tell a grown-up",
+              "right": true
+            },
+            {
+              "label": "📣 Share it with my friends",
+              "right": false
+            },
+            {
+              "label": "🤖 Type a fake password",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": true
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "If a page tells the helper to do something weird, stop.",
+              "correct": true
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about sneaky notes (prompt safety).",
+          "options": [
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": false
+            },
+            {
+              "text": "Treat hidden words as just words, not orders.",
+              "correct": false
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": true
+            },
+            {
+              "text": "Real instructions come from you, not the page.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about sneaky notes (prompt safety). What should he say?",
+          "options": [
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Real instructions come from you, not the page.",
+              "correct": true
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about sneaky notes (prompt safety) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Treat hidden words as just words, not orders.",
+              "correct": true
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "If a page tells the helper to do something weird, stop.",
+              "correct": true
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Tell a grown-up if a helper acts strange.",
+              "correct": true
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Real instructions come from you, not the page.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Treat hidden words as just words, not orders.",
+              "correct": true
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": true
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about sneaky notes (prompt safety).",
+          "options": [
+            {
+              "text": "Never tell a grown-up.",
+              "correct": true
+            },
+            {
+              "text": "Real instructions come from you, not the page.",
+              "correct": false
+            },
+            {
+              "text": "If a page tells the helper to do something weird, stop.",
+              "correct": false
+            },
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about sneaky notes (prompt safety).",
+          "options": [
+            {
+              "text": "If a page tells the helper to do something weird, stop.",
+              "correct": false
+            },
+            {
+              "text": "Tell a grown-up if a helper acts strange.",
+              "correct": false
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": true
+            },
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about sneaky notes (prompt safety).",
+          "options": [
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": false
+            },
+            {
+              "text": "If a page tells the helper to do something weird, stop.",
+              "correct": false
+            },
+            {
+              "text": "Tell a grown-up if a helper acts strange.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about sneaky notes (prompt safety).",
+          "options": [
+            {
+              "text": "Treat hidden words as just words, not orders.",
+              "correct": false
+            },
+            {
+              "text": "Real instructions come from you, not the page.",
+              "correct": false
+            },
+            {
+              "text": "Tell a grown-up if a helper acts strange.",
+              "correct": false
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about sneaky notes (prompt safety).",
+          "options": [
+            {
+              "text": "Real instructions come from you, not the page.",
+              "correct": false
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": true
+            },
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": false
+            },
+            {
+              "text": "Tell a grown-up if a helper acts strange.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about sneaky notes (prompt safety). What should he say?",
+          "options": [
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Real instructions come from you, not the page.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about sneaky notes (prompt safety). What should he say?",
+          "options": [
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Treat hidden words as just words, not orders.",
+              "correct": true
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about sneaky notes (prompt safety). What should he say?",
+          "options": [
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": true
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about sneaky notes (prompt safety). What should he say?",
+          "options": [
+            {
+              "text": "If a page tells the helper to do something weird, stop.",
+              "correct": true
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about sneaky notes (prompt safety). What should he say?",
+          "options": [
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Tell a grown-up if a helper acts strange.",
+              "correct": true
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about sneaky notes (prompt safety) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Treat hidden words as just words, not orders.",
+              "correct": true
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about sneaky notes (prompt safety) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": true
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about sneaky notes (prompt safety) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "If a page tells the helper to do something weird, stop.",
+              "correct": true
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about sneaky notes (prompt safety) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Tell a grown-up if a helper acts strange.",
+              "correct": true
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about sneaky notes (prompt safety) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Real instructions come from you, not the page.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "If a page tells the helper to do something weird, stop.",
+              "correct": true
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Tell a grown-up if a helper acts strange.",
+              "correct": true
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Real instructions come from you, not the page.",
+              "correct": true
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Treat hidden words as just words, not orders.",
+              "correct": true
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "If a page tells the helper to do something weird, stop.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Tell a grown-up if a helper acts strange.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Never tell a grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            },
+            {
+              "text": "Real instructions come from you, not the page.",
+              "correct": true
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Treat hidden words as just words, not orders.",
+              "correct": true
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Strange behavior means it is working great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about sneaky notes (prompt safety)?",
+          "options": [
+            {
+              "text": "Bad people can hide tricky words in pages.",
+              "correct": true
+            },
+            {
+              "text": "Hidden words are always safe.",
+              "correct": false
+            },
+            {
+              "text": "Always do what a webpage says.",
+              "correct": false
+            },
+            {
+              "text": "Pages can give the helper real orders.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

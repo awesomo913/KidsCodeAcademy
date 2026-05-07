@@ -40,5 +40,900 @@
         "passingStars": 4
       }
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "prompt-grader",
+        "payload": {
+          "prompt": "Type a clear, specific prompt for a robot:",
+          "goal": "Use details like size, color, and special parts.",
+          "rubric": {
+            "minWords": 6,
+            "mustInclude": [
+              "small",
+              "red"
+            ],
+            "mustHaveExample": false,
+            "idealLength": [
+              6,
+              30
+            ],
+            "passingStars": 4
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is being specific?",
+          "options": [
+            {
+              "text": "Specific words give specific answers.",
+              "correct": true
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": true
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "Specific words give specific answers.",
+              "correct": false
+            },
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": true
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about being specific. What should he say?",
+          "options": [
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": true
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": true
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": true
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": true
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": true
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Specific words give specific answers.",
+              "correct": true
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": true
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": false
+            },
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": false
+            },
+            {
+              "text": "Specific words give specific answers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": false
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": true
+            },
+            {
+              "text": "Specific words give specific answers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "Specific words give specific answers.",
+              "correct": false
+            },
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "Show the shape of what you want.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": true
+            },
+            {
+              "text": "Specific words give specific answers.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about being specific. What should he say?",
+          "options": [
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about being specific. What should he say?",
+          "options": [
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": true
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about being specific. What should he say?",
+          "options": [
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Specific words give specific answers.",
+              "correct": true
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about being specific. What should he say?",
+          "options": [
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": true
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about being specific. What should he say?",
+          "options": [
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": true
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": true
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Specific words give specific answers.",
+              "correct": true
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": true
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": true
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is being specific?",
+          "options": [
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Specific words give specific answers.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is being specific?",
+          "options": [
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": true
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is being specific?",
+          "options": [
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": true
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is being specific?",
+          "options": [
+            {
+              "text": "Show the shape of what you want.",
+              "correct": true
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is being specific?",
+          "options": [
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": true
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Numbers and names hurt the helper.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": true
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": true
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Specific words give specific answers.",
+              "correct": true
+            },
+            {
+              "text": "Helpers love being confused.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great.",
+              "correct": false
+            },
+            {
+              "text": "Always lie about what you know.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

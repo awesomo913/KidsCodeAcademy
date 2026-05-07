@@ -33,5 +33,641 @@
         "Score goes up!"
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "sequence-the-steps",
+        "payload": {
+          "prompt": "Order: press, move, happen.",
+          "steps": [
+            "Press the right arrow",
+            "Hero moves right",
+            "Hero touches a coin",
+            "Score goes up!"
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is input, action, result?",
+          "options": [
+            {
+              "text": "Input is what the player does.",
+              "correct": true
+            },
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            },
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            },
+            {
+              "text": "Action is what the game does next.",
+              "correct": true
+            },
+            {
+              "text": "Players never see the result.",
+              "correct": false
+            },
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "Input is what the player does.",
+              "correct": false
+            },
+            {
+              "text": "A clear loop makes a clear game.",
+              "correct": false
+            },
+            {
+              "text": "Loops are bad in games.",
+              "correct": true
+            },
+            {
+              "text": "Every move follows this loop.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about input, action, result. What should he say?",
+          "options": [
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Every move follows this loop.",
+              "correct": true
+            },
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            },
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about input, action, result is a GOOD rule?",
+          "options": [
+            {
+              "text": "A clear loop makes a clear game.",
+              "correct": true
+            },
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            },
+            {
+              "text": "Players never see the result.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            },
+            {
+              "text": "Action is what the game does next.",
+              "correct": true
+            },
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Players never see the result.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "Players never see the result.",
+              "correct": false
+            },
+            {
+              "text": "Result is what the player sees.",
+              "correct": true
+            },
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            },
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            },
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            },
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            },
+            {
+              "text": "Every move follows this loop.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "Players never see the result.",
+              "correct": false
+            },
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            },
+            {
+              "text": "A clear loop makes a clear game.",
+              "correct": true
+            },
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            },
+            {
+              "text": "Input is what the player does.",
+              "correct": true
+            },
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            },
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "Loops are bad in games.",
+              "correct": true
+            },
+            {
+              "text": "Every move follows this loop.",
+              "correct": false
+            },
+            {
+              "text": "Action is what the game does next.",
+              "correct": false
+            },
+            {
+              "text": "Input is what the player does.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "Action is what the game does next.",
+              "correct": false
+            },
+            {
+              "text": "Result is what the player sees.",
+              "correct": false
+            },
+            {
+              "text": "Players never see the result.",
+              "correct": true
+            },
+            {
+              "text": "Input is what the player does.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "Input is what the player does.",
+              "correct": false
+            },
+            {
+              "text": "Action is what the game does next.",
+              "correct": false
+            },
+            {
+              "text": "Result is what the player sees.",
+              "correct": false
+            },
+            {
+              "text": "Action does nothing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "A clear loop makes a clear game.",
+              "correct": false
+            },
+            {
+              "text": "Every move follows this loop.",
+              "correct": false
+            },
+            {
+              "text": "Result is what the player sees.",
+              "correct": false
+            },
+            {
+              "text": "Input and result are the same.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "Every move follows this loop.",
+              "correct": false
+            },
+            {
+              "text": "Games skip the action step.",
+              "correct": true
+            },
+            {
+              "text": "Input is what the player does.",
+              "correct": false
+            },
+            {
+              "text": "Result is what the player sees.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about input, action, result. What should he say?",
+          "options": [
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            },
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            },
+            {
+              "text": "Players never see the result.",
+              "correct": false
+            },
+            {
+              "text": "Every move follows this loop.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about input, action, result. What should he say?",
+          "options": [
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            },
+            {
+              "text": "A clear loop makes a clear game.",
+              "correct": true
+            },
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about input, action, result. What should he say?",
+          "options": [
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            },
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Input is what the player does.",
+              "correct": true
+            },
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about input, action, result. What should he say?",
+          "options": [
+            {
+              "text": "Action is what the game does next.",
+              "correct": true
+            },
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            },
+            {
+              "text": "Players never see the result.",
+              "correct": false
+            },
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about input, action, result. What should he say?",
+          "options": [
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            },
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Result is what the player sees.",
+              "correct": true
+            },
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about input, action, result is a GOOD rule?",
+          "options": [
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            },
+            {
+              "text": "A clear loop makes a clear game.",
+              "correct": true
+            },
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            },
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about input, action, result is a GOOD rule?",
+          "options": [
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            },
+            {
+              "text": "Input is what the player does.",
+              "correct": true
+            },
+            {
+              "text": "Players never see the result.",
+              "correct": false
+            },
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about input, action, result is a GOOD rule?",
+          "options": [
+            {
+              "text": "Players never see the result.",
+              "correct": false
+            },
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            },
+            {
+              "text": "Action is what the game does next.",
+              "correct": true
+            },
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about input, action, result is a GOOD rule?",
+          "options": [
+            {
+              "text": "Result is what the player sees.",
+              "correct": true
+            },
+            {
+              "text": "Players never see the result.",
+              "correct": false
+            },
+            {
+              "text": "Loops are bad in games.",
+              "correct": false
+            },
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about input, action, result is a GOOD rule?",
+          "options": [
+            {
+              "text": "Action does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Input and result are the same.",
+              "correct": false
+            },
+            {
+              "text": "Games skip the action step.",
+              "correct": false
+            },
+            {
+              "text": "Every move follows this loop.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

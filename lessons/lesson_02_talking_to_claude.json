@@ -37,5 +37,761 @@
     "tier3": {
       "nudge": "Type the small words from the box, exactly like you see them."
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Now you try! Type the magic words below.",
+          "target_display": "make me a star",
+          "targets": [
+            "star"
+          ],
+          "hint_wrong": "Try typing the word star."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is talking to Claude?",
+          "options": [
+            {
+              "text": "Claude is a helper made of words.",
+              "correct": true
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about talking to Claude?",
+          "options": [
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            },
+            {
+              "text": "We type words to ask Claude for help.",
+              "correct": true
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about talking to Claude.",
+          "options": [
+            {
+              "text": "Claude is a helper made of words.",
+              "correct": false
+            },
+            {
+              "text": "Claude can help you make and learn things.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": true
+            },
+            {
+              "text": "Claude works best when you say what you want.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about talking to Claude. What should he say?",
+          "options": [
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude works best when you say what you want.",
+              "correct": true
+            },
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about talking to Claude is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude can help you make and learn things.",
+              "correct": true
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about talking to Claude?",
+          "options": [
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            },
+            {
+              "text": "We type words to ask Claude for help.",
+              "correct": true
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about talking to Claude?",
+          "options": [
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude waits for you to finish typing.",
+              "correct": true
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about talking to Claude?",
+          "options": [
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            },
+            {
+              "text": "Claude works best when you say what you want.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about talking to Claude?",
+          "options": [
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            },
+            {
+              "text": "Claude can help you make and learn things.",
+              "correct": true
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about talking to Claude?",
+          "options": [
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a helper made of words.",
+              "correct": true
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about talking to Claude.",
+          "options": [
+            {
+              "text": "Claude is a real puppy.",
+              "correct": true
+            },
+            {
+              "text": "Claude works best when you say what you want.",
+              "correct": false
+            },
+            {
+              "text": "We type words to ask Claude for help.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a helper made of words.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about talking to Claude.",
+          "options": [
+            {
+              "text": "We type words to ask Claude for help.",
+              "correct": false
+            },
+            {
+              "text": "Claude waits for you to finish typing.",
+              "correct": false
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": true
+            },
+            {
+              "text": "Claude is a helper made of words.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about talking to Claude.",
+          "options": [
+            {
+              "text": "Claude is a helper made of words.",
+              "correct": false
+            },
+            {
+              "text": "We type words to ask Claude for help.",
+              "correct": false
+            },
+            {
+              "text": "Claude waits for you to finish typing.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about talking to Claude.",
+          "options": [
+            {
+              "text": "Claude can help you make and learn things.",
+              "correct": false
+            },
+            {
+              "text": "Claude works best when you say what you want.",
+              "correct": false
+            },
+            {
+              "text": "Claude waits for you to finish typing.",
+              "correct": false
+            },
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about talking to Claude.",
+          "options": [
+            {
+              "text": "Claude works best when you say what you want.",
+              "correct": false
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": true
+            },
+            {
+              "text": "Claude is a helper made of words.",
+              "correct": false
+            },
+            {
+              "text": "Claude waits for you to finish typing.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about talking to Claude. What should he say?",
+          "options": [
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude works best when you say what you want.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about talking to Claude. What should he say?",
+          "options": [
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            },
+            {
+              "text": "Claude can help you make and learn things.",
+              "correct": true
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about talking to Claude. What should he say?",
+          "options": [
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a helper made of words.",
+              "correct": true
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about talking to Claude. What should he say?",
+          "options": [
+            {
+              "text": "We type words to ask Claude for help.",
+              "correct": true
+            },
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about talking to Claude. What should he say?",
+          "options": [
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude waits for you to finish typing.",
+              "correct": true
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about talking to Claude is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            },
+            {
+              "text": "Claude can help you make and learn things.",
+              "correct": true
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about talking to Claude is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a helper made of words.",
+              "correct": true
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about talking to Claude is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            },
+            {
+              "text": "We type words to ask Claude for help.",
+              "correct": true
+            },
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about talking to Claude is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude waits for you to finish typing.",
+              "correct": true
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            },
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about talking to Claude is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            },
+            {
+              "text": "Claude works best when you say what you want.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is talking to Claude?",
+          "options": [
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            },
+            {
+              "text": "Claude can hear you yelling at it.",
+              "correct": false
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a helper made of words.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is talking to Claude?",
+          "options": [
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "We type words to ask Claude for help.",
+              "correct": true
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is talking to Claude?",
+          "options": [
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude waits for you to finish typing.",
+              "correct": true
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is talking to Claude?",
+          "options": [
+            {
+              "text": "Claude works best when you say what you want.",
+              "correct": true
+            },
+            {
+              "text": "Claude lives in your fridge.",
+              "correct": false
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is talking to Claude?",
+          "options": [
+            {
+              "text": "Claude reads your dreams.",
+              "correct": false
+            },
+            {
+              "text": "Claude can help you make and learn things.",
+              "correct": true
+            },
+            {
+              "text": "Claude only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Claude is a real puppy.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

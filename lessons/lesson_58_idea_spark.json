@@ -11,9 +11,15 @@
     "When you are ready, click Save my idea!"
   ],
   "hints": {
-    "tier1": {"highlight": "idea"},
-    "tier2": {"rephrase": "Just type any idea. Big or small! Bytey will help you think it through."},
-    "tier3": {"nudge": "Stuck? Try: 'I want to make a game where ___'."}
+    "tier1": {
+      "highlight": "idea"
+    },
+    "tier2": {
+      "rephrase": "Just type any idea. Big or small! Bytey will help you think it through."
+    },
+    "tier3": {
+      "nudge": "Stuck? Try: 'I want to make a game where ___'."
+    }
   },
   "game": {
     "type": "idea-spark",
@@ -28,5 +34,764 @@
       "minTurns": 4,
       "saveAs": "my_idea_{timestamp}.txt"
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "idea-spark",
+        "payload": {
+          "prompt": "Tell Bytey your idea!",
+          "hook": "I want to make a...",
+          "questions": [
+            "Cool! Who would use this?",
+            "What is the special part — what makes yours different?",
+            "What would you call it?"
+          ],
+          "minTurns": 4,
+          "saveAs": "my_idea_{timestamp}.txt"
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is idea spark?",
+          "options": [
+            {
+              "text": "A spark is one tiny idea worth chasing.",
+              "correct": true
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about idea spark?",
+          "options": [
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from mixing two old things.",
+              "correct": true
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about idea spark.",
+          "options": [
+            {
+              "text": "A spark is one tiny idea worth chasing.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the start, not the end.",
+              "correct": false
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": true
+            },
+            {
+              "text": "A spark plus a problem can be a project.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about idea spark. What should he say?",
+          "options": [
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "A spark plus a problem can be a project.",
+              "correct": true
+            },
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about idea spark is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sparks are the start, not the end.",
+              "correct": true
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about idea spark?",
+          "options": [
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from mixing two old things.",
+              "correct": true
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about idea spark?",
+          "options": [
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "Capture sparks fast — they fade.",
+              "correct": true
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about idea spark?",
+          "options": [
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            },
+            {
+              "text": "A spark plus a problem can be a project.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about idea spark?",
+          "options": [
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the start, not the end.",
+              "correct": true
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about idea spark?",
+          "options": [
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            },
+            {
+              "text": "A spark is one tiny idea worth chasing.",
+              "correct": true
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about idea spark.",
+          "options": [
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": true
+            },
+            {
+              "text": "A spark plus a problem can be a project.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from mixing two old things.",
+              "correct": false
+            },
+            {
+              "text": "A spark is one tiny idea worth chasing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about idea spark.",
+          "options": [
+            {
+              "text": "Sparks come from mixing two old things.",
+              "correct": false
+            },
+            {
+              "text": "Capture sparks fast — they fade.",
+              "correct": false
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": true
+            },
+            {
+              "text": "A spark is one tiny idea worth chasing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about idea spark.",
+          "options": [
+            {
+              "text": "A spark is one tiny idea worth chasing.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from mixing two old things.",
+              "correct": false
+            },
+            {
+              "text": "Capture sparks fast — they fade.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about idea spark.",
+          "options": [
+            {
+              "text": "Sparks are the start, not the end.",
+              "correct": false
+            },
+            {
+              "text": "A spark plus a problem can be a project.",
+              "correct": false
+            },
+            {
+              "text": "Capture sparks fast — they fade.",
+              "correct": false
+            },
+            {
+              "text": "A spark is the final answer.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about idea spark.",
+          "options": [
+            {
+              "text": "A spark plus a problem can be a project.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": true
+            },
+            {
+              "text": "A spark is one tiny idea worth chasing.",
+              "correct": false
+            },
+            {
+              "text": "Capture sparks fast — they fade.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about idea spark. What should he say?",
+          "options": [
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "A spark plus a problem can be a project.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about idea spark. What should he say?",
+          "options": [
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the start, not the end.",
+              "correct": true
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about idea spark. What should he say?",
+          "options": [
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "A spark is one tiny idea worth chasing.",
+              "correct": true
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about idea spark. What should he say?",
+          "options": [
+            {
+              "text": "Sparks come from mixing two old things.",
+              "correct": true
+            },
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about idea spark. What should he say?",
+          "options": [
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "Capture sparks fast — they fade.",
+              "correct": true
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about idea spark is a GOOD rule?",
+          "options": [
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the start, not the end.",
+              "correct": true
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about idea spark is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            },
+            {
+              "text": "A spark is one tiny idea worth chasing.",
+              "correct": true
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about idea spark is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from mixing two old things.",
+              "correct": true
+            },
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about idea spark is a GOOD rule?",
+          "options": [
+            {
+              "text": "Capture sparks fast — they fade.",
+              "correct": true
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            },
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about idea spark is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            },
+            {
+              "text": "A spark plus a problem can be a project.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is idea spark?",
+          "options": [
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from one big copy.",
+              "correct": false
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "A spark is one tiny idea worth chasing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is idea spark?",
+          "options": [
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "Sparks come from mixing two old things.",
+              "correct": true
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is idea spark?",
+          "options": [
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "Capture sparks fast — they fade.",
+              "correct": true
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is idea spark?",
+          "options": [
+            {
+              "text": "A spark plus a problem can be a project.",
+              "correct": true
+            },
+            {
+              "text": "A spark is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is idea spark?",
+          "options": [
+            {
+              "text": "Sparks are the end, not the start.",
+              "correct": false
+            },
+            {
+              "text": "Sparks are the start, not the end.",
+              "correct": true
+            },
+            {
+              "text": "Sparks can't help projects.",
+              "correct": false
+            },
+            {
+              "text": "Sparks last forever in your head.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

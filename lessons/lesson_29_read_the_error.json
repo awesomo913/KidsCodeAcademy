@@ -44,5 +44,653 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Which part of this error names the problem?\n\"NameError: 'kitten' is not defined on line 3\"",
+          "choices": [
+            {
+              "label": "line 3",
+              "right": false
+            },
+            {
+              "label": "NameError",
+              "right": true
+            },
+            {
+              "label": "kitten",
+              "right": false
+            },
+            {
+              "label": "is not defined",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is reading the error?",
+          "options": [
+            {
+              "text": "Errors tell you where to look.",
+              "correct": true
+            },
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            },
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            },
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about reading the error?",
+          "options": [
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            },
+            {
+              "text": "Read the last line of an error first.",
+              "correct": true
+            },
+            {
+              "text": "Errors come from ghosts.",
+              "correct": false
+            },
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about reading the error.",
+          "options": [
+            {
+              "text": "Errors tell you where to look.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the error helps the helper help you.",
+              "correct": false
+            },
+            {
+              "text": "Errors are always huge problems.",
+              "correct": true
+            },
+            {
+              "text": "Errors are not scary, they are clues.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about reading the error. What should he say?",
+          "options": [
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            },
+            {
+              "text": "Errors are not scary, they are clues.",
+              "correct": true
+            },
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            },
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about reading the error is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sharing the error helps the helper help you.",
+              "correct": true
+            },
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            },
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            },
+            {
+              "text": "Errors come from ghosts.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about reading the error?",
+          "options": [
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            },
+            {
+              "text": "Read the last line of an error first.",
+              "correct": true
+            },
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            },
+            {
+              "text": "Errors come from ghosts.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about reading the error?",
+          "options": [
+            {
+              "text": "Errors come from ghosts.",
+              "correct": false
+            },
+            {
+              "text": "Many errors are small typos.",
+              "correct": true
+            },
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            },
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about reading the error?",
+          "options": [
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            },
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            },
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            },
+            {
+              "text": "Errors are not scary, they are clues.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about reading the error?",
+          "options": [
+            {
+              "text": "Errors come from ghosts.",
+              "correct": false
+            },
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the error helps the helper help you.",
+              "correct": true
+            },
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about reading the error?",
+          "options": [
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            },
+            {
+              "text": "Errors tell you where to look.",
+              "correct": true
+            },
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            },
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about reading the error.",
+          "options": [
+            {
+              "text": "Errors are always huge problems.",
+              "correct": true
+            },
+            {
+              "text": "Errors are not scary, they are clues.",
+              "correct": false
+            },
+            {
+              "text": "Read the last line of an error first.",
+              "correct": false
+            },
+            {
+              "text": "Errors tell you where to look.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about reading the error.",
+          "options": [
+            {
+              "text": "Read the last line of an error first.",
+              "correct": false
+            },
+            {
+              "text": "Many errors are small typos.",
+              "correct": false
+            },
+            {
+              "text": "Errors come from ghosts.",
+              "correct": true
+            },
+            {
+              "text": "Errors tell you where to look.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about reading the error.",
+          "options": [
+            {
+              "text": "Errors tell you where to look.",
+              "correct": false
+            },
+            {
+              "text": "Read the last line of an error first.",
+              "correct": false
+            },
+            {
+              "text": "Many errors are small typos.",
+              "correct": false
+            },
+            {
+              "text": "Hide errors from the helper.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about reading the error.",
+          "options": [
+            {
+              "text": "Sharing the error helps the helper help you.",
+              "correct": false
+            },
+            {
+              "text": "Errors are not scary, they are clues.",
+              "correct": false
+            },
+            {
+              "text": "Many errors are small typos.",
+              "correct": false
+            },
+            {
+              "text": "Errors are mean and useless.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about reading the error.",
+          "options": [
+            {
+              "text": "Errors are not scary, they are clues.",
+              "correct": false
+            },
+            {
+              "text": "Skip the last line.",
+              "correct": true
+            },
+            {
+              "text": "Errors tell you where to look.",
+              "correct": false
+            },
+            {
+              "text": "Many errors are small typos.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about reading the error. What should he say?",
+          "options": [
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            },
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            },
+            {
+              "text": "Errors come from ghosts.",
+              "correct": false
+            },
+            {
+              "text": "Errors are not scary, they are clues.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about reading the error. What should he say?",
+          "options": [
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the error helps the helper help you.",
+              "correct": true
+            },
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            },
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about reading the error. What should he say?",
+          "options": [
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            },
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            },
+            {
+              "text": "Errors tell you where to look.",
+              "correct": true
+            },
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about reading the error. What should he say?",
+          "options": [
+            {
+              "text": "Read the last line of an error first.",
+              "correct": true
+            },
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            },
+            {
+              "text": "Errors come from ghosts.",
+              "correct": false
+            },
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about reading the error. What should he say?",
+          "options": [
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            },
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            },
+            {
+              "text": "Many errors are small typos.",
+              "correct": true
+            },
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about reading the error is a GOOD rule?",
+          "options": [
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the error helps the helper help you.",
+              "correct": true
+            },
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            },
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about reading the error is a GOOD rule?",
+          "options": [
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            },
+            {
+              "text": "Errors tell you where to look.",
+              "correct": true
+            },
+            {
+              "text": "Errors come from ghosts.",
+              "correct": false
+            },
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about reading the error is a GOOD rule?",
+          "options": [
+            {
+              "text": "Errors come from ghosts.",
+              "correct": false
+            },
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            },
+            {
+              "text": "Read the last line of an error first.",
+              "correct": true
+            },
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about reading the error is a GOOD rule?",
+          "options": [
+            {
+              "text": "Many errors are small typos.",
+              "correct": true
+            },
+            {
+              "text": "Errors come from ghosts.",
+              "correct": false
+            },
+            {
+              "text": "Errors are always huge problems.",
+              "correct": false
+            },
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about reading the error is a GOOD rule?",
+          "options": [
+            {
+              "text": "Hide errors from the helper.",
+              "correct": false
+            },
+            {
+              "text": "Errors are mean and useless.",
+              "correct": false
+            },
+            {
+              "text": "Skip the last line.",
+              "correct": false
+            },
+            {
+              "text": "Errors are not scary, they are clues.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

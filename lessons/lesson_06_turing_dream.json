@@ -51,5 +51,780 @@
         }
       }
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "history-scene",
+        "payload": {
+          "prompt": "Watch the scene, then answer the question!",
+          "scene": {
+            "id": "turing",
+            "check": {
+              "prompt": "What did the head do across the tape?",
+              "choices": [
+                {
+                  "label": "Read each square one at a time",
+                  "right": true
+                },
+                {
+                  "label": "Threw the tape away",
+                  "right": false
+                },
+                {
+                  "label": "Sang a song",
+                  "right": false
+                },
+                {
+                  "label": "Erased everything",
+                  "right": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is the Turing dream?",
+          "options": [
+            {
+              "text": "Alan Turing dreamed of a thinking machine.",
+              "correct": true
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the Turing dream?",
+          "options": [
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            },
+            {
+              "text": "He wrote rules so a machine could solve puzzles.",
+              "correct": true
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the Turing dream.",
+          "options": [
+            {
+              "text": "Alan Turing dreamed of a thinking machine.",
+              "correct": false
+            },
+            {
+              "text": "Turing imagined machines that could learn.",
+              "correct": false
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": true
+            },
+            {
+              "text": "His ideas led to today's computers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the Turing dream. What should he say?",
+          "options": [
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "His ideas led to today's computers.",
+              "correct": true
+            },
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the Turing dream is a GOOD rule?",
+          "options": [
+            {
+              "text": "Turing imagined machines that could learn.",
+              "correct": true
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about the Turing dream?",
+          "options": [
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            },
+            {
+              "text": "He wrote rules so a machine could solve puzzles.",
+              "correct": true
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the Turing dream?",
+          "options": [
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "Turing helped end a big war with code.",
+              "correct": true
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the Turing dream?",
+          "options": [
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            },
+            {
+              "text": "His ideas led to today's computers.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about the Turing dream?",
+          "options": [
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            },
+            {
+              "text": "Turing imagined machines that could learn.",
+              "correct": true
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about the Turing dream?",
+          "options": [
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            },
+            {
+              "text": "Alan Turing dreamed of a thinking machine.",
+              "correct": true
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about the Turing dream.",
+          "options": [
+            {
+              "text": "He invented bubble gum.",
+              "correct": true
+            },
+            {
+              "text": "His ideas led to today's computers.",
+              "correct": false
+            },
+            {
+              "text": "He wrote rules so a machine could solve puzzles.",
+              "correct": false
+            },
+            {
+              "text": "Alan Turing dreamed of a thinking machine.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about the Turing dream.",
+          "options": [
+            {
+              "text": "He wrote rules so a machine could solve puzzles.",
+              "correct": false
+            },
+            {
+              "text": "Turing helped end a big war with code.",
+              "correct": false
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": true
+            },
+            {
+              "text": "Alan Turing dreamed of a thinking machine.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the Turing dream.",
+          "options": [
+            {
+              "text": "Alan Turing dreamed of a thinking machine.",
+              "correct": false
+            },
+            {
+              "text": "He wrote rules so a machine could solve puzzles.",
+              "correct": false
+            },
+            {
+              "text": "Turing helped end a big war with code.",
+              "correct": false
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about the Turing dream.",
+          "options": [
+            {
+              "text": "Turing imagined machines that could learn.",
+              "correct": false
+            },
+            {
+              "text": "His ideas led to today's computers.",
+              "correct": false
+            },
+            {
+              "text": "Turing helped end a big war with code.",
+              "correct": false
+            },
+            {
+              "text": "Turing was a singing chef.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about the Turing dream.",
+          "options": [
+            {
+              "text": "His ideas led to today's computers.",
+              "correct": false
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": true
+            },
+            {
+              "text": "Alan Turing dreamed of a thinking machine.",
+              "correct": false
+            },
+            {
+              "text": "Turing helped end a big war with code.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about the Turing dream. What should he say?",
+          "options": [
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "His ideas led to today's computers.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about the Turing dream. What should he say?",
+          "options": [
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            },
+            {
+              "text": "Turing imagined machines that could learn.",
+              "correct": true
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about the Turing dream. What should he say?",
+          "options": [
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Alan Turing dreamed of a thinking machine.",
+              "correct": true
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the Turing dream. What should he say?",
+          "options": [
+            {
+              "text": "He wrote rules so a machine could solve puzzles.",
+              "correct": true
+            },
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about the Turing dream. What should he say?",
+          "options": [
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Turing helped end a big war with code.",
+              "correct": true
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about the Turing dream is a GOOD rule?",
+          "options": [
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            },
+            {
+              "text": "Turing imagined machines that could learn.",
+              "correct": true
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about the Turing dream is a GOOD rule?",
+          "options": [
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            },
+            {
+              "text": "Alan Turing dreamed of a thinking machine.",
+              "correct": true
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about the Turing dream is a GOOD rule?",
+          "options": [
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            },
+            {
+              "text": "He wrote rules so a machine could solve puzzles.",
+              "correct": true
+            },
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about the Turing dream is a GOOD rule?",
+          "options": [
+            {
+              "text": "Turing helped end a big war with code.",
+              "correct": true
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            },
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the Turing dream is a GOOD rule?",
+          "options": [
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            },
+            {
+              "text": "His ideas led to today's computers.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is the Turing dream?",
+          "options": [
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            },
+            {
+              "text": "Turing built a flying horse.",
+              "correct": false
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "Alan Turing dreamed of a thinking machine.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is the Turing dream?",
+          "options": [
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "He wrote rules so a machine could solve puzzles.",
+              "correct": true
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is the Turing dream?",
+          "options": [
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Turing helped end a big war with code.",
+              "correct": true
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is the Turing dream?",
+          "options": [
+            {
+              "text": "His ideas led to today's computers.",
+              "correct": true
+            },
+            {
+              "text": "Turing was a singing chef.",
+              "correct": false
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is the Turing dream?",
+          "options": [
+            {
+              "text": "He lived on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Turing imagined machines that could learn.",
+              "correct": true
+            },
+            {
+              "text": "He thought computers would never work.",
+              "correct": false
+            },
+            {
+              "text": "He invented bubble gum.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

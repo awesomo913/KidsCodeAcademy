@@ -26,5 +26,505 @@
     "payload": {
       "prompt": "Capstone! Build a real level with 1 hero, coins, a flag — then save it."
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "level-painter",
+        "payload": {
+          "prompt": "Capstone! Build a real level with 1 hero, coins, a flag — then save it."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is the level editor?",
+          "options": [
+            {
+              "text": "A level editor lets us place pieces.",
+              "correct": true
+            },
+            {
+              "text": "Editors make game-making boring.",
+              "correct": false
+            },
+            {
+              "text": "Editors only work for printers.",
+              "correct": false
+            },
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            },
+            {
+              "text": "We can save and reload our level.",
+              "correct": true
+            },
+            {
+              "text": "Editors require giant typing.",
+              "correct": false
+            },
+            {
+              "text": "Editors only work for printers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "A level editor lets us place pieces.",
+              "correct": false
+            },
+            {
+              "text": "A level editor makes games fun to make.",
+              "correct": false
+            },
+            {
+              "text": "Editors slow us way down.",
+              "correct": true
+            },
+            {
+              "text": "Editors save lots of typing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the level editor. What should he say?",
+          "options": [
+            {
+              "text": "Editors make game-making boring.",
+              "correct": false
+            },
+            {
+              "text": "Editors save lots of typing.",
+              "correct": true
+            },
+            {
+              "text": "Editors only work for printers.",
+              "correct": false
+            },
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the level editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "A level editor makes games fun to make.",
+              "correct": true
+            },
+            {
+              "text": "Editors make game-making boring.",
+              "correct": false
+            },
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            },
+            {
+              "text": "Editors require giant typing.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            },
+            {
+              "text": "We can save and reload our level.",
+              "correct": true
+            },
+            {
+              "text": "Editors make game-making boring.",
+              "correct": false
+            },
+            {
+              "text": "Editors require giant typing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "Editors require giant typing.",
+              "correct": false
+            },
+            {
+              "text": "Editors are tools that help us build faster.",
+              "correct": true
+            },
+            {
+              "text": "Levels can never be saved.",
+              "correct": false
+            },
+            {
+              "text": "Editors make game-making boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "Editors only work for printers.",
+              "correct": false
+            },
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            },
+            {
+              "text": "Levels can never be saved.",
+              "correct": false
+            },
+            {
+              "text": "Editors save lots of typing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "Editors require giant typing.",
+              "correct": false
+            },
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            },
+            {
+              "text": "A level editor makes games fun to make.",
+              "correct": true
+            },
+            {
+              "text": "Levels can never be saved.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "Levels can never be saved.",
+              "correct": false
+            },
+            {
+              "text": "A level editor lets us place pieces.",
+              "correct": true
+            },
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            },
+            {
+              "text": "Editors make game-making boring.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "Editors slow us way down.",
+              "correct": true
+            },
+            {
+              "text": "Editors save lots of typing.",
+              "correct": false
+            },
+            {
+              "text": "We can save and reload our level.",
+              "correct": false
+            },
+            {
+              "text": "A level editor lets us place pieces.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "We can save and reload our level.",
+              "correct": false
+            },
+            {
+              "text": "Editors are tools that help us build faster.",
+              "correct": false
+            },
+            {
+              "text": "Editors require giant typing.",
+              "correct": true
+            },
+            {
+              "text": "A level editor lets us place pieces.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "A level editor lets us place pieces.",
+              "correct": false
+            },
+            {
+              "text": "We can save and reload our level.",
+              "correct": false
+            },
+            {
+              "text": "Editors are tools that help us build faster.",
+              "correct": false
+            },
+            {
+              "text": "Editors make game-making boring.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "A level editor makes games fun to make.",
+              "correct": false
+            },
+            {
+              "text": "Editors save lots of typing.",
+              "correct": false
+            },
+            {
+              "text": "Editors are tools that help us build faster.",
+              "correct": false
+            },
+            {
+              "text": "Editors only work for printers.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "Editors save lots of typing.",
+              "correct": false
+            },
+            {
+              "text": "Levels can never be saved.",
+              "correct": true
+            },
+            {
+              "text": "A level editor lets us place pieces.",
+              "correct": false
+            },
+            {
+              "text": "Editors are tools that help us build faster.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about the level editor. What should he say?",
+          "options": [
+            {
+              "text": "Editors only work for printers.",
+              "correct": false
+            },
+            {
+              "text": "Levels can never be saved.",
+              "correct": false
+            },
+            {
+              "text": "Editors require giant typing.",
+              "correct": false
+            },
+            {
+              "text": "Editors save lots of typing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about the level editor. What should he say?",
+          "options": [
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            },
+            {
+              "text": "A level editor makes games fun to make.",
+              "correct": true
+            },
+            {
+              "text": "Editors make game-making boring.",
+              "correct": false
+            },
+            {
+              "text": "Levels can never be saved.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about the level editor. What should he say?",
+          "options": [
+            {
+              "text": "Levels can never be saved.",
+              "correct": false
+            },
+            {
+              "text": "Editors make game-making boring.",
+              "correct": false
+            },
+            {
+              "text": "A level editor lets us place pieces.",
+              "correct": true
+            },
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the level editor. What should he say?",
+          "options": [
+            {
+              "text": "We can save and reload our level.",
+              "correct": true
+            },
+            {
+              "text": "Editors only work for printers.",
+              "correct": false
+            },
+            {
+              "text": "Editors require giant typing.",
+              "correct": false
+            },
+            {
+              "text": "Editors make game-making boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about the level editor. What should he say?",
+          "options": [
+            {
+              "text": "Editors slow us way down.",
+              "correct": false
+            },
+            {
+              "text": "Editors make game-making boring.",
+              "correct": false
+            },
+            {
+              "text": "Editors are tools that help us build faster.",
+              "correct": true
+            },
+            {
+              "text": "Levels can never be saved.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

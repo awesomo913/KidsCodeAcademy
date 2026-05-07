@@ -44,5 +44,774 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "drag-to-match",
+        "payload": {
+          "prompt": "Match the sprite to its job:",
+          "pairs": [
+            {
+              "left": "🦸 Hero",
+              "right": "Walks and jumps"
+            },
+            {
+              "left": "🪙 Coin",
+              "right": "Adds score"
+            },
+            {
+              "left": "👾 Bad guy",
+              "right": "Takes a heart"
+            },
+            {
+              "left": "🟫 Brick",
+              "right": "Holds you up"
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is sprites and costumes?",
+          "options": [
+            {
+              "text": "A sprite is a picture in the game.",
+              "correct": true
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about sprites and costumes?",
+          "options": [
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            },
+            {
+              "text": "Costumes are different looks for one sprite.",
+              "correct": true
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about sprites and costumes.",
+          "options": [
+            {
+              "text": "A sprite is a picture in the game.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have a position on screen.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": true
+            },
+            {
+              "text": "Sprites can be heroes or rocks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about sprites and costumes. What should he say?",
+          "options": [
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can be heroes or rocks.",
+              "correct": true
+            },
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about sprites and costumes is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sprites have a position on screen.",
+              "correct": true
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about sprites and costumes?",
+          "options": [
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            },
+            {
+              "text": "Costumes are different looks for one sprite.",
+              "correct": true
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about sprites and costumes?",
+          "options": [
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "Switching costumes makes movement.",
+              "correct": true
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about sprites and costumes?",
+          "options": [
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can be heroes or rocks.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about sprites and costumes?",
+          "options": [
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have a position on screen.",
+              "correct": true
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about sprites and costumes?",
+          "options": [
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a picture in the game.",
+              "correct": true
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about sprites and costumes.",
+          "options": [
+            {
+              "text": "Sprites can never move.",
+              "correct": true
+            },
+            {
+              "text": "Sprites can be heroes or rocks.",
+              "correct": false
+            },
+            {
+              "text": "Costumes are different looks for one sprite.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a picture in the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about sprites and costumes.",
+          "options": [
+            {
+              "text": "Costumes are different looks for one sprite.",
+              "correct": false
+            },
+            {
+              "text": "Switching costumes makes movement.",
+              "correct": false
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": true
+            },
+            {
+              "text": "A sprite is a picture in the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about sprites and costumes.",
+          "options": [
+            {
+              "text": "A sprite is a picture in the game.",
+              "correct": false
+            },
+            {
+              "text": "Costumes are different looks for one sprite.",
+              "correct": false
+            },
+            {
+              "text": "Switching costumes makes movement.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about sprites and costumes.",
+          "options": [
+            {
+              "text": "Sprites have a position on screen.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can be heroes or rocks.",
+              "correct": false
+            },
+            {
+              "text": "Switching costumes makes movement.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about sprites and costumes.",
+          "options": [
+            {
+              "text": "Sprites can be heroes or rocks.",
+              "correct": false
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": true
+            },
+            {
+              "text": "A sprite is a picture in the game.",
+              "correct": false
+            },
+            {
+              "text": "Switching costumes makes movement.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about sprites and costumes. What should he say?",
+          "options": [
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can be heroes or rocks.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about sprites and costumes. What should he say?",
+          "options": [
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have a position on screen.",
+              "correct": true
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about sprites and costumes. What should he say?",
+          "options": [
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a picture in the game.",
+              "correct": true
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about sprites and costumes. What should he say?",
+          "options": [
+            {
+              "text": "Costumes are different looks for one sprite.",
+              "correct": true
+            },
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about sprites and costumes. What should he say?",
+          "options": [
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "Switching costumes makes movement.",
+              "correct": true
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about sprites and costumes is a GOOD rule?",
+          "options": [
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have a position on screen.",
+              "correct": true
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about sprites and costumes is a GOOD rule?",
+          "options": [
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a picture in the game.",
+              "correct": true
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about sprites and costumes is a GOOD rule?",
+          "options": [
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            },
+            {
+              "text": "Costumes are different looks for one sprite.",
+              "correct": true
+            },
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about sprites and costumes is a GOOD rule?",
+          "options": [
+            {
+              "text": "Switching costumes makes movement.",
+              "correct": true
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about sprites and costumes is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can be heroes or rocks.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is sprites and costumes?",
+          "options": [
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            },
+            {
+              "text": "Costumes never change.",
+              "correct": false
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "A sprite is a picture in the game.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is sprites and costumes?",
+          "options": [
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "Costumes are different looks for one sprite.",
+              "correct": true
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is sprites and costumes?",
+          "options": [
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "Switching costumes makes movement.",
+              "correct": true
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is sprites and costumes?",
+          "options": [
+            {
+              "text": "Sprites can be heroes or rocks.",
+              "correct": true
+            },
+            {
+              "text": "A sprite is a real ghost.",
+              "correct": false
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is sprites and costumes?",
+          "options": [
+            {
+              "text": "Sprites have no position.",
+              "correct": false
+            },
+            {
+              "text": "Sprites have a position on screen.",
+              "correct": true
+            },
+            {
+              "text": "Only heroes are sprites.",
+              "correct": false
+            },
+            {
+              "text": "Sprites can never move.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

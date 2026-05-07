@@ -32,5 +32,641 @@
       ],
       "hint_wrong": "Use the word 'color' in your sentence."
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type a rule about your favorite color:",
+          "target_display": "My favorite color is _____",
+          "targets": [
+            "color is",
+            "color"
+          ],
+          "hint_wrong": "Use the word 'color' in your sentence."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is my memory rules?",
+          "options": [
+            {
+              "text": "Pick rules that fit YOUR work.",
+              "correct": true
+            },
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            },
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            },
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            },
+            {
+              "text": "Update rules when you learn new tricks.",
+              "correct": true
+            },
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": false
+            },
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "Pick rules that fit YOUR work.",
+              "correct": false
+            },
+            {
+              "text": "Rules teach the helper your style.",
+              "correct": false
+            },
+            {
+              "text": "More rules are always better.",
+              "correct": true
+            },
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about my memory rules. What should he say?",
+          "options": [
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            },
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": true
+            },
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            },
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about my memory rules is a GOOD rule?",
+          "options": [
+            {
+              "text": "Rules teach the helper your style.",
+              "correct": true
+            },
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            },
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            },
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            },
+            {
+              "text": "Update rules when you learn new tricks.",
+              "correct": true
+            },
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            },
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": false
+            },
+            {
+              "text": "Throw out rules you don't need.",
+              "correct": true
+            },
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            },
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            },
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            },
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            },
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": false
+            },
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            },
+            {
+              "text": "Rules teach the helper your style.",
+              "correct": true
+            },
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            },
+            {
+              "text": "Pick rules that fit YOUR work.",
+              "correct": true
+            },
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            },
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "More rules are always better.",
+              "correct": true
+            },
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": false
+            },
+            {
+              "text": "Update rules when you learn new tricks.",
+              "correct": false
+            },
+            {
+              "text": "Pick rules that fit YOUR work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "Update rules when you learn new tricks.",
+              "correct": false
+            },
+            {
+              "text": "Throw out rules you don't need.",
+              "correct": false
+            },
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": true
+            },
+            {
+              "text": "Pick rules that fit YOUR work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "Pick rules that fit YOUR work.",
+              "correct": false
+            },
+            {
+              "text": "Update rules when you learn new tricks.",
+              "correct": false
+            },
+            {
+              "text": "Throw out rules you don't need.",
+              "correct": false
+            },
+            {
+              "text": "Rules don't help the helper.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "Rules teach the helper your style.",
+              "correct": false
+            },
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": false
+            },
+            {
+              "text": "Throw out rules you don't need.",
+              "correct": false
+            },
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": false
+            },
+            {
+              "text": "Never update rules, ever.",
+              "correct": true
+            },
+            {
+              "text": "Pick rules that fit YOUR work.",
+              "correct": false
+            },
+            {
+              "text": "Throw out rules you don't need.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about my memory rules. What should he say?",
+          "options": [
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            },
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            },
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": false
+            },
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about my memory rules. What should he say?",
+          "options": [
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            },
+            {
+              "text": "Rules teach the helper your style.",
+              "correct": true
+            },
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            },
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about my memory rules. What should he say?",
+          "options": [
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            },
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            },
+            {
+              "text": "Pick rules that fit YOUR work.",
+              "correct": true
+            },
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about my memory rules. What should he say?",
+          "options": [
+            {
+              "text": "Update rules when you learn new tricks.",
+              "correct": true
+            },
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            },
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": false
+            },
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about my memory rules. What should he say?",
+          "options": [
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            },
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            },
+            {
+              "text": "Throw out rules you don't need.",
+              "correct": true
+            },
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about my memory rules is a GOOD rule?",
+          "options": [
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            },
+            {
+              "text": "Rules teach the helper your style.",
+              "correct": true
+            },
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            },
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about my memory rules is a GOOD rule?",
+          "options": [
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            },
+            {
+              "text": "Pick rules that fit YOUR work.",
+              "correct": true
+            },
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": false
+            },
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about my memory rules is a GOOD rule?",
+          "options": [
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": false
+            },
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            },
+            {
+              "text": "Update rules when you learn new tricks.",
+              "correct": true
+            },
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about my memory rules is a GOOD rule?",
+          "options": [
+            {
+              "text": "Throw out rules you don't need.",
+              "correct": true
+            },
+            {
+              "text": "One huge rule fits everyone.",
+              "correct": false
+            },
+            {
+              "text": "More rules are always better.",
+              "correct": false
+            },
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about my memory rules is a GOOD rule?",
+          "options": [
+            {
+              "text": "Rules don't help the helper.",
+              "correct": false
+            },
+            {
+              "text": "Use somebody else's rules forever.",
+              "correct": false
+            },
+            {
+              "text": "Never update rules, ever.",
+              "correct": false
+            },
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

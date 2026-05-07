@@ -49,5 +49,774 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Hero stays big after dying. Pick the fix:",
+          "choices": [
+            {
+              "label": "Reset hero to small when they lose a heart",
+              "right": true
+            },
+            {
+              "label": "Make the hero glow",
+              "right": false
+            },
+            {
+              "label": "Remove the power-up forever",
+              "right": false
+            },
+            {
+              "label": "Add more hearts",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": true
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            },
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash shows the power is active.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": true
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 5: power-up. What should he say?",
+          "options": [
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 5: power-up is a GOOD rule?",
+          "options": [
+            {
+              "text": "Visual flash shows the power is active.",
+              "correct": true
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            },
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": true
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": true
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash shows the power is active.",
+              "correct": true
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "Power-ups are boring.",
+              "correct": true
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": false
+            },
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": false
+            },
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "Visual flash shows the power is active.",
+              "correct": false
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about iter 5: power-up. What should he say?",
+          "options": [
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about iter 5: power-up. What should he say?",
+          "options": [
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash shows the power is active.",
+              "correct": true
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about iter 5: power-up. What should he say?",
+          "options": [
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 5: power-up. What should he say?",
+          "options": [
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about iter 5: power-up. What should he say?",
+          "options": [
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": true
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about iter 5: power-up is a GOOD rule?",
+          "options": [
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash shows the power is active.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about iter 5: power-up is a GOOD rule?",
+          "options": [
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about iter 5: power-up is a GOOD rule?",
+          "options": [
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            },
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about iter 5: power-up is a GOOD rule?",
+          "options": [
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 5: power-up is a GOOD rule?",
+          "options": [
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": true
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is iter 5: power-up?",
+          "options": [
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups slow the hero down.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is iter 5: power-up?",
+          "options": [
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash shows the power is active.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups last forever always.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

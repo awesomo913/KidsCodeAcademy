@@ -53,5 +53,653 @@
       "Why that helper for this idea?"
     ],
     "saveAs": "idea_helper_{timestamp}.txt"
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "drag-to-match",
+        "payload": {
+          "prompt": "Match each job to the best helper:",
+          "pairs": [
+            {
+              "left": "Plan a long story",
+              "right": "Claude"
+            },
+            {
+              "left": "Fix one tiny line",
+              "right": "Cursor"
+            },
+            {
+              "left": "Tell me about pandas",
+              "right": "Gemini"
+            },
+            {
+              "left": "Help me without WiFi",
+              "right": "Ollama"
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is picking the helper?",
+          "options": [
+            {
+              "text": "Different helpers are good at different jobs.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            },
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            },
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper that fits the task.",
+              "correct": true
+            },
+            {
+              "text": "The helper picks YOU.",
+              "correct": false
+            },
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Different helpers are good at different jobs.",
+              "correct": false
+            },
+            {
+              "text": "Tell the helper what success looks like.",
+              "correct": false
+            },
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": true
+            },
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about picking the helper. What should he say?",
+          "options": [
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            },
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": true
+            },
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            },
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about picking the helper is a GOOD rule?",
+          "options": [
+            {
+              "text": "Tell the helper what success looks like.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            },
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            },
+            {
+              "text": "The helper picks YOU.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper that fits the task.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            },
+            {
+              "text": "The helper picks YOU.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "The helper picks YOU.",
+              "correct": false
+            },
+            {
+              "text": "If one helper is stuck, ask another.",
+              "correct": true
+            },
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            },
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            },
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "The helper picks YOU.",
+              "correct": false
+            },
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            },
+            {
+              "text": "Tell the helper what success looks like.",
+              "correct": true
+            },
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            },
+            {
+              "text": "Different helpers are good at different jobs.",
+              "correct": true
+            },
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": true
+            },
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper that fits the task.",
+              "correct": false
+            },
+            {
+              "text": "Different helpers are good at different jobs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Pick a helper that fits the task.",
+              "correct": false
+            },
+            {
+              "text": "If one helper is stuck, ask another.",
+              "correct": false
+            },
+            {
+              "text": "The helper picks YOU.",
+              "correct": true
+            },
+            {
+              "text": "Different helpers are good at different jobs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Different helpers are good at different jobs.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper that fits the task.",
+              "correct": false
+            },
+            {
+              "text": "If one helper is stuck, ask another.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Tell the helper what success looks like.",
+              "correct": false
+            },
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": false
+            },
+            {
+              "text": "If one helper is stuck, ask another.",
+              "correct": false
+            },
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper by smell.",
+              "correct": true
+            },
+            {
+              "text": "Different helpers are good at different jobs.",
+              "correct": false
+            },
+            {
+              "text": "If one helper is stuck, ask another.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about picking the helper. What should he say?",
+          "options": [
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            },
+            {
+              "text": "The helper picks YOU.",
+              "correct": false
+            },
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about picking the helper. What should he say?",
+          "options": [
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            },
+            {
+              "text": "Tell the helper what success looks like.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about picking the helper. What should he say?",
+          "options": [
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            },
+            {
+              "text": "Different helpers are good at different jobs.",
+              "correct": true
+            },
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about picking the helper. What should he say?",
+          "options": [
+            {
+              "text": "Pick a helper that fits the task.",
+              "correct": true
+            },
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            },
+            {
+              "text": "The helper picks YOU.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about picking the helper. What should he say?",
+          "options": [
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            },
+            {
+              "text": "If one helper is stuck, ask another.",
+              "correct": true
+            },
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about picking the helper is a GOOD rule?",
+          "options": [
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            },
+            {
+              "text": "Tell the helper what success looks like.",
+              "correct": true
+            },
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about picking the helper is a GOOD rule?",
+          "options": [
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            },
+            {
+              "text": "Different helpers are good at different jobs.",
+              "correct": true
+            },
+            {
+              "text": "The helper picks YOU.",
+              "correct": false
+            },
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about picking the helper is a GOOD rule?",
+          "options": [
+            {
+              "text": "The helper picks YOU.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper that fits the task.",
+              "correct": true
+            },
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about picking the helper is a GOOD rule?",
+          "options": [
+            {
+              "text": "If one helper is stuck, ask another.",
+              "correct": true
+            },
+            {
+              "text": "The helper picks YOU.",
+              "correct": false
+            },
+            {
+              "text": "Never switch helpers, ever.",
+              "correct": false
+            },
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about picking the helper is a GOOD rule?",
+          "options": [
+            {
+              "text": "Helpers only work on rainy days.",
+              "correct": false
+            },
+            {
+              "text": "All helpers are exactly the same.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper by smell.",
+              "correct": false
+            },
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

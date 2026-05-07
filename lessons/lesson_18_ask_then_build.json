@@ -32,5 +32,762 @@
     "tier3": {
       "nudge": "The very first step is in your head, not your hands."
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "sequence-the-steps",
+        "payload": {
+          "prompt": "Drag to put these steps in order:",
+          "steps": [
+            "Think about what I want",
+            "Ask a question",
+            "Do the work",
+            "Show my friend"
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is ask, then build?",
+          "options": [
+            {
+              "text": "Asking first saves time later.",
+              "correct": true
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": true
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "Asking first saves time later.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love a tiny plan.",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": true
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about ask, then build. What should he say?",
+          "options": [
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": true
+            },
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about ask, then build is a GOOD rule?",
+          "options": [
+            {
+              "text": "Helpers love a tiny plan.",
+              "correct": true
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": true
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "We can plan before we type code.",
+              "correct": true
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love a tiny plan.",
+              "correct": true
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            },
+            {
+              "text": "Asking first saves time later.",
+              "correct": true
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "Asking is bad luck.",
+              "correct": true
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": false
+            },
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": false
+            },
+            {
+              "text": "Asking first saves time later.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": false
+            },
+            {
+              "text": "We can plan before we type code.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": true
+            },
+            {
+              "text": "Asking first saves time later.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "Asking first saves time later.",
+              "correct": false
+            },
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": false
+            },
+            {
+              "text": "We can plan before we type code.",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "Helpers love a tiny plan.",
+              "correct": false
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": false
+            },
+            {
+              "text": "We can plan before we type code.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask never.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": true
+            },
+            {
+              "text": "Asking first saves time later.",
+              "correct": false
+            },
+            {
+              "text": "We can plan before we type code.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about ask, then build. What should he say?",
+          "options": [
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about ask, then build. What should he say?",
+          "options": [
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love a tiny plan.",
+              "correct": true
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about ask, then build. What should he say?",
+          "options": [
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "Asking first saves time later.",
+              "correct": true
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about ask, then build. What should he say?",
+          "options": [
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": true
+            },
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about ask, then build. What should he say?",
+          "options": [
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "We can plan before we type code.",
+              "correct": true
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about ask, then build is a GOOD rule?",
+          "options": [
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love a tiny plan.",
+              "correct": true
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about ask, then build is a GOOD rule?",
+          "options": [
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            },
+            {
+              "text": "Asking first saves time later.",
+              "correct": true
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about ask, then build is a GOOD rule?",
+          "options": [
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            },
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": true
+            },
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about ask, then build is a GOOD rule?",
+          "options": [
+            {
+              "text": "We can plan before we type code.",
+              "correct": true
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about ask, then build is a GOOD rule?",
+          "options": [
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is ask, then build?",
+          "options": [
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "Asking first saves time later.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is ask, then build?",
+          "options": [
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": true
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is ask, then build?",
+          "options": [
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "We can plan before we type code.",
+              "correct": true
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is ask, then build?",
+          "options": [
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": true
+            },
+            {
+              "text": "Build first, ask never.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is ask, then build?",
+          "options": [
+            {
+              "text": "Bugs love good plans.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love a tiny plan.",
+              "correct": true
+            },
+            {
+              "text": "A foggy question is best.",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

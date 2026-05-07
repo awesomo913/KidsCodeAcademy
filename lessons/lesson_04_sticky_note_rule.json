@@ -37,5 +37,517 @@
     "tier3": {
       "nudge": "First two blocks tell the robot one thing you love. Last two tell it something you do not love."
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "place-blocks",
+        "payload": {
+          "prompt": "Build the sticky note. Drag the words into the right order.",
+          "blocks": [
+            "I LIKE",
+            "DOGS",
+            "I DON'T LIKE",
+            "BROCCOLI"
+          ],
+          "solution": [
+            "I LIKE",
+            "DOGS",
+            "I DON'T LIKE",
+            "BROCCOLI"
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is the sticky-note rule (memory)?",
+          "options": [
+            {
+              "text": "Helpers forget when you close the chat.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes can fly across the room.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the sticky-note rule (memory)?",
+          "options": [
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "A sticky note tells the helper what to remember.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes are for the kid, not the helper.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes can fly across the room.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the sticky-note rule (memory).",
+          "options": [
+            {
+              "text": "Helpers forget when you close the chat.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes save us from saying things over and over.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes go at the start of the chat.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the sticky-note rule (memory). What should he say?",
+          "options": [
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes go at the start of the chat.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes can fly across the room.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the sticky-note rule (memory) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sticky notes save us from saying things over and over.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are for the kid, not the helper.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about the sticky-note rule (memory)?",
+          "options": [
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "A sticky note tells the helper what to remember.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are for the kid, not the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the sticky-note rule (memory)?",
+          "options": [
+            {
+              "text": "Sticky notes are for the kid, not the helper.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are short and clear.",
+              "correct": true
+            },
+            {
+              "text": "Helpers remember everything forever.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the sticky-note rule (memory)?",
+          "options": [
+            {
+              "text": "Sticky notes can fly across the room.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Helpers remember everything forever.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes go at the start of the chat.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about the sticky-note rule (memory)?",
+          "options": [
+            {
+              "text": "Sticky notes are for the kid, not the helper.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes save us from saying things over and over.",
+              "correct": true
+            },
+            {
+              "text": "Helpers remember everything forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about the sticky-note rule (memory)?",
+          "options": [
+            {
+              "text": "Helpers remember everything forever.",
+              "correct": false
+            },
+            {
+              "text": "Helpers forget when you close the chat.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about the sticky-note rule (memory).",
+          "options": [
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes go at the start of the chat.",
+              "correct": false
+            },
+            {
+              "text": "A sticky note tells the helper what to remember.",
+              "correct": false
+            },
+            {
+              "text": "Helpers forget when you close the chat.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about the sticky-note rule (memory).",
+          "options": [
+            {
+              "text": "A sticky note tells the helper what to remember.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are short and clear.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are for the kid, not the helper.",
+              "correct": true
+            },
+            {
+              "text": "Helpers forget when you close the chat.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the sticky-note rule (memory).",
+          "options": [
+            {
+              "text": "Helpers forget when you close the chat.",
+              "correct": false
+            },
+            {
+              "text": "A sticky note tells the helper what to remember.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are short and clear.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about the sticky-note rule (memory).",
+          "options": [
+            {
+              "text": "Sticky notes save us from saying things over and over.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes go at the start of the chat.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are short and clear.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes can fly across the room.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about the sticky-note rule (memory).",
+          "options": [
+            {
+              "text": "Sticky notes go at the start of the chat.",
+              "correct": false
+            },
+            {
+              "text": "Helpers remember everything forever.",
+              "correct": true
+            },
+            {
+              "text": "Helpers forget when you close the chat.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are short and clear.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about the sticky-note rule (memory). What should he say?",
+          "options": [
+            {
+              "text": "Sticky notes can fly across the room.",
+              "correct": false
+            },
+            {
+              "text": "Helpers remember everything forever.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are for the kid, not the helper.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes go at the start of the chat.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about the sticky-note rule (memory). What should he say?",
+          "options": [
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes save us from saying things over and over.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": false
+            },
+            {
+              "text": "Helpers remember everything forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about the sticky-note rule (memory). What should he say?",
+          "options": [
+            {
+              "text": "Helpers remember everything forever.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": false
+            },
+            {
+              "text": "Helpers forget when you close the chat.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the sticky-note rule (memory). What should he say?",
+          "options": [
+            {
+              "text": "A sticky note tells the helper what to remember.",
+              "correct": true
+            },
+            {
+              "text": "Sticky notes can fly across the room.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are for the kid, not the helper.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about the sticky-note rule (memory). What should he say?",
+          "options": [
+            {
+              "text": "Sticky notes only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are made of cheese.",
+              "correct": false
+            },
+            {
+              "text": "Sticky notes are short and clear.",
+              "correct": true
+            },
+            {
+              "text": "Helpers remember everything forever.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

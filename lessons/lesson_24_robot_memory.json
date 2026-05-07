@@ -36,5 +36,515 @@
         "ALWAYS BE KIND"
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "place-blocks",
+        "payload": {
+          "prompt": "Build a memory book by stacking rules in order:",
+          "blocks": [
+            "I LIKE DOGS",
+            "USE SHORT WORDS",
+            "ALWAYS BE KIND"
+          ],
+          "solution": [
+            "I LIKE DOGS",
+            "USE SHORT WORDS",
+            "ALWAYS BE KIND"
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is robot memory?",
+          "options": [
+            {
+              "text": "Memory holds important rules.",
+              "correct": true
+            },
+            {
+              "text": "Memory is a real brain.",
+              "correct": false
+            },
+            {
+              "text": "Memory remembers everything by itself.",
+              "correct": false
+            },
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about robot memory?",
+          "options": [
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            },
+            {
+              "text": "Memory makes the helper feel familiar.",
+              "correct": true
+            },
+            {
+              "text": "We never pick what to save.",
+              "correct": false
+            },
+            {
+              "text": "Memory remembers everything by itself.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about robot memory.",
+          "options": [
+            {
+              "text": "Memory holds important rules.",
+              "correct": false
+            },
+            {
+              "text": "Memory is not magic, just a list.",
+              "correct": false
+            },
+            {
+              "text": "Memory writes itself.",
+              "correct": true
+            },
+            {
+              "text": "Short, clear notes work best.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about robot memory. What should he say?",
+          "options": [
+            {
+              "text": "Memory is a real brain.",
+              "correct": false
+            },
+            {
+              "text": "Short, clear notes work best.",
+              "correct": true
+            },
+            {
+              "text": "Memory remembers everything by itself.",
+              "correct": false
+            },
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about robot memory is a GOOD rule?",
+          "options": [
+            {
+              "text": "Memory is not magic, just a list.",
+              "correct": true
+            },
+            {
+              "text": "Memory is a real brain.",
+              "correct": false
+            },
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            },
+            {
+              "text": "We never pick what to save.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about robot memory?",
+          "options": [
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            },
+            {
+              "text": "Memory makes the helper feel familiar.",
+              "correct": true
+            },
+            {
+              "text": "Memory is a real brain.",
+              "correct": false
+            },
+            {
+              "text": "We never pick what to save.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about robot memory?",
+          "options": [
+            {
+              "text": "We never pick what to save.",
+              "correct": false
+            },
+            {
+              "text": "We pick what to put in memory.",
+              "correct": true
+            },
+            {
+              "text": "Long mushy notes are best.",
+              "correct": false
+            },
+            {
+              "text": "Memory is a real brain.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about robot memory?",
+          "options": [
+            {
+              "text": "Memory remembers everything by itself.",
+              "correct": false
+            },
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            },
+            {
+              "text": "Long mushy notes are best.",
+              "correct": false
+            },
+            {
+              "text": "Short, clear notes work best.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about robot memory?",
+          "options": [
+            {
+              "text": "We never pick what to save.",
+              "correct": false
+            },
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            },
+            {
+              "text": "Memory is not magic, just a list.",
+              "correct": true
+            },
+            {
+              "text": "Long mushy notes are best.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about robot memory?",
+          "options": [
+            {
+              "text": "Long mushy notes are best.",
+              "correct": false
+            },
+            {
+              "text": "Memory holds important rules.",
+              "correct": true
+            },
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            },
+            {
+              "text": "Memory is a real brain.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about robot memory.",
+          "options": [
+            {
+              "text": "Memory writes itself.",
+              "correct": true
+            },
+            {
+              "text": "Short, clear notes work best.",
+              "correct": false
+            },
+            {
+              "text": "Memory makes the helper feel familiar.",
+              "correct": false
+            },
+            {
+              "text": "Memory holds important rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about robot memory.",
+          "options": [
+            {
+              "text": "Memory makes the helper feel familiar.",
+              "correct": false
+            },
+            {
+              "text": "We pick what to put in memory.",
+              "correct": false
+            },
+            {
+              "text": "We never pick what to save.",
+              "correct": true
+            },
+            {
+              "text": "Memory holds important rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about robot memory.",
+          "options": [
+            {
+              "text": "Memory holds important rules.",
+              "correct": false
+            },
+            {
+              "text": "Memory makes the helper feel familiar.",
+              "correct": false
+            },
+            {
+              "text": "We pick what to put in memory.",
+              "correct": false
+            },
+            {
+              "text": "Memory is a real brain.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about robot memory.",
+          "options": [
+            {
+              "text": "Memory is not magic, just a list.",
+              "correct": false
+            },
+            {
+              "text": "Short, clear notes work best.",
+              "correct": false
+            },
+            {
+              "text": "We pick what to put in memory.",
+              "correct": false
+            },
+            {
+              "text": "Memory remembers everything by itself.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about robot memory.",
+          "options": [
+            {
+              "text": "Short, clear notes work best.",
+              "correct": false
+            },
+            {
+              "text": "Long mushy notes are best.",
+              "correct": true
+            },
+            {
+              "text": "Memory holds important rules.",
+              "correct": false
+            },
+            {
+              "text": "We pick what to put in memory.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about robot memory. What should he say?",
+          "options": [
+            {
+              "text": "Memory remembers everything by itself.",
+              "correct": false
+            },
+            {
+              "text": "Long mushy notes are best.",
+              "correct": false
+            },
+            {
+              "text": "We never pick what to save.",
+              "correct": false
+            },
+            {
+              "text": "Short, clear notes work best.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about robot memory. What should he say?",
+          "options": [
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            },
+            {
+              "text": "Memory is not magic, just a list.",
+              "correct": true
+            },
+            {
+              "text": "Memory is a real brain.",
+              "correct": false
+            },
+            {
+              "text": "Long mushy notes are best.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about robot memory. What should he say?",
+          "options": [
+            {
+              "text": "Long mushy notes are best.",
+              "correct": false
+            },
+            {
+              "text": "Memory is a real brain.",
+              "correct": false
+            },
+            {
+              "text": "Memory holds important rules.",
+              "correct": true
+            },
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about robot memory. What should he say?",
+          "options": [
+            {
+              "text": "Memory makes the helper feel familiar.",
+              "correct": true
+            },
+            {
+              "text": "Memory remembers everything by itself.",
+              "correct": false
+            },
+            {
+              "text": "We never pick what to save.",
+              "correct": false
+            },
+            {
+              "text": "Memory is a real brain.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about robot memory. What should he say?",
+          "options": [
+            {
+              "text": "Memory writes itself.",
+              "correct": false
+            },
+            {
+              "text": "Memory is a real brain.",
+              "correct": false
+            },
+            {
+              "text": "We pick what to put in memory.",
+              "correct": true
+            },
+            {
+              "text": "Long mushy notes are best.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

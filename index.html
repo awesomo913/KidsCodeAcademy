@@ -201,6 +201,36 @@ button { font-family: inherit; cursor: pointer; }
 .choice:hover { transform: translateY(-3px); background: var(--bg-1); }
 .choice.right { background: var(--accent-4); color: white; border-color: var(--accent-4); }
 .choice.wrong { background: #ffd6d6; border-color: var(--accent); }
+.choice:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+/* v0.5 — QuestionFlow: progress chip + gate-lock dim + answer reveal */
+.qprog {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 6px 14px;
+  background: var(--accent-2);
+  color: #1a1a1a;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+.qint { transition: opacity var(--dur), filter var(--dur); }
+.qint.locked {
+  opacity: 0.45;
+  filter: grayscale(0.4);
+  pointer-events: none;
+  margin-bottom: 18px;
+  border-bottom: 2px dashed var(--accent-3);
+  padding-bottom: 12px;
+}
+.qans { transition: opacity var(--dur); }
+.qans.hidden { display: none; }
+.qprompt {
+  margin: 6px 0 14px;
+  font-size: 22px;
+  line-height: 1.35;
+}
 
 .match-row { display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-around; }
 .match-col { display: flex; flex-direction: column; gap: 10px; min-width: 180px; }
@@ -1843,12 +1873,57 @@ const SVG = {
 };
 
 /* ============================================================
+ *  v0.5 helpers — variation pick + Fisher-Yates shuffle + Web Speech.
+ *  Used by QuestionFlow so the kid can't memorize a fixed order
+ *  of questions / answer positions.
+ * ============================================================ */
+function _kcaRand() {
+  // crypto.getRandomValues when available (real entropy), Math.random fallback.
+  try {
+    const arr = new Uint32Array(1);
+    crypto.getRandomValues(arr);
+    return arr[0] / 0x1_0000_0000;
+  } catch (_) {
+    return Math.random();
+  }
+}
+function pickVariation(arr) {
+  if (!Array.isArray(arr) || arr.length === 0) return null;
+  return arr[Math.floor(_kcaRand() * arr.length)];
+}
+function shuffleArr(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(_kcaRand() * (i + 1));
+    const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+  }
+  return a;
+}
+function speakText(t) {
+  if (!t) return;
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  try {
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(String(t));
+    u.rate = 0.95;
+    u.pitch = 1.05;
+    u.volume = 1.0;
+    window.speechSynthesis.speak(u);
+  } catch (_) { /* swallowed: TTS is best-effort */ }
+}
+
+/* ============================================================
  *  Mini-game engine (6 types) — now Tracker-aware.
  *  Every wrong/right tap calls Tracker.click() / Tracker.retry().
+ *
+ *  v0.5: run() now takes an optional hostEl. When provided,
+ *  the game renders into THAT element instead of #gameArea.
+ *  Used by QuestionFlow to render the gate-interaction into a
+ *  sub-host while keeping the answer panel separate.
  * ============================================================ */
 const KidGame = {
-  run(spec, onComplete) {
-    const host = document.getElementById("gameArea");
+  run(spec, onComplete, hostEl) {
+    const host = hostEl || document.getElementById("gameArea");
     clearNode(host);
     if (!spec) {
       host.appendChild(el("p", { class: "muted" }, "(No game for this lesson — just listen and click Done.)"));
@@ -2295,6 +2370,150 @@ const KidGame = {
       });
       host.appendChild(session.dom);
     },
+  },
+};
+
+/* ============================================================
+ *  v0.5 — QuestionFlow.
+ *
+ *  Replaces the old "one game = one lesson" flow with a multi-question
+ *  experience that prevents speed-clicking through guesses:
+ *
+ *    1. Render the question's `interaction` (mini-game gate).
+ *       The MCQ panel does NOT exist in DOM until the gate succeeds.
+ *    2. On gate success, the gate locks (visually dimmed, click-blocked)
+ *       and a fresh MCQ panel renders below it. We pick ONE variation
+ *       at random from the question's `variations[]`, then shuffle the
+ *       options so the right answer's position changes per render.
+ *    3. Right MCQ answer → advance to next question (or complete lesson
+ *       if this was the last one). Wrong → flash + retry, no advance.
+ *
+ *  Backward-compat shim: if a lesson has no `questions[]` but does have
+ *  the legacy `lesson.game`, we wrap that game as questions[0] with a
+ *  single MCQ derived from the goal (so old content still functions).
+ * ============================================================ */
+const QuestionFlow = {
+  run(lesson, onLessonComplete) {
+    const root = document.getElementById("gameArea");
+    // Use a sub-host so the help-fab (added by openLesson after this call)
+    // sits as a sibling of qfRoot and survives the internal clearNode calls
+    // we do on every question advance.
+    let qfRoot = root.querySelector(".qf-root");
+    if (!qfRoot) {
+      qfRoot = el("div", { class: "qf-root" });
+      root.appendChild(qfRoot);
+    }
+    clearNode(qfRoot);
+
+    const questions = (Array.isArray(lesson.questions) && lesson.questions.length > 0)
+      ? lesson.questions
+      : [this._legacyShim(lesson)];
+
+    let qIdx = 0;
+
+    const renderCurrent = () => {
+      clearNode(qfRoot);
+      const q = questions[qIdx];
+      const total = questions.length;
+
+      // Progress chip — only show when there's more than one question
+      if (total > 1) {
+        qfRoot.appendChild(el("div", { class: "qprog" }, `Question ${qIdx + 1} of ${total}`));
+      }
+
+      // Two stacked sub-hosts: gate (top) + answers (revealed after gate)
+      const gateHost = el("div", { class: "qint" });
+      const ansHost = el("div", { class: "qans hidden" });
+      qfRoot.appendChild(gateHost);
+      qfRoot.appendChild(ansHost);
+
+      // Stage 1 — render the gate interaction. KidGame.run accepts a host
+      // override (third arg). When the gate's onComplete fires, we lock
+      // the gate visuals and reveal the answer panel.
+      KidGame.run(q.interaction, ok => {
+        if (!ok) return;
+        gateHost.classList.add("locked");
+        ansHost.classList.remove("hidden");
+        this._renderAnswer(q, ansHost, () => {
+          // MCQ correct → advance
+          qIdx += 1;
+          if (qIdx < questions.length) {
+            // Brief pause so the kid sees the right state before the next gate
+            setTimeout(renderCurrent, 700);
+          } else {
+            onLessonComplete(true);
+          }
+        });
+      }, gateHost);
+    };
+
+    renderCurrent();
+  },
+
+  _renderAnswer(question, host, onCorrect) {
+    clearNode(host);
+    const v = pickVariation(question.variations);
+    if (!v) {
+      // Defensive: no variations authored — auto-advance.
+      host.appendChild(el("p", { class: "muted" }, "(No question for this slot — moving on.)"));
+      setTimeout(onCorrect, 400);
+      return;
+    }
+
+    const promptText = String(v.prompt || "Pick the best answer:");
+    host.appendChild(el("h3", { class: "qprompt" }, promptText));
+    speakText(promptText);
+
+    const grid = el("div", { class: "choice-grid" });
+    host.appendChild(grid);
+
+    // Shuffle options so the right answer's position changes every time —
+    // kid can't memorize "always pick the second one".
+    const opts = shuffleArr(Array.isArray(v.options) ? v.options : []);
+    opts.forEach(opt => {
+      const btn = el("button", {
+        class: "choice",
+        onclick: () => {
+          Tracker.click();
+          if (opt.correct) {
+            btn.classList.add("right");
+            Audio_.sfx("Ding");
+            // Disable all buttons so a wrong second-click doesn't fire
+            grid.querySelectorAll("button.choice").forEach(b => b.disabled = true);
+            setTimeout(() => onCorrect(), 600);
+          } else {
+            Tracker.retry();
+            btn.classList.add("wrong");
+            Audio_.sfx("Oops");
+            setTimeout(() => btn.classList.remove("wrong"), 600);
+          }
+        },
+      }, String(opt.text || ""));
+      grid.appendChild(btn);
+    });
+  },
+
+  _legacyShim(lesson) {
+    // Wrap an old-schema lesson (only `lesson.game`, no `questions`) in the
+    // new shape. The MCQ uses the lesson goal as the prompt and four
+    // options derived from the existing game.payload.choices when present.
+    const goal = String(lesson.goal || "What did we just learn?");
+    let options = [];
+    const game = lesson.game || {};
+    const choices = (game.payload && Array.isArray(game.payload.choices)) ? game.payload.choices : [];
+    if (choices.length >= 2) {
+      options = choices.map(c => ({ text: String(c.label || ""), correct: !!c.right }));
+    } else {
+      options = [
+        { text: "Yes — I get it!", correct: true },
+        { text: "Not yet — I want a hint.", correct: false },
+      ];
+    }
+    return {
+      id: "q1",
+      interaction: lesson.game || null,
+      variations: [{ prompt: goal, options: options }],
+    };
   },
 };
 
@@ -3766,7 +3985,10 @@ const UI = {
       // Lesson 43 = Color Editor (the v0.2 Lesson 16 capstone, renumbered)
       Lesson16.build(game, lesson, ok => ok && this.completeLesson(id));
     } else {
-      KidGame.run(lesson.game, ok => ok && this.completeLesson(id));
+      // v0.5: every lesson now flows through QuestionFlow — multi-question
+      // with interaction-gating. Old single-question lessons (no `questions[]`)
+      // get auto-shimmed inside QuestionFlow._legacyShim so nothing breaks.
+      QuestionFlow.run(lesson, ok => ok && this.completeLesson(id));
     }
 
     // Help button — added AFTER game renders (KidGame.run clears the host first).

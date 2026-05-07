@@ -50,5 +50,659 @@
         }
       }
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "history-scene",
+        "payload": {
+          "prompt": "Watch the scene, then answer the question!",
+          "scene": {
+            "id": "math",
+            "check": {
+              "prompt": "In the scene, what did 2 + 3 become?",
+              "choices": [
+                {
+                  "label": "5 →",
+                  "right": true
+                },
+                {
+                  "label": "7",
+                  "right": false
+                },
+                {
+                  "label": "A picture",
+                  "right": false
+                },
+                {
+                  "label": "0",
+                  "right": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is math made of thinking?",
+          "options": [
+            {
+              "text": "Computers do math super fast.",
+              "correct": true
+            },
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            },
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            },
+            {
+              "text": "Adding 1 + 1 always equals 2.",
+              "correct": true
+            },
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": false
+            },
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "Computers do math super fast.",
+              "correct": false
+            },
+            {
+              "text": "Computers never get bored of math.",
+              "correct": false
+            },
+            {
+              "text": "Math only works on paper.",
+              "correct": true
+            },
+            {
+              "text": "Math helps games count points.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about math made of thinking. What should he say?",
+          "options": [
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            },
+            {
+              "text": "Math helps games count points.",
+              "correct": true
+            },
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about math made of thinking is a GOOD rule?",
+          "options": [
+            {
+              "text": "Computers never get bored of math.",
+              "correct": true
+            },
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            },
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            },
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            },
+            {
+              "text": "Adding 1 + 1 always equals 2.",
+              "correct": true
+            },
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            },
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": false
+            },
+            {
+              "text": "We can use math to make rules.",
+              "correct": true
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            },
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            },
+            {
+              "text": "Math helps games count points.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": false
+            },
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            },
+            {
+              "text": "Computers never get bored of math.",
+              "correct": true
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            },
+            {
+              "text": "Computers do math super fast.",
+              "correct": true
+            },
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            },
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "Math only works on paper.",
+              "correct": true
+            },
+            {
+              "text": "Math helps games count points.",
+              "correct": false
+            },
+            {
+              "text": "Adding 1 + 1 always equals 2.",
+              "correct": false
+            },
+            {
+              "text": "Computers do math super fast.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "Adding 1 + 1 always equals 2.",
+              "correct": false
+            },
+            {
+              "text": "We can use math to make rules.",
+              "correct": false
+            },
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": true
+            },
+            {
+              "text": "Computers do math super fast.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "Computers do math super fast.",
+              "correct": false
+            },
+            {
+              "text": "Adding 1 + 1 always equals 2.",
+              "correct": false
+            },
+            {
+              "text": "We can use math to make rules.",
+              "correct": false
+            },
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "Computers never get bored of math.",
+              "correct": false
+            },
+            {
+              "text": "Math helps games count points.",
+              "correct": false
+            },
+            {
+              "text": "We can use math to make rules.",
+              "correct": false
+            },
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "Math helps games count points.",
+              "correct": false
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": true
+            },
+            {
+              "text": "Computers do math super fast.",
+              "correct": false
+            },
+            {
+              "text": "We can use math to make rules.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about math made of thinking. What should he say?",
+          "options": [
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            },
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": false
+            },
+            {
+              "text": "Math helps games count points.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about math made of thinking. What should he say?",
+          "options": [
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            },
+            {
+              "text": "Computers never get bored of math.",
+              "correct": true
+            },
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about math made of thinking. What should he say?",
+          "options": [
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            },
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            },
+            {
+              "text": "Computers do math super fast.",
+              "correct": true
+            },
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about math made of thinking. What should he say?",
+          "options": [
+            {
+              "text": "Adding 1 + 1 always equals 2.",
+              "correct": true
+            },
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": false
+            },
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about math made of thinking. What should he say?",
+          "options": [
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            },
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            },
+            {
+              "text": "We can use math to make rules.",
+              "correct": true
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about math made of thinking is a GOOD rule?",
+          "options": [
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Computers never get bored of math.",
+              "correct": true
+            },
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about math made of thinking is a GOOD rule?",
+          "options": [
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            },
+            {
+              "text": "Computers do math super fast.",
+              "correct": true
+            },
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": false
+            },
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about math made of thinking is a GOOD rule?",
+          "options": [
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": false
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            },
+            {
+              "text": "Adding 1 + 1 always equals 2.",
+              "correct": true
+            },
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about math made of thinking is a GOOD rule?",
+          "options": [
+            {
+              "text": "We can use math to make rules.",
+              "correct": true
+            },
+            {
+              "text": "Computers fall asleep doing math.",
+              "correct": false
+            },
+            {
+              "text": "Math only works on paper.",
+              "correct": false
+            },
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about math made of thinking is a GOOD rule?",
+          "options": [
+            {
+              "text": "Numbers are afraid of computers.",
+              "correct": false
+            },
+            {
+              "text": "Computers add numbers wrong on purpose.",
+              "correct": false
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7.",
+              "correct": false
+            },
+            {
+              "text": "Math helps games count points.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

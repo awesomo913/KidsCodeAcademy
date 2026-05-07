@@ -30,5 +30,510 @@
     "tier3": {
       "nudge": "Three letters: p-u-s-h."
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type the word builders use to share work:",
+          "target_display": "push",
+          "targets": [
+            "push"
+          ],
+          "hint_wrong": "It rhymes with bush. p-u-s-h"
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is save and share?",
+          "options": [
+            {
+              "text": "Saving keeps your work safe.",
+              "correct": true
+            },
+            {
+              "text": "Shared games rot.",
+              "correct": false
+            },
+            {
+              "text": "Saving deletes your work.",
+              "correct": false
+            },
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            },
+            {
+              "text": "Sharing lets others play.",
+              "correct": true
+            },
+            {
+              "text": "Backups are useless.",
+              "correct": false
+            },
+            {
+              "text": "Saving deletes your work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "Saving keeps your work safe.",
+              "correct": false
+            },
+            {
+              "text": "Shared games can come back better.",
+              "correct": false
+            },
+            {
+              "text": "File names do not matter.",
+              "correct": true
+            },
+            {
+              "text": "Backups protect your hard work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about save and share. What should he say?",
+          "options": [
+            {
+              "text": "Shared games rot.",
+              "correct": false
+            },
+            {
+              "text": "Backups protect your hard work.",
+              "correct": true
+            },
+            {
+              "text": "Saving deletes your work.",
+              "correct": false
+            },
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about save and share is a GOOD rule?",
+          "options": [
+            {
+              "text": "Shared games can come back better.",
+              "correct": true
+            },
+            {
+              "text": "Shared games rot.",
+              "correct": false
+            },
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            },
+            {
+              "text": "Backups are useless.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            },
+            {
+              "text": "Sharing lets others play.",
+              "correct": true
+            },
+            {
+              "text": "Shared games rot.",
+              "correct": false
+            },
+            {
+              "text": "Backups are useless.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "Backups are useless.",
+              "correct": false
+            },
+            {
+              "text": "A clear file name helps you find it.",
+              "correct": true
+            },
+            {
+              "text": "Sharing breaks the file.",
+              "correct": false
+            },
+            {
+              "text": "Shared games rot.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "Saving deletes your work.",
+              "correct": false
+            },
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            },
+            {
+              "text": "Sharing breaks the file.",
+              "correct": false
+            },
+            {
+              "text": "Backups protect your hard work.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "Backups are useless.",
+              "correct": false
+            },
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            },
+            {
+              "text": "Shared games can come back better.",
+              "correct": true
+            },
+            {
+              "text": "Sharing breaks the file.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "Sharing breaks the file.",
+              "correct": false
+            },
+            {
+              "text": "Saving keeps your work safe.",
+              "correct": true
+            },
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            },
+            {
+              "text": "Shared games rot.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "File names do not matter.",
+              "correct": true
+            },
+            {
+              "text": "Backups protect your hard work.",
+              "correct": false
+            },
+            {
+              "text": "Sharing lets others play.",
+              "correct": false
+            },
+            {
+              "text": "Saving keeps your work safe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "Sharing lets others play.",
+              "correct": false
+            },
+            {
+              "text": "A clear file name helps you find it.",
+              "correct": false
+            },
+            {
+              "text": "Backups are useless.",
+              "correct": true
+            },
+            {
+              "text": "Saving keeps your work safe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "Saving keeps your work safe.",
+              "correct": false
+            },
+            {
+              "text": "Sharing lets others play.",
+              "correct": false
+            },
+            {
+              "text": "A clear file name helps you find it.",
+              "correct": false
+            },
+            {
+              "text": "Shared games rot.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "Shared games can come back better.",
+              "correct": false
+            },
+            {
+              "text": "Backups protect your hard work.",
+              "correct": false
+            },
+            {
+              "text": "A clear file name helps you find it.",
+              "correct": false
+            },
+            {
+              "text": "Saving deletes your work.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "Backups protect your hard work.",
+              "correct": false
+            },
+            {
+              "text": "Sharing breaks the file.",
+              "correct": true
+            },
+            {
+              "text": "Saving keeps your work safe.",
+              "correct": false
+            },
+            {
+              "text": "A clear file name helps you find it.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about save and share. What should he say?",
+          "options": [
+            {
+              "text": "Saving deletes your work.",
+              "correct": false
+            },
+            {
+              "text": "Sharing breaks the file.",
+              "correct": false
+            },
+            {
+              "text": "Backups are useless.",
+              "correct": false
+            },
+            {
+              "text": "Backups protect your hard work.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about save and share. What should he say?",
+          "options": [
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            },
+            {
+              "text": "Shared games can come back better.",
+              "correct": true
+            },
+            {
+              "text": "Shared games rot.",
+              "correct": false
+            },
+            {
+              "text": "Sharing breaks the file.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about save and share. What should he say?",
+          "options": [
+            {
+              "text": "Sharing breaks the file.",
+              "correct": false
+            },
+            {
+              "text": "Shared games rot.",
+              "correct": false
+            },
+            {
+              "text": "Saving keeps your work safe.",
+              "correct": true
+            },
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about save and share. What should he say?",
+          "options": [
+            {
+              "text": "Sharing lets others play.",
+              "correct": true
+            },
+            {
+              "text": "Saving deletes your work.",
+              "correct": false
+            },
+            {
+              "text": "Backups are useless.",
+              "correct": false
+            },
+            {
+              "text": "Shared games rot.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about save and share. What should he say?",
+          "options": [
+            {
+              "text": "File names do not matter.",
+              "correct": false
+            },
+            {
+              "text": "Shared games rot.",
+              "correct": false
+            },
+            {
+              "text": "A clear file name helps you find it.",
+              "correct": true
+            },
+            {
+              "text": "Sharing breaks the file.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

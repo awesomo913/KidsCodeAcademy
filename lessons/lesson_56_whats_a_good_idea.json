@@ -10,20 +10,556 @@
     "Not just any idea! Pick one that helps."
   ],
   "hints": {
-    "tier1": {"highlight": "real problem"},
-    "tier2": {"rephrase": "Pick the idea that helps a real person with a real problem."},
-    "tier3": {"nudge": "Look for the one that helps someone do a thing they cannot do well today."}
+    "tier1": {
+      "highlight": "real problem"
+    },
+    "tier2": {
+      "rephrase": "Pick the idea that helps a real person with a real problem."
+    },
+    "tier3": {
+      "nudge": "Look for the one that helps someone do a thing they cannot do well today."
+    }
   },
   "game": {
     "type": "click-the-thing",
     "payload": {
       "prompt": "Which idea is the most useful?",
       "choices": [
-        {"label": "🎨 An app that paints my dog blue every Tuesday", "right": false},
-        {"label": "📋 An app that helps Mom remember the grocery list", "right": true},
-        {"label": "🧀 An app that names every cheese in my fridge", "right": false},
-        {"label": "🎵 An app that makes a buzz noise nonstop", "right": false}
+        {
+          "label": "🎨 An app that paints my dog blue every Tuesday",
+          "right": false
+        },
+        {
+          "label": "📋 An app that helps Mom remember the grocery list",
+          "right": true
+        },
+        {
+          "label": "🧀 An app that names every cheese in my fridge",
+          "right": false
+        },
+        {
+          "label": "🎵 An app that makes a buzz noise nonstop",
+          "right": false
+        }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Which idea is the most useful?",
+          "choices": [
+            {
+              "label": "🎨 An app that paints my dog blue every Tuesday",
+              "right": false
+            },
+            {
+              "label": "📋 An app that helps Mom remember the grocery list",
+              "right": true
+            },
+            {
+              "label": "🧀 An app that names every cheese in my fridge",
+              "right": false
+            },
+            {
+              "label": "🎵 An app that makes a buzz noise nonstop",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is what is a good idea?",
+          "options": [
+            {
+              "text": "A good idea solves a real problem.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas feel boring.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas solve nothing.",
+              "correct": false
+            },
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas are clear and small.",
+              "correct": true
+            },
+            {
+              "text": "You can't test a good idea.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas solve nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "A good idea solves a real problem.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel exciting to try.",
+              "correct": false
+            },
+            {
+              "text": "A good idea helps no one.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas can be tested.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about what is a good idea. What should he say?",
+          "options": [
+            {
+              "text": "Good ideas feel boring.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas can be tested.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas solve nothing.",
+              "correct": false
+            },
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about what is a good idea is a GOOD rule?",
+          "options": [
+            {
+              "text": "Good ideas feel exciting to try.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas feel boring.",
+              "correct": false
+            },
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            },
+            {
+              "text": "You can't test a good idea.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas are clear and small.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas feel boring.",
+              "correct": false
+            },
+            {
+              "text": "You can't test a good idea.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "You can't test a good idea.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas help someone.",
+              "correct": true
+            },
+            {
+              "text": "Foggy giant ideas are best.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "Good ideas solve nothing.",
+              "correct": false
+            },
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            },
+            {
+              "text": "Foggy giant ideas are best.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas can be tested.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "You can't test a good idea.",
+              "correct": false
+            },
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel exciting to try.",
+              "correct": true
+            },
+            {
+              "text": "Foggy giant ideas are best.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "Foggy giant ideas are best.",
+              "correct": false
+            },
+            {
+              "text": "A good idea solves a real problem.",
+              "correct": true
+            },
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel boring.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "A good idea helps no one.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas can be tested.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas are clear and small.",
+              "correct": false
+            },
+            {
+              "text": "A good idea solves a real problem.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "Good ideas are clear and small.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas help someone.",
+              "correct": false
+            },
+            {
+              "text": "You can't test a good idea.",
+              "correct": true
+            },
+            {
+              "text": "A good idea solves a real problem.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "A good idea solves a real problem.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas are clear and small.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas help someone.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel boring.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "Good ideas feel exciting to try.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas can be tested.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas help someone.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas solve nothing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "Good ideas can be tested.",
+              "correct": false
+            },
+            {
+              "text": "Foggy giant ideas are best.",
+              "correct": true
+            },
+            {
+              "text": "A good idea solves a real problem.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas help someone.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about what is a good idea. What should he say?",
+          "options": [
+            {
+              "text": "Good ideas solve nothing.",
+              "correct": false
+            },
+            {
+              "text": "Foggy giant ideas are best.",
+              "correct": false
+            },
+            {
+              "text": "You can't test a good idea.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas can be tested.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about what is a good idea. What should he say?",
+          "options": [
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel exciting to try.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas feel boring.",
+              "correct": false
+            },
+            {
+              "text": "Foggy giant ideas are best.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about what is a good idea. What should he say?",
+          "options": [
+            {
+              "text": "Foggy giant ideas are best.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel boring.",
+              "correct": false
+            },
+            {
+              "text": "A good idea solves a real problem.",
+              "correct": true
+            },
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about what is a good idea. What should he say?",
+          "options": [
+            {
+              "text": "Good ideas are clear and small.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas solve nothing.",
+              "correct": false
+            },
+            {
+              "text": "You can't test a good idea.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about what is a good idea. What should he say?",
+          "options": [
+            {
+              "text": "A good idea helps no one.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel boring.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas help someone.",
+              "correct": true
+            },
+            {
+              "text": "Foggy giant ideas are best.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

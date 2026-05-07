@@ -51,5 +51,780 @@
         }
       }
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "history-scene",
+        "payload": {
+          "prompt": "Watch the scene, then answer the question!",
+          "scene": {
+            "id": "llm",
+            "check": {
+              "prompt": "What happened to the words during the scene?",
+              "choices": [
+                {
+                  "label": "They drifted into a big brain",
+                  "right": true
+                },
+                {
+                  "label": "They disappeared off-screen",
+                  "right": false
+                },
+                {
+                  "label": "They turned into numbers",
+                  "right": false
+                },
+                {
+                  "label": "They got bigger and bigger",
+                  "right": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is how an LLM is born?",
+          "options": [
+            {
+              "text": "An LLM reads tons and tons of books and pages.",
+              "correct": true
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about how an LLM is born?",
+          "options": [
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            },
+            {
+              "text": "It learns to guess the next word.",
+              "correct": true
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about how an LLM is born.",
+          "options": [
+            {
+              "text": "An LLM reads tons and tons of books and pages.",
+              "correct": false
+            },
+            {
+              "text": "After training, the model can chat with us.",
+              "correct": false
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": true
+            },
+            {
+              "text": "The model gets better with more practice.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about how an LLM is born. What should he say?",
+          "options": [
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "The model gets better with more practice.",
+              "correct": true
+            },
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about how an LLM is born is a GOOD rule?",
+          "options": [
+            {
+              "text": "After training, the model can chat with us.",
+              "correct": true
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about how an LLM is born?",
+          "options": [
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            },
+            {
+              "text": "It learns to guess the next word.",
+              "correct": true
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about how an LLM is born?",
+          "options": [
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "Training takes lots of computers and time.",
+              "correct": true
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about how an LLM is born?",
+          "options": [
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            },
+            {
+              "text": "The model gets better with more practice.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about how an LLM is born?",
+          "options": [
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            },
+            {
+              "text": "After training, the model can chat with us.",
+              "correct": true
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about how an LLM is born?",
+          "options": [
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            },
+            {
+              "text": "An LLM reads tons and tons of books and pages.",
+              "correct": true
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about how an LLM is born.",
+          "options": [
+            {
+              "text": "Models read just one tiny book.",
+              "correct": true
+            },
+            {
+              "text": "The model gets better with more practice.",
+              "correct": false
+            },
+            {
+              "text": "It learns to guess the next word.",
+              "correct": false
+            },
+            {
+              "text": "An LLM reads tons and tons of books and pages.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about how an LLM is born.",
+          "options": [
+            {
+              "text": "It learns to guess the next word.",
+              "correct": false
+            },
+            {
+              "text": "Training takes lots of computers and time.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": true
+            },
+            {
+              "text": "An LLM reads tons and tons of books and pages.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about how an LLM is born.",
+          "options": [
+            {
+              "text": "An LLM reads tons and tons of books and pages.",
+              "correct": false
+            },
+            {
+              "text": "It learns to guess the next word.",
+              "correct": false
+            },
+            {
+              "text": "Training takes lots of computers and time.",
+              "correct": false
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about how an LLM is born.",
+          "options": [
+            {
+              "text": "After training, the model can chat with us.",
+              "correct": false
+            },
+            {
+              "text": "The model gets better with more practice.",
+              "correct": false
+            },
+            {
+              "text": "Training takes lots of computers and time.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about how an LLM is born.",
+          "options": [
+            {
+              "text": "The model gets better with more practice.",
+              "correct": false
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": true
+            },
+            {
+              "text": "An LLM reads tons and tons of books and pages.",
+              "correct": false
+            },
+            {
+              "text": "Training takes lots of computers and time.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about how an LLM is born. What should he say?",
+          "options": [
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "The model gets better with more practice.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about how an LLM is born. What should he say?",
+          "options": [
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            },
+            {
+              "text": "After training, the model can chat with us.",
+              "correct": true
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about how an LLM is born. What should he say?",
+          "options": [
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "An LLM reads tons and tons of books and pages.",
+              "correct": true
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about how an LLM is born. What should he say?",
+          "options": [
+            {
+              "text": "It learns to guess the next word.",
+              "correct": true
+            },
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about how an LLM is born. What should he say?",
+          "options": [
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "Training takes lots of computers and time.",
+              "correct": true
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about how an LLM is born is a GOOD rule?",
+          "options": [
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            },
+            {
+              "text": "After training, the model can chat with us.",
+              "correct": true
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about how an LLM is born is a GOOD rule?",
+          "options": [
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            },
+            {
+              "text": "An LLM reads tons and tons of books and pages.",
+              "correct": true
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about how an LLM is born is a GOOD rule?",
+          "options": [
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            },
+            {
+              "text": "It learns to guess the next word.",
+              "correct": true
+            },
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about how an LLM is born is a GOOD rule?",
+          "options": [
+            {
+              "text": "Training takes lots of computers and time.",
+              "correct": true
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about how an LLM is born is a GOOD rule?",
+          "options": [
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            },
+            {
+              "text": "The model gets better with more practice.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is how an LLM is born?",
+          "options": [
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            },
+            {
+              "text": "Models train for one second and are done.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "An LLM reads tons and tons of books and pages.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is how an LLM is born?",
+          "options": [
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "It learns to guess the next word.",
+              "correct": true
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is how an LLM is born?",
+          "options": [
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "Training takes lots of computers and time.",
+              "correct": true
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is how an LLM is born?",
+          "options": [
+            {
+              "text": "The model gets better with more practice.",
+              "correct": true
+            },
+            {
+              "text": "An LLM is hatched from a real egg.",
+              "correct": false
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is how an LLM is born?",
+          "options": [
+            {
+              "text": "Models train on Mars.",
+              "correct": false
+            },
+            {
+              "text": "After training, the model can chat with us.",
+              "correct": true
+            },
+            {
+              "text": "An LLM is grown in a garden.",
+              "correct": false
+            },
+            {
+              "text": "Models read just one tiny book.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

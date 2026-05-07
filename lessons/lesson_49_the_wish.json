@@ -37,5 +37,640 @@
       ],
       "hint_wrong": "Use the word 'jump' somewhere in your wish."
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Tell Claude your wish. Use the word 'jump' in your message:",
+          "target_display": "I want a hero who can ___ and ___ in a world with ___",
+          "targets": [
+            "jump"
+          ],
+          "hint_wrong": "Use the word 'jump' somewhere in your wish."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is the wish?",
+          "options": [
+            {
+              "text": "A wish is a starting idea.",
+              "correct": true
+            },
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get clearer as you build.",
+              "correct": true
+            },
+            {
+              "text": "Wishes must never change.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "A wish is a starting idea.",
+              "correct": false
+            },
+            {
+              "text": "Naming the wish helps the team.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": true
+            },
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the wish. What should he say?",
+          "options": [
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            },
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": true
+            },
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the wish is a GOOD rule?",
+          "options": [
+            {
+              "text": "Naming the wish helps the team.",
+              "correct": true
+            },
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Wishes must never change.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get clearer as you build.",
+              "correct": true
+            },
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            },
+            {
+              "text": "Wishes must never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "Wishes must never change.",
+              "correct": false
+            },
+            {
+              "text": "A small wish is easier to test.",
+              "correct": true
+            },
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            },
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            },
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "Wishes must never change.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Naming the wish helps the team.",
+              "correct": true
+            },
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            },
+            {
+              "text": "A wish is a starting idea.",
+              "correct": true
+            },
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": true
+            },
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get clearer as you build.",
+              "correct": false
+            },
+            {
+              "text": "A wish is a starting idea.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "Wishes get clearer as you build.",
+              "correct": false
+            },
+            {
+              "text": "A small wish is easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Wishes must never change.",
+              "correct": true
+            },
+            {
+              "text": "A wish is a starting idea.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "A wish is a starting idea.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get clearer as you build.",
+              "correct": false
+            },
+            {
+              "text": "A small wish is easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Naming wishes is silly.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "Naming the wish helps the team.",
+              "correct": false
+            },
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": false
+            },
+            {
+              "text": "A small wish is easier to test.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the final answer.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": true
+            },
+            {
+              "text": "A wish is a starting idea.",
+              "correct": false
+            },
+            {
+              "text": "A small wish is easier to test.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about the wish. What should he say?",
+          "options": [
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            },
+            {
+              "text": "Wishes must never change.",
+              "correct": false
+            },
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about the wish. What should he say?",
+          "options": [
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Naming the wish helps the team.",
+              "correct": true
+            },
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about the wish. What should he say?",
+          "options": [
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            },
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            },
+            {
+              "text": "A wish is a starting idea.",
+              "correct": true
+            },
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the wish. What should he say?",
+          "options": [
+            {
+              "text": "Wishes get clearer as you build.",
+              "correct": true
+            },
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Wishes must never change.",
+              "correct": false
+            },
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about the wish. What should he say?",
+          "options": [
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            },
+            {
+              "text": "A small wish is easier to test.",
+              "correct": true
+            },
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about the wish is a GOOD rule?",
+          "options": [
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Naming the wish helps the team.",
+              "correct": true
+            },
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about the wish is a GOOD rule?",
+          "options": [
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            },
+            {
+              "text": "A wish is a starting idea.",
+              "correct": true
+            },
+            {
+              "text": "Wishes must never change.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about the wish is a GOOD rule?",
+          "options": [
+            {
+              "text": "Wishes must never change.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get clearer as you build.",
+              "correct": true
+            },
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about the wish is a GOOD rule?",
+          "options": [
+            {
+              "text": "A small wish is easier to test.",
+              "correct": true
+            },
+            {
+              "text": "Wishes must never change.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes are easier to test.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the wish is a GOOD rule?",
+          "options": [
+            {
+              "text": "Naming wishes is silly.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the final answer.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get muddier as you build.",
+              "correct": false
+            },
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

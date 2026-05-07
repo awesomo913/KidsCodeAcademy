@@ -43,5 +43,904 @@
     "tier3": {
       "nudge": "A cat goes with PET. Sam is a name. 7 is a number. Pizza is food. Drag each one home!"
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "drag-to-match",
+        "payload": {
+          "prompt": "Drag each thing into its labeled box.",
+          "pairs": [
+            {
+              "left": "🐱",
+              "right": "PET"
+            },
+            {
+              "left": "🍕",
+              "right": "FOOD"
+            },
+            {
+              "left": "Sam",
+              "right": "NAME"
+            },
+            {
+              "left": "7",
+              "right": "AGE"
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": true
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": true
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": false
+            },
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": true
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about magic boxes (variables). What should he say?",
+          "options": [
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": true
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": true
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": true
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": true
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": true
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": true
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "Boxes only hold candy.",
+              "correct": true
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": false
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": false
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": true
+            },
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": false
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": false
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": false
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": true
+            },
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": false
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about magic boxes (variables). What should he say?",
+          "options": [
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about magic boxes (variables). What should he say?",
+          "options": [
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": true
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about magic boxes (variables). What should he say?",
+          "options": [
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": true
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about magic boxes (variables). What should he say?",
+          "options": [
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": true
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about magic boxes (variables). What should he say?",
+          "options": [
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": true
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": true
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": true
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": true
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "We can change what is inside a box.",
+              "correct": true
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": true
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": true
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": true
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is magic boxes (variables)?",
+          "options": [
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": true
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "Boxes only hold candy.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": true
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": true
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed every night.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": true
+            },
+            {
+              "text": "Boxes have to be square shaped.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

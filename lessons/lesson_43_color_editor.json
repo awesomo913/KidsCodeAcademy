@@ -19,5 +19,900 @@
     "tier3": {
       "nudge": "Three steps: which part, which color, then save my world!"
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the orange dot to unlock the question!",
+          "choices": [
+            {
+              "label": "🟠",
+              "right": true
+            },
+            {
+              "label": "🔵",
+              "right": false
+            },
+            {
+              "label": "🟢",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is the color editor?",
+          "options": [
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": true
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": true
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": false
+            },
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work.",
+              "correct": true
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the color editor. What should he say?",
+          "options": [
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": true
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": true
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": true
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": true
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": true
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": true
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "Previews never work.",
+              "correct": true
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": false
+            },
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": false
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": true
+            },
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": false
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": false
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": true
+            },
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": false
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about the color editor. What should he say?",
+          "options": [
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about the color editor. What should he say?",
+          "options": [
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": true
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about the color editor. What should he say?",
+          "options": [
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": true
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about the color editor. What should he say?",
+          "options": [
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": true
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about the color editor. What should he say?",
+          "options": [
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": true
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": true
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": true
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": true
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Saved colors can be used again.",
+              "correct": true
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is the color editor?",
+          "options": [
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is the color editor?",
+          "options": [
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": true
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is the color editor?",
+          "options": [
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": true
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is the color editor?",
+          "options": [
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": true
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is the color editor?",
+          "options": [
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": true
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Previews never work.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": true
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": true
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": true
+            },
+            {
+              "text": "We can save zero colors.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

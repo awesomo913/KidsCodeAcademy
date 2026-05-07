@@ -45,5 +45,774 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Which bug report is best?",
+          "choices": [
+            {
+              "label": "It is broken!",
+              "right": false
+            },
+            {
+              "label": "Help.",
+              "right": false
+            },
+            {
+              "label": "The score went to zero when I touched a coin.",
+              "right": true
+            },
+            {
+              "label": "Idk what happened.",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is telling what happened?",
+          "options": [
+            {
+              "text": "Explain the steps you took.",
+              "correct": true
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            },
+            {
+              "text": "Say what you expected.",
+              "correct": true
+            },
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "Explain the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "A good story makes the bug easy to fix.",
+              "correct": false
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": true
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about telling what happened. What should he say?",
+          "options": [
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": true
+            },
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about telling what happened is a GOOD rule?",
+          "options": [
+            {
+              "text": "A good story makes the bug easy to fix.",
+              "correct": true
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            },
+            {
+              "text": "Say what you expected.",
+              "correct": true
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Say what actually happened.",
+              "correct": true
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            },
+            {
+              "text": "A good story makes the bug easy to fix.",
+              "correct": true
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Explain the steps you took.",
+              "correct": true
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "Lie about what happened.",
+              "correct": true
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": false
+            },
+            {
+              "text": "Say what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Explain the steps you took.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "Say what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Say what actually happened.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error.",
+              "correct": true
+            },
+            {
+              "text": "Explain the steps you took.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "Explain the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Say what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Say what actually happened.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "A good story makes the bug easy to fix.",
+              "correct": false
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": false
+            },
+            {
+              "text": "Say what actually happened.",
+              "correct": false
+            },
+            {
+              "text": "Skip the steps you took.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "Show the error or weird thing.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": true
+            },
+            {
+              "text": "Explain the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Say what actually happened.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about telling what happened. What should he say?",
+          "options": [
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about telling what happened. What should he say?",
+          "options": [
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            },
+            {
+              "text": "A good story makes the bug easy to fix.",
+              "correct": true
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about telling what happened. What should he say?",
+          "options": [
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "Explain the steps you took.",
+              "correct": true
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about telling what happened. What should he say?",
+          "options": [
+            {
+              "text": "Say what you expected.",
+              "correct": true
+            },
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about telling what happened. What should he say?",
+          "options": [
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "Say what actually happened.",
+              "correct": true
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about telling what happened is a GOOD rule?",
+          "options": [
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "A good story makes the bug easy to fix.",
+              "correct": true
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about telling what happened is a GOOD rule?",
+          "options": [
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Explain the steps you took.",
+              "correct": true
+            },
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about telling what happened is a GOOD rule?",
+          "options": [
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Say what you expected.",
+              "correct": true
+            },
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about telling what happened is a GOOD rule?",
+          "options": [
+            {
+              "text": "Say what actually happened.",
+              "correct": true
+            },
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            },
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about telling what happened is a GOOD rule?",
+          "options": [
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is telling what happened?",
+          "options": [
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Explain the steps you took.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is telling what happened?",
+          "options": [
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Say what you expected.",
+              "correct": true
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is telling what happened?",
+          "options": [
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "Say what actually happened.",
+              "correct": true
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is telling what happened?",
+          "options": [
+            {
+              "text": "Show the error or weird thing.",
+              "correct": true
+            },
+            {
+              "text": "Skip the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is telling what happened?",
+          "options": [
+            {
+              "text": "Stories make bugs harder.",
+              "correct": false
+            },
+            {
+              "text": "A good story makes the bug easy to fix.",
+              "correct": true
+            },
+            {
+              "text": "Never share the error.",
+              "correct": false
+            },
+            {
+              "text": "Lie about what happened.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

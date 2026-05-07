@@ -27,5 +27,886 @@
     "payload": {
       "prompt": "Paint your own level! Pick tiles, click to place. Save to finish."
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "level-painter",
+        "payload": {
+          "prompt": "Paint your own level! Pick tiles, click to place. Save to finish."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is levels?",
+          "options": [
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": true
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder.",
+              "correct": true
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": false
+            },
+            {
+              "text": "Levels keep games fresh.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": true
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about levels. What should he say?",
+          "options": [
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": true
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "Levels keep games fresh.",
+              "correct": true
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder.",
+              "correct": true
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": true
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels keep games fresh.",
+              "correct": true
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": true
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "Levels never add new pieces.",
+              "correct": true
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder.",
+              "correct": false
+            },
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "Levels usually get harder.",
+              "correct": false
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": true
+            },
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder.",
+              "correct": false
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "Levels keep games fresh.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": false
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "Beating a level feels great.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": true
+            },
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": false
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about levels. What should he say?",
+          "options": [
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about levels. What should he say?",
+          "options": [
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels keep games fresh.",
+              "correct": true
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about levels. What should he say?",
+          "options": [
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": true
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about levels. What should he say?",
+          "options": [
+            {
+              "text": "Levels usually get harder.",
+              "correct": true
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about levels. What should he say?",
+          "options": [
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": true
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "Levels keep games fresh.",
+              "correct": true
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": true
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder.",
+              "correct": true
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "Each level can have new pieces.",
+              "correct": true
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is levels?",
+          "options": [
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is levels?",
+          "options": [
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder.",
+              "correct": true
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is levels?",
+          "options": [
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": true
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is levels?",
+          "options": [
+            {
+              "text": "Beating a level feels great.",
+              "correct": true
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is levels?",
+          "options": [
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Levels keep games fresh.",
+              "correct": true
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Levels never add new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": true
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Levels keep games fresh.",
+              "correct": true
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": true
+            },
+            {
+              "text": "All levels are the same difficulty.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

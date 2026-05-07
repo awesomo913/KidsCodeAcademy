@@ -31,5 +31,511 @@
     "tier3": {
       "nudge": "The last step is bragging. Before that you must test it!"
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "sequence-the-steps",
+        "payload": {
+          "prompt": "Put the 'check your work' steps in order:",
+          "steps": [
+            "Make the change",
+            "Click and try it",
+            "Notice if it broke",
+            "Say done"
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is checking your work?",
+          "options": [
+            {
+              "text": "Reading code finds tiny bugs.",
+              "correct": true
+            },
+            {
+              "text": "Other people will fix it for you.",
+              "correct": false
+            },
+            {
+              "text": "Checking wastes time.",
+              "correct": false
+            },
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            },
+            {
+              "text": "Run the code to see if it works.",
+              "correct": true
+            },
+            {
+              "text": "Never read your own code.",
+              "correct": false
+            },
+            {
+              "text": "Checking wastes time.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Reading code finds tiny bugs.",
+              "correct": false
+            },
+            {
+              "text": "Checking saves time later.",
+              "correct": false
+            },
+            {
+              "text": "Tests are scary monsters.",
+              "correct": true
+            },
+            {
+              "text": "Catch problems before others see them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about checking your work. What should he say?",
+          "options": [
+            {
+              "text": "Other people will fix it for you.",
+              "correct": false
+            },
+            {
+              "text": "Catch problems before others see them.",
+              "correct": true
+            },
+            {
+              "text": "Checking wastes time.",
+              "correct": false
+            },
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about checking your work is a GOOD rule?",
+          "options": [
+            {
+              "text": "Checking saves time later.",
+              "correct": true
+            },
+            {
+              "text": "Other people will fix it for you.",
+              "correct": false
+            },
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            },
+            {
+              "text": "Never read your own code.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            },
+            {
+              "text": "Run the code to see if it works.",
+              "correct": true
+            },
+            {
+              "text": "Other people will fix it for you.",
+              "correct": false
+            },
+            {
+              "text": "Never read your own code.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "Never read your own code.",
+              "correct": false
+            },
+            {
+              "text": "Tests are small experiments.",
+              "correct": true
+            },
+            {
+              "text": "Bugs fix themselves.",
+              "correct": false
+            },
+            {
+              "text": "Other people will fix it for you.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "Checking wastes time.",
+              "correct": false
+            },
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            },
+            {
+              "text": "Bugs fix themselves.",
+              "correct": false
+            },
+            {
+              "text": "Catch problems before others see them.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "Never read your own code.",
+              "correct": false
+            },
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            },
+            {
+              "text": "Checking saves time later.",
+              "correct": true
+            },
+            {
+              "text": "Bugs fix themselves.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "Bugs fix themselves.",
+              "correct": false
+            },
+            {
+              "text": "Reading code finds tiny bugs.",
+              "correct": true
+            },
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            },
+            {
+              "text": "Other people will fix it for you.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Tests are scary monsters.",
+              "correct": true
+            },
+            {
+              "text": "Catch problems before others see them.",
+              "correct": false
+            },
+            {
+              "text": "Run the code to see if it works.",
+              "correct": false
+            },
+            {
+              "text": "Reading code finds tiny bugs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Run the code to see if it works.",
+              "correct": false
+            },
+            {
+              "text": "Tests are small experiments.",
+              "correct": false
+            },
+            {
+              "text": "Never read your own code.",
+              "correct": true
+            },
+            {
+              "text": "Reading code finds tiny bugs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Reading code finds tiny bugs.",
+              "correct": false
+            },
+            {
+              "text": "Run the code to see if it works.",
+              "correct": false
+            },
+            {
+              "text": "Tests are small experiments.",
+              "correct": false
+            },
+            {
+              "text": "Other people will fix it for you.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Checking saves time later.",
+              "correct": false
+            },
+            {
+              "text": "Catch problems before others see them.",
+              "correct": false
+            },
+            {
+              "text": "Tests are small experiments.",
+              "correct": false
+            },
+            {
+              "text": "Checking wastes time.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Catch problems before others see them.",
+              "correct": false
+            },
+            {
+              "text": "Bugs fix themselves.",
+              "correct": true
+            },
+            {
+              "text": "Reading code finds tiny bugs.",
+              "correct": false
+            },
+            {
+              "text": "Tests are small experiments.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about checking your work. What should he say?",
+          "options": [
+            {
+              "text": "Checking wastes time.",
+              "correct": false
+            },
+            {
+              "text": "Bugs fix themselves.",
+              "correct": false
+            },
+            {
+              "text": "Never read your own code.",
+              "correct": false
+            },
+            {
+              "text": "Catch problems before others see them.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about checking your work. What should he say?",
+          "options": [
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            },
+            {
+              "text": "Checking saves time later.",
+              "correct": true
+            },
+            {
+              "text": "Other people will fix it for you.",
+              "correct": false
+            },
+            {
+              "text": "Bugs fix themselves.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about checking your work. What should he say?",
+          "options": [
+            {
+              "text": "Bugs fix themselves.",
+              "correct": false
+            },
+            {
+              "text": "Other people will fix it for you.",
+              "correct": false
+            },
+            {
+              "text": "Reading code finds tiny bugs.",
+              "correct": true
+            },
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about checking your work. What should he say?",
+          "options": [
+            {
+              "text": "Run the code to see if it works.",
+              "correct": true
+            },
+            {
+              "text": "Checking wastes time.",
+              "correct": false
+            },
+            {
+              "text": "Never read your own code.",
+              "correct": false
+            },
+            {
+              "text": "Other people will fix it for you.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about checking your work. What should he say?",
+          "options": [
+            {
+              "text": "Tests are scary monsters.",
+              "correct": false
+            },
+            {
+              "text": "Other people will fix it for you.",
+              "correct": false
+            },
+            {
+              "text": "Tests are small experiments.",
+              "correct": true
+            },
+            {
+              "text": "Bugs fix themselves.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

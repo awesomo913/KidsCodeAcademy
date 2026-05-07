@@ -50,5 +50,904 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Pick the right way a jump should work:",
+          "choices": [
+            {
+              "label": "Hero goes up forever while you hold the arrow",
+              "right": false
+            },
+            {
+              "label": "Hero gets ONE big push up, then falls back down",
+              "right": true
+            },
+            {
+              "label": "Hero teleports to the sky",
+              "right": false
+            },
+            {
+              "label": "Hero goes sideways",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is iter 2: jump?",
+          "options": [
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": true
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": true
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "options": [
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels snappy.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": true
+            },
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 2: jump. What should he say?",
+          "options": [
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": true
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "A good jump feels snappy.",
+              "correct": true
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": true
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels snappy.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": true
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "options": [
+            {
+              "text": "Hold time does nothing.",
+              "correct": true
+            },
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": false
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "options": [
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": true
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "options": [
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "options": [
+            {
+              "text": "A good jump feels snappy.",
+              "correct": false
+            },
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "options": [
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": true
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about iter 2: jump. What should he say?",
+          "options": [
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about iter 2: jump. What should he say?",
+          "options": [
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels snappy.",
+              "correct": true
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about iter 2: jump. What should he say?",
+          "options": [
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": true
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 2: jump. What should he say?",
+          "options": [
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": true
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about iter 2: jump. What should he say?",
+          "options": [
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels snappy.",
+              "correct": true
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": true
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": true
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "Hold time decides how high.",
+              "correct": true
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is iter 2: jump?",
+          "options": [
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is iter 2: jump?",
+          "options": [
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": true
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is iter 2: jump?",
+          "options": [
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": true
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is iter 2: jump?",
+          "options": [
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": true
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is iter 2: jump?",
+          "options": [
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels snappy.",
+              "correct": true
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Hold time does nothing.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            },
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": true
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "A good jump feels snappy.",
+              "correct": true
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

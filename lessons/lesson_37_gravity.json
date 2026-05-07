@@ -32,5 +32,640 @@
         "gravitySlider": true
       }
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "sprite-mover",
+        "payload": {
+          "prompt": "Try the gravity slider. Higher = harder to jump. Reach the flag!",
+          "levelId": "jump_practice",
+          "options": {
+            "showHitboxToggle": true,
+            "gravitySlider": true
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is gravity?",
+          "options": [
+            {
+              "text": "Gravity pulls things down each frame.",
+              "correct": true
+            },
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            },
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            },
+            {
+              "text": "Without gravity heroes float forever.",
+              "correct": true
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Gravity pulls things down each frame.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel real.",
+              "correct": false
+            },
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": true
+            },
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about gravity. What should he say?",
+          "options": [
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            },
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about gravity is a GOOD rule?",
+          "options": [
+            {
+              "text": "Gravity makes jumps feel real.",
+              "correct": true
+            },
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            },
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            },
+            {
+              "text": "Without gravity heroes float forever.",
+              "correct": true
+            },
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            },
+            {
+              "text": "We add a tiny number to vertical speed.",
+              "correct": true
+            },
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            },
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            },
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            },
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel real.",
+              "correct": true
+            },
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls things down each frame.",
+              "correct": true
+            },
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": true
+            },
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": false
+            },
+            {
+              "text": "Without gravity heroes float forever.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls things down each frame.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Without gravity heroes float forever.",
+              "correct": false
+            },
+            {
+              "text": "We add a tiny number to vertical speed.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pulls things down each frame.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Gravity pulls things down each frame.",
+              "correct": false
+            },
+            {
+              "text": "Without gravity heroes float forever.",
+              "correct": false
+            },
+            {
+              "text": "We add a tiny number to vertical speed.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Gravity makes jumps feel real.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": false
+            },
+            {
+              "text": "We add a tiny number to vertical speed.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes things up.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": false
+            },
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pulls things down each frame.",
+              "correct": false
+            },
+            {
+              "text": "We add a tiny number to vertical speed.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about gravity. What should he say?",
+          "options": [
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            },
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about gravity. What should he say?",
+          "options": [
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel real.",
+              "correct": true
+            },
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            },
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about gravity. What should he say?",
+          "options": [
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls things down each frame.",
+              "correct": true
+            },
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about gravity. What should he say?",
+          "options": [
+            {
+              "text": "Without gravity heroes float forever.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about gravity. What should he say?",
+          "options": [
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            },
+            {
+              "text": "We add a tiny number to vertical speed.",
+              "correct": true
+            },
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about gravity is a GOOD rule?",
+          "options": [
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel real.",
+              "correct": true
+            },
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            },
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about gravity is a GOOD rule?",
+          "options": [
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls things down each frame.",
+              "correct": true
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about gravity is a GOOD rule?",
+          "options": [
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            },
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            },
+            {
+              "text": "Without gravity heroes float forever.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about gravity is a GOOD rule?",
+          "options": [
+            {
+              "text": "We add a tiny number to vertical speed.",
+              "correct": true
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            },
+            {
+              "text": "Gravity adds a giant number once.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about gravity is a GOOD rule?",
+          "options": [
+            {
+              "text": "Gravity makes jumps feel fake.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes things up.",
+              "correct": false
+            },
+            {
+              "text": "Heroes always fall sideways.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

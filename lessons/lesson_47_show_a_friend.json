@@ -31,5 +31,893 @@
     "tier3": {
       "nudge": "You finish when you reach the LAST line. Keep clicking Next until you see the smile!"
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "guided-talk",
+        "payload": {
+          "prompt": "Read each line out loud:",
+          "lines": [
+            "I am a builder.",
+            "I tell the computer what to do.",
+            "I plan first, then build.",
+            "I check my work.",
+            "I share it with my family. Yay!"
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is showing a friend?",
+          "options": [
+            {
+              "text": "Sharing your work feels good.",
+              "correct": true
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Friends can spot fresh ideas.",
+              "correct": true
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about showing a friend.",
+          "options": [
+            {
+              "text": "Sharing your work feels good.",
+              "correct": false
+            },
+            {
+              "text": "Pick what to keep, leave the rest.",
+              "correct": false
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": true
+            },
+            {
+              "text": "Listen to feedback kindly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about showing a friend. What should he say?",
+          "options": [
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "Listen to feedback kindly.",
+              "correct": true
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about showing a friend is a GOOD rule?",
+          "options": [
+            {
+              "text": "Pick what to keep, leave the rest.",
+              "correct": true
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Friends can spot fresh ideas.",
+              "correct": true
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "A short demo is best.",
+              "correct": true
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Listen to feedback kindly.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Pick what to keep, leave the rest.",
+              "correct": true
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Sharing your work feels good.",
+              "correct": true
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about showing a friend.",
+          "options": [
+            {
+              "text": "Demos must be very long.",
+              "correct": true
+            },
+            {
+              "text": "Listen to feedback kindly.",
+              "correct": false
+            },
+            {
+              "text": "Friends can spot fresh ideas.",
+              "correct": false
+            },
+            {
+              "text": "Sharing your work feels good.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about showing a friend.",
+          "options": [
+            {
+              "text": "Friends can spot fresh ideas.",
+              "correct": false
+            },
+            {
+              "text": "A short demo is best.",
+              "correct": false
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": true
+            },
+            {
+              "text": "Sharing your work feels good.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about showing a friend.",
+          "options": [
+            {
+              "text": "Sharing your work feels good.",
+              "correct": false
+            },
+            {
+              "text": "Friends can spot fresh ideas.",
+              "correct": false
+            },
+            {
+              "text": "A short demo is best.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about showing a friend.",
+          "options": [
+            {
+              "text": "Pick what to keep, leave the rest.",
+              "correct": false
+            },
+            {
+              "text": "Listen to feedback kindly.",
+              "correct": false
+            },
+            {
+              "text": "A short demo is best.",
+              "correct": false
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about showing a friend.",
+          "options": [
+            {
+              "text": "Listen to feedback kindly.",
+              "correct": false
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": true
+            },
+            {
+              "text": "Sharing your work feels good.",
+              "correct": false
+            },
+            {
+              "text": "A short demo is best.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about showing a friend. What should he say?",
+          "options": [
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Listen to feedback kindly.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about showing a friend. What should he say?",
+          "options": [
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Pick what to keep, leave the rest.",
+              "correct": true
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about showing a friend. What should he say?",
+          "options": [
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "Sharing your work feels good.",
+              "correct": true
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about showing a friend. What should he say?",
+          "options": [
+            {
+              "text": "Friends can spot fresh ideas.",
+              "correct": true
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about showing a friend. What should he say?",
+          "options": [
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "A short demo is best.",
+              "correct": true
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about showing a friend is a GOOD rule?",
+          "options": [
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Pick what to keep, leave the rest.",
+              "correct": true
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about showing a friend is a GOOD rule?",
+          "options": [
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Sharing your work feels good.",
+              "correct": true
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about showing a friend is a GOOD rule?",
+          "options": [
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Friends can spot fresh ideas.",
+              "correct": true
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about showing a friend is a GOOD rule?",
+          "options": [
+            {
+              "text": "A short demo is best.",
+              "correct": true
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about showing a friend is a GOOD rule?",
+          "options": [
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Listen to feedback kindly.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is showing a friend?",
+          "options": [
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Sharing your work feels good.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is showing a friend?",
+          "options": [
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Friends can spot fresh ideas.",
+              "correct": true
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is showing a friend?",
+          "options": [
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "A short demo is best.",
+              "correct": true
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is showing a friend?",
+          "options": [
+            {
+              "text": "Listen to feedback kindly.",
+              "correct": true
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is showing a friend?",
+          "options": [
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "Pick what to keep, leave the rest.",
+              "correct": true
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Friends can spot fresh ideas.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "A short demo is best.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Demos must be very long.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            },
+            {
+              "text": "Listen to feedback kindly.",
+              "correct": true
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Pick what to keep, leave the rest.",
+              "correct": true
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Take every comment as a rule.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about showing a friend?",
+          "options": [
+            {
+              "text": "Sharing your work feels good.",
+              "correct": true
+            },
+            {
+              "text": "Friends always spoil it.",
+              "correct": false
+            },
+            {
+              "text": "Hide your work from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Argue with every comment.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

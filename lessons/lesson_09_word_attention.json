@@ -51,5 +51,659 @@
         }
       }
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "history-scene",
+        "payload": {
+          "prompt": "Watch the scene, then answer the question!",
+          "scene": {
+            "id": "attention",
+            "check": {
+              "prompt": "The arrow showed which word looks at which?",
+              "choices": [
+                {
+                  "label": "She → Mom",
+                  "right": true
+                },
+                {
+                  "label": "smiles → She",
+                  "right": false
+                },
+                {
+                  "label": "No words look at each other",
+                  "right": false
+                },
+                {
+                  "label": "Mom → smiles",
+                  "right": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is word attention?",
+          "options": [
+            {
+              "text": "Helpers pay attention to important words.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            },
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            },
+            {
+              "text": "Some words matter more than others.",
+              "correct": true
+            },
+            {
+              "text": "One word never changes anything.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "Helpers pay attention to important words.",
+              "correct": false
+            },
+            {
+              "text": "The right word can change the whole answer.",
+              "correct": false
+            },
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": true
+            },
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about word attention. What should he say?",
+          "options": [
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            },
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": true
+            },
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            },
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about word attention is a GOOD rule?",
+          "options": [
+            {
+              "text": "The right word can change the whole answer.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            },
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            },
+            {
+              "text": "One word never changes anything.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            },
+            {
+              "text": "Some words matter more than others.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            },
+            {
+              "text": "One word never changes anything.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "One word never changes anything.",
+              "correct": false
+            },
+            {
+              "text": "Attention helps the helper guess what is next.",
+              "correct": true
+            },
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            },
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            },
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            },
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "One word never changes anything.",
+              "correct": false
+            },
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            },
+            {
+              "text": "The right word can change the whole answer.",
+              "correct": true
+            },
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            },
+            {
+              "text": "Helpers pay attention to important words.",
+              "correct": true
+            },
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": true
+            },
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": false
+            },
+            {
+              "text": "Some words matter more than others.",
+              "correct": false
+            },
+            {
+              "text": "Helpers pay attention to important words.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "Some words matter more than others.",
+              "correct": false
+            },
+            {
+              "text": "Attention helps the helper guess what is next.",
+              "correct": false
+            },
+            {
+              "text": "One word never changes anything.",
+              "correct": true
+            },
+            {
+              "text": "Helpers pay attention to important words.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "Helpers pay attention to important words.",
+              "correct": false
+            },
+            {
+              "text": "Some words matter more than others.",
+              "correct": false
+            },
+            {
+              "text": "Attention helps the helper guess what is next.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only read every other word.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "The right word can change the whole answer.",
+              "correct": false
+            },
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": false
+            },
+            {
+              "text": "Attention helps the helper guess what is next.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": false
+            },
+            {
+              "text": "All words have the same meaning.",
+              "correct": true
+            },
+            {
+              "text": "Helpers pay attention to important words.",
+              "correct": false
+            },
+            {
+              "text": "Attention helps the helper guess what is next.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about word attention. What should he say?",
+          "options": [
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            },
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            },
+            {
+              "text": "One word never changes anything.",
+              "correct": false
+            },
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about word attention. What should he say?",
+          "options": [
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            },
+            {
+              "text": "The right word can change the whole answer.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            },
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about word attention. What should he say?",
+          "options": [
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            },
+            {
+              "text": "Helpers pay attention to important words.",
+              "correct": true
+            },
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about word attention. What should he say?",
+          "options": [
+            {
+              "text": "Some words matter more than others.",
+              "correct": true
+            },
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            },
+            {
+              "text": "One word never changes anything.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about word attention. What should he say?",
+          "options": [
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            },
+            {
+              "text": "Attention helps the helper guess what is next.",
+              "correct": true
+            },
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about word attention is a GOOD rule?",
+          "options": [
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            },
+            {
+              "text": "The right word can change the whole answer.",
+              "correct": true
+            },
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            },
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about word attention is a GOOD rule?",
+          "options": [
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            },
+            {
+              "text": "Helpers pay attention to important words.",
+              "correct": true
+            },
+            {
+              "text": "One word never changes anything.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about word attention is a GOOD rule?",
+          "options": [
+            {
+              "text": "One word never changes anything.",
+              "correct": false
+            },
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            },
+            {
+              "text": "Some words matter more than others.",
+              "correct": true
+            },
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about word attention is a GOOD rule?",
+          "options": [
+            {
+              "text": "Attention helps the helper guess what is next.",
+              "correct": true
+            },
+            {
+              "text": "One word never changes anything.",
+              "correct": false
+            },
+            {
+              "text": "Attention makes helpers slower.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about word attention is a GOOD rule?",
+          "options": [
+            {
+              "text": "Helpers only read every other word.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore every word equally.",
+              "correct": false
+            },
+            {
+              "text": "All words have the same meaning.",
+              "correct": false
+            },
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

@@ -53,5 +53,523 @@
       "What do they want or need?"
     ],
     "saveAs": "idea_world_{timestamp}.txt"
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Which is NOT a part of a game world?",
+          "choices": [
+            {
+              "label": "Floor",
+              "right": false
+            },
+            {
+              "label": "Sky",
+              "right": false
+            },
+            {
+              "label": "Hero",
+              "right": false
+            },
+            {
+              "label": "Math homework",
+              "right": true
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is what is a world (in a game)?",
+          "options": [
+            {
+              "text": "A world is the place a game happens.",
+              "correct": true
+            },
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": false
+            },
+            {
+              "text": "A world has no rules at all.",
+              "correct": false
+            },
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            },
+            {
+              "text": "A world has rules like gravity.",
+              "correct": true
+            },
+            {
+              "text": "Worlds never need a hero.",
+              "correct": false
+            },
+            {
+              "text": "A world has no rules at all.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "A world is the place a game happens.",
+              "correct": false
+            },
+            {
+              "text": "Worlds need a hero to live in them.",
+              "correct": false
+            },
+            {
+              "text": "Rules are stuck forever.",
+              "correct": true
+            },
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about what is a world (in a game). What should he say?",
+          "options": [
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": false
+            },
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": true
+            },
+            {
+              "text": "A world has no rules at all.",
+              "correct": false
+            },
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about what is a world (in a game) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Worlds need a hero to live in them.",
+              "correct": true
+            },
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": false
+            },
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            },
+            {
+              "text": "Worlds never need a hero.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            },
+            {
+              "text": "A world has rules like gravity.",
+              "correct": true
+            },
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": false
+            },
+            {
+              "text": "Worlds never need a hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "Worlds never need a hero.",
+              "correct": false
+            },
+            {
+              "text": "Worlds can be small or huge.",
+              "correct": true
+            },
+            {
+              "text": "All worlds are the same size.",
+              "correct": false
+            },
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "A world has no rules at all.",
+              "correct": false
+            },
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            },
+            {
+              "text": "All worlds are the same size.",
+              "correct": false
+            },
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "Worlds never need a hero.",
+              "correct": false
+            },
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            },
+            {
+              "text": "Worlds need a hero to live in them.",
+              "correct": true
+            },
+            {
+              "text": "All worlds are the same size.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "All worlds are the same size.",
+              "correct": false
+            },
+            {
+              "text": "A world is the place a game happens.",
+              "correct": true
+            },
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            },
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "Rules are stuck forever.",
+              "correct": true
+            },
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": false
+            },
+            {
+              "text": "A world has rules like gravity.",
+              "correct": false
+            },
+            {
+              "text": "A world is the place a game happens.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "A world has rules like gravity.",
+              "correct": false
+            },
+            {
+              "text": "Worlds can be small or huge.",
+              "correct": false
+            },
+            {
+              "text": "Worlds never need a hero.",
+              "correct": true
+            },
+            {
+              "text": "A world is the place a game happens.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "A world is the place a game happens.",
+              "correct": false
+            },
+            {
+              "text": "A world has rules like gravity.",
+              "correct": false
+            },
+            {
+              "text": "Worlds can be small or huge.",
+              "correct": false
+            },
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "Worlds need a hero to live in them.",
+              "correct": false
+            },
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": false
+            },
+            {
+              "text": "Worlds can be small or huge.",
+              "correct": false
+            },
+            {
+              "text": "A world has no rules at all.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": false
+            },
+            {
+              "text": "All worlds are the same size.",
+              "correct": true
+            },
+            {
+              "text": "A world is the place a game happens.",
+              "correct": false
+            },
+            {
+              "text": "Worlds can be small or huge.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about what is a world (in a game). What should he say?",
+          "options": [
+            {
+              "text": "A world has no rules at all.",
+              "correct": false
+            },
+            {
+              "text": "All worlds are the same size.",
+              "correct": false
+            },
+            {
+              "text": "Worlds never need a hero.",
+              "correct": false
+            },
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about what is a world (in a game). What should he say?",
+          "options": [
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            },
+            {
+              "text": "Worlds need a hero to live in them.",
+              "correct": true
+            },
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": false
+            },
+            {
+              "text": "All worlds are the same size.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about what is a world (in a game). What should he say?",
+          "options": [
+            {
+              "text": "All worlds are the same size.",
+              "correct": false
+            },
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": false
+            },
+            {
+              "text": "A world is the place a game happens.",
+              "correct": true
+            },
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about what is a world (in a game). What should he say?",
+          "options": [
+            {
+              "text": "A world has rules like gravity.",
+              "correct": true
+            },
+            {
+              "text": "A world has no rules at all.",
+              "correct": false
+            },
+            {
+              "text": "Worlds never need a hero.",
+              "correct": false
+            },
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about what is a world (in a game). What should he say?",
+          "options": [
+            {
+              "text": "Rules are stuck forever.",
+              "correct": false
+            },
+            {
+              "text": "Worlds are made of jelly.",
+              "correct": false
+            },
+            {
+              "text": "Worlds can be small or huge.",
+              "correct": true
+            },
+            {
+              "text": "All worlds are the same size.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

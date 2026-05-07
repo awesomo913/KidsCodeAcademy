@@ -50,5 +50,523 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Coin gives score but stays forever. Pick the fix:",
+          "choices": [
+            {
+              "label": "Make the coin smaller",
+              "right": false
+            },
+            {
+              "label": "Remove the coin from the world after pickup",
+              "right": true
+            },
+            {
+              "label": "Add more coins",
+              "right": false
+            },
+            {
+              "label": "Make the coin sing",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is iter 3: coins and score?",
+          "options": [
+            {
+              "text": "A coin gives points when touched.",
+              "correct": true
+            },
+            {
+              "text": "Coins are silent always.",
+              "correct": false
+            },
+            {
+              "text": "Coins take points away.",
+              "correct": false
+            },
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            },
+            {
+              "text": "Score shows on the top of the screen.",
+              "correct": true
+            },
+            {
+              "text": "Coins make exploring boring.",
+              "correct": false
+            },
+            {
+              "text": "Coins take points away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "A coin gives points when touched.",
+              "correct": false
+            },
+            {
+              "text": "Coins make a happy sound.",
+              "correct": false
+            },
+            {
+              "text": "Coins stay forever.",
+              "correct": true
+            },
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 3: coins and score. What should he say?",
+          "options": [
+            {
+              "text": "Coins are silent always.",
+              "correct": false
+            },
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": true
+            },
+            {
+              "text": "Coins take points away.",
+              "correct": false
+            },
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 3: coins and score is a GOOD rule?",
+          "options": [
+            {
+              "text": "Coins make a happy sound.",
+              "correct": true
+            },
+            {
+              "text": "Coins are silent always.",
+              "correct": false
+            },
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            },
+            {
+              "text": "Coins make exploring boring.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            },
+            {
+              "text": "Score shows on the top of the screen.",
+              "correct": true
+            },
+            {
+              "text": "Coins are silent always.",
+              "correct": false
+            },
+            {
+              "text": "Coins make exploring boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Coins make exploring boring.",
+              "correct": false
+            },
+            {
+              "text": "Each coin disappears after pickup.",
+              "correct": true
+            },
+            {
+              "text": "Score is invisible.",
+              "correct": false
+            },
+            {
+              "text": "Coins are silent always.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Coins take points away.",
+              "correct": false
+            },
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            },
+            {
+              "text": "Score is invisible.",
+              "correct": false
+            },
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Coins make exploring boring.",
+              "correct": false
+            },
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            },
+            {
+              "text": "Coins make a happy sound.",
+              "correct": true
+            },
+            {
+              "text": "Score is invisible.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Score is invisible.",
+              "correct": false
+            },
+            {
+              "text": "A coin gives points when touched.",
+              "correct": true
+            },
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            },
+            {
+              "text": "Coins are silent always.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "Coins stay forever.",
+              "correct": true
+            },
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": false
+            },
+            {
+              "text": "Score shows on the top of the screen.",
+              "correct": false
+            },
+            {
+              "text": "A coin gives points when touched.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "Score shows on the top of the screen.",
+              "correct": false
+            },
+            {
+              "text": "Each coin disappears after pickup.",
+              "correct": false
+            },
+            {
+              "text": "Coins make exploring boring.",
+              "correct": true
+            },
+            {
+              "text": "A coin gives points when touched.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "A coin gives points when touched.",
+              "correct": false
+            },
+            {
+              "text": "Score shows on the top of the screen.",
+              "correct": false
+            },
+            {
+              "text": "Each coin disappears after pickup.",
+              "correct": false
+            },
+            {
+              "text": "Coins are silent always.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "Coins make a happy sound.",
+              "correct": false
+            },
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": false
+            },
+            {
+              "text": "Each coin disappears after pickup.",
+              "correct": false
+            },
+            {
+              "text": "Coins take points away.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": false
+            },
+            {
+              "text": "Score is invisible.",
+              "correct": true
+            },
+            {
+              "text": "A coin gives points when touched.",
+              "correct": false
+            },
+            {
+              "text": "Each coin disappears after pickup.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about iter 3: coins and score. What should he say?",
+          "options": [
+            {
+              "text": "Coins take points away.",
+              "correct": false
+            },
+            {
+              "text": "Score is invisible.",
+              "correct": false
+            },
+            {
+              "text": "Coins make exploring boring.",
+              "correct": false
+            },
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about iter 3: coins and score. What should he say?",
+          "options": [
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            },
+            {
+              "text": "Coins make a happy sound.",
+              "correct": true
+            },
+            {
+              "text": "Coins are silent always.",
+              "correct": false
+            },
+            {
+              "text": "Score is invisible.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about iter 3: coins and score. What should he say?",
+          "options": [
+            {
+              "text": "Score is invisible.",
+              "correct": false
+            },
+            {
+              "text": "Coins are silent always.",
+              "correct": false
+            },
+            {
+              "text": "A coin gives points when touched.",
+              "correct": true
+            },
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 3: coins and score. What should he say?",
+          "options": [
+            {
+              "text": "Score shows on the top of the screen.",
+              "correct": true
+            },
+            {
+              "text": "Coins take points away.",
+              "correct": false
+            },
+            {
+              "text": "Coins make exploring boring.",
+              "correct": false
+            },
+            {
+              "text": "Coins are silent always.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about iter 3: coins and score. What should he say?",
+          "options": [
+            {
+              "text": "Coins stay forever.",
+              "correct": false
+            },
+            {
+              "text": "Coins are silent always.",
+              "correct": false
+            },
+            {
+              "text": "Each coin disappears after pickup.",
+              "correct": true
+            },
+            {
+              "text": "Score is invisible.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

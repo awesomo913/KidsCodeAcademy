@@ -33,5 +33,642 @@
         "Test the game"
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "sequence-the-steps",
+        "payload": {
+          "prompt": "Chop 'make a game' into 5 little steps:",
+          "steps": [
+            "Pick a hero",
+            "Build the world",
+            "Add things to do",
+            "Add a way to win",
+            "Test the game"
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is one at a time?",
+          "options": [
+            {
+              "text": "Big jobs are easier in tiny steps.",
+              "correct": true
+            },
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            },
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about one at a time?",
+          "options": [
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            },
+            {
+              "text": "Finish one thing before the next.",
+              "correct": true
+            },
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": false
+            },
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about one at a time.",
+          "options": [
+            {
+              "text": "Big jobs are easier in tiny steps.",
+              "correct": false
+            },
+            {
+              "text": "Each step builds on the last.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes never matter.",
+              "correct": true
+            },
+            {
+              "text": "Helpers do better with small chunks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about one at a time. What should he say?",
+          "options": [
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            },
+            {
+              "text": "Helpers do better with small chunks.",
+              "correct": true
+            },
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about one at a time is a GOOD rule?",
+          "options": [
+            {
+              "text": "Each step builds on the last.",
+              "correct": true
+            },
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about one at a time?",
+          "options": [
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            },
+            {
+              "text": "Finish one thing before the next.",
+              "correct": true
+            },
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about one at a time?",
+          "options": [
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": false
+            },
+            {
+              "text": "Small steps catch mistakes early.",
+              "correct": true
+            },
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            },
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about one at a time?",
+          "options": [
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            },
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            },
+            {
+              "text": "Helpers do better with small chunks.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about one at a time?",
+          "options": [
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            },
+            {
+              "text": "Each step builds on the last.",
+              "correct": true
+            },
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about one at a time?",
+          "options": [
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            },
+            {
+              "text": "Big jobs are easier in tiny steps.",
+              "correct": true
+            },
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            },
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about one at a time.",
+          "options": [
+            {
+              "text": "Mistakes never matter.",
+              "correct": true
+            },
+            {
+              "text": "Helpers do better with small chunks.",
+              "correct": false
+            },
+            {
+              "text": "Finish one thing before the next.",
+              "correct": false
+            },
+            {
+              "text": "Big jobs are easier in tiny steps.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about one at a time.",
+          "options": [
+            {
+              "text": "Finish one thing before the next.",
+              "correct": false
+            },
+            {
+              "text": "Small steps catch mistakes early.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": true
+            },
+            {
+              "text": "Big jobs are easier in tiny steps.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about one at a time.",
+          "options": [
+            {
+              "text": "Big jobs are easier in tiny steps.",
+              "correct": false
+            },
+            {
+              "text": "Finish one thing before the next.",
+              "correct": false
+            },
+            {
+              "text": "Small steps catch mistakes early.",
+              "correct": false
+            },
+            {
+              "text": "Skip steps for fun.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about one at a time.",
+          "options": [
+            {
+              "text": "Each step builds on the last.",
+              "correct": false
+            },
+            {
+              "text": "Helpers do better with small chunks.",
+              "correct": false
+            },
+            {
+              "text": "Small steps catch mistakes early.",
+              "correct": false
+            },
+            {
+              "text": "Do everything at once.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about one at a time.",
+          "options": [
+            {
+              "text": "Helpers do better with small chunks.",
+              "correct": false
+            },
+            {
+              "text": "Small steps slow us down.",
+              "correct": true
+            },
+            {
+              "text": "Big jobs are easier in tiny steps.",
+              "correct": false
+            },
+            {
+              "text": "Small steps catch mistakes early.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about one at a time. What should he say?",
+          "options": [
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            },
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": false
+            },
+            {
+              "text": "Helpers do better with small chunks.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about one at a time. What should he say?",
+          "options": [
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            },
+            {
+              "text": "Each step builds on the last.",
+              "correct": true
+            },
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            },
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about one at a time. What should he say?",
+          "options": [
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            },
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            },
+            {
+              "text": "Big jobs are easier in tiny steps.",
+              "correct": true
+            },
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about one at a time. What should he say?",
+          "options": [
+            {
+              "text": "Finish one thing before the next.",
+              "correct": true
+            },
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": false
+            },
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about one at a time. What should he say?",
+          "options": [
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            },
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            },
+            {
+              "text": "Small steps catch mistakes early.",
+              "correct": true
+            },
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about one at a time is a GOOD rule?",
+          "options": [
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            },
+            {
+              "text": "Each step builds on the last.",
+              "correct": true
+            },
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            },
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about one at a time is a GOOD rule?",
+          "options": [
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            },
+            {
+              "text": "Big jobs are easier in tiny steps.",
+              "correct": true
+            },
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": false
+            },
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about one at a time is a GOOD rule?",
+          "options": [
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": false
+            },
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            },
+            {
+              "text": "Finish one thing before the next.",
+              "correct": true
+            },
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about one at a time is a GOOD rule?",
+          "options": [
+            {
+              "text": "Small steps catch mistakes early.",
+              "correct": true
+            },
+            {
+              "text": "Helpers love giant tasks.",
+              "correct": false
+            },
+            {
+              "text": "Mistakes never matter.",
+              "correct": false
+            },
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about one at a time is a GOOD rule?",
+          "options": [
+            {
+              "text": "Skip steps for fun.",
+              "correct": false
+            },
+            {
+              "text": "Do everything at once.",
+              "correct": false
+            },
+            {
+              "text": "Small steps slow us down.",
+              "correct": false
+            },
+            {
+              "text": "Helpers do better with small chunks.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

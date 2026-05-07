@@ -49,5 +49,653 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Bad guy walks off the edge. Pick the fix:",
+          "choices": [
+            {
+              "label": "Make it invisible",
+              "right": false
+            },
+            {
+              "label": "If the next tile is empty, turn around",
+              "right": true
+            },
+            {
+              "label": "Make it jump",
+              "right": false
+            },
+            {
+              "label": "Move the floor",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is iter 4: the bad guy?",
+          "options": [
+            {
+              "text": "A bad guy moves on a path.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            },
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 4: the bad guy?",
+          "options": [
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            },
+            {
+              "text": "Touching a bad guy can hurt the hero.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
+          "options": [
+            {
+              "text": "A bad guy moves on a path.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys add tension to the world.",
+              "correct": false
+            },
+            {
+              "text": "Patterns ruin everything.",
+              "correct": true
+            },
+            {
+              "text": "A bad guy can be jumped on or avoided.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 4: the bad guy. What should he say?",
+          "options": [
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            },
+            {
+              "text": "A bad guy can be jumped on or avoided.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            },
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 4: the bad guy is a GOOD rule?",
+          "options": [
+            {
+              "text": "Bad guys add tension to the world.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            },
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about iter 4: the bad guy?",
+          "options": [
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            },
+            {
+              "text": "Touching a bad guy can hurt the hero.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 4: the bad guy?",
+          "options": [
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": false
+            },
+            {
+              "text": "Patterns help the player learn the bad guy.",
+              "correct": true
+            },
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 4: the bad guy?",
+          "options": [
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            },
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            },
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            },
+            {
+              "text": "A bad guy can be jumped on or avoided.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about iter 4: the bad guy?",
+          "options": [
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": false
+            },
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys add tension to the world.",
+              "correct": true
+            },
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about iter 4: the bad guy?",
+          "options": [
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            },
+            {
+              "text": "A bad guy moves on a path.",
+              "correct": true
+            },
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
+          "options": [
+            {
+              "text": "Patterns ruin everything.",
+              "correct": true
+            },
+            {
+              "text": "A bad guy can be jumped on or avoided.",
+              "correct": false
+            },
+            {
+              "text": "Touching a bad guy can hurt the hero.",
+              "correct": false
+            },
+            {
+              "text": "A bad guy moves on a path.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
+          "options": [
+            {
+              "text": "Touching a bad guy can hurt the hero.",
+              "correct": false
+            },
+            {
+              "text": "Patterns help the player learn the bad guy.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": true
+            },
+            {
+              "text": "A bad guy moves on a path.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
+          "options": [
+            {
+              "text": "A bad guy moves on a path.",
+              "correct": false
+            },
+            {
+              "text": "Touching a bad guy can hurt the hero.",
+              "correct": false
+            },
+            {
+              "text": "Patterns help the player learn the bad guy.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys remove tension.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
+          "options": [
+            {
+              "text": "Bad guys add tension to the world.",
+              "correct": false
+            },
+            {
+              "text": "A bad guy can be jumped on or avoided.",
+              "correct": false
+            },
+            {
+              "text": "Patterns help the player learn the bad guy.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys never move.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
+          "options": [
+            {
+              "text": "A bad guy can be jumped on or avoided.",
+              "correct": false
+            },
+            {
+              "text": "Touching them gives points.",
+              "correct": true
+            },
+            {
+              "text": "A bad guy moves on a path.",
+              "correct": false
+            },
+            {
+              "text": "Patterns help the player learn the bad guy.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about iter 4: the bad guy. What should he say?",
+          "options": [
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            },
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": false
+            },
+            {
+              "text": "A bad guy can be jumped on or avoided.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about iter 4: the bad guy. What should he say?",
+          "options": [
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys add tension to the world.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            },
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about iter 4: the bad guy. What should he say?",
+          "options": [
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            },
+            {
+              "text": "A bad guy moves on a path.",
+              "correct": true
+            },
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 4: the bad guy. What should he say?",
+          "options": [
+            {
+              "text": "Touching a bad guy can hurt the hero.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about iter 4: the bad guy. What should he say?",
+          "options": [
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            },
+            {
+              "text": "Patterns help the player learn the bad guy.",
+              "correct": true
+            },
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about iter 4: the bad guy is a GOOD rule?",
+          "options": [
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys add tension to the world.",
+              "correct": true
+            },
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            },
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about iter 4: the bad guy is a GOOD rule?",
+          "options": [
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            },
+            {
+              "text": "A bad guy moves on a path.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about iter 4: the bad guy is a GOOD rule?",
+          "options": [
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": false
+            },
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            },
+            {
+              "text": "Touching a bad guy can hurt the hero.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about iter 4: the bad guy is a GOOD rule?",
+          "options": [
+            {
+              "text": "Patterns help the player learn the bad guy.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys cannot be avoided.",
+              "correct": false
+            },
+            {
+              "text": "Patterns ruin everything.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 4: the bad guy is a GOOD rule?",
+          "options": [
+            {
+              "text": "Bad guys remove tension.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys never move.",
+              "correct": false
+            },
+            {
+              "text": "Touching them gives points.",
+              "correct": false
+            },
+            {
+              "text": "A bad guy can be jumped on or avoided.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

@@ -101,3 +101,10 @@ There are 6 game types woven through the lessons:
 ### 2026-05-01 — v0.1.0
 - Added: 16 lessons, mascot animation, read-aloud audio, 6 mini-game types, sandbox AI for Lessons 2 + 8, Parent Corner with PIN, Lesson 16 save-a-copy.
 - Shipped: `KidsCodeAcademy.exe` (~48 MB) on Windows.
+
+### 2026-05-07 — v0.5.0 (anti-memorization + interaction gating)
+- Added: 4-7 multiple-choice questions per lesson (was 1), each with 5 randomly-picked wording variations.
+- Added: answer choices stay hidden until the kid completes the demonstration interaction. Speed-clicking through guesses no longer works.
+- Added: option positions shuffle every render — kid can't memorize "always the second one".
+- Added: question prompts read aloud via Web Speech (no per-question wav files needed).
+- Note: kids who already completed a lesson under v0.3.5 still keep their sticker; the lesson now plays the new multi-question flow when re-opened.

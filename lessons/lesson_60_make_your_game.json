@@ -11,9 +11,15 @@
     "We will save your design doc when you are done!"
   ],
   "hints": {
-    "tier1": {"highlight": "dream game"},
-    "tier2": {"rephrase": "What kind of game would YOU love to play? Type it and Bytey will help."},
-    "tier3": {"nudge": "Stuck? Try: 'A game where you ___ and the bad guys ___'."}
+    "tier1": {
+      "highlight": "dream game"
+    },
+    "tier2": {
+      "rephrase": "What kind of game would YOU love to play? Type it and Bytey will help."
+    },
+    "tier3": {
+      "nudge": "Stuck? Try: 'A game where you ___ and the bad guys ___'."
+    }
   },
   "game": {
     "type": "idea-spark",
@@ -29,5 +35,514 @@
       "minTurns": 5,
       "saveAs": "my_game_{timestamp}.txt"
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "idea-spark",
+        "payload": {
+          "prompt": "Tell Bytey about your dream game!",
+          "hook": "My dream game is...",
+          "questions": [
+            "Who is the hero, and what can they do?",
+            "What does the world look like?",
+            "What is the special move only YOUR hero has?",
+            "What is the very last level like?"
+          ],
+          "minTurns": 5,
+          "saveAs": "my_game_{timestamp}.txt"
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is make your game?",
+          "options": [
+            {
+              "text": "Pick one idea and start small.",
+              "correct": true
+            },
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": false
+            },
+            {
+              "text": "Pick ten ideas and start huge.",
+              "correct": false
+            },
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Build, test, and play your game often.",
+              "correct": true
+            },
+            {
+              "text": "Polish before the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Pick ten ideas and start huge.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "Pick one idea and start small.",
+              "correct": false
+            },
+            {
+              "text": "Finishing teaches more than dreaming.",
+              "correct": false
+            },
+            {
+              "text": "Hide it from everyone.",
+              "correct": true
+            },
+            {
+              "text": "Polish only after the basics work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about make your game. What should he say?",
+          "options": [
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": false
+            },
+            {
+              "text": "Polish only after the basics work.",
+              "correct": true
+            },
+            {
+              "text": "Pick ten ideas and start huge.",
+              "correct": false
+            },
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about make your game is a GOOD rule?",
+          "options": [
+            {
+              "text": "Finishing teaches more than dreaming.",
+              "correct": true
+            },
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": false
+            },
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Polish before the basics work.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Build, test, and play your game often.",
+              "correct": true
+            },
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": false
+            },
+            {
+              "text": "Polish before the basics work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "Polish before the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Show it to a friend for feedback.",
+              "correct": true
+            },
+            {
+              "text": "Build only, never test or play.",
+              "correct": false
+            },
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "Pick ten ideas and start huge.",
+              "correct": false
+            },
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Build only, never test or play.",
+              "correct": false
+            },
+            {
+              "text": "Polish only after the basics work.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "Polish before the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Finishing teaches more than dreaming.",
+              "correct": true
+            },
+            {
+              "text": "Build only, never test or play.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "Build only, never test or play.",
+              "correct": false
+            },
+            {
+              "text": "Pick one idea and start small.",
+              "correct": true
+            },
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "Hide it from everyone.",
+              "correct": true
+            },
+            {
+              "text": "Polish only after the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Build, test, and play your game often.",
+              "correct": false
+            },
+            {
+              "text": "Pick one idea and start small.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "Build, test, and play your game often.",
+              "correct": false
+            },
+            {
+              "text": "Show it to a friend for feedback.",
+              "correct": false
+            },
+            {
+              "text": "Polish before the basics work.",
+              "correct": true
+            },
+            {
+              "text": "Pick one idea and start small.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "Pick one idea and start small.",
+              "correct": false
+            },
+            {
+              "text": "Build, test, and play your game often.",
+              "correct": false
+            },
+            {
+              "text": "Show it to a friend for feedback.",
+              "correct": false
+            },
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "Finishing teaches more than dreaming.",
+              "correct": false
+            },
+            {
+              "text": "Polish only after the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Show it to a friend for feedback.",
+              "correct": false
+            },
+            {
+              "text": "Pick ten ideas and start huge.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "Polish only after the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Build only, never test or play.",
+              "correct": true
+            },
+            {
+              "text": "Pick one idea and start small.",
+              "correct": false
+            },
+            {
+              "text": "Show it to a friend for feedback.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about make your game. What should he say?",
+          "options": [
+            {
+              "text": "Pick ten ideas and start huge.",
+              "correct": false
+            },
+            {
+              "text": "Build only, never test or play.",
+              "correct": false
+            },
+            {
+              "text": "Polish before the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Polish only after the basics work.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about make your game. What should he say?",
+          "options": [
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Finishing teaches more than dreaming.",
+              "correct": true
+            },
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": false
+            },
+            {
+              "text": "Build only, never test or play.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about make your game. What should he say?",
+          "options": [
+            {
+              "text": "Build only, never test or play.",
+              "correct": false
+            },
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": false
+            },
+            {
+              "text": "Pick one idea and start small.",
+              "correct": true
+            },
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about make your game. What should he say?",
+          "options": [
+            {
+              "text": "Build, test, and play your game often.",
+              "correct": true
+            },
+            {
+              "text": "Pick ten ideas and start huge.",
+              "correct": false
+            },
+            {
+              "text": "Polish before the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about make your game. What should he say?",
+          "options": [
+            {
+              "text": "Hide it from everyone.",
+              "correct": false
+            },
+            {
+              "text": "Dreaming finishes the game.",
+              "correct": false
+            },
+            {
+              "text": "Show it to a friend for feedback.",
+              "correct": true
+            },
+            {
+              "text": "Build only, never test or play.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

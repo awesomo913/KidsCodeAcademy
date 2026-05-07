@@ -45,5 +45,774 @@
         }
       ]
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "drag-to-match",
+        "payload": {
+          "prompt": "Match each magic word to its job:",
+          "pairs": [
+            {
+              "left": "/draw",
+              "right": "Make a picture"
+            },
+            {
+              "left": "/save",
+              "right": "Push to cloud"
+            },
+            {
+              "left": "/loop",
+              "right": "Do it again and again"
+            },
+            {
+              "left": "/read",
+              "right": "Read out loud"
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": true
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            },
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": true
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": false
+            },
+            {
+              "text": "Spells live in a special folder.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": true
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about magic spells (slash commands). What should he say?",
+          "options": [
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": true
+            },
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about magic spells (slash commands) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Spells live in a special folder.",
+              "correct": true
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            },
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": true
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "Each spell does one job well.",
+              "correct": true
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            },
+            {
+              "text": "Spells live in a special folder.",
+              "correct": true
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            },
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": true
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "One spell does every job.",
+              "correct": true
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": false
+            },
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": false
+            },
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": false
+            },
+            {
+              "text": "Each spell does one job well.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": true
+            },
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": false
+            },
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": false
+            },
+            {
+              "text": "Each spell does one job well.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "Spells live in a special folder.",
+              "correct": false
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": false
+            },
+            {
+              "text": "Each spell does one job well.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are random magic.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "We can make our own spells.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": true
+            },
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": false
+            },
+            {
+              "text": "Each spell does one job well.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about magic spells (slash commands). What should he say?",
+          "options": [
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about magic spells (slash commands). What should he say?",
+          "options": [
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            },
+            {
+              "text": "Spells live in a special folder.",
+              "correct": true
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about magic spells (slash commands). What should he say?",
+          "options": [
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": true
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about magic spells (slash commands). What should he say?",
+          "options": [
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": true
+            },
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about magic spells (slash commands). What should he say?",
+          "options": [
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Each spell does one job well.",
+              "correct": true
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about magic spells (slash commands) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            },
+            {
+              "text": "Spells live in a special folder.",
+              "correct": true
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about magic spells (slash commands) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            },
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": true
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about magic spells (slash commands) is a GOOD rule?",
+          "options": [
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            },
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": true
+            },
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about magic spells (slash commands) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Each spell does one job well.",
+              "correct": true
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about magic spells (slash commands) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": true
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Each spell does one job well.",
+              "correct": true
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "We can make our own spells.",
+              "correct": true
+            },
+            {
+              "text": "Slash commands are random magic.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "Spells live on the moon.",
+              "correct": false
+            },
+            {
+              "text": "Spells live in a special folder.",
+              "correct": true
+            },
+            {
+              "text": "We cannot make new spells.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

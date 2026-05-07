@@ -60,5 +60,904 @@
       "What is the funniest thing in YOUR world?"
     ],
     "saveAs": "idea_my_world_{timestamp}.txt"
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Flag fires too early. Pick the fix:",
+          "choices": [
+            {
+              "label": "Use real hitbox-on-hitbox collision",
+              "right": true
+            },
+            {
+              "label": "Make the flag bigger",
+              "right": false
+            },
+            {
+              "label": "Make the flag invisible",
+              "right": false
+            },
+            {
+              "label": "Remove the flag",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "A flag at the end says you win.",
+              "correct": true
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": true
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "A flag at the end says you win.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": true
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 6: flag and reveal. What should he say?",
+          "options": [
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": true
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": true
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": true
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": true
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": true
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "A flag at the end says you win.",
+              "correct": true
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "Win screens are sad.",
+              "correct": true
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": false
+            },
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": false
+            },
+            {
+              "text": "A flag at the end says you win.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": false
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": true
+            },
+            {
+              "text": "A flag at the end says you win.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "A flag at the end says you win.",
+              "correct": false
+            },
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": false
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": false
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": true
+            },
+            {
+              "text": "A flag at the end says you win.",
+              "correct": false
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about iter 6: flag and reveal. What should he say?",
+          "options": [
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about iter 6: flag and reveal. What should he say?",
+          "options": [
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": true
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about iter 6: flag and reveal. What should he say?",
+          "options": [
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "A flag at the end says you win.",
+              "correct": true
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 6: flag and reveal. What should he say?",
+          "options": [
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": true
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about iter 6: flag and reveal. What should he say?",
+          "options": [
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": true
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": true
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "A flag at the end says you win.",
+              "correct": true
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": true
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "A win screen feels great.",
+              "correct": true
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "A flag at the end says you win.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! What is iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": true
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What is iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": true
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What is iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": true
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What is iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": true
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Win screens are sad.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": true
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": true
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "A flag at the end says you win.",
+              "correct": true
+            },
+            {
+              "text": "Reveals are illegal.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

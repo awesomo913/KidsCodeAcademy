@@ -42,5 +42,653 @@
     "tier3": {
       "nudge": "It is not a fruit, an animal, or a plant. It has buttons!"
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Which one is a computer?",
+          "choices": [
+            {
+              "label": "🍎 Apple",
+              "right": false
+            },
+            {
+              "label": "💻 Laptop",
+              "right": true
+            },
+            {
+              "label": "🐶 Dog",
+              "right": false
+            },
+            {
+              "label": "🌳 Tree",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is a computer?",
+          "options": [
+            {
+              "text": "A computer is a smart helper.",
+              "correct": true
+            },
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            },
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            },
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            },
+            {
+              "text": "A computer only does what we tell it.",
+              "correct": true
+            },
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": false
+            },
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "A computer is a smart helper.",
+              "correct": false
+            },
+            {
+              "text": "A phone is a tiny computer.",
+              "correct": false
+            },
+            {
+              "text": "A computer always knows what is best.",
+              "correct": true
+            },
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about a computer. What should he say?",
+          "options": [
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            },
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": true
+            },
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            },
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about a computer is a GOOD rule?",
+          "options": [
+            {
+              "text": "A phone is a tiny computer.",
+              "correct": true
+            },
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            },
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            },
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            },
+            {
+              "text": "A computer only does what we tell it.",
+              "correct": true
+            },
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            },
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": false
+            },
+            {
+              "text": "A laptop is a computer.",
+              "correct": true
+            },
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            },
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            },
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            },
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": false
+            },
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            },
+            {
+              "text": "A phone is a tiny computer.",
+              "correct": true
+            },
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a smart helper.",
+              "correct": true
+            },
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            },
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "A computer always knows what is best.",
+              "correct": true
+            },
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": false
+            },
+            {
+              "text": "A computer only does what we tell it.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a smart helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "A computer only does what we tell it.",
+              "correct": false
+            },
+            {
+              "text": "A laptop is a computer.",
+              "correct": false
+            },
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": true
+            },
+            {
+              "text": "A computer is a smart helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "A computer is a smart helper.",
+              "correct": false
+            },
+            {
+              "text": "A computer only does what we tell it.",
+              "correct": false
+            },
+            {
+              "text": "A laptop is a computer.",
+              "correct": false
+            },
+            {
+              "text": "A computer grows on a farm.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "A phone is a tiny computer.",
+              "correct": false
+            },
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": false
+            },
+            {
+              "text": "A laptop is a computer.",
+              "correct": false
+            },
+            {
+              "text": "A computer can read your mind.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": true
+            },
+            {
+              "text": "A computer is a smart helper.",
+              "correct": false
+            },
+            {
+              "text": "A laptop is a computer.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about a computer. What should he say?",
+          "options": [
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            },
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": false
+            },
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about a computer. What should he say?",
+          "options": [
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            },
+            {
+              "text": "A phone is a tiny computer.",
+              "correct": true
+            },
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about a computer. What should he say?",
+          "options": [
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            },
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a smart helper.",
+              "correct": true
+            },
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about a computer. What should he say?",
+          "options": [
+            {
+              "text": "A computer only does what we tell it.",
+              "correct": true
+            },
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            },
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": false
+            },
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about a computer. What should he say?",
+          "options": [
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            },
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            },
+            {
+              "text": "A laptop is a computer.",
+              "correct": true
+            },
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the smiley to wake up Bytey!",
+          "choices": [
+            {
+              "label": "😀",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🧦",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which rule about a computer is a GOOD rule?",
+          "options": [
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            },
+            {
+              "text": "A phone is a tiny computer.",
+              "correct": true
+            },
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about a computer is a GOOD rule?",
+          "options": [
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a smart helper.",
+              "correct": true
+            },
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": false
+            },
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about a computer is a GOOD rule?",
+          "options": [
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            },
+            {
+              "text": "A computer only does what we tell it.",
+              "correct": true
+            },
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about a computer is a GOOD rule?",
+          "options": [
+            {
+              "text": "A laptop is a computer.",
+              "correct": true
+            },
+            {
+              "text": "Computers feel sad when you turn them off.",
+              "correct": false
+            },
+            {
+              "text": "A computer always knows what is best.",
+              "correct": false
+            },
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about a computer is a GOOD rule?",
+          "options": [
+            {
+              "text": "A computer grows on a farm.",
+              "correct": false
+            },
+            {
+              "text": "A computer can read your mind.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a kind of tree.",
+              "correct": false
+            },
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }

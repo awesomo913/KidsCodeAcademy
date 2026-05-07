@@ -32,5 +32,510 @@
         "debugDefault": true
       }
     }
-  }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "interaction": {
+        "type": "sprite-mover",
+        "payload": {
+          "prompt": "Click 'Hitboxes' to see the bump boxes! Then reach the flag.",
+          "levelId": "hitbox_demo",
+          "options": {
+            "showHitboxToggle": true,
+            "debugDefault": true
+          }
+        }
+      },
+      "variations": [
+        {
+          "prompt": "What is hitboxes?",
+          "options": [
+            {
+              "text": "A hitbox is the area that can collide.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": false
+            },
+            {
+              "text": "A hitbox is a real cardboard box.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about hitboxes?",
+          "options": [
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can be smaller than the picture.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes can only be triangles.",
+              "correct": false
+            },
+            {
+              "text": "A hitbox is a real cardboard box.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about hitboxes.",
+          "options": [
+            {
+              "text": "A hitbox is the area that can collide.",
+              "correct": false
+            },
+            {
+              "text": "Good hitboxes feel fair to the player.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes can be circles or squares.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about hitboxes. What should he say?",
+          "options": [
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can be circles or squares.",
+              "correct": true
+            },
+            {
+              "text": "A hitbox is a real cardboard box.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about hitboxes is a GOOD rule?",
+          "options": [
+            {
+              "text": "Good hitboxes feel fair to the player.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can only be triangles.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the star to keep going!",
+          "choices": [
+            {
+              "label": "⭐",
+              "right": true
+            },
+            {
+              "label": "🍌",
+              "right": false
+            },
+            {
+              "label": "🌱",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Which one is TRUE about hitboxes?",
+          "options": [
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can be smaller than the picture.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can only be triangles.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about hitboxes?",
+          "options": [
+            {
+              "text": "Hitboxes can only be triangles.",
+              "correct": false
+            },
+            {
+              "text": "We use hitboxes to test for hits.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes must match the picture exactly.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about hitboxes?",
+          "options": [
+            {
+              "text": "A hitbox is a real cardboard box.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes must match the picture exactly.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can be circles or squares.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which one is TRUE about hitboxes?",
+          "options": [
+            {
+              "text": "Hitboxes can only be triangles.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Good hitboxes feel fair to the player.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes must match the picture exactly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which one is TRUE about hitboxes?",
+          "options": [
+            {
+              "text": "Hitboxes must match the picture exactly.",
+              "correct": false
+            },
+            {
+              "text": "A hitbox is the area that can collide.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type GO and press Send to unlock the question.",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about hitboxes.",
+          "options": [
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes can be circles or squares.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can be smaller than the picture.",
+              "correct": false
+            },
+            {
+              "text": "A hitbox is the area that can collide.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about hitboxes.",
+          "options": [
+            {
+              "text": "Hitboxes can be smaller than the picture.",
+              "correct": false
+            },
+            {
+              "text": "We use hitboxes to test for hits.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can only be triangles.",
+              "correct": true
+            },
+            {
+              "text": "A hitbox is the area that can collide.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about hitboxes.",
+          "options": [
+            {
+              "text": "A hitbox is the area that can collide.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can be smaller than the picture.",
+              "correct": false
+            },
+            {
+              "text": "We use hitboxes to test for hits.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about hitboxes.",
+          "options": [
+            {
+              "text": "Good hitboxes feel fair to the player.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can be circles or squares.",
+              "correct": false
+            },
+            {
+              "text": "We use hitboxes to test for hits.",
+              "correct": false
+            },
+            {
+              "text": "A hitbox is a real cardboard box.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about hitboxes.",
+          "options": [
+            {
+              "text": "Hitboxes can be circles or squares.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes must match the picture exactly.",
+              "correct": true
+            },
+            {
+              "text": "A hitbox is the area that can collide.",
+              "correct": false
+            },
+            {
+              "text": "We use hitboxes to test for hits.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Bytey wants to teach a friend about hitboxes. What should he say?",
+          "options": [
+            {
+              "text": "A hitbox is a real cardboard box.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes must match the picture exactly.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can only be triangles.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can be circles or squares.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey wants to teach a friend about hitboxes. What should he say?",
+          "options": [
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Good hitboxes feel fair to the player.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes must match the picture exactly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey wants to teach a friend about hitboxes. What should he say?",
+          "options": [
+            {
+              "text": "Hitboxes must match the picture exactly.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": false
+            },
+            {
+              "text": "A hitbox is the area that can collide.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey wants to teach a friend about hitboxes. What should he say?",
+          "options": [
+            {
+              "text": "Hitboxes can be smaller than the picture.",
+              "correct": true
+            },
+            {
+              "text": "A hitbox is a real cardboard box.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes can only be triangles.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey wants to teach a friend about hitboxes. What should he say?",
+          "options": [
+            {
+              "text": "Hitboxes are decorations only.",
+              "correct": false
+            },
+            {
+              "text": "Hitboxes never feel fair.",
+              "correct": false
+            },
+            {
+              "text": "We use hitboxes to test for hits.",
+              "correct": true
+            },
+            {
+              "text": "Hitboxes must match the picture exactly.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "v2"
 }
