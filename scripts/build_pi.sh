@@ -37,6 +37,7 @@ echo
 # ---------------------------------------------------------------- 1. apt deps
 echo "==> [1/5] Installing system packages (sudo apt)..."
 sudo apt-get update -y
+# Core deps that exist on every Debian/Pi OS release.
 sudo apt-get install -y --no-install-recommends \
     git \
     python3 \
@@ -44,14 +45,20 @@ sudo apt-get install -y --no-install-recommends \
     python3-venv \
     python3-gi \
     python3-gi-cairo \
-    gir1.2-webkit2-4.1 \
-    libgirepository-2.0-dev \
     libcairo2-dev \
     pkg-config
 
-# Older Pi OS images have webkit2-4.0 instead of 4.1; install the older one as a
-# fallback so pywebview can find at least one supported WebKit2GTK ABI.
-sudo apt-get install -y --no-install-recommends gir1.2-webkit2-4.0 || true
+# WebKit2GTK ABI: bookworm ships 4.1, older images have 4.0 only.
+# Install whichever is available — pywebview accepts either.
+sudo apt-get install -y --no-install-recommends gir1.2-webkit2-4.1 \
+    || sudo apt-get install -y --no-install-recommends gir1.2-webkit2-4.0 \
+    || { echo "FATAL: neither gir1.2-webkit2-4.1 nor 4.0 available"; exit 1; }
+
+# girepository headers: bookworm uses 1.0, trixie/Ubuntu 24.04 use 2.0.
+# Try both — only one needs to succeed.
+sudo apt-get install -y --no-install-recommends libgirepository1.0-dev \
+    || sudo apt-get install -y --no-install-recommends libgirepository-2.0-dev \
+    || { echo "FATAL: neither libgirepository1.0-dev nor 2.0-dev available"; exit 1; }
 
 # --------------------------------------------------------------- 2. clone/pull
 echo "==> [2/5] Fetching repo..."
