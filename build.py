@@ -90,6 +90,20 @@ def step_package() -> None:
         icon = ROOT / "icons" / "icon-512.png"
         if icon.is_file():
             cmd += ["--icon", str(icon)]
+        # gi (PyGObject) uses lazy/dynamic module loading that PyInstaller's
+        # static analyzer cannot follow. Without --collect-all gi the resulting
+        # binary errors at launch with: ModuleNotFoundError: gi.repository.
+        # Same trap for pywebview's platform-specific submodules.
+        cmd += [
+            "--collect-all", "gi",
+            "--collect-all", "webview",
+            "--collect-submodules", "webview",
+            "--hidden-import", "gi.repository.WebKit2",
+            "--hidden-import", "gi.repository.Gtk",
+            "--hidden-import", "gi.repository.GLib",
+            "--hidden-import", "gi.repository.Gdk",
+            "--hidden-import", "cairo",
+        ]
         # WebKitGTK runtime libs ship via OS packages; we don't bundle them.
 
     cmd.append(ENTRYPOINT)

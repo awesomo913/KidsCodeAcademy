@@ -72,13 +72,36 @@ fi
 cd "$REPO_DIR"
 
 # ----------------------------------------------------------------- 3. venv
-echo "==> [3/5] Creating Python venv at .venv..."
+# CRITICAL on Pi: --system-site-packages lets the venv inherit the OS-installed
+# python3-gi (GObject introspection bindings). Without it, the venv's Python
+# can't `import gi`, PyInstaller skips it, and the resulting binary errors on
+# launch with "ModuleNotFoundError: No module named 'gi'".
+#
+# Always nuke + recreate the venv so we never inherit a previous run's bad
+# config (e.g. one created without --system-site-packages from an earlier
+# version of this script).
+echo "==> [3/5] Creating Python venv at .venv (with --system-site-packages)..."
+if [ -d ".venv" ]; then
+    # If existing venv lacks gi, rebuild it. Otherwise reuse for speed.
+    if ! .venv/bin/python3 -c "import gi" 2>/dev/null; then
+        echo "    existing venv cannot import gi — rebuilding..."
+        rm -rf .venv
+    fi
+fi
 if [ ! -d ".venv" ]; then
-    python3 -m venv .venv
+    python3 -m venv --system-site-packages .venv
 fi
 # shellcheck disable=SC1091
 source .venv/bin/activate
 pip install --upgrade pip wheel
+
+# Sanity check before we waste time on PyInstaller
+if ! python3 -c "import gi; from gi.repository import WebKit2" 2>/dev/null; then
+    echo "FATAL: gi.repository.WebKit2 still not importable after venv setup"
+    echo "       Check: dpkg -l | grep -E 'python3-gi|webkit2'"
+    exit 1
+fi
+echo "    gi + WebKit2 imports OK in venv"
 
 # ---------------------------------------------------------------- 4. py deps
 echo "==> [4/5] Installing Python packages (pywebview + pillow + pyinstaller)..."
@@ -100,21 +123,40 @@ elif [ -f "$HOME/KidsCodeAcademy/dist/KidsCodeAcademy" ]; then
     BIN_PATH="$HOME/KidsCodeAcademy/dist/KidsCodeAcademy"
 fi
 
-# Optional .desktop launcher for kid-friendly double-click
-if [ -n "$BIN_PATH" ] && [ -d "$HOME/.local/share/applications" ]; then
-    LAUNCHER="$HOME/.local/share/applications/kidscodeacademy.desktop"
-    cat > "$LAUNCHER" <<EOF
-[Desktop Entry]
+# Install icon to user pixmaps + create .desktop launchers (Apps menu + Desktop)
+if [ -n "$BIN_PATH" ]; then
+    # Copy the PNG icon to a stable location so the .desktop entry can find it
+    mkdir -p "$HOME/.local/share/icons" "$HOME/.local/share/applications"
+    cp -f "$REPO_DIR/icons/icon-512.png" "$HOME/.local/share/icons/kidscodeacademy.png"
+
+    DESKTOP_BODY="[Desktop Entry]
 Type=Application
+Version=1.0
 Name=Kids Code Academy
 Comment=Sandboxed coding tutorial for ages 7+
-Exec="$BIN_PATH"
-Icon=$REPO_DIR/icons/icon-512.png
+Exec=\"$BIN_PATH\"
+Icon=$HOME/.local/share/icons/kidscodeacademy.png
 Terminal=false
 Categories=Education;Game;
-EOF
+StartupNotify=true"
+
+    # 1. Apps menu entry
+    LAUNCHER="$HOME/.local/share/applications/kidscodeacademy.desktop"
+    printf '%s\n' "$DESKTOP_BODY" > "$LAUNCHER"
     chmod +x "$LAUNCHER" || true
-    echo "    desktop launcher: $LAUNCHER"
+    update-desktop-database "$HOME/.local/share/applications" 2>/dev/null || true
+
+    # 2. Desktop double-click launcher (with icon — Pi file manager reads
+    #    .desktop files, not raw ELF binary metadata, so the icon shows up here)
+    if [ -d "$HOME/Desktop" ]; then
+        DESK_LAUNCHER="$HOME/Desktop/Kids Code Academy.desktop"
+        printf '%s\n' "$DESKTOP_BODY" > "$DESK_LAUNCHER"
+        chmod +x "$DESK_LAUNCHER" || true
+        # Pi OS bookworm: marking trusted via gio so it runs on first double-click
+        gio set "$DESK_LAUNCHER" "metadata::trusted" true 2>/dev/null || true
+        echo "    desktop launcher: $DESK_LAUNCHER (with icon)"
+    fi
+    echo "    apps menu entry:  $LAUNCHER"
 fi
 
 echo
