@@ -456,6 +456,23 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 .chat-msg.you { align-self: flex-end; background: var(--accent-2); color: white; }
 .chat-msg.bot { align-self: flex-start; background: var(--panel); border: 2px solid var(--accent-2); }
 .chat-row { display: flex; gap: 8px; }
+.thinking-bubble {
+  display: flex; align-items: center; gap: 8px;
+  font-style: italic; color: var(--ink-soft); font-size: 16px;
+  padding: 10px 14px;
+}
+.thinking-dots { display: inline-flex; gap: 4px; }
+.thinking-dots span {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent-2);
+  animation: dot-bounce 1.2s ease-in-out infinite;
+}
+.thinking-dots span:nth-child(2) { animation-delay: 0.2s; }
+.thinking-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dot-bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40%           { transform: translateY(-6px); opacity: 1; }
+}
 .chat-row input {
   flex: 1; font-family: inherit; font-size: 18px;
   padding: 10px 14px;
@@ -2581,6 +2598,19 @@ const ImageChip_ = {
     return chip;
   },
 };
+
+/* Tool personality: thinking delay, thinking message, typing speed per helper.
+ * Teaches kids real differences — Cursor is instant (IDE autocomplete),
+ * Ollama is slow (running on local hardware), Claude is deliberate (careful reasoning). */
+const TOOL_PERSONALITY = {
+  claude:   { thinking_ms: 1400, thinking_msg: "Claude is thinking…",                typing_ms_per_char: 30 },
+  cursor:   { thinking_ms:  500, thinking_msg: "Cursor is analyzing your code…",    typing_ms_per_char: 16 },
+  gemini:   { thinking_ms:  900, thinking_msg: "Gemini is searching…",              typing_ms_per_char: 24 },
+  codex:    { thinking_ms:  650, thinking_msg: "Codex is writing code…",            typing_ms_per_char: 18 },
+  opencode: { thinking_ms:  800, thinking_msg: "OpenCode is thinking…",             typing_ms_per_char: 20 },
+  ollama:   { thinking_ms: 2000, thinking_msg: "Ollama is running on your computer…", typing_ms_per_char: 38 },
+};
+const _TOOL_PERSONALITY_DEFAULT = { thinking_ms: 800, thinking_msg: "Thinking…", typing_ms_per_char: 25 };
 
 /* ============================================================
  * v0.7 — ToolSimulator: wraps the existing buildChat() with a
@@ -5766,38 +5796,70 @@ const UI = {
       tabs.appendChild(t);
     });
 
+    let _askBusy = false;
     const ask = async () => {
       const v = (inp.value || "").trim();
-      if (!v) return;
+      if (!v || _askBusy) return;
+      _askBusy = true;
+      inp.value = "";
       Tracker.click();
+
       const you = el("div", { class: "chat-msg you" }, v);
       log.appendChild(you);
       log.scrollTop = log.scrollHeight;
       Audio_.sfx("Type");
       Transcripts.push({ lesson: lesson.id, helper, you: v });
 
-      const script = await Sandbox.load(helper, lesson.id);
-      const m = Sandbox.match(v, script);
-      if (m && m.side_effect) SideFX.run(svgStage, m.side_effect, { helper, lessonId: lesson.id });
+      const pers = TOOL_PERSONALITY[helper] || _TOOL_PERSONALITY_DEFAULT;
+      const thinkBubble = el("div", { class: "thinking-bubble" });
+      thinkBubble.appendChild(el("span", null, pers.thinking_msg));
+      const dots = el("span", { class: "thinking-dots" });
+      dots.appendChild(el("span")); dots.appendChild(el("span")); dots.appendChild(el("span"));
+      thinkBubble.appendChild(dots);
+      log.appendChild(thinkBubble);
+      log.scrollTop = log.scrollHeight;
+      Mascot.set("think");
 
-      const bot = el("div", { class: "chat-msg bot" }, "...");
-      log.appendChild(bot);
-      const text = ((m && m.reply_lines) || []).map(String).join(" ");
-      let i = 0;
-      const speed = (m && m.typing_delay_ms) ? Math.max(20, m.typing_delay_ms / Math.max(1, text.length)) : 25;
-      const tick = setInterval(() => {
-        bot.textContent = text.slice(0, ++i);
-        log.scrollTop = log.scrollHeight;
-        if (i >= text.length) clearInterval(tick);
-      }, speed);
-      inp.value = "";
-      attempts += 1;
-      if (lesson.sandbox.complete_after && attempts >= lesson.sandbox.complete_after) {
-        setTimeout(() => {
-          if (!Progress.isCompleted(lesson.id) && lesson.sandbox.auto_complete) {
-            this.completeLesson(lesson.id);
-          }
-        }, 1200);
+      try {
+        const script = await Sandbox.load(helper, lesson.id);
+        const m = Sandbox.match(v, script);
+        await new Promise(r => setTimeout(r, pers.thinking_ms));
+
+        // Remove bubble and reset mascot BEFORE bot response appears
+        if (thinkBubble.parentNode === log) log.removeChild(thinkBubble);
+        Mascot.set("idle");
+        _askBusy = false;
+
+        if (m && m.side_effect) SideFX.run(svgStage, m.side_effect, { helper, lessonId: lesson.id });
+
+        const bot = el("div", { class: "chat-msg bot" }, "");
+        log.appendChild(bot);
+        const text = ((m && m.reply_lines) || []).map(String).join(" ");
+        let i = 0;
+        const speed = (m && m.typing_delay_ms)
+          ? Math.max(16, m.typing_delay_ms / Math.max(1, text.length))
+          : Math.max(16, pers.typing_ms_per_char);
+        const tick = setInterval(() => {
+          bot.textContent = text.slice(0, ++i);
+          log.scrollTop = log.scrollHeight;
+          if (i >= text.length) clearInterval(tick);
+        }, speed);
+
+        attempts += 1;
+        if (lesson.sandbox.complete_after && attempts >= lesson.sandbox.complete_after) {
+          setTimeout(() => {
+            if (!Progress.isCompleted(lesson.id) && lesson.sandbox.auto_complete) {
+              this.completeLesson(lesson.id);
+            }
+          }, 1200);
+        }
+      } catch (e) {
+        console.warn("ask: sandbox error", e);
+      } finally {
+        // Safety net: always clean up bubble + mascot + lock on any error path
+        if (thinkBubble.parentNode === log) log.removeChild(thinkBubble);
+        Mascot.set("idle");
+        _askBusy = false;
       }
     };
     send.addEventListener("click", ask);
