@@ -3066,17 +3066,39 @@ const KidGame = {
       host.appendChild(el("h3", null, p.prompt || "Show your friend!"));
       const lines = (p.lines || []).map(String);
       let i = 0;
-      const display = el("div", { class: "bubble", style: { fontSize: "26px" } }, lines[0] || "");
-      host.appendChild(display);
+
+      // Bytey character above the bubble — bobs gently on each line change
+      const charRow = el("div", {
+        style: { display: "flex", alignItems: "flex-end", gap: "10px", marginTop: "8px" },
+      });
+      const bytey = el("div", {
+        style: {
+          fontSize: "56px", lineHeight: "1",
+          transition: "transform 240ms ease-out",
+          transform: "translateY(0)",
+        },
+      }, "🤖");
+      const display = el("div", { class: "bubble", style: { fontSize: "26px", flex: "1" } }, lines[0] || "");
+      charRow.appendChild(bytey);
+      charRow.appendChild(display);
+      host.appendChild(charRow);
+
+      const bob = () => {
+        bytey.style.transform = "translateY(-8px)";
+        setTimeout(() => { bytey.style.transform = "translateY(0)"; }, 240);
+      };
+
       const row = el("div", { style: { marginTop: "12px" } });
       host.appendChild(row);
       const back = el("button", { class: "btn-big alt", onclick: () => {
         Tracker.click();
-        i = Math.max(0, i - 1); display.textContent = lines[i] || "";
+        i = Math.max(0, i - 1);
+        display.textContent = lines[i] || "";
+        bob();
       } }, "Back");
       const next = el("button", { class: "btn-big", onclick: () => {
         Tracker.click();
-        if (i < lines.length - 1) { i += 1; display.textContent = lines[i]; Audio_.sfx("Page"); }
+        if (i < lines.length - 1) { i += 1; display.textContent = lines[i]; Audio_.sfx("Page"); bob(); }
         else { Audio_.sfx("Ding"); done(true); }
       } }, "Next");
       row.appendChild(back); row.appendChild(document.createTextNode(" ")); row.appendChild(next);
@@ -3096,6 +3118,21 @@ const KidGame = {
       host.appendChild(el("h3", null, p.prompt || "Type a great prompt!"));
       const goal = el("p", { class: "muted" }, p.goal || "Use clear, specific words. Add an example if you can!");
       host.appendChild(goal);
+
+      // Bytey at the top so the kid feels like they're talking to someone
+      const charRow = el("div", {
+        style: { display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" },
+      });
+      const bytey = el("div", { style: { fontSize: "44px", lineHeight: "1" } }, "🤖");
+      const charLabel = el("div", {
+        style: {
+          background: "var(--panel)", padding: "6px 12px", borderRadius: "12px",
+          border: "2px solid var(--accent-2)", fontSize: "16px", flex: "1",
+        },
+      }, "Tell me what you want — I'm listening!");
+      charRow.appendChild(bytey);
+      charRow.appendChild(charLabel);
+      host.appendChild(charRow);
 
       const ta = el("textarea", {
         rows: "4", maxlength: "240",
@@ -3331,29 +3368,111 @@ const KidGame = {
       draw();
     },
 
-    /* input-trace (lesson 33): each arrow press (tap or keyboard) logs input → action → result. */
+    /* input-trace (lesson 33): visible robot moves on the screen.
+     * Each arrow press → robot physically slides → plain-language trace log.
+     * Teaches the input → action → result loop by SHOWING it, not naming it. */
     "input-trace"(host, p, done) {
-      host.appendChild(el("h3", null, p.prompt || "Press an arrow 4 times!"));
-      const log = el("div", { class: "trace-log", style: { background: "#11111b", color: "#a6e3a1", padding: "10px", borderRadius: "8px", fontFamily: "monospace", fontSize: "13px", minHeight: "120px", marginTop: "10px", overflowY: "auto", maxHeight: "180px" } });
-      log.appendChild(el("div", { style: { color: "#666" } }, "Tap an arrow below or press an arrow key..."));
+      host.appendChild(el("h3", null, "Make the robot move! Try all 4 arrows."));
+      host.appendChild(el("p", { class: "muted", style: { marginTop: "4px" } },
+        "When you press a button, the robot moves. That's how every game works!"));
+
+      // Visible play field with a sky + grass background
+      const stage = el("div", {
+        style: {
+          background: "linear-gradient(180deg, #cfe7ff 0%, #cfe7ff 70%, #5acf95 70%)",
+          borderRadius: "12px",
+          minHeight: "150px",
+          position: "relative",
+          overflow: "hidden",
+          marginTop: "10px",
+          border: "3px solid var(--accent-2)",
+        },
+      });
+      // Sun
+      const sun = el("div", {
+        style: { position: "absolute", top: "10px", right: "16px", fontSize: "32px", lineHeight: "1" },
+      }, "☀️");
+      stage.appendChild(sun);
+      // Cloud
+      const cloud = el("div", {
+        style: { position: "absolute", top: "20px", left: "20px", fontSize: "24px", lineHeight: "1", opacity: "0.85" },
+      }, "☁️");
+      stage.appendChild(cloud);
+      // Robot hero
+      const hero = el("div", {
+        style: {
+          position: "absolute",
+          left: "calc(50% - 30px)",
+          top: "60px",
+          fontSize: "60px",
+          lineHeight: "1",
+          transition: "transform 220ms ease-out",
+          transform: "translate(0, 0)",
+          userSelect: "none",
+        },
+      }, "🤖");
+      stage.appendChild(hero);
+      host.appendChild(stage);
+
+      // Trace log — plain English
+      const log = el("div", {
+        style: {
+          background: "#11111b", color: "#a6e3a1", padding: "10px",
+          borderRadius: "8px", fontFamily: "monospace", fontSize: "14px",
+          minHeight: "80px", marginTop: "10px", overflowY: "auto", maxHeight: "180px",
+        },
+      });
+      log.appendChild(el("div", { style: { color: "#888" } },
+        "Tap an arrow below to move the robot..."));
       host.appendChild(log);
+
+      // Hero position (px offset from center)
+      let heroX = 0, heroY = 0;
+      const STEP_X = 60, STEP_Y = 25;
+      const MAX_X = 110, MAX_Y = 30;
+
       let presses = 0;
       const target = 4;
+      const dirMap = {
+        "←": { name: "left",  dx: -STEP_X, dy: 0       },
+        "→": { name: "right", dx:  STEP_X, dy: 0       },
+        "↑": { name: "up",    dx: 0,       dy: -STEP_Y },
+        "↓": { name: "down",  dx: 0,       dy:  STEP_Y },
+      };
+
       const press = (arrow) => {
         if (presses >= target) return;
+        const d = dirMap[arrow];
+        if (!d) return;
         presses += 1;
         Tracker.click();
-        if (presses === 1) clearNode(log);  // remove placeholder on first press
-        log.appendChild(el("div", null, `${presses}: input=${arrow} → action=move → result=hero shifts`));
+
+        // Move the robot (animated)
+        heroX = Math.max(-MAX_X, Math.min(MAX_X, heroX + d.dx));
+        heroY = Math.max(-MAX_Y, Math.min(MAX_Y, heroY + d.dy));
+        hero.style.transform = `translate(${heroX}px, ${heroY}px)`;
+
+        if (presses === 1) clearNode(log);
+        log.appendChild(el("div", null,
+          `${presses}. You pressed ${arrow}  →  the robot moved ${d.name}!`));
         log.scrollTop = log.scrollHeight;
         Audio_.sfx("Type");
+
         if (presses >= target) {
           window.removeEventListener("keydown", onKey);
           Audio_.sfx("Ding");
-          log.appendChild(el("div", { style: { color: "#fab387", marginTop: "6px" } }, "Done! You traced 4 inputs."));
-          setTimeout(() => done(true), 700);
+          log.appendChild(el("div", {
+            style: { color: "#fab387", marginTop: "8px", fontWeight: "bold" },
+          }, `🎉 Done! You moved the robot ${target} times!`));
+          log.appendChild(el("div", {
+            style: { color: "#94e2d5", marginTop: "4px", lineHeight: "1.5" },
+          }, "What YOU did = the input.  What the robot did = the action.  What you saw = the result!"));
+          // Mascot cheer for visible character feedback
+          if (typeof Mascot !== "undefined") Mascot.set("cheer", { revertAfterMs: 1600, revertTo: "idle" });
+          setTimeout(() => done(true), 2000);
         }
       };
+
       const arrows = { ArrowLeft: "←", ArrowRight: "→", ArrowUp: "↑", ArrowDown: "↓" };
       const onKey = (e) => {
         if (!arrows[e.key]) return;
@@ -3362,9 +3481,9 @@ const KidGame = {
       };
       window.addEventListener("keydown", onKey);
 
-      // Big tappable arrow buttons (mouse-only kids + tablet-friendly)
+      // Big tappable arrow buttons
       const btnRow = el("div", { class: "row", style: { gap: "10px", marginTop: "12px", justifyContent: "center", flexWrap: "wrap" } });
-      ["←","↑","→","↓"].forEach(a => {
+      ["←", "↑", "→", "↓"].forEach(a => {
         const b = el("button", {
           class: "btn-big alt",
           style: { fontSize: "32px", padding: "10px 22px", minWidth: "70px", lineHeight: "1" },
@@ -3373,7 +3492,8 @@ const KidGame = {
         btnRow.appendChild(b);
       });
       host.appendChild(btnRow);
-      host.appendChild(el("p", { class: "muted", style: { marginTop: "8px" } }, "Tap an arrow above, or use your keyboard arrows!"));
+      host.appendChild(el("p", { class: "muted", style: { marginTop: "8px" } },
+        "Tap an arrow up there ⬆ or use your keyboard arrows!"));
     },
 
     /* costume-swapper (lesson 34): swap hero costume + tweak FPS. */
