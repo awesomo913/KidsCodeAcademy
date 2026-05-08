@@ -41,11 +41,11 @@
           "prompt": "What is the level editor?",
           "options": [
             {
-              "text": "Each tile placed costs $1 in pebbles.",
+              "text": "Each block costs a real dollar.",
               "correct": false
             },
             {
-              "text": "Editors only work for printers and ovens.",
+              "text": "Levels can never be saved — they're shy.",
               "correct": false
             },
             {
@@ -63,7 +63,7 @@
           "prompt": "Quick! Which one is TRUE about the level editor?",
           "options": [
             {
-              "text": "Editors are run by judging frogs.",
+              "text": "Editors slow us way down by yawning.",
               "correct": false
             },
             {
@@ -75,7 +75,7 @@
               "correct": false
             },
             {
-              "text": "Levels can never be saved — they're shy.",
+              "text": "Level editors only edit one level then break.",
               "correct": false
             }
           ],
@@ -85,11 +85,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the level editor.",
           "options": [
             {
-              "text": "Editors save lots of typing.",
+              "text": "A level editor lets us place pieces.",
               "correct": false
             },
             {
-              "text": "Editors usually have a grid.",
+              "text": "Editors save lots of typing.",
               "correct": false
             },
             {
@@ -97,7 +97,7 @@
               "correct": true
             },
             {
-              "text": "A level editor lets us place pieces.",
+              "text": "Drag-and-drop is common in editors.",
               "correct": false
             }
           ],
@@ -107,11 +107,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about the level editor. What should he say?",
           "options": [
             {
-              "text": "Editors make game-making boring like cold soup.",
+              "text": "Level editors only edit one level then break.",
               "correct": false
             },
             {
-              "text": "Editors slow us way down by yawning.",
+              "text": "Editors make game-making boring like cold soup.",
               "correct": false
             },
             {
@@ -119,7 +119,7 @@
               "correct": true
             },
             {
-              "text": "Editors require giant typing — minimum 10,000 letters.",
+              "text": "Editors only work for printers and ovens.",
               "correct": false
             }
           ],
@@ -129,11 +129,11 @@
           "prompt": "Tell me — Which rule about the level editor is a GOOD rule?",
           "options": [
             {
-              "text": "Editors make game-making boring like cold soup.",
+              "text": "Each block costs a real dollar.",
               "correct": false
             },
             {
-              "text": "Each tile placed costs $1 in pebbles.",
+              "text": "Editors slow us way down by yawning.",
               "correct": false
             },
             {
@@ -141,11 +141,116 @@
               "correct": true
             },
             {
-              "text": "Editors slow us way down by yawning.",
+              "text": "Editors make game-making boring like cold soup.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_44_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about the level editor, ___",
+          "options": [
+            {
+              "text": "Each tile placed costs $1 in pebbles.",
+              "correct": false
+            },
+            {
+              "text": "Editors show changes instantly.",
+              "correct": true
+            },
+            {
+              "text": "Level editors require a paint brush you actually own.",
+              "correct": false
+            },
+            {
+              "text": "Editors require giant typing — minimum 10,000 letters.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about the level editor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Editors save lots of typing.",
+              "correct": false
+            },
+            {
+              "text": "A level editor makes games fun to make.",
+              "correct": false
+            },
+            {
+              "text": "Editors must be opened with a special spoon.",
+              "correct": true
+            },
+            {
+              "text": "Editors show changes instantly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with the level editor?",
+          "options": [
+            {
+              "text": "Editors only work for printers and ovens.",
+              "correct": false
+            },
+            {
+              "text": "Editors are run by judging frogs.",
+              "correct": false
+            },
+            {
+              "text": "Drag-and-drop is common in editors.",
+              "correct": true
+            },
+            {
+              "text": "Editors make game-making boring like cold soup.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about the level editor is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "A level editor lets you build levels by clicking instead of coding.",
+              "correct": false
+            },
+            {
+              "text": "Editors save lots of typing.",
+              "correct": false
+            },
+            {
+              "text": "Editors show changes instantly.",
+              "correct": false
+            },
+            {
+              "text": "Level editors require a paint brush you actually own.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about the level editor. Which fact would help him?",
+          "options": [
+            {
+              "text": "You drag blocks, paint backgrounds, and place enemies.",
+              "correct": true
+            },
+            {
+              "text": "Editors are run by judging frogs.",
+              "correct": false
+            },
+            {
+              "text": "Editors must be opened with a special spoon.",
+              "correct": false
+            },
+            {
+              "text": "Editors slow us way down by yawning.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -154,12 +259,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type LOOK and press Send to keep going!",
-          "target_display": "LOOK",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "look"
+            "yes"
           ],
-          "hint_wrong": "Type the word LOOK (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -272,6 +377,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_44_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey wants to test a new level layout 5 times in 10 minutes. What helps?",
+          "options": [
+            {
+              "text": "Drawing each level on paper.",
+              "correct": false
+            },
+            {
+              "text": "A level editor — drag, drop, save, play, repeat.",
+              "correct": true
+            },
+            {
+              "text": "Re-typing the level by hand each time.",
+              "correct": false
+            },
+            {
+              "text": "Asking a turtle to design it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey wants to test a new level layout 5 times in 10 minutes. What helps?",
+          "options": [
+            {
+              "text": "A level editor — drag, drop, save, play, repeat.",
+              "correct": true
+            },
+            {
+              "text": "Re-typing the level by hand each time.",
+              "correct": false
+            },
+            {
+              "text": "Drawing each level on paper.",
+              "correct": false
+            },
+            {
+              "text": "Asking a turtle to design it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey wants to test a new level layout 5 times in 10 minutes. What helps?",
+          "options": [
+            {
+              "text": "Drawing each level on paper.",
+              "correct": false
+            },
+            {
+              "text": "Re-typing the level by hand each time.",
+              "correct": false
+            },
+            {
+              "text": "Asking a turtle to design it.",
+              "correct": false
+            },
+            {
+              "text": "A level editor — drag, drop, save, play, repeat.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey wants to test a new level layout 5 times in 10 minutes. What helps?",
+          "options": [
+            {
+              "text": "A level editor — drag, drop, save, play, repeat.",
+              "correct": true
+            },
+            {
+              "text": "Re-typing the level by hand each time.",
+              "correct": false
+            },
+            {
+              "text": "Drawing each level on paper.",
+              "correct": false
+            },
+            {
+              "text": "Asking a turtle to design it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey wants to test a new level layout 5 times in 10 minutes. What helps?",
+          "options": [
+            {
+              "text": "A level editor — drag, drop, save, play, repeat.",
+              "correct": true
+            },
+            {
+              "text": "Asking a turtle to design it.",
+              "correct": false
+            },
+            {
+              "text": "Drawing each level on paper.",
+              "correct": false
+            },
+            {
+              "text": "Re-typing the level by hand each time.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -280,12 +490,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -398,6 +608,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_44_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — What's the big win of an editor?",
+          "options": [
+            {
+              "text": "Faster building means more iteration and better levels.",
+              "correct": true
+            },
+            {
+              "text": "Editors taste sweet to the cat.",
+              "correct": false
+            },
+            {
+              "text": "Editors deliver the mail.",
+              "correct": false
+            },
+            {
+              "text": "Editors are powered by sneeze sounds.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! What's the big win of an editor?",
+          "options": [
+            {
+              "text": "Faster building means more iteration and better levels.",
+              "correct": true
+            },
+            {
+              "text": "Editors taste sweet to the cat.",
+              "correct": false
+            },
+            {
+              "text": "Editors are powered by sneeze sounds.",
+              "correct": false
+            },
+            {
+              "text": "Editors deliver the mail.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What's the big win of an editor?",
+          "options": [
+            {
+              "text": "Editors taste sweet to the cat.",
+              "correct": false
+            },
+            {
+              "text": "Editors deliver the mail.",
+              "correct": false
+            },
+            {
+              "text": "Faster building means more iteration and better levels.",
+              "correct": true
+            },
+            {
+              "text": "Editors are powered by sneeze sounds.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: What's the big win of an editor?",
+          "options": [
+            {
+              "text": "Editors are powered by sneeze sounds.",
+              "correct": false
+            },
+            {
+              "text": "Editors taste sweet to the cat.",
+              "correct": false
+            },
+            {
+              "text": "Faster building means more iteration and better levels.",
+              "correct": true
+            },
+            {
+              "text": "Editors deliver the mail.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: What's the big win of an editor?",
+          "options": [
+            {
+              "text": "Faster building means more iteration and better levels.",
+              "correct": true
+            },
+            {
+              "text": "Editors deliver the mail.",
+              "correct": false
+            },
+            {
+              "text": "Editors taste sweet to the cat.",
+              "correct": false
+            },
+            {
+              "text": "Editors are powered by sneeze sounds.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -406,12 +721,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type TYPE and press Send to keep going!",
-          "target_display": "TYPE",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "type"
+            "cool"
           ],
-          "hint_wrong": "Type the word TYPE (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -419,19 +734,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about the level editor.",
           "options": [
             {
-              "text": "Editors usually have a grid.",
+              "text": "A level editor lets us place pieces.",
               "correct": false
             },
             {
-              "text": "Editors show changes instantly.",
+              "text": "Level editors save your work as a file you can load later.",
               "correct": false
             },
             {
-              "text": "Editors require giant typing — minimum 10,000 letters.",
+              "text": "Each block costs a real dollar.",
               "correct": true
             },
             {
-              "text": "We can save and reload our level.",
+              "text": "Editors are tools that help us build faster.",
               "correct": false
             }
           ],
@@ -441,19 +756,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about the level editor.",
           "options": [
             {
-              "text": "A level editor makes games fun to make.",
+              "text": "A level editor lets you build levels by clicking instead of coding.",
               "correct": false
             },
             {
-              "text": "Editors make game-making boring like cold soup.",
+              "text": "Level editors only edit one level then break.",
               "correct": true
             },
             {
-              "text": "Editors usually have a grid.",
+              "text": "A level editor lets us place pieces.",
               "correct": false
             },
             {
-              "text": "We can save and reload our level.",
+              "text": "Many famous games (like Mario Maker) ARE level editors!",
               "correct": false
             }
           ],
@@ -463,19 +778,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about the level editor.",
           "options": [
             {
-              "text": "We can save and reload our level.",
+              "text": "Editors are tools that help us build faster.",
               "correct": false
             },
             {
-              "text": "Editors usually have a grid.",
+              "text": "Level editors save your work as a file you can load later.",
               "correct": false
             },
             {
-              "text": "Editors are run by judging frogs.",
+              "text": "Level editors only work for square levels.",
               "correct": true
             },
             {
-              "text": "Editors are tools that help us build faster.",
+              "text": "A level editor lets us place pieces.",
               "correct": false
             }
           ],
@@ -485,11 +800,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about the level editor.",
           "options": [
             {
+              "text": "Editors usually have a grid.",
+              "correct": false
+            },
+            {
+              "text": "A level editor lets you build levels by clicking instead of coding.",
+              "correct": false
+            },
+            {
+              "text": "Editors only work for printers and ovens.",
+              "correct": true
+            },
+            {
+              "text": "A level editor makes games fun to make.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_44_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
               "text": "Drag-and-drop is common in editors.",
               "correct": false
             },
             {
+              "text": "Editors save lots of typing.",
+              "correct": false
+            },
+            {
+              "text": "Level editors save your work as a file you can load later.",
+              "correct": false
+            },
+            {
+              "text": "Levels can never be saved — they're shy.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_44_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "Many famous games (like Mario Maker) ARE level editors!",
+              "correct": false
+            },
+            {
+              "text": "Editors slow us way down by yawning.",
+              "correct": true
+            },
+            {
+              "text": "You drag blocks, paint backgrounds, and place enemies.",
+              "correct": false
+            },
+            {
               "text": "Editors usually have a grid.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "A level editor lets you build levels by clicking instead of coding.",
+              "correct": false
+            },
+            {
+              "text": "Editors save lots of typing.",
+              "correct": false
+            },
+            {
+              "text": "Editors require giant typing — minimum 10,000 letters.",
+              "correct": true
+            },
+            {
+              "text": "Editors are tools that help us build faster.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "A level editor lets us place pieces.",
+              "correct": false
+            },
+            {
+              "text": "Drag-and-drop is common in editors.",
+              "correct": false
+            },
+            {
+              "text": "Many famous games (like Mario Maker) ARE level editors!",
+              "correct": false
+            },
+            {
+              "text": "Editors make game-making boring like cold soup.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "Editors are run by judging frogs.",
+              "correct": true
+            },
+            {
+              "text": "Editors are tools that help us build faster.",
+              "correct": false
+            },
+            {
+              "text": "Editors show changes instantly.",
+              "correct": false
+            },
+            {
+              "text": "We can save and reload our level.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about the level editor.",
+          "options": [
+            {
+              "text": "You drag blocks, paint backgrounds, and place enemies.",
               "correct": false
             },
             {
@@ -497,33 +936,14 @@
               "correct": true
             },
             {
-              "text": "Editors show changes instantly.",
+              "text": "A level editor makes games fun to make.",
+              "correct": false
+            },
+            {
+              "text": "Level editors save your work as a file you can load later.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_44_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about the level editor.",
-          "options": [
-            {
-              "text": "Editors usually have a grid.",
-              "correct": false
-            },
-            {
-              "text": "Drag-and-drop is common in editors.",
-              "correct": false
-            },
-            {
-              "text": "Editors are tools that help us build faster.",
-              "correct": false
-            },
-            {
-              "text": "Each tile placed costs $1 in pebbles.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_44_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -532,12 +952,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WORD and press Send to keep going!",
-          "target_display": "WORD",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "word"
+            "next"
           ],
-          "hint_wrong": "Type the word WORD (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -545,19 +965,19 @@
           "prompt": "Tell me — Which one is TRUE about the level editor?",
           "options": [
             {
+              "text": "Editors slow us way down by yawning.",
+              "correct": false
+            },
+            {
+              "text": "Level editors only edit one level then break.",
+              "correct": false
+            },
+            {
               "text": "Editors only work for printers and ovens.",
               "correct": false
             },
             {
-              "text": "Levels can never be saved — they're shy.",
-              "correct": false
-            },
-            {
-              "text": "Editors are run by judging frogs.",
-              "correct": false
-            },
-            {
-              "text": "A level editor makes games fun to make.",
+              "text": "A level editor lets us place pieces.",
               "correct": true
             }
           ],
@@ -575,11 +995,11 @@
               "correct": false
             },
             {
-              "text": "Editors show changes instantly.",
+              "text": "We can save and reload our level.",
               "correct": true
             },
             {
-              "text": "Editors require giant typing — minimum 10,000 letters.",
+              "text": "Level editors require a paint brush you actually own.",
               "correct": false
             }
           ],
@@ -589,27 +1009,121 @@
           "prompt": "Pop quiz! Which one is TRUE about the level editor?",
           "options": [
             {
-              "text": "Editors usually have a grid.",
+              "text": "Editors are tools that help us build faster.",
               "correct": true
             },
             {
-              "text": "Editors only work for printers and ovens.",
-              "correct": false
-            },
-            {
-              "text": "Editors require giant typing — minimum 10,000 letters.",
-              "correct": false
-            },
-            {
               "text": "Editors make game-making boring like cold soup.",
+              "correct": false
+            },
+            {
+              "text": "Each tile placed costs $1 in pebbles.",
+              "correct": false
+            },
+            {
+              "text": "Levels can never be saved — they're shy.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_44_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "Each block costs a real dollar.",
+              "correct": false
+            },
+            {
+              "text": "Editors save lots of typing.",
+              "correct": true
+            },
+            {
+              "text": "Level editors require a paint brush you actually own.",
+              "correct": false
+            },
+            {
+              "text": "Each tile placed costs $1 in pebbles.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_44_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "A level editor makes games fun to make.",
+              "correct": true
+            },
+            {
+              "text": "Editors must be opened with a special spoon.",
+              "correct": false
+            },
+            {
+              "text": "Editors make game-making boring like cold soup.",
+              "correct": false
+            },
+            {
+              "text": "Level editors only work for square levels.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_44_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "Editors show changes instantly.",
+              "correct": true
+            },
+            {
+              "text": "Editors must be opened with a special spoon.",
+              "correct": false
+            },
+            {
+              "text": "Editors only work for printers and ovens.",
+              "correct": false
+            },
+            {
+              "text": "Levels can never be saved — they're shy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "Editors require giant typing — minimum 10,000 letters.",
+              "correct": false
+            },
+            {
+              "text": "Editors only work for printers and ovens.",
+              "correct": false
+            },
+            {
+              "text": "Editors usually have a grid.",
+              "correct": true
+            },
+            {
+              "text": "Editors slow us way down by yawning.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about the level editor?",
           "options": [
+            {
+              "text": "Editors only work for printers and ovens.",
+              "correct": false
+            },
+            {
+              "text": "Editors must be opened with a special spoon.",
+              "correct": false
+            },
             {
               "text": "Editors make game-making boring like cold soup.",
               "correct": false
@@ -617,39 +1131,50 @@
             {
               "text": "Drag-and-drop is common in editors.",
               "correct": true
-            },
-            {
-              "text": "Editors only work for printers and ovens.",
-              "correct": false
-            },
-            {
-              "text": "Editors are run by judging frogs.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_44_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about the level editor?",
           "options": [
             {
-              "text": "A level editor lets us place pieces.",
+              "text": "Level editors only work for square levels.",
+              "correct": false
+            },
+            {
+              "text": "Editors require giant typing — minimum 10,000 letters.",
+              "correct": false
+            },
+            {
+              "text": "Editors make game-making boring like cold soup.",
+              "correct": false
+            },
+            {
+              "text": "A level editor lets you build levels by clicking instead of coding.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the level editor?",
+          "options": [
+            {
+              "text": "Each block costs a real dollar.",
+              "correct": false
+            },
+            {
+              "text": "Level editors only edit one level then break.",
+              "correct": false
             },
             {
               "text": "Levels can never be saved — they're shy.",
               "correct": false
             },
             {
-              "text": "Editors are run by judging frogs.",
-              "correct": false
-            },
-            {
-              "text": "Editors require giant typing — minimum 10,000 letters.",
-              "correct": false
+              "text": "You drag blocks, paint backgrounds, and place enemies.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_44_q5_v4.wav"
+          ]
         }
       ]
     }

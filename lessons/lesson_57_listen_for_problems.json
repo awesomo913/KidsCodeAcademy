@@ -77,11 +77,11 @@
           "prompt": "What is listening for problems?",
           "options": [
             {
-              "text": "Problems must be sung to a cello.",
+              "text": "If someone complains, ignore them and they'll forget.",
               "correct": false
             },
             {
-              "text": "Problems are always loud and obvious — easy mode.",
+              "text": "Don't listen to anyone — they lie.",
               "correct": false
             },
             {
@@ -99,7 +99,7 @@
           "prompt": "Quick! Which one is TRUE about listening for problems?",
           "options": [
             {
-              "text": "Problems must be ignored before noon.",
+              "text": "Memory beats writing things down forever.",
               "correct": false
             },
             {
@@ -111,7 +111,7 @@
               "correct": false
             },
             {
-              "text": "Don't listen to anyone — they lie.",
+              "text": "Real games never have problems.",
               "correct": false
             }
           ],
@@ -121,11 +121,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about listening for problems.",
           "options": [
             {
-              "text": "Ask why the problem matters.",
+              "text": "Problems hide in everyday gripes.",
               "correct": false
             },
             {
-              "text": "Helpers can solve some, not all, problems.",
+              "text": "Ask why the problem matters.",
               "correct": false
             },
             {
@@ -133,7 +133,7 @@
               "correct": true
             },
             {
-              "text": "Problems hide in everyday gripes.",
+              "text": "Real problems repeat across many people.",
               "correct": false
             }
           ],
@@ -143,11 +143,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about listening for problems. What should he say?",
           "options": [
             {
-              "text": "Big problems need only big fixes — bigger always.",
+              "text": "Real games never have problems.",
               "correct": false
             },
             {
-              "text": "Memory beats writing things down forever.",
+              "text": "Big problems need only big fixes — bigger always.",
               "correct": false
             },
             {
@@ -155,7 +155,7 @@
               "correct": true
             },
             {
-              "text": "Don't ask why — it bites.",
+              "text": "Problems are always loud and obvious — easy mode.",
               "correct": false
             }
           ],
@@ -165,11 +165,11 @@
           "prompt": "Tell me — Which rule about listening for problems is a GOOD rule?",
           "options": [
             {
-              "text": "Big problems need only big fixes — bigger always.",
+              "text": "If someone complains, ignore them and they'll forget.",
               "correct": false
             },
             {
-              "text": "Problems must be sung to a cello.",
+              "text": "Memory beats writing things down forever.",
               "correct": false
             },
             {
@@ -177,11 +177,116 @@
               "correct": true
             },
             {
-              "text": "Memory beats writing things down forever.",
+              "text": "Big problems need only big fixes — bigger always.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_57_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about listening for problems, ___",
+          "options": [
+            {
+              "text": "Problems must be sung to a cello.",
+              "correct": false
+            },
+            {
+              "text": "Problems pop up at recess and dinner.",
+              "correct": true
+            },
+            {
+              "text": "Problems are punishment for being a bad coder.",
+              "correct": false
+            },
+            {
+              "text": "Don't ask why — it bites.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about listening for problems. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Ask why the problem matters.",
+              "correct": false
+            },
+            {
+              "text": "Big problems often have small fixes.",
+              "correct": false
+            },
+            {
+              "text": "Each problem requires a parade.",
+              "correct": true
+            },
+            {
+              "text": "Problems pop up at recess and dinner.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with listening for problems?",
+          "options": [
+            {
+              "text": "Problems are always loud and obvious — easy mode.",
+              "correct": false
+            },
+            {
+              "text": "Problems must be ignored before noon.",
+              "correct": false
+            },
+            {
+              "text": "Real problems repeat across many people.",
+              "correct": true
+            },
+            {
+              "text": "Big problems need only big fixes — bigger always.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about listening for problems is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Listening for problems means really HEARING what people say.",
+              "correct": false
+            },
+            {
+              "text": "Ask why the problem matters.",
+              "correct": false
+            },
+            {
+              "text": "Problems pop up at recess and dinner.",
+              "correct": false
+            },
+            {
+              "text": "Problems are punishment for being a bad coder.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about listening for problems. Which fact would help him?",
+          "options": [
+            {
+              "text": "If 3 people complain about the same thing, it's probably real.",
+              "correct": true
+            },
+            {
+              "text": "Problems must be ignored before noon.",
+              "correct": false
+            },
+            {
+              "text": "Each problem requires a parade.",
+              "correct": false
+            },
+            {
+              "text": "Memory beats writing things down forever.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -190,12 +295,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PLAY and press Send to keep going!",
-          "target_display": "PLAY",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "play"
+            "yes"
           ],
-          "hint_wrong": "Type the word PLAY (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -308,6 +413,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_57_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your friend says 'I always forget what's for dinner.' What's the hidden problem?",
+          "options": [
+            {
+              "text": "Dinner is afraid of them.",
+              "correct": false
+            },
+            {
+              "text": "They are secretly a goldfish.",
+              "correct": false
+            },
+            {
+              "text": "Their sock is too tight.",
+              "correct": false
+            },
+            {
+              "text": "They want a way to remember the dinner plan.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your friend says 'I always forget what's for dinner.' What's the hidden problem?",
+          "options": [
+            {
+              "text": "They want a way to remember the dinner plan.",
+              "correct": true
+            },
+            {
+              "text": "Dinner is afraid of them.",
+              "correct": false
+            },
+            {
+              "text": "Their sock is too tight.",
+              "correct": false
+            },
+            {
+              "text": "They are secretly a goldfish.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your friend says 'I always forget what's for dinner.' What's the hidden problem?",
+          "options": [
+            {
+              "text": "Their sock is too tight.",
+              "correct": false
+            },
+            {
+              "text": "Dinner is afraid of them.",
+              "correct": false
+            },
+            {
+              "text": "They want a way to remember the dinner plan.",
+              "correct": true
+            },
+            {
+              "text": "They are secretly a goldfish.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your friend says 'I always forget what's for dinner.' What's the hidden problem?",
+          "options": [
+            {
+              "text": "They want a way to remember the dinner plan.",
+              "correct": true
+            },
+            {
+              "text": "They are secretly a goldfish.",
+              "correct": false
+            },
+            {
+              "text": "Their sock is too tight.",
+              "correct": false
+            },
+            {
+              "text": "Dinner is afraid of them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your friend says 'I always forget what's for dinner.' What's the hidden problem?",
+          "options": [
+            {
+              "text": "Their sock is too tight.",
+              "correct": false
+            },
+            {
+              "text": "They are secretly a goldfish.",
+              "correct": false
+            },
+            {
+              "text": "Dinner is afraid of them.",
+              "correct": false
+            },
+            {
+              "text": "They want a way to remember the dinner plan.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -316,12 +526,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -434,6 +644,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_57_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why write down problems you hear?",
+          "options": [
+            {
+              "text": "Pencils need exercise.",
+              "correct": false
+            },
+            {
+              "text": "Writing earns you 5 stars.",
+              "correct": false
+            },
+            {
+              "text": "Problems get jealous of unwritten ones.",
+              "correct": false
+            },
+            {
+              "text": "So you can pick the best one to solve later.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why write down problems you hear?",
+          "options": [
+            {
+              "text": "Pencils need exercise.",
+              "correct": false
+            },
+            {
+              "text": "Problems get jealous of unwritten ones.",
+              "correct": false
+            },
+            {
+              "text": "Writing earns you 5 stars.",
+              "correct": false
+            },
+            {
+              "text": "So you can pick the best one to solve later.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why write down problems you hear?",
+          "options": [
+            {
+              "text": "Pencils need exercise.",
+              "correct": false
+            },
+            {
+              "text": "Problems get jealous of unwritten ones.",
+              "correct": false
+            },
+            {
+              "text": "So you can pick the best one to solve later.",
+              "correct": true
+            },
+            {
+              "text": "Writing earns you 5 stars.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why write down problems you hear?",
+          "options": [
+            {
+              "text": "Writing earns you 5 stars.",
+              "correct": false
+            },
+            {
+              "text": "Pencils need exercise.",
+              "correct": false
+            },
+            {
+              "text": "So you can pick the best one to solve later.",
+              "correct": true
+            },
+            {
+              "text": "Problems get jealous of unwritten ones.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why write down problems you hear?",
+          "options": [
+            {
+              "text": "Writing earns you 5 stars.",
+              "correct": false
+            },
+            {
+              "text": "So you can pick the best one to solve later.",
+              "correct": true
+            },
+            {
+              "text": "Problems get jealous of unwritten ones.",
+              "correct": false
+            },
+            {
+              "text": "Pencils need exercise.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -442,12 +757,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GAME and press Send to keep going!",
-          "target_display": "GAME",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "game"
+            "cool"
           ],
-          "hint_wrong": "Type the word GAME (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -455,19 +770,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about listening for problems.",
           "options": [
             {
-              "text": "Helpers can solve some, not all, problems.",
+              "text": "Problems hide in everyday gripes.",
               "correct": false
             },
             {
-              "text": "Problems pop up at recess and dinner.",
+              "text": "Don't argue with feedback -- collect it, then decide.",
               "correct": false
             },
             {
-              "text": "Don't ask why — it bites.",
+              "text": "If someone complains, ignore them and they'll forget.",
               "correct": true
             },
             {
-              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "text": "Write down the problem so you remember.",
               "correct": false
             }
           ],
@@ -477,19 +792,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about listening for problems.",
           "options": [
             {
-              "text": "Big problems often have small fixes.",
+              "text": "Listening for problems means really HEARING what people say.",
               "correct": false
             },
             {
-              "text": "Big problems need only big fixes — bigger always.",
+              "text": "Real games never have problems.",
               "correct": true
             },
             {
-              "text": "Helpers can solve some, not all, problems.",
+              "text": "Problems hide in everyday gripes.",
               "correct": false
             },
             {
-              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "text": "Problems are gifts: they show you what to fix.",
               "correct": false
             }
           ],
@@ -499,19 +814,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about listening for problems.",
           "options": [
             {
-              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "text": "Write down the problem so you remember.",
               "correct": false
             },
             {
-              "text": "Helpers can solve some, not all, problems.",
+              "text": "Don't argue with feedback -- collect it, then decide.",
               "correct": false
             },
             {
-              "text": "Problems must be ignored before noon.",
+              "text": "Listen only to people who agree with you.",
               "correct": true
             },
             {
-              "text": "Write down the problem so you remember.",
+              "text": "Problems hide in everyday gripes.",
               "correct": false
             }
           ],
@@ -521,11 +836,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about listening for problems.",
           "options": [
             {
+              "text": "Helpers can solve some, not all, problems.",
+              "correct": false
+            },
+            {
+              "text": "Listening for problems means really HEARING what people say.",
+              "correct": false
+            },
+            {
+              "text": "Problems are always loud and obvious — easy mode.",
+              "correct": true
+            },
+            {
+              "text": "Big problems often have small fixes.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_57_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
               "text": "Real problems repeat across many people.",
               "correct": false
             },
             {
+              "text": "Ask why the problem matters.",
+              "correct": false
+            },
+            {
+              "text": "Don't argue with feedback -- collect it, then decide.",
+              "correct": false
+            },
+            {
+              "text": "Don't listen to anyone — they lie.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_57_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "Problems are gifts: they show you what to fix.",
+              "correct": false
+            },
+            {
+              "text": "Memory beats writing things down forever.",
+              "correct": true
+            },
+            {
+              "text": "If 3 people complain about the same thing, it's probably real.",
+              "correct": false
+            },
+            {
               "text": "Helpers can solve some, not all, problems.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "Listening for problems means really HEARING what people say.",
+              "correct": false
+            },
+            {
+              "text": "Ask why the problem matters.",
+              "correct": false
+            },
+            {
+              "text": "Don't ask why — it bites.",
+              "correct": true
+            },
+            {
+              "text": "Write down the problem so you remember.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "Problems hide in everyday gripes.",
+              "correct": false
+            },
+            {
+              "text": "Real problems repeat across many people.",
+              "correct": false
+            },
+            {
+              "text": "Problems are gifts: they show you what to fix.",
+              "correct": false
+            },
+            {
+              "text": "Big problems need only big fixes — bigger always.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "Problems must be ignored before noon.",
+              "correct": true
+            },
+            {
+              "text": "Write down the problem so you remember.",
+              "correct": false
+            },
+            {
+              "text": "Problems pop up at recess and dinner.",
+              "correct": false
+            },
+            {
+              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about listening for problems.",
+          "options": [
+            {
+              "text": "If 3 people complain about the same thing, it's probably real.",
               "correct": false
             },
             {
@@ -533,33 +972,14 @@
               "correct": true
             },
             {
-              "text": "Problems pop up at recess and dinner.",
+              "text": "Big problems often have small fixes.",
+              "correct": false
+            },
+            {
+              "text": "Don't argue with feedback -- collect it, then decide.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_57_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about listening for problems.",
-          "options": [
-            {
-              "text": "Helpers can solve some, not all, problems.",
-              "correct": false
-            },
-            {
-              "text": "Real problems repeat across many people.",
-              "correct": false
-            },
-            {
-              "text": "Write down the problem so you remember.",
-              "correct": false
-            },
-            {
-              "text": "Problems must be sung to a cello.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_57_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -568,12 +988,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type CODE and press Send to keep going!",
-          "target_display": "CODE",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "code"
+            "next"
           ],
-          "hint_wrong": "Type the word CODE (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -581,19 +1001,19 @@
           "prompt": "Tell me — Which one is TRUE about listening for problems?",
           "options": [
             {
+              "text": "Memory beats writing things down forever.",
+              "correct": false
+            },
+            {
+              "text": "Real games never have problems.",
+              "correct": false
+            },
+            {
               "text": "Problems are always loud and obvious — easy mode.",
               "correct": false
             },
             {
-              "text": "Don't listen to anyone — they lie.",
-              "correct": false
-            },
-            {
-              "text": "Problems must be ignored before noon.",
-              "correct": false
-            },
-            {
-              "text": "Big problems often have small fixes.",
+              "text": "Problems hide in everyday gripes.",
               "correct": true
             }
           ],
@@ -611,11 +1031,11 @@
               "correct": false
             },
             {
-              "text": "Problems pop up at recess and dinner.",
+              "text": "Listen for the words 'I wish' and 'I hate'.",
               "correct": true
             },
             {
-              "text": "Don't ask why — it bites.",
+              "text": "Problems are punishment for being a bad coder.",
               "correct": false
             }
           ],
@@ -625,27 +1045,121 @@
           "prompt": "Pop quiz! Which one is TRUE about listening for problems?",
           "options": [
             {
-              "text": "Helpers can solve some, not all, problems.",
+              "text": "Write down the problem so you remember.",
               "correct": true
             },
             {
-              "text": "Problems are always loud and obvious — easy mode.",
-              "correct": false
-            },
-            {
-              "text": "Don't ask why — it bites.",
-              "correct": false
-            },
-            {
               "text": "Big problems need only big fixes — bigger always.",
+              "correct": false
+            },
+            {
+              "text": "Problems must be sung to a cello.",
+              "correct": false
+            },
+            {
+              "text": "Don't listen to anyone — they lie.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_57_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "If someone complains, ignore them and they'll forget.",
+              "correct": false
+            },
+            {
+              "text": "Ask why the problem matters.",
+              "correct": true
+            },
+            {
+              "text": "Problems are punishment for being a bad coder.",
+              "correct": false
+            },
+            {
+              "text": "Problems must be sung to a cello.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_57_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "Big problems often have small fixes.",
+              "correct": true
+            },
+            {
+              "text": "Each problem requires a parade.",
+              "correct": false
+            },
+            {
+              "text": "Big problems need only big fixes — bigger always.",
+              "correct": false
+            },
+            {
+              "text": "Listen only to people who agree with you.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_57_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "Problems pop up at recess and dinner.",
+              "correct": true
+            },
+            {
+              "text": "Each problem requires a parade.",
+              "correct": false
+            },
+            {
+              "text": "Problems are always loud and obvious — easy mode.",
+              "correct": false
+            },
+            {
+              "text": "Don't listen to anyone — they lie.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "Don't ask why — it bites.",
+              "correct": false
+            },
+            {
+              "text": "Problems are always loud and obvious — easy mode.",
+              "correct": false
+            },
+            {
+              "text": "Helpers can solve some, not all, problems.",
+              "correct": true
+            },
+            {
+              "text": "Memory beats writing things down forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about listening for problems?",
           "options": [
+            {
+              "text": "Problems are always loud and obvious — easy mode.",
+              "correct": false
+            },
+            {
+              "text": "Each problem requires a parade.",
+              "correct": false
+            },
             {
               "text": "Big problems need only big fixes — bigger always.",
               "correct": false
@@ -653,39 +1167,50 @@
             {
               "text": "Real problems repeat across many people.",
               "correct": true
-            },
-            {
-              "text": "Problems are always loud and obvious — easy mode.",
-              "correct": false
-            },
-            {
-              "text": "Problems must be ignored before noon.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_57_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about listening for problems?",
           "options": [
             {
-              "text": "Problems hide in everyday gripes.",
+              "text": "Listen only to people who agree with you.",
+              "correct": false
+            },
+            {
+              "text": "Don't ask why — it bites.",
+              "correct": false
+            },
+            {
+              "text": "Big problems need only big fixes — bigger always.",
+              "correct": false
+            },
+            {
+              "text": "Listening for problems means really HEARING what people say.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about listening for problems?",
+          "options": [
+            {
+              "text": "If someone complains, ignore them and they'll forget.",
+              "correct": false
+            },
+            {
+              "text": "Real games never have problems.",
+              "correct": false
             },
             {
               "text": "Don't listen to anyone — they lie.",
               "correct": false
             },
             {
-              "text": "Problems must be ignored before noon.",
-              "correct": false
-            },
-            {
-              "text": "Don't ask why — it bites.",
-              "correct": false
+              "text": "If 3 people complain about the same thing, it's probably real.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_57_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -694,124 +1219,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about listening for problems. Pick the SILLIEST claim.",
+          "prompt": "3 friends say your jump is too floaty. What's the smart move?",
           "options": [
             {
-              "text": "Real problems repeat across many people.",
+              "text": "Tell them they're wrong.",
               "correct": false
             },
             {
-              "text": "Helpers can solve some, not all, problems.",
+              "text": "Block them from playing.",
               "correct": false
             },
             {
-              "text": "Problems must be ignored before noon.",
+              "text": "Believe them -- fix the jump.",
               "correct": true
             },
             {
-              "text": "Problems hide in everyday gripes.",
+              "text": "Make the jump even floatier to teach them.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_57_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about listening for problems. Pick the SILLIEST claim.",
+          "prompt": "Quick! 3 friends say your jump is too floaty. What's the smart move?",
           "options": [
             {
-              "text": "Write down the problem so you remember.",
+              "text": "Tell them they're wrong.",
               "correct": false
             },
             {
-              "text": "Real problems repeat across many people.",
+              "text": "Block them from playing.",
               "correct": false
             },
             {
-              "text": "Each problem requires a parade.",
+              "text": "Believe them -- fix the jump.",
               "correct": true
             },
             {
-              "text": "Listen for the words 'I wish' and 'I hate'.",
+              "text": "Make the jump even floatier to teach them.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_57_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about listening for problems. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — 3 friends say your jump is too floaty. What's the smart move?",
           "options": [
             {
-              "text": "Ask why the problem matters.",
+              "text": "Block them from playing.",
               "correct": false
             },
             {
-              "text": "Problems must be sung to a cello.",
+              "text": "Make the jump even floatier to teach them.",
+              "correct": false
+            },
+            {
+              "text": "Tell them they're wrong.",
+              "correct": false
+            },
+            {
+              "text": "Believe them -- fix the jump.",
               "correct": true
-            },
-            {
-              "text": "Real problems repeat across many people.",
-              "correct": false
-            },
-            {
-              "text": "Problems hide in everyday gripes.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_57_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about listening for problems. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: 3 friends say your jump is too floaty. What's the smart move?",
           "options": [
             {
-              "text": "Problems hide in everyday gripes.",
-              "correct": false
-            },
-            {
-              "text": "Listen for the words 'I wish' and 'I hate'.",
-              "correct": false
-            },
-            {
-              "text": "Problems pop up at recess and dinner.",
-              "correct": false
-            },
-            {
-              "text": "Problems are always loud and obvious — easy mode.",
+              "text": "Believe them -- fix the jump.",
               "correct": true
+            },
+            {
+              "text": "Block them from playing.",
+              "correct": false
+            },
+            {
+              "text": "Tell them they're wrong.",
+              "correct": false
+            },
+            {
+              "text": "Make the jump even floatier to teach them.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_57_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about listening for problems. Pick the SILLIEST claim.",
+          "prompt": "Tell me — 3 friends say your jump is too floaty. What's the smart move?",
           "options": [
             {
-              "text": "Don't listen to anyone — they lie.",
+              "text": "Make the jump even floatier to teach them.",
+              "correct": false
+            },
+            {
+              "text": "Block them from playing.",
+              "correct": false
+            },
+            {
+              "text": "Believe them -- fix the jump.",
               "correct": true
             },
             {
-              "text": "Helpers can solve some, not all, problems.",
-              "correct": false
-            },
-            {
-              "text": "Problems hide in everyday gripes.",
-              "correct": false
-            },
-            {
-              "text": "Problems pop up at recess and dinner.",
+              "text": "Tell them they're wrong.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_57_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — 3 friends say your jump is too floaty. What's the smart move?",
+          "options": [
+            {
+              "text": "Make the jump even floatier to teach them.",
+              "correct": false
+            },
+            {
+              "text": "Tell them they're wrong.",
+              "correct": false
+            },
+            {
+              "text": "Block them from playing.",
+              "correct": false
+            },
+            {
+              "text": "Believe them -- fix the jump.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! 3 friends say your jump is too floaty. What's the smart move?",
+          "options": [
+            {
+              "text": "Block them from playing.",
+              "correct": false
+            },
+            {
+              "text": "Believe them -- fix the jump.",
+              "correct": true
+            },
+            {
+              "text": "Make the jump even floatier to teach them.",
+              "correct": false
+            },
+            {
+              "text": "Tell them they're wrong.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — 3 friends say your jump is too floaty. What's the smart move?",
+          "options": [
+            {
+              "text": "Believe them -- fix the jump.",
+              "correct": true
+            },
+            {
+              "text": "Tell them they're wrong.",
+              "correct": false
+            },
+            {
+              "text": "Block them from playing.",
+              "correct": false
+            },
+            {
+              "text": "Make the jump even floatier to teach them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: 3 friends say your jump is too floaty. What's the smart move?",
+          "options": [
+            {
+              "text": "Believe them -- fix the jump.",
+              "correct": true
+            },
+            {
+              "text": "Block them from playing.",
+              "correct": false
+            },
+            {
+              "text": "Tell them they're wrong.",
+              "correct": false
+            },
+            {
+              "text": "Make the jump even floatier to teach them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: 3 friends say your jump is too floaty. What's the smart move?",
+          "options": [
+            {
+              "text": "Block them from playing.",
+              "correct": false
+            },
+            {
+              "text": "Tell them they're wrong.",
+              "correct": false
+            },
+            {
+              "text": "Make the jump even floatier to teach them.",
+              "correct": false
+            },
+            {
+              "text": "Believe them -- fix the jump.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

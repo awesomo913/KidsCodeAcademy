@@ -57,11 +57,11 @@
           "prompt": "What is the wish?",
           "options": [
             {
-              "text": "Wishes only work in odd-numbered years.",
+              "text": "Wishes count only on holidays.",
               "correct": false
             },
             {
-              "text": "A wish is the final answer locked in stone.",
+              "text": "Wishes get muddier as you build, sadly.",
               "correct": false
             },
             {
@@ -79,7 +79,7 @@
           "prompt": "Quick! Which one is TRUE about the wish?",
           "options": [
             {
-              "text": "Wishes must be granted by a goose.",
+              "text": "Big wishes are easier to test — go huge.",
               "correct": false
             },
             {
@@ -91,7 +91,7 @@
               "correct": false
             },
             {
-              "text": "Wishes get muddier as you build, sadly.",
+              "text": "Real coders don't wish -- they just type.",
               "correct": false
             }
           ],
@@ -101,11 +101,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the wish.",
           "options": [
             {
-              "text": "Wishes can change after you learn.",
+              "text": "A wish is a starting idea.",
               "correct": false
             },
             {
-              "text": "The wish guides every decision.",
+              "text": "Wishes can change after you learn.",
               "correct": false
             },
             {
@@ -113,7 +113,7 @@
               "correct": true
             },
             {
-              "text": "A wish is a starting idea.",
+              "text": "Stuck? Re-read the wish.",
               "correct": false
             }
           ],
@@ -123,11 +123,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about the wish. What should he say?",
           "options": [
             {
-              "text": "Naming wishes is silly and bad luck.",
+              "text": "Real coders don't wish -- they just type.",
               "correct": false
             },
             {
-              "text": "Big wishes are easier to test — go huge.",
+              "text": "Naming wishes is silly and bad luck.",
               "correct": false
             },
             {
@@ -135,7 +135,7 @@
               "correct": true
             },
             {
-              "text": "Wishes must never change once spoken.",
+              "text": "A wish is the final answer locked in stone.",
               "correct": false
             }
           ],
@@ -145,11 +145,11 @@
           "prompt": "Tell me — Which rule about the wish is a GOOD rule?",
           "options": [
             {
-              "text": "Naming wishes is silly and bad luck.",
+              "text": "Wishes count only on holidays.",
               "correct": false
             },
             {
-              "text": "Wishes only work in odd-numbered years.",
+              "text": "Big wishes are easier to test — go huge.",
               "correct": false
             },
             {
@@ -157,11 +157,116 @@
               "correct": true
             },
             {
-              "text": "Big wishes are easier to test — go huge.",
+              "text": "Naming wishes is silly and bad luck.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_49_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about the wish, ___",
+          "options": [
+            {
+              "text": "Wishes only work in odd-numbered years.",
+              "correct": false
+            },
+            {
+              "text": "A wish should fit on a sticky note.",
+              "correct": true
+            },
+            {
+              "text": "A wish must be spoken to a real shooting star.",
+              "correct": false
+            },
+            {
+              "text": "Wishes must never change once spoken.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about the wish. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": false
+            },
+            {
+              "text": "Naming the wish helps the team.",
+              "correct": false
+            },
+            {
+              "text": "Wishes weigh exactly 4 pounds.",
+              "correct": true
+            },
+            {
+              "text": "A wish should fit on a sticky note.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with the wish?",
+          "options": [
+            {
+              "text": "A wish is the final answer locked in stone.",
+              "correct": false
+            },
+            {
+              "text": "Wishes must be granted by a goose.",
+              "correct": false
+            },
+            {
+              "text": "Stuck? Re-read the wish.",
+              "correct": true
+            },
+            {
+              "text": "Naming wishes is silly and bad luck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about the wish is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "A wish is the BIG dream behind your game.",
+              "correct": false
+            },
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": false
+            },
+            {
+              "text": "A wish should fit on a sticky note.",
+              "correct": false
+            },
+            {
+              "text": "A wish must be spoken to a real shooting star.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about the wish. Which fact would help him?",
+          "options": [
+            {
+              "text": "Knowing your wish helps you decide what to add or skip.",
+              "correct": true
+            },
+            {
+              "text": "Wishes must be granted by a goose.",
+              "correct": false
+            },
+            {
+              "text": "Wishes weigh exactly 4 pounds.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes are easier to test — go huge.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -170,12 +275,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type DREAM and press Send to keep going!",
-          "target_display": "DREAM",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "dream"
+            "yes"
           ],
-          "hint_wrong": "Type the word DREAM (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -288,6 +393,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_49_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Pick the better wish for a 7yo's first game:",
+          "options": [
+            {
+              "text": "'An MMORPG with 200 classes and global servers.'",
+              "correct": false
+            },
+            {
+              "text": "'Game.'",
+              "correct": false
+            },
+            {
+              "text": "'Whatever, surprise me.'",
+              "correct": false
+            },
+            {
+              "text": "'A hero jumps over one tiny bad guy and grabs a coin.'",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Pick the better wish for a 7yo's first game:",
+          "options": [
+            {
+              "text": "'Game.'",
+              "correct": false
+            },
+            {
+              "text": "'A hero jumps over one tiny bad guy and grabs a coin.'",
+              "correct": true
+            },
+            {
+              "text": "'Whatever, surprise me.'",
+              "correct": false
+            },
+            {
+              "text": "'An MMORPG with 200 classes and global servers.'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Pick the better wish for a 7yo's first game:",
+          "options": [
+            {
+              "text": "'An MMORPG with 200 classes and global servers.'",
+              "correct": false
+            },
+            {
+              "text": "'Game.'",
+              "correct": false
+            },
+            {
+              "text": "'Whatever, surprise me.'",
+              "correct": false
+            },
+            {
+              "text": "'A hero jumps over one tiny bad guy and grabs a coin.'",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Pick the better wish for a 7yo's first game:",
+          "options": [
+            {
+              "text": "'An MMORPG with 200 classes and global servers.'",
+              "correct": false
+            },
+            {
+              "text": "'Game.'",
+              "correct": false
+            },
+            {
+              "text": "'A hero jumps over one tiny bad guy and grabs a coin.'",
+              "correct": true
+            },
+            {
+              "text": "'Whatever, surprise me.'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Pick the better wish for a 7yo's first game:",
+          "options": [
+            {
+              "text": "'A hero jumps over one tiny bad guy and grabs a coin.'",
+              "correct": true
+            },
+            {
+              "text": "'Game.'",
+              "correct": false
+            },
+            {
+              "text": "'An MMORPG with 200 classes and global servers.'",
+              "correct": false
+            },
+            {
+              "text": "'Whatever, surprise me.'",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -296,12 +506,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -414,6 +624,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_49_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why keep the wish simple at the start?",
+          "options": [
+            {
+              "text": "Simple wishes go on vacation.",
+              "correct": false
+            },
+            {
+              "text": "Easier to ship + can grow once it works.",
+              "correct": true
+            },
+            {
+              "text": "Simple wishes earn double points.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes scare your computer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why keep the wish simple at the start?",
+          "options": [
+            {
+              "text": "Easier to ship + can grow once it works.",
+              "correct": true
+            },
+            {
+              "text": "Simple wishes earn double points.",
+              "correct": false
+            },
+            {
+              "text": "Simple wishes go on vacation.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes scare your computer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why keep the wish simple at the start?",
+          "options": [
+            {
+              "text": "Big wishes scare your computer.",
+              "correct": false
+            },
+            {
+              "text": "Easier to ship + can grow once it works.",
+              "correct": true
+            },
+            {
+              "text": "Simple wishes earn double points.",
+              "correct": false
+            },
+            {
+              "text": "Simple wishes go on vacation.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why keep the wish simple at the start?",
+          "options": [
+            {
+              "text": "Simple wishes earn double points.",
+              "correct": false
+            },
+            {
+              "text": "Easier to ship + can grow once it works.",
+              "correct": true
+            },
+            {
+              "text": "Simple wishes go on vacation.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes scare your computer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why keep the wish simple at the start?",
+          "options": [
+            {
+              "text": "Easier to ship + can grow once it works.",
+              "correct": true
+            },
+            {
+              "text": "Big wishes scare your computer.",
+              "correct": false
+            },
+            {
+              "text": "Simple wishes go on vacation.",
+              "correct": false
+            },
+            {
+              "text": "Simple wishes earn double points.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -422,12 +737,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type LEARN and press Send to keep going!",
-          "target_display": "LEARN",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "learn"
+            "cool"
           ],
-          "hint_wrong": "Type the word LEARN (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -435,19 +750,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about the wish.",
           "options": [
             {
-              "text": "The wish guides every decision.",
+              "text": "A wish is a starting idea.",
               "correct": false
             },
             {
-              "text": "A wish should fit on a sticky note.",
+              "text": "Examples: 'I want a kid to laugh' or 'I want a player to feel brave'.",
               "correct": false
             },
             {
-              "text": "Wishes must never change once spoken.",
+              "text": "Wishes count only on holidays.",
               "correct": true
             },
             {
-              "text": "Wishes get clearer as you build.",
+              "text": "A small wish is easier to test.",
               "correct": false
             }
           ],
@@ -457,19 +772,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about the wish.",
           "options": [
             {
-              "text": "Naming the wish helps the team.",
+              "text": "A wish is the BIG dream behind your game.",
               "correct": false
             },
             {
-              "text": "Naming wishes is silly and bad luck.",
+              "text": "Real coders don't wish -- they just type.",
               "correct": true
             },
             {
-              "text": "The wish guides every decision.",
+              "text": "A wish is a starting idea.",
               "correct": false
             },
             {
-              "text": "Wishes get clearer as you build.",
+              "text": "Every part of your game should serve the wish.",
               "correct": false
             }
           ],
@@ -479,19 +794,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about the wish.",
           "options": [
             {
-              "text": "Wishes get clearer as you build.",
+              "text": "A small wish is easier to test.",
               "correct": false
             },
             {
-              "text": "The wish guides every decision.",
+              "text": "Examples: 'I want a kid to laugh' or 'I want a player to feel brave'.",
               "correct": false
             },
             {
-              "text": "Wishes must be granted by a goose.",
+              "text": "Wishes use up your daily creativity.",
               "correct": true
             },
             {
-              "text": "A small wish is easier to test.",
+              "text": "A wish is a starting idea.",
               "correct": false
             }
           ],
@@ -501,11 +816,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about the wish.",
           "options": [
             {
+              "text": "The wish guides every decision.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the BIG dream behind your game.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the final answer locked in stone.",
+              "correct": true
+            },
+            {
+              "text": "Naming the wish helps the team.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_49_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
               "text": "Stuck? Re-read the wish.",
               "correct": false
             },
             {
+              "text": "Wishes can change after you learn.",
+              "correct": false
+            },
+            {
+              "text": "Examples: 'I want a kid to laugh' or 'I want a player to feel brave'.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get muddier as you build, sadly.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_49_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "Every part of your game should serve the wish.",
+              "correct": false
+            },
+            {
+              "text": "Big wishes are easier to test — go huge.",
+              "correct": true
+            },
+            {
+              "text": "Knowing your wish helps you decide what to add or skip.",
+              "correct": false
+            },
+            {
               "text": "The wish guides every decision.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "A wish is the BIG dream behind your game.",
+              "correct": false
+            },
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": false
+            },
+            {
+              "text": "Wishes must never change once spoken.",
+              "correct": true
+            },
+            {
+              "text": "A small wish is easier to test.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "A wish is a starting idea.",
+              "correct": false
+            },
+            {
+              "text": "Stuck? Re-read the wish.",
+              "correct": false
+            },
+            {
+              "text": "Every part of your game should serve the wish.",
+              "correct": false
+            },
+            {
+              "text": "Naming wishes is silly and bad luck.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "Wishes must be granted by a goose.",
+              "correct": true
+            },
+            {
+              "text": "A small wish is easier to test.",
+              "correct": false
+            },
+            {
+              "text": "A wish should fit on a sticky note.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get clearer as you build.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about the wish.",
+          "options": [
+            {
+              "text": "Knowing your wish helps you decide what to add or skip.",
               "correct": false
             },
             {
@@ -513,33 +952,14 @@
               "correct": true
             },
             {
-              "text": "A wish should fit on a sticky note.",
+              "text": "Naming the wish helps the team.",
+              "correct": false
+            },
+            {
+              "text": "Examples: 'I want a kid to laugh' or 'I want a player to feel brave'.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_49_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about the wish.",
-          "options": [
-            {
-              "text": "The wish guides every decision.",
-              "correct": false
-            },
-            {
-              "text": "Stuck? Re-read the wish.",
-              "correct": false
-            },
-            {
-              "text": "A small wish is easier to test.",
-              "correct": false
-            },
-            {
-              "text": "Wishes only work in odd-numbered years.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_49_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -548,12 +968,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SOLVE and press Send to keep going!",
-          "target_display": "SOLVE",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "solve"
+            "next"
           ],
-          "hint_wrong": "Type the word SOLVE (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -561,19 +981,19 @@
           "prompt": "Tell me — Which one is TRUE about the wish?",
           "options": [
             {
+              "text": "Big wishes are easier to test — go huge.",
+              "correct": false
+            },
+            {
+              "text": "Real coders don't wish -- they just type.",
+              "correct": false
+            },
+            {
               "text": "A wish is the final answer locked in stone.",
               "correct": false
             },
             {
-              "text": "Wishes get muddier as you build, sadly.",
-              "correct": false
-            },
-            {
-              "text": "Wishes must be granted by a goose.",
-              "correct": false
-            },
-            {
-              "text": "Naming the wish helps the team.",
+              "text": "A wish is a starting idea.",
               "correct": true
             }
           ],
@@ -591,11 +1011,11 @@
               "correct": false
             },
             {
-              "text": "A wish should fit on a sticky note.",
+              "text": "Wishes get clearer as you build.",
               "correct": true
             },
             {
-              "text": "Wishes must never change once spoken.",
+              "text": "A wish must be spoken to a real shooting star.",
               "correct": false
             }
           ],
@@ -605,27 +1025,121 @@
           "prompt": "Pop quiz! Which one is TRUE about the wish?",
           "options": [
             {
-              "text": "The wish guides every decision.",
+              "text": "A small wish is easier to test.",
               "correct": true
             },
             {
-              "text": "A wish is the final answer locked in stone.",
-              "correct": false
-            },
-            {
-              "text": "Wishes must never change once spoken.",
-              "correct": false
-            },
-            {
               "text": "Naming wishes is silly and bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Wishes only work in odd-numbered years.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get muddier as you build, sadly.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_49_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "Wishes count only on holidays.",
+              "correct": false
+            },
+            {
+              "text": "Wishes can change after you learn.",
+              "correct": true
+            },
+            {
+              "text": "A wish must be spoken to a real shooting star.",
+              "correct": false
+            },
+            {
+              "text": "Wishes only work in odd-numbered years.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_49_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "Naming the wish helps the team.",
+              "correct": true
+            },
+            {
+              "text": "Wishes weigh exactly 4 pounds.",
+              "correct": false
+            },
+            {
+              "text": "Naming wishes is silly and bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Wishes use up your daily creativity.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_49_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "A wish should fit on a sticky note.",
+              "correct": true
+            },
+            {
+              "text": "Wishes weigh exactly 4 pounds.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the final answer locked in stone.",
+              "correct": false
+            },
+            {
+              "text": "Wishes get muddier as you build, sadly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "Wishes must never change once spoken.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the final answer locked in stone.",
+              "correct": false
+            },
+            {
+              "text": "The wish guides every decision.",
+              "correct": true
+            },
+            {
+              "text": "Big wishes are easier to test — go huge.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about the wish?",
           "options": [
+            {
+              "text": "A wish is the final answer locked in stone.",
+              "correct": false
+            },
+            {
+              "text": "Wishes weigh exactly 4 pounds.",
+              "correct": false
+            },
             {
               "text": "Naming wishes is silly and bad luck.",
               "correct": false
@@ -633,39 +1147,50 @@
             {
               "text": "Stuck? Re-read the wish.",
               "correct": true
-            },
-            {
-              "text": "A wish is the final answer locked in stone.",
-              "correct": false
-            },
-            {
-              "text": "Wishes must be granted by a goose.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_49_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about the wish?",
           "options": [
             {
-              "text": "A wish is a starting idea.",
+              "text": "Wishes use up your daily creativity.",
+              "correct": false
+            },
+            {
+              "text": "Wishes must never change once spoken.",
+              "correct": false
+            },
+            {
+              "text": "Naming wishes is silly and bad luck.",
+              "correct": false
+            },
+            {
+              "text": "A wish is the BIG dream behind your game.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the wish?",
+          "options": [
+            {
+              "text": "Wishes count only on holidays.",
+              "correct": false
+            },
+            {
+              "text": "Real coders don't wish -- they just type.",
+              "correct": false
             },
             {
               "text": "Wishes get muddier as you build, sadly.",
               "correct": false
             },
             {
-              "text": "Wishes must be granted by a goose.",
-              "correct": false
-            },
-            {
-              "text": "Wishes must never change once spoken.",
-              "correct": false
+              "text": "Knowing your wish helps you decide what to add or skip.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_49_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -674,124 +1199,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about the wish. Pick the SILLIEST claim.",
+          "prompt": "Your wish: 'I want kids to feel brave.' Now you're picking enemies. Which fits?",
           "options": [
             {
-              "text": "Stuck? Re-read the wish.",
+              "text": "Impossible bosses no one can ever defeat.",
               "correct": false
             },
             {
-              "text": "The wish guides every decision.",
+              "text": "100 enemies that all win.",
               "correct": false
             },
             {
-              "text": "Wishes must be granted by a goose.",
+              "text": "No enemies at all.",
+              "correct": false
+            },
+            {
+              "text": "Slow, scary monsters the kid CAN beat with practice.",
               "correct": true
-            },
-            {
-              "text": "A wish is a starting idea.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_49_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about the wish. Pick the SILLIEST claim.",
+          "prompt": "Quick! Your wish: 'I want kids to feel brave.' Now you're picking enemies. Which fits?",
           "options": [
             {
-              "text": "A small wish is easier to test.",
+              "text": "100 enemies that all win.",
               "correct": false
             },
             {
-              "text": "Stuck? Re-read the wish.",
+              "text": "No enemies at all.",
               "correct": false
             },
             {
-              "text": "Wishes weigh exactly 4 pounds.",
+              "text": "Impossible bosses no one can ever defeat.",
+              "correct": false
+            },
+            {
+              "text": "Slow, scary monsters the kid CAN beat with practice.",
               "correct": true
-            },
-            {
-              "text": "Wishes get clearer as you build.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_49_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about the wish. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Your wish: 'I want kids to feel brave.' Now you're picking enemies. Which fits?",
           "options": [
             {
-              "text": "Wishes can change after you learn.",
+              "text": "100 enemies that all win.",
               "correct": false
             },
             {
-              "text": "Wishes only work in odd-numbered years.",
+              "text": "Impossible bosses no one can ever defeat.",
+              "correct": false
+            },
+            {
+              "text": "Slow, scary monsters the kid CAN beat with practice.",
               "correct": true
             },
             {
-              "text": "Stuck? Re-read the wish.",
-              "correct": false
-            },
-            {
-              "text": "A wish is a starting idea.",
+              "text": "No enemies at all.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_49_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about the wish. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Your wish: 'I want kids to feel brave.' Now you're picking enemies. Which fits?",
           "options": [
             {
-              "text": "A wish is a starting idea.",
+              "text": "100 enemies that all win.",
               "correct": false
             },
             {
-              "text": "Wishes get clearer as you build.",
+              "text": "Impossible bosses no one can ever defeat.",
               "correct": false
             },
             {
-              "text": "A wish should fit on a sticky note.",
-              "correct": false
-            },
-            {
-              "text": "A wish is the final answer locked in stone.",
+              "text": "Slow, scary monsters the kid CAN beat with practice.",
               "correct": true
+            },
+            {
+              "text": "No enemies at all.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_49_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about the wish. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Your wish: 'I want kids to feel brave.' Now you're picking enemies. Which fits?",
           "options": [
             {
-              "text": "Wishes get muddier as you build, sadly.",
+              "text": "No enemies at all.",
+              "correct": false
+            },
+            {
+              "text": "100 enemies that all win.",
+              "correct": false
+            },
+            {
+              "text": "Impossible bosses no one can ever defeat.",
+              "correct": false
+            },
+            {
+              "text": "Slow, scary monsters the kid CAN beat with practice.",
               "correct": true
-            },
-            {
-              "text": "The wish guides every decision.",
-              "correct": false
-            },
-            {
-              "text": "A wish is a starting idea.",
-              "correct": false
-            },
-            {
-              "text": "A wish should fit on a sticky note.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_49_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your wish: 'I want kids to feel brave.' Now you're picking enemies. Which fits?",
+          "options": [
+            {
+              "text": "No enemies at all.",
+              "correct": false
+            },
+            {
+              "text": "Impossible bosses no one can ever defeat.",
+              "correct": false
+            },
+            {
+              "text": "100 enemies that all win.",
+              "correct": false
+            },
+            {
+              "text": "Slow, scary monsters the kid CAN beat with practice.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your wish: 'I want kids to feel brave.' Now you're picking enemies. Which fits?",
+          "options": [
+            {
+              "text": "No enemies at all.",
+              "correct": false
+            },
+            {
+              "text": "100 enemies that all win.",
+              "correct": false
+            },
+            {
+              "text": "Impossible bosses no one can ever defeat.",
+              "correct": false
+            },
+            {
+              "text": "Slow, scary monsters the kid CAN beat with practice.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your wish: 'I want kids to feel brave.' Now you're picking enemies. Which fits?",
+          "options": [
+            {
+              "text": "No enemies at all.",
+              "correct": false
+            },
+            {
+              "text": "Slow, scary monsters the kid CAN beat with practice.",
+              "correct": true
+            },
+            {
+              "text": "100 enemies that all win.",
+              "correct": false
+            },
+            {
+              "text": "Impossible bosses no one can ever defeat.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your wish: 'I want kids to feel brave.' Now you're picking enemies. Which fits?",
+          "options": [
+            {
+              "text": "100 enemies that all win.",
+              "correct": false
+            },
+            {
+              "text": "Slow, scary monsters the kid CAN beat with practice.",
+              "correct": true
+            },
+            {
+              "text": "Impossible bosses no one can ever defeat.",
+              "correct": false
+            },
+            {
+              "text": "No enemies at all.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your wish: 'I want kids to feel brave.' Now you're picking enemies. Which fits?",
+          "options": [
+            {
+              "text": "100 enemies that all win.",
+              "correct": false
+            },
+            {
+              "text": "Slow, scary monsters the kid CAN beat with practice.",
+              "correct": true
+            },
+            {
+              "text": "Impossible bosses no one can ever defeat.",
+              "correct": false
+            },
+            {
+              "text": "No enemies at all.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

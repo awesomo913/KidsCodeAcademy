@@ -58,11 +58,11 @@
           "prompt": "What is my first platformer?",
           "options": [
             {
-              "text": "Movement must be done by yelling.",
+              "text": "Real platformers can only be played with one hand.",
               "correct": false
             },
             {
-              "text": "Platformers never have a hero — they wander.",
+              "text": "Platforms are made of clouds — fall through!",
               "correct": false
             },
             {
@@ -80,7 +80,7 @@
           "prompt": "Quick! Which one is TRUE about my first platformer?",
           "options": [
             {
-              "text": "Bad guys are decorative shrubs.",
+              "text": "Falling off is a way to win the bonus round.",
               "correct": false
             },
             {
@@ -92,7 +92,7 @@
               "correct": false
             },
             {
-              "text": "Platforms are made of clouds — fall through!",
+              "text": "Platforms float because of secret invisible balloons.",
               "correct": false
             }
           ],
@@ -102,11 +102,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about my first platformer.",
           "options": [
             {
-              "text": "Coins or stars are common rewards.",
+              "text": "A platformer has a hero who jumps.",
               "correct": false
             },
             {
-              "text": "Power-ups can change the game briefly.",
+              "text": "Coins or stars are common rewards.",
               "correct": false
             },
             {
@@ -114,7 +114,7 @@
               "correct": true
             },
             {
-              "text": "A platformer has a hero who jumps.",
+              "text": "Movement should feel good.",
               "correct": false
             }
           ],
@@ -124,11 +124,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about my first platformer. What should he say?",
           "options": [
             {
-              "text": "Flags are hidden forever in another country.",
+              "text": "Platforms float because of secret invisible balloons.",
               "correct": false
             },
             {
-              "text": "Falling off is a way to win the bonus round.",
+              "text": "Flags are hidden forever in another country.",
               "correct": false
             },
             {
@@ -136,7 +136,7 @@
               "correct": true
             },
             {
-              "text": "Rewards are bad and rude to the screen.",
+              "text": "Platformers never have a hero — they wander.",
               "correct": false
             }
           ],
@@ -146,11 +146,11 @@
           "prompt": "Tell me — Which rule about my first platformer is a GOOD rule?",
           "options": [
             {
-              "text": "Flags are hidden forever in another country.",
+              "text": "Real platformers can only be played with one hand.",
               "correct": false
             },
             {
-              "text": "Movement must be done by yelling.",
+              "text": "Falling off is a way to win the bonus round.",
               "correct": false
             },
             {
@@ -158,11 +158,116 @@
               "correct": true
             },
             {
-              "text": "Falling off is a way to win the bonus round.",
+              "text": "Flags are hidden forever in another country.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about my first platformer, ___",
+          "options": [
+            {
+              "text": "Movement must be done by yelling.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys add challenge.",
+              "correct": true
+            },
+            {
+              "text": "Platformers must have at least 100 platforms.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad and rude to the screen.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": false
+            },
+            {
+              "text": "Reaching the flag often wins.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are fueled by goose eggs.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys add challenge.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with my first platformer?",
+          "options": [
+            {
+              "text": "Platformers never have a hero — they wander.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys are decorative shrubs.",
+              "correct": false
+            },
+            {
+              "text": "Movement should feel good.",
+              "correct": true
+            },
+            {
+              "text": "Flags are hidden forever in another country.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about my first platformer is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "A platformer is a game where the hero jumps on platforms.",
+              "correct": false
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys add challenge.",
+              "correct": false
+            },
+            {
+              "text": "Platformers must have at least 100 platforms.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about my first platformer. Which fact would help him?",
+          "options": [
+            {
+              "text": "Mario, Sonic, and many others are platformers.",
+              "correct": true
+            },
+            {
+              "text": "Bad guys are decorative shrubs.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are fueled by goose eggs.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win the bonus round.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -171,12 +276,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SAVE and press Send to keep going!",
-          "target_display": "SAVE",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "save"
+            "yes"
           ],
-          "hint_wrong": "Type the word SAVE (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -289,6 +394,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your platformer has a hero, platforms, and bad guys, but no goal. What's missing?",
+          "options": [
+            {
+              "text": "A second hero in case the first gets bored.",
+              "correct": false
+            },
+            {
+              "text": "A book about birds.",
+              "correct": false
+            },
+            {
+              "text": "A loud air horn.",
+              "correct": false
+            },
+            {
+              "text": "A win condition — like a flag or a finish line.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your platformer has a hero, platforms, and bad guys, but no goal. What's missing?",
+          "options": [
+            {
+              "text": "A loud air horn.",
+              "correct": false
+            },
+            {
+              "text": "A win condition — like a flag or a finish line.",
+              "correct": true
+            },
+            {
+              "text": "A second hero in case the first gets bored.",
+              "correct": false
+            },
+            {
+              "text": "A book about birds.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your platformer has a hero, platforms, and bad guys, but no goal. What's missing?",
+          "options": [
+            {
+              "text": "A win condition — like a flag or a finish line.",
+              "correct": true
+            },
+            {
+              "text": "A book about birds.",
+              "correct": false
+            },
+            {
+              "text": "A loud air horn.",
+              "correct": false
+            },
+            {
+              "text": "A second hero in case the first gets bored.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your platformer has a hero, platforms, and bad guys, but no goal. What's missing?",
+          "options": [
+            {
+              "text": "A book about birds.",
+              "correct": false
+            },
+            {
+              "text": "A win condition — like a flag or a finish line.",
+              "correct": true
+            },
+            {
+              "text": "A loud air horn.",
+              "correct": false
+            },
+            {
+              "text": "A second hero in case the first gets bored.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your platformer has a hero, platforms, and bad guys, but no goal. What's missing?",
+          "options": [
+            {
+              "text": "A second hero in case the first gets bored.",
+              "correct": false
+            },
+            {
+              "text": "A book about birds.",
+              "correct": false
+            },
+            {
+              "text": "A loud air horn.",
+              "correct": false
+            },
+            {
+              "text": "A win condition — like a flag or a finish line.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -297,12 +507,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -415,6 +625,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why are platformers fun for so many people?",
+          "options": [
+            {
+              "text": "They're always exactly 14 minutes long.",
+              "correct": false
+            },
+            {
+              "text": "Jumping + clear goals + fair challenge feel great.",
+              "correct": true
+            },
+            {
+              "text": "They are required by international law.",
+              "correct": false
+            },
+            {
+              "text": "Platforms taste sweet.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why are platformers fun for so many people?",
+          "options": [
+            {
+              "text": "They are required by international law.",
+              "correct": false
+            },
+            {
+              "text": "Platforms taste sweet.",
+              "correct": false
+            },
+            {
+              "text": "They're always exactly 14 minutes long.",
+              "correct": false
+            },
+            {
+              "text": "Jumping + clear goals + fair challenge feel great.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why are platformers fun for so many people?",
+          "options": [
+            {
+              "text": "Platforms taste sweet.",
+              "correct": false
+            },
+            {
+              "text": "Jumping + clear goals + fair challenge feel great.",
+              "correct": true
+            },
+            {
+              "text": "They're always exactly 14 minutes long.",
+              "correct": false
+            },
+            {
+              "text": "They are required by international law.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why are platformers fun for so many people?",
+          "options": [
+            {
+              "text": "Jumping + clear goals + fair challenge feel great.",
+              "correct": true
+            },
+            {
+              "text": "Platforms taste sweet.",
+              "correct": false
+            },
+            {
+              "text": "They are required by international law.",
+              "correct": false
+            },
+            {
+              "text": "They're always exactly 14 minutes long.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why are platformers fun for so many people?",
+          "options": [
+            {
+              "text": "They're always exactly 14 minutes long.",
+              "correct": false
+            },
+            {
+              "text": "Jumping + clear goals + fair challenge feel great.",
+              "correct": true
+            },
+            {
+              "text": "They are required by international law.",
+              "correct": false
+            },
+            {
+              "text": "Platforms taste sweet.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -423,12 +738,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type READ and press Send to keep going!",
-          "target_display": "READ",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "read"
+            "cool"
           ],
-          "hint_wrong": "Type the word READ (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -436,19 +751,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about my first platformer.",
           "options": [
             {
-              "text": "Power-ups can change the game briefly.",
+              "text": "A platformer has a hero who jumps.",
               "correct": false
             },
             {
-              "text": "Bad guys add challenge.",
+              "text": "Your first platformer can be tiny -- just a hero, a floor, and a goal.",
               "correct": false
             },
             {
-              "text": "Rewards are bad and rude to the screen.",
+              "text": "Real platformers can only be played with one hand.",
               "correct": true
             },
             {
-              "text": "Platforms are where the hero stands.",
+              "text": "Falling off is a way to lose.",
               "correct": false
             }
           ],
@@ -458,19 +773,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about my first platformer.",
           "options": [
             {
-              "text": "Reaching the flag often wins.",
+              "text": "A platformer is a game where the hero jumps on platforms.",
               "correct": false
             },
             {
-              "text": "Flags are hidden forever in another country.",
+              "text": "Platforms float because of secret invisible balloons.",
               "correct": true
             },
             {
-              "text": "Power-ups can change the game briefly.",
+              "text": "A platformer has a hero who jumps.",
               "correct": false
             },
             {
-              "text": "Platforms are where the hero stands.",
+              "text": "Each iteration (try) makes the platformer better.",
               "correct": false
             }
           ],
@@ -480,19 +795,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about my first platformer.",
           "options": [
             {
-              "text": "Platforms are where the hero stands.",
+              "text": "Falling off is a way to lose.",
               "correct": false
             },
             {
-              "text": "Power-ups can change the game briefly.",
+              "text": "Your first platformer can be tiny -- just a hero, a floor, and a goal.",
               "correct": false
             },
             {
-              "text": "Bad guys are decorative shrubs.",
+              "text": "Platformers were invented yesterday.",
               "correct": true
             },
             {
-              "text": "Falling off is a way to lose.",
+              "text": "A platformer has a hero who jumps.",
               "correct": false
             }
           ],
@@ -502,11 +817,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about my first platformer.",
           "options": [
             {
+              "text": "Power-ups can change the game briefly.",
+              "correct": false
+            },
+            {
+              "text": "A platformer is a game where the hero jumps on platforms.",
+              "correct": false
+            },
+            {
+              "text": "Platformers never have a hero — they wander.",
+              "correct": true
+            },
+            {
+              "text": "Reaching the flag often wins.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_46_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
               "text": "Movement should feel good.",
               "correct": false
             },
             {
+              "text": "Coins or stars are common rewards.",
+              "correct": false
+            },
+            {
+              "text": "Your first platformer can be tiny -- just a hero, a floor, and a goal.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are made of clouds — fall through!",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_46_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "Each iteration (try) makes the platformer better.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to win the bonus round.",
+              "correct": true
+            },
+            {
+              "text": "Mario, Sonic, and many others are platformers.",
+              "correct": false
+            },
+            {
               "text": "Power-ups can change the game briefly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "A platformer is a game where the hero jumps on platforms.",
+              "correct": false
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad and rude to the screen.",
+              "correct": true
+            },
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": false
+            },
+            {
+              "text": "Movement should feel good.",
+              "correct": false
+            },
+            {
+              "text": "Each iteration (try) makes the platformer better.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever in another country.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "Bad guys are decorative shrubs.",
+              "correct": true
+            },
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys add challenge.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about my first platformer.",
+          "options": [
+            {
+              "text": "Mario, Sonic, and many others are platformers.",
               "correct": false
             },
             {
@@ -514,33 +953,14 @@
               "correct": true
             },
             {
-              "text": "Bad guys add challenge.",
+              "text": "Reaching the flag often wins.",
+              "correct": false
+            },
+            {
+              "text": "Your first platformer can be tiny -- just a hero, a floor, and a goal.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_46_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about my first platformer.",
-          "options": [
-            {
-              "text": "Power-ups can change the game briefly.",
-              "correct": false
-            },
-            {
-              "text": "Movement should feel good.",
-              "correct": false
-            },
-            {
-              "text": "Falling off is a way to lose.",
-              "correct": false
-            },
-            {
-              "text": "Movement must be done by yelling.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_46_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -549,12 +969,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WRITE and press Send to keep going!",
-          "target_display": "WRITE",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "write"
+            "next"
           ],
-          "hint_wrong": "Type the word WRITE (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -562,19 +982,19 @@
           "prompt": "Tell me — Which one is TRUE about my first platformer?",
           "options": [
             {
+              "text": "Falling off is a way to win the bonus round.",
+              "correct": false
+            },
+            {
+              "text": "Platforms float because of secret invisible balloons.",
+              "correct": false
+            },
+            {
               "text": "Platformers never have a hero — they wander.",
               "correct": false
             },
             {
-              "text": "Platforms are made of clouds — fall through!",
-              "correct": false
-            },
-            {
-              "text": "Bad guys are decorative shrubs.",
-              "correct": false
-            },
-            {
-              "text": "Reaching the flag often wins.",
+              "text": "A platformer has a hero who jumps.",
               "correct": true
             }
           ],
@@ -592,11 +1012,11 @@
               "correct": false
             },
             {
-              "text": "Bad guys add challenge.",
+              "text": "Platforms are where the hero stands.",
               "correct": true
             },
             {
-              "text": "Rewards are bad and rude to the screen.",
+              "text": "Platformers must have at least 100 platforms.",
               "correct": false
             }
           ],
@@ -606,27 +1026,121 @@
           "prompt": "Pop quiz! Which one is TRUE about my first platformer?",
           "options": [
             {
-              "text": "Power-ups can change the game briefly.",
+              "text": "Falling off is a way to lose.",
               "correct": true
             },
             {
-              "text": "Platformers never have a hero — they wander.",
-              "correct": false
-            },
-            {
-              "text": "Rewards are bad and rude to the screen.",
-              "correct": false
-            },
-            {
               "text": "Flags are hidden forever in another country.",
+              "correct": false
+            },
+            {
+              "text": "Movement must be done by yelling.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are made of clouds — fall through!",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Real platformers can only be played with one hand.",
+              "correct": false
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": true
+            },
+            {
+              "text": "Platformers must have at least 100 platforms.",
+              "correct": false
+            },
+            {
+              "text": "Movement must be done by yelling.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_46_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Reaching the flag often wins.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups are fueled by goose eggs.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever in another country.",
+              "correct": false
+            },
+            {
+              "text": "Platformers were invented yesterday.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_46_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Bad guys add challenge.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups are fueled by goose eggs.",
+              "correct": false
+            },
+            {
+              "text": "Platformers never have a hero — they wander.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are made of clouds — fall through!",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Rewards are bad and rude to the screen.",
+              "correct": false
+            },
+            {
+              "text": "Platformers never have a hero — they wander.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups can change the game briefly.",
+              "correct": true
+            },
+            {
+              "text": "Falling off is a way to win the bonus round.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about my first platformer?",
           "options": [
+            {
+              "text": "Platformers never have a hero — they wander.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are fueled by goose eggs.",
+              "correct": false
+            },
             {
               "text": "Flags are hidden forever in another country.",
               "correct": false
@@ -634,39 +1148,50 @@
             {
               "text": "Movement should feel good.",
               "correct": true
-            },
-            {
-              "text": "Platformers never have a hero — they wander.",
-              "correct": false
-            },
-            {
-              "text": "Bad guys are decorative shrubs.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_46_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about my first platformer?",
           "options": [
             {
-              "text": "A platformer has a hero who jumps.",
+              "text": "Platformers were invented yesterday.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad and rude to the screen.",
+              "correct": false
+            },
+            {
+              "text": "Flags are hidden forever in another country.",
+              "correct": false
+            },
+            {
+              "text": "A platformer is a game where the hero jumps on platforms.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about my first platformer?",
+          "options": [
+            {
+              "text": "Real platformers can only be played with one hand.",
+              "correct": false
+            },
+            {
+              "text": "Platforms float because of secret invisible balloons.",
+              "correct": false
             },
             {
               "text": "Platforms are made of clouds — fall through!",
               "correct": false
             },
             {
-              "text": "Bad guys are decorative shrubs.",
-              "correct": false
-            },
-            {
-              "text": "Rewards are bad and rude to the screen.",
-              "correct": false
+              "text": "Mario, Sonic, and many others are platformers.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_46_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -675,124 +1200,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "prompt": "What's the SIMPLEST first platformer?",
           "options": [
             {
-              "text": "Movement should feel good.",
+              "text": "100 levels with bosses on every screen.",
               "correct": false
             },
             {
-              "text": "Power-ups can change the game briefly.",
+              "text": "A racing game with cars.",
               "correct": false
             },
             {
-              "text": "Bad guys are decorative shrubs.",
+              "text": "Hero stands on a floor, jumps, and reaches a flag.",
               "correct": true
             },
             {
-              "text": "A platformer has a hero who jumps.",
+              "text": "A puzzle game with words.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "prompt": "Quick! What's the SIMPLEST first platformer?",
           "options": [
             {
-              "text": "Falling off is a way to lose.",
+              "text": "A racing game with cars.",
               "correct": false
             },
             {
-              "text": "Movement should feel good.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups are fueled by goose eggs.",
+              "text": "Hero stands on a floor, jumps, and reaches a flag.",
               "correct": true
             },
             {
-              "text": "Platforms are where the hero stands.",
+              "text": "A puzzle game with words.",
+              "correct": false
+            },
+            {
+              "text": "100 levels with bosses on every screen.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — What's the SIMPLEST first platformer?",
           "options": [
             {
-              "text": "Coins or stars are common rewards.",
+              "text": "100 levels with bosses on every screen.",
               "correct": false
             },
             {
-              "text": "Movement must be done by yelling.",
+              "text": "Hero stands on a floor, jumps, and reaches a flag.",
               "correct": true
             },
             {
-              "text": "Movement should feel good.",
+              "text": "A puzzle game with words.",
               "correct": false
             },
             {
-              "text": "A platformer has a hero who jumps.",
+              "text": "A racing game with cars.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: What's the SIMPLEST first platformer?",
           "options": [
             {
-              "text": "A platformer has a hero who jumps.",
-              "correct": false
-            },
-            {
-              "text": "Platforms are where the hero stands.",
-              "correct": false
-            },
-            {
-              "text": "Bad guys add challenge.",
-              "correct": false
-            },
-            {
-              "text": "Platformers never have a hero — they wander.",
+              "text": "Hero stands on a floor, jumps, and reaches a flag.",
               "correct": true
+            },
+            {
+              "text": "A puzzle game with words.",
+              "correct": false
+            },
+            {
+              "text": "100 levels with bosses on every screen.",
+              "correct": false
+            },
+            {
+              "text": "A racing game with cars.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "prompt": "Tell me — What's the SIMPLEST first platformer?",
           "options": [
             {
-              "text": "Platforms are made of clouds — fall through!",
+              "text": "A puzzle game with words.",
+              "correct": false
+            },
+            {
+              "text": "100 levels with bosses on every screen.",
+              "correct": false
+            },
+            {
+              "text": "A racing game with cars.",
+              "correct": false
+            },
+            {
+              "text": "Hero stands on a floor, jumps, and reaches a flag.",
               "correct": true
-            },
-            {
-              "text": "Power-ups can change the game briefly.",
-              "correct": false
-            },
-            {
-              "text": "A platformer has a hero who jumps.",
-              "correct": false
-            },
-            {
-              "text": "Bad guys add challenge.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — What's the SIMPLEST first platformer?",
+          "options": [
+            {
+              "text": "Hero stands on a floor, jumps, and reaches a flag.",
+              "correct": true
+            },
+            {
+              "text": "A puzzle game with words.",
+              "correct": false
+            },
+            {
+              "text": "A racing game with cars.",
+              "correct": false
+            },
+            {
+              "text": "100 levels with bosses on every screen.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! What's the SIMPLEST first platformer?",
+          "options": [
+            {
+              "text": "Hero stands on a floor, jumps, and reaches a flag.",
+              "correct": true
+            },
+            {
+              "text": "A puzzle game with words.",
+              "correct": false
+            },
+            {
+              "text": "100 levels with bosses on every screen.",
+              "correct": false
+            },
+            {
+              "text": "A racing game with cars.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What's the SIMPLEST first platformer?",
+          "options": [
+            {
+              "text": "A puzzle game with words.",
+              "correct": false
+            },
+            {
+              "text": "Hero stands on a floor, jumps, and reaches a flag.",
+              "correct": true
+            },
+            {
+              "text": "100 levels with bosses on every screen.",
+              "correct": false
+            },
+            {
+              "text": "A racing game with cars.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: What's the SIMPLEST first platformer?",
+          "options": [
+            {
+              "text": "A puzzle game with words.",
+              "correct": false
+            },
+            {
+              "text": "100 levels with bosses on every screen.",
+              "correct": false
+            },
+            {
+              "text": "A racing game with cars.",
+              "correct": false
+            },
+            {
+              "text": "Hero stands on a floor, jumps, and reaches a flag.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: What's the SIMPLEST first platformer?",
+          "options": [
+            {
+              "text": "100 levels with bosses on every screen.",
+              "correct": false
+            },
+            {
+              "text": "Hero stands on a floor, jumps, and reaches a flag.",
+              "correct": true
+            },
+            {
+              "text": "A racing game with cars.",
+              "correct": false
+            },
+            {
+              "text": "A puzzle game with words.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -801,124 +1431,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type HELP and press Send to keep going!",
-          "target_display": "HELP",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "help"
+            "play"
           ],
-          "hint_wrong": "Type the word HELP (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about my first platformer is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about my first platformer. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Power-ups can change the game briefly.",
+              "text": "Power-ups are fueled by goose eggs.",
               "correct": true
             },
             {
-              "text": "Flags are hidden forever in another country.",
+              "text": "Platforms are where the hero stands.",
               "correct": false
             },
             {
-              "text": "Bad guys are decorative shrubs.",
+              "text": "A platformer is a game where the hero jumps on platforms.",
               "correct": false
             },
             {
-              "text": "Platformers never have a hero — they wander.",
+              "text": "Each iteration (try) makes the platformer better.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about my first platformer is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about my first platformer. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "A platformer has a hero who jumps.",
+              "correct": false
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": false
+            },
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": false
+            },
+            {
               "text": "Movement must be done by yelling.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups are fueled by goose eggs.",
-              "correct": false
-            },
-            {
-              "text": "Falling off is a way to win the bonus round.",
-              "correct": false
-            },
-            {
-              "text": "Movement should feel good.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about my first platformer is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about my first platformer. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Bad guys are decorative shrubs.",
+              "text": "Power-ups can change the game briefly.",
               "correct": false
             },
             {
-              "text": "Rewards are bad and rude to the screen.",
+              "text": "Each iteration (try) makes the platformer better.",
               "correct": false
             },
             {
-              "text": "Flags are hidden forever in another country.",
+              "text": "Mario, Sonic, and many others are platformers.",
               "correct": false
             },
             {
-              "text": "A platformer has a hero who jumps.",
+              "text": "Platformers must have at least 100 platforms.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about my first platformer is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about my first platformer. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Movement must be done by yelling.",
+              "text": "Platforms are where the hero stands.",
               "correct": false
             },
             {
-              "text": "Platforms are where the hero stands.",
+              "text": "Real platformers can only be played with one hand.",
               "correct": true
             },
             {
-              "text": "Flags are hidden forever in another country.",
+              "text": "Power-ups can change the game briefly.",
               "correct": false
             },
             {
-              "text": "Power-ups are fueled by goose eggs.",
+              "text": "Reaching the flag often wins.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about my first platformer is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about my first platformer. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Platforms are made of clouds — fall through!",
+              "text": "Your first platformer can be tiny -- just a hero, a floor, and a goal.",
               "correct": false
             },
             {
-              "text": "Falling off is a way to lose.",
+              "text": "Platforms float because of secret invisible balloons.",
               "correct": true
             },
             {
-              "text": "Rewards are bad and rude to the screen.",
+              "text": "A platformer has a hero who jumps.",
               "correct": false
             },
             {
-              "text": "Platformers never have a hero — they wander.",
+              "text": "A platformer is a game where the hero jumps on platforms.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_46_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Bad guys add challenge.",
+              "correct": false
+            },
+            {
+              "text": "Platformers were invented yesterday.",
+              "correct": true
+            },
+            {
+              "text": "A platformer is a game where the hero jumps on platforms.",
+              "correct": false
+            },
+            {
+              "text": "Movement should feel good.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": false
+            },
+            {
+              "text": "Platformers never have a hero — they wander.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups can change the game briefly.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Power-ups can change the game briefly.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are where the hero stands.",
+              "correct": false
+            },
+            {
+              "text": "Platforms are made of clouds — fall through!",
+              "correct": true
+            },
+            {
+              "text": "Coins or stars are common rewards.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Falling off is a way to win the bonus round.",
+              "correct": true
+            },
+            {
+              "text": "A platformer has a hero who jumps.",
+              "correct": false
+            },
+            {
+              "text": "Each iteration (try) makes the platformer better.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups can change the game briefly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about my first platformer. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Falling off is a way to lose.",
+              "correct": false
+            },
+            {
+              "text": "Bad guys add challenge.",
+              "correct": false
+            },
+            {
+              "text": "Rewards are bad and rude to the screen.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups can change the game briefly.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

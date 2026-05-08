@@ -51,11 +51,11 @@
           "prompt": "What is gravity?",
           "options": [
             {
-              "text": "Gravity is afraid of socks.",
+              "text": "Heroes fall up unless told otherwise.",
               "correct": false
             },
             {
-              "text": "Gravity pushes things up like a big hand.",
+              "text": "Heroes always fall sideways like crab-walks.",
               "correct": false
             },
             {
@@ -73,7 +73,7 @@
           "prompt": "Quick! Which one is TRUE about gravity?",
           "options": [
             {
-              "text": "Gravity is a rumor started by physics.",
+              "text": "Gravity adds a giant number once and then quits.",
               "correct": false
             },
             {
@@ -85,7 +85,7 @@
               "correct": false
             },
             {
-              "text": "Heroes always fall sideways like crab-walks.",
+              "text": "Gravity only works when the hero is hungry.",
               "correct": false
             }
           ],
@@ -95,11 +95,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about gravity.",
           "options": [
             {
-              "text": "Standing on the ground stops gravity.",
+              "text": "Gravity pulls things down each frame.",
               "correct": false
             },
             {
-              "text": "Weaker gravity = floatier jumps.",
+              "text": "Standing on the ground stops gravity.",
               "correct": false
             },
             {
@@ -107,7 +107,7 @@
               "correct": true
             },
             {
-              "text": "Gravity pulls things down each frame.",
+              "text": "Gravity is just an arrow pointing down.",
               "correct": false
             }
           ],
@@ -117,11 +117,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about gravity. What should he say?",
           "options": [
             {
-              "text": "Gravity makes jumps feel fake and rubbery.",
+              "text": "Gravity only works when the hero is hungry.",
               "correct": false
             },
             {
-              "text": "Gravity adds a giant number once and then quits.",
+              "text": "Gravity makes jumps feel fake and rubbery.",
               "correct": false
             },
             {
@@ -129,7 +129,7 @@
               "correct": true
             },
             {
-              "text": "Standing on the ground makes you fall faster.",
+              "text": "Gravity pushes things up like a big hand.",
               "correct": false
             }
           ],
@@ -139,11 +139,11 @@
           "prompt": "Tell me — Which rule about gravity is a GOOD rule?",
           "options": [
             {
-              "text": "Gravity makes jumps feel fake and rubbery.",
+              "text": "Heroes fall up unless told otherwise.",
               "correct": false
             },
             {
-              "text": "Gravity is afraid of socks.",
+              "text": "Gravity adds a giant number once and then quits.",
               "correct": false
             },
             {
@@ -151,11 +151,116 @@
               "correct": true
             },
             {
-              "text": "Gravity adds a giant number once and then quits.",
+              "text": "Gravity makes jumps feel fake and rubbery.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about gravity, ___",
+          "options": [
+            {
+              "text": "Gravity is afraid of socks.",
+              "correct": false
+            },
+            {
+              "text": "Stronger gravity = faster falls.",
+              "correct": true
+            },
+            {
+              "text": "Game gravity comes from a tiny magnet behind the screen.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about gravity. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel real.",
+              "correct": false
+            },
+            {
+              "text": "Gravity only works on Tuesdays.",
+              "correct": true
+            },
+            {
+              "text": "Stronger gravity = faster falls.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with gravity?",
+          "options": [
+            {
+              "text": "Gravity pushes things up like a big hand.",
+              "correct": false
+            },
+            {
+              "text": "Gravity is a rumor started by physics.",
+              "correct": false
+            },
+            {
+              "text": "Gravity is just an arrow pointing down.",
+              "correct": true
+            },
+            {
+              "text": "Gravity makes jumps feel fake and rubbery.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about gravity is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Gravity in a game pulls objects down a tiny bit each frame.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": false
+            },
+            {
+              "text": "Stronger gravity = faster falls.",
+              "correct": false
+            },
+            {
+              "text": "Game gravity comes from a tiny magnet behind the screen.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about gravity. Which fact would help him?",
+          "options": [
+            {
+              "text": "Without gravity, your hero would float forever.",
+              "correct": true
+            },
+            {
+              "text": "Gravity is a rumor started by physics.",
+              "correct": false
+            },
+            {
+              "text": "Gravity only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Gravity adds a giant number once and then quits.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -164,12 +269,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BOT and press Send to keep going!",
-          "target_display": "BOT",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "bot"
+            "yes"
           ],
-          "hint_wrong": "Type the word BOT (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -282,6 +387,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey turns gravity off in his game. What happens to the hero?",
+          "options": [
+            {
+              "text": "Hero turns into a tiny bird.",
+              "correct": false
+            },
+            {
+              "text": "Hero floats and never lands.",
+              "correct": true
+            },
+            {
+              "text": "Hero falls upward at high speed.",
+              "correct": false
+            },
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey turns gravity off in his game. What happens to the hero?",
+          "options": [
+            {
+              "text": "Hero falls upward at high speed.",
+              "correct": false
+            },
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Hero turns into a tiny bird.",
+              "correct": false
+            },
+            {
+              "text": "Hero floats and never lands.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey turns gravity off in his game. What happens to the hero?",
+          "options": [
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Hero falls upward at high speed.",
+              "correct": false
+            },
+            {
+              "text": "Hero turns into a tiny bird.",
+              "correct": false
+            },
+            {
+              "text": "Hero floats and never lands.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey turns gravity off in his game. What happens to the hero?",
+          "options": [
+            {
+              "text": "Hero falls upward at high speed.",
+              "correct": false
+            },
+            {
+              "text": "Hero turns into a tiny bird.",
+              "correct": false
+            },
+            {
+              "text": "Hero floats and never lands.",
+              "correct": true
+            },
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey turns gravity off in his game. What happens to the hero?",
+          "options": [
+            {
+              "text": "Hero turns into a tiny bird.",
+              "correct": false
+            },
+            {
+              "text": "Hero floats and never lands.",
+              "correct": true
+            },
+            {
+              "text": "Hero falls upward at high speed.",
+              "correct": false
+            },
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -290,12 +500,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -408,6 +618,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why does standing on the ground stop the fall?",
+          "options": [
+            {
+              "text": "Ground is sticky on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "The ground gets jealous and grabs the hero.",
+              "correct": false
+            },
+            {
+              "text": "Hero takes a nap on the ground.",
+              "correct": false
+            },
+            {
+              "text": "The ground blocks downward movement — there's no room left.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why does standing on the ground stop the fall?",
+          "options": [
+            {
+              "text": "The ground blocks downward movement — there's no room left.",
+              "correct": true
+            },
+            {
+              "text": "Ground is sticky on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "The ground gets jealous and grabs the hero.",
+              "correct": false
+            },
+            {
+              "text": "Hero takes a nap on the ground.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why does standing on the ground stop the fall?",
+          "options": [
+            {
+              "text": "Hero takes a nap on the ground.",
+              "correct": false
+            },
+            {
+              "text": "The ground blocks downward movement — there's no room left.",
+              "correct": true
+            },
+            {
+              "text": "Ground is sticky on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "The ground gets jealous and grabs the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why does standing on the ground stop the fall?",
+          "options": [
+            {
+              "text": "Hero takes a nap on the ground.",
+              "correct": false
+            },
+            {
+              "text": "Ground is sticky on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "The ground blocks downward movement — there's no room left.",
+              "correct": true
+            },
+            {
+              "text": "The ground gets jealous and grabs the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why does standing on the ground stop the fall?",
+          "options": [
+            {
+              "text": "Hero takes a nap on the ground.",
+              "correct": false
+            },
+            {
+              "text": "The ground gets jealous and grabs the hero.",
+              "correct": false
+            },
+            {
+              "text": "The ground blocks downward movement — there's no room left.",
+              "correct": true
+            },
+            {
+              "text": "Ground is sticky on Mondays.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -416,12 +731,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "win"
+            "cool"
           ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -429,19 +744,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about gravity.",
           "options": [
             {
-              "text": "Weaker gravity = floatier jumps.",
+              "text": "Gravity pulls things down each frame.",
               "correct": false
             },
             {
-              "text": "Stronger gravity = faster falls.",
+              "text": "Stronger gravity makes the hero fall faster.",
               "correct": false
             },
             {
-              "text": "Standing on the ground makes you fall faster.",
+              "text": "Heroes fall up unless told otherwise.",
               "correct": true
             },
             {
-              "text": "Without gravity heroes float forever.",
+              "text": "We add a tiny number to vertical speed.",
               "correct": false
             }
           ],
@@ -451,19 +766,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about gravity.",
           "options": [
             {
-              "text": "Gravity makes jumps feel real.",
+              "text": "Gravity in a game pulls objects down a tiny bit each frame.",
               "correct": false
             },
             {
-              "text": "Gravity makes jumps feel fake and rubbery.",
+              "text": "Gravity only works when the hero is hungry.",
               "correct": true
             },
             {
-              "text": "Weaker gravity = floatier jumps.",
+              "text": "Gravity pulls things down each frame.",
               "correct": false
             },
             {
-              "text": "Without gravity heroes float forever.",
+              "text": "Real gravity comes from Earth -- game gravity is fake but it FEELS real.",
               "correct": false
             }
           ],
@@ -473,19 +788,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about gravity.",
           "options": [
             {
-              "text": "Without gravity heroes float forever.",
+              "text": "We add a tiny number to vertical speed.",
               "correct": false
             },
             {
-              "text": "Weaker gravity = floatier jumps.",
+              "text": "Stronger gravity makes the hero fall faster.",
               "correct": false
             },
             {
-              "text": "Gravity is a rumor started by physics.",
+              "text": "Game gravity charges the computer's battery.",
               "correct": true
             },
             {
-              "text": "We add a tiny number to vertical speed.",
+              "text": "Gravity pulls things down each frame.",
               "correct": false
             }
           ],
@@ -495,11 +810,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about gravity.",
           "options": [
             {
+              "text": "Weaker gravity = floatier jumps.",
+              "correct": false
+            },
+            {
+              "text": "Gravity in a game pulls objects down a tiny bit each frame.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes things up like a big hand.",
+              "correct": true
+            },
+            {
+              "text": "Gravity makes jumps feel real.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_37_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
               "text": "Gravity is just an arrow pointing down.",
               "correct": false
             },
             {
+              "text": "Standing on the ground stops gravity.",
+              "correct": false
+            },
+            {
+              "text": "Stronger gravity makes the hero fall faster.",
+              "correct": false
+            },
+            {
+              "text": "Heroes always fall sideways like crab-walks.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_37_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Real gravity comes from Earth -- game gravity is fake but it FEELS real.",
+              "correct": false
+            },
+            {
+              "text": "Gravity adds a giant number once and then quits.",
+              "correct": true
+            },
+            {
+              "text": "Without gravity, your hero would float forever.",
+              "correct": false
+            },
+            {
               "text": "Weaker gravity = floatier jumps.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Gravity in a game pulls objects down a tiny bit each frame.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": true
+            },
+            {
+              "text": "We add a tiny number to vertical speed.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Gravity pulls things down each frame.",
+              "correct": false
+            },
+            {
+              "text": "Gravity is just an arrow pointing down.",
+              "correct": false
+            },
+            {
+              "text": "Real gravity comes from Earth -- game gravity is fake but it FEELS real.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel fake and rubbery.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Gravity is a rumor started by physics.",
+              "correct": true
+            },
+            {
+              "text": "We add a tiny number to vertical speed.",
+              "correct": false
+            },
+            {
+              "text": "Stronger gravity = faster falls.",
+              "correct": false
+            },
+            {
+              "text": "Without gravity heroes float forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about gravity.",
+          "options": [
+            {
+              "text": "Without gravity, your hero would float forever.",
               "correct": false
             },
             {
@@ -507,33 +946,14 @@
               "correct": true
             },
             {
-              "text": "Stronger gravity = faster falls.",
+              "text": "Gravity makes jumps feel real.",
+              "correct": false
+            },
+            {
+              "text": "Stronger gravity makes the hero fall faster.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_37_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about gravity.",
-          "options": [
-            {
-              "text": "Weaker gravity = floatier jumps.",
-              "correct": false
-            },
-            {
-              "text": "Gravity is just an arrow pointing down.",
-              "correct": false
-            },
-            {
-              "text": "We add a tiny number to vertical speed.",
-              "correct": false
-            },
-            {
-              "text": "Gravity is afraid of socks.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_37_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -542,12 +962,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type TOP and press Send to keep going!",
-          "target_display": "TOP",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "top"
+            "next"
           ],
-          "hint_wrong": "Type the word TOP (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -555,19 +975,19 @@
           "prompt": "Tell me — Which one is TRUE about gravity?",
           "options": [
             {
+              "text": "Gravity adds a giant number once and then quits.",
+              "correct": false
+            },
+            {
+              "text": "Gravity only works when the hero is hungry.",
+              "correct": false
+            },
+            {
               "text": "Gravity pushes things up like a big hand.",
               "correct": false
             },
             {
-              "text": "Heroes always fall sideways like crab-walks.",
-              "correct": false
-            },
-            {
-              "text": "Gravity is a rumor started by physics.",
-              "correct": false
-            },
-            {
-              "text": "Gravity makes jumps feel real.",
+              "text": "Gravity pulls things down each frame.",
               "correct": true
             }
           ],
@@ -585,11 +1005,11 @@
               "correct": false
             },
             {
-              "text": "Stronger gravity = faster falls.",
+              "text": "Without gravity heroes float forever.",
               "correct": true
             },
             {
-              "text": "Standing on the ground makes you fall faster.",
+              "text": "Game gravity comes from a tiny magnet behind the screen.",
               "correct": false
             }
           ],
@@ -599,27 +1019,121 @@
           "prompt": "Pop quiz! Which one is TRUE about gravity?",
           "options": [
             {
-              "text": "Weaker gravity = floatier jumps.",
+              "text": "We add a tiny number to vertical speed.",
               "correct": true
             },
             {
-              "text": "Gravity pushes things up like a big hand.",
-              "correct": false
-            },
-            {
-              "text": "Standing on the ground makes you fall faster.",
-              "correct": false
-            },
-            {
               "text": "Gravity makes jumps feel fake and rubbery.",
+              "correct": false
+            },
+            {
+              "text": "Gravity is afraid of socks.",
+              "correct": false
+            },
+            {
+              "text": "Heroes always fall sideways like crab-walks.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Heroes fall up unless told otherwise.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground stops gravity.",
+              "correct": true
+            },
+            {
+              "text": "Game gravity comes from a tiny magnet behind the screen.",
+              "correct": false
+            },
+            {
+              "text": "Gravity is afraid of socks.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_37_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Gravity makes jumps feel real.",
+              "correct": true
+            },
+            {
+              "text": "Gravity only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel fake and rubbery.",
+              "correct": false
+            },
+            {
+              "text": "Game gravity charges the computer's battery.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_37_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Stronger gravity = faster falls.",
+              "correct": true
+            },
+            {
+              "text": "Gravity only works on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes things up like a big hand.",
+              "correct": false
+            },
+            {
+              "text": "Heroes always fall sideways like crab-walks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes things up like a big hand.",
+              "correct": false
+            },
+            {
+              "text": "Weaker gravity = floatier jumps.",
+              "correct": true
+            },
+            {
+              "text": "Gravity adds a giant number once and then quits.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about gravity?",
           "options": [
+            {
+              "text": "Gravity pushes things up like a big hand.",
+              "correct": false
+            },
+            {
+              "text": "Gravity only works on Tuesdays.",
+              "correct": false
+            },
             {
               "text": "Gravity makes jumps feel fake and rubbery.",
               "correct": false
@@ -627,39 +1141,50 @@
             {
               "text": "Gravity is just an arrow pointing down.",
               "correct": true
-            },
-            {
-              "text": "Gravity pushes things up like a big hand.",
-              "correct": false
-            },
-            {
-              "text": "Gravity is a rumor started by physics.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_37_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about gravity?",
           "options": [
             {
-              "text": "Gravity pulls things down each frame.",
+              "text": "Game gravity charges the computer's battery.",
+              "correct": false
+            },
+            {
+              "text": "Standing on the ground makes you fall faster.",
+              "correct": false
+            },
+            {
+              "text": "Gravity makes jumps feel fake and rubbery.",
+              "correct": false
+            },
+            {
+              "text": "Gravity in a game pulls objects down a tiny bit each frame.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about gravity?",
+          "options": [
+            {
+              "text": "Heroes fall up unless told otherwise.",
+              "correct": false
+            },
+            {
+              "text": "Gravity only works when the hero is hungry.",
+              "correct": false
             },
             {
               "text": "Heroes always fall sideways like crab-walks.",
               "correct": false
             },
             {
-              "text": "Gravity is a rumor started by physics.",
-              "correct": false
-            },
-            {
-              "text": "Standing on the ground makes you fall faster.",
-              "correct": false
+              "text": "Without gravity, your hero would float forever.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_37_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -668,124 +1193,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about gravity. Pick the SILLIEST claim.",
+          "prompt": "Your hero floats and won't come down. What's missing?",
           "options": [
             {
-              "text": "Gravity is just an arrow pointing down.",
+              "text": "A heavy backpack.",
               "correct": false
             },
             {
-              "text": "Weaker gravity = floatier jumps.",
-              "correct": false
-            },
-            {
-              "text": "Gravity is a rumor started by physics.",
+              "text": "Gravity -- code that adds to Y each frame.",
               "correct": true
             },
             {
-              "text": "Gravity pulls things down each frame.",
+              "text": "A sticker.",
+              "correct": false
+            },
+            {
+              "text": "Sad music.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about gravity. Pick the SILLIEST claim.",
+          "prompt": "Quick! Your hero floats and won't come down. What's missing?",
           "options": [
             {
-              "text": "We add a tiny number to vertical speed.",
-              "correct": false
-            },
-            {
-              "text": "Gravity is just an arrow pointing down.",
-              "correct": false
-            },
-            {
-              "text": "Gravity only works on Tuesdays.",
+              "text": "Gravity -- code that adds to Y each frame.",
               "correct": true
             },
             {
-              "text": "Without gravity heroes float forever.",
+              "text": "A heavy backpack.",
+              "correct": false
+            },
+            {
+              "text": "A sticker.",
+              "correct": false
+            },
+            {
+              "text": "Sad music.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about gravity. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Your hero floats and won't come down. What's missing?",
           "options": [
             {
-              "text": "Standing on the ground stops gravity.",
-              "correct": false
-            },
-            {
-              "text": "Gravity is afraid of socks.",
+              "text": "Gravity -- code that adds to Y each frame.",
               "correct": true
             },
             {
-              "text": "Gravity is just an arrow pointing down.",
+              "text": "A heavy backpack.",
               "correct": false
             },
             {
-              "text": "Gravity pulls things down each frame.",
+              "text": "Sad music.",
+              "correct": false
+            },
+            {
+              "text": "A sticker.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about gravity. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Your hero floats and won't come down. What's missing?",
           "options": [
             {
-              "text": "Gravity pulls things down each frame.",
+              "text": "A heavy backpack.",
               "correct": false
             },
             {
-              "text": "Without gravity heroes float forever.",
+              "text": "Sad music.",
               "correct": false
             },
             {
-              "text": "Stronger gravity = faster falls.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pushes things up like a big hand.",
+              "text": "Gravity -- code that adds to Y each frame.",
               "correct": true
+            },
+            {
+              "text": "A sticker.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about gravity. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Your hero floats and won't come down. What's missing?",
           "options": [
             {
-              "text": "Heroes always fall sideways like crab-walks.",
+              "text": "A heavy backpack.",
+              "correct": false
+            },
+            {
+              "text": "Gravity -- code that adds to Y each frame.",
               "correct": true
             },
             {
-              "text": "Weaker gravity = floatier jumps.",
+              "text": "Sad music.",
               "correct": false
             },
             {
-              "text": "Gravity pulls things down each frame.",
-              "correct": false
-            },
-            {
-              "text": "Stronger gravity = faster falls.",
+              "text": "A sticker.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your hero floats and won't come down. What's missing?",
+          "options": [
+            {
+              "text": "Sad music.",
+              "correct": false
+            },
+            {
+              "text": "A sticker.",
+              "correct": false
+            },
+            {
+              "text": "A heavy backpack.",
+              "correct": false
+            },
+            {
+              "text": "Gravity -- code that adds to Y each frame.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your hero floats and won't come down. What's missing?",
+          "options": [
+            {
+              "text": "Gravity -- code that adds to Y each frame.",
+              "correct": true
+            },
+            {
+              "text": "Sad music.",
+              "correct": false
+            },
+            {
+              "text": "A sticker.",
+              "correct": false
+            },
+            {
+              "text": "A heavy backpack.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your hero floats and won't come down. What's missing?",
+          "options": [
+            {
+              "text": "A sticker.",
+              "correct": false
+            },
+            {
+              "text": "Sad music.",
+              "correct": false
+            },
+            {
+              "text": "Gravity -- code that adds to Y each frame.",
+              "correct": true
+            },
+            {
+              "text": "A heavy backpack.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your hero floats and won't come down. What's missing?",
+          "options": [
+            {
+              "text": "A heavy backpack.",
+              "correct": false
+            },
+            {
+              "text": "Gravity -- code that adds to Y each frame.",
+              "correct": true
+            },
+            {
+              "text": "Sad music.",
+              "correct": false
+            },
+            {
+              "text": "A sticker.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your hero floats and won't come down. What's missing?",
+          "options": [
+            {
+              "text": "A sticker.",
+              "correct": false
+            },
+            {
+              "text": "Gravity -- code that adds to Y each frame.",
+              "correct": true
+            },
+            {
+              "text": "A heavy backpack.",
+              "correct": false
+            },
+            {
+              "text": "Sad music.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

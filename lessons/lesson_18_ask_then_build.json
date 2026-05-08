@@ -52,11 +52,11 @@
           "prompt": "What is ask, then build?",
           "options": [
             {
-              "text": "Plans turn into pancakes when you sleep.",
+              "text": "Asking is only for beginners.",
               "correct": false
             },
             {
-              "text": "Build first, ask never, throw the keyboard.",
+              "text": "Plans always make code worse and itchy.",
               "correct": false
             },
             {
@@ -74,7 +74,7 @@
           "prompt": "Quick! Which one is TRUE about ask, then build?",
           "options": [
             {
-              "text": "Plans must be written on a banana peel.",
+              "text": "Asking is bad luck and brings tiny ghosts.",
               "correct": false
             },
             {
@@ -86,7 +86,7 @@
               "correct": false
             },
             {
-              "text": "Plans always make code worse and itchy.",
+              "text": "Real coders never ask for help.",
               "correct": false
             }
           ],
@@ -96,11 +96,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about ask, then build.",
           "options": [
             {
-              "text": "Building after asking has fewer bugs.",
+              "text": "Asking first saves time later.",
               "correct": false
             },
             {
-              "text": "A 3-line plan beats a 30-line surprise.",
+              "text": "Building after asking has fewer bugs.",
               "correct": false
             },
             {
@@ -108,7 +108,7 @@
               "correct": true
             },
             {
-              "text": "Asking first saves time later.",
+              "text": "If the plan is muddy, the code will be too.",
               "correct": false
             }
           ],
@@ -118,11 +118,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about ask, then build. What should he say?",
           "options": [
             {
-              "text": "Bugs love good plans and run from them in tears.",
+              "text": "Real coders never ask for help.",
               "correct": false
             },
             {
-              "text": "Asking is bad luck and brings tiny ghosts.",
+              "text": "Bugs love good plans and run from them in tears.",
               "correct": false
             },
             {
@@ -130,7 +130,7 @@
               "correct": true
             },
             {
-              "text": "A foggy question is best — keeps things mysterious.",
+              "text": "Build first, ask never, throw the keyboard.",
               "correct": false
             }
           ],
@@ -140,11 +140,11 @@
           "prompt": "Tell me — Which rule about ask, then build is a GOOD rule?",
           "options": [
             {
-              "text": "Bugs love good plans and run from them in tears.",
+              "text": "Asking is only for beginners.",
               "correct": false
             },
             {
-              "text": "Plans turn into pancakes when you sleep.",
+              "text": "Asking is bad luck and brings tiny ghosts.",
               "correct": false
             },
             {
@@ -152,11 +152,116 @@
               "correct": true
             },
             {
-              "text": "Asking is bad luck and brings tiny ghosts.",
+              "text": "Bugs love good plans and run from them in tears.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about ask, then build, ___",
+          "options": [
+            {
+              "text": "Plans turn into pancakes when you sleep.",
+              "correct": false
+            },
+            {
+              "text": "Ask 'what should this do?' before 'how?'.",
+              "correct": true
+            },
+            {
+              "text": "Build first, ask after -- it's faster anyway.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best — keeps things mysterious.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love a tiny plan.",
+              "correct": false
+            },
+            {
+              "text": "Asking is for kids who don't have brains.",
+              "correct": true
+            },
+            {
+              "text": "Ask 'what should this do?' before 'how?'.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with ask, then build?",
+          "options": [
+            {
+              "text": "Build first, ask never, throw the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Plans must be written on a banana peel.",
+              "correct": false
+            },
+            {
+              "text": "If the plan is muddy, the code will be too.",
+              "correct": true
+            },
+            {
+              "text": "Bugs love good plans and run from them in tears.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about ask, then build is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Smart coders ASK before they BUILD.",
+              "correct": false
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": false
+            },
+            {
+              "text": "Ask 'what should this do?' before 'how?'.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask after -- it's faster anyway.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about ask, then build. Which fact would help him?",
+          "options": [
+            {
+              "text": "Asking the AI for ideas first saves you from wasted work.",
+              "correct": true
+            },
+            {
+              "text": "Plans must be written on a banana peel.",
+              "correct": false
+            },
+            {
+              "text": "Asking is for kids who don't have brains.",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck and brings tiny ghosts.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -165,12 +270,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type LEVEL and press Send to keep going!",
-          "target_display": "LEVEL",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "level"
+            "yes"
           ],
-          "hint_wrong": "Type the word LEVEL (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -283,6 +388,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You want to build a tic-tac-toe game. What should you do FIRST?",
+          "options": [
+            {
+              "text": "Plan: what does the board look like, who goes first, who wins?",
+              "correct": true
+            },
+            {
+              "text": "Start typing letters and hope.",
+              "correct": false
+            },
+            {
+              "text": "Print a giant X on paper.",
+              "correct": false
+            },
+            {
+              "text": "Phone a chicken for advice.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You want to build a tic-tac-toe game. What should you do FIRST?",
+          "options": [
+            {
+              "text": "Print a giant X on paper.",
+              "correct": false
+            },
+            {
+              "text": "Phone a chicken for advice.",
+              "correct": false
+            },
+            {
+              "text": "Start typing letters and hope.",
+              "correct": false
+            },
+            {
+              "text": "Plan: what does the board look like, who goes first, who wins?",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You want to build a tic-tac-toe game. What should you do FIRST?",
+          "options": [
+            {
+              "text": "Start typing letters and hope.",
+              "correct": false
+            },
+            {
+              "text": "Plan: what does the board look like, who goes first, who wins?",
+              "correct": true
+            },
+            {
+              "text": "Print a giant X on paper.",
+              "correct": false
+            },
+            {
+              "text": "Phone a chicken for advice.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You want to build a tic-tac-toe game. What should you do FIRST?",
+          "options": [
+            {
+              "text": "Print a giant X on paper.",
+              "correct": false
+            },
+            {
+              "text": "Start typing letters and hope.",
+              "correct": false
+            },
+            {
+              "text": "Phone a chicken for advice.",
+              "correct": false
+            },
+            {
+              "text": "Plan: what does the board look like, who goes first, who wins?",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You want to build a tic-tac-toe game. What should you do FIRST?",
+          "options": [
+            {
+              "text": "Print a giant X on paper.",
+              "correct": false
+            },
+            {
+              "text": "Plan: what does the board look like, who goes first, who wins?",
+              "correct": true
+            },
+            {
+              "text": "Start typing letters and hope.",
+              "correct": false
+            },
+            {
+              "text": "Phone a chicken for advice.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -291,12 +501,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -409,6 +619,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why do plans help?",
+          "options": [
+            {
+              "text": "They show what could go wrong before it does.",
+              "correct": true
+            },
+            {
+              "text": "Plans make the screen brighter.",
+              "correct": false
+            },
+            {
+              "text": "Plans are required by law in cartoons.",
+              "correct": false
+            },
+            {
+              "text": "They earn you snack tickets.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why do plans help?",
+          "options": [
+            {
+              "text": "They show what could go wrong before it does.",
+              "correct": true
+            },
+            {
+              "text": "Plans make the screen brighter.",
+              "correct": false
+            },
+            {
+              "text": "They earn you snack tickets.",
+              "correct": false
+            },
+            {
+              "text": "Plans are required by law in cartoons.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why do plans help?",
+          "options": [
+            {
+              "text": "Plans make the screen brighter.",
+              "correct": false
+            },
+            {
+              "text": "They earn you snack tickets.",
+              "correct": false
+            },
+            {
+              "text": "They show what could go wrong before it does.",
+              "correct": true
+            },
+            {
+              "text": "Plans are required by law in cartoons.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why do plans help?",
+          "options": [
+            {
+              "text": "Plans are required by law in cartoons.",
+              "correct": false
+            },
+            {
+              "text": "Plans make the screen brighter.",
+              "correct": false
+            },
+            {
+              "text": "They earn you snack tickets.",
+              "correct": false
+            },
+            {
+              "text": "They show what could go wrong before it does.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why do plans help?",
+          "options": [
+            {
+              "text": "Plans make the screen brighter.",
+              "correct": false
+            },
+            {
+              "text": "They earn you snack tickets.",
+              "correct": false
+            },
+            {
+              "text": "They show what could go wrong before it does.",
+              "correct": true
+            },
+            {
+              "text": "Plans are required by law in cartoons.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -417,12 +732,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to keep going!",
-          "target_display": "GO",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "go"
+            "cool"
           ],
-          "hint_wrong": "Type the word GO (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -430,19 +745,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about ask, then build.",
           "options": [
             {
-              "text": "A 3-line plan beats a 30-line surprise.",
+              "text": "Asking first saves time later.",
               "correct": false
             },
             {
-              "text": "Ask 'what should this do?' before 'how?'.",
+              "text": "When you ask first, you can pick the best plan before typing code.",
               "correct": false
             },
             {
-              "text": "A foggy question is best — keeps things mysterious.",
+              "text": "Asking is only for beginners.",
               "correct": true
             },
             {
-              "text": "A clear question gets a clear answer.",
+              "text": "We can plan before we type code.",
               "correct": false
             }
           ],
@@ -452,19 +767,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about ask, then build.",
           "options": [
             {
-              "text": "Helpers love a tiny plan.",
+              "text": "Smart coders ASK before they BUILD.",
               "correct": false
             },
             {
-              "text": "Bugs love good plans and run from them in tears.",
+              "text": "Real coders never ask for help.",
               "correct": true
             },
             {
-              "text": "A 3-line plan beats a 30-line surprise.",
+              "text": "Asking first saves time later.",
               "correct": false
             },
             {
-              "text": "A clear question gets a clear answer.",
+              "text": "Asking is a sign of being smart, not lazy!",
               "correct": false
             }
           ],
@@ -474,19 +789,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about ask, then build.",
           "options": [
             {
-              "text": "A clear question gets a clear answer.",
+              "text": "We can plan before we type code.",
               "correct": false
             },
             {
-              "text": "A 3-line plan beats a 30-line surprise.",
+              "text": "When you ask first, you can pick the best plan before typing code.",
               "correct": false
             },
             {
-              "text": "Plans must be written on a banana peel.",
+              "text": "If you ask, the AI gives you a sticker every time.",
               "correct": true
             },
             {
-              "text": "We can plan before we type code.",
+              "text": "Asking first saves time later.",
               "correct": false
             }
           ],
@@ -496,11 +811,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about ask, then build.",
           "options": [
             {
+              "text": "A 3-line plan beats a 30-line surprise.",
+              "correct": false
+            },
+            {
+              "text": "Smart coders ASK before they BUILD.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask never, throw the keyboard.",
+              "correct": true
+            },
+            {
+              "text": "Helpers love a tiny plan.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_18_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
               "text": "If the plan is muddy, the code will be too.",
               "correct": false
             },
             {
+              "text": "Building after asking has fewer bugs.",
+              "correct": false
+            },
+            {
+              "text": "When you ask first, you can pick the best plan before typing code.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse and itchy.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_18_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "Asking is a sign of being smart, not lazy!",
+              "correct": false
+            },
+            {
+              "text": "Asking is bad luck and brings tiny ghosts.",
+              "correct": true
+            },
+            {
+              "text": "Asking the AI for ideas first saves you from wasted work.",
+              "correct": false
+            },
+            {
               "text": "A 3-line plan beats a 30-line surprise.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "Smart coders ASK before they BUILD.",
+              "correct": false
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best — keeps things mysterious.",
+              "correct": true
+            },
+            {
+              "text": "We can plan before we type code.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "Asking first saves time later.",
+              "correct": false
+            },
+            {
+              "text": "If the plan is muddy, the code will be too.",
+              "correct": false
+            },
+            {
+              "text": "Asking is a sign of being smart, not lazy!",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans and run from them in tears.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "Plans must be written on a banana peel.",
+              "correct": true
+            },
+            {
+              "text": "We can plan before we type code.",
+              "correct": false
+            },
+            {
+              "text": "Ask 'what should this do?' before 'how?'.",
+              "correct": false
+            },
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about ask, then build.",
+          "options": [
+            {
+              "text": "Asking the AI for ideas first saves you from wasted work.",
               "correct": false
             },
             {
@@ -508,33 +947,14 @@
               "correct": true
             },
             {
-              "text": "Ask 'what should this do?' before 'how?'.",
+              "text": "Helpers love a tiny plan.",
+              "correct": false
+            },
+            {
+              "text": "When you ask first, you can pick the best plan before typing code.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_18_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about ask, then build.",
-          "options": [
-            {
-              "text": "A 3-line plan beats a 30-line surprise.",
-              "correct": false
-            },
-            {
-              "text": "If the plan is muddy, the code will be too.",
-              "correct": false
-            },
-            {
-              "text": "We can plan before we type code.",
-              "correct": false
-            },
-            {
-              "text": "Plans turn into pancakes when you sleep.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_18_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -543,12 +963,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type OK and press Send to keep going!",
-          "target_display": "OK",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "ok"
+            "next"
           ],
-          "hint_wrong": "Type the word OK (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -556,19 +976,19 @@
           "prompt": "Tell me — Which one is TRUE about ask, then build?",
           "options": [
             {
+              "text": "Asking is bad luck and brings tiny ghosts.",
+              "correct": false
+            },
+            {
+              "text": "Real coders never ask for help.",
+              "correct": false
+            },
+            {
               "text": "Build first, ask never, throw the keyboard.",
               "correct": false
             },
             {
-              "text": "Plans always make code worse and itchy.",
-              "correct": false
-            },
-            {
-              "text": "Plans must be written on a banana peel.",
-              "correct": false
-            },
-            {
-              "text": "Helpers love a tiny plan.",
+              "text": "Asking first saves time later.",
               "correct": true
             }
           ],
@@ -586,11 +1006,11 @@
               "correct": false
             },
             {
-              "text": "Ask 'what should this do?' before 'how?'.",
+              "text": "A clear question gets a clear answer.",
               "correct": true
             },
             {
-              "text": "A foggy question is best — keeps things mysterious.",
+              "text": "Build first, ask after -- it's faster anyway.",
               "correct": false
             }
           ],
@@ -600,27 +1020,121 @@
           "prompt": "Pop quiz! Which one is TRUE about ask, then build?",
           "options": [
             {
-              "text": "A 3-line plan beats a 30-line surprise.",
+              "text": "We can plan before we type code.",
               "correct": true
             },
             {
-              "text": "Build first, ask never, throw the keyboard.",
-              "correct": false
-            },
-            {
-              "text": "A foggy question is best — keeps things mysterious.",
-              "correct": false
-            },
-            {
               "text": "Bugs love good plans and run from them in tears.",
+              "correct": false
+            },
+            {
+              "text": "Plans turn into pancakes when you sleep.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse and itchy.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "Asking is only for beginners.",
+              "correct": false
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": true
+            },
+            {
+              "text": "Build first, ask after -- it's faster anyway.",
+              "correct": false
+            },
+            {
+              "text": "Plans turn into pancakes when you sleep.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_18_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "Helpers love a tiny plan.",
+              "correct": true
+            },
+            {
+              "text": "Asking is for kids who don't have brains.",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans and run from them in tears.",
+              "correct": false
+            },
+            {
+              "text": "If you ask, the AI gives you a sticker every time.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_18_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "Ask 'what should this do?' before 'how?'.",
+              "correct": true
+            },
+            {
+              "text": "Asking is for kids who don't have brains.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask never, throw the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse and itchy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "A foggy question is best — keeps things mysterious.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask never, throw the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "A 3-line plan beats a 30-line surprise.",
+              "correct": true
+            },
+            {
+              "text": "Asking is bad luck and brings tiny ghosts.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about ask, then build?",
           "options": [
+            {
+              "text": "Build first, ask never, throw the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Asking is for kids who don't have brains.",
+              "correct": false
+            },
             {
               "text": "Bugs love good plans and run from them in tears.",
               "correct": false
@@ -628,39 +1142,50 @@
             {
               "text": "If the plan is muddy, the code will be too.",
               "correct": true
-            },
-            {
-              "text": "Build first, ask never, throw the keyboard.",
-              "correct": false
-            },
-            {
-              "text": "Plans must be written on a banana peel.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_18_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about ask, then build?",
           "options": [
             {
-              "text": "Asking first saves time later.",
+              "text": "If you ask, the AI gives you a sticker every time.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best — keeps things mysterious.",
+              "correct": false
+            },
+            {
+              "text": "Bugs love good plans and run from them in tears.",
+              "correct": false
+            },
+            {
+              "text": "Smart coders ASK before they BUILD.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about ask, then build?",
+          "options": [
+            {
+              "text": "Asking is only for beginners.",
+              "correct": false
+            },
+            {
+              "text": "Real coders never ask for help.",
+              "correct": false
             },
             {
               "text": "Plans always make code worse and itchy.",
               "correct": false
             },
             {
-              "text": "Plans must be written on a banana peel.",
-              "correct": false
-            },
-            {
-              "text": "A foggy question is best — keeps things mysterious.",
-              "correct": false
+              "text": "Asking the AI for ideas first saves you from wasted work.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_18_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -669,124 +1194,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "prompt": "You want to make a guessing game. What's the SMART first step?",
           "options": [
             {
-              "text": "If the plan is muddy, the code will be too.",
+              "text": "Type code with your eyes closed.",
               "correct": false
             },
             {
-              "text": "A 3-line plan beats a 30-line surprise.",
-              "correct": false
-            },
-            {
-              "text": "Plans must be written on a banana peel.",
+              "text": "Ask the AI to help plan the rules and steps.",
               "correct": true
             },
             {
-              "text": "Asking first saves time later.",
+              "text": "Wait until tomorrow.",
+              "correct": false
+            },
+            {
+              "text": "Bury yourself in pillows.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "prompt": "Quick! You want to make a guessing game. What's the SMART first step?",
           "options": [
             {
-              "text": "We can plan before we type code.",
+              "text": "Type code with your eyes closed.",
               "correct": false
             },
             {
-              "text": "If the plan is muddy, the code will be too.",
+              "text": "Bury yourself in pillows.",
               "correct": false
             },
             {
-              "text": "Asking is for kids who don't have brains.",
+              "text": "Wait until tomorrow.",
+              "correct": false
+            },
+            {
+              "text": "Ask the AI to help plan the rules and steps.",
               "correct": true
-            },
-            {
-              "text": "A clear question gets a clear answer.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — You want to make a guessing game. What's the SMART first step?",
           "options": [
             {
-              "text": "Building after asking has fewer bugs.",
+              "text": "Type code with your eyes closed.",
               "correct": false
             },
             {
-              "text": "Plans turn into pancakes when you sleep.",
+              "text": "Bury yourself in pillows.",
+              "correct": false
+            },
+            {
+              "text": "Wait until tomorrow.",
+              "correct": false
+            },
+            {
+              "text": "Ask the AI to help plan the rules and steps.",
               "correct": true
-            },
-            {
-              "text": "If the plan is muddy, the code will be too.",
-              "correct": false
-            },
-            {
-              "text": "Asking first saves time later.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: You want to make a guessing game. What's the SMART first step?",
           "options": [
             {
-              "text": "Asking first saves time later.",
+              "text": "Wait until tomorrow.",
               "correct": false
             },
             {
-              "text": "A clear question gets a clear answer.",
-              "correct": false
-            },
-            {
-              "text": "Ask 'what should this do?' before 'how?'.",
-              "correct": false
-            },
-            {
-              "text": "Build first, ask never, throw the keyboard.",
+              "text": "Ask the AI to help plan the rules and steps.",
               "correct": true
+            },
+            {
+              "text": "Bury yourself in pillows.",
+              "correct": false
+            },
+            {
+              "text": "Type code with your eyes closed.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "prompt": "Tell me — You want to make a guessing game. What's the SMART first step?",
           "options": [
             {
-              "text": "Plans always make code worse and itchy.",
+              "text": "Ask the AI to help plan the rules and steps.",
               "correct": true
             },
             {
-              "text": "A 3-line plan beats a 30-line surprise.",
+              "text": "Bury yourself in pillows.",
               "correct": false
             },
             {
-              "text": "Asking first saves time later.",
+              "text": "Type code with your eyes closed.",
               "correct": false
             },
             {
-              "text": "Ask 'what should this do?' before 'how?'.",
+              "text": "Wait until tomorrow.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You want to make a guessing game. What's the SMART first step?",
+          "options": [
+            {
+              "text": "Ask the AI to help plan the rules and steps.",
+              "correct": true
+            },
+            {
+              "text": "Type code with your eyes closed.",
+              "correct": false
+            },
+            {
+              "text": "Wait until tomorrow.",
+              "correct": false
+            },
+            {
+              "text": "Bury yourself in pillows.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You want to make a guessing game. What's the SMART first step?",
+          "options": [
+            {
+              "text": "Bury yourself in pillows.",
+              "correct": false
+            },
+            {
+              "text": "Wait until tomorrow.",
+              "correct": false
+            },
+            {
+              "text": "Ask the AI to help plan the rules and steps.",
+              "correct": true
+            },
+            {
+              "text": "Type code with your eyes closed.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You want to make a guessing game. What's the SMART first step?",
+          "options": [
+            {
+              "text": "Ask the AI to help plan the rules and steps.",
+              "correct": true
+            },
+            {
+              "text": "Wait until tomorrow.",
+              "correct": false
+            },
+            {
+              "text": "Type code with your eyes closed.",
+              "correct": false
+            },
+            {
+              "text": "Bury yourself in pillows.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You want to make a guessing game. What's the SMART first step?",
+          "options": [
+            {
+              "text": "Wait until tomorrow.",
+              "correct": false
+            },
+            {
+              "text": "Ask the AI to help plan the rules and steps.",
+              "correct": true
+            },
+            {
+              "text": "Type code with your eyes closed.",
+              "correct": false
+            },
+            {
+              "text": "Bury yourself in pillows.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You want to make a guessing game. What's the SMART first step?",
+          "options": [
+            {
+              "text": "Ask the AI to help plan the rules and steps.",
+              "correct": true
+            },
+            {
+              "text": "Type code with your eyes closed.",
+              "correct": false
+            },
+            {
+              "text": "Bury yourself in pillows.",
+              "correct": false
+            },
+            {
+              "text": "Wait until tomorrow.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -795,124 +1425,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type ME and press Send to keep going!",
-          "target_display": "ME",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "me"
+            "play"
           ],
-          "hint_wrong": "Type the word ME (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about ask, then build is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about ask, then build. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "A 3-line plan beats a 30-line surprise.",
+              "text": "Asking is for kids who don't have brains.",
               "correct": true
             },
             {
-              "text": "Bugs love good plans and run from them in tears.",
+              "text": "A clear question gets a clear answer.",
               "correct": false
             },
             {
-              "text": "Plans must be written on a banana peel.",
+              "text": "Smart coders ASK before they BUILD.",
               "correct": false
             },
             {
-              "text": "Build first, ask never, throw the keyboard.",
+              "text": "Asking is a sign of being smart, not lazy!",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about ask, then build is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about ask, then build. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "Asking first saves time later.",
+              "correct": false
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": false
+            },
+            {
+              "text": "We can plan before we type code.",
+              "correct": false
+            },
+            {
               "text": "Plans turn into pancakes when you sleep.",
-              "correct": false
-            },
-            {
-              "text": "Asking is for kids who don't have brains.",
-              "correct": false
-            },
-            {
-              "text": "Asking is bad luck and brings tiny ghosts.",
-              "correct": false
-            },
-            {
-              "text": "If the plan is muddy, the code will be too.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about ask, then build is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about ask, then build. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Plans must be written on a banana peel.",
+              "text": "A 3-line plan beats a 30-line surprise.",
               "correct": false
             },
             {
-              "text": "A foggy question is best — keeps things mysterious.",
+              "text": "Asking is a sign of being smart, not lazy!",
               "correct": false
             },
             {
-              "text": "Bugs love good plans and run from them in tears.",
+              "text": "Asking the AI for ideas first saves you from wasted work.",
               "correct": false
             },
             {
-              "text": "Asking first saves time later.",
+              "text": "Build first, ask after -- it's faster anyway.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about ask, then build is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about ask, then build. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Plans turn into pancakes when you sleep.",
+              "text": "A clear question gets a clear answer.",
               "correct": false
             },
             {
-              "text": "A clear question gets a clear answer.",
+              "text": "Asking is only for beginners.",
               "correct": true
             },
             {
-              "text": "Bugs love good plans and run from them in tears.",
+              "text": "A 3-line plan beats a 30-line surprise.",
               "correct": false
             },
             {
-              "text": "Asking is for kids who don't have brains.",
+              "text": "Helpers love a tiny plan.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about ask, then build is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about ask, then build. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Plans always make code worse and itchy.",
+              "text": "When you ask first, you can pick the best plan before typing code.",
               "correct": false
             },
             {
-              "text": "We can plan before we type code.",
+              "text": "Real coders never ask for help.",
               "correct": true
             },
             {
-              "text": "A foggy question is best — keeps things mysterious.",
+              "text": "Asking first saves time later.",
               "correct": false
             },
             {
-              "text": "Build first, ask never, throw the keyboard.",
+              "text": "Smart coders ASK before they BUILD.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_18_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Ask 'what should this do?' before 'how?'.",
+              "correct": false
+            },
+            {
+              "text": "If you ask, the AI gives you a sticker every time.",
+              "correct": true
+            },
+            {
+              "text": "Smart coders ASK before they BUILD.",
+              "correct": false
+            },
+            {
+              "text": "If the plan is muddy, the code will be too.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "We can plan before we type code.",
+              "correct": false
+            },
+            {
+              "text": "Build first, ask never, throw the keyboard.",
+              "correct": true
+            },
+            {
+              "text": "A 3-line plan beats a 30-line surprise.",
+              "correct": false
+            },
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A 3-line plan beats a 30-line surprise.",
+              "correct": false
+            },
+            {
+              "text": "A clear question gets a clear answer.",
+              "correct": false
+            },
+            {
+              "text": "Plans always make code worse and itchy.",
+              "correct": true
+            },
+            {
+              "text": "Building after asking has fewer bugs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Asking is bad luck and brings tiny ghosts.",
+              "correct": true
+            },
+            {
+              "text": "Asking first saves time later.",
+              "correct": false
+            },
+            {
+              "text": "Asking is a sign of being smart, not lazy!",
+              "correct": false
+            },
+            {
+              "text": "A 3-line plan beats a 30-line surprise.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about ask, then build. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "We can plan before we type code.",
+              "correct": false
+            },
+            {
+              "text": "Ask 'what should this do?' before 'how?'.",
+              "correct": false
+            },
+            {
+              "text": "A foggy question is best — keeps things mysterious.",
+              "correct": true
+            },
+            {
+              "text": "A 3-line plan beats a 30-line surprise.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

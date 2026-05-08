@@ -65,14 +65,27 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "type-this-word",
+        "type": "click-the-thing",
         "payload": {
-          "prompt": "Type SET and press Send to keep going!",
-          "target_display": "SET",
-          "targets": [
-            "set"
-          ],
-          "hint_wrong": "Type the word SET (any case is fine)."
+          "prompt": "Flag fires too early. Pick the fix:",
+          "choices": [
+            {
+              "label": "Use real hitbox-on-hitbox collision",
+              "right": true
+            },
+            {
+              "label": "Make the flag bigger",
+              "right": false
+            },
+            {
+              "label": "Make the flag invisible",
+              "right": false
+            },
+            {
+              "label": "Remove the flag",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -80,11 +93,11 @@
           "prompt": "What is iter 6: flag and reveal?",
           "options": [
             {
-              "text": "Reveals must rhyme with 'broccoli'.",
+              "text": "Reveals only happen if the hero blinks first.",
               "correct": false
             },
             {
-              "text": "Flags lose the game and burn the screen.",
+              "text": "Reveals are illegal in three states.",
               "correct": false
             },
             {
@@ -102,7 +115,7 @@
           "prompt": "Quick! Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
-              "text": "Each win demands a tiny tax of cheese.",
+              "text": "Win screens are sad and damp.",
               "correct": false
             },
             {
@@ -114,7 +127,7 @@
               "correct": false
             },
             {
-              "text": "Reveals are illegal in three states.",
+              "text": "Flags walk away if the hero is too slow.",
               "correct": false
             }
           ],
@@ -124,11 +137,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
-              "text": "Try to make the win moment fun.",
+              "text": "A flag at the end says you win.",
               "correct": false
             },
             {
-              "text": "End screens should feel like a small celebration.",
+              "text": "Try to make the win moment fun.",
               "correct": false
             },
             {
@@ -136,7 +149,7 @@
               "correct": true
             },
             {
-              "text": "A flag at the end says you win.",
+              "text": "Reveal animations are worth the polish time.",
               "correct": false
             }
           ],
@@ -146,11 +159,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 6: flag and reveal. What should he say?",
           "options": [
             {
-              "text": "Sharing the win ruins it for everybody.",
+              "text": "Flags walk away if the hero is too slow.",
               "correct": false
             },
             {
-              "text": "Win screens are sad and damp.",
+              "text": "Sharing the win ruins it for everybody.",
               "correct": false
             },
             {
@@ -158,7 +171,7 @@
               "correct": true
             },
             {
-              "text": "Win moments must be boring to be official.",
+              "text": "Flags lose the game and burn the screen.",
               "correct": false
             }
           ],
@@ -168,11 +181,11 @@
           "prompt": "Tell me — Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
-              "text": "Sharing the win ruins it for everybody.",
+              "text": "Reveals only happen if the hero blinks first.",
               "correct": false
             },
             {
-              "text": "Reveals must rhyme with 'broccoli'.",
+              "text": "Win screens are sad and damp.",
               "correct": false
             },
             {
@@ -180,11 +193,116 @@
               "correct": true
             },
             {
-              "text": "Win screens are sad and damp.",
+              "text": "Sharing the win ruins it for everybody.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about iter 6: flag and reveal, ___",
+          "options": [
+            {
+              "text": "Reveals must rhyme with 'broccoli'.",
+              "correct": false
+            },
+            {
+              "text": "A surprise at the end leaves players smiling.",
+              "correct": true
+            },
+            {
+              "text": "Flags must be made of real cloth.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring to be official.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": false
+            },
+            {
+              "text": "Flags must be folded into a swan.",
+              "correct": true
+            },
+            {
+              "text": "A surprise at the end leaves players smiling.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Flags lose the game and burn the screen.",
+              "correct": false
+            },
+            {
+              "text": "Each win demands a tiny tax of cheese.",
+              "correct": false
+            },
+            {
+              "text": "Reveal animations are worth the polish time.",
+              "correct": true
+            },
+            {
+              "text": "Sharing the win ruins it for everybody.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about iter 6: flag and reveal is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": false
+            },
+            {
+              "text": "A surprise at the end leaves players smiling.",
+              "correct": false
+            },
+            {
+              "text": "Flags must be made of real cloth.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about iter 6: flag and reveal. Which fact would help him?",
+          "options": [
+            {
+              "text": "The flag is the goal at the end of the level.",
+              "correct": true
+            },
+            {
+              "text": "Each win demands a tiny tax of cheese.",
+              "correct": false
+            },
+            {
+              "text": "Flags must be folded into a swan.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad and damp.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -193,12 +311,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type TRY and press Send to keep going!",
-          "target_display": "TRY",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "try"
+            "yes"
           ],
-          "hint_wrong": "Type the word TRY (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -311,6 +429,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "options": [
+            {
+              "text": "Replace it with the loading screen.",
+              "correct": false
+            },
+            {
+              "text": "Add a celebration: confetti, a sound, a fun message.",
+              "correct": true
+            },
+            {
+              "text": "Show only the bug king.",
+              "correct": false
+            },
+            {
+              "text": "Make the player wait 5 minutes silently.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "options": [
+            {
+              "text": "Replace it with the loading screen.",
+              "correct": false
+            },
+            {
+              "text": "Add a celebration: confetti, a sound, a fun message.",
+              "correct": true
+            },
+            {
+              "text": "Make the player wait 5 minutes silently.",
+              "correct": false
+            },
+            {
+              "text": "Show only the bug king.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "options": [
+            {
+              "text": "Add a celebration: confetti, a sound, a fun message.",
+              "correct": true
+            },
+            {
+              "text": "Make the player wait 5 minutes silently.",
+              "correct": false
+            },
+            {
+              "text": "Show only the bug king.",
+              "correct": false
+            },
+            {
+              "text": "Replace it with the loading screen.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "options": [
+            {
+              "text": "Add a celebration: confetti, a sound, a fun message.",
+              "correct": true
+            },
+            {
+              "text": "Make the player wait 5 minutes silently.",
+              "correct": false
+            },
+            {
+              "text": "Replace it with the loading screen.",
+              "correct": false
+            },
+            {
+              "text": "Show only the bug king.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "options": [
+            {
+              "text": "Make the player wait 5 minutes silently.",
+              "correct": false
+            },
+            {
+              "text": "Replace it with the loading screen.",
+              "correct": false
+            },
+            {
+              "text": "Show only the bug king.",
+              "correct": false
+            },
+            {
+              "text": "Add a celebration: confetti, a sound, a fun message.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -319,12 +542,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -437,6 +660,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why do reveals matter?",
+          "options": [
+            {
+              "text": "Players remember the ending — make it a small treat.",
+              "correct": true
+            },
+            {
+              "text": "Reveals earn extra wifi.",
+              "correct": false
+            },
+            {
+              "text": "Reveals scare bugs away.",
+              "correct": false
+            },
+            {
+              "text": "Reveals only happen on Mondays.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why do reveals matter?",
+          "options": [
+            {
+              "text": "Reveals earn extra wifi.",
+              "correct": false
+            },
+            {
+              "text": "Reveals only happen on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Players remember the ending — make it a small treat.",
+              "correct": true
+            },
+            {
+              "text": "Reveals scare bugs away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why do reveals matter?",
+          "options": [
+            {
+              "text": "Reveals scare bugs away.",
+              "correct": false
+            },
+            {
+              "text": "Reveals only happen on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Reveals earn extra wifi.",
+              "correct": false
+            },
+            {
+              "text": "Players remember the ending — make it a small treat.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why do reveals matter?",
+          "options": [
+            {
+              "text": "Reveals scare bugs away.",
+              "correct": false
+            },
+            {
+              "text": "Reveals only happen on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Players remember the ending — make it a small treat.",
+              "correct": true
+            },
+            {
+              "text": "Reveals earn extra wifi.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why do reveals matter?",
+          "options": [
+            {
+              "text": "Reveals only happen on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Players remember the ending — make it a small treat.",
+              "correct": true
+            },
+            {
+              "text": "Reveals scare bugs away.",
+              "correct": false
+            },
+            {
+              "text": "Reveals earn extra wifi.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -445,12 +773,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type ZIP and press Send to keep going!",
-          "target_display": "ZIP",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "zip"
+            "cool"
           ],
-          "hint_wrong": "Type the word ZIP (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -458,19 +786,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
-              "text": "End screens should feel like a small celebration.",
+              "text": "A flag at the end says you win.",
               "correct": false
             },
             {
-              "text": "A surprise at the end leaves players smiling.",
+              "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
               "correct": false
             },
             {
-              "text": "Win moments must be boring to be official.",
+              "text": "Reveals only happen if the hero blinks first.",
               "correct": true
             },
             {
-              "text": "Touching the flag triggers a reveal.",
+              "text": "A win screen feels great.",
               "correct": false
             }
           ],
@@ -480,19 +808,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
-              "text": "Sharing the win is a sweet ending.",
+              "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
               "correct": false
             },
             {
-              "text": "Sharing the win ruins it for everybody.",
+              "text": "Flags walk away if the hero is too slow.",
               "correct": true
             },
             {
-              "text": "End screens should feel like a small celebration.",
+              "text": "A flag at the end says you win.",
               "correct": false
             },
             {
-              "text": "Touching the flag triggers a reveal.",
+              "text": "The reveal makes the win feel REAL and earned.",
               "correct": false
             }
           ],
@@ -502,19 +830,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
-              "text": "Touching the flag triggers a reveal.",
+              "text": "A win screen feels great.",
               "correct": false
             },
             {
-              "text": "End screens should feel like a small celebration.",
+              "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
               "correct": false
             },
             {
-              "text": "Each win demands a tiny tax of cheese.",
+              "text": "Reveals are tiny and easy to miss on purpose.",
               "correct": true
             },
             {
-              "text": "A win screen feels great.",
+              "text": "A flag at the end says you win.",
               "correct": false
             }
           ],
@@ -524,11 +852,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
+              "text": "End screens should feel like a small celebration.",
+              "correct": false
+            },
+            {
+              "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game and burn the screen.",
+              "correct": true
+            },
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_55_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
               "text": "Reveal animations are worth the polish time.",
               "correct": false
             },
             {
+              "text": "Try to make the win moment fun.",
+              "correct": false
+            },
+            {
+              "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal in three states.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_55_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "The reveal makes the win feel REAL and earned.",
+              "correct": false
+            },
+            {
+              "text": "Win screens are sad and damp.",
+              "correct": true
+            },
+            {
+              "text": "The flag is the goal at the end of the level.",
+              "correct": false
+            },
+            {
               "text": "End screens should feel like a small celebration.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring to be official.",
+              "correct": true
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "A flag at the end says you win.",
+              "correct": false
+            },
+            {
+              "text": "Reveal animations are worth the polish time.",
+              "correct": false
+            },
+            {
+              "text": "The reveal makes the win feel REAL and earned.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it for everybody.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "Each win demands a tiny tax of cheese.",
+              "correct": true
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": false
+            },
+            {
+              "text": "A surprise at the end leaves players smiling.",
+              "correct": false
+            },
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
+          "options": [
+            {
+              "text": "The flag is the goal at the end of the level.",
               "correct": false
             },
             {
@@ -536,33 +988,14 @@
               "correct": true
             },
             {
-              "text": "A surprise at the end leaves players smiling.",
+              "text": "Sharing the win is a sweet ending.",
+              "correct": false
+            },
+            {
+              "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_55_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
-          "options": [
-            {
-              "text": "End screens should feel like a small celebration.",
-              "correct": false
-            },
-            {
-              "text": "Reveal animations are worth the polish time.",
-              "correct": false
-            },
-            {
-              "text": "A win screen feels great.",
-              "correct": false
-            },
-            {
-              "text": "Reveals must rhyme with 'broccoli'.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_55_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -571,12 +1004,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type AIM and press Send to keep going!",
-          "target_display": "AIM",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "aim"
+            "next"
           ],
-          "hint_wrong": "Type the word AIM (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -584,19 +1017,19 @@
           "prompt": "Tell me — Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
+              "text": "Win screens are sad and damp.",
+              "correct": false
+            },
+            {
+              "text": "Flags walk away if the hero is too slow.",
+              "correct": false
+            },
+            {
               "text": "Flags lose the game and burn the screen.",
               "correct": false
             },
             {
-              "text": "Reveals are illegal in three states.",
-              "correct": false
-            },
-            {
-              "text": "Each win demands a tiny tax of cheese.",
-              "correct": false
-            },
-            {
-              "text": "Sharing the win is a sweet ending.",
+              "text": "A flag at the end says you win.",
               "correct": true
             }
           ],
@@ -614,11 +1047,11 @@
               "correct": false
             },
             {
-              "text": "A surprise at the end leaves players smiling.",
+              "text": "Touching the flag triggers a reveal.",
               "correct": true
             },
             {
-              "text": "Win moments must be boring to be official.",
+              "text": "Flags must be made of real cloth.",
               "correct": false
             }
           ],
@@ -628,27 +1061,121 @@
           "prompt": "Pop quiz! Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
-              "text": "End screens should feel like a small celebration.",
+              "text": "A win screen feels great.",
               "correct": true
             },
             {
-              "text": "Flags lose the game and burn the screen.",
-              "correct": false
-            },
-            {
-              "text": "Win moments must be boring to be official.",
-              "correct": false
-            },
-            {
               "text": "Sharing the win ruins it for everybody.",
+              "correct": false
+            },
+            {
+              "text": "Reveals must rhyme with 'broccoli'.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal in three states.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Reveals only happen if the hero blinks first.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": true
+            },
+            {
+              "text": "Flags must be made of real cloth.",
+              "correct": false
+            },
+            {
+              "text": "Reveals must rhyme with 'broccoli'.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_55_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": true
+            },
+            {
+              "text": "Flags must be folded into a swan.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it for everybody.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are tiny and easy to miss on purpose.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_55_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "A surprise at the end leaves players smiling.",
+              "correct": true
+            },
+            {
+              "text": "Flags must be folded into a swan.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game and burn the screen.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal in three states.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Win moments must be boring to be official.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game and burn the screen.",
+              "correct": false
+            },
+            {
+              "text": "End screens should feel like a small celebration.",
+              "correct": true
+            },
+            {
+              "text": "Win screens are sad and damp.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about iter 6: flag and reveal?",
           "options": [
+            {
+              "text": "Flags lose the game and burn the screen.",
+              "correct": false
+            },
+            {
+              "text": "Flags must be folded into a swan.",
+              "correct": false
+            },
             {
               "text": "Sharing the win ruins it for everybody.",
               "correct": false
@@ -656,39 +1183,50 @@
             {
               "text": "Reveal animations are worth the polish time.",
               "correct": true
-            },
-            {
-              "text": "Flags lose the game and burn the screen.",
-              "correct": false
-            },
-            {
-              "text": "Each win demands a tiny tax of cheese.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_55_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
-              "text": "A flag at the end says you win.",
+              "text": "Reveals are tiny and easy to miss on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring to be official.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the win ruins it for everybody.",
+              "correct": false
+            },
+            {
+              "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 6: flag and reveal?",
+          "options": [
+            {
+              "text": "Reveals only happen if the hero blinks first.",
+              "correct": false
+            },
+            {
+              "text": "Flags walk away if the hero is too slow.",
+              "correct": false
             },
             {
               "text": "Reveals are illegal in three states.",
               "correct": false
             },
             {
-              "text": "Each win demands a tiny tax of cheese.",
-              "correct": false
-            },
-            {
-              "text": "Win moments must be boring to be official.",
-              "correct": false
+              "text": "The flag is the goal at the end of the level.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_55_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -697,124 +1235,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "prompt": "Hero touches the flag. What should happen?",
           "options": [
             {
-              "text": "Reveal animations are worth the polish time.",
+              "text": "The flag asks for a tip.",
               "correct": false
             },
             {
-              "text": "End screens should feel like a small celebration.",
+              "text": "Nothing -- that would be greedy.",
               "correct": false
             },
             {
-              "text": "Each win demands a tiny tax of cheese.",
+              "text": "A celebration -- confetti, win message, music!",
               "correct": true
             },
             {
-              "text": "A flag at the end says you win.",
+              "text": "The screen turns black silently.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "prompt": "Quick! Hero touches the flag. What should happen?",
           "options": [
             {
-              "text": "A win screen feels great.",
+              "text": "The screen turns black silently.",
               "correct": false
             },
             {
-              "text": "Reveal animations are worth the polish time.",
+              "text": "The flag asks for a tip.",
               "correct": false
             },
             {
-              "text": "Flags must be folded into a swan.",
+              "text": "Nothing -- that would be greedy.",
+              "correct": false
+            },
+            {
+              "text": "A celebration -- confetti, win message, music!",
               "correct": true
-            },
-            {
-              "text": "Touching the flag triggers a reveal.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Hero touches the flag. What should happen?",
           "options": [
             {
-              "text": "Try to make the win moment fun.",
+              "text": "The flag asks for a tip.",
               "correct": false
             },
             {
-              "text": "Reveals must rhyme with 'broccoli'.",
+              "text": "Nothing -- that would be greedy.",
+              "correct": false
+            },
+            {
+              "text": "The screen turns black silently.",
+              "correct": false
+            },
+            {
+              "text": "A celebration -- confetti, win message, music!",
               "correct": true
-            },
-            {
-              "text": "Reveal animations are worth the polish time.",
-              "correct": false
-            },
-            {
-              "text": "A flag at the end says you win.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Hero touches the flag. What should happen?",
           "options": [
             {
-              "text": "A flag at the end says you win.",
+              "text": "Nothing -- that would be greedy.",
               "correct": false
             },
             {
-              "text": "Touching the flag triggers a reveal.",
-              "correct": false
-            },
-            {
-              "text": "A surprise at the end leaves players smiling.",
-              "correct": false
-            },
-            {
-              "text": "Flags lose the game and burn the screen.",
+              "text": "A celebration -- confetti, win message, music!",
               "correct": true
+            },
+            {
+              "text": "The screen turns black silently.",
+              "correct": false
+            },
+            {
+              "text": "The flag asks for a tip.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Hero touches the flag. What should happen?",
           "options": [
             {
-              "text": "Reveals are illegal in three states.",
+              "text": "The screen turns black silently.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- that would be greedy.",
+              "correct": false
+            },
+            {
+              "text": "The flag asks for a tip.",
+              "correct": false
+            },
+            {
+              "text": "A celebration -- confetti, win message, music!",
               "correct": true
-            },
-            {
-              "text": "End screens should feel like a small celebration.",
-              "correct": false
-            },
-            {
-              "text": "A flag at the end says you win.",
-              "correct": false
-            },
-            {
-              "text": "A surprise at the end leaves players smiling.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Hero touches the flag. What should happen?",
+          "options": [
+            {
+              "text": "The screen turns black silently.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- that would be greedy.",
+              "correct": false
+            },
+            {
+              "text": "A celebration -- confetti, win message, music!",
+              "correct": true
+            },
+            {
+              "text": "The flag asks for a tip.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Hero touches the flag. What should happen?",
+          "options": [
+            {
+              "text": "The flag asks for a tip.",
+              "correct": false
+            },
+            {
+              "text": "The screen turns black silently.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- that would be greedy.",
+              "correct": false
+            },
+            {
+              "text": "A celebration -- confetti, win message, music!",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Hero touches the flag. What should happen?",
+          "options": [
+            {
+              "text": "The flag asks for a tip.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- that would be greedy.",
+              "correct": false
+            },
+            {
+              "text": "The screen turns black silently.",
+              "correct": false
+            },
+            {
+              "text": "A celebration -- confetti, win message, music!",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Hero touches the flag. What should happen?",
+          "options": [
+            {
+              "text": "The flag asks for a tip.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- that would be greedy.",
+              "correct": false
+            },
+            {
+              "text": "A celebration -- confetti, win message, music!",
+              "correct": true
+            },
+            {
+              "text": "The screen turns black silently.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Hero touches the flag. What should happen?",
+          "options": [
+            {
+              "text": "The screen turns black silently.",
+              "correct": false
+            },
+            {
+              "text": "The flag asks for a tip.",
+              "correct": false
+            },
+            {
+              "text": "A celebration -- confetti, win message, music!",
+              "correct": true
+            },
+            {
+              "text": "Nothing -- that would be greedy.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -823,124 +1466,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type HOP and press Send to keep going!",
-          "target_display": "HOP",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "hop"
+            "play"
           ],
-          "hint_wrong": "Type the word HOP (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "End screens should feel like a small celebration.",
+              "text": "Flags must be folded into a swan.",
               "correct": true
             },
             {
-              "text": "Sharing the win ruins it for everybody.",
+              "text": "Touching the flag triggers a reveal.",
               "correct": false
             },
             {
-              "text": "Each win demands a tiny tax of cheese.",
+              "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
               "correct": false
             },
             {
-              "text": "Flags lose the game and burn the screen.",
+              "text": "The reveal makes the win feel REAL and earned.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "A flag at the end says you win.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": false
+            },
+            {
+              "text": "A win screen feels great.",
+              "correct": false
+            },
+            {
               "text": "Reveals must rhyme with 'broccoli'.",
-              "correct": false
-            },
-            {
-              "text": "Flags must be folded into a swan.",
-              "correct": false
-            },
-            {
-              "text": "Win screens are sad and damp.",
-              "correct": false
-            },
-            {
-              "text": "Reveal animations are worth the polish time.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Each win demands a tiny tax of cheese.",
+              "text": "End screens should feel like a small celebration.",
               "correct": false
             },
             {
-              "text": "Win moments must be boring to be official.",
+              "text": "The reveal makes the win feel REAL and earned.",
               "correct": false
             },
             {
-              "text": "Sharing the win ruins it for everybody.",
+              "text": "The flag is the goal at the end of the level.",
               "correct": false
             },
             {
-              "text": "A flag at the end says you win.",
+              "text": "Flags must be made of real cloth.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Reveals must rhyme with 'broccoli'.",
+              "text": "Touching the flag triggers a reveal.",
               "correct": false
             },
             {
-              "text": "Touching the flag triggers a reveal.",
+              "text": "Reveals only happen if the hero blinks first.",
               "correct": true
             },
             {
-              "text": "Sharing the win ruins it for everybody.",
+              "text": "End screens should feel like a small celebration.",
               "correct": false
             },
             {
-              "text": "Flags must be folded into a swan.",
+              "text": "Sharing the win is a sweet ending.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Reveals are illegal in three states.",
+              "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
               "correct": false
             },
             {
-              "text": "A win screen feels great.",
+              "text": "Flags walk away if the hero is too slow.",
               "correct": true
             },
             {
-              "text": "Win moments must be boring to be official.",
+              "text": "A flag at the end says you win.",
               "correct": false
             },
             {
-              "text": "Flags lose the game and burn the screen.",
+              "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A surprise at the end leaves players smiling.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are tiny and easy to miss on purpose.",
+              "correct": true
+            },
+            {
+              "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
+              "correct": false
+            },
+            {
+              "text": "Reveal animations are worth the polish time.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A win screen feels great.",
+              "correct": false
+            },
+            {
+              "text": "Flags lose the game and burn the screen.",
+              "correct": true
+            },
+            {
+              "text": "End screens should feel like a small celebration.",
+              "correct": false
+            },
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "End screens should feel like a small celebration.",
+              "correct": false
+            },
+            {
+              "text": "Touching the flag triggers a reveal.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are illegal in three states.",
+              "correct": true
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Win screens are sad and damp.",
+              "correct": true
+            },
+            {
+              "text": "A flag at the end says you win.",
+              "correct": false
+            },
+            {
+              "text": "The reveal makes the win feel REAL and earned.",
+              "correct": false
+            },
+            {
+              "text": "End screens should feel like a small celebration.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A win screen feels great.",
+              "correct": false
+            },
+            {
+              "text": "A surprise at the end leaves players smiling.",
+              "correct": false
+            },
+            {
+              "text": "Win moments must be boring to be official.",
+              "correct": true
+            },
+            {
+              "text": "End screens should feel like a small celebration.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -949,28 +1697,28 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type DAY and press Send to keep going!",
-          "target_display": "DAY",
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
           "targets": [
-            "day"
+            "code"
           ],
-          "hint_wrong": "Type the word DAY (any case is fine)."
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Fill in the blank: when we talk about iter 6: flag and reveal, ___",
+          "prompt": "Listen up — Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
+            {
+              "text": "Flags must be folded into a swan.",
+              "correct": false
+            },
             {
               "text": "Reveals are illegal in three states.",
               "correct": false
             },
             {
-              "text": "Win screens are sad and damp.",
-              "correct": false
-            },
-            {
-              "text": "Reveal animations are worth the polish time.",
+              "text": "The flag is the goal at the end of the level.",
               "correct": true
             },
             {
@@ -981,36 +1729,32 @@
           "_audio": "assets/audio/q/lesson_55_q8_v0.wav"
         },
         {
-          "prompt": "Quick! Fill in the blank: when we talk about iter 6: flag and reveal, ___",
+          "prompt": "Here's a thinker: Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
-              "text": "Sharing the win ruins it for everybody.",
+              "text": "Reveals only happen if the hero blinks first.",
               "correct": false
             },
             {
-              "text": "Flags must be folded into a swan.",
+              "text": "Flags must be made of real cloth.",
               "correct": false
             },
             {
-              "text": "A flag at the end says you win.",
+              "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
               "correct": true
             },
             {
-              "text": "Each win demands a tiny tax of cheese.",
+              "text": "Win screens are sad and damp.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q8_v1.wav"
         },
         {
-          "prompt": "Hey friend — Fill in the blank: when we talk about iter 6: flag and reveal, ___",
+          "prompt": "OK quick one: Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
-              "text": "Reveals are illegal in three states.",
-              "correct": false
-            },
-            {
-              "text": "Flags lose the game and burn the screen.",
+              "text": "Sharing the win ruins it for everybody.",
               "correct": false
             },
             {
@@ -1018,39 +1762,43 @@
               "correct": false
             },
             {
-              "text": "Touching the flag triggers a reveal.",
+              "text": "Flags lose the game and burn the screen.",
+              "correct": false
+            },
+            {
+              "text": "The reveal makes the win feel REAL and earned.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q8_v2.wav"
         },
         {
-          "prompt": "Bytey wonders: Fill in the blank: when we talk about iter 6: flag and reveal, ___",
+          "prompt": "Hmm... Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
-              "text": "Flags lose the game and burn the screen.",
+              "text": "Reveals only happen if the hero blinks first.",
               "correct": false
             },
             {
-              "text": "A win screen feels great.",
+              "text": "A flag at the end says you win.",
               "correct": true
             },
             {
-              "text": "Win screens are sad and damp.",
+              "text": "Flags walk away if the hero is too slow.",
               "correct": false
             },
             {
-              "text": "Flags must be folded into a swan.",
+              "text": "Win moments must be boring to be official.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q8_v3.wav"
         },
         {
-          "prompt": "Tell me — Fill in the blank: when we talk about iter 6: flag and reveal, ___",
+          "prompt": "Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
-              "text": "Try to make the win moment fun.",
+              "text": "Touching the flag triggers a reveal.",
               "correct": true
             },
             {
@@ -1058,15 +1806,120 @@
               "correct": false
             },
             {
-              "text": "Flags must be folded into a swan.",
+              "text": "Win moments must be boring to be official.",
               "correct": false
             },
             {
-              "text": "Reveals are illegal in three states.",
+              "text": "Win screens are sad and damp.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_55_q8_v4.wav"
+        },
+        {
+          "prompt": "Quick! Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "A win screen feels great.",
+              "correct": true
+            },
+            {
+              "text": "Reveals are tiny and easy to miss on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Reveals only happen if the hero blinks first.",
+              "correct": false
+            },
+            {
+              "text": "Each win demands a tiny tax of cheese.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "Reveals are tiny and easy to miss on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Flags walk away if the hero is too slow.",
+              "correct": false
+            },
+            {
+              "text": "Try to make the win moment fun.",
+              "correct": true
+            },
+            {
+              "text": "Flags must be folded into a swan.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "Sharing the win is a sweet ending.",
+              "correct": true
+            },
+            {
+              "text": "Reveals are tiny and easy to miss on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Flags must be made of real cloth.",
+              "correct": false
+            },
+            {
+              "text": "Reveals only happen if the hero blinks first.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "A surprise at the end leaves players smiling.",
+              "correct": true
+            },
+            {
+              "text": "Flags lose the game and burn the screen.",
+              "correct": false
+            },
+            {
+              "text": "Reveals only happen if the hero blinks first.",
+              "correct": false
+            },
+            {
+              "text": "Reveals are tiny and easy to miss on purpose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which rule about iter 6: flag and reveal is a GOOD rule?",
+          "options": [
+            {
+              "text": "Flags must be made of real cloth.",
+              "correct": false
+            },
+            {
+              "text": "Flags walk away if the hero is too slow.",
+              "correct": false
+            },
+            {
+              "text": "Each win demands a tiny tax of cheese.",
+              "correct": false
+            },
+            {
+              "text": "End screens should feel like a small celebration.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

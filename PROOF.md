@@ -24,7 +24,7 @@ The user designed this. He set the goal — teach his son the way he himself wor
 - **Time:** Lessons are short — about 3 to 6 minutes each. There are 60 lessons total.
 - **Data:** Nothing leaves the family's computer. No accounts. No server. No tracking. The child's progress lives only on the family's own machine.
 - **Control:** The parent owns the file. They can delete it any time and it is fully gone. No outside service has any record.
-- **Trade-off:** The "helpers" the child meets in the lessons are pretend versions, not the real thing. That's intentional — the child practices the skill of asking for help without ever connecting to a live system that could charge money or behave unexpectedly. The child learns the habit; the real helpers come later.
+- **Trade-off:** The "helpers" the child meets in the lessons are offline simulations of real AI tools — they look and act like the real Claude/Cursor/Gemini, but they don't connect to the internet. That's intentional — the child practices the skill of asking for help without ever connecting to a live system that could charge money or behave unexpectedly. The child learns the habit; the real helpers come later.
 
 ## Who is responsible
 The designer (the user) is the sole owner and decision-maker. Last review: 2026-05-07.

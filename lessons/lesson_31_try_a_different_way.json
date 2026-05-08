@@ -49,14 +49,27 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "type-this-word",
+        "type": "click-the-thing",
         "payload": {
-          "prompt": "Type READY and press Send to keep going!",
-          "target_display": "READY",
-          "targets": [
-            "ready"
-          ],
-          "hint_wrong": "Type the word READY (any case is fine)."
+          "prompt": "First way did not work. What do you say next?",
+          "choices": [
+            {
+              "label": "I quit!",
+              "right": false
+            },
+            {
+              "label": "Let's try a different way.",
+              "right": true
+            },
+            {
+              "label": "Same thing again, please.",
+              "right": false
+            },
+            {
+              "label": "...",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -64,11 +77,11 @@
           "prompt": "What is trying a different way?",
           "options": [
             {
-              "text": "Trying twice attracts wasps.",
+              "text": "Trying again means you failed.",
               "correct": false
             },
             {
-              "text": "Only one way ever works — and it is illegal.",
+              "text": "Trying again is for quitters with hats.",
               "correct": false
             },
             {
@@ -86,7 +99,7 @@
           "prompt": "Quick! Which one is TRUE about trying a different way?",
           "options": [
             {
-              "text": "Each new way costs three teeth.",
+              "text": "New angles never help and bend the spoon.",
               "correct": false
             },
             {
@@ -98,7 +111,7 @@
               "correct": false
             },
             {
-              "text": "Trying again is for quitters with hats.",
+              "text": "After 2 tries, you must give up forever.",
               "correct": false
             }
           ],
@@ -108,11 +121,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
-              "text": "A new angle finds new clues.",
+              "text": "If one path is stuck, try another.",
               "correct": false
             },
             {
-              "text": "Sometimes the third try is the magic try.",
+              "text": "A new angle finds new clues.",
               "correct": false
             },
             {
@@ -120,7 +133,7 @@
               "correct": true
             },
             {
-              "text": "If one path is stuck, try another.",
+              "text": "Switch tools when one isn't working.",
               "correct": false
             }
           ],
@@ -130,11 +143,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about trying a different way. What should he say?",
           "options": [
             {
-              "text": "Stuck means done forever — sit in a corner.",
+              "text": "After 2 tries, you must give up forever.",
               "correct": false
             },
             {
-              "text": "New angles never help and bend the spoon.",
+              "text": "Stuck means done forever — sit in a corner.",
               "correct": false
             },
             {
@@ -142,7 +155,7 @@
               "correct": true
             },
             {
-              "text": "Helpers only know one path and it leads to a barn.",
+              "text": "Only one way ever works — and it is illegal.",
               "correct": false
             }
           ],
@@ -152,11 +165,11 @@
           "prompt": "Tell me — Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
-              "text": "Stuck means done forever — sit in a corner.",
+              "text": "Trying again means you failed.",
               "correct": false
             },
             {
-              "text": "Trying twice attracts wasps.",
+              "text": "New angles never help and bend the spoon.",
               "correct": false
             },
             {
@@ -164,11 +177,116 @@
               "correct": true
             },
             {
-              "text": "New angles never help and bend the spoon.",
+              "text": "Stuck means done forever — sit in a corner.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about trying a different way, ___",
+          "options": [
+            {
+              "text": "Trying twice attracts wasps.",
+              "correct": false
+            },
+            {
+              "text": "Step away for a bit and come back fresh.",
+              "correct": true
+            },
+            {
+              "text": "There is only one right way to fix every bug.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path and it leads to a barn.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A new angle finds new clues.",
+              "correct": false
+            },
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": false
+            },
+            {
+              "text": "New angles must be drawn with a banana.",
+              "correct": true
+            },
+            {
+              "text": "Step away for a bit and come back fresh.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with trying a different way?",
+          "options": [
+            {
+              "text": "Only one way ever works — and it is illegal.",
+              "correct": false
+            },
+            {
+              "text": "Each new way costs three teeth.",
+              "correct": false
+            },
+            {
+              "text": "Switch tools when one isn't working.",
+              "correct": true
+            },
+            {
+              "text": "Stuck means done forever — sit in a corner.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about trying a different way is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "If one way doesn't work, try a different angle.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": false
+            },
+            {
+              "text": "Step away for a bit and come back fresh.",
+              "correct": false
+            },
+            {
+              "text": "There is only one right way to fix every bug.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about trying a different way. Which fact would help him?",
+          "options": [
+            {
+              "text": "Stuck on a problem? Take a break and come back fresh.",
+              "correct": true
+            },
+            {
+              "text": "Each new way costs three teeth.",
+              "correct": false
+            },
+            {
+              "text": "New angles must be drawn with a banana.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help and bend the spoon.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -177,12 +295,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BUILD and press Send to keep going!",
-          "target_display": "BUILD",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "build"
+            "yes"
           ],
-          "hint_wrong": "Type the word BUILD (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -295,6 +413,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey's loop won't end. He's tried fixing it three times. What now?",
+          "options": [
+            {
+              "text": "Pour milk on the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Try a totally different approach — maybe a different kind of loop.",
+              "correct": true
+            },
+            {
+              "text": "Try the SAME thing 100 more times.",
+              "correct": false
+            },
+            {
+              "text": "Ask the loop politely to stop.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey's loop won't end. He's tried fixing it three times. What now?",
+          "options": [
+            {
+              "text": "Try a totally different approach — maybe a different kind of loop.",
+              "correct": true
+            },
+            {
+              "text": "Pour milk on the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Try the SAME thing 100 more times.",
+              "correct": false
+            },
+            {
+              "text": "Ask the loop politely to stop.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey's loop won't end. He's tried fixing it three times. What now?",
+          "options": [
+            {
+              "text": "Pour milk on the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Try a totally different approach — maybe a different kind of loop.",
+              "correct": true
+            },
+            {
+              "text": "Ask the loop politely to stop.",
+              "correct": false
+            },
+            {
+              "text": "Try the SAME thing 100 more times.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey's loop won't end. He's tried fixing it three times. What now?",
+          "options": [
+            {
+              "text": "Pour milk on the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Try a totally different approach — maybe a different kind of loop.",
+              "correct": true
+            },
+            {
+              "text": "Ask the loop politely to stop.",
+              "correct": false
+            },
+            {
+              "text": "Try the SAME thing 100 more times.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey's loop won't end. He's tried fixing it three times. What now?",
+          "options": [
+            {
+              "text": "Pour milk on the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Try a totally different approach — maybe a different kind of loop.",
+              "correct": true
+            },
+            {
+              "text": "Ask the loop politely to stop.",
+              "correct": false
+            },
+            {
+              "text": "Try the SAME thing 100 more times.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -303,12 +526,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -421,6 +644,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why try a fresh angle when stuck?",
+          "options": [
+            {
+              "text": "New angles attract bonus stars.",
+              "correct": false
+            },
+            {
+              "text": "New angles taste different.",
+              "correct": false
+            },
+            {
+              "text": "New angles cost less in pebbles.",
+              "correct": false
+            },
+            {
+              "text": "New angles often reveal what the old angle hid.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why try a fresh angle when stuck?",
+          "options": [
+            {
+              "text": "New angles often reveal what the old angle hid.",
+              "correct": true
+            },
+            {
+              "text": "New angles attract bonus stars.",
+              "correct": false
+            },
+            {
+              "text": "New angles cost less in pebbles.",
+              "correct": false
+            },
+            {
+              "text": "New angles taste different.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why try a fresh angle when stuck?",
+          "options": [
+            {
+              "text": "New angles often reveal what the old angle hid.",
+              "correct": true
+            },
+            {
+              "text": "New angles cost less in pebbles.",
+              "correct": false
+            },
+            {
+              "text": "New angles taste different.",
+              "correct": false
+            },
+            {
+              "text": "New angles attract bonus stars.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why try a fresh angle when stuck?",
+          "options": [
+            {
+              "text": "New angles taste different.",
+              "correct": false
+            },
+            {
+              "text": "New angles cost less in pebbles.",
+              "correct": false
+            },
+            {
+              "text": "New angles often reveal what the old angle hid.",
+              "correct": true
+            },
+            {
+              "text": "New angles attract bonus stars.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why try a fresh angle when stuck?",
+          "options": [
+            {
+              "text": "New angles taste different.",
+              "correct": false
+            },
+            {
+              "text": "New angles cost less in pebbles.",
+              "correct": false
+            },
+            {
+              "text": "New angles often reveal what the old angle hid.",
+              "correct": true
+            },
+            {
+              "text": "New angles attract bonus stars.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -429,12 +757,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type START and press Send to keep going!",
-          "target_display": "START",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "start"
+            "cool"
           ],
-          "hint_wrong": "Type the word START (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -442,19 +770,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
-              "text": "Sometimes the third try is the magic try.",
+              "text": "If one path is stuck, try another.",
               "correct": false
             },
             {
-              "text": "Step away for a bit and come back fresh.",
+              "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
               "correct": false
             },
             {
-              "text": "Helpers only know one path and it leads to a barn.",
+              "text": "Trying again means you failed.",
               "correct": true
             },
             {
-              "text": "There is more than one way to solve a problem.",
+              "text": "Trying again is brave.",
               "correct": false
             }
           ],
@@ -464,19 +792,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
-              "text": "Helpers can suggest other paths.",
+              "text": "If one way doesn't work, try a different angle.",
               "correct": false
             },
             {
-              "text": "Stuck means done forever — sit in a corner.",
+              "text": "After 2 tries, you must give up forever.",
               "correct": true
             },
             {
-              "text": "Sometimes the third try is the magic try.",
+              "text": "If one path is stuck, try another.",
               "correct": false
             },
             {
-              "text": "There is more than one way to solve a problem.",
+              "text": "Asking 'what else could I try?' unlocks new ideas.",
               "correct": false
             }
           ],
@@ -486,19 +814,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
-              "text": "There is more than one way to solve a problem.",
+              "text": "Trying again is brave.",
               "correct": false
             },
             {
-              "text": "Sometimes the third try is the magic try.",
+              "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
               "correct": false
             },
             {
-              "text": "Each new way costs three teeth.",
+              "text": "Real coders fix everything on the first try.",
               "correct": true
             },
             {
-              "text": "Trying again is brave.",
+              "text": "If one path is stuck, try another.",
               "correct": false
             }
           ],
@@ -508,11 +836,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
+              "text": "Sometimes the third try is the magic try.",
+              "correct": false
+            },
+            {
+              "text": "If one way doesn't work, try a different angle.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works — and it is illegal.",
+              "correct": true
+            },
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_31_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
               "text": "Switch tools when one isn't working.",
               "correct": false
             },
             {
+              "text": "A new angle finds new clues.",
+              "correct": false
+            },
+            {
+              "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters with hats.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_31_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "Asking 'what else could I try?' unlocks new ideas.",
+              "correct": false
+            },
+            {
+              "text": "New angles never help and bend the spoon.",
+              "correct": true
+            },
+            {
+              "text": "Stuck on a problem? Take a break and come back fresh.",
+              "correct": false
+            },
+            {
               "text": "Sometimes the third try is the magic try.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "If one way doesn't work, try a different angle.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path and it leads to a barn.",
+              "correct": true
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": false
+            },
+            {
+              "text": "Switch tools when one isn't working.",
+              "correct": false
+            },
+            {
+              "text": "Asking 'what else could I try?' unlocks new ideas.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever — sit in a corner.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "Each new way costs three teeth.",
+              "correct": true
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": false
+            },
+            {
+              "text": "Step away for a bit and come back fresh.",
+              "correct": false
+            },
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about trying a different way.",
+          "options": [
+            {
+              "text": "Stuck on a problem? Take a break and come back fresh.",
               "correct": false
             },
             {
@@ -520,33 +972,14 @@
               "correct": true
             },
             {
-              "text": "Step away for a bit and come back fresh.",
+              "text": "Helpers can suggest other paths.",
+              "correct": false
+            },
+            {
+              "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_31_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about trying a different way.",
-          "options": [
-            {
-              "text": "Sometimes the third try is the magic try.",
-              "correct": false
-            },
-            {
-              "text": "Switch tools when one isn't working.",
-              "correct": false
-            },
-            {
-              "text": "Trying again is brave.",
-              "correct": false
-            },
-            {
-              "text": "Trying twice attracts wasps.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_31_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -555,12 +988,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BLOCK and press Send to keep going!",
-          "target_display": "BLOCK",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "block"
+            "next"
           ],
-          "hint_wrong": "Type the word BLOCK (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -568,19 +1001,19 @@
           "prompt": "Tell me — Which one is TRUE about trying a different way?",
           "options": [
             {
+              "text": "New angles never help and bend the spoon.",
+              "correct": false
+            },
+            {
+              "text": "After 2 tries, you must give up forever.",
+              "correct": false
+            },
+            {
               "text": "Only one way ever works — and it is illegal.",
               "correct": false
             },
             {
-              "text": "Trying again is for quitters with hats.",
-              "correct": false
-            },
-            {
-              "text": "Each new way costs three teeth.",
-              "correct": false
-            },
-            {
-              "text": "Helpers can suggest other paths.",
+              "text": "If one path is stuck, try another.",
               "correct": true
             }
           ],
@@ -598,11 +1031,11 @@
               "correct": false
             },
             {
-              "text": "Step away for a bit and come back fresh.",
+              "text": "There is more than one way to solve a problem.",
               "correct": true
             },
             {
-              "text": "Helpers only know one path and it leads to a barn.",
+              "text": "There is only one right way to fix every bug.",
               "correct": false
             }
           ],
@@ -612,27 +1045,121 @@
           "prompt": "Pop quiz! Which one is TRUE about trying a different way?",
           "options": [
             {
-              "text": "Sometimes the third try is the magic try.",
+              "text": "Trying again is brave.",
               "correct": true
             },
             {
-              "text": "Only one way ever works — and it is illegal.",
-              "correct": false
-            },
-            {
-              "text": "Helpers only know one path and it leads to a barn.",
-              "correct": false
-            },
-            {
               "text": "Stuck means done forever — sit in a corner.",
+              "correct": false
+            },
+            {
+              "text": "Trying twice attracts wasps.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters with hats.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Trying again means you failed.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": true
+            },
+            {
+              "text": "There is only one right way to fix every bug.",
+              "correct": false
+            },
+            {
+              "text": "Trying twice attracts wasps.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_31_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": true
+            },
+            {
+              "text": "New angles must be drawn with a banana.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever — sit in a corner.",
+              "correct": false
+            },
+            {
+              "text": "Real coders fix everything on the first try.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_31_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Step away for a bit and come back fresh.",
+              "correct": true
+            },
+            {
+              "text": "New angles must be drawn with a banana.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works — and it is illegal.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters with hats.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Helpers only know one path and it leads to a barn.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works — and it is illegal.",
+              "correct": false
+            },
+            {
+              "text": "Sometimes the third try is the magic try.",
+              "correct": true
+            },
+            {
+              "text": "New angles never help and bend the spoon.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about trying a different way?",
           "options": [
+            {
+              "text": "Only one way ever works — and it is illegal.",
+              "correct": false
+            },
+            {
+              "text": "New angles must be drawn with a banana.",
+              "correct": false
+            },
             {
               "text": "Stuck means done forever — sit in a corner.",
               "correct": false
@@ -640,39 +1167,50 @@
             {
               "text": "Switch tools when one isn't working.",
               "correct": true
-            },
-            {
-              "text": "Only one way ever works — and it is illegal.",
-              "correct": false
-            },
-            {
-              "text": "Each new way costs three teeth.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_31_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about trying a different way?",
           "options": [
             {
-              "text": "If one path is stuck, try another.",
+              "text": "Real coders fix everything on the first try.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path and it leads to a barn.",
+              "correct": false
+            },
+            {
+              "text": "Stuck means done forever — sit in a corner.",
+              "correct": false
+            },
+            {
+              "text": "If one way doesn't work, try a different angle.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about trying a different way?",
+          "options": [
+            {
+              "text": "Trying again means you failed.",
+              "correct": false
+            },
+            {
+              "text": "After 2 tries, you must give up forever.",
+              "correct": false
             },
             {
               "text": "Trying again is for quitters with hats.",
               "correct": false
             },
             {
-              "text": "Each new way costs three teeth.",
-              "correct": false
-            },
-            {
-              "text": "Helpers only know one path and it leads to a barn.",
-              "correct": false
+              "text": "Stuck on a problem? Take a break and come back fresh.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_31_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -681,124 +1219,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "prompt": "You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
-              "text": "Switch tools when one isn't working.",
+              "text": "Quit coding forever.",
               "correct": false
             },
             {
-              "text": "Sometimes the third try is the magic try.",
+              "text": "Pretend you wanted no jump.",
               "correct": false
             },
             {
-              "text": "Each new way costs three teeth.",
+              "text": "Step away, then come back and try a totally different approach.",
               "correct": true
             },
             {
-              "text": "If one path is stuck, try another.",
+              "text": "Hide the keyboard.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "prompt": "Quick! You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
-              "text": "Trying again is brave.",
-              "correct": false
-            },
-            {
-              "text": "Switch tools when one isn't working.",
-              "correct": false
-            },
-            {
-              "text": "New angles must be drawn with a banana.",
+              "text": "Step away, then come back and try a totally different approach.",
               "correct": true
             },
             {
-              "text": "There is more than one way to solve a problem.",
+              "text": "Hide the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Pretend you wanted no jump.",
+              "correct": false
+            },
+            {
+              "text": "Quit coding forever.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
-              "text": "A new angle finds new clues.",
+              "text": "Quit coding forever.",
               "correct": false
             },
             {
-              "text": "Trying twice attracts wasps.",
+              "text": "Step away, then come back and try a totally different approach.",
               "correct": true
             },
             {
-              "text": "Switch tools when one isn't working.",
+              "text": "Pretend you wanted no jump.",
               "correct": false
             },
             {
-              "text": "If one path is stuck, try another.",
+              "text": "Hide the keyboard.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
-              "text": "If one path is stuck, try another.",
+              "text": "Pretend you wanted no jump.",
               "correct": false
             },
             {
-              "text": "There is more than one way to solve a problem.",
-              "correct": false
-            },
-            {
-              "text": "Step away for a bit and come back fresh.",
-              "correct": false
-            },
-            {
-              "text": "Only one way ever works — and it is illegal.",
+              "text": "Step away, then come back and try a totally different approach.",
               "correct": true
+            },
+            {
+              "text": "Quit coding forever.",
+              "correct": false
+            },
+            {
+              "text": "Hide the keyboard.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "prompt": "Tell me — You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
-              "text": "Trying again is for quitters with hats.",
+              "text": "Quit coding forever.",
+              "correct": false
+            },
+            {
+              "text": "Hide the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Step away, then come back and try a totally different approach.",
               "correct": true
             },
             {
-              "text": "Sometimes the third try is the magic try.",
-              "correct": false
-            },
-            {
-              "text": "If one path is stuck, try another.",
-              "correct": false
-            },
-            {
-              "text": "Step away for a bit and come back fresh.",
+              "text": "Pretend you wanted no jump.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You tried 3 ways to make the hero jump and none work. What now?",
+          "options": [
+            {
+              "text": "Hide the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Quit coding forever.",
+              "correct": false
+            },
+            {
+              "text": "Pretend you wanted no jump.",
+              "correct": false
+            },
+            {
+              "text": "Step away, then come back and try a totally different approach.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You tried 3 ways to make the hero jump and none work. What now?",
+          "options": [
+            {
+              "text": "Pretend you wanted no jump.",
+              "correct": false
+            },
+            {
+              "text": "Hide the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Quit coding forever.",
+              "correct": false
+            },
+            {
+              "text": "Step away, then come back and try a totally different approach.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You tried 3 ways to make the hero jump and none work. What now?",
+          "options": [
+            {
+              "text": "Step away, then come back and try a totally different approach.",
+              "correct": true
+            },
+            {
+              "text": "Hide the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Quit coding forever.",
+              "correct": false
+            },
+            {
+              "text": "Pretend you wanted no jump.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You tried 3 ways to make the hero jump and none work. What now?",
+          "options": [
+            {
+              "text": "Step away, then come back and try a totally different approach.",
+              "correct": true
+            },
+            {
+              "text": "Pretend you wanted no jump.",
+              "correct": false
+            },
+            {
+              "text": "Hide the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Quit coding forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You tried 3 ways to make the hero jump and none work. What now?",
+          "options": [
+            {
+              "text": "Step away, then come back and try a totally different approach.",
+              "correct": true
+            },
+            {
+              "text": "Pretend you wanted no jump.",
+              "correct": false
+            },
+            {
+              "text": "Quit coding forever.",
+              "correct": false
+            },
+            {
+              "text": "Hide the keyboard.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -807,124 +1450,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BRAIN and press Send to keep going!",
-          "target_display": "BRAIN",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "brain"
+            "play"
           ],
-          "hint_wrong": "Type the word BRAIN (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about trying a different way is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Sometimes the third try is the magic try.",
+              "text": "New angles must be drawn with a banana.",
               "correct": true
             },
             {
-              "text": "Stuck means done forever — sit in a corner.",
+              "text": "There is more than one way to solve a problem.",
               "correct": false
             },
             {
-              "text": "Each new way costs three teeth.",
+              "text": "If one way doesn't work, try a different angle.",
               "correct": false
             },
             {
-              "text": "Only one way ever works — and it is illegal.",
+              "text": "Asking 'what else could I try?' unlocks new ideas.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about trying a different way is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "If one path is stuck, try another.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is brave.",
+              "correct": false
+            },
+            {
               "text": "Trying twice attracts wasps.",
-              "correct": false
-            },
-            {
-              "text": "New angles must be drawn with a banana.",
-              "correct": false
-            },
-            {
-              "text": "New angles never help and bend the spoon.",
-              "correct": false
-            },
-            {
-              "text": "Switch tools when one isn't working.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about trying a different way is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Each new way costs three teeth.",
+              "text": "Sometimes the third try is the magic try.",
               "correct": false
             },
             {
-              "text": "Helpers only know one path and it leads to a barn.",
+              "text": "Asking 'what else could I try?' unlocks new ideas.",
               "correct": false
             },
             {
-              "text": "Stuck means done forever — sit in a corner.",
+              "text": "Stuck on a problem? Take a break and come back fresh.",
               "correct": false
             },
             {
-              "text": "If one path is stuck, try another.",
+              "text": "There is only one right way to fix every bug.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about trying a different way is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Trying twice attracts wasps.",
+              "text": "There is more than one way to solve a problem.",
               "correct": false
             },
             {
-              "text": "There is more than one way to solve a problem.",
+              "text": "Trying again means you failed.",
               "correct": true
             },
             {
-              "text": "Stuck means done forever — sit in a corner.",
+              "text": "Sometimes the third try is the magic try.",
               "correct": false
             },
             {
-              "text": "New angles must be drawn with a banana.",
+              "text": "Helpers can suggest other paths.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about trying a different way is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Trying again is for quitters with hats.",
+              "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
               "correct": false
             },
             {
-              "text": "Trying again is brave.",
+              "text": "After 2 tries, you must give up forever.",
               "correct": true
             },
             {
-              "text": "Helpers only know one path and it leads to a barn.",
+              "text": "If one path is stuck, try another.",
               "correct": false
             },
             {
-              "text": "Only one way ever works — and it is illegal.",
+              "text": "If one way doesn't work, try a different angle.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Step away for a bit and come back fresh.",
+              "correct": false
+            },
+            {
+              "text": "Real coders fix everything on the first try.",
+              "correct": true
+            },
+            {
+              "text": "If one way doesn't work, try a different angle.",
+              "correct": false
+            },
+            {
+              "text": "Switch tools when one isn't working.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Trying again is brave.",
+              "correct": false
+            },
+            {
+              "text": "Only one way ever works — and it is illegal.",
+              "correct": true
+            },
+            {
+              "text": "Sometimes the third try is the magic try.",
+              "correct": false
+            },
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Sometimes the third try is the magic try.",
+              "correct": false
+            },
+            {
+              "text": "There is more than one way to solve a problem.",
+              "correct": false
+            },
+            {
+              "text": "Trying again is for quitters with hats.",
+              "correct": true
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "New angles never help and bend the spoon.",
+              "correct": true
+            },
+            {
+              "text": "If one path is stuck, try another.",
+              "correct": false
+            },
+            {
+              "text": "Asking 'what else could I try?' unlocks new ideas.",
+              "correct": false
+            },
+            {
+              "text": "Sometimes the third try is the magic try.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about trying a different way. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Trying again is brave.",
+              "correct": false
+            },
+            {
+              "text": "Step away for a bit and come back fresh.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only know one path and it leads to a barn.",
+              "correct": true
+            },
+            {
+              "text": "Sometimes the third try is the magic try.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -933,28 +1681,28 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type DREAM and press Send to keep going!",
-          "target_display": "DREAM",
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
           "targets": [
-            "dream"
+            "code"
           ],
-          "hint_wrong": "Type the word DREAM (any case is fine)."
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Fill in the blank: when we talk about trying a different way, ___",
+          "prompt": "Listen up — Which rule about trying a different way is a GOOD rule?",
           "options": [
+            {
+              "text": "New angles must be drawn with a banana.",
+              "correct": false
+            },
             {
               "text": "Trying again is for quitters with hats.",
               "correct": false
             },
             {
-              "text": "New angles never help and bend the spoon.",
-              "correct": false
-            },
-            {
-              "text": "Switch tools when one isn't working.",
+              "text": "Stuck on a problem? Take a break and come back fresh.",
               "correct": true
             },
             {
@@ -965,36 +1713,32 @@
           "_audio": "assets/audio/q/lesson_31_q8_v0.wav"
         },
         {
-          "prompt": "Quick! Fill in the blank: when we talk about trying a different way, ___",
+          "prompt": "Here's a thinker: Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
-              "text": "Stuck means done forever — sit in a corner.",
+              "text": "Trying again means you failed.",
               "correct": false
             },
             {
-              "text": "New angles must be drawn with a banana.",
+              "text": "There is only one right way to fix every bug.",
               "correct": false
             },
             {
-              "text": "If one path is stuck, try another.",
+              "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
               "correct": true
             },
             {
-              "text": "Each new way costs three teeth.",
+              "text": "New angles never help and bend the spoon.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q8_v1.wav"
         },
         {
-          "prompt": "Hey friend — Fill in the blank: when we talk about trying a different way, ___",
+          "prompt": "OK quick one: Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
-              "text": "Trying again is for quitters with hats.",
-              "correct": false
-            },
-            {
-              "text": "Only one way ever works — and it is illegal.",
+              "text": "Stuck means done forever — sit in a corner.",
               "correct": false
             },
             {
@@ -1002,39 +1746,43 @@
               "correct": false
             },
             {
-              "text": "There is more than one way to solve a problem.",
+              "text": "Only one way ever works — and it is illegal.",
+              "correct": false
+            },
+            {
+              "text": "Asking 'what else could I try?' unlocks new ideas.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q8_v2.wav"
         },
         {
-          "prompt": "Bytey wonders: Fill in the blank: when we talk about trying a different way, ___",
+          "prompt": "Hmm... Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
-              "text": "Only one way ever works — and it is illegal.",
+              "text": "Trying again means you failed.",
               "correct": false
             },
             {
-              "text": "Trying again is brave.",
+              "text": "If one path is stuck, try another.",
               "correct": true
             },
             {
-              "text": "New angles never help and bend the spoon.",
+              "text": "After 2 tries, you must give up forever.",
               "correct": false
             },
             {
-              "text": "New angles must be drawn with a banana.",
+              "text": "Helpers only know one path and it leads to a barn.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q8_v3.wav"
         },
         {
-          "prompt": "Tell me — Fill in the blank: when we talk about trying a different way, ___",
+          "prompt": "Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
-              "text": "A new angle finds new clues.",
+              "text": "There is more than one way to solve a problem.",
               "correct": true
             },
             {
@@ -1042,15 +1790,120 @@
               "correct": false
             },
             {
-              "text": "New angles must be drawn with a banana.",
+              "text": "Helpers only know one path and it leads to a barn.",
               "correct": false
             },
             {
-              "text": "Trying again is for quitters with hats.",
+              "text": "New angles never help and bend the spoon.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_31_q8_v4.wav"
+        },
+        {
+          "prompt": "Quick! Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "Trying again is brave.",
+              "correct": true
+            },
+            {
+              "text": "Real coders fix everything on the first try.",
+              "correct": false
+            },
+            {
+              "text": "Trying again means you failed.",
+              "correct": false
+            },
+            {
+              "text": "Each new way costs three teeth.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "Real coders fix everything on the first try.",
+              "correct": false
+            },
+            {
+              "text": "After 2 tries, you must give up forever.",
+              "correct": false
+            },
+            {
+              "text": "A new angle finds new clues.",
+              "correct": true
+            },
+            {
+              "text": "New angles must be drawn with a banana.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "Helpers can suggest other paths.",
+              "correct": true
+            },
+            {
+              "text": "Real coders fix everything on the first try.",
+              "correct": false
+            },
+            {
+              "text": "There is only one right way to fix every bug.",
+              "correct": false
+            },
+            {
+              "text": "Trying again means you failed.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "Step away for a bit and come back fresh.",
+              "correct": true
+            },
+            {
+              "text": "Only one way ever works — and it is illegal.",
+              "correct": false
+            },
+            {
+              "text": "Trying again means you failed.",
+              "correct": false
+            },
+            {
+              "text": "Real coders fix everything on the first try.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which rule about trying a different way is a GOOD rule?",
+          "options": [
+            {
+              "text": "There is only one right way to fix every bug.",
+              "correct": false
+            },
+            {
+              "text": "After 2 tries, you must give up forever.",
+              "correct": false
+            },
+            {
+              "text": "Each new way costs three teeth.",
+              "correct": false
+            },
+            {
+              "text": "Sometimes the third try is the magic try.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

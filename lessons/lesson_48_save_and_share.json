@@ -35,7 +35,7 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "share-card",
+        "type": "type-this-word",
         "payload": {
           "prompt": "Type the word builders use to share work:",
           "target_display": "push",
@@ -50,11 +50,11 @@
           "prompt": "What is save and share?",
           "options": [
             {
-              "text": "Backups must be hidden in a sock.",
+              "text": "Sharing your game gives it away forever.",
               "correct": false
             },
             {
-              "text": "Saving deletes your work permanently.",
+              "text": "Sharing breaks the file beyond repair.",
               "correct": false
             },
             {
@@ -72,7 +72,7 @@
           "prompt": "Quick! Which one is TRUE about save and share?",
           "options": [
             {
-              "text": "Saving requires a special chant.",
+              "text": "File names do not matter — pick 'asdf'.",
               "correct": false
             },
             {
@@ -84,7 +84,7 @@
               "correct": false
             },
             {
-              "text": "Sharing breaks the file beyond repair.",
+              "text": "Saved games shrink every Tuesday.",
               "correct": false
             }
           ],
@@ -94,11 +94,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about save and share.",
           "options": [
             {
-              "text": "Backups protect your hard work.",
+              "text": "Saving keeps your work safe.",
               "correct": false
             },
             {
-              "text": "Use folders to stay organized.",
+              "text": "Backups protect your hard work.",
               "correct": false
             },
             {
@@ -106,7 +106,7 @@
               "correct": true
             },
             {
-              "text": "Saving keeps your work safe.",
+              "text": "Note the version with each save.",
               "correct": false
             }
           ],
@@ -116,11 +116,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about save and share. What should he say?",
           "options": [
             {
-              "text": "Shared games rot if anyone plays them.",
+              "text": "Saved games shrink every Tuesday.",
               "correct": false
             },
             {
-              "text": "File names do not matter — pick 'asdf'.",
+              "text": "Shared games rot if anyone plays them.",
               "correct": false
             },
             {
@@ -128,7 +128,7 @@
               "correct": true
             },
             {
-              "text": "Backups are useless and waste space.",
+              "text": "Saving deletes your work permanently.",
               "correct": false
             }
           ],
@@ -138,11 +138,11 @@
           "prompt": "Tell me — Which rule about save and share is a GOOD rule?",
           "options": [
             {
-              "text": "Shared games rot if anyone plays them.",
+              "text": "Sharing your game gives it away forever.",
               "correct": false
             },
             {
-              "text": "Backups must be hidden in a sock.",
+              "text": "File names do not matter — pick 'asdf'.",
               "correct": false
             },
             {
@@ -150,11 +150,116 @@
               "correct": true
             },
             {
-              "text": "File names do not matter — pick 'asdf'.",
+              "text": "Shared games rot if anyone plays them.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_48_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about save and share, ___",
+          "options": [
+            {
+              "text": "Backups must be hidden in a sock.",
+              "correct": false
+            },
+            {
+              "text": "Always save before big changes.",
+              "correct": true
+            },
+            {
+              "text": "Saves only work if you blow on the disk.",
+              "correct": false
+            },
+            {
+              "text": "Backups are useless and waste space.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about save and share. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Backups protect your hard work.",
+              "correct": false
+            },
+            {
+              "text": "Shared games can come back better.",
+              "correct": false
+            },
+            {
+              "text": "Saves are sealed with melted cheese.",
+              "correct": true
+            },
+            {
+              "text": "Always save before big changes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with save and share?",
+          "options": [
+            {
+              "text": "Saving deletes your work permanently.",
+              "correct": false
+            },
+            {
+              "text": "Saving requires a special chant.",
+              "correct": false
+            },
+            {
+              "text": "Note the version with each save.",
+              "correct": true
+            },
+            {
+              "text": "Shared games rot if anyone plays them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about save and share is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Saving means storing your game so it doesn't disappear.",
+              "correct": false
+            },
+            {
+              "text": "Backups protect your hard work.",
+              "correct": false
+            },
+            {
+              "text": "Always save before big changes.",
+              "correct": false
+            },
+            {
+              "text": "Saves only work if you blow on the disk.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about save and share. Which fact would help him?",
+          "options": [
+            {
+              "text": "Sharing means giving your game to other people to try.",
+              "correct": true
+            },
+            {
+              "text": "Saving requires a special chant.",
+              "correct": false
+            },
+            {
+              "text": "Saves are sealed with melted cheese.",
+              "correct": false
+            },
+            {
+              "text": "File names do not matter — pick 'asdf'.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -163,12 +268,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type START and press Send to keep going!",
-          "target_display": "START",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "start"
+            "yes"
           ],
-          "hint_wrong": "Type the word START (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -281,6 +386,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_48_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey is about to try a risky change. What's the smart move first?",
+          "options": [
+            {
+              "text": "Save a copy or commit, so he can roll back if it breaks.",
+              "correct": true
+            },
+            {
+              "text": "Yell 'I HOPE THIS WORKS'.",
+              "correct": false
+            },
+            {
+              "text": "Delete everything just in case.",
+              "correct": false
+            },
+            {
+              "text": "Trust gut feelings entirely.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey is about to try a risky change. What's the smart move first?",
+          "options": [
+            {
+              "text": "Yell 'I HOPE THIS WORKS'.",
+              "correct": false
+            },
+            {
+              "text": "Save a copy or commit, so he can roll back if it breaks.",
+              "correct": true
+            },
+            {
+              "text": "Trust gut feelings entirely.",
+              "correct": false
+            },
+            {
+              "text": "Delete everything just in case.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey is about to try a risky change. What's the smart move first?",
+          "options": [
+            {
+              "text": "Yell 'I HOPE THIS WORKS'.",
+              "correct": false
+            },
+            {
+              "text": "Save a copy or commit, so he can roll back if it breaks.",
+              "correct": true
+            },
+            {
+              "text": "Trust gut feelings entirely.",
+              "correct": false
+            },
+            {
+              "text": "Delete everything just in case.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey is about to try a risky change. What's the smart move first?",
+          "options": [
+            {
+              "text": "Yell 'I HOPE THIS WORKS'.",
+              "correct": false
+            },
+            {
+              "text": "Save a copy or commit, so he can roll back if it breaks.",
+              "correct": true
+            },
+            {
+              "text": "Trust gut feelings entirely.",
+              "correct": false
+            },
+            {
+              "text": "Delete everything just in case.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is about to try a risky change. What's the smart move first?",
+          "options": [
+            {
+              "text": "Yell 'I HOPE THIS WORKS'.",
+              "correct": false
+            },
+            {
+              "text": "Trust gut feelings entirely.",
+              "correct": false
+            },
+            {
+              "text": "Save a copy or commit, so he can roll back if it breaks.",
+              "correct": true
+            },
+            {
+              "text": "Delete everything just in case.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -289,12 +499,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -407,6 +617,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_48_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Pick the better file name:",
+          "options": [
+            {
+              "text": "`platformer_v2_jump_fixed.zip`",
+              "correct": true
+            },
+            {
+              "text": "`stuff.zip`",
+              "correct": false
+            },
+            {
+              "text": "`asdf.zip`",
+              "correct": false
+            },
+            {
+              "text": "`final_FINAL_actuallyfinal_v3.zip`",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Pick the better file name:",
+          "options": [
+            {
+              "text": "`stuff.zip`",
+              "correct": false
+            },
+            {
+              "text": "`platformer_v2_jump_fixed.zip`",
+              "correct": true
+            },
+            {
+              "text": "`asdf.zip`",
+              "correct": false
+            },
+            {
+              "text": "`final_FINAL_actuallyfinal_v3.zip`",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Pick the better file name:",
+          "options": [
+            {
+              "text": "`stuff.zip`",
+              "correct": false
+            },
+            {
+              "text": "`asdf.zip`",
+              "correct": false
+            },
+            {
+              "text": "`final_FINAL_actuallyfinal_v3.zip`",
+              "correct": false
+            },
+            {
+              "text": "`platformer_v2_jump_fixed.zip`",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Pick the better file name:",
+          "options": [
+            {
+              "text": "`asdf.zip`",
+              "correct": false
+            },
+            {
+              "text": "`platformer_v2_jump_fixed.zip`",
+              "correct": true
+            },
+            {
+              "text": "`final_FINAL_actuallyfinal_v3.zip`",
+              "correct": false
+            },
+            {
+              "text": "`stuff.zip`",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Pick the better file name:",
+          "options": [
+            {
+              "text": "`final_FINAL_actuallyfinal_v3.zip`",
+              "correct": false
+            },
+            {
+              "text": "`platformer_v2_jump_fixed.zip`",
+              "correct": true
+            },
+            {
+              "text": "`stuff.zip`",
+              "correct": false
+            },
+            {
+              "text": "`asdf.zip`",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -415,12 +730,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BLOCK and press Send to keep going!",
-          "target_display": "BLOCK",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "block"
+            "cool"
           ],
-          "hint_wrong": "Type the word BLOCK (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -428,19 +743,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about save and share.",
           "options": [
             {
-              "text": "Use folders to stay organized.",
+              "text": "Saving keeps your work safe.",
               "correct": false
             },
             {
-              "text": "Always save before big changes.",
+              "text": "A good save uses a clear file name with what's inside.",
               "correct": false
             },
             {
-              "text": "Backups are useless and waste space.",
+              "text": "Sharing your game gives it away forever.",
               "correct": true
             },
             {
-              "text": "Sharing lets others play.",
+              "text": "A clear file name helps you find it.",
               "correct": false
             }
           ],
@@ -450,19 +765,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about save and share.",
           "options": [
             {
-              "text": "Shared games can come back better.",
+              "text": "Saving means storing your game so it doesn't disappear.",
               "correct": false
             },
             {
-              "text": "Shared games rot if anyone plays them.",
+              "text": "Saved games shrink every Tuesday.",
               "correct": true
             },
             {
-              "text": "Use folders to stay organized.",
+              "text": "Saving keeps your work safe.",
               "correct": false
             },
             {
-              "text": "Sharing lets others play.",
+              "text": "Sharing is how YOUR game becomes part of someone else's day.",
               "correct": false
             }
           ],
@@ -472,19 +787,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about save and share.",
           "options": [
             {
-              "text": "Sharing lets others play.",
+              "text": "A clear file name helps you find it.",
               "correct": false
             },
             {
-              "text": "Use folders to stay organized.",
+              "text": "A good save uses a clear file name with what's inside.",
               "correct": false
             },
             {
-              "text": "Saving requires a special chant.",
+              "text": "You can only share with one person ever.",
               "correct": true
             },
             {
-              "text": "A clear file name helps you find it.",
+              "text": "Saving keeps your work safe.",
               "correct": false
             }
           ],
@@ -494,11 +809,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about save and share.",
           "options": [
             {
+              "text": "Use folders to stay organized.",
+              "correct": false
+            },
+            {
+              "text": "Saving means storing your game so it doesn't disappear.",
+              "correct": false
+            },
+            {
+              "text": "Saving deletes your work permanently.",
+              "correct": true
+            },
+            {
+              "text": "Shared games can come back better.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_48_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
               "text": "Note the version with each save.",
               "correct": false
             },
             {
+              "text": "Backups protect your hard work.",
+              "correct": false
+            },
+            {
+              "text": "A good save uses a clear file name with what's inside.",
+              "correct": false
+            },
+            {
+              "text": "Sharing breaks the file beyond repair.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_48_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "Sharing is how YOUR game becomes part of someone else's day.",
+              "correct": false
+            },
+            {
+              "text": "File names do not matter — pick 'asdf'.",
+              "correct": true
+            },
+            {
+              "text": "Sharing means giving your game to other people to try.",
+              "correct": false
+            },
+            {
               "text": "Use folders to stay organized.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "Saving means storing your game so it doesn't disappear.",
+              "correct": false
+            },
+            {
+              "text": "Backups protect your hard work.",
+              "correct": false
+            },
+            {
+              "text": "Backups are useless and waste space.",
+              "correct": true
+            },
+            {
+              "text": "A clear file name helps you find it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "Saving keeps your work safe.",
+              "correct": false
+            },
+            {
+              "text": "Note the version with each save.",
+              "correct": false
+            },
+            {
+              "text": "Sharing is how YOUR game becomes part of someone else's day.",
+              "correct": false
+            },
+            {
+              "text": "Shared games rot if anyone plays them.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "Saving requires a special chant.",
+              "correct": true
+            },
+            {
+              "text": "A clear file name helps you find it.",
+              "correct": false
+            },
+            {
+              "text": "Always save before big changes.",
+              "correct": false
+            },
+            {
+              "text": "Sharing lets others play.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about save and share.",
+          "options": [
+            {
+              "text": "Sharing means giving your game to other people to try.",
               "correct": false
             },
             {
@@ -506,33 +945,14 @@
               "correct": true
             },
             {
-              "text": "Always save before big changes.",
+              "text": "Shared games can come back better.",
+              "correct": false
+            },
+            {
+              "text": "A good save uses a clear file name with what's inside.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_48_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about save and share.",
-          "options": [
-            {
-              "text": "Use folders to stay organized.",
-              "correct": false
-            },
-            {
-              "text": "Note the version with each save.",
-              "correct": false
-            },
-            {
-              "text": "A clear file name helps you find it.",
-              "correct": false
-            },
-            {
-              "text": "Backups must be hidden in a sock.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_48_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -541,12 +961,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BRAIN and press Send to keep going!",
-          "target_display": "BRAIN",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "brain"
+            "next"
           ],
-          "hint_wrong": "Type the word BRAIN (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -554,19 +974,19 @@
           "prompt": "Tell me — Which one is TRUE about save and share?",
           "options": [
             {
+              "text": "File names do not matter — pick 'asdf'.",
+              "correct": false
+            },
+            {
+              "text": "Saved games shrink every Tuesday.",
+              "correct": false
+            },
+            {
               "text": "Saving deletes your work permanently.",
               "correct": false
             },
             {
-              "text": "Sharing breaks the file beyond repair.",
-              "correct": false
-            },
-            {
-              "text": "Saving requires a special chant.",
-              "correct": false
-            },
-            {
-              "text": "Shared games can come back better.",
+              "text": "Saving keeps your work safe.",
               "correct": true
             }
           ],
@@ -584,11 +1004,11 @@
               "correct": false
             },
             {
-              "text": "Always save before big changes.",
+              "text": "Sharing lets others play.",
               "correct": true
             },
             {
-              "text": "Backups are useless and waste space.",
+              "text": "Saves only work if you blow on the disk.",
               "correct": false
             }
           ],
@@ -598,27 +1018,121 @@
           "prompt": "Pop quiz! Which one is TRUE about save and share?",
           "options": [
             {
-              "text": "Use folders to stay organized.",
+              "text": "A clear file name helps you find it.",
               "correct": true
             },
             {
-              "text": "Saving deletes your work permanently.",
-              "correct": false
-            },
-            {
-              "text": "Backups are useless and waste space.",
-              "correct": false
-            },
-            {
               "text": "Shared games rot if anyone plays them.",
+              "correct": false
+            },
+            {
+              "text": "Backups must be hidden in a sock.",
+              "correct": false
+            },
+            {
+              "text": "Sharing breaks the file beyond repair.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_48_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "Sharing your game gives it away forever.",
+              "correct": false
+            },
+            {
+              "text": "Backups protect your hard work.",
+              "correct": true
+            },
+            {
+              "text": "Saves only work if you blow on the disk.",
+              "correct": false
+            },
+            {
+              "text": "Backups must be hidden in a sock.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_48_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "Shared games can come back better.",
+              "correct": true
+            },
+            {
+              "text": "Saves are sealed with melted cheese.",
+              "correct": false
+            },
+            {
+              "text": "Shared games rot if anyone plays them.",
+              "correct": false
+            },
+            {
+              "text": "You can only share with one person ever.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_48_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "Always save before big changes.",
+              "correct": true
+            },
+            {
+              "text": "Saves are sealed with melted cheese.",
+              "correct": false
+            },
+            {
+              "text": "Saving deletes your work permanently.",
+              "correct": false
+            },
+            {
+              "text": "Sharing breaks the file beyond repair.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "Backups are useless and waste space.",
+              "correct": false
+            },
+            {
+              "text": "Saving deletes your work permanently.",
+              "correct": false
+            },
+            {
+              "text": "Use folders to stay organized.",
+              "correct": true
+            },
+            {
+              "text": "File names do not matter — pick 'asdf'.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about save and share?",
           "options": [
+            {
+              "text": "Saving deletes your work permanently.",
+              "correct": false
+            },
+            {
+              "text": "Saves are sealed with melted cheese.",
+              "correct": false
+            },
             {
               "text": "Shared games rot if anyone plays them.",
               "correct": false
@@ -626,39 +1140,50 @@
             {
               "text": "Note the version with each save.",
               "correct": true
-            },
-            {
-              "text": "Saving deletes your work permanently.",
-              "correct": false
-            },
-            {
-              "text": "Saving requires a special chant.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_48_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about save and share?",
           "options": [
             {
-              "text": "Saving keeps your work safe.",
+              "text": "You can only share with one person ever.",
+              "correct": false
+            },
+            {
+              "text": "Backups are useless and waste space.",
+              "correct": false
+            },
+            {
+              "text": "Shared games rot if anyone plays them.",
+              "correct": false
+            },
+            {
+              "text": "Saving means storing your game so it doesn't disappear.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about save and share?",
+          "options": [
+            {
+              "text": "Sharing your game gives it away forever.",
+              "correct": false
+            },
+            {
+              "text": "Saved games shrink every Tuesday.",
+              "correct": false
             },
             {
               "text": "Sharing breaks the file beyond repair.",
               "correct": false
             },
             {
-              "text": "Saving requires a special chant.",
-              "correct": false
-            },
-            {
-              "text": "Backups are useless and waste space.",
-              "correct": false
+              "text": "Sharing means giving your game to other people to try.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_48_q5_v4.wav"
+          ]
         }
       ]
     }

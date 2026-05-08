@@ -50,7 +50,7 @@ python3 app.py
 - 16 lessons, ages 7+
 - Cartoon robot mascot ("Bytey") that animates, waves, cheers, thinks
 - 6 mini-game types (drag, click, type, place blocks, sequence, read-aloud)
-- Pretend "Claude / Cursor / Gemini" chat — pre-scripted replies, **no internet, no API keys, no cost**
+- Offline "Claude / Cursor / Gemini" chat — runs on the kid's computer with **no internet, no API keys, no cost**
 - Sticker rewards + progress saved on the computer
 - Parent Corner — PIN-gated panel showing what your kid did and which words they typed
 

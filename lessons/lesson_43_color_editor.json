@@ -26,12 +26,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type STEP and press Send to keep going!",
-          "target_display": "STEP",
+          "prompt": "Type GO and press Send to keep going!",
+          "target_display": "GO",
           "targets": [
-            "step"
+            "go"
           ],
-          "hint_wrong": "Type the word STEP (any case is fine)."
+          "hint_wrong": "Type the word GO (any case is fine)."
         }
       },
       "variations": [
@@ -39,11 +39,11 @@
           "prompt": "What is the color editor?",
           "options": [
             {
-              "text": "Colors are knitted by sleepy spiders.",
+              "text": "Color choice doesn't matter to humans.",
               "correct": false
             },
             {
-              "text": "Colors are made from milk and bread.",
+              "text": "We can save zero colors — sliders forbid it.",
               "correct": false
             },
             {
@@ -61,7 +61,7 @@
           "prompt": "Quick! Which one is TRUE about the color editor?",
           "options": [
             {
-              "text": "Colors must be earned in combat.",
+              "text": "Previews never work — too shy.",
               "correct": false
             },
             {
@@ -73,7 +73,7 @@
               "correct": false
             },
             {
-              "text": "We can save zero colors — sliders forbid it.",
+              "text": "Some colors hate other colors -- it's a fact.",
               "correct": false
             }
           ],
@@ -83,11 +83,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the color editor.",
           "options": [
             {
-              "text": "A color tool lets you preview the look.",
+              "text": "We can pick colors using sliders.",
               "correct": false
             },
             {
-              "text": "Darker colors feel mysterious.",
+              "text": "A color tool lets you preview the look.",
               "correct": false
             },
             {
@@ -95,7 +95,7 @@
               "correct": true
             },
             {
-              "text": "We can pick colors using sliders.",
+              "text": "Two colors next to each other can clash.",
               "correct": false
             }
           ],
@@ -105,11 +105,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about the color editor. What should he say?",
           "options": [
             {
-              "text": "Sliders pick songs, not colors.",
+              "text": "Some colors hate other colors -- it's a fact.",
               "correct": false
             },
             {
-              "text": "Previews never work — too shy.",
+              "text": "Sliders pick songs, not colors.",
               "correct": false
             },
             {
@@ -117,7 +117,7 @@
               "correct": true
             },
             {
-              "text": "Color does not change mood, only flavor.",
+              "text": "Colors are made from milk and bread.",
               "correct": false
             }
           ],
@@ -127,11 +127,11 @@
           "prompt": "Tell me — Which rule about the color editor is a GOOD rule?",
           "options": [
             {
-              "text": "Sliders pick songs, not colors.",
+              "text": "Color choice doesn't matter to humans.",
               "correct": false
             },
             {
-              "text": "Colors are knitted by sleepy spiders.",
+              "text": "Previews never work — too shy.",
               "correct": false
             },
             {
@@ -139,11 +139,116 @@
               "correct": true
             },
             {
-              "text": "Previews never work — too shy.",
+              "text": "Sliders pick songs, not colors.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about the color editor, ___",
+          "options": [
+            {
+              "text": "Colors are knitted by sleepy spiders.",
+              "correct": false
+            },
+            {
+              "text": "Brighter colors feel cheerful.",
+              "correct": true
+            },
+            {
+              "text": "Use 50+ colors for the strongest game.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood, only flavor.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": false
+            },
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": false
+            },
+            {
+              "text": "Each color owes you a quarter.",
+              "correct": true
+            },
+            {
+              "text": "Brighter colors feel cheerful.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with the color editor?",
+          "options": [
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Colors must be earned in combat.",
+              "correct": false
+            },
+            {
+              "text": "Two colors next to each other can clash.",
+              "correct": true
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about the color editor is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "A color editor lets you pick the look of every part of your game.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": false
+            },
+            {
+              "text": "Brighter colors feel cheerful.",
+              "correct": false
+            },
+            {
+              "text": "Use 50+ colors for the strongest game.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about the color editor. Which fact would help him?",
+          "options": [
+            {
+              "text": "Colors set the mood -- bright = happy, dark = scary.",
+              "correct": true
+            },
+            {
+              "text": "Colors must be earned in combat.",
+              "correct": false
+            },
+            {
+              "text": "Each color owes you a quarter.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work — too shy.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -152,12 +257,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GOOD and press Send to keep going!",
-          "target_display": "GOOD",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "good"
+            "yes"
           ],
-          "hint_wrong": "Type the word GOOD (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -270,6 +375,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your spooky game looks too cheery. What color move helps?",
+          "options": [
+            {
+              "text": "Add more confetti pink everywhere.",
+              "correct": false
+            },
+            {
+              "text": "Remove colors entirely; use sound only.",
+              "correct": false
+            },
+            {
+              "text": "Replace all colors with neon yellow.",
+              "correct": false
+            },
+            {
+              "text": "Use darker, more muted colors for a moody vibe.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your spooky game looks too cheery. What color move helps?",
+          "options": [
+            {
+              "text": "Use darker, more muted colors for a moody vibe.",
+              "correct": true
+            },
+            {
+              "text": "Remove colors entirely; use sound only.",
+              "correct": false
+            },
+            {
+              "text": "Replace all colors with neon yellow.",
+              "correct": false
+            },
+            {
+              "text": "Add more confetti pink everywhere.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your spooky game looks too cheery. What color move helps?",
+          "options": [
+            {
+              "text": "Add more confetti pink everywhere.",
+              "correct": false
+            },
+            {
+              "text": "Replace all colors with neon yellow.",
+              "correct": false
+            },
+            {
+              "text": "Use darker, more muted colors for a moody vibe.",
+              "correct": true
+            },
+            {
+              "text": "Remove colors entirely; use sound only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your spooky game looks too cheery. What color move helps?",
+          "options": [
+            {
+              "text": "Add more confetti pink everywhere.",
+              "correct": false
+            },
+            {
+              "text": "Replace all colors with neon yellow.",
+              "correct": false
+            },
+            {
+              "text": "Remove colors entirely; use sound only.",
+              "correct": false
+            },
+            {
+              "text": "Use darker, more muted colors for a moody vibe.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your spooky game looks too cheery. What color move helps?",
+          "options": [
+            {
+              "text": "Use darker, more muted colors for a moody vibe.",
+              "correct": true
+            },
+            {
+              "text": "Replace all colors with neon yellow.",
+              "correct": false
+            },
+            {
+              "text": "Remove colors entirely; use sound only.",
+              "correct": false
+            },
+            {
+              "text": "Add more confetti pink everywhere.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -278,12 +488,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -396,6 +606,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why save colors you like?",
+          "options": [
+            {
+              "text": "So you can reuse them and stay consistent.",
+              "correct": true
+            },
+            {
+              "text": "To show off to other colors.",
+              "correct": false
+            },
+            {
+              "text": "To trade them for stars.",
+              "correct": false
+            },
+            {
+              "text": "So they don't escape.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why save colors you like?",
+          "options": [
+            {
+              "text": "To trade them for stars.",
+              "correct": false
+            },
+            {
+              "text": "So you can reuse them and stay consistent.",
+              "correct": true
+            },
+            {
+              "text": "So they don't escape.",
+              "correct": false
+            },
+            {
+              "text": "To show off to other colors.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why save colors you like?",
+          "options": [
+            {
+              "text": "To trade them for stars.",
+              "correct": false
+            },
+            {
+              "text": "So you can reuse them and stay consistent.",
+              "correct": true
+            },
+            {
+              "text": "To show off to other colors.",
+              "correct": false
+            },
+            {
+              "text": "So they don't escape.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why save colors you like?",
+          "options": [
+            {
+              "text": "So they don't escape.",
+              "correct": false
+            },
+            {
+              "text": "So you can reuse them and stay consistent.",
+              "correct": true
+            },
+            {
+              "text": "To show off to other colors.",
+              "correct": false
+            },
+            {
+              "text": "To trade them for stars.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why save colors you like?",
+          "options": [
+            {
+              "text": "So they don't escape.",
+              "correct": false
+            },
+            {
+              "text": "To show off to other colors.",
+              "correct": false
+            },
+            {
+              "text": "To trade them for stars.",
+              "correct": false
+            },
+            {
+              "text": "So you can reuse them and stay consistent.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -404,12 +719,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type NICE and press Send to keep going!",
-          "target_display": "NICE",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "nice"
+            "cool"
           ],
-          "hint_wrong": "Type the word NICE (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -417,19 +732,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about the color editor.",
           "options": [
             {
-              "text": "Darker colors feel mysterious.",
+              "text": "We can pick colors using sliders.",
               "correct": false
             },
             {
-              "text": "Brighter colors feel cheerful.",
+              "text": "Two colors next to each other can clash or harmonize.",
               "correct": false
             },
             {
-              "text": "Color does not change mood, only flavor.",
+              "text": "Color choice doesn't matter to humans.",
               "correct": true
             },
             {
-              "text": "Colors are made from red, green, and blue.",
+              "text": "Saved colors can be used again.",
               "correct": false
             }
           ],
@@ -439,19 +754,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about the color editor.",
           "options": [
             {
-              "text": "Colors set the mood of the game.",
+              "text": "A color editor lets you pick the look of every part of your game.",
               "correct": false
             },
             {
-              "text": "Sliders pick songs, not colors.",
+              "text": "Some colors hate other colors -- it's a fact.",
               "correct": true
             },
             {
-              "text": "Darker colors feel mysterious.",
+              "text": "We can pick colors using sliders.",
               "correct": false
             },
             {
-              "text": "Colors are made from red, green, and blue.",
+              "text": "Pick a small set of colors and stick to them for a clean look.",
               "correct": false
             }
           ],
@@ -461,19 +776,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about the color editor.",
           "options": [
             {
-              "text": "Colors are made from red, green, and blue.",
+              "text": "Saved colors can be used again.",
               "correct": false
             },
             {
-              "text": "Darker colors feel mysterious.",
+              "text": "Two colors next to each other can clash or harmonize.",
               "correct": false
             },
             {
-              "text": "Colors must be earned in combat.",
+              "text": "Colors only work on Mondays.",
               "correct": true
             },
             {
-              "text": "Saved colors can be used again.",
+              "text": "We can pick colors using sliders.",
               "correct": false
             }
           ],
@@ -483,11 +798,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about the color editor.",
           "options": [
             {
+              "text": "Darker colors feel mysterious.",
+              "correct": false
+            },
+            {
+              "text": "A color editor lets you pick the look of every part of your game.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": true
+            },
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_43_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
               "text": "Two colors next to each other can clash.",
               "correct": false
             },
             {
+              "text": "A color tool lets you preview the look.",
+              "correct": false
+            },
+            {
+              "text": "Two colors next to each other can clash or harmonize.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors — sliders forbid it.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_43_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "Pick a small set of colors and stick to them for a clean look.",
+              "correct": false
+            },
+            {
+              "text": "Previews never work — too shy.",
+              "correct": true
+            },
+            {
+              "text": "Colors set the mood -- bright = happy, dark = scary.",
+              "correct": false
+            },
+            {
               "text": "Darker colors feel mysterious.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "A color editor lets you pick the look of every part of your game.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood, only flavor.",
+              "correct": true
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": false
+            },
+            {
+              "text": "Two colors next to each other can clash.",
+              "correct": false
+            },
+            {
+              "text": "Pick a small set of colors and stick to them for a clean look.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "Colors must be earned in combat.",
+              "correct": true
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": false
+            },
+            {
+              "text": "Brighter colors feel cheerful.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about the color editor.",
+          "options": [
+            {
+              "text": "Colors set the mood -- bright = happy, dark = scary.",
               "correct": false
             },
             {
@@ -495,33 +934,14 @@
               "correct": true
             },
             {
-              "text": "Brighter colors feel cheerful.",
+              "text": "Colors set the mood of the game.",
+              "correct": false
+            },
+            {
+              "text": "Two colors next to each other can clash or harmonize.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_43_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about the color editor.",
-          "options": [
-            {
-              "text": "Darker colors feel mysterious.",
-              "correct": false
-            },
-            {
-              "text": "Two colors next to each other can clash.",
-              "correct": false
-            },
-            {
-              "text": "Saved colors can be used again.",
-              "correct": false
-            },
-            {
-              "text": "Colors are knitted by sleepy spiders.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_43_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -530,12 +950,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type OPEN and press Send to keep going!",
-          "target_display": "OPEN",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "open"
+            "next"
           ],
-          "hint_wrong": "Type the word OPEN (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -543,19 +963,19 @@
           "prompt": "Tell me — Which one is TRUE about the color editor?",
           "options": [
             {
+              "text": "Previews never work — too shy.",
+              "correct": false
+            },
+            {
+              "text": "Some colors hate other colors -- it's a fact.",
+              "correct": false
+            },
+            {
               "text": "Colors are made from milk and bread.",
               "correct": false
             },
             {
-              "text": "We can save zero colors — sliders forbid it.",
-              "correct": false
-            },
-            {
-              "text": "Colors must be earned in combat.",
-              "correct": false
-            },
-            {
-              "text": "Colors set the mood of the game.",
+              "text": "We can pick colors using sliders.",
               "correct": true
             }
           ],
@@ -573,11 +993,11 @@
               "correct": false
             },
             {
-              "text": "Brighter colors feel cheerful.",
+              "text": "Colors are made from red, green, and blue.",
               "correct": true
             },
             {
-              "text": "Color does not change mood, only flavor.",
+              "text": "Use 50+ colors for the strongest game.",
               "correct": false
             }
           ],
@@ -587,27 +1007,121 @@
           "prompt": "Pop quiz! Which one is TRUE about the color editor?",
           "options": [
             {
-              "text": "Darker colors feel mysterious.",
+              "text": "Saved colors can be used again.",
               "correct": true
             },
             {
-              "text": "Colors are made from milk and bread.",
-              "correct": false
-            },
-            {
-              "text": "Color does not change mood, only flavor.",
-              "correct": false
-            },
-            {
               "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Colors are knitted by sleepy spiders.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors — sliders forbid it.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Color choice doesn't matter to humans.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": true
+            },
+            {
+              "text": "Use 50+ colors for the strongest game.",
+              "correct": false
+            },
+            {
+              "text": "Colors are knitted by sleepy spiders.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_43_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": true
+            },
+            {
+              "text": "Each color owes you a quarter.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "Colors only work on Mondays.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_43_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Brighter colors feel cheerful.",
+              "correct": true
+            },
+            {
+              "text": "Each color owes you a quarter.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors — sliders forbid it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Color does not change mood, only flavor.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Darker colors feel mysterious.",
+              "correct": true
+            },
+            {
+              "text": "Previews never work — too shy.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about the color editor?",
           "options": [
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Each color owes you a quarter.",
+              "correct": false
+            },
             {
               "text": "Sliders pick songs, not colors.",
               "correct": false
@@ -615,39 +1129,50 @@
             {
               "text": "Two colors next to each other can clash.",
               "correct": true
-            },
-            {
-              "text": "Colors are made from milk and bread.",
-              "correct": false
-            },
-            {
-              "text": "Colors must be earned in combat.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_43_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about the color editor?",
           "options": [
             {
-              "text": "We can pick colors using sliders.",
+              "text": "Colors only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood, only flavor.",
+              "correct": false
+            },
+            {
+              "text": "Sliders pick songs, not colors.",
+              "correct": false
+            },
+            {
+              "text": "A color editor lets you pick the look of every part of your game.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about the color editor?",
+          "options": [
+            {
+              "text": "Color choice doesn't matter to humans.",
+              "correct": false
+            },
+            {
+              "text": "Some colors hate other colors -- it's a fact.",
+              "correct": false
             },
             {
               "text": "We can save zero colors — sliders forbid it.",
               "correct": false
             },
             {
-              "text": "Colors must be earned in combat.",
-              "correct": false
-            },
-            {
-              "text": "Color does not change mood, only flavor.",
-              "correct": false
+              "text": "Colors set the mood -- bright = happy, dark = scary.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_43_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -656,124 +1181,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "prompt": "You want your game to feel SCARY. What colors might help?",
           "options": [
             {
-              "text": "Two colors next to each other can clash.",
-              "correct": false
-            },
-            {
-              "text": "Darker colors feel mysterious.",
-              "correct": false
-            },
-            {
-              "text": "Colors must be earned in combat.",
+              "text": "Dark blue, deep purple, dim red.",
               "correct": true
             },
             {
-              "text": "We can pick colors using sliders.",
+              "text": "Tan and beige forever.",
+              "correct": false
+            },
+            {
+              "text": "White and rainbow at the same time.",
+              "correct": false
+            },
+            {
+              "text": "Bright pink, sunny yellow, lime green.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "prompt": "Quick! You want your game to feel SCARY. What colors might help?",
           "options": [
             {
-              "text": "Saved colors can be used again.",
+              "text": "White and rainbow at the same time.",
               "correct": false
             },
             {
-              "text": "Two colors next to each other can clash.",
+              "text": "Tan and beige forever.",
               "correct": false
             },
             {
-              "text": "Each color owes you a quarter.",
+              "text": "Dark blue, deep purple, dim red.",
               "correct": true
             },
             {
-              "text": "Colors are made from red, green, and blue.",
+              "text": "Bright pink, sunny yellow, lime green.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — You want your game to feel SCARY. What colors might help?",
           "options": [
             {
-              "text": "A color tool lets you preview the look.",
+              "text": "Bright pink, sunny yellow, lime green.",
               "correct": false
             },
             {
-              "text": "Colors are knitted by sleepy spiders.",
+              "text": "Tan and beige forever.",
+              "correct": false
+            },
+            {
+              "text": "Dark blue, deep purple, dim red.",
               "correct": true
             },
             {
-              "text": "Two colors next to each other can clash.",
-              "correct": false
-            },
-            {
-              "text": "We can pick colors using sliders.",
+              "text": "White and rainbow at the same time.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: You want your game to feel SCARY. What colors might help?",
           "options": [
             {
-              "text": "We can pick colors using sliders.",
+              "text": "White and rainbow at the same time.",
               "correct": false
             },
             {
-              "text": "Colors are made from red, green, and blue.",
-              "correct": false
-            },
-            {
-              "text": "Brighter colors feel cheerful.",
-              "correct": false
-            },
-            {
-              "text": "Colors are made from milk and bread.",
+              "text": "Dark blue, deep purple, dim red.",
               "correct": true
+            },
+            {
+              "text": "Tan and beige forever.",
+              "correct": false
+            },
+            {
+              "text": "Bright pink, sunny yellow, lime green.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "prompt": "Tell me — You want your game to feel SCARY. What colors might help?",
           "options": [
             {
-              "text": "We can save zero colors — sliders forbid it.",
+              "text": "Dark blue, deep purple, dim red.",
               "correct": true
             },
             {
-              "text": "Darker colors feel mysterious.",
+              "text": "Bright pink, sunny yellow, lime green.",
               "correct": false
             },
             {
-              "text": "We can pick colors using sliders.",
+              "text": "Tan and beige forever.",
               "correct": false
             },
             {
-              "text": "Brighter colors feel cheerful.",
+              "text": "White and rainbow at the same time.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You want your game to feel SCARY. What colors might help?",
+          "options": [
+            {
+              "text": "Bright pink, sunny yellow, lime green.",
+              "correct": false
+            },
+            {
+              "text": "White and rainbow at the same time.",
+              "correct": false
+            },
+            {
+              "text": "Dark blue, deep purple, dim red.",
+              "correct": true
+            },
+            {
+              "text": "Tan and beige forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You want your game to feel SCARY. What colors might help?",
+          "options": [
+            {
+              "text": "Bright pink, sunny yellow, lime green.",
+              "correct": false
+            },
+            {
+              "text": "Tan and beige forever.",
+              "correct": false
+            },
+            {
+              "text": "White and rainbow at the same time.",
+              "correct": false
+            },
+            {
+              "text": "Dark blue, deep purple, dim red.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You want your game to feel SCARY. What colors might help?",
+          "options": [
+            {
+              "text": "Tan and beige forever.",
+              "correct": false
+            },
+            {
+              "text": "Bright pink, sunny yellow, lime green.",
+              "correct": false
+            },
+            {
+              "text": "Dark blue, deep purple, dim red.",
+              "correct": true
+            },
+            {
+              "text": "White and rainbow at the same time.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You want your game to feel SCARY. What colors might help?",
+          "options": [
+            {
+              "text": "White and rainbow at the same time.",
+              "correct": false
+            },
+            {
+              "text": "Dark blue, deep purple, dim red.",
+              "correct": true
+            },
+            {
+              "text": "Tan and beige forever.",
+              "correct": false
+            },
+            {
+              "text": "Bright pink, sunny yellow, lime green.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You want your game to feel SCARY. What colors might help?",
+          "options": [
+            {
+              "text": "Tan and beige forever.",
+              "correct": false
+            },
+            {
+              "text": "White and rainbow at the same time.",
+              "correct": false
+            },
+            {
+              "text": "Dark blue, deep purple, dim red.",
+              "correct": true
+            },
+            {
+              "text": "Bright pink, sunny yellow, lime green.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -782,124 +1412,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type HERO and press Send to keep going!",
-          "target_display": "HERO",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "hero"
+            "play"
           ],
-          "hint_wrong": "Type the word HERO (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about the color editor is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about the color editor. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Darker colors feel mysterious.",
+              "text": "Each color owes you a quarter.",
               "correct": true
             },
             {
-              "text": "Sliders pick songs, not colors.",
+              "text": "Colors are made from red, green, and blue.",
               "correct": false
             },
             {
-              "text": "Colors must be earned in combat.",
+              "text": "A color editor lets you pick the look of every part of your game.",
               "correct": false
             },
             {
-              "text": "Colors are made from milk and bread.",
+              "text": "Pick a small set of colors and stick to them for a clean look.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about the color editor is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about the color editor. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "We can pick colors using sliders.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": false
+            },
+            {
+              "text": "Saved colors can be used again.",
+              "correct": false
+            },
+            {
               "text": "Colors are knitted by sleepy spiders.",
-              "correct": false
-            },
-            {
-              "text": "Each color owes you a quarter.",
-              "correct": false
-            },
-            {
-              "text": "Previews never work — too shy.",
-              "correct": false
-            },
-            {
-              "text": "Two colors next to each other can clash.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about the color editor is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about the color editor. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Colors must be earned in combat.",
+              "text": "Darker colors feel mysterious.",
               "correct": false
             },
             {
-              "text": "Color does not change mood, only flavor.",
+              "text": "Pick a small set of colors and stick to them for a clean look.",
               "correct": false
             },
             {
-              "text": "Sliders pick songs, not colors.",
+              "text": "Colors set the mood -- bright = happy, dark = scary.",
               "correct": false
             },
             {
-              "text": "We can pick colors using sliders.",
+              "text": "Use 50+ colors for the strongest game.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about the color editor is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about the color editor. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Colors are knitted by sleepy spiders.",
+              "text": "Colors are made from red, green, and blue.",
               "correct": false
             },
             {
-              "text": "Colors are made from red, green, and blue.",
+              "text": "Color choice doesn't matter to humans.",
               "correct": true
             },
             {
-              "text": "Sliders pick songs, not colors.",
+              "text": "Darker colors feel mysterious.",
               "correct": false
             },
             {
-              "text": "Each color owes you a quarter.",
+              "text": "Colors set the mood of the game.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about the color editor is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about the color editor. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "We can save zero colors — sliders forbid it.",
+              "text": "Two colors next to each other can clash or harmonize.",
               "correct": false
             },
             {
-              "text": "Saved colors can be used again.",
+              "text": "Some colors hate other colors -- it's a fact.",
               "correct": true
             },
             {
-              "text": "Color does not change mood, only flavor.",
+              "text": "We can pick colors using sliders.",
               "correct": false
             },
             {
-              "text": "Colors are made from milk and bread.",
+              "text": "A color editor lets you pick the look of every part of your game.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Brighter colors feel cheerful.",
+              "correct": false
+            },
+            {
+              "text": "Colors only work on Mondays.",
+              "correct": true
+            },
+            {
+              "text": "A color editor lets you pick the look of every part of your game.",
+              "correct": false
+            },
+            {
+              "text": "Two colors next to each other can clash.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Saved colors can be used again.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": true
+            },
+            {
+              "text": "Darker colors feel mysterious.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Darker colors feel mysterious.",
+              "correct": false
+            },
+            {
+              "text": "Colors are made from red, green, and blue.",
+              "correct": false
+            },
+            {
+              "text": "We can save zero colors — sliders forbid it.",
+              "correct": true
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Previews never work — too shy.",
+              "correct": true
+            },
+            {
+              "text": "We can pick colors using sliders.",
+              "correct": false
+            },
+            {
+              "text": "Pick a small set of colors and stick to them for a clean look.",
+              "correct": false
+            },
+            {
+              "text": "Darker colors feel mysterious.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about the color editor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Saved colors can be used again.",
+              "correct": false
+            },
+            {
+              "text": "Brighter colors feel cheerful.",
+              "correct": false
+            },
+            {
+              "text": "Color does not change mood, only flavor.",
+              "correct": true
+            },
+            {
+              "text": "Darker colors feel mysterious.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -908,28 +1643,28 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type MAKE and press Send to keep going!",
-          "target_display": "MAKE",
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
           "targets": [
-            "make"
+            "code"
           ],
-          "hint_wrong": "Type the word MAKE (any case is fine)."
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Fill in the blank: when we talk about the color editor, ___",
+          "prompt": "Listen up — Which rule about the color editor is a GOOD rule?",
           "options": [
+            {
+              "text": "Each color owes you a quarter.",
+              "correct": false
+            },
             {
               "text": "We can save zero colors — sliders forbid it.",
               "correct": false
             },
             {
-              "text": "Previews never work — too shy.",
-              "correct": false
-            },
-            {
-              "text": "Two colors next to each other can clash.",
+              "text": "Colors set the mood -- bright = happy, dark = scary.",
               "correct": true
             },
             {
@@ -940,36 +1675,32 @@
           "_audio": "assets/audio/q/lesson_43_q8_v0.wav"
         },
         {
-          "prompt": "Quick! Fill in the blank: when we talk about the color editor, ___",
+          "prompt": "Here's a thinker: Which rule about the color editor is a GOOD rule?",
           "options": [
             {
-              "text": "Sliders pick songs, not colors.",
+              "text": "Color choice doesn't matter to humans.",
               "correct": false
             },
             {
-              "text": "Each color owes you a quarter.",
+              "text": "Use 50+ colors for the strongest game.",
               "correct": false
             },
             {
-              "text": "We can pick colors using sliders.",
+              "text": "Two colors next to each other can clash or harmonize.",
               "correct": true
             },
             {
-              "text": "Colors must be earned in combat.",
+              "text": "Previews never work — too shy.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q8_v1.wav"
         },
         {
-          "prompt": "Hey friend — Fill in the blank: when we talk about the color editor, ___",
+          "prompt": "OK quick one: Which rule about the color editor is a GOOD rule?",
           "options": [
             {
-              "text": "We can save zero colors — sliders forbid it.",
-              "correct": false
-            },
-            {
-              "text": "Colors are made from milk and bread.",
+              "text": "Sliders pick songs, not colors.",
               "correct": false
             },
             {
@@ -977,39 +1708,43 @@
               "correct": false
             },
             {
-              "text": "Colors are made from red, green, and blue.",
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Pick a small set of colors and stick to them for a clean look.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q8_v2.wav"
         },
         {
-          "prompt": "Bytey wonders: Fill in the blank: when we talk about the color editor, ___",
+          "prompt": "Hmm... Which rule about the color editor is a GOOD rule?",
           "options": [
             {
-              "text": "Colors are made from milk and bread.",
+              "text": "Color choice doesn't matter to humans.",
               "correct": false
             },
             {
-              "text": "Saved colors can be used again.",
+              "text": "We can pick colors using sliders.",
               "correct": true
             },
             {
-              "text": "Previews never work — too shy.",
+              "text": "Some colors hate other colors -- it's a fact.",
               "correct": false
             },
             {
-              "text": "Each color owes you a quarter.",
+              "text": "Color does not change mood, only flavor.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q8_v3.wav"
         },
         {
-          "prompt": "Tell me — Fill in the blank: when we talk about the color editor, ___",
+          "prompt": "Which rule about the color editor is a GOOD rule?",
           "options": [
             {
-              "text": "A color tool lets you preview the look.",
+              "text": "Colors are made from red, green, and blue.",
               "correct": true
             },
             {
@@ -1017,15 +1752,120 @@
               "correct": false
             },
             {
-              "text": "Each color owes you a quarter.",
+              "text": "Color does not change mood, only flavor.",
               "correct": false
             },
             {
-              "text": "We can save zero colors — sliders forbid it.",
+              "text": "Previews never work — too shy.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_43_q8_v4.wav"
+        },
+        {
+          "prompt": "Quick! Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Saved colors can be used again.",
+              "correct": true
+            },
+            {
+              "text": "Colors only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Color choice doesn't matter to humans.",
+              "correct": false
+            },
+            {
+              "text": "Colors must be earned in combat.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Colors only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Some colors hate other colors -- it's a fact.",
+              "correct": false
+            },
+            {
+              "text": "A color tool lets you preview the look.",
+              "correct": true
+            },
+            {
+              "text": "Each color owes you a quarter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Colors set the mood of the game.",
+              "correct": true
+            },
+            {
+              "text": "Colors only work on Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Use 50+ colors for the strongest game.",
+              "correct": false
+            },
+            {
+              "text": "Color choice doesn't matter to humans.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Brighter colors feel cheerful.",
+              "correct": true
+            },
+            {
+              "text": "Colors are made from milk and bread.",
+              "correct": false
+            },
+            {
+              "text": "Color choice doesn't matter to humans.",
+              "correct": false
+            },
+            {
+              "text": "Colors only work on Mondays.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which rule about the color editor is a GOOD rule?",
+          "options": [
+            {
+              "text": "Use 50+ colors for the strongest game.",
+              "correct": false
+            },
+            {
+              "text": "Some colors hate other colors -- it's a fact.",
+              "correct": false
+            },
+            {
+              "text": "Colors must be earned in combat.",
+              "correct": false
+            },
+            {
+              "text": "Darker colors feel mysterious.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

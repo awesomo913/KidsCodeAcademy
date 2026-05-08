@@ -63,11 +63,11 @@
           "prompt": "What is show, don't tell?",
           "options": [
             {
-              "text": "Helpers chew examples like gum.",
+              "text": "Showing an example uses up your daily AI battery.",
               "correct": false
             },
             {
-              "text": "Examples are always bad and rude to chairs.",
+              "text": "A picture means nothing to anyone, ever.",
               "correct": false
             },
             {
@@ -85,7 +85,7 @@
           "prompt": "Quick! Which one is TRUE about show, don't tell?",
           "options": [
             {
-              "text": "Pictures are for parties, not for code.",
+              "text": "Helpers ignore samples on principle.",
               "correct": false
             },
             {
@@ -97,7 +97,7 @@
               "correct": false
             },
             {
-              "text": "A picture means nothing to anyone, ever.",
+              "text": "Examples only work in Spanish.",
               "correct": false
             }
           ],
@@ -107,11 +107,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about show, don't tell.",
           "options": [
             {
-              "text": "One good example saves many questions.",
+              "text": "Examples make ideas clear.",
               "correct": false
             },
             {
-              "text": "Examples are faster than describing.",
+              "text": "One good example saves many questions.",
               "correct": false
             },
             {
@@ -119,7 +119,7 @@
               "correct": true
             },
             {
-              "text": "Examples make ideas clear.",
+              "text": "Even a tiny sample helps a lot.",
               "correct": false
             }
           ],
@@ -129,11 +129,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about show, don't tell. What should he say?",
           "options": [
             {
-              "text": "Examples make things worse and slightly damp.",
+              "text": "Examples only work in Spanish.",
               "correct": false
             },
             {
-              "text": "Helpers ignore samples on principle.",
+              "text": "Examples make things worse and slightly damp.",
               "correct": false
             },
             {
@@ -141,7 +141,7 @@
               "correct": true
             },
             {
-              "text": "More words is always better — fill the screen!",
+              "text": "Examples are always bad and rude to chairs.",
               "correct": false
             }
           ],
@@ -151,11 +151,11 @@
           "prompt": "Tell me — Which rule about show, don't tell is a GOOD rule?",
           "options": [
             {
-              "text": "Examples make things worse and slightly damp.",
+              "text": "Showing an example uses up your daily AI battery.",
               "correct": false
             },
             {
-              "text": "Helpers chew examples like gum.",
+              "text": "Helpers ignore samples on principle.",
               "correct": false
             },
             {
@@ -163,11 +163,116 @@
               "correct": true
             },
             {
-              "text": "Helpers ignore samples on principle.",
+              "text": "Examples make things worse and slightly damp.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_20_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about show, don't tell, ___",
+          "options": [
+            {
+              "text": "Helpers chew examples like gum.",
+              "correct": false
+            },
+            {
+              "text": "Show the helper what good looks like.",
+              "correct": true
+            },
+            {
+              "text": "Examples confuse the AI because there are too many.",
+              "correct": false
+            },
+            {
+              "text": "More words is always better — fill the screen!",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about show, don't tell. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "One good example saves many questions.",
+              "correct": false
+            },
+            {
+              "text": "Examples teach the rule.",
+              "correct": false
+            },
+            {
+              "text": "Examples must be drawn in invisible ink.",
+              "correct": true
+            },
+            {
+              "text": "Show the helper what good looks like.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with show, don't tell?",
+          "options": [
+            {
+              "text": "Examples are always bad and rude to chairs.",
+              "correct": false
+            },
+            {
+              "text": "Pictures are for parties, not for code.",
+              "correct": false
+            },
+            {
+              "text": "Even a tiny sample helps a lot.",
+              "correct": true
+            },
+            {
+              "text": "Examples make things worse and slightly damp.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about show, don't tell is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Showing examples helps the AI understand exactly what you want.",
+              "correct": false
+            },
+            {
+              "text": "One good example saves many questions.",
+              "correct": false
+            },
+            {
+              "text": "Show the helper what good looks like.",
+              "correct": false
+            },
+            {
+              "text": "Examples confuse the AI because there are too many.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about show, don't tell. Which fact would help him?",
+          "options": [
+            {
+              "text": "An example is worth a thousand vague descriptions.",
+              "correct": true
+            },
+            {
+              "text": "Pictures are for parties, not for code.",
+              "correct": false
+            },
+            {
+              "text": "Examples must be drawn in invisible ink.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore samples on principle.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -176,12 +281,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type RUN and press Send to keep going!",
-          "target_display": "RUN",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "run"
+            "yes"
           ],
-          "hint_wrong": "Type the word RUN (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -294,6 +399,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_20_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You want a list shaped like 'Apple - red'. What helps the helper most?",
+          "options": [
+            {
+              "text": "Whisper the word 'list' nineteen times.",
+              "correct": false
+            },
+            {
+              "text": "Describe an apple in three paragraphs.",
+              "correct": false
+            },
+            {
+              "text": "Send a thumbnail of yourself.",
+              "correct": false
+            },
+            {
+              "text": "Show one example: 'Apple - red'. Then ask for more.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You want a list shaped like 'Apple - red'. What helps the helper most?",
+          "options": [
+            {
+              "text": "Describe an apple in three paragraphs.",
+              "correct": false
+            },
+            {
+              "text": "Show one example: 'Apple - red'. Then ask for more.",
+              "correct": true
+            },
+            {
+              "text": "Whisper the word 'list' nineteen times.",
+              "correct": false
+            },
+            {
+              "text": "Send a thumbnail of yourself.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You want a list shaped like 'Apple - red'. What helps the helper most?",
+          "options": [
+            {
+              "text": "Whisper the word 'list' nineteen times.",
+              "correct": false
+            },
+            {
+              "text": "Send a thumbnail of yourself.",
+              "correct": false
+            },
+            {
+              "text": "Describe an apple in three paragraphs.",
+              "correct": false
+            },
+            {
+              "text": "Show one example: 'Apple - red'. Then ask for more.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You want a list shaped like 'Apple - red'. What helps the helper most?",
+          "options": [
+            {
+              "text": "Send a thumbnail of yourself.",
+              "correct": false
+            },
+            {
+              "text": "Whisper the word 'list' nineteen times.",
+              "correct": false
+            },
+            {
+              "text": "Describe an apple in three paragraphs.",
+              "correct": false
+            },
+            {
+              "text": "Show one example: 'Apple - red'. Then ask for more.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You want a list shaped like 'Apple - red'. What helps the helper most?",
+          "options": [
+            {
+              "text": "Whisper the word 'list' nineteen times.",
+              "correct": false
+            },
+            {
+              "text": "Describe an apple in three paragraphs.",
+              "correct": false
+            },
+            {
+              "text": "Show one example: 'Apple - red'. Then ask for more.",
+              "correct": true
+            },
+            {
+              "text": "Send a thumbnail of yourself.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -302,12 +512,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -420,6 +630,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_20_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Examples are useful because…",
+          "options": [
+            {
+              "text": "They confuse other helpers.",
+              "correct": false
+            },
+            {
+              "text": "They lock the helper into one job.",
+              "correct": false
+            },
+            {
+              "text": "They show the helper the exact shape we want.",
+              "correct": true
+            },
+            {
+              "text": "They smell like vanilla.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Examples are useful because…",
+          "options": [
+            {
+              "text": "They show the helper the exact shape we want.",
+              "correct": true
+            },
+            {
+              "text": "They lock the helper into one job.",
+              "correct": false
+            },
+            {
+              "text": "They smell like vanilla.",
+              "correct": false
+            },
+            {
+              "text": "They confuse other helpers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Examples are useful because…",
+          "options": [
+            {
+              "text": "They lock the helper into one job.",
+              "correct": false
+            },
+            {
+              "text": "They show the helper the exact shape we want.",
+              "correct": true
+            },
+            {
+              "text": "They smell like vanilla.",
+              "correct": false
+            },
+            {
+              "text": "They confuse other helpers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Examples are useful because…",
+          "options": [
+            {
+              "text": "They show the helper the exact shape we want.",
+              "correct": true
+            },
+            {
+              "text": "They smell like vanilla.",
+              "correct": false
+            },
+            {
+              "text": "They confuse other helpers.",
+              "correct": false
+            },
+            {
+              "text": "They lock the helper into one job.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Examples are useful because…",
+          "options": [
+            {
+              "text": "They lock the helper into one job.",
+              "correct": false
+            },
+            {
+              "text": "They smell like vanilla.",
+              "correct": false
+            },
+            {
+              "text": "They show the helper the exact shape we want.",
+              "correct": true
+            },
+            {
+              "text": "They confuse other helpers.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -428,12 +743,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BIG and press Send to keep going!",
-          "target_display": "BIG",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "big"
+            "cool"
           ],
-          "hint_wrong": "Type the word BIG (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -441,19 +756,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about show, don't tell.",
           "options": [
             {
-              "text": "Examples are faster than describing.",
+              "text": "Examples make ideas clear.",
               "correct": false
             },
             {
-              "text": "Show the helper what good looks like.",
+              "text": "If the AI keeps getting it wrong, give it a tiny example.",
               "correct": false
             },
             {
-              "text": "More words is always better — fill the screen!",
+              "text": "Showing an example uses up your daily AI battery.",
               "correct": true
             },
             {
-              "text": "A picture or sample beats a long story.",
+              "text": "Helpers copy the shape of an example.",
               "correct": false
             }
           ],
@@ -463,19 +778,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about show, don't tell.",
           "options": [
             {
-              "text": "Examples teach the rule.",
+              "text": "Showing examples helps the AI understand exactly what you want.",
               "correct": false
             },
             {
-              "text": "Examples make things worse and slightly damp.",
+              "text": "Examples only work in Spanish.",
               "correct": true
             },
             {
-              "text": "Examples are faster than describing.",
+              "text": "Examples make ideas clear.",
               "correct": false
             },
             {
-              "text": "A picture or sample beats a long story.",
+              "text": "Examples teach the AI the SHAPE of your idea.",
               "correct": false
             }
           ],
@@ -485,19 +800,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about show, don't tell.",
           "options": [
             {
-              "text": "A picture or sample beats a long story.",
+              "text": "Helpers copy the shape of an example.",
               "correct": false
             },
             {
-              "text": "Examples are faster than describing.",
+              "text": "If the AI keeps getting it wrong, give it a tiny example.",
               "correct": false
             },
             {
-              "text": "Pictures are for parties, not for code.",
+              "text": "The AI ignores examples on rainy days.",
               "correct": true
             },
             {
-              "text": "Helpers copy the shape of an example.",
+              "text": "Examples make ideas clear.",
               "correct": false
             }
           ],
@@ -507,11 +822,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about show, don't tell.",
           "options": [
             {
+              "text": "Examples are faster than describing.",
+              "correct": false
+            },
+            {
+              "text": "Showing examples helps the AI understand exactly what you want.",
+              "correct": false
+            },
+            {
+              "text": "Examples are always bad and rude to chairs.",
+              "correct": true
+            },
+            {
+              "text": "Examples teach the rule.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_20_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about show, don't tell.",
+          "options": [
+            {
               "text": "Even a tiny sample helps a lot.",
               "correct": false
             },
             {
+              "text": "One good example saves many questions.",
+              "correct": false
+            },
+            {
+              "text": "If the AI keeps getting it wrong, give it a tiny example.",
+              "correct": false
+            },
+            {
+              "text": "A picture means nothing to anyone, ever.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_20_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about show, don't tell.",
+          "options": [
+            {
+              "text": "Examples teach the AI the SHAPE of your idea.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore samples on principle.",
+              "correct": true
+            },
+            {
+              "text": "An example is worth a thousand vague descriptions.",
+              "correct": false
+            },
+            {
               "text": "Examples are faster than describing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about show, don't tell.",
+          "options": [
+            {
+              "text": "Showing examples helps the AI understand exactly what you want.",
+              "correct": false
+            },
+            {
+              "text": "One good example saves many questions.",
+              "correct": false
+            },
+            {
+              "text": "More words is always better — fill the screen!",
+              "correct": true
+            },
+            {
+              "text": "Helpers copy the shape of an example.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about show, don't tell.",
+          "options": [
+            {
+              "text": "Examples make ideas clear.",
+              "correct": false
+            },
+            {
+              "text": "Even a tiny sample helps a lot.",
+              "correct": false
+            },
+            {
+              "text": "Examples teach the AI the SHAPE of your idea.",
+              "correct": false
+            },
+            {
+              "text": "Examples make things worse and slightly damp.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about show, don't tell.",
+          "options": [
+            {
+              "text": "Pictures are for parties, not for code.",
+              "correct": true
+            },
+            {
+              "text": "Helpers copy the shape of an example.",
+              "correct": false
+            },
+            {
+              "text": "Show the helper what good looks like.",
+              "correct": false
+            },
+            {
+              "text": "A picture or sample beats a long story.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about show, don't tell.",
+          "options": [
+            {
+              "text": "An example is worth a thousand vague descriptions.",
               "correct": false
             },
             {
@@ -519,33 +958,14 @@
               "correct": true
             },
             {
-              "text": "Show the helper what good looks like.",
+              "text": "Examples teach the rule.",
+              "correct": false
+            },
+            {
+              "text": "If the AI keeps getting it wrong, give it a tiny example.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_20_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about show, don't tell.",
-          "options": [
-            {
-              "text": "Examples are faster than describing.",
-              "correct": false
-            },
-            {
-              "text": "Even a tiny sample helps a lot.",
-              "correct": false
-            },
-            {
-              "text": "Helpers copy the shape of an example.",
-              "correct": false
-            },
-            {
-              "text": "Helpers chew examples like gum.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_20_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -554,12 +974,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BOT and press Send to keep going!",
-          "target_display": "BOT",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "bot"
+            "next"
           ],
-          "hint_wrong": "Type the word BOT (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -567,19 +987,19 @@
           "prompt": "Tell me — Which one is TRUE about show, don't tell?",
           "options": [
             {
+              "text": "Helpers ignore samples on principle.",
+              "correct": false
+            },
+            {
+              "text": "Examples only work in Spanish.",
+              "correct": false
+            },
+            {
               "text": "Examples are always bad and rude to chairs.",
               "correct": false
             },
             {
-              "text": "A picture means nothing to anyone, ever.",
-              "correct": false
-            },
-            {
-              "text": "Pictures are for parties, not for code.",
-              "correct": false
-            },
-            {
-              "text": "Examples teach the rule.",
+              "text": "Examples make ideas clear.",
               "correct": true
             }
           ],
@@ -597,11 +1017,11 @@
               "correct": false
             },
             {
-              "text": "Show the helper what good looks like.",
+              "text": "A picture or sample beats a long story.",
               "correct": true
             },
             {
-              "text": "More words is always better — fill the screen!",
+              "text": "Examples confuse the AI because there are too many.",
               "correct": false
             }
           ],
@@ -611,27 +1031,121 @@
           "prompt": "Pop quiz! Which one is TRUE about show, don't tell?",
           "options": [
             {
-              "text": "Examples are faster than describing.",
+              "text": "Helpers copy the shape of an example.",
               "correct": true
             },
             {
-              "text": "Examples are always bad and rude to chairs.",
-              "correct": false
-            },
-            {
-              "text": "More words is always better — fill the screen!",
-              "correct": false
-            },
-            {
               "text": "Examples make things worse and slightly damp.",
+              "correct": false
+            },
+            {
+              "text": "Helpers chew examples like gum.",
+              "correct": false
+            },
+            {
+              "text": "A picture means nothing to anyone, ever.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_20_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about show, don't tell?",
+          "options": [
+            {
+              "text": "Showing an example uses up your daily AI battery.",
+              "correct": false
+            },
+            {
+              "text": "One good example saves many questions.",
+              "correct": true
+            },
+            {
+              "text": "Examples confuse the AI because there are too many.",
+              "correct": false
+            },
+            {
+              "text": "Helpers chew examples like gum.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_20_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about show, don't tell?",
+          "options": [
+            {
+              "text": "Examples teach the rule.",
+              "correct": true
+            },
+            {
+              "text": "Examples must be drawn in invisible ink.",
+              "correct": false
+            },
+            {
+              "text": "Examples make things worse and slightly damp.",
+              "correct": false
+            },
+            {
+              "text": "The AI ignores examples on rainy days.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_20_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about show, don't tell?",
+          "options": [
+            {
+              "text": "Show the helper what good looks like.",
+              "correct": true
+            },
+            {
+              "text": "Examples must be drawn in invisible ink.",
+              "correct": false
+            },
+            {
+              "text": "Examples are always bad and rude to chairs.",
+              "correct": false
+            },
+            {
+              "text": "A picture means nothing to anyone, ever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about show, don't tell?",
+          "options": [
+            {
+              "text": "More words is always better — fill the screen!",
+              "correct": false
+            },
+            {
+              "text": "Examples are always bad and rude to chairs.",
+              "correct": false
+            },
+            {
+              "text": "Examples are faster than describing.",
+              "correct": true
+            },
+            {
+              "text": "Helpers ignore samples on principle.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about show, don't tell?",
           "options": [
+            {
+              "text": "Examples are always bad and rude to chairs.",
+              "correct": false
+            },
+            {
+              "text": "Examples must be drawn in invisible ink.",
+              "correct": false
+            },
             {
               "text": "Examples make things worse and slightly damp.",
               "correct": false
@@ -639,39 +1153,50 @@
             {
               "text": "Even a tiny sample helps a lot.",
               "correct": true
-            },
-            {
-              "text": "Examples are always bad and rude to chairs.",
-              "correct": false
-            },
-            {
-              "text": "Pictures are for parties, not for code.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_20_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about show, don't tell?",
           "options": [
             {
-              "text": "Examples make ideas clear.",
+              "text": "The AI ignores examples on rainy days.",
+              "correct": false
+            },
+            {
+              "text": "More words is always better — fill the screen!",
+              "correct": false
+            },
+            {
+              "text": "Examples make things worse and slightly damp.",
+              "correct": false
+            },
+            {
+              "text": "Showing examples helps the AI understand exactly what you want.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about show, don't tell?",
+          "options": [
+            {
+              "text": "Showing an example uses up your daily AI battery.",
+              "correct": false
+            },
+            {
+              "text": "Examples only work in Spanish.",
+              "correct": false
             },
             {
               "text": "A picture means nothing to anyone, ever.",
               "correct": false
             },
             {
-              "text": "Pictures are for parties, not for code.",
-              "correct": false
-            },
-            {
-              "text": "More words is always better — fill the screen!",
-              "correct": false
+              "text": "An example is worth a thousand vague descriptions.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_20_q5_v4.wav"
+          ]
         }
       ]
     }

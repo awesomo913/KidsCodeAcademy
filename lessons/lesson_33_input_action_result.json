@@ -37,7 +37,7 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "input-trace",
+        "type": "sequence-the-steps",
         "payload": {
           "prompt": "Order: press, move, happen.",
           "steps": [
@@ -53,11 +53,11 @@
           "prompt": "What is input, action, result?",
           "options": [
             {
-              "text": "Action puts on a tiny hat.",
+              "text": "Action skips itself sometimes for fun.",
               "correct": false
             },
             {
-              "text": "Input and result are the same thing in a hat.",
+              "text": "Games skip the action step on rainy days.",
               "correct": false
             },
             {
@@ -75,7 +75,7 @@
           "prompt": "Quick! Which one is TRUE about input, action, result?",
           "options": [
             {
-              "text": "Inputs must be sung to a banana.",
+              "text": "Loops are bad in games — they get sleepy.",
               "correct": false
             },
             {
@@ -87,7 +87,7 @@
               "correct": false
             },
             {
-              "text": "Games skip the action step on rainy days.",
+              "text": "Result is invisible until the next day.",
               "correct": false
             }
           ],
@@ -97,11 +97,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about input, action, result.",
           "options": [
             {
-              "text": "Every move follows this loop.",
+              "text": "Input is what the player does.",
               "correct": false
             },
             {
-              "text": "Without result, the player feels lost.",
+              "text": "Every move follows this loop.",
               "correct": false
             },
             {
@@ -109,7 +109,7 @@
               "correct": true
             },
             {
-              "text": "Input is what the player does.",
+              "text": "Without input, the game does nothing.",
               "correct": false
             }
           ],
@@ -119,11 +119,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about input, action, result. What should he say?",
           "options": [
             {
-              "text": "Action does nothing — it just naps.",
+              "text": "Result is invisible until the next day.",
               "correct": false
             },
             {
-              "text": "Loops are bad in games — they get sleepy.",
+              "text": "Action does nothing — it just naps.",
               "correct": false
             },
             {
@@ -131,7 +131,7 @@
               "correct": true
             },
             {
-              "text": "Players never see the result — it floats away.",
+              "text": "Input and result are the same thing in a hat.",
               "correct": false
             }
           ],
@@ -141,11 +141,11 @@
           "prompt": "Tell me — Which rule about input, action, result is a GOOD rule?",
           "options": [
             {
-              "text": "Action does nothing — it just naps.",
+              "text": "Action skips itself sometimes for fun.",
               "correct": false
             },
             {
-              "text": "Action puts on a tiny hat.",
+              "text": "Loops are bad in games — they get sleepy.",
               "correct": false
             },
             {
@@ -153,11 +153,116 @@
               "correct": true
             },
             {
-              "text": "Loops are bad in games — they get sleepy.",
+              "text": "Action does nothing — it just naps.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_33_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about input, action, result, ___",
+          "options": [
+            {
+              "text": "Action puts on a tiny hat.",
+              "correct": false
+            },
+            {
+              "text": "Input → Action → Result happens fast.",
+              "correct": true
+            },
+            {
+              "text": "Input only works on weekdays.",
+              "correct": false
+            },
+            {
+              "text": "Players never see the result — it floats away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about input, action, result. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Every move follows this loop.",
+              "correct": false
+            },
+            {
+              "text": "A clear loop makes a clear game.",
+              "correct": false
+            },
+            {
+              "text": "Result is a tiny invisible robot.",
+              "correct": true
+            },
+            {
+              "text": "Input → Action → Result happens fast.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with input, action, result?",
+          "options": [
+            {
+              "text": "Input and result are the same thing in a hat.",
+              "correct": false
+            },
+            {
+              "text": "Inputs must be sung to a banana.",
+              "correct": false
+            },
+            {
+              "text": "Without input, the game does nothing.",
+              "correct": true
+            },
+            {
+              "text": "Action does nothing — it just naps.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about input, action, result is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Input is what the player does -- like pressing a key.",
+              "correct": false
+            },
+            {
+              "text": "Every move follows this loop.",
+              "correct": false
+            },
+            {
+              "text": "Input → Action → Result happens fast.",
+              "correct": false
+            },
+            {
+              "text": "Input only works on weekdays.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about input, action, result. Which fact would help him?",
+          "options": [
+            {
+              "text": "Action is what the game does in response -- like moving the hero.",
+              "correct": true
+            },
+            {
+              "text": "Inputs must be sung to a banana.",
+              "correct": false
+            },
+            {
+              "text": "Result is a tiny invisible robot.",
+              "correct": false
+            },
+            {
+              "text": "Loops are bad in games — they get sleepy.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -166,12 +271,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type RIGHT and press Send to keep going!",
-          "target_display": "RIGHT",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "right"
+            "yes"
           ],
-          "hint_wrong": "Type the word RIGHT (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -284,6 +389,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_33_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Player presses RIGHT arrow. Hero moves right. Player sees hero move. Which is the RESULT?",
+          "options": [
+            {
+              "text": "The keyboard cries.",
+              "correct": false
+            },
+            {
+              "text": "Player sees hero move.",
+              "correct": true
+            },
+            {
+              "text": "Hero moves right.",
+              "correct": false
+            },
+            {
+              "text": "Player presses RIGHT arrow.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Player presses RIGHT arrow. Hero moves right. Player sees hero move. Which is the RESULT?",
+          "options": [
+            {
+              "text": "Player presses RIGHT arrow.",
+              "correct": false
+            },
+            {
+              "text": "Hero moves right.",
+              "correct": false
+            },
+            {
+              "text": "Player sees hero move.",
+              "correct": true
+            },
+            {
+              "text": "The keyboard cries.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Player presses RIGHT arrow. Hero moves right. Player sees hero move. Which is the RESULT?",
+          "options": [
+            {
+              "text": "The keyboard cries.",
+              "correct": false
+            },
+            {
+              "text": "Hero moves right.",
+              "correct": false
+            },
+            {
+              "text": "Player presses RIGHT arrow.",
+              "correct": false
+            },
+            {
+              "text": "Player sees hero move.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Player presses RIGHT arrow. Hero moves right. Player sees hero move. Which is the RESULT?",
+          "options": [
+            {
+              "text": "Player presses RIGHT arrow.",
+              "correct": false
+            },
+            {
+              "text": "The keyboard cries.",
+              "correct": false
+            },
+            {
+              "text": "Hero moves right.",
+              "correct": false
+            },
+            {
+              "text": "Player sees hero move.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Player presses RIGHT arrow. Hero moves right. Player sees hero move. Which is the RESULT?",
+          "options": [
+            {
+              "text": "The keyboard cries.",
+              "correct": false
+            },
+            {
+              "text": "Player sees hero move.",
+              "correct": true
+            },
+            {
+              "text": "Player presses RIGHT arrow.",
+              "correct": false
+            },
+            {
+              "text": "Hero moves right.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -292,12 +502,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -410,6 +620,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_33_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why is the loop important?",
+          "options": [
+            {
+              "text": "Loops make pixels brighter.",
+              "correct": false
+            },
+            {
+              "text": "Loops are required by the moon.",
+              "correct": false
+            },
+            {
+              "text": "It earns the developer a sticker.",
+              "correct": false
+            },
+            {
+              "text": "It tells the player 'I did something — here's what happened'.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why is the loop important?",
+          "options": [
+            {
+              "text": "It tells the player 'I did something — here's what happened'.",
+              "correct": true
+            },
+            {
+              "text": "Loops are required by the moon.",
+              "correct": false
+            },
+            {
+              "text": "It earns the developer a sticker.",
+              "correct": false
+            },
+            {
+              "text": "Loops make pixels brighter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why is the loop important?",
+          "options": [
+            {
+              "text": "It tells the player 'I did something — here's what happened'.",
+              "correct": true
+            },
+            {
+              "text": "Loops make pixels brighter.",
+              "correct": false
+            },
+            {
+              "text": "Loops are required by the moon.",
+              "correct": false
+            },
+            {
+              "text": "It earns the developer a sticker.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why is the loop important?",
+          "options": [
+            {
+              "text": "It tells the player 'I did something — here's what happened'.",
+              "correct": true
+            },
+            {
+              "text": "Loops make pixels brighter.",
+              "correct": false
+            },
+            {
+              "text": "It earns the developer a sticker.",
+              "correct": false
+            },
+            {
+              "text": "Loops are required by the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why is the loop important?",
+          "options": [
+            {
+              "text": "It earns the developer a sticker.",
+              "correct": false
+            },
+            {
+              "text": "Loops make pixels brighter.",
+              "correct": false
+            },
+            {
+              "text": "Loops are required by the moon.",
+              "correct": false
+            },
+            {
+              "text": "It tells the player 'I did something — here's what happened'.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -418,12 +733,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SPACE and press Send to keep going!",
-          "target_display": "SPACE",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "space"
+            "cool"
           ],
-          "hint_wrong": "Type the word SPACE (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -431,19 +746,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about input, action, result.",
           "options": [
             {
-              "text": "Without result, the player feels lost.",
+              "text": "Input is what the player does.",
               "correct": false
             },
             {
-              "text": "Input → Action → Result happens fast.",
+              "text": "Result is what the player sees afterward -- like the hero in a new spot.",
               "correct": false
             },
             {
-              "text": "Players never see the result — it floats away.",
+              "text": "Action skips itself sometimes for fun.",
               "correct": true
             },
             {
-              "text": "Action is what the game does next.",
+              "text": "Result is what the player sees.",
               "correct": false
             }
           ],
@@ -453,19 +768,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about input, action, result.",
           "options": [
             {
-              "text": "A clear loop makes a clear game.",
+              "text": "Input is what the player does -- like pressing a key.",
               "correct": false
             },
             {
-              "text": "Action does nothing — it just naps.",
+              "text": "Result is invisible until the next day.",
               "correct": true
             },
             {
-              "text": "Without result, the player feels lost.",
+              "text": "Input is what the player does.",
               "correct": false
             },
             {
-              "text": "Action is what the game does next.",
+              "text": "Every game has this loop running constantly.",
               "correct": false
             }
           ],
@@ -475,19 +790,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about input, action, result.",
           "options": [
             {
-              "text": "Action is what the game does next.",
+              "text": "Result is what the player sees.",
               "correct": false
             },
             {
-              "text": "Without result, the player feels lost.",
+              "text": "Result is what the player sees afterward -- like the hero in a new spot.",
               "correct": false
             },
             {
-              "text": "Inputs must be sung to a banana.",
+              "text": "The loop runs backwards on holidays.",
               "correct": true
             },
             {
-              "text": "Result is what the player sees.",
+              "text": "Input is what the player does.",
               "correct": false
             }
           ],
@@ -497,11 +812,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about input, action, result.",
           "options": [
             {
+              "text": "Without result, the player feels lost.",
+              "correct": false
+            },
+            {
+              "text": "Input is what the player does -- like pressing a key.",
+              "correct": false
+            },
+            {
+              "text": "Input and result are the same thing in a hat.",
+              "correct": true
+            },
+            {
+              "text": "A clear loop makes a clear game.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_33_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
               "text": "Without input, the game does nothing.",
               "correct": false
             },
             {
+              "text": "Every move follows this loop.",
+              "correct": false
+            },
+            {
+              "text": "Result is what the player sees afterward -- like the hero in a new spot.",
+              "correct": false
+            },
+            {
+              "text": "Games skip the action step on rainy days.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_33_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "Every game has this loop running constantly.",
+              "correct": false
+            },
+            {
+              "text": "Loops are bad in games — they get sleepy.",
+              "correct": true
+            },
+            {
+              "text": "Action is what the game does in response -- like moving the hero.",
+              "correct": false
+            },
+            {
               "text": "Without result, the player feels lost.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "Input is what the player does -- like pressing a key.",
+              "correct": false
+            },
+            {
+              "text": "Every move follows this loop.",
+              "correct": false
+            },
+            {
+              "text": "Players never see the result — it floats away.",
+              "correct": true
+            },
+            {
+              "text": "Result is what the player sees.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "Input is what the player does.",
+              "correct": false
+            },
+            {
+              "text": "Without input, the game does nothing.",
+              "correct": false
+            },
+            {
+              "text": "Every game has this loop running constantly.",
+              "correct": false
+            },
+            {
+              "text": "Action does nothing — it just naps.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "Inputs must be sung to a banana.",
+              "correct": true
+            },
+            {
+              "text": "Result is what the player sees.",
+              "correct": false
+            },
+            {
+              "text": "Input → Action → Result happens fast.",
+              "correct": false
+            },
+            {
+              "text": "Action is what the game does next.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about input, action, result.",
+          "options": [
+            {
+              "text": "Action is what the game does in response -- like moving the hero.",
               "correct": false
             },
             {
@@ -509,33 +948,14 @@
               "correct": true
             },
             {
-              "text": "Input → Action → Result happens fast.",
+              "text": "A clear loop makes a clear game.",
+              "correct": false
+            },
+            {
+              "text": "Result is what the player sees afterward -- like the hero in a new spot.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_33_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about input, action, result.",
-          "options": [
-            {
-              "text": "Without result, the player feels lost.",
-              "correct": false
-            },
-            {
-              "text": "Without input, the game does nothing.",
-              "correct": false
-            },
-            {
-              "text": "Result is what the player sees.",
-              "correct": false
-            },
-            {
-              "text": "Action puts on a tiny hat.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_33_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -544,12 +964,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type POWER and press Send to keep going!",
-          "target_display": "POWER",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "power"
+            "next"
           ],
-          "hint_wrong": "Type the word POWER (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -557,19 +977,19 @@
           "prompt": "Tell me — Which one is TRUE about input, action, result?",
           "options": [
             {
+              "text": "Loops are bad in games — they get sleepy.",
+              "correct": false
+            },
+            {
+              "text": "Result is invisible until the next day.",
+              "correct": false
+            },
+            {
               "text": "Input and result are the same thing in a hat.",
               "correct": false
             },
             {
-              "text": "Games skip the action step on rainy days.",
-              "correct": false
-            },
-            {
-              "text": "Inputs must be sung to a banana.",
-              "correct": false
-            },
-            {
-              "text": "A clear loop makes a clear game.",
+              "text": "Input is what the player does.",
               "correct": true
             }
           ],
@@ -587,11 +1007,11 @@
               "correct": false
             },
             {
-              "text": "Input → Action → Result happens fast.",
+              "text": "Action is what the game does next.",
               "correct": true
             },
             {
-              "text": "Players never see the result — it floats away.",
+              "text": "Input only works on weekdays.",
               "correct": false
             }
           ],
@@ -601,27 +1021,121 @@
           "prompt": "Pop quiz! Which one is TRUE about input, action, result?",
           "options": [
             {
-              "text": "Without result, the player feels lost.",
+              "text": "Result is what the player sees.",
               "correct": true
             },
             {
-              "text": "Input and result are the same thing in a hat.",
-              "correct": false
-            },
-            {
-              "text": "Players never see the result — it floats away.",
-              "correct": false
-            },
-            {
               "text": "Action does nothing — it just naps.",
+              "correct": false
+            },
+            {
+              "text": "Action puts on a tiny hat.",
+              "correct": false
+            },
+            {
+              "text": "Games skip the action step on rainy days.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_33_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "Action skips itself sometimes for fun.",
+              "correct": false
+            },
+            {
+              "text": "Every move follows this loop.",
+              "correct": true
+            },
+            {
+              "text": "Input only works on weekdays.",
+              "correct": false
+            },
+            {
+              "text": "Action puts on a tiny hat.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_33_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "A clear loop makes a clear game.",
+              "correct": true
+            },
+            {
+              "text": "Result is a tiny invisible robot.",
+              "correct": false
+            },
+            {
+              "text": "Action does nothing — it just naps.",
+              "correct": false
+            },
+            {
+              "text": "The loop runs backwards on holidays.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_33_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "Input → Action → Result happens fast.",
+              "correct": true
+            },
+            {
+              "text": "Result is a tiny invisible robot.",
+              "correct": false
+            },
+            {
+              "text": "Input and result are the same thing in a hat.",
+              "correct": false
+            },
+            {
+              "text": "Games skip the action step on rainy days.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "Players never see the result — it floats away.",
+              "correct": false
+            },
+            {
+              "text": "Input and result are the same thing in a hat.",
+              "correct": false
+            },
+            {
+              "text": "Without result, the player feels lost.",
+              "correct": true
+            },
+            {
+              "text": "Loops are bad in games — they get sleepy.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about input, action, result?",
           "options": [
+            {
+              "text": "Input and result are the same thing in a hat.",
+              "correct": false
+            },
+            {
+              "text": "Result is a tiny invisible robot.",
+              "correct": false
+            },
             {
               "text": "Action does nothing — it just naps.",
               "correct": false
@@ -629,39 +1143,50 @@
             {
               "text": "Without input, the game does nothing.",
               "correct": true
-            },
-            {
-              "text": "Input and result are the same thing in a hat.",
-              "correct": false
-            },
-            {
-              "text": "Inputs must be sung to a banana.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_33_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about input, action, result?",
           "options": [
             {
-              "text": "Input is what the player does.",
+              "text": "The loop runs backwards on holidays.",
+              "correct": false
+            },
+            {
+              "text": "Players never see the result — it floats away.",
+              "correct": false
+            },
+            {
+              "text": "Action does nothing — it just naps.",
+              "correct": false
+            },
+            {
+              "text": "Input is what the player does -- like pressing a key.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about input, action, result?",
+          "options": [
+            {
+              "text": "Action skips itself sometimes for fun.",
+              "correct": false
+            },
+            {
+              "text": "Result is invisible until the next day.",
+              "correct": false
             },
             {
               "text": "Games skip the action step on rainy days.",
               "correct": false
             },
             {
-              "text": "Inputs must be sung to a banana.",
-              "correct": false
-            },
-            {
-              "text": "Players never see the result — it floats away.",
-              "correct": false
+              "text": "Action is what the game does in response -- like moving the hero.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_33_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -670,124 +1195,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about input, action, result. Pick the SILLIEST claim.",
+          "prompt": "Player taps RIGHT arrow. Hero slides right. Player sees it move. What's the ACTION?",
           "options": [
             {
-              "text": "Without input, the game does nothing.",
+              "text": "The screen takes a nap.",
               "correct": false
             },
             {
-              "text": "Without result, the player feels lost.",
+              "text": "Player taps right.",
               "correct": false
             },
             {
-              "text": "Inputs must be sung to a banana.",
+              "text": "Hero slides right.",
               "correct": true
             },
             {
-              "text": "Input is what the player does.",
+              "text": "Player sees it move.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_33_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about input, action, result. Pick the SILLIEST claim.",
+          "prompt": "Quick! Player taps RIGHT arrow. Hero slides right. Player sees it move. What's the ACTION?",
           "options": [
             {
-              "text": "Result is what the player sees.",
-              "correct": false
-            },
-            {
-              "text": "Without input, the game does nothing.",
-              "correct": false
-            },
-            {
-              "text": "Result is a tiny invisible robot.",
+              "text": "Hero slides right.",
               "correct": true
             },
             {
-              "text": "Action is what the game does next.",
+              "text": "Player taps right.",
+              "correct": false
+            },
+            {
+              "text": "Player sees it move.",
+              "correct": false
+            },
+            {
+              "text": "The screen takes a nap.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_33_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about input, action, result. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Player taps RIGHT arrow. Hero slides right. Player sees it move. What's the ACTION?",
           "options": [
             {
-              "text": "Every move follows this loop.",
+              "text": "Player taps right.",
               "correct": false
             },
             {
-              "text": "Action puts on a tiny hat.",
+              "text": "Player sees it move.",
+              "correct": false
+            },
+            {
+              "text": "Hero slides right.",
               "correct": true
             },
             {
-              "text": "Without input, the game does nothing.",
-              "correct": false
-            },
-            {
-              "text": "Input is what the player does.",
+              "text": "The screen takes a nap.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_33_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about input, action, result. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Player taps RIGHT arrow. Hero slides right. Player sees it move. What's the ACTION?",
           "options": [
             {
-              "text": "Input is what the player does.",
+              "text": "Player sees it move.",
               "correct": false
             },
             {
-              "text": "Action is what the game does next.",
-              "correct": false
-            },
-            {
-              "text": "Input → Action → Result happens fast.",
-              "correct": false
-            },
-            {
-              "text": "Input and result are the same thing in a hat.",
+              "text": "Hero slides right.",
               "correct": true
+            },
+            {
+              "text": "Player taps right.",
+              "correct": false
+            },
+            {
+              "text": "The screen takes a nap.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_33_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about input, action, result. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Player taps RIGHT arrow. Hero slides right. Player sees it move. What's the ACTION?",
           "options": [
             {
-              "text": "Games skip the action step on rainy days.",
+              "text": "The screen takes a nap.",
+              "correct": false
+            },
+            {
+              "text": "Player taps right.",
+              "correct": false
+            },
+            {
+              "text": "Player sees it move.",
+              "correct": false
+            },
+            {
+              "text": "Hero slides right.",
               "correct": true
-            },
-            {
-              "text": "Without result, the player feels lost.",
-              "correct": false
-            },
-            {
-              "text": "Input is what the player does.",
-              "correct": false
-            },
-            {
-              "text": "Input → Action → Result happens fast.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_33_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Player taps RIGHT arrow. Hero slides right. Player sees it move. What's the ACTION?",
+          "options": [
+            {
+              "text": "Player taps right.",
+              "correct": false
+            },
+            {
+              "text": "Hero slides right.",
+              "correct": true
+            },
+            {
+              "text": "The screen takes a nap.",
+              "correct": false
+            },
+            {
+              "text": "Player sees it move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Player taps RIGHT arrow. Hero slides right. Player sees it move. What's the ACTION?",
+          "options": [
+            {
+              "text": "Hero slides right.",
+              "correct": true
+            },
+            {
+              "text": "The screen takes a nap.",
+              "correct": false
+            },
+            {
+              "text": "Player taps right.",
+              "correct": false
+            },
+            {
+              "text": "Player sees it move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Player taps RIGHT arrow. Hero slides right. Player sees it move. What's the ACTION?",
+          "options": [
+            {
+              "text": "The screen takes a nap.",
+              "correct": false
+            },
+            {
+              "text": "Player sees it move.",
+              "correct": false
+            },
+            {
+              "text": "Hero slides right.",
+              "correct": true
+            },
+            {
+              "text": "Player taps right.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Player taps RIGHT arrow. Hero slides right. Player sees it move. What's the ACTION?",
+          "options": [
+            {
+              "text": "Player taps right.",
+              "correct": false
+            },
+            {
+              "text": "Hero slides right.",
+              "correct": true
+            },
+            {
+              "text": "Player sees it move.",
+              "correct": false
+            },
+            {
+              "text": "The screen takes a nap.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Player taps RIGHT arrow. Hero slides right. Player sees it move. What's the ACTION?",
+          "options": [
+            {
+              "text": "The screen takes a nap.",
+              "correct": false
+            },
+            {
+              "text": "Player taps right.",
+              "correct": false
+            },
+            {
+              "text": "Hero slides right.",
+              "correct": true
+            },
+            {
+              "text": "Player sees it move.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

@@ -108,9 +108,9 @@ There are 6 game types woven through the lessons:
 - Note: build size grew (~165 MB) because all 1950 question-prompt wavs ship inside the exe.
 
 ### 2026-05-08 — v0.7.0 (real-feeling sandbox sims + game-dev tools + warmer voice)
-- Added: pretend versions of 6 real helpers your kid can talk to — Claude, Cursor, Gemini, Codex, OpenCode, and Ollama. Each looks and feels close to the real tool. Click "Try the pretend helper!" inside lessons 11-16 to expand the chat panel.
-- Added: every pretend tool corner shows `✨ Pretend mode — not real internet`. The mascot says "This is pretend X — let's play!" when you open the chat.
-- Added: hands-on game-dev tools across 9 lessons that used to be MCQ-only — toggling world layers (lesson 32), tracing arrow-key inputs (33), swapping costumes + FPS (34), tapping coins to score (38), polish toggles for shake/particles/sound (41), sending pretend Cursor a feature request and seeing the diff (45), watching a friend's reactions to your demo (47), and making a paper share card for your game (48).
+- Added: offline simulations of 6 real helpers your kid can talk to — Claude, Cursor, Gemini, Codex, OpenCode, and Ollama. Each looks and feels close to the real tool. Click "Open [helper]" inside lessons 11-16 to expand the chat panel.
+- Added: each helper opens with a friendly "Hi! I'm [helper] — let's go!" voice line.
+- Added: hands-on game-dev tools across 9 lessons that used to be MCQ-only — toggling world layers (lesson 32), tracing arrow-key inputs (33), swapping costumes + FPS (34), tapping coins to score (38), polish toggles for shake/particles/sound (41), sending Cursor a feature request and seeing the diff (45), watching a friend's reactions to your demo (47), and making a paper share card for your game (48).
 - Added: lesson 60 is now a real "Make Your Game" capstone — three stages: brainstorm your idea, paint a level, name + share it.
 - Changed: lesson narration is now baked with **Piper TTS** (`en_US-amy-medium`) instead of pyttsx3 SAPI. Same kid-friendly female voice but much warmer and more natural. Build size grew slightly (~89.6 MB).
 - Note: Piper voice file (~63 MB) is gitignored; downloaded by build via `python -m piper.download_voices en_US-amy-medium --download-dir voices`. Build falls back to pyttsx3 if the voice is missing.

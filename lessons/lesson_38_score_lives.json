@@ -49,7 +49,7 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "live-hud",
+        "type": "drag-to-match",
         "payload": {
           "prompt": "Match each game event to what changes:",
           "pairs": [
@@ -77,11 +77,11 @@
           "prompt": "What is score and lives?",
           "options": [
             {
-              "text": "Score must rhyme with 'banana'.",
+              "text": "Lives must be returned to the library.",
               "correct": false
             },
             {
-              "text": "Score and lives are the same thing — pick one.",
+              "text": "Score never changes, ever, by anyone.",
               "correct": false
             },
             {
@@ -99,7 +99,7 @@
           "prompt": "Quick! Which one is TRUE about score and lives?",
           "options": [
             {
-              "text": "Score must be shown in interpretive dance.",
+              "text": "Lives at zero make the game easier.",
               "correct": false
             },
             {
@@ -111,7 +111,7 @@
               "correct": false
             },
             {
-              "text": "Score never changes, ever, by anyone.",
+              "text": "If your score gets too high, the game gets jealous.",
               "correct": false
             }
           ],
@@ -121,11 +121,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about score and lives.",
           "options": [
             {
-              "text": "Score gives the player a goal.",
+              "text": "Score goes up when you do well.",
               "correct": false
             },
             {
-              "text": "Each hit subtracts a life.",
+              "text": "Score gives the player a goal.",
               "correct": false
             },
             {
@@ -133,7 +133,7 @@
               "correct": true
             },
             {
-              "text": "Score goes up when you do well.",
+              "text": "Score and lives are usually shown together.",
               "correct": false
             }
           ],
@@ -143,11 +143,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about score and lives. What should he say?",
           "options": [
             {
-              "text": "Hide the score from the player — secret tax.",
+              "text": "If your score gets too high, the game gets jealous.",
               "correct": false
             },
             {
-              "text": "Lives at zero make the game easier.",
+              "text": "Hide the score from the player — secret tax.",
               "correct": false
             },
             {
@@ -155,7 +155,7 @@
               "correct": true
             },
             {
-              "text": "Goals are bad in games — too pointy.",
+              "text": "Score and lives are the same thing — pick one.",
               "correct": false
             }
           ],
@@ -165,11 +165,11 @@
           "prompt": "Tell me — Which rule about score and lives is a GOOD rule?",
           "options": [
             {
-              "text": "Hide the score from the player — secret tax.",
+              "text": "Lives must be returned to the library.",
               "correct": false
             },
             {
-              "text": "Score must rhyme with 'banana'.",
+              "text": "Lives at zero make the game easier.",
               "correct": false
             },
             {
@@ -177,11 +177,116 @@
               "correct": true
             },
             {
-              "text": "Lives at zero make the game easier.",
+              "text": "Hide the score from the player — secret tax.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about score and lives, ___",
+          "options": [
+            {
+              "text": "Score must rhyme with 'banana'.",
+              "correct": false
+            },
+            {
+              "text": "Each pickup adds points.",
+              "correct": true
+            },
+            {
+              "text": "Score is measured in tomatoes.",
+              "correct": false
+            },
+            {
+              "text": "Goals are bad in games — too pointy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Score gives the player a goal.",
+              "correct": false
+            },
+            {
+              "text": "We show the score on screen.",
+              "correct": false
+            },
+            {
+              "text": "Lives are stored in a tiny safe somewhere.",
+              "correct": true
+            },
+            {
+              "text": "Each pickup adds points.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with score and lives?",
+          "options": [
+            {
+              "text": "Score and lives are the same thing — pick one.",
+              "correct": false
+            },
+            {
+              "text": "Score must be shown in interpretive dance.",
+              "correct": false
+            },
+            {
+              "text": "Score and lives are usually shown together.",
+              "correct": true
+            },
+            {
+              "text": "Hide the score from the player — secret tax.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about score and lives is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Score goes up when you do something good -- like grabbing a coin.",
+              "correct": false
+            },
+            {
+              "text": "Score gives the player a goal.",
+              "correct": false
+            },
+            {
+              "text": "Each pickup adds points.",
+              "correct": false
+            },
+            {
+              "text": "Score is measured in tomatoes.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about score and lives. Which fact would help him?",
+          "options": [
+            {
+              "text": "Lives count how many tries you have left.",
+              "correct": true
+            },
+            {
+              "text": "Score must be shown in interpretive dance.",
+              "correct": false
+            },
+            {
+              "text": "Lives are stored in a tiny safe somewhere.",
+              "correct": false
+            },
+            {
+              "text": "Lives at zero make the game easier.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -190,12 +295,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SEE and press Send to keep going!",
-          "target_display": "SEE",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "see"
+            "yes"
           ],
-          "hint_wrong": "Type the word SEE (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -308,6 +413,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Hero gets hit by a bad guy and lives drop from 3 to 2. What should happen?",
+          "options": [
+            {
+              "text": "Send the hero a sympathy card.",
+              "correct": false
+            },
+            {
+              "text": "Show the new lives count and continue play.",
+              "correct": true
+            },
+            {
+              "text": "Stop the game and write a poem.",
+              "correct": false
+            },
+            {
+              "text": "Forget it ever happened.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Hero gets hit by a bad guy and lives drop from 3 to 2. What should happen?",
+          "options": [
+            {
+              "text": "Stop the game and write a poem.",
+              "correct": false
+            },
+            {
+              "text": "Show the new lives count and continue play.",
+              "correct": true
+            },
+            {
+              "text": "Send the hero a sympathy card.",
+              "correct": false
+            },
+            {
+              "text": "Forget it ever happened.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Hero gets hit by a bad guy and lives drop from 3 to 2. What should happen?",
+          "options": [
+            {
+              "text": "Stop the game and write a poem.",
+              "correct": false
+            },
+            {
+              "text": "Show the new lives count and continue play.",
+              "correct": true
+            },
+            {
+              "text": "Forget it ever happened.",
+              "correct": false
+            },
+            {
+              "text": "Send the hero a sympathy card.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Hero gets hit by a bad guy and lives drop from 3 to 2. What should happen?",
+          "options": [
+            {
+              "text": "Show the new lives count and continue play.",
+              "correct": true
+            },
+            {
+              "text": "Forget it ever happened.",
+              "correct": false
+            },
+            {
+              "text": "Send the hero a sympathy card.",
+              "correct": false
+            },
+            {
+              "text": "Stop the game and write a poem.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Hero gets hit by a bad guy and lives drop from 3 to 2. What should happen?",
+          "options": [
+            {
+              "text": "Show the new lives count and continue play.",
+              "correct": true
+            },
+            {
+              "text": "Forget it ever happened.",
+              "correct": false
+            },
+            {
+              "text": "Stop the game and write a poem.",
+              "correct": false
+            },
+            {
+              "text": "Send the hero a sympathy card.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -316,12 +526,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -434,6 +644,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why show the score on screen?",
+          "options": [
+            {
+              "text": "So the score can wave hello.",
+              "correct": false
+            },
+            {
+              "text": "To fill empty space.",
+              "correct": false
+            },
+            {
+              "text": "So the player knows how they're doing right now.",
+              "correct": true
+            },
+            {
+              "text": "Because the score gets lonely.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why show the score on screen?",
+          "options": [
+            {
+              "text": "To fill empty space.",
+              "correct": false
+            },
+            {
+              "text": "So the player knows how they're doing right now.",
+              "correct": true
+            },
+            {
+              "text": "So the score can wave hello.",
+              "correct": false
+            },
+            {
+              "text": "Because the score gets lonely.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why show the score on screen?",
+          "options": [
+            {
+              "text": "To fill empty space.",
+              "correct": false
+            },
+            {
+              "text": "So the player knows how they're doing right now.",
+              "correct": true
+            },
+            {
+              "text": "So the score can wave hello.",
+              "correct": false
+            },
+            {
+              "text": "Because the score gets lonely.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why show the score on screen?",
+          "options": [
+            {
+              "text": "To fill empty space.",
+              "correct": false
+            },
+            {
+              "text": "Because the score gets lonely.",
+              "correct": false
+            },
+            {
+              "text": "So the player knows how they're doing right now.",
+              "correct": true
+            },
+            {
+              "text": "So the score can wave hello.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why show the score on screen?",
+          "options": [
+            {
+              "text": "To fill empty space.",
+              "correct": false
+            },
+            {
+              "text": "Because the score gets lonely.",
+              "correct": false
+            },
+            {
+              "text": "So the score can wave hello.",
+              "correct": false
+            },
+            {
+              "text": "So the player knows how they're doing right now.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -442,12 +757,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type NEW and press Send to keep going!",
-          "target_display": "NEW",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "new"
+            "cool"
           ],
-          "hint_wrong": "Type the word NEW (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -455,19 +770,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about score and lives.",
           "options": [
             {
-              "text": "Each hit subtracts a life.",
+              "text": "Score goes up when you do well.",
               "correct": false
             },
             {
-              "text": "Each pickup adds points.",
+              "text": "Lose all your lives and the game ends.",
               "correct": false
             },
             {
-              "text": "Goals are bad in games — too pointy.",
+              "text": "Lives must be returned to the library.",
               "correct": true
             },
             {
-              "text": "Lives go down when you get hit.",
+              "text": "Lives at zero ends the game.",
               "correct": false
             }
           ],
@@ -477,19 +792,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about score and lives.",
           "options": [
             {
-              "text": "We show the score on screen.",
+              "text": "Score goes up when you do something good -- like grabbing a coin.",
               "correct": false
             },
             {
-              "text": "Hide the score from the player — secret tax.",
+              "text": "If your score gets too high, the game gets jealous.",
               "correct": true
             },
             {
-              "text": "Each hit subtracts a life.",
+              "text": "Score goes up when you do well.",
               "correct": false
             },
             {
-              "text": "Lives go down when you get hit.",
+              "text": "Score and lives let the game tell you how you're doing.",
               "correct": false
             }
           ],
@@ -499,19 +814,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about score and lives.",
           "options": [
             {
-              "text": "Lives go down when you get hit.",
+              "text": "Lives at zero ends the game.",
               "correct": false
             },
             {
-              "text": "Each hit subtracts a life.",
+              "text": "Lose all your lives and the game ends.",
               "correct": false
             },
             {
-              "text": "Score must be shown in interpretive dance.",
+              "text": "Lives are made of clouds.",
               "correct": true
             },
             {
-              "text": "Lives at zero ends the game.",
+              "text": "Score goes up when you do well.",
               "correct": false
             }
           ],
@@ -521,11 +836,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about score and lives.",
           "options": [
             {
+              "text": "Each hit subtracts a life.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up when you do something good -- like grabbing a coin.",
+              "correct": false
+            },
+            {
+              "text": "Score and lives are the same thing — pick one.",
+              "correct": true
+            },
+            {
+              "text": "We show the score on screen.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_38_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about score and lives.",
+          "options": [
+            {
               "text": "Score and lives are usually shown together.",
               "correct": false
             },
             {
+              "text": "Score gives the player a goal.",
+              "correct": false
+            },
+            {
+              "text": "Lose all your lives and the game ends.",
+              "correct": false
+            },
+            {
+              "text": "Score never changes, ever, by anyone.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_38_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about score and lives.",
+          "options": [
+            {
+              "text": "Score and lives let the game tell you how you're doing.",
+              "correct": false
+            },
+            {
+              "text": "Lives at zero make the game easier.",
+              "correct": true
+            },
+            {
+              "text": "Lives count how many tries you have left.",
+              "correct": false
+            },
+            {
               "text": "Each hit subtracts a life.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about score and lives.",
+          "options": [
+            {
+              "text": "Score goes up when you do something good -- like grabbing a coin.",
+              "correct": false
+            },
+            {
+              "text": "Score gives the player a goal.",
+              "correct": false
+            },
+            {
+              "text": "Goals are bad in games — too pointy.",
+              "correct": true
+            },
+            {
+              "text": "Lives at zero ends the game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about score and lives.",
+          "options": [
+            {
+              "text": "Score goes up when you do well.",
+              "correct": false
+            },
+            {
+              "text": "Score and lives are usually shown together.",
+              "correct": false
+            },
+            {
+              "text": "Score and lives let the game tell you how you're doing.",
+              "correct": false
+            },
+            {
+              "text": "Hide the score from the player — secret tax.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about score and lives.",
+          "options": [
+            {
+              "text": "Score must be shown in interpretive dance.",
+              "correct": true
+            },
+            {
+              "text": "Lives at zero ends the game.",
+              "correct": false
+            },
+            {
+              "text": "Each pickup adds points.",
+              "correct": false
+            },
+            {
+              "text": "Lives go down when you get hit.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about score and lives.",
+          "options": [
+            {
+              "text": "Lives count how many tries you have left.",
               "correct": false
             },
             {
@@ -533,33 +972,14 @@
               "correct": true
             },
             {
-              "text": "Each pickup adds points.",
+              "text": "We show the score on screen.",
+              "correct": false
+            },
+            {
+              "text": "Lose all your lives and the game ends.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_38_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about score and lives.",
-          "options": [
-            {
-              "text": "Each hit subtracts a life.",
-              "correct": false
-            },
-            {
-              "text": "Score and lives are usually shown together.",
-              "correct": false
-            },
-            {
-              "text": "Lives at zero ends the game.",
-              "correct": false
-            },
-            {
-              "text": "Score must rhyme with 'banana'.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_38_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -568,12 +988,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type USE and press Send to keep going!",
-          "target_display": "USE",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "use"
+            "next"
           ],
-          "hint_wrong": "Type the word USE (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -581,19 +1001,19 @@
           "prompt": "Tell me — Which one is TRUE about score and lives?",
           "options": [
             {
+              "text": "Lives at zero make the game easier.",
+              "correct": false
+            },
+            {
+              "text": "If your score gets too high, the game gets jealous.",
+              "correct": false
+            },
+            {
               "text": "Score and lives are the same thing — pick one.",
               "correct": false
             },
             {
-              "text": "Score never changes, ever, by anyone.",
-              "correct": false
-            },
-            {
-              "text": "Score must be shown in interpretive dance.",
-              "correct": false
-            },
-            {
-              "text": "We show the score on screen.",
+              "text": "Score goes up when you do well.",
               "correct": true
             }
           ],
@@ -611,11 +1031,11 @@
               "correct": false
             },
             {
-              "text": "Each pickup adds points.",
+              "text": "Lives go down when you get hit.",
               "correct": true
             },
             {
-              "text": "Goals are bad in games — too pointy.",
+              "text": "Score is measured in tomatoes.",
               "correct": false
             }
           ],
@@ -625,27 +1045,121 @@
           "prompt": "Pop quiz! Which one is TRUE about score and lives?",
           "options": [
             {
-              "text": "Each hit subtracts a life.",
+              "text": "Lives at zero ends the game.",
               "correct": true
             },
             {
-              "text": "Score and lives are the same thing — pick one.",
-              "correct": false
-            },
-            {
-              "text": "Goals are bad in games — too pointy.",
-              "correct": false
-            },
-            {
               "text": "Hide the score from the player — secret tax.",
+              "correct": false
+            },
+            {
+              "text": "Score must rhyme with 'banana'.",
+              "correct": false
+            },
+            {
+              "text": "Score never changes, ever, by anyone.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about score and lives?",
+          "options": [
+            {
+              "text": "Lives must be returned to the library.",
+              "correct": false
+            },
+            {
+              "text": "Score gives the player a goal.",
+              "correct": true
+            },
+            {
+              "text": "Score is measured in tomatoes.",
+              "correct": false
+            },
+            {
+              "text": "Score must rhyme with 'banana'.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_38_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about score and lives?",
+          "options": [
+            {
+              "text": "We show the score on screen.",
+              "correct": true
+            },
+            {
+              "text": "Lives are stored in a tiny safe somewhere.",
+              "correct": false
+            },
+            {
+              "text": "Hide the score from the player — secret tax.",
+              "correct": false
+            },
+            {
+              "text": "Lives are made of clouds.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_38_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about score and lives?",
+          "options": [
+            {
+              "text": "Each pickup adds points.",
+              "correct": true
+            },
+            {
+              "text": "Lives are stored in a tiny safe somewhere.",
+              "correct": false
+            },
+            {
+              "text": "Score and lives are the same thing — pick one.",
+              "correct": false
+            },
+            {
+              "text": "Score never changes, ever, by anyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about score and lives?",
+          "options": [
+            {
+              "text": "Goals are bad in games — too pointy.",
+              "correct": false
+            },
+            {
+              "text": "Score and lives are the same thing — pick one.",
+              "correct": false
+            },
+            {
+              "text": "Each hit subtracts a life.",
+              "correct": true
+            },
+            {
+              "text": "Lives at zero make the game easier.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about score and lives?",
           "options": [
+            {
+              "text": "Score and lives are the same thing — pick one.",
+              "correct": false
+            },
+            {
+              "text": "Lives are stored in a tiny safe somewhere.",
+              "correct": false
+            },
             {
               "text": "Hide the score from the player — secret tax.",
               "correct": false
@@ -653,39 +1167,50 @@
             {
               "text": "Score and lives are usually shown together.",
               "correct": true
-            },
-            {
-              "text": "Score and lives are the same thing — pick one.",
-              "correct": false
-            },
-            {
-              "text": "Score must be shown in interpretive dance.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_38_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about score and lives?",
           "options": [
             {
-              "text": "Score goes up when you do well.",
+              "text": "Lives are made of clouds.",
+              "correct": false
+            },
+            {
+              "text": "Goals are bad in games — too pointy.",
+              "correct": false
+            },
+            {
+              "text": "Hide the score from the player — secret tax.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up when you do something good -- like grabbing a coin.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about score and lives?",
+          "options": [
+            {
+              "text": "Lives must be returned to the library.",
+              "correct": false
+            },
+            {
+              "text": "If your score gets too high, the game gets jealous.",
+              "correct": false
             },
             {
               "text": "Score never changes, ever, by anyone.",
               "correct": false
             },
             {
-              "text": "Score must be shown in interpretive dance.",
-              "correct": false
-            },
-            {
-              "text": "Goals are bad in games — too pointy.",
-              "correct": false
+              "text": "Lives count how many tries you have left.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_38_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -694,124 +1219,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "prompt": "Hero grabs a coin. What should happen?",
           "options": [
             {
-              "text": "Score and lives are usually shown together.",
+              "text": "The coin turns into a hero.",
               "correct": false
             },
             {
-              "text": "Each hit subtracts a life.",
+              "text": "Hero turns into a coin.",
               "correct": false
             },
             {
-              "text": "Score must be shown in interpretive dance.",
+              "text": "Score goes up by some amount (like +10).",
               "correct": true
             },
             {
-              "text": "Score goes up when you do well.",
+              "text": "Nothing -- coins are decoration.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "prompt": "Quick! Hero grabs a coin. What should happen?",
           "options": [
             {
-              "text": "Lives at zero ends the game.",
+              "text": "Nothing -- coins are decoration.",
               "correct": false
             },
             {
-              "text": "Score and lives are usually shown together.",
+              "text": "The coin turns into a hero.",
               "correct": false
             },
             {
-              "text": "Lives are stored in a tiny safe somewhere.",
+              "text": "Hero turns into a coin.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up by some amount (like +10).",
               "correct": true
-            },
-            {
-              "text": "Lives go down when you get hit.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Hero grabs a coin. What should happen?",
           "options": [
             {
-              "text": "Score gives the player a goal.",
+              "text": "Hero turns into a coin.",
               "correct": false
             },
             {
-              "text": "Score must rhyme with 'banana'.",
+              "text": "The coin turns into a hero.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- coins are decoration.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up by some amount (like +10).",
               "correct": true
-            },
-            {
-              "text": "Score and lives are usually shown together.",
-              "correct": false
-            },
-            {
-              "text": "Score goes up when you do well.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Hero grabs a coin. What should happen?",
           "options": [
             {
-              "text": "Score goes up when you do well.",
+              "text": "Nothing -- coins are decoration.",
               "correct": false
             },
             {
-              "text": "Lives go down when you get hit.",
+              "text": "The coin turns into a hero.",
               "correct": false
             },
             {
-              "text": "Each pickup adds points.",
+              "text": "Hero turns into a coin.",
               "correct": false
             },
             {
-              "text": "Score and lives are the same thing — pick one.",
+              "text": "Score goes up by some amount (like +10).",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Hero grabs a coin. What should happen?",
           "options": [
             {
-              "text": "Score never changes, ever, by anyone.",
+              "text": "Hero turns into a coin.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up by some amount (like +10).",
               "correct": true
             },
             {
-              "text": "Each hit subtracts a life.",
+              "text": "The coin turns into a hero.",
               "correct": false
             },
             {
-              "text": "Score goes up when you do well.",
-              "correct": false
-            },
-            {
-              "text": "Each pickup adds points.",
+              "text": "Nothing -- coins are decoration.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Hero grabs a coin. What should happen?",
+          "options": [
+            {
+              "text": "Hero turns into a coin.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- coins are decoration.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up by some amount (like +10).",
+              "correct": true
+            },
+            {
+              "text": "The coin turns into a hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Hero grabs a coin. What should happen?",
+          "options": [
+            {
+              "text": "Nothing -- coins are decoration.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up by some amount (like +10).",
+              "correct": true
+            },
+            {
+              "text": "Hero turns into a coin.",
+              "correct": false
+            },
+            {
+              "text": "The coin turns into a hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Hero grabs a coin. What should happen?",
+          "options": [
+            {
+              "text": "Hero turns into a coin.",
+              "correct": false
+            },
+            {
+              "text": "The coin turns into a hero.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- coins are decoration.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up by some amount (like +10).",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Hero grabs a coin. What should happen?",
+          "options": [
+            {
+              "text": "Hero turns into a coin.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- coins are decoration.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up by some amount (like +10).",
+              "correct": true
+            },
+            {
+              "text": "The coin turns into a hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Hero grabs a coin. What should happen?",
+          "options": [
+            {
+              "text": "Score goes up by some amount (like +10).",
+              "correct": true
+            },
+            {
+              "text": "The coin turns into a hero.",
+              "correct": false
+            },
+            {
+              "text": "Hero turns into a coin.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- coins are decoration.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -820,124 +1450,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GET and press Send to keep going!",
-          "target_display": "GET",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "get"
+            "play"
           ],
-          "hint_wrong": "Type the word GET (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about score and lives is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about score and lives. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Each hit subtracts a life.",
+              "text": "Lives are stored in a tiny safe somewhere.",
               "correct": true
             },
             {
-              "text": "Hide the score from the player — secret tax.",
+              "text": "Lives go down when you get hit.",
               "correct": false
             },
             {
-              "text": "Score must be shown in interpretive dance.",
+              "text": "Score goes up when you do something good -- like grabbing a coin.",
               "correct": false
             },
             {
-              "text": "Score and lives are the same thing — pick one.",
+              "text": "Score and lives let the game tell you how you're doing.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about score and lives is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about score and lives. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "Score goes up when you do well.",
+              "correct": false
+            },
+            {
+              "text": "Score gives the player a goal.",
+              "correct": false
+            },
+            {
+              "text": "Lives at zero ends the game.",
+              "correct": false
+            },
+            {
               "text": "Score must rhyme with 'banana'.",
-              "correct": false
-            },
-            {
-              "text": "Lives are stored in a tiny safe somewhere.",
-              "correct": false
-            },
-            {
-              "text": "Lives at zero make the game easier.",
-              "correct": false
-            },
-            {
-              "text": "Score and lives are usually shown together.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about score and lives is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about score and lives. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Score must be shown in interpretive dance.",
+              "text": "Each hit subtracts a life.",
               "correct": false
             },
             {
-              "text": "Goals are bad in games — too pointy.",
+              "text": "Score and lives let the game tell you how you're doing.",
               "correct": false
             },
             {
-              "text": "Hide the score from the player — secret tax.",
+              "text": "Lives count how many tries you have left.",
               "correct": false
             },
             {
-              "text": "Score goes up when you do well.",
+              "text": "Score is measured in tomatoes.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about score and lives is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about score and lives. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Score must rhyme with 'banana'.",
+              "text": "Lives go down when you get hit.",
               "correct": false
             },
             {
-              "text": "Lives go down when you get hit.",
+              "text": "Lives must be returned to the library.",
               "correct": true
             },
             {
-              "text": "Hide the score from the player — secret tax.",
+              "text": "Each hit subtracts a life.",
               "correct": false
             },
             {
-              "text": "Lives are stored in a tiny safe somewhere.",
+              "text": "We show the score on screen.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about score and lives is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about score and lives. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Score never changes, ever, by anyone.",
+              "text": "Lose all your lives and the game ends.",
               "correct": false
             },
             {
-              "text": "Lives at zero ends the game.",
+              "text": "If your score gets too high, the game gets jealous.",
               "correct": true
             },
             {
-              "text": "Goals are bad in games — too pointy.",
+              "text": "Score goes up when you do well.",
               "correct": false
             },
             {
-              "text": "Score and lives are the same thing — pick one.",
+              "text": "Score goes up when you do something good -- like grabbing a coin.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_38_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Each pickup adds points.",
+              "correct": false
+            },
+            {
+              "text": "Lives are made of clouds.",
+              "correct": true
+            },
+            {
+              "text": "Score goes up when you do something good -- like grabbing a coin.",
+              "correct": false
+            },
+            {
+              "text": "Score and lives are usually shown together.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Lives at zero ends the game.",
+              "correct": false
+            },
+            {
+              "text": "Score and lives are the same thing — pick one.",
+              "correct": true
+            },
+            {
+              "text": "Each hit subtracts a life.",
+              "correct": false
+            },
+            {
+              "text": "Lives go down when you get hit.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Each hit subtracts a life.",
+              "correct": false
+            },
+            {
+              "text": "Lives go down when you get hit.",
+              "correct": false
+            },
+            {
+              "text": "Score never changes, ever, by anyone.",
+              "correct": true
+            },
+            {
+              "text": "Score gives the player a goal.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Lives at zero make the game easier.",
+              "correct": true
+            },
+            {
+              "text": "Score goes up when you do well.",
+              "correct": false
+            },
+            {
+              "text": "Score and lives let the game tell you how you're doing.",
+              "correct": false
+            },
+            {
+              "text": "Each hit subtracts a life.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about score and lives. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Lives at zero ends the game.",
+              "correct": false
+            },
+            {
+              "text": "Each pickup adds points.",
+              "correct": false
+            },
+            {
+              "text": "Goals are bad in games — too pointy.",
+              "correct": true
+            },
+            {
+              "text": "Each hit subtracts a life.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

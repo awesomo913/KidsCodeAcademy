@@ -69,11 +69,11 @@
           "prompt": "What is being specific?",
           "options": [
             {
-              "text": "Names are private and the helper is not allowed.",
+              "text": "The AI prefers vague questions because they're more relaxing.",
               "correct": false
             },
             {
-              "text": "Vague is great and feels nice and warm.",
+              "text": "Helpers love being confused — it is their hobby.",
               "correct": false
             },
             {
@@ -91,7 +91,7 @@
           "prompt": "Quick! Which one is TRUE about being specific?",
           "options": [
             {
-              "text": "Helpers only listen if you whisper to a sock.",
+              "text": "Numbers and names hurt the helper's eyes.",
               "correct": false
             },
             {
@@ -103,7 +103,7 @@
               "correct": false
             },
             {
-              "text": "Helpers love being confused — it is their hobby.",
+              "text": "Specific words make the AI cry tears of joy.",
               "correct": false
             }
           ],
@@ -113,11 +113,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about being specific.",
           "options": [
             {
-              "text": "Show the shape of what you want.",
+              "text": "Specific words give specific answers.",
               "correct": false
             },
             {
-              "text": "Specific is faster in the long run.",
+              "text": "Show the shape of what you want.",
               "correct": false
             },
             {
@@ -125,7 +125,7 @@
               "correct": true
             },
             {
-              "text": "Specific words give specific answers.",
+              "text": "Add an example whenever you can.",
               "correct": false
             }
           ],
@@ -135,11 +135,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about being specific. What should he say?",
           "options": [
             {
-              "text": "Specific words slow you down because each one is heavy.",
+              "text": "Specific words make the AI cry tears of joy.",
               "correct": false
             },
             {
-              "text": "Numbers and names hurt the helper's eyes.",
+              "text": "Specific words slow you down because each one is heavy.",
               "correct": false
             },
             {
@@ -147,7 +147,7 @@
               "correct": true
             },
             {
-              "text": "Spin in three circles before you ask anything.",
+              "text": "Vague is great and feels nice and warm.",
               "correct": false
             }
           ],
@@ -157,11 +157,11 @@
           "prompt": "Tell me — Which rule about being specific is a GOOD rule?",
           "options": [
             {
-              "text": "Specific words slow you down because each one is heavy.",
+              "text": "The AI prefers vague questions because they're more relaxing.",
               "correct": false
             },
             {
-              "text": "Names are private and the helper is not allowed.",
+              "text": "Numbers and names hurt the helper's eyes.",
               "correct": false
             },
             {
@@ -169,11 +169,116 @@
               "correct": true
             },
             {
-              "text": "Numbers and names hurt the helper's eyes.",
+              "text": "Specific words slow you down because each one is heavy.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about being specific, ___",
+          "options": [
+            {
+              "text": "Names are private and the helper is not allowed.",
+              "correct": false
+            },
+            {
+              "text": "Say exactly which thing you mean.",
+              "correct": true
+            },
+            {
+              "text": "Saying 'thingy' is the most powerful word in coding.",
+              "correct": false
+            },
+            {
+              "text": "Spin in three circles before you ask anything.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Show the shape of what you want.",
+              "correct": false
+            },
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": false
+            },
+            {
+              "text": "Numbers must always be spelled out as words and feelings.",
+              "correct": true
+            },
+            {
+              "text": "Say exactly which thing you mean.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with being specific?",
+          "options": [
+            {
+              "text": "Vague is great and feels nice and warm.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only listen if you whisper to a sock.",
+              "correct": false
+            },
+            {
+              "text": "Add an example whenever you can.",
+              "correct": true
+            },
+            {
+              "text": "Specific words slow you down because each one is heavy.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about being specific is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Specific words help the AI know exactly what you want.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": false
+            },
+            {
+              "text": "Say exactly which thing you mean.",
+              "correct": false
+            },
+            {
+              "text": "Saying 'thingy' is the most powerful word in coding.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about being specific. Which fact would help him?",
+          "options": [
+            {
+              "text": "Vague words like 'thing' or 'stuff' make the AI guess.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only listen if you whisper to a sock.",
+              "correct": false
+            },
+            {
+              "text": "Numbers must always be spelled out as words and feelings.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper's eyes.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -182,12 +287,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type US and press Send to keep going!",
-          "target_display": "US",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "us"
+            "yes"
           ],
-          "hint_wrong": "Type the word US (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -300,6 +405,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Which question is more specific?",
+          "options": [
+            {
+              "text": "Make a button that says 'Submit' in blue, 16 px text.",
+              "correct": true
+            },
+            {
+              "text": "Code? Maybe?",
+              "correct": false
+            },
+            {
+              "text": "Make a thing that does the thing a bit.",
+              "correct": false
+            },
+            {
+              "text": "Build whatever you want, surprise me.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Which question is more specific?",
+          "options": [
+            {
+              "text": "Code? Maybe?",
+              "correct": false
+            },
+            {
+              "text": "Make a button that says 'Submit' in blue, 16 px text.",
+              "correct": true
+            },
+            {
+              "text": "Build whatever you want, surprise me.",
+              "correct": false
+            },
+            {
+              "text": "Make a thing that does the thing a bit.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Which question is more specific?",
+          "options": [
+            {
+              "text": "Make a button that says 'Submit' in blue, 16 px text.",
+              "correct": true
+            },
+            {
+              "text": "Make a thing that does the thing a bit.",
+              "correct": false
+            },
+            {
+              "text": "Code? Maybe?",
+              "correct": false
+            },
+            {
+              "text": "Build whatever you want, surprise me.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Which question is more specific?",
+          "options": [
+            {
+              "text": "Make a button that says 'Submit' in blue, 16 px text.",
+              "correct": true
+            },
+            {
+              "text": "Code? Maybe?",
+              "correct": false
+            },
+            {
+              "text": "Build whatever you want, surprise me.",
+              "correct": false
+            },
+            {
+              "text": "Make a thing that does the thing a bit.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Which question is more specific?",
+          "options": [
+            {
+              "text": "Make a button that says 'Submit' in blue, 16 px text.",
+              "correct": true
+            },
+            {
+              "text": "Make a thing that does the thing a bit.",
+              "correct": false
+            },
+            {
+              "text": "Build whatever you want, surprise me.",
+              "correct": false
+            },
+            {
+              "text": "Code? Maybe?",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -308,12 +518,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -426,6 +636,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey says 'Make it nice.' Why is that hard for the helper?",
+          "options": [
+            {
+              "text": "'Nice' makes helpers cry purple tears.",
+              "correct": false
+            },
+            {
+              "text": "'Nice' could mean anything — colors, words, size, sound.",
+              "correct": true
+            },
+            {
+              "text": "'Nice' is too tasty to use in a sentence.",
+              "correct": false
+            },
+            {
+              "text": "'Nice' is illegal in five emoji.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey says 'Make it nice.' Why is that hard for the helper?",
+          "options": [
+            {
+              "text": "'Nice' could mean anything — colors, words, size, sound.",
+              "correct": true
+            },
+            {
+              "text": "'Nice' is illegal in five emoji.",
+              "correct": false
+            },
+            {
+              "text": "'Nice' is too tasty to use in a sentence.",
+              "correct": false
+            },
+            {
+              "text": "'Nice' makes helpers cry purple tears.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey says 'Make it nice.' Why is that hard for the helper?",
+          "options": [
+            {
+              "text": "'Nice' could mean anything — colors, words, size, sound.",
+              "correct": true
+            },
+            {
+              "text": "'Nice' is illegal in five emoji.",
+              "correct": false
+            },
+            {
+              "text": "'Nice' is too tasty to use in a sentence.",
+              "correct": false
+            },
+            {
+              "text": "'Nice' makes helpers cry purple tears.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey says 'Make it nice.' Why is that hard for the helper?",
+          "options": [
+            {
+              "text": "'Nice' could mean anything — colors, words, size, sound.",
+              "correct": true
+            },
+            {
+              "text": "'Nice' is too tasty to use in a sentence.",
+              "correct": false
+            },
+            {
+              "text": "'Nice' is illegal in five emoji.",
+              "correct": false
+            },
+            {
+              "text": "'Nice' makes helpers cry purple tears.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey says 'Make it nice.' Why is that hard for the helper?",
+          "options": [
+            {
+              "text": "'Nice' makes helpers cry purple tears.",
+              "correct": false
+            },
+            {
+              "text": "'Nice' could mean anything — colors, words, size, sound.",
+              "correct": true
+            },
+            {
+              "text": "'Nice' is illegal in five emoji.",
+              "correct": false
+            },
+            {
+              "text": "'Nice' is too tasty to use in a sentence.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -434,12 +749,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WE and press Send to keep going!",
-          "target_display": "WE",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "we"
+            "cool"
           ],
-          "hint_wrong": "Type the word WE (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -447,19 +762,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about being specific.",
           "options": [
             {
-              "text": "Specific is faster in the long run.",
+              "text": "Specific words give specific answers.",
               "correct": false
             },
             {
-              "text": "Say exactly which thing you mean.",
+              "text": "Saying 'a red ball' is clearer than saying 'an object'.",
               "correct": false
             },
             {
-              "text": "Spin in three circles before you ask anything.",
+              "text": "The AI prefers vague questions because they're more relaxing.",
               "correct": true
             },
             {
-              "text": "Vague words make helpers guess.",
+              "text": "Numbers and names help a lot.",
               "correct": false
             }
           ],
@@ -469,19 +784,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about being specific.",
           "options": [
             {
-              "text": "Be honest about what you do not know.",
+              "text": "Specific words help the AI know exactly what you want.",
               "correct": false
             },
             {
-              "text": "Specific words slow you down because each one is heavy.",
+              "text": "Specific words make the AI cry tears of joy.",
               "correct": true
             },
             {
-              "text": "Specific is faster in the long run.",
+              "text": "Specific words give specific answers.",
               "correct": false
             },
             {
-              "text": "Vague words make helpers guess.",
+              "text": "The more specific you are, the closer the AI gets to your idea.",
               "correct": false
             }
           ],
@@ -491,19 +806,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about being specific.",
           "options": [
             {
-              "text": "Vague words make helpers guess.",
+              "text": "Numbers and names help a lot.",
               "correct": false
             },
             {
-              "text": "Specific is faster in the long run.",
+              "text": "Saying 'a red ball' is clearer than saying 'an object'.",
               "correct": false
             },
             {
-              "text": "Helpers only listen if you whisper to a sock.",
+              "text": "If you're TOO specific, the AI gets jealous.",
               "correct": true
             },
             {
-              "text": "Numbers and names help a lot.",
+              "text": "Specific words give specific answers.",
               "correct": false
             }
           ],
@@ -513,11 +828,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about being specific.",
           "options": [
             {
+              "text": "Specific is faster in the long run.",
+              "correct": false
+            },
+            {
+              "text": "Specific words help the AI know exactly what you want.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great and feels nice and warm.",
+              "correct": true
+            },
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_19_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
               "text": "Add an example whenever you can.",
               "correct": false
             },
             {
+              "text": "Show the shape of what you want.",
+              "correct": false
+            },
+            {
+              "text": "Saying 'a red ball' is clearer than saying 'an object'.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused — it is their hobby.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_19_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "The more specific you are, the closer the AI gets to your idea.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names hurt the helper's eyes.",
+              "correct": true
+            },
+            {
+              "text": "Vague words like 'thing' or 'stuff' make the AI guess.",
+              "correct": false
+            },
+            {
               "text": "Specific is faster in the long run.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "Specific words help the AI know exactly what you want.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": false
+            },
+            {
+              "text": "Spin in three circles before you ask anything.",
+              "correct": true
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "Specific words give specific answers.",
+              "correct": false
+            },
+            {
+              "text": "Add an example whenever you can.",
+              "correct": false
+            },
+            {
+              "text": "The more specific you are, the closer the AI gets to your idea.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down because each one is heavy.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "Helpers only listen if you whisper to a sock.",
+              "correct": true
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": false
+            },
+            {
+              "text": "Say exactly which thing you mean.",
+              "correct": false
+            },
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about being specific.",
+          "options": [
+            {
+              "text": "Vague words like 'thing' or 'stuff' make the AI guess.",
               "correct": false
             },
             {
@@ -525,33 +964,14 @@
               "correct": true
             },
             {
-              "text": "Say exactly which thing you mean.",
+              "text": "Be honest about what you do not know.",
+              "correct": false
+            },
+            {
+              "text": "Saying 'a red ball' is clearer than saying 'an object'.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_19_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about being specific.",
-          "options": [
-            {
-              "text": "Specific is faster in the long run.",
-              "correct": false
-            },
-            {
-              "text": "Add an example whenever you can.",
-              "correct": false
-            },
-            {
-              "text": "Numbers and names help a lot.",
-              "correct": false
-            },
-            {
-              "text": "Names are private and the helper is not allowed.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_19_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -560,12 +980,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type IT and press Send to keep going!",
-          "target_display": "IT",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "it"
+            "next"
           ],
-          "hint_wrong": "Type the word IT (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -573,19 +993,19 @@
           "prompt": "Tell me — Which one is TRUE about being specific?",
           "options": [
             {
+              "text": "Numbers and names hurt the helper's eyes.",
+              "correct": false
+            },
+            {
+              "text": "Specific words make the AI cry tears of joy.",
+              "correct": false
+            },
+            {
               "text": "Vague is great and feels nice and warm.",
               "correct": false
             },
             {
-              "text": "Helpers love being confused — it is their hobby.",
-              "correct": false
-            },
-            {
-              "text": "Helpers only listen if you whisper to a sock.",
-              "correct": false
-            },
-            {
-              "text": "Be honest about what you do not know.",
+              "text": "Specific words give specific answers.",
               "correct": true
             }
           ],
@@ -603,11 +1023,11 @@
               "correct": false
             },
             {
-              "text": "Say exactly which thing you mean.",
+              "text": "Vague words make helpers guess.",
               "correct": true
             },
             {
-              "text": "Spin in three circles before you ask anything.",
+              "text": "Saying 'thingy' is the most powerful word in coding.",
               "correct": false
             }
           ],
@@ -617,27 +1037,121 @@
           "prompt": "Pop quiz! Which one is TRUE about being specific?",
           "options": [
             {
-              "text": "Specific is faster in the long run.",
+              "text": "Numbers and names help a lot.",
               "correct": true
             },
             {
-              "text": "Vague is great and feels nice and warm.",
-              "correct": false
-            },
-            {
-              "text": "Spin in three circles before you ask anything.",
-              "correct": false
-            },
-            {
               "text": "Specific words slow you down because each one is heavy.",
+              "correct": false
+            },
+            {
+              "text": "Names are private and the helper is not allowed.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused — it is their hobby.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "The AI prefers vague questions because they're more relaxing.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": true
+            },
+            {
+              "text": "Saying 'thingy' is the most powerful word in coding.",
+              "correct": false
+            },
+            {
+              "text": "Names are private and the helper is not allowed.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_19_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": true
+            },
+            {
+              "text": "Numbers must always be spelled out as words and feelings.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down because each one is heavy.",
+              "correct": false
+            },
+            {
+              "text": "If you're TOO specific, the AI gets jealous.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_19_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Say exactly which thing you mean.",
+              "correct": true
+            },
+            {
+              "text": "Numbers must always be spelled out as words and feelings.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great and feels nice and warm.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused — it is their hobby.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "Spin in three circles before you ask anything.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great and feels nice and warm.",
+              "correct": false
+            },
+            {
+              "text": "Specific is faster in the long run.",
+              "correct": true
+            },
+            {
+              "text": "Numbers and names hurt the helper's eyes.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about being specific?",
           "options": [
+            {
+              "text": "Vague is great and feels nice and warm.",
+              "correct": false
+            },
+            {
+              "text": "Numbers must always be spelled out as words and feelings.",
+              "correct": false
+            },
             {
               "text": "Specific words slow you down because each one is heavy.",
               "correct": false
@@ -645,39 +1159,50 @@
             {
               "text": "Add an example whenever you can.",
               "correct": true
-            },
-            {
-              "text": "Vague is great and feels nice and warm.",
-              "correct": false
-            },
-            {
-              "text": "Helpers only listen if you whisper to a sock.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_19_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about being specific?",
           "options": [
             {
-              "text": "Specific words give specific answers.",
+              "text": "If you're TOO specific, the AI gets jealous.",
+              "correct": false
+            },
+            {
+              "text": "Spin in three circles before you ask anything.",
+              "correct": false
+            },
+            {
+              "text": "Specific words slow you down because each one is heavy.",
+              "correct": false
+            },
+            {
+              "text": "Specific words help the AI know exactly what you want.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about being specific?",
+          "options": [
+            {
+              "text": "The AI prefers vague questions because they're more relaxing.",
+              "correct": false
+            },
+            {
+              "text": "Specific words make the AI cry tears of joy.",
+              "correct": false
             },
             {
               "text": "Helpers love being confused — it is their hobby.",
               "correct": false
             },
             {
-              "text": "Helpers only listen if you whisper to a sock.",
-              "correct": false
-            },
-            {
-              "text": "Spin in three circles before you ask anything.",
-              "correct": false
+              "text": "Vague words like 'thing' or 'stuff' make the AI guess.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_19_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -686,124 +1211,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "prompt": "Which prompt will get a better answer from the AI?",
           "options": [
             {
-              "text": "Add an example whenever you can.",
+              "text": "Just figure it out!",
               "correct": false
             },
             {
-              "text": "Specific is faster in the long run.",
+              "text": "You know what I want.",
               "correct": false
             },
             {
-              "text": "Helpers only listen if you whisper to a sock.",
+              "text": "Make a button that says 'Play' in big blue letters.",
               "correct": true
             },
             {
-              "text": "Specific words give specific answers.",
+              "text": "Make a thing that does the thing.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "prompt": "Quick! Which prompt will get a better answer from the AI?",
           "options": [
             {
-              "text": "Numbers and names help a lot.",
+              "text": "Just figure it out!",
               "correct": false
             },
             {
-              "text": "Add an example whenever you can.",
+              "text": "You know what I want.",
               "correct": false
             },
             {
-              "text": "Numbers must always be spelled out as words and feelings.",
+              "text": "Make a button that says 'Play' in big blue letters.",
               "correct": true
             },
             {
-              "text": "Vague words make helpers guess.",
+              "text": "Make a thing that does the thing.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Which prompt will get a better answer from the AI?",
           "options": [
             {
-              "text": "Show the shape of what you want.",
+              "text": "Make a thing that does the thing.",
               "correct": false
             },
             {
-              "text": "Names are private and the helper is not allowed.",
+              "text": "Make a button that says 'Play' in big blue letters.",
               "correct": true
             },
             {
-              "text": "Add an example whenever you can.",
+              "text": "Just figure it out!",
               "correct": false
             },
             {
-              "text": "Specific words give specific answers.",
+              "text": "You know what I want.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Which prompt will get a better answer from the AI?",
           "options": [
             {
-              "text": "Specific words give specific answers.",
+              "text": "You know what I want.",
               "correct": false
             },
             {
-              "text": "Vague words make helpers guess.",
+              "text": "Make a thing that does the thing.",
               "correct": false
             },
             {
-              "text": "Say exactly which thing you mean.",
+              "text": "Just figure it out!",
               "correct": false
             },
             {
-              "text": "Vague is great and feels nice and warm.",
+              "text": "Make a button that says 'Play' in big blue letters.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Which prompt will get a better answer from the AI?",
           "options": [
             {
-              "text": "Helpers love being confused — it is their hobby.",
+              "text": "You know what I want.",
+              "correct": false
+            },
+            {
+              "text": "Just figure it out!",
+              "correct": false
+            },
+            {
+              "text": "Make a thing that does the thing.",
+              "correct": false
+            },
+            {
+              "text": "Make a button that says 'Play' in big blue letters.",
               "correct": true
-            },
-            {
-              "text": "Specific is faster in the long run.",
-              "correct": false
-            },
-            {
-              "text": "Specific words give specific answers.",
-              "correct": false
-            },
-            {
-              "text": "Say exactly which thing you mean.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Which prompt will get a better answer from the AI?",
+          "options": [
+            {
+              "text": "Make a thing that does the thing.",
+              "correct": false
+            },
+            {
+              "text": "You know what I want.",
+              "correct": false
+            },
+            {
+              "text": "Make a button that says 'Play' in big blue letters.",
+              "correct": true
+            },
+            {
+              "text": "Just figure it out!",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Which prompt will get a better answer from the AI?",
+          "options": [
+            {
+              "text": "Make a thing that does the thing.",
+              "correct": false
+            },
+            {
+              "text": "Make a button that says 'Play' in big blue letters.",
+              "correct": true
+            },
+            {
+              "text": "Just figure it out!",
+              "correct": false
+            },
+            {
+              "text": "You know what I want.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Which prompt will get a better answer from the AI?",
+          "options": [
+            {
+              "text": "Just figure it out!",
+              "correct": false
+            },
+            {
+              "text": "You know what I want.",
+              "correct": false
+            },
+            {
+              "text": "Make a button that says 'Play' in big blue letters.",
+              "correct": true
+            },
+            {
+              "text": "Make a thing that does the thing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Which prompt will get a better answer from the AI?",
+          "options": [
+            {
+              "text": "You know what I want.",
+              "correct": false
+            },
+            {
+              "text": "Make a button that says 'Play' in big blue letters.",
+              "correct": true
+            },
+            {
+              "text": "Make a thing that does the thing.",
+              "correct": false
+            },
+            {
+              "text": "Just figure it out!",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Which prompt will get a better answer from the AI?",
+          "options": [
+            {
+              "text": "You know what I want.",
+              "correct": false
+            },
+            {
+              "text": "Make a button that says 'Play' in big blue letters.",
+              "correct": true
+            },
+            {
+              "text": "Just figure it out!",
+              "correct": false
+            },
+            {
+              "text": "Make a thing that does the thing.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -812,124 +1442,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "yes"
+            "play"
           ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about being specific is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about being specific. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Specific is faster in the long run.",
+              "text": "Numbers must always be spelled out as words and feelings.",
               "correct": true
             },
             {
-              "text": "Specific words slow you down because each one is heavy.",
+              "text": "Vague words make helpers guess.",
               "correct": false
             },
             {
-              "text": "Helpers only listen if you whisper to a sock.",
+              "text": "Specific words help the AI know exactly what you want.",
               "correct": false
             },
             {
-              "text": "Vague is great and feels nice and warm.",
+              "text": "The more specific you are, the closer the AI gets to your idea.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about being specific is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about being specific. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "Specific words give specific answers.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": false
+            },
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": false
+            },
+            {
               "text": "Names are private and the helper is not allowed.",
-              "correct": false
-            },
-            {
-              "text": "Numbers must always be spelled out as words and feelings.",
-              "correct": false
-            },
-            {
-              "text": "Numbers and names hurt the helper's eyes.",
-              "correct": false
-            },
-            {
-              "text": "Add an example whenever you can.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about being specific is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about being specific. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Helpers only listen if you whisper to a sock.",
+              "text": "Specific is faster in the long run.",
               "correct": false
             },
             {
-              "text": "Spin in three circles before you ask anything.",
+              "text": "The more specific you are, the closer the AI gets to your idea.",
               "correct": false
             },
             {
-              "text": "Specific words slow you down because each one is heavy.",
+              "text": "Vague words like 'thing' or 'stuff' make the AI guess.",
               "correct": false
             },
             {
-              "text": "Specific words give specific answers.",
+              "text": "Saying 'thingy' is the most powerful word in coding.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about being specific is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about being specific. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Names are private and the helper is not allowed.",
+              "text": "Vague words make helpers guess.",
               "correct": false
             },
             {
-              "text": "Vague words make helpers guess.",
+              "text": "The AI prefers vague questions because they're more relaxing.",
               "correct": true
             },
             {
-              "text": "Specific words slow you down because each one is heavy.",
+              "text": "Specific is faster in the long run.",
               "correct": false
             },
             {
-              "text": "Numbers must always be spelled out as words and feelings.",
+              "text": "Be honest about what you do not know.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about being specific is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about being specific. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Helpers love being confused — it is their hobby.",
+              "text": "Saying 'a red ball' is clearer than saying 'an object'.",
               "correct": false
             },
             {
-              "text": "Numbers and names help a lot.",
+              "text": "Specific words make the AI cry tears of joy.",
               "correct": true
             },
             {
-              "text": "Spin in three circles before you ask anything.",
+              "text": "Specific words give specific answers.",
               "correct": false
             },
             {
-              "text": "Vague is great and feels nice and warm.",
+              "text": "Specific words help the AI know exactly what you want.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Say exactly which thing you mean.",
+              "correct": false
+            },
+            {
+              "text": "If you're TOO specific, the AI gets jealous.",
+              "correct": true
+            },
+            {
+              "text": "Specific words help the AI know exactly what you want.",
+              "correct": false
+            },
+            {
+              "text": "Add an example whenever you can.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": false
+            },
+            {
+              "text": "Vague is great and feels nice and warm.",
+              "correct": true
+            },
+            {
+              "text": "Specific is faster in the long run.",
+              "correct": false
+            },
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Specific is faster in the long run.",
+              "correct": false
+            },
+            {
+              "text": "Vague words make helpers guess.",
+              "correct": false
+            },
+            {
+              "text": "Helpers love being confused — it is their hobby.",
+              "correct": true
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Numbers and names hurt the helper's eyes.",
+              "correct": true
+            },
+            {
+              "text": "Specific words give specific answers.",
+              "correct": false
+            },
+            {
+              "text": "The more specific you are, the closer the AI gets to your idea.",
+              "correct": false
+            },
+            {
+              "text": "Specific is faster in the long run.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about being specific. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": false
+            },
+            {
+              "text": "Say exactly which thing you mean.",
+              "correct": false
+            },
+            {
+              "text": "Spin in three circles before you ask anything.",
+              "correct": true
+            },
+            {
+              "text": "Specific is faster in the long run.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -938,28 +1673,28 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
           "targets": [
-            "fun"
+            "code"
           ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Fill in the blank: when we talk about being specific, ___",
+          "prompt": "Listen up — Which rule about being specific is a GOOD rule?",
           "options": [
+            {
+              "text": "Numbers must always be spelled out as words and feelings.",
+              "correct": false
+            },
             {
               "text": "Helpers love being confused — it is their hobby.",
               "correct": false
             },
             {
-              "text": "Numbers and names hurt the helper's eyes.",
-              "correct": false
-            },
-            {
-              "text": "Add an example whenever you can.",
+              "text": "Vague words like 'thing' or 'stuff' make the AI guess.",
               "correct": true
             },
             {
@@ -970,36 +1705,32 @@
           "_audio": "assets/audio/q/lesson_19_q8_v0.wav"
         },
         {
-          "prompt": "Quick! Fill in the blank: when we talk about being specific, ___",
+          "prompt": "Here's a thinker: Which rule about being specific is a GOOD rule?",
           "options": [
             {
-              "text": "Specific words slow you down because each one is heavy.",
+              "text": "The AI prefers vague questions because they're more relaxing.",
               "correct": false
             },
             {
-              "text": "Numbers must always be spelled out as words and feelings.",
+              "text": "Saying 'thingy' is the most powerful word in coding.",
               "correct": false
             },
             {
-              "text": "Specific words give specific answers.",
+              "text": "Saying 'a red ball' is clearer than saying 'an object'.",
               "correct": true
             },
             {
-              "text": "Helpers only listen if you whisper to a sock.",
+              "text": "Numbers and names hurt the helper's eyes.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q8_v1.wav"
         },
         {
-          "prompt": "Hey friend — Fill in the blank: when we talk about being specific, ___",
+          "prompt": "OK quick one: Which rule about being specific is a GOOD rule?",
           "options": [
             {
-              "text": "Helpers love being confused — it is their hobby.",
-              "correct": false
-            },
-            {
-              "text": "Vague is great and feels nice and warm.",
+              "text": "Specific words slow you down because each one is heavy.",
               "correct": false
             },
             {
@@ -1007,39 +1738,43 @@
               "correct": false
             },
             {
-              "text": "Vague words make helpers guess.",
+              "text": "Vague is great and feels nice and warm.",
+              "correct": false
+            },
+            {
+              "text": "The more specific you are, the closer the AI gets to your idea.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q8_v2.wav"
         },
         {
-          "prompt": "Bytey wonders: Fill in the blank: when we talk about being specific, ___",
+          "prompt": "Hmm... Which rule about being specific is a GOOD rule?",
           "options": [
             {
-              "text": "Vague is great and feels nice and warm.",
+              "text": "The AI prefers vague questions because they're more relaxing.",
               "correct": false
             },
             {
-              "text": "Numbers and names help a lot.",
+              "text": "Specific words give specific answers.",
               "correct": true
             },
             {
-              "text": "Numbers and names hurt the helper's eyes.",
+              "text": "Specific words make the AI cry tears of joy.",
               "correct": false
             },
             {
-              "text": "Numbers must always be spelled out as words and feelings.",
+              "text": "Spin in three circles before you ask anything.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q8_v3.wav"
         },
         {
-          "prompt": "Tell me — Fill in the blank: when we talk about being specific, ___",
+          "prompt": "Which rule about being specific is a GOOD rule?",
           "options": [
             {
-              "text": "Show the shape of what you want.",
+              "text": "Vague words make helpers guess.",
               "correct": true
             },
             {
@@ -1047,15 +1782,120 @@
               "correct": false
             },
             {
-              "text": "Numbers must always be spelled out as words and feelings.",
+              "text": "Spin in three circles before you ask anything.",
               "correct": false
             },
             {
-              "text": "Helpers love being confused — it is their hobby.",
+              "text": "Numbers and names hurt the helper's eyes.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q8_v4.wav"
+        },
+        {
+          "prompt": "Quick! Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "Numbers and names help a lot.",
+              "correct": true
+            },
+            {
+              "text": "If you're TOO specific, the AI gets jealous.",
+              "correct": false
+            },
+            {
+              "text": "The AI prefers vague questions because they're more relaxing.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only listen if you whisper to a sock.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "If you're TOO specific, the AI gets jealous.",
+              "correct": false
+            },
+            {
+              "text": "Specific words make the AI cry tears of joy.",
+              "correct": false
+            },
+            {
+              "text": "Show the shape of what you want.",
+              "correct": true
+            },
+            {
+              "text": "Numbers must always be spelled out as words and feelings.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "Be honest about what you do not know.",
+              "correct": true
+            },
+            {
+              "text": "If you're TOO specific, the AI gets jealous.",
+              "correct": false
+            },
+            {
+              "text": "Saying 'thingy' is the most powerful word in coding.",
+              "correct": false
+            },
+            {
+              "text": "The AI prefers vague questions because they're more relaxing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "Say exactly which thing you mean.",
+              "correct": true
+            },
+            {
+              "text": "Vague is great and feels nice and warm.",
+              "correct": false
+            },
+            {
+              "text": "The AI prefers vague questions because they're more relaxing.",
+              "correct": false
+            },
+            {
+              "text": "If you're TOO specific, the AI gets jealous.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which rule about being specific is a GOOD rule?",
+          "options": [
+            {
+              "text": "Saying 'thingy' is the most powerful word in coding.",
+              "correct": false
+            },
+            {
+              "text": "Specific words make the AI cry tears of joy.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only listen if you whisper to a sock.",
+              "correct": false
+            },
+            {
+              "text": "Specific is faster in the long run.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

@@ -49,14 +49,27 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "type-this-word",
+        "type": "click-the-thing",
         "payload": {
-          "prompt": "Type JOY and press Send to keep going!",
-          "target_display": "JOY",
-          "targets": [
-            "joy"
-          ],
-          "hint_wrong": "Type the word JOY (any case is fine)."
+          "prompt": "Which idea is the most useful?",
+          "choices": [
+            {
+              "label": "🎨 An app that paints my dog blue every Tuesday",
+              "right": false
+            },
+            {
+              "label": "📋 An app that helps Mom remember the grocery list",
+              "right": true
+            },
+            {
+              "label": "🧀 An app that names every cheese in my fridge",
+              "right": false
+            },
+            {
+              "label": "🎵 An app that makes a buzz noise nonstop",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -64,11 +77,11 @@
           "prompt": "What is what is a good idea?",
           "options": [
             {
-              "text": "Good ideas must include a goose.",
+              "text": "Bigger ideas are always better than small ones.",
               "correct": false
             },
             {
-              "text": "Good ideas solve nothing and live in jars.",
+              "text": "Foggy giant ideas are best — go huge.",
               "correct": false
             },
             {
@@ -86,7 +99,7 @@
           "prompt": "Quick! Which one is TRUE about what is a good idea?",
           "options": [
             {
-              "text": "Good ideas must be sung in soprano.",
+              "text": "A good idea helps no one — that's the rule.",
               "correct": false
             },
             {
@@ -98,7 +111,7 @@
               "correct": false
             },
             {
-              "text": "Foggy giant ideas are best — go huge.",
+              "text": "Good ideas come only at midnight.",
               "correct": false
             }
           ],
@@ -108,11 +121,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about what is a good idea.",
           "options": [
             {
-              "text": "Good ideas can be tested.",
+              "text": "A good idea solves a real problem.",
               "correct": false
             },
             {
-              "text": "Good ideas leave room to grow.",
+              "text": "Good ideas can be tested.",
               "correct": false
             },
             {
@@ -120,7 +133,7 @@
               "correct": true
             },
             {
-              "text": "A good idea solves a real problem.",
+              "text": "Good ideas often come from real life.",
               "correct": false
             }
           ],
@@ -130,11 +143,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about what is a good idea. What should he say?",
           "options": [
             {
-              "text": "Good ideas feel boring on purpose.",
+              "text": "Good ideas come only at midnight.",
               "correct": false
             },
             {
-              "text": "A good idea helps no one — that's the rule.",
+              "text": "Good ideas feel boring on purpose.",
               "correct": false
             },
             {
@@ -142,7 +155,7 @@
               "correct": true
             },
             {
-              "text": "You can't test a good idea — they're sacred.",
+              "text": "Good ideas solve nothing and live in jars.",
               "correct": false
             }
           ],
@@ -152,11 +165,11 @@
           "prompt": "Tell me — Which rule about what is a good idea is a GOOD rule?",
           "options": [
             {
-              "text": "Good ideas feel boring on purpose.",
+              "text": "Bigger ideas are always better than small ones.",
               "correct": false
             },
             {
-              "text": "Good ideas must include a goose.",
+              "text": "A good idea helps no one — that's the rule.",
               "correct": false
             },
             {
@@ -164,11 +177,116 @@
               "correct": true
             },
             {
-              "text": "A good idea helps no one — that's the rule.",
+              "text": "Good ideas feel boring on purpose.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_56_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about what is a good idea, ___",
+          "options": [
+            {
+              "text": "Good ideas must include a goose.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas can fit on a sticky note.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas must be approved by a committee.",
+              "correct": false
+            },
+            {
+              "text": "You can't test a good idea — they're sacred.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about what is a good idea. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Good ideas can be tested.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel exciting to try.",
+              "correct": false
+            },
+            {
+              "text": "Each idea has a curfew of 8 p.m.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas can fit on a sticky note.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with what is a good idea?",
+          "options": [
+            {
+              "text": "Good ideas solve nothing and live in jars.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas must be sung in soprano.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas often come from real life.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas feel boring on purpose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about what is a good idea is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "A good idea is fun, doable, and clear in one sentence.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas can be tested.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas can fit on a sticky note.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas must be approved by a committee.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about what is a good idea. Which fact would help him?",
+          "options": [
+            {
+              "text": "If you can't explain your idea quickly, it might be too big.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas must be sung in soprano.",
+              "correct": false
+            },
+            {
+              "text": "Each idea has a curfew of 8 p.m.",
+              "correct": false
+            },
+            {
+              "text": "A good idea helps no one — that's the rule.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -177,12 +295,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type RAD and press Send to keep going!",
-          "target_display": "RAD",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "rad"
+            "yes"
           ],
-          "hint_wrong": "Type the word RAD (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -295,6 +413,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_56_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Pick the better idea for a tiny app:",
+          "options": [
+            {
+              "text": "'A complete operating system that does everything.'",
+              "correct": false
+            },
+            {
+              "text": "'A thing.'",
+              "correct": false
+            },
+            {
+              "text": "'A button that picks a random snack from a list of favorites.'",
+              "correct": true
+            },
+            {
+              "text": "'Make the universe more pleasant.'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Pick the better idea for a tiny app:",
+          "options": [
+            {
+              "text": "'A complete operating system that does everything.'",
+              "correct": false
+            },
+            {
+              "text": "'Make the universe more pleasant.'",
+              "correct": false
+            },
+            {
+              "text": "'A button that picks a random snack from a list of favorites.'",
+              "correct": true
+            },
+            {
+              "text": "'A thing.'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Pick the better idea for a tiny app:",
+          "options": [
+            {
+              "text": "'A button that picks a random snack from a list of favorites.'",
+              "correct": true
+            },
+            {
+              "text": "'A complete operating system that does everything.'",
+              "correct": false
+            },
+            {
+              "text": "'A thing.'",
+              "correct": false
+            },
+            {
+              "text": "'Make the universe more pleasant.'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Pick the better idea for a tiny app:",
+          "options": [
+            {
+              "text": "'A button that picks a random snack from a list of favorites.'",
+              "correct": true
+            },
+            {
+              "text": "'Make the universe more pleasant.'",
+              "correct": false
+            },
+            {
+              "text": "'A complete operating system that does everything.'",
+              "correct": false
+            },
+            {
+              "text": "'A thing.'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Pick the better idea for a tiny app:",
+          "options": [
+            {
+              "text": "'Make the universe more pleasant.'",
+              "correct": false
+            },
+            {
+              "text": "'A thing.'",
+              "correct": false
+            },
+            {
+              "text": "'A complete operating system that does everything.'",
+              "correct": false
+            },
+            {
+              "text": "'A button that picks a random snack from a list of favorites.'",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -303,12 +526,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -421,6 +644,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_56_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why are small ideas often better starts?",
+          "options": [
+            {
+              "text": "They take up less shelf space.",
+              "correct": false
+            },
+            {
+              "text": "They can be built and tested fast — feedback is quick.",
+              "correct": true
+            },
+            {
+              "text": "Small ideas are required by law.",
+              "correct": false
+            },
+            {
+              "text": "Small ideas hum better.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why are small ideas often better starts?",
+          "options": [
+            {
+              "text": "Small ideas hum better.",
+              "correct": false
+            },
+            {
+              "text": "They can be built and tested fast — feedback is quick.",
+              "correct": true
+            },
+            {
+              "text": "They take up less shelf space.",
+              "correct": false
+            },
+            {
+              "text": "Small ideas are required by law.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why are small ideas often better starts?",
+          "options": [
+            {
+              "text": "Small ideas hum better.",
+              "correct": false
+            },
+            {
+              "text": "They take up less shelf space.",
+              "correct": false
+            },
+            {
+              "text": "Small ideas are required by law.",
+              "correct": false
+            },
+            {
+              "text": "They can be built and tested fast — feedback is quick.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why are small ideas often better starts?",
+          "options": [
+            {
+              "text": "Small ideas are required by law.",
+              "correct": false
+            },
+            {
+              "text": "They can be built and tested fast — feedback is quick.",
+              "correct": true
+            },
+            {
+              "text": "Small ideas hum better.",
+              "correct": false
+            },
+            {
+              "text": "They take up less shelf space.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why are small ideas often better starts?",
+          "options": [
+            {
+              "text": "They take up less shelf space.",
+              "correct": false
+            },
+            {
+              "text": "Small ideas hum better.",
+              "correct": false
+            },
+            {
+              "text": "They can be built and tested fast — feedback is quick.",
+              "correct": true
+            },
+            {
+              "text": "Small ideas are required by law.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -442,19 +770,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about what is a good idea.",
           "options": [
             {
-              "text": "Good ideas leave room to grow.",
+              "text": "A good idea solves a real problem.",
               "correct": false
             },
             {
-              "text": "Good ideas can fit on a sticky note.",
+              "text": "Pick ideas YOU would want to play -- that's the magic.",
               "correct": false
             },
             {
-              "text": "You can't test a good idea — they're sacred.",
+              "text": "Bigger ideas are always better than small ones.",
               "correct": true
             },
             {
-              "text": "Good ideas are clear and small.",
+              "text": "Good ideas help someone.",
               "correct": false
             }
           ],
@@ -464,19 +792,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about what is a good idea.",
           "options": [
             {
-              "text": "Good ideas feel exciting to try.",
+              "text": "A good idea is fun, doable, and clear in one sentence.",
               "correct": false
             },
             {
-              "text": "Good ideas feel boring on purpose.",
+              "text": "Good ideas come only at midnight.",
               "correct": true
             },
             {
-              "text": "Good ideas leave room to grow.",
+              "text": "A good idea solves a real problem.",
               "correct": false
             },
             {
-              "text": "Good ideas are clear and small.",
+              "text": "Good ideas often start small and grow.",
               "correct": false
             }
           ],
@@ -486,19 +814,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about what is a good idea.",
           "options": [
             {
-              "text": "Good ideas are clear and small.",
+              "text": "Good ideas help someone.",
               "correct": false
             },
             {
-              "text": "Good ideas leave room to grow.",
+              "text": "Pick ideas YOU would want to play -- that's the magic.",
               "correct": false
             },
             {
-              "text": "Good ideas must be sung in soprano.",
+              "text": "Ideas must be exactly 47 words long.",
               "correct": true
             },
             {
-              "text": "Good ideas help someone.",
+              "text": "A good idea solves a real problem.",
               "correct": false
             }
           ],
@@ -508,11 +836,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about what is a good idea.",
           "options": [
             {
+              "text": "Good ideas leave room to grow.",
+              "correct": false
+            },
+            {
+              "text": "A good idea is fun, doable, and clear in one sentence.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas solve nothing and live in jars.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas feel exciting to try.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_56_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
               "text": "Good ideas often come from real life.",
               "correct": false
             },
             {
+              "text": "Good ideas can be tested.",
+              "correct": false
+            },
+            {
+              "text": "Pick ideas YOU would want to play -- that's the magic.",
+              "correct": false
+            },
+            {
+              "text": "Foggy giant ideas are best — go huge.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_56_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "Good ideas often start small and grow.",
+              "correct": false
+            },
+            {
+              "text": "A good idea helps no one — that's the rule.",
+              "correct": true
+            },
+            {
+              "text": "If you can't explain your idea quickly, it might be too big.",
+              "correct": false
+            },
+            {
               "text": "Good ideas leave room to grow.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "A good idea is fun, doable, and clear in one sentence.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas can be tested.",
+              "correct": false
+            },
+            {
+              "text": "You can't test a good idea — they're sacred.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas help someone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "A good idea solves a real problem.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas often come from real life.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas often start small and grow.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel boring on purpose.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "Good ideas must be sung in soprano.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas help someone.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas can fit on a sticky note.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas are clear and small.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about what is a good idea.",
+          "options": [
+            {
+              "text": "If you can't explain your idea quickly, it might be too big.",
               "correct": false
             },
             {
@@ -520,33 +972,14 @@
               "correct": true
             },
             {
-              "text": "Good ideas can fit on a sticky note.",
+              "text": "Good ideas feel exciting to try.",
+              "correct": false
+            },
+            {
+              "text": "Pick ideas YOU would want to play -- that's the magic.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_56_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about what is a good idea.",
-          "options": [
-            {
-              "text": "Good ideas leave room to grow.",
-              "correct": false
-            },
-            {
-              "text": "Good ideas often come from real life.",
-              "correct": false
-            },
-            {
-              "text": "Good ideas help someone.",
-              "correct": false
-            },
-            {
-              "text": "Good ideas must include a goose.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_56_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -568,19 +1001,19 @@
           "prompt": "Tell me — Which one is TRUE about what is a good idea?",
           "options": [
             {
+              "text": "A good idea helps no one — that's the rule.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas come only at midnight.",
+              "correct": false
+            },
+            {
               "text": "Good ideas solve nothing and live in jars.",
               "correct": false
             },
             {
-              "text": "Foggy giant ideas are best — go huge.",
-              "correct": false
-            },
-            {
-              "text": "Good ideas must be sung in soprano.",
-              "correct": false
-            },
-            {
-              "text": "Good ideas feel exciting to try.",
+              "text": "A good idea solves a real problem.",
               "correct": true
             }
           ],
@@ -598,11 +1031,11 @@
               "correct": false
             },
             {
-              "text": "Good ideas can fit on a sticky note.",
+              "text": "Good ideas are clear and small.",
               "correct": true
             },
             {
-              "text": "You can't test a good idea — they're sacred.",
+              "text": "Good ideas must be approved by a committee.",
               "correct": false
             }
           ],
@@ -612,27 +1045,121 @@
           "prompt": "Pop quiz! Which one is TRUE about what is a good idea?",
           "options": [
             {
-              "text": "Good ideas leave room to grow.",
+              "text": "Good ideas help someone.",
               "correct": true
             },
             {
-              "text": "Good ideas solve nothing and live in jars.",
-              "correct": false
-            },
-            {
-              "text": "You can't test a good idea — they're sacred.",
-              "correct": false
-            },
-            {
               "text": "Good ideas feel boring on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas must include a goose.",
+              "correct": false
+            },
+            {
+              "text": "Foggy giant ideas are best — go huge.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_56_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "Bigger ideas are always better than small ones.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas can be tested.",
+              "correct": true
+            },
+            {
+              "text": "Good ideas must be approved by a committee.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas must include a goose.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_56_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "Good ideas feel exciting to try.",
+              "correct": true
+            },
+            {
+              "text": "Each idea has a curfew of 8 p.m.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel boring on purpose.",
+              "correct": false
+            },
+            {
+              "text": "Ideas must be exactly 47 words long.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_56_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "Good ideas can fit on a sticky note.",
+              "correct": true
+            },
+            {
+              "text": "Each idea has a curfew of 8 p.m.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas solve nothing and live in jars.",
+              "correct": false
+            },
+            {
+              "text": "Foggy giant ideas are best — go huge.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "You can't test a good idea — they're sacred.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas solve nothing and live in jars.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas leave room to grow.",
+              "correct": true
+            },
+            {
+              "text": "A good idea helps no one — that's the rule.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about what is a good idea?",
           "options": [
+            {
+              "text": "Good ideas solve nothing and live in jars.",
+              "correct": false
+            },
+            {
+              "text": "Each idea has a curfew of 8 p.m.",
+              "correct": false
+            },
             {
               "text": "Good ideas feel boring on purpose.",
               "correct": false
@@ -640,39 +1167,50 @@
             {
               "text": "Good ideas often come from real life.",
               "correct": true
-            },
-            {
-              "text": "Good ideas solve nothing and live in jars.",
-              "correct": false
-            },
-            {
-              "text": "Good ideas must be sung in soprano.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_56_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about what is a good idea?",
           "options": [
             {
-              "text": "A good idea solves a real problem.",
+              "text": "Ideas must be exactly 47 words long.",
+              "correct": false
+            },
+            {
+              "text": "You can't test a good idea — they're sacred.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas feel boring on purpose.",
+              "correct": false
+            },
+            {
+              "text": "A good idea is fun, doable, and clear in one sentence.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about what is a good idea?",
+          "options": [
+            {
+              "text": "Bigger ideas are always better than small ones.",
+              "correct": false
+            },
+            {
+              "text": "Good ideas come only at midnight.",
+              "correct": false
             },
             {
               "text": "Foggy giant ideas are best — go huge.",
               "correct": false
             },
             {
-              "text": "Good ideas must be sung in soprano.",
-              "correct": false
-            },
-            {
-              "text": "You can't test a good idea — they're sacred.",
-              "correct": false
+              "text": "If you can't explain your idea quickly, it might be too big.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_56_q5_v4.wav"
+          ]
         }
       ]
     }

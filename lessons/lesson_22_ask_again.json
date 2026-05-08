@@ -67,11 +67,11 @@
           "prompt": "What is ask again?",
           "options": [
             {
-              "text": "Asking twice costs $10 in invisible coins.",
+              "text": "You only get one ask per question, then it's over.",
               "correct": false
             },
             {
-              "text": "Asking again breaks the helper into bits.",
+              "text": "One try is the only try, no take-backs.",
               "correct": false
             },
             {
@@ -89,7 +89,7 @@
           "prompt": "Quick! Which one is TRUE about ask again?",
           "options": [
             {
-              "text": "Asking twice summons a sad pigeon.",
+              "text": "Different words always make it worse and crinkly.",
               "correct": false
             },
             {
@@ -101,7 +101,7 @@
               "correct": false
             },
             {
-              "text": "One try is the only try, no take-backs.",
+              "text": "Asking twice in a row breaks the computer.",
               "correct": false
             }
           ],
@@ -111,11 +111,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about ask again.",
           "options": [
             {
-              "text": "Two angles beat one.",
+              "text": "Trying a new question often helps.",
               "correct": false
             },
             {
-              "text": "More info usually means a better answer.",
+              "text": "Two angles beat one.",
               "correct": false
             },
             {
@@ -123,7 +123,7 @@
               "correct": true
             },
             {
-              "text": "Trying a new question often helps.",
+              "text": "Add an example on the second try.",
               "correct": false
             }
           ],
@@ -133,11 +133,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about ask again. What should he say?",
           "options": [
             {
-              "text": "Helpers cry when asked twice and need cookies.",
+              "text": "Asking twice in a row breaks the computer.",
               "correct": false
             },
             {
-              "text": "Different words always make it worse and crinkly.",
+              "text": "Helpers cry when asked twice and need cookies.",
               "correct": false
             },
             {
@@ -145,7 +145,7 @@
               "correct": true
             },
             {
-              "text": "Asking is rude and frowns at parents.",
+              "text": "Asking again breaks the helper into bits.",
               "correct": false
             }
           ],
@@ -155,11 +155,11 @@
           "prompt": "Tell me — Which rule about ask again is a GOOD rule?",
           "options": [
             {
-              "text": "Helpers cry when asked twice and need cookies.",
+              "text": "You only get one ask per question, then it's over.",
               "correct": false
             },
             {
-              "text": "Asking twice costs $10 in invisible coins.",
+              "text": "Different words always make it worse and crinkly.",
               "correct": false
             },
             {
@@ -167,11 +167,116 @@
               "correct": true
             },
             {
-              "text": "Different words always make it worse and crinkly.",
+              "text": "Helpers cry when asked twice and need cookies.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about ask again, ___",
+          "options": [
+            {
+              "text": "Asking twice costs $10 in invisible coins.",
+              "correct": false
+            },
+            {
+              "text": "If you don't get the answer, ask differently.",
+              "correct": true
+            },
+            {
+              "text": "Asking again hurts the AI's feelings.",
+              "correct": false
+            },
+            {
+              "text": "Asking is rude and frowns at parents.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Two angles beat one.",
+              "correct": false
+            },
+            {
+              "text": "Helpers do not mind being asked again.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only answer once per moon phase.",
+              "correct": true
+            },
+            {
+              "text": "If you don't get the answer, ask differently.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with ask again?",
+          "options": [
+            {
+              "text": "Asking again breaks the helper into bits.",
+              "correct": false
+            },
+            {
+              "text": "Asking twice summons a sad pigeon.",
+              "correct": false
+            },
+            {
+              "text": "Add an example on the second try.",
+              "correct": true
+            },
+            {
+              "text": "Helpers cry when asked twice and need cookies.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about ask again is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "If the answer isn't right, asking again with more detail often fixes it.",
+              "correct": false
+            },
+            {
+              "text": "Two angles beat one.",
+              "correct": false
+            },
+            {
+              "text": "If you don't get the answer, ask differently.",
+              "correct": false
+            },
+            {
+              "text": "Asking again hurts the AI's feelings.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about ask again. Which fact would help him?",
+          "options": [
+            {
+              "text": "It's totally OK to say 'try again, but make it shorter'.",
+              "correct": true
+            },
+            {
+              "text": "Asking twice summons a sad pigeon.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only answer once per moon phase.",
+              "correct": false
+            },
+            {
+              "text": "Different words always make it worse and crinkly.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -180,12 +285,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type NEW and press Send to keep going!",
-          "target_display": "NEW",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "new"
+            "yes"
           ],
-          "hint_wrong": "Type the word NEW (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -298,6 +403,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey asked 'make it cool' and got a weird answer. What now?",
+          "options": [
+            {
+              "text": "Ask again with details: what 'cool' means here.",
+              "correct": true
+            },
+            {
+              "text": "Yell 'cool' at the helper for an hour.",
+              "correct": false
+            },
+            {
+              "text": "Replace the keyboard with a banana.",
+              "correct": false
+            },
+            {
+              "text": "Stop and never code again.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey asked 'make it cool' and got a weird answer. What now?",
+          "options": [
+            {
+              "text": "Replace the keyboard with a banana.",
+              "correct": false
+            },
+            {
+              "text": "Yell 'cool' at the helper for an hour.",
+              "correct": false
+            },
+            {
+              "text": "Stop and never code again.",
+              "correct": false
+            },
+            {
+              "text": "Ask again with details: what 'cool' means here.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey asked 'make it cool' and got a weird answer. What now?",
+          "options": [
+            {
+              "text": "Stop and never code again.",
+              "correct": false
+            },
+            {
+              "text": "Yell 'cool' at the helper for an hour.",
+              "correct": false
+            },
+            {
+              "text": "Ask again with details: what 'cool' means here.",
+              "correct": true
+            },
+            {
+              "text": "Replace the keyboard with a banana.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey asked 'make it cool' and got a weird answer. What now?",
+          "options": [
+            {
+              "text": "Stop and never code again.",
+              "correct": false
+            },
+            {
+              "text": "Replace the keyboard with a banana.",
+              "correct": false
+            },
+            {
+              "text": "Ask again with details: what 'cool' means here.",
+              "correct": true
+            },
+            {
+              "text": "Yell 'cool' at the helper for an hour.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey asked 'make it cool' and got a weird answer. What now?",
+          "options": [
+            {
+              "text": "Ask again with details: what 'cool' means here.",
+              "correct": true
+            },
+            {
+              "text": "Stop and never code again.",
+              "correct": false
+            },
+            {
+              "text": "Yell 'cool' at the helper for an hour.",
+              "correct": false
+            },
+            {
+              "text": "Replace the keyboard with a banana.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -306,12 +516,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -424,6 +634,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Asking again is best when…",
+          "options": [
+            {
+              "text": "You add new info or try a clearer angle.",
+              "correct": true
+            },
+            {
+              "text": "You repeat the same words, just louder.",
+              "correct": false
+            },
+            {
+              "text": "You bring a tambourine.",
+              "correct": false
+            },
+            {
+              "text": "You wait three days first.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Asking again is best when…",
+          "options": [
+            {
+              "text": "You wait three days first.",
+              "correct": false
+            },
+            {
+              "text": "You add new info or try a clearer angle.",
+              "correct": true
+            },
+            {
+              "text": "You repeat the same words, just louder.",
+              "correct": false
+            },
+            {
+              "text": "You bring a tambourine.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Asking again is best when…",
+          "options": [
+            {
+              "text": "You add new info or try a clearer angle.",
+              "correct": true
+            },
+            {
+              "text": "You repeat the same words, just louder.",
+              "correct": false
+            },
+            {
+              "text": "You wait three days first.",
+              "correct": false
+            },
+            {
+              "text": "You bring a tambourine.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Asking again is best when…",
+          "options": [
+            {
+              "text": "You add new info or try a clearer angle.",
+              "correct": true
+            },
+            {
+              "text": "You repeat the same words, just louder.",
+              "correct": false
+            },
+            {
+              "text": "You wait three days first.",
+              "correct": false
+            },
+            {
+              "text": "You bring a tambourine.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Asking again is best when…",
+          "options": [
+            {
+              "text": "You repeat the same words, just louder.",
+              "correct": false
+            },
+            {
+              "text": "You add new info or try a clearer angle.",
+              "correct": true
+            },
+            {
+              "text": "You bring a tambourine.",
+              "correct": false
+            },
+            {
+              "text": "You wait three days first.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -432,12 +747,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type USE and press Send to keep going!",
-          "target_display": "USE",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "use"
+            "cool"
           ],
-          "hint_wrong": "Type the word USE (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -445,19 +760,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about ask again.",
           "options": [
             {
-              "text": "More info usually means a better answer.",
+              "text": "Trying a new question often helps.",
               "correct": false
             },
             {
-              "text": "If you don't get the answer, ask differently.",
+              "text": "Each ask-again teaches the AI more about what you really want.",
               "correct": false
             },
             {
-              "text": "Asking is rude and frowns at parents.",
+              "text": "You only get one ask per question, then it's over.",
               "correct": true
             },
             {
-              "text": "Different words can unlock the answer.",
+              "text": "Asking again is not giving up.",
               "correct": false
             }
           ],
@@ -467,19 +782,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about ask again.",
           "options": [
             {
-              "text": "Helpers do not mind being asked again.",
+              "text": "If the answer isn't right, asking again with more detail often fixes it.",
               "correct": false
             },
             {
-              "text": "Helpers cry when asked twice and need cookies.",
+              "text": "Asking twice in a row breaks the computer.",
               "correct": true
             },
             {
-              "text": "More info usually means a better answer.",
+              "text": "Trying a new question often helps.",
               "correct": false
             },
             {
-              "text": "Different words can unlock the answer.",
+              "text": "Don't be afraid to ask 5, 10, even 20 times -- coders do this!",
               "correct": false
             }
           ],
@@ -489,19 +804,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about ask again.",
           "options": [
             {
-              "text": "Different words can unlock the answer.",
+              "text": "Asking again is not giving up.",
               "correct": false
             },
             {
-              "text": "More info usually means a better answer.",
+              "text": "Each ask-again teaches the AI more about what you really want.",
               "correct": false
             },
             {
-              "text": "Asking twice summons a sad pigeon.",
+              "text": "If you ask too many times, the AI logs out forever.",
               "correct": true
             },
             {
-              "text": "Asking again is not giving up.",
+              "text": "Trying a new question often helps.",
               "correct": false
             }
           ],
@@ -511,11 +826,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about ask again.",
           "options": [
             {
+              "text": "More info usually means a better answer.",
+              "correct": false
+            },
+            {
+              "text": "If the answer isn't right, asking again with more detail often fixes it.",
+              "correct": false
+            },
+            {
+              "text": "Asking again breaks the helper into bits.",
+              "correct": true
+            },
+            {
+              "text": "Helpers do not mind being asked again.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_22_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about ask again.",
+          "options": [
+            {
               "text": "Add an example on the second try.",
               "correct": false
             },
             {
+              "text": "Two angles beat one.",
+              "correct": false
+            },
+            {
+              "text": "Each ask-again teaches the AI more about what you really want.",
+              "correct": false
+            },
+            {
+              "text": "One try is the only try, no take-backs.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_22_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about ask again.",
+          "options": [
+            {
+              "text": "Don't be afraid to ask 5, 10, even 20 times -- coders do this!",
+              "correct": false
+            },
+            {
+              "text": "Different words always make it worse and crinkly.",
+              "correct": true
+            },
+            {
+              "text": "It's totally OK to say 'try again, but make it shorter'.",
+              "correct": false
+            },
+            {
               "text": "More info usually means a better answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about ask again.",
+          "options": [
+            {
+              "text": "If the answer isn't right, asking again with more detail often fixes it.",
+              "correct": false
+            },
+            {
+              "text": "Two angles beat one.",
+              "correct": false
+            },
+            {
+              "text": "Asking is rude and frowns at parents.",
+              "correct": true
+            },
+            {
+              "text": "Asking again is not giving up.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about ask again.",
+          "options": [
+            {
+              "text": "Trying a new question often helps.",
+              "correct": false
+            },
+            {
+              "text": "Add an example on the second try.",
+              "correct": false
+            },
+            {
+              "text": "Don't be afraid to ask 5, 10, even 20 times -- coders do this!",
+              "correct": false
+            },
+            {
+              "text": "Helpers cry when asked twice and need cookies.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about ask again.",
+          "options": [
+            {
+              "text": "Asking twice summons a sad pigeon.",
+              "correct": true
+            },
+            {
+              "text": "Asking again is not giving up.",
+              "correct": false
+            },
+            {
+              "text": "If you don't get the answer, ask differently.",
+              "correct": false
+            },
+            {
+              "text": "Different words can unlock the answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about ask again.",
+          "options": [
+            {
+              "text": "It's totally OK to say 'try again, but make it shorter'.",
               "correct": false
             },
             {
@@ -523,33 +962,14 @@
               "correct": true
             },
             {
-              "text": "If you don't get the answer, ask differently.",
+              "text": "Helpers do not mind being asked again.",
+              "correct": false
+            },
+            {
+              "text": "Each ask-again teaches the AI more about what you really want.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_22_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about ask again.",
-          "options": [
-            {
-              "text": "More info usually means a better answer.",
-              "correct": false
-            },
-            {
-              "text": "Add an example on the second try.",
-              "correct": false
-            },
-            {
-              "text": "Asking again is not giving up.",
-              "correct": false
-            },
-            {
-              "text": "Asking twice costs $10 in invisible coins.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_22_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -558,12 +978,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GET and press Send to keep going!",
-          "target_display": "GET",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "get"
+            "next"
           ],
-          "hint_wrong": "Type the word GET (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -571,19 +991,19 @@
           "prompt": "Tell me — Which one is TRUE about ask again?",
           "options": [
             {
+              "text": "Different words always make it worse and crinkly.",
+              "correct": false
+            },
+            {
+              "text": "Asking twice in a row breaks the computer.",
+              "correct": false
+            },
+            {
               "text": "Asking again breaks the helper into bits.",
               "correct": false
             },
             {
-              "text": "One try is the only try, no take-backs.",
-              "correct": false
-            },
-            {
-              "text": "Asking twice summons a sad pigeon.",
-              "correct": false
-            },
-            {
-              "text": "Helpers do not mind being asked again.",
+              "text": "Trying a new question often helps.",
               "correct": true
             }
           ],
@@ -601,11 +1021,11 @@
               "correct": false
             },
             {
-              "text": "If you don't get the answer, ask differently.",
+              "text": "Different words can unlock the answer.",
               "correct": true
             },
             {
-              "text": "Asking is rude and frowns at parents.",
+              "text": "Asking again hurts the AI's feelings.",
               "correct": false
             }
           ],
@@ -615,27 +1035,121 @@
           "prompt": "Pop quiz! Which one is TRUE about ask again?",
           "options": [
             {
-              "text": "More info usually means a better answer.",
+              "text": "Asking again is not giving up.",
               "correct": true
             },
             {
-              "text": "Asking again breaks the helper into bits.",
-              "correct": false
-            },
-            {
-              "text": "Asking is rude and frowns at parents.",
-              "correct": false
-            },
-            {
               "text": "Helpers cry when asked twice and need cookies.",
+              "correct": false
+            },
+            {
+              "text": "Asking twice costs $10 in invisible coins.",
+              "correct": false
+            },
+            {
+              "text": "One try is the only try, no take-backs.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about ask again?",
+          "options": [
+            {
+              "text": "You only get one ask per question, then it's over.",
+              "correct": false
+            },
+            {
+              "text": "Two angles beat one.",
+              "correct": true
+            },
+            {
+              "text": "Asking again hurts the AI's feelings.",
+              "correct": false
+            },
+            {
+              "text": "Asking twice costs $10 in invisible coins.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_22_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about ask again?",
+          "options": [
+            {
+              "text": "Helpers do not mind being asked again.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only answer once per moon phase.",
+              "correct": false
+            },
+            {
+              "text": "Helpers cry when asked twice and need cookies.",
+              "correct": false
+            },
+            {
+              "text": "If you ask too many times, the AI logs out forever.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_22_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about ask again?",
+          "options": [
+            {
+              "text": "If you don't get the answer, ask differently.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only answer once per moon phase.",
+              "correct": false
+            },
+            {
+              "text": "Asking again breaks the helper into bits.",
+              "correct": false
+            },
+            {
+              "text": "One try is the only try, no take-backs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about ask again?",
+          "options": [
+            {
+              "text": "Asking is rude and frowns at parents.",
+              "correct": false
+            },
+            {
+              "text": "Asking again breaks the helper into bits.",
+              "correct": false
+            },
+            {
+              "text": "More info usually means a better answer.",
+              "correct": true
+            },
+            {
+              "text": "Different words always make it worse and crinkly.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about ask again?",
           "options": [
+            {
+              "text": "Asking again breaks the helper into bits.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only answer once per moon phase.",
+              "correct": false
+            },
             {
               "text": "Helpers cry when asked twice and need cookies.",
               "correct": false
@@ -643,39 +1157,50 @@
             {
               "text": "Add an example on the second try.",
               "correct": true
-            },
-            {
-              "text": "Asking again breaks the helper into bits.",
-              "correct": false
-            },
-            {
-              "text": "Asking twice summons a sad pigeon.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_22_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about ask again?",
           "options": [
             {
-              "text": "Trying a new question often helps.",
+              "text": "If you ask too many times, the AI logs out forever.",
+              "correct": false
+            },
+            {
+              "text": "Asking is rude and frowns at parents.",
+              "correct": false
+            },
+            {
+              "text": "Helpers cry when asked twice and need cookies.",
+              "correct": false
+            },
+            {
+              "text": "If the answer isn't right, asking again with more detail often fixes it.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about ask again?",
+          "options": [
+            {
+              "text": "You only get one ask per question, then it's over.",
+              "correct": false
+            },
+            {
+              "text": "Asking twice in a row breaks the computer.",
+              "correct": false
             },
             {
               "text": "One try is the only try, no take-backs.",
               "correct": false
             },
             {
-              "text": "Asking twice summons a sad pigeon.",
-              "correct": false
-            },
-            {
-              "text": "Asking is rude and frowns at parents.",
-              "correct": false
+              "text": "It's totally OK to say 'try again, but make it shorter'.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_22_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -684,124 +1209,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "prompt": "The AI's first answer is too long. What do you do?",
           "options": [
             {
-              "text": "Add an example on the second try.",
+              "text": "Print it out and hide it.",
               "correct": false
             },
             {
-              "text": "More info usually means a better answer.",
-              "correct": false
-            },
-            {
-              "text": "Asking twice summons a sad pigeon.",
+              "text": "Ask again: 'shorter, please -- just 3 sentences'.",
               "correct": true
             },
             {
-              "text": "Trying a new question often helps.",
+              "text": "Tell the AI it failed forever.",
+              "correct": false
+            },
+            {
+              "text": "Give up on the topic forever.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "prompt": "Quick! The AI's first answer is too long. What do you do?",
           "options": [
             {
-              "text": "Asking again is not giving up.",
-              "correct": false
-            },
-            {
-              "text": "Add an example on the second try.",
-              "correct": false
-            },
-            {
-              "text": "Helpers only answer once per moon phase.",
+              "text": "Ask again: 'shorter, please -- just 3 sentences'.",
               "correct": true
             },
             {
-              "text": "Different words can unlock the answer.",
+              "text": "Tell the AI it failed forever.",
+              "correct": false
+            },
+            {
+              "text": "Give up on the topic forever.",
+              "correct": false
+            },
+            {
+              "text": "Print it out and hide it.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — The AI's first answer is too long. What do you do?",
           "options": [
             {
-              "text": "Two angles beat one.",
+              "text": "Print it out and hide it.",
               "correct": false
             },
             {
-              "text": "Asking twice costs $10 in invisible coins.",
+              "text": "Tell the AI it failed forever.",
+              "correct": false
+            },
+            {
+              "text": "Give up on the topic forever.",
+              "correct": false
+            },
+            {
+              "text": "Ask again: 'shorter, please -- just 3 sentences'.",
               "correct": true
-            },
-            {
-              "text": "Add an example on the second try.",
-              "correct": false
-            },
-            {
-              "text": "Trying a new question often helps.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: The AI's first answer is too long. What do you do?",
           "options": [
             {
-              "text": "Trying a new question often helps.",
+              "text": "Give up on the topic forever.",
               "correct": false
             },
             {
-              "text": "Different words can unlock the answer.",
+              "text": "Print it out and hide it.",
               "correct": false
             },
             {
-              "text": "If you don't get the answer, ask differently.",
-              "correct": false
-            },
-            {
-              "text": "Asking again breaks the helper into bits.",
+              "text": "Ask again: 'shorter, please -- just 3 sentences'.",
               "correct": true
+            },
+            {
+              "text": "Tell the AI it failed forever.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "prompt": "Tell me — The AI's first answer is too long. What do you do?",
           "options": [
             {
-              "text": "One try is the only try, no take-backs.",
+              "text": "Ask again: 'shorter, please -- just 3 sentences'.",
               "correct": true
             },
             {
-              "text": "More info usually means a better answer.",
+              "text": "Give up on the topic forever.",
               "correct": false
             },
             {
-              "text": "Trying a new question often helps.",
+              "text": "Print it out and hide it.",
               "correct": false
             },
             {
-              "text": "If you don't get the answer, ask differently.",
+              "text": "Tell the AI it failed forever.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — The AI's first answer is too long. What do you do?",
+          "options": [
+            {
+              "text": "Ask again: 'shorter, please -- just 3 sentences'.",
+              "correct": true
+            },
+            {
+              "text": "Give up on the topic forever.",
+              "correct": false
+            },
+            {
+              "text": "Tell the AI it failed forever.",
+              "correct": false
+            },
+            {
+              "text": "Print it out and hide it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! The AI's first answer is too long. What do you do?",
+          "options": [
+            {
+              "text": "Print it out and hide it.",
+              "correct": false
+            },
+            {
+              "text": "Tell the AI it failed forever.",
+              "correct": false
+            },
+            {
+              "text": "Ask again: 'shorter, please -- just 3 sentences'.",
+              "correct": true
+            },
+            {
+              "text": "Give up on the topic forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — The AI's first answer is too long. What do you do?",
+          "options": [
+            {
+              "text": "Ask again: 'shorter, please -- just 3 sentences'.",
+              "correct": true
+            },
+            {
+              "text": "Print it out and hide it.",
+              "correct": false
+            },
+            {
+              "text": "Give up on the topic forever.",
+              "correct": false
+            },
+            {
+              "text": "Tell the AI it failed forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: The AI's first answer is too long. What do you do?",
+          "options": [
+            {
+              "text": "Tell the AI it failed forever.",
+              "correct": false
+            },
+            {
+              "text": "Give up on the topic forever.",
+              "correct": false
+            },
+            {
+              "text": "Ask again: 'shorter, please -- just 3 sentences'.",
+              "correct": true
+            },
+            {
+              "text": "Print it out and hide it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: The AI's first answer is too long. What do you do?",
+          "options": [
+            {
+              "text": "Tell the AI it failed forever.",
+              "correct": false
+            },
+            {
+              "text": "Print it out and hide it.",
+              "correct": false
+            },
+            {
+              "text": "Give up on the topic forever.",
+              "correct": false
+            },
+            {
+              "text": "Ask again: 'shorter, please -- just 3 sentences'.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -810,124 +1440,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PUT and press Send to keep going!",
-          "target_display": "PUT",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "put"
+            "play"
           ],
-          "hint_wrong": "Type the word PUT (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about ask again is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about ask again. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "More info usually means a better answer.",
+              "text": "Helpers only answer once per moon phase.",
               "correct": true
             },
             {
-              "text": "Helpers cry when asked twice and need cookies.",
+              "text": "Different words can unlock the answer.",
               "correct": false
             },
             {
-              "text": "Asking twice summons a sad pigeon.",
+              "text": "If the answer isn't right, asking again with more detail often fixes it.",
               "correct": false
             },
             {
-              "text": "Asking again breaks the helper into bits.",
+              "text": "Don't be afraid to ask 5, 10, even 20 times -- coders do this!",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about ask again is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about ask again. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "Trying a new question often helps.",
+              "correct": false
+            },
+            {
+              "text": "Two angles beat one.",
+              "correct": false
+            },
+            {
+              "text": "Asking again is not giving up.",
+              "correct": false
+            },
+            {
               "text": "Asking twice costs $10 in invisible coins.",
-              "correct": false
-            },
-            {
-              "text": "Helpers only answer once per moon phase.",
-              "correct": false
-            },
-            {
-              "text": "Different words always make it worse and crinkly.",
-              "correct": false
-            },
-            {
-              "text": "Add an example on the second try.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about ask again is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about ask again. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Asking twice summons a sad pigeon.",
+              "text": "More info usually means a better answer.",
               "correct": false
             },
             {
-              "text": "Asking is rude and frowns at parents.",
+              "text": "Don't be afraid to ask 5, 10, even 20 times -- coders do this!",
               "correct": false
             },
             {
-              "text": "Helpers cry when asked twice and need cookies.",
+              "text": "It's totally OK to say 'try again, but make it shorter'.",
               "correct": false
             },
             {
-              "text": "Trying a new question often helps.",
+              "text": "Asking again hurts the AI's feelings.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about ask again is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about ask again. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Asking twice costs $10 in invisible coins.",
+              "text": "Different words can unlock the answer.",
               "correct": false
             },
             {
-              "text": "Different words can unlock the answer.",
+              "text": "You only get one ask per question, then it's over.",
               "correct": true
             },
             {
-              "text": "Helpers cry when asked twice and need cookies.",
+              "text": "More info usually means a better answer.",
               "correct": false
             },
             {
-              "text": "Helpers only answer once per moon phase.",
+              "text": "Helpers do not mind being asked again.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about ask again is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about ask again. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "One try is the only try, no take-backs.",
+              "text": "Each ask-again teaches the AI more about what you really want.",
               "correct": false
             },
             {
-              "text": "Asking again is not giving up.",
+              "text": "Asking twice in a row breaks the computer.",
               "correct": true
             },
             {
-              "text": "Asking is rude and frowns at parents.",
+              "text": "Trying a new question often helps.",
               "correct": false
             },
             {
-              "text": "Asking again breaks the helper into bits.",
+              "text": "If the answer isn't right, asking again with more detail often fixes it.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_22_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "If you don't get the answer, ask differently.",
+              "correct": false
+            },
+            {
+              "text": "If you ask too many times, the AI logs out forever.",
+              "correct": true
+            },
+            {
+              "text": "If the answer isn't right, asking again with more detail often fixes it.",
+              "correct": false
+            },
+            {
+              "text": "Add an example on the second try.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Asking again is not giving up.",
+              "correct": false
+            },
+            {
+              "text": "Asking again breaks the helper into bits.",
+              "correct": true
+            },
+            {
+              "text": "More info usually means a better answer.",
+              "correct": false
+            },
+            {
+              "text": "Different words can unlock the answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "More info usually means a better answer.",
+              "correct": false
+            },
+            {
+              "text": "Different words can unlock the answer.",
+              "correct": false
+            },
+            {
+              "text": "One try is the only try, no take-backs.",
+              "correct": true
+            },
+            {
+              "text": "Two angles beat one.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Different words always make it worse and crinkly.",
+              "correct": true
+            },
+            {
+              "text": "Trying a new question often helps.",
+              "correct": false
+            },
+            {
+              "text": "Don't be afraid to ask 5, 10, even 20 times -- coders do this!",
+              "correct": false
+            },
+            {
+              "text": "More info usually means a better answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about ask again. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Asking again is not giving up.",
+              "correct": false
+            },
+            {
+              "text": "If you don't get the answer, ask differently.",
+              "correct": false
+            },
+            {
+              "text": "Asking is rude and frowns at parents.",
+              "correct": true
+            },
+            {
+              "text": "More info usually means a better answer.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

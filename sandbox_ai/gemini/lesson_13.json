@@ -105,8 +105,51 @@
       "branches": { "Haha!": "t5" }
     },
     "t5": {
-      "bot_lines": ["You just searched the web with an AI!", "That's how I work — I find facts in seconds. Pretty cool, right?"],
-      "side_effect": { "action": "show_thinking", "steps": ["You asked", "I searched", "Here are facts!"], "duration_ms": 1800 }
+      "bot_lines": ["You just searched the web with an AI!", "Want to ask me about anything else? Just type a topic — kitten, dinosaur, planets, robot, stars... or 'done' when you're finished!"],
+      "side_effect": { "action": "show_thinking", "steps": ["You asked", "I searched", "Here are facts!"], "duration_ms": 1800 },
+      "keywords": ["kitten", "cat", "dinosaur", "trex", "rex", "solar", "planet", "planets", "space", "robot", "star", "stars", "night", "done", "no", "thanks", "bye"],
+      "branches": {
+        "kitten": "t6_kitten", "cat": "t6_kitten",
+        "dinosaur": "t6_dino", "trex": "t6_dino", "rex": "t6_dino",
+        "solar": "t6_planets", "planet": "t6_planets", "planets": "t6_planets", "space": "t6_planets",
+        "robot": "t6_robot",
+        "star": "t6_stars", "stars": "t6_stars", "night": "t6_stars",
+        "done": "t6_done", "no": "t6_done", "thanks": "t6_done", "bye": "t6_done"
+      },
+      "fallback_turn": "t5"
+    },
+    "t6_kitten": {
+      "bot_lines": ["I see a fluffy kitten with whiskers!", "Cats nap up to 16 hours a day."],
+      "side_effect": { "action": "show_picture", "art_id": "kitten", "caption": "a kitten" },
+      "options": ["Ask another!", "I'm all done"],
+      "branches": { "Ask another!": "t5", "I'm all done": "t6_done" }
+    },
+    "t6_dino": {
+      "bot_lines": ["T-Rex lived about 65 million years ago.", "It had teeth as long as bananas!"],
+      "side_effect": { "action": "show_picture", "art_id": "dinosaur", "caption": "Tyrannosaurus Rex" },
+      "options": ["Ask another!", "I'm all done"],
+      "branches": { "Ask another!": "t5", "I'm all done": "t6_done" }
+    },
+    "t6_planets": {
+      "bot_lines": ["There are 8 planets around our Sun.", "Earth is the third one — and the only one we KNOW has life!"],
+      "side_effect": { "action": "show_picture", "art_id": "solar_system", "caption": "the solar system" },
+      "options": ["Ask another!", "I'm all done"],
+      "branches": { "Ask another!": "t5", "I'm all done": "t6_done" }
+    },
+    "t6_robot": {
+      "bot_lines": ["Here is a friendly robot!", "Robots follow rules they were taught — that's how they 'think'."],
+      "side_effect": { "action": "show_picture", "art_id": "robot", "caption": "a friendly robot" },
+      "options": ["Ask another!", "I'm all done"],
+      "branches": { "Ask another!": "t5", "I'm all done": "t6_done" }
+    },
+    "t6_stars": {
+      "bot_lines": ["Stars are huge balls of hot glowing gas!", "Our Sun is a star too. Billions more shine in the night sky."],
+      "side_effect": { "action": "show_picture", "art_id": "star_field", "caption": "stars" },
+      "options": ["Ask another!", "I'm all done"],
+      "branches": { "Ask another!": "t5", "I'm all done": "t6_done" }
+    },
+    "t6_done": {
+      "bot_lines": ["Awesome searching today!", "Real coders use AI search for everything — facts, pictures, ideas. See you next lesson!"]
     }
   }
 }

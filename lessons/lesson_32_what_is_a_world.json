@@ -58,7 +58,7 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "world-layers",
+        "type": "click-the-thing",
         "payload": {
           "prompt": "Which is NOT a part of a game world?",
           "choices": [
@@ -86,11 +86,11 @@
           "prompt": "What is what is a world (in a game)?",
           "options": [
             {
-              "text": "Worlds melt at noon every day.",
+              "text": "Worlds appear only when no one is looking.",
               "correct": false
             },
             {
-              "text": "A world has no rules at all — it is pure chaos.",
+              "text": "All worlds are the same size as a shoe.",
               "correct": false
             },
             {
@@ -108,7 +108,7 @@
           "prompt": "Quick! Which one is TRUE about what is a world (in a game)?",
           "options": [
             {
-              "text": "A world is just a hot potato.",
+              "text": "Rules are stuck forever and unchangeable.",
               "correct": false
             },
             {
@@ -120,7 +120,7 @@
               "correct": false
             },
             {
-              "text": "All worlds are the same size as a shoe.",
+              "text": "Game worlds run on tiny windmills.",
               "correct": false
             }
           ],
@@ -130,11 +130,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about what is a world (in a game).",
           "options": [
             {
-              "text": "We can change a world by changing its rules.",
+              "text": "A world is the place a game happens.",
               "correct": false
             },
             {
-              "text": "A world tells the player what is possible.",
+              "text": "We can change a world by changing its rules.",
               "correct": false
             },
             {
@@ -142,7 +142,7 @@
               "correct": true
             },
             {
-              "text": "A world is the place a game happens.",
+              "text": "Different worlds feel different.",
               "correct": false
             }
           ],
@@ -152,11 +152,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about what is a world (in a game). What should he say?",
           "options": [
             {
-              "text": "Worlds are made of jelly and one tear.",
+              "text": "Game worlds run on tiny windmills.",
               "correct": false
             },
             {
-              "text": "Rules are stuck forever and unchangeable.",
+              "text": "Worlds are made of jelly and one tear.",
               "correct": false
             },
             {
@@ -164,7 +164,7 @@
               "correct": true
             },
             {
-              "text": "Worlds never need a hero — they prefer ferns.",
+              "text": "A world has no rules at all — it is pure chaos.",
               "correct": false
             }
           ],
@@ -174,11 +174,11 @@
           "prompt": "Tell me — Which rule about what is a world (in a game) is a GOOD rule?",
           "options": [
             {
-              "text": "Worlds are made of jelly and one tear.",
+              "text": "Worlds appear only when no one is looking.",
               "correct": false
             },
             {
-              "text": "Worlds melt at noon every day.",
+              "text": "Rules are stuck forever and unchangeable.",
               "correct": false
             },
             {
@@ -186,11 +186,116 @@
               "correct": true
             },
             {
-              "text": "Rules are stuck forever and unchangeable.",
+              "text": "Worlds are made of jelly and one tear.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_32_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about what is a world (in a game), ___",
+          "options": [
+            {
+              "text": "Worlds melt at noon every day.",
+              "correct": false
+            },
+            {
+              "text": "Worlds have edges or wrap around.",
+              "correct": true
+            },
+            {
+              "text": "A game world is built from real grass and tape.",
+              "correct": false
+            },
+            {
+              "text": "Worlds never need a hero — they prefer ferns.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about what is a world (in a game). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": false
+            },
+            {
+              "text": "Worlds need a hero to live in them.",
+              "correct": false
+            },
+            {
+              "text": "Worlds must wear matching socks.",
+              "correct": true
+            },
+            {
+              "text": "Worlds have edges or wrap around.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with what is a world (in a game)?",
+          "options": [
+            {
+              "text": "A world has no rules at all — it is pure chaos.",
+              "correct": false
+            },
+            {
+              "text": "A world is just a hot potato.",
+              "correct": false
+            },
+            {
+              "text": "Different worlds feel different.",
+              "correct": true
+            },
+            {
+              "text": "Worlds are made of jelly and one tear.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about what is a world (in a game) is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "A game world is everything the player can see and touch.",
+              "correct": false
+            },
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": false
+            },
+            {
+              "text": "Worlds have edges or wrap around.",
+              "correct": false
+            },
+            {
+              "text": "A game world is built from real grass and tape.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about what is a world (in a game). Which fact would help him?",
+          "options": [
+            {
+              "text": "Worlds are made of layers: sky, ground, characters, items.",
+              "correct": true
+            },
+            {
+              "text": "A world is just a hot potato.",
+              "correct": false
+            },
+            {
+              "text": "Worlds must wear matching socks.",
+              "correct": false
+            },
+            {
+              "text": "Rules are stuck forever and unchangeable.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -199,12 +304,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type LEARN and press Send to keep going!",
-          "target_display": "LEARN",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "learn"
+            "yes"
           ],
-          "hint_wrong": "Type the word LEARN (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -317,6 +422,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_32_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your world has gravity that pulls UP instead of DOWN. What kind of game would that be?",
+          "options": [
+            {
+              "text": "Illegal — only down-gravity is allowed.",
+              "correct": false
+            },
+            {
+              "text": "A weird, fun game where heroes fall toward the sky.",
+              "correct": true
+            },
+            {
+              "text": "Doesn't matter, gravity is fake.",
+              "correct": false
+            },
+            {
+              "text": "A spelling bee.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your world has gravity that pulls UP instead of DOWN. What kind of game would that be?",
+          "options": [
+            {
+              "text": "Illegal — only down-gravity is allowed.",
+              "correct": false
+            },
+            {
+              "text": "A spelling bee.",
+              "correct": false
+            },
+            {
+              "text": "Doesn't matter, gravity is fake.",
+              "correct": false
+            },
+            {
+              "text": "A weird, fun game where heroes fall toward the sky.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your world has gravity that pulls UP instead of DOWN. What kind of game would that be?",
+          "options": [
+            {
+              "text": "A spelling bee.",
+              "correct": false
+            },
+            {
+              "text": "A weird, fun game where heroes fall toward the sky.",
+              "correct": true
+            },
+            {
+              "text": "Doesn't matter, gravity is fake.",
+              "correct": false
+            },
+            {
+              "text": "Illegal — only down-gravity is allowed.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your world has gravity that pulls UP instead of DOWN. What kind of game would that be?",
+          "options": [
+            {
+              "text": "Illegal — only down-gravity is allowed.",
+              "correct": false
+            },
+            {
+              "text": "A spelling bee.",
+              "correct": false
+            },
+            {
+              "text": "Doesn't matter, gravity is fake.",
+              "correct": false
+            },
+            {
+              "text": "A weird, fun game where heroes fall toward the sky.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your world has gravity that pulls UP instead of DOWN. What kind of game would that be?",
+          "options": [
+            {
+              "text": "Illegal — only down-gravity is allowed.",
+              "correct": false
+            },
+            {
+              "text": "A spelling bee.",
+              "correct": false
+            },
+            {
+              "text": "A weird, fun game where heroes fall toward the sky.",
+              "correct": true
+            },
+            {
+              "text": "Doesn't matter, gravity is fake.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -325,12 +535,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -443,6 +653,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_32_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — What's the simplest definition of a 'world' in a game?",
+          "options": [
+            {
+              "text": "The place + rules where the game happens.",
+              "correct": true
+            },
+            {
+              "text": "The shop where you buy hats.",
+              "correct": false
+            },
+            {
+              "text": "The score and the music.",
+              "correct": false
+            },
+            {
+              "text": "Just the level number.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! What's the simplest definition of a 'world' in a game?",
+          "options": [
+            {
+              "text": "The score and the music.",
+              "correct": false
+            },
+            {
+              "text": "The place + rules where the game happens.",
+              "correct": true
+            },
+            {
+              "text": "Just the level number.",
+              "correct": false
+            },
+            {
+              "text": "The shop where you buy hats.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What's the simplest definition of a 'world' in a game?",
+          "options": [
+            {
+              "text": "The place + rules where the game happens.",
+              "correct": true
+            },
+            {
+              "text": "The shop where you buy hats.",
+              "correct": false
+            },
+            {
+              "text": "The score and the music.",
+              "correct": false
+            },
+            {
+              "text": "Just the level number.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: What's the simplest definition of a 'world' in a game?",
+          "options": [
+            {
+              "text": "Just the level number.",
+              "correct": false
+            },
+            {
+              "text": "The place + rules where the game happens.",
+              "correct": true
+            },
+            {
+              "text": "The shop where you buy hats.",
+              "correct": false
+            },
+            {
+              "text": "The score and the music.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: What's the simplest definition of a 'world' in a game?",
+          "options": [
+            {
+              "text": "The shop where you buy hats.",
+              "correct": false
+            },
+            {
+              "text": "The score and the music.",
+              "correct": false
+            },
+            {
+              "text": "Just the level number.",
+              "correct": false
+            },
+            {
+              "text": "The place + rules where the game happens.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -451,12 +766,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SOLVE and press Send to keep going!",
-          "target_display": "SOLVE",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "solve"
+            "cool"
           ],
-          "hint_wrong": "Type the word SOLVE (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -464,19 +779,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about what is a world (in a game).",
           "options": [
             {
-              "text": "A world tells the player what is possible.",
+              "text": "A world is the place a game happens.",
               "correct": false
             },
             {
-              "text": "Worlds have edges or wrap around.",
+              "text": "Each layer can be turned on or off to change the look.",
               "correct": false
             },
             {
-              "text": "Worlds never need a hero — they prefer ferns.",
+              "text": "Worlds appear only when no one is looking.",
               "correct": true
             },
             {
-              "text": "A world has rules like gravity.",
+              "text": "Worlds can be small or huge.",
               "correct": false
             }
           ],
@@ -486,19 +801,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about what is a world (in a game).",
           "options": [
             {
-              "text": "Worlds need a hero to live in them.",
+              "text": "A game world is everything the player can see and touch.",
               "correct": false
             },
             {
-              "text": "Worlds are made of jelly and one tear.",
+              "text": "Game worlds run on tiny windmills.",
               "correct": true
             },
             {
-              "text": "A world tells the player what is possible.",
+              "text": "A world is the place a game happens.",
               "correct": false
             },
             {
-              "text": "A world has rules like gravity.",
+              "text": "A simple world starts with just one layer -- like a flat ground.",
               "correct": false
             }
           ],
@@ -508,19 +823,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about what is a world (in a game).",
           "options": [
             {
-              "text": "A world has rules like gravity.",
+              "text": "Worlds can be small or huge.",
               "correct": false
             },
             {
-              "text": "A world tells the player what is possible.",
+              "text": "Each layer can be turned on or off to change the look.",
               "correct": false
             },
             {
-              "text": "A world is just a hot potato.",
+              "text": "Worlds collapse if anyone forgets to clap.",
               "correct": true
             },
             {
-              "text": "Worlds can be small or huge.",
+              "text": "A world is the place a game happens.",
               "correct": false
             }
           ],
@@ -530,11 +845,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about what is a world (in a game).",
           "options": [
             {
+              "text": "A world tells the player what is possible.",
+              "correct": false
+            },
+            {
+              "text": "A game world is everything the player can see and touch.",
+              "correct": false
+            },
+            {
+              "text": "A world has no rules at all — it is pure chaos.",
+              "correct": true
+            },
+            {
+              "text": "Worlds need a hero to live in them.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_32_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
               "text": "Different worlds feel different.",
               "correct": false
             },
             {
+              "text": "We can change a world by changing its rules.",
+              "correct": false
+            },
+            {
+              "text": "Each layer can be turned on or off to change the look.",
+              "correct": false
+            },
+            {
+              "text": "All worlds are the same size as a shoe.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_32_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "A simple world starts with just one layer -- like a flat ground.",
+              "correct": false
+            },
+            {
+              "text": "Rules are stuck forever and unchangeable.",
+              "correct": true
+            },
+            {
+              "text": "Worlds are made of layers: sky, ground, characters, items.",
+              "correct": false
+            },
+            {
               "text": "A world tells the player what is possible.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "A game world is everything the player can see and touch.",
+              "correct": false
+            },
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": false
+            },
+            {
+              "text": "Worlds never need a hero — they prefer ferns.",
+              "correct": true
+            },
+            {
+              "text": "Worlds can be small or huge.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "A world is the place a game happens.",
+              "correct": false
+            },
+            {
+              "text": "Different worlds feel different.",
+              "correct": false
+            },
+            {
+              "text": "A simple world starts with just one layer -- like a flat ground.",
+              "correct": false
+            },
+            {
+              "text": "Worlds are made of jelly and one tear.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "A world is just a hot potato.",
+              "correct": true
+            },
+            {
+              "text": "Worlds can be small or huge.",
+              "correct": false
+            },
+            {
+              "text": "Worlds have edges or wrap around.",
+              "correct": false
+            },
+            {
+              "text": "A world has rules like gravity.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about what is a world (in a game).",
+          "options": [
+            {
+              "text": "Worlds are made of layers: sky, ground, characters, items.",
               "correct": false
             },
             {
@@ -542,33 +981,14 @@
               "correct": true
             },
             {
-              "text": "Worlds have edges or wrap around.",
+              "text": "Worlds need a hero to live in them.",
+              "correct": false
+            },
+            {
+              "text": "Each layer can be turned on or off to change the look.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_32_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about what is a world (in a game).",
-          "options": [
-            {
-              "text": "A world tells the player what is possible.",
-              "correct": false
-            },
-            {
-              "text": "Different worlds feel different.",
-              "correct": false
-            },
-            {
-              "text": "Worlds can be small or huge.",
-              "correct": false
-            },
-            {
-              "text": "Worlds melt at noon every day.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_32_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -577,12 +997,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PIXEL and press Send to keep going!",
-          "target_display": "PIXEL",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "pixel"
+            "next"
           ],
-          "hint_wrong": "Type the word PIXEL (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -590,19 +1010,19 @@
           "prompt": "Tell me — Which one is TRUE about what is a world (in a game)?",
           "options": [
             {
+              "text": "Rules are stuck forever and unchangeable.",
+              "correct": false
+            },
+            {
+              "text": "Game worlds run on tiny windmills.",
+              "correct": false
+            },
+            {
               "text": "A world has no rules at all — it is pure chaos.",
               "correct": false
             },
             {
-              "text": "All worlds are the same size as a shoe.",
-              "correct": false
-            },
-            {
-              "text": "A world is just a hot potato.",
-              "correct": false
-            },
-            {
-              "text": "Worlds need a hero to live in them.",
+              "text": "A world is the place a game happens.",
               "correct": true
             }
           ],
@@ -620,11 +1040,11 @@
               "correct": false
             },
             {
-              "text": "Worlds have edges or wrap around.",
+              "text": "A world has rules like gravity.",
               "correct": true
             },
             {
-              "text": "Worlds never need a hero — they prefer ferns.",
+              "text": "A game world is built from real grass and tape.",
               "correct": false
             }
           ],
@@ -634,27 +1054,121 @@
           "prompt": "Pop quiz! Which one is TRUE about what is a world (in a game)?",
           "options": [
             {
-              "text": "A world tells the player what is possible.",
+              "text": "Worlds can be small or huge.",
               "correct": true
             },
             {
-              "text": "A world has no rules at all — it is pure chaos.",
-              "correct": false
-            },
-            {
-              "text": "Worlds never need a hero — they prefer ferns.",
-              "correct": false
-            },
-            {
               "text": "Worlds are made of jelly and one tear.",
+              "correct": false
+            },
+            {
+              "text": "Worlds melt at noon every day.",
+              "correct": false
+            },
+            {
+              "text": "All worlds are the same size as a shoe.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_32_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "Worlds appear only when no one is looking.",
+              "correct": false
+            },
+            {
+              "text": "We can change a world by changing its rules.",
+              "correct": true
+            },
+            {
+              "text": "A game world is built from real grass and tape.",
+              "correct": false
+            },
+            {
+              "text": "Worlds melt at noon every day.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_32_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "Worlds need a hero to live in them.",
+              "correct": true
+            },
+            {
+              "text": "Worlds must wear matching socks.",
+              "correct": false
+            },
+            {
+              "text": "Worlds are made of jelly and one tear.",
+              "correct": false
+            },
+            {
+              "text": "Worlds collapse if anyone forgets to clap.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_32_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "Worlds have edges or wrap around.",
+              "correct": true
+            },
+            {
+              "text": "Worlds must wear matching socks.",
+              "correct": false
+            },
+            {
+              "text": "A world has no rules at all — it is pure chaos.",
+              "correct": false
+            },
+            {
+              "text": "All worlds are the same size as a shoe.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "Worlds never need a hero — they prefer ferns.",
+              "correct": false
+            },
+            {
+              "text": "A world has no rules at all — it is pure chaos.",
+              "correct": false
+            },
+            {
+              "text": "A world tells the player what is possible.",
+              "correct": true
+            },
+            {
+              "text": "Rules are stuck forever and unchangeable.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about what is a world (in a game)?",
           "options": [
+            {
+              "text": "A world has no rules at all — it is pure chaos.",
+              "correct": false
+            },
+            {
+              "text": "Worlds must wear matching socks.",
+              "correct": false
+            },
             {
               "text": "Worlds are made of jelly and one tear.",
               "correct": false
@@ -662,39 +1176,50 @@
             {
               "text": "Different worlds feel different.",
               "correct": true
-            },
-            {
-              "text": "A world has no rules at all — it is pure chaos.",
-              "correct": false
-            },
-            {
-              "text": "A world is just a hot potato.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_32_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about what is a world (in a game)?",
           "options": [
             {
-              "text": "A world is the place a game happens.",
+              "text": "Worlds collapse if anyone forgets to clap.",
+              "correct": false
+            },
+            {
+              "text": "Worlds never need a hero — they prefer ferns.",
+              "correct": false
+            },
+            {
+              "text": "Worlds are made of jelly and one tear.",
+              "correct": false
+            },
+            {
+              "text": "A game world is everything the player can see and touch.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about what is a world (in a game)?",
+          "options": [
+            {
+              "text": "Worlds appear only when no one is looking.",
+              "correct": false
+            },
+            {
+              "text": "Game worlds run on tiny windmills.",
+              "correct": false
             },
             {
               "text": "All worlds are the same size as a shoe.",
               "correct": false
             },
             {
-              "text": "A world is just a hot potato.",
-              "correct": false
-            },
-            {
-              "text": "Worlds never need a hero — they prefer ferns.",
-              "correct": false
+              "text": "Worlds are made of layers: sky, ground, characters, items.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_32_q5_v4.wav"
+          ]
         }
       ]
     }

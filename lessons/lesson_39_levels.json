@@ -41,11 +41,11 @@
           "prompt": "What is levels?",
           "options": [
             {
-              "text": "Levels grow legs and wander off.",
+              "text": "Levels skip themselves randomly.",
               "correct": false
             },
             {
-              "text": "Levels never change — they live in a museum.",
+              "text": "All levels are the same difficulty by treaty.",
               "correct": false
             },
             {
@@ -63,7 +63,7 @@
           "prompt": "Quick! Which one is TRUE about levels?",
           "options": [
             {
-              "text": "Levels demand a parade to load.",
+              "text": "Levels never add new pieces — they are stingy.",
               "correct": false
             },
             {
@@ -75,7 +75,7 @@
               "correct": false
             },
             {
-              "text": "All levels are the same difficulty by treaty.",
+              "text": "Each level has a tiny door at the bottom.",
               "correct": false
             }
           ],
@@ -85,11 +85,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about levels.",
           "options": [
             {
-              "text": "Beating a level feels great.",
+              "text": "A level is one chunk of the game.",
               "correct": false
             },
             {
-              "text": "Level design is its own art.",
+              "text": "Beating a level feels great.",
               "correct": false
             },
             {
@@ -97,7 +97,7 @@
               "correct": true
             },
             {
-              "text": "A level is one chunk of the game.",
+              "text": "Players remember tough fair levels fondly.",
               "correct": false
             }
           ],
@@ -107,11 +107,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about levels. What should he say?",
           "options": [
             {
-              "text": "Levels make games stale and slightly damp.",
+              "text": "Each level has a tiny door at the bottom.",
               "correct": false
             },
             {
-              "text": "Levels never add new pieces — they are stingy.",
+              "text": "Levels make games stale and slightly damp.",
               "correct": false
             },
             {
@@ -119,7 +119,7 @@
               "correct": true
             },
             {
-              "text": "Beating a level feels bad and warm.",
+              "text": "Levels never change — they live in a museum.",
               "correct": false
             }
           ],
@@ -129,11 +129,11 @@
           "prompt": "Tell me — Which rule about levels is a GOOD rule?",
           "options": [
             {
-              "text": "Levels make games stale and slightly damp.",
+              "text": "Levels skip themselves randomly.",
               "correct": false
             },
             {
-              "text": "Levels grow legs and wander off.",
+              "text": "Levels never add new pieces — they are stingy.",
               "correct": false
             },
             {
@@ -141,11 +141,116 @@
               "correct": true
             },
             {
-              "text": "Levels never add new pieces — they are stingy.",
+              "text": "Levels make games stale and slightly damp.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about levels, ___",
+          "options": [
+            {
+              "text": "Levels grow legs and wander off.",
+              "correct": false
+            },
+            {
+              "text": "Levels often introduce one new idea each.",
+              "correct": true
+            },
+            {
+              "text": "All levels must be the exact same color.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad and warm.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about levels. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Beating a level feels great.",
+              "correct": false
+            },
+            {
+              "text": "Levels keep games fresh.",
+              "correct": false
+            },
+            {
+              "text": "Levels argue with each other in private.",
+              "correct": true
+            },
+            {
+              "text": "Levels often introduce one new idea each.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with levels?",
+          "options": [
+            {
+              "text": "Levels never change — they live in a museum.",
+              "correct": false
+            },
+            {
+              "text": "Levels demand a parade to load.",
+              "correct": false
+            },
+            {
+              "text": "Players remember tough fair levels fondly.",
+              "correct": true
+            },
+            {
+              "text": "Levels make games stale and slightly damp.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about levels is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "A level is one part of the game with its own challenges.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": false
+            },
+            {
+              "text": "Levels often introduce one new idea each.",
+              "correct": false
+            },
+            {
+              "text": "All levels must be the exact same color.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about levels. Which fact would help him?",
+          "options": [
+            {
+              "text": "Beat one level to unlock the next.",
+              "correct": true
+            },
+            {
+              "text": "Levels demand a parade to load.",
+              "correct": false
+            },
+            {
+              "text": "Levels argue with each other in private.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces — they are stingy.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -154,12 +259,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PUT and press Send to keep going!",
-          "target_display": "PUT",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "put"
+            "yes"
           ],
-          "hint_wrong": "Type the word PUT (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -272,6 +377,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey's level 5 is too hard and players quit. What's a good fix?",
+          "options": [
+            {
+              "text": "Replace level 5 with a confused goat.",
+              "correct": false
+            },
+            {
+              "text": "Yell 'TRY HARDER' at them.",
+              "correct": false
+            },
+            {
+              "text": "Lock the players in until they finish.",
+              "correct": false
+            },
+            {
+              "text": "Make level 5 easier or add a hint to teach the new idea.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey's level 5 is too hard and players quit. What's a good fix?",
+          "options": [
+            {
+              "text": "Lock the players in until they finish.",
+              "correct": false
+            },
+            {
+              "text": "Yell 'TRY HARDER' at them.",
+              "correct": false
+            },
+            {
+              "text": "Make level 5 easier or add a hint to teach the new idea.",
+              "correct": true
+            },
+            {
+              "text": "Replace level 5 with a confused goat.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey's level 5 is too hard and players quit. What's a good fix?",
+          "options": [
+            {
+              "text": "Lock the players in until they finish.",
+              "correct": false
+            },
+            {
+              "text": "Replace level 5 with a confused goat.",
+              "correct": false
+            },
+            {
+              "text": "Make level 5 easier or add a hint to teach the new idea.",
+              "correct": true
+            },
+            {
+              "text": "Yell 'TRY HARDER' at them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey's level 5 is too hard and players quit. What's a good fix?",
+          "options": [
+            {
+              "text": "Make level 5 easier or add a hint to teach the new idea.",
+              "correct": true
+            },
+            {
+              "text": "Lock the players in until they finish.",
+              "correct": false
+            },
+            {
+              "text": "Yell 'TRY HARDER' at them.",
+              "correct": false
+            },
+            {
+              "text": "Replace level 5 with a confused goat.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey's level 5 is too hard and players quit. What's a good fix?",
+          "options": [
+            {
+              "text": "Make level 5 easier or add a hint to teach the new idea.",
+              "correct": true
+            },
+            {
+              "text": "Replace level 5 with a confused goat.",
+              "correct": false
+            },
+            {
+              "text": "Lock the players in until they finish.",
+              "correct": false
+            },
+            {
+              "text": "Yell 'TRY HARDER' at them.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -280,12 +490,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -398,6 +608,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why introduce a new idea per level?",
+          "options": [
+            {
+              "text": "Players learn it without being overwhelmed.",
+              "correct": true
+            },
+            {
+              "text": "To save bytes.",
+              "correct": false
+            },
+            {
+              "text": "Levels demand fresh ideas as tribute.",
+              "correct": false
+            },
+            {
+              "text": "To use up your supply of ideas faster.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why introduce a new idea per level?",
+          "options": [
+            {
+              "text": "Levels demand fresh ideas as tribute.",
+              "correct": false
+            },
+            {
+              "text": "To save bytes.",
+              "correct": false
+            },
+            {
+              "text": "Players learn it without being overwhelmed.",
+              "correct": true
+            },
+            {
+              "text": "To use up your supply of ideas faster.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why introduce a new idea per level?",
+          "options": [
+            {
+              "text": "To use up your supply of ideas faster.",
+              "correct": false
+            },
+            {
+              "text": "Players learn it without being overwhelmed.",
+              "correct": true
+            },
+            {
+              "text": "To save bytes.",
+              "correct": false
+            },
+            {
+              "text": "Levels demand fresh ideas as tribute.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why introduce a new idea per level?",
+          "options": [
+            {
+              "text": "Levels demand fresh ideas as tribute.",
+              "correct": false
+            },
+            {
+              "text": "Players learn it without being overwhelmed.",
+              "correct": true
+            },
+            {
+              "text": "To use up your supply of ideas faster.",
+              "correct": false
+            },
+            {
+              "text": "To save bytes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why introduce a new idea per level?",
+          "options": [
+            {
+              "text": "Players learn it without being overwhelmed.",
+              "correct": true
+            },
+            {
+              "text": "To save bytes.",
+              "correct": false
+            },
+            {
+              "text": "To use up your supply of ideas faster.",
+              "correct": false
+            },
+            {
+              "text": "Levels demand fresh ideas as tribute.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -406,12 +721,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SET and press Send to keep going!",
-          "target_display": "SET",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "set"
+            "cool"
           ],
-          "hint_wrong": "Type the word SET (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -419,19 +734,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about levels.",
           "options": [
             {
-              "text": "Level design is its own art.",
+              "text": "A level is one chunk of the game.",
               "correct": false
             },
             {
-              "text": "Levels often introduce one new idea each.",
+              "text": "Levels usually get harder as you go.",
               "correct": false
             },
             {
-              "text": "Beating a level feels bad and warm.",
+              "text": "Levels skip themselves randomly.",
               "correct": true
             },
             {
-              "text": "Levels usually get harder.",
+              "text": "Each level can have new pieces.",
               "correct": false
             }
           ],
@@ -441,19 +756,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about levels.",
           "options": [
             {
-              "text": "Levels keep games fresh.",
+              "text": "A level is one part of the game with its own challenges.",
               "correct": false
             },
             {
-              "text": "Levels make games stale and slightly damp.",
+              "text": "Each level has a tiny door at the bottom.",
               "correct": true
             },
             {
-              "text": "Level design is its own art.",
+              "text": "A level is one chunk of the game.",
               "correct": false
             },
             {
-              "text": "Levels usually get harder.",
+              "text": "A game with many levels gives the player something to work toward.",
               "correct": false
             }
           ],
@@ -463,19 +778,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about levels.",
           "options": [
             {
-              "text": "Levels usually get harder.",
+              "text": "Each level can have new pieces.",
               "correct": false
             },
             {
-              "text": "Level design is its own art.",
+              "text": "Levels usually get harder as you go.",
               "correct": false
             },
             {
-              "text": "Levels demand a parade to load.",
+              "text": "Levels argue with each other about who's hardest.",
               "correct": true
             },
             {
-              "text": "Each level can have new pieces.",
+              "text": "A level is one chunk of the game.",
               "correct": false
             }
           ],
@@ -485,11 +800,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about levels.",
           "options": [
             {
+              "text": "Level design is its own art.",
+              "correct": false
+            },
+            {
+              "text": "A level is one part of the game with its own challenges.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change — they live in a museum.",
+              "correct": true
+            },
+            {
+              "text": "Levels keep games fresh.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_39_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
               "text": "Players remember tough fair levels fondly.",
               "correct": false
             },
             {
+              "text": "Beating a level feels great.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder as you go.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty by treaty.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_39_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "A game with many levels gives the player something to work toward.",
+              "correct": false
+            },
+            {
+              "text": "Levels never add new pieces — they are stingy.",
+              "correct": true
+            },
+            {
+              "text": "Beat one level to unlock the next.",
+              "correct": false
+            },
+            {
               "text": "Level design is its own art.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "A level is one part of the game with its own challenges.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad and warm.",
+              "correct": true
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": false
+            },
+            {
+              "text": "Players remember tough fair levels fondly.",
+              "correct": false
+            },
+            {
+              "text": "A game with many levels gives the player something to work toward.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale and slightly damp.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "Levels demand a parade to load.",
+              "correct": true
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels often introduce one new idea each.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about levels.",
+          "options": [
+            {
+              "text": "Beat one level to unlock the next.",
               "correct": false
             },
             {
@@ -497,33 +936,14 @@
               "correct": true
             },
             {
-              "text": "Levels often introduce one new idea each.",
+              "text": "Levels keep games fresh.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder as you go.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_39_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about levels.",
-          "options": [
-            {
-              "text": "Level design is its own art.",
-              "correct": false
-            },
-            {
-              "text": "Players remember tough fair levels fondly.",
-              "correct": false
-            },
-            {
-              "text": "Each level can have new pieces.",
-              "correct": false
-            },
-            {
-              "text": "Levels grow legs and wander off.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_39_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -532,12 +952,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type TRY and press Send to keep going!",
-          "target_display": "TRY",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "try"
+            "next"
           ],
-          "hint_wrong": "Type the word TRY (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -545,19 +965,19 @@
           "prompt": "Tell me — Which one is TRUE about levels?",
           "options": [
             {
+              "text": "Levels never add new pieces — they are stingy.",
+              "correct": false
+            },
+            {
+              "text": "Each level has a tiny door at the bottom.",
+              "correct": false
+            },
+            {
               "text": "Levels never change — they live in a museum.",
               "correct": false
             },
             {
-              "text": "All levels are the same difficulty by treaty.",
-              "correct": false
-            },
-            {
-              "text": "Levels demand a parade to load.",
-              "correct": false
-            },
-            {
-              "text": "Levels keep games fresh.",
+              "text": "A level is one chunk of the game.",
               "correct": true
             }
           ],
@@ -575,11 +995,11 @@
               "correct": false
             },
             {
-              "text": "Levels often introduce one new idea each.",
+              "text": "Levels usually get harder.",
               "correct": true
             },
             {
-              "text": "Beating a level feels bad and warm.",
+              "text": "All levels must be the exact same color.",
               "correct": false
             }
           ],
@@ -589,27 +1009,121 @@
           "prompt": "Pop quiz! Which one is TRUE about levels?",
           "options": [
             {
-              "text": "Level design is its own art.",
+              "text": "Each level can have new pieces.",
               "correct": true
             },
             {
-              "text": "Levels never change — they live in a museum.",
-              "correct": false
-            },
-            {
-              "text": "Beating a level feels bad and warm.",
-              "correct": false
-            },
-            {
               "text": "Levels make games stale and slightly damp.",
+              "correct": false
+            },
+            {
+              "text": "Levels grow legs and wander off.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty by treaty.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Levels skip themselves randomly.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": true
+            },
+            {
+              "text": "All levels must be the exact same color.",
+              "correct": false
+            },
+            {
+              "text": "Levels grow legs and wander off.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_39_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Levels keep games fresh.",
+              "correct": true
+            },
+            {
+              "text": "Levels argue with each other in private.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale and slightly damp.",
+              "correct": false
+            },
+            {
+              "text": "Levels argue with each other about who's hardest.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_39_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Levels often introduce one new idea each.",
+              "correct": true
+            },
+            {
+              "text": "Levels argue with each other in private.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change — they live in a museum.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty by treaty.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Beating a level feels bad and warm.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change — they live in a museum.",
+              "correct": false
+            },
+            {
+              "text": "Level design is its own art.",
+              "correct": true
+            },
+            {
+              "text": "Levels never add new pieces — they are stingy.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about levels?",
           "options": [
+            {
+              "text": "Levels never change — they live in a museum.",
+              "correct": false
+            },
+            {
+              "text": "Levels argue with each other in private.",
+              "correct": false
+            },
             {
               "text": "Levels make games stale and slightly damp.",
               "correct": false
@@ -617,39 +1131,50 @@
             {
               "text": "Players remember tough fair levels fondly.",
               "correct": true
-            },
-            {
-              "text": "Levels never change — they live in a museum.",
-              "correct": false
-            },
-            {
-              "text": "Levels demand a parade to load.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_39_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about levels?",
           "options": [
             {
-              "text": "A level is one chunk of the game.",
+              "text": "Levels argue with each other about who's hardest.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad and warm.",
+              "correct": false
+            },
+            {
+              "text": "Levels make games stale and slightly damp.",
+              "correct": false
+            },
+            {
+              "text": "A level is one part of the game with its own challenges.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about levels?",
+          "options": [
+            {
+              "text": "Levels skip themselves randomly.",
+              "correct": false
+            },
+            {
+              "text": "Each level has a tiny door at the bottom.",
+              "correct": false
             },
             {
               "text": "All levels are the same difficulty by treaty.",
               "correct": false
             },
             {
-              "text": "Levels demand a parade to load.",
-              "correct": false
-            },
-            {
-              "text": "Beating a level feels bad and warm.",
-              "correct": false
+              "text": "Beat one level to unlock the next.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_39_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -658,124 +1183,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about levels. Pick the SILLIEST claim.",
+          "prompt": "Why do most games have multiple levels?",
           "options": [
             {
-              "text": "Players remember tough fair levels fondly.",
-              "correct": false
-            },
-            {
-              "text": "Level design is its own art.",
-              "correct": false
-            },
-            {
-              "text": "Levels demand a parade to load.",
+              "text": "So players have new challenges and stay interested.",
               "correct": true
             },
             {
-              "text": "A level is one chunk of the game.",
+              "text": "To make the game heavier.",
+              "correct": false
+            },
+            {
+              "text": "To use up disk space.",
+              "correct": false
+            },
+            {
+              "text": "Because levels reproduce.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about levels. Pick the SILLIEST claim.",
+          "prompt": "Quick! Why do most games have multiple levels?",
           "options": [
             {
-              "text": "Each level can have new pieces.",
+              "text": "To make the game heavier.",
               "correct": false
             },
             {
-              "text": "Players remember tough fair levels fondly.",
-              "correct": false
-            },
-            {
-              "text": "Levels argue with each other in private.",
+              "text": "So players have new challenges and stay interested.",
               "correct": true
             },
             {
-              "text": "Levels usually get harder.",
+              "text": "To use up disk space.",
+              "correct": false
+            },
+            {
+              "text": "Because levels reproduce.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about levels. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Why do most games have multiple levels?",
           "options": [
             {
-              "text": "Beating a level feels great.",
+              "text": "To make the game heavier.",
               "correct": false
             },
             {
-              "text": "Levels grow legs and wander off.",
+              "text": "To use up disk space.",
+              "correct": false
+            },
+            {
+              "text": "So players have new challenges and stay interested.",
               "correct": true
             },
             {
-              "text": "Players remember tough fair levels fondly.",
-              "correct": false
-            },
-            {
-              "text": "A level is one chunk of the game.",
+              "text": "Because levels reproduce.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about levels. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Why do most games have multiple levels?",
           "options": [
             {
-              "text": "A level is one chunk of the game.",
-              "correct": false
-            },
-            {
-              "text": "Levels usually get harder.",
-              "correct": false
-            },
-            {
-              "text": "Levels often introduce one new idea each.",
-              "correct": false
-            },
-            {
-              "text": "Levels never change — they live in a museum.",
+              "text": "So players have new challenges and stay interested.",
               "correct": true
+            },
+            {
+              "text": "To use up disk space.",
+              "correct": false
+            },
+            {
+              "text": "To make the game heavier.",
+              "correct": false
+            },
+            {
+              "text": "Because levels reproduce.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about levels. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Why do most games have multiple levels?",
           "options": [
             {
-              "text": "All levels are the same difficulty by treaty.",
+              "text": "Because levels reproduce.",
+              "correct": false
+            },
+            {
+              "text": "To make the game heavier.",
+              "correct": false
+            },
+            {
+              "text": "To use up disk space.",
+              "correct": false
+            },
+            {
+              "text": "So players have new challenges and stay interested.",
               "correct": true
-            },
-            {
-              "text": "Level design is its own art.",
-              "correct": false
-            },
-            {
-              "text": "A level is one chunk of the game.",
-              "correct": false
-            },
-            {
-              "text": "Levels often introduce one new idea each.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why do most games have multiple levels?",
+          "options": [
+            {
+              "text": "Because levels reproduce.",
+              "correct": false
+            },
+            {
+              "text": "To use up disk space.",
+              "correct": false
+            },
+            {
+              "text": "To make the game heavier.",
+              "correct": false
+            },
+            {
+              "text": "So players have new challenges and stay interested.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why do most games have multiple levels?",
+          "options": [
+            {
+              "text": "Because levels reproduce.",
+              "correct": false
+            },
+            {
+              "text": "To use up disk space.",
+              "correct": false
+            },
+            {
+              "text": "So players have new challenges and stay interested.",
+              "correct": true
+            },
+            {
+              "text": "To make the game heavier.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why do most games have multiple levels?",
+          "options": [
+            {
+              "text": "To use up disk space.",
+              "correct": false
+            },
+            {
+              "text": "To make the game heavier.",
+              "correct": false
+            },
+            {
+              "text": "Because levels reproduce.",
+              "correct": false
+            },
+            {
+              "text": "So players have new challenges and stay interested.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why do most games have multiple levels?",
+          "options": [
+            {
+              "text": "Because levels reproduce.",
+              "correct": false
+            },
+            {
+              "text": "To use up disk space.",
+              "correct": false
+            },
+            {
+              "text": "So players have new challenges and stay interested.",
+              "correct": true
+            },
+            {
+              "text": "To make the game heavier.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why do most games have multiple levels?",
+          "options": [
+            {
+              "text": "To make the game heavier.",
+              "correct": false
+            },
+            {
+              "text": "To use up disk space.",
+              "correct": false
+            },
+            {
+              "text": "So players have new challenges and stay interested.",
+              "correct": true
+            },
+            {
+              "text": "Because levels reproduce.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -784,124 +1414,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type ZIP and press Send to keep going!",
-          "target_display": "ZIP",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "zip"
+            "play"
           ],
-          "hint_wrong": "Type the word ZIP (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about levels is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about levels. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Level design is its own art.",
+              "text": "Levels argue with each other in private.",
               "correct": true
             },
             {
-              "text": "Levels make games stale and slightly damp.",
+              "text": "Levels usually get harder.",
               "correct": false
             },
             {
-              "text": "Levels demand a parade to load.",
+              "text": "A level is one part of the game with its own challenges.",
               "correct": false
             },
             {
-              "text": "Levels never change — they live in a museum.",
+              "text": "A game with many levels gives the player something to work toward.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about levels is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about levels. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "A level is one chunk of the game.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": false
+            },
+            {
+              "text": "Each level can have new pieces.",
+              "correct": false
+            },
+            {
               "text": "Levels grow legs and wander off.",
-              "correct": false
-            },
-            {
-              "text": "Levels argue with each other in private.",
-              "correct": false
-            },
-            {
-              "text": "Levels never add new pieces — they are stingy.",
-              "correct": false
-            },
-            {
-              "text": "Players remember tough fair levels fondly.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about levels is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about levels. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Levels demand a parade to load.",
+              "text": "Level design is its own art.",
               "correct": false
             },
             {
-              "text": "Beating a level feels bad and warm.",
+              "text": "A game with many levels gives the player something to work toward.",
               "correct": false
             },
             {
-              "text": "Levels make games stale and slightly damp.",
+              "text": "Beat one level to unlock the next.",
               "correct": false
             },
             {
-              "text": "A level is one chunk of the game.",
+              "text": "All levels must be the exact same color.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about levels is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about levels. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Levels grow legs and wander off.",
+              "text": "Levels usually get harder.",
               "correct": false
             },
             {
-              "text": "Levels usually get harder.",
+              "text": "Levels skip themselves randomly.",
               "correct": true
             },
             {
-              "text": "Levels make games stale and slightly damp.",
+              "text": "Level design is its own art.",
               "correct": false
             },
             {
-              "text": "Levels argue with each other in private.",
+              "text": "Levels keep games fresh.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about levels is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about levels. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "All levels are the same difficulty by treaty.",
+              "text": "Levels usually get harder as you go.",
               "correct": false
             },
             {
-              "text": "Each level can have new pieces.",
+              "text": "Each level has a tiny door at the bottom.",
               "correct": true
             },
             {
-              "text": "Beating a level feels bad and warm.",
+              "text": "A level is one chunk of the game.",
               "correct": false
             },
             {
-              "text": "Levels never change — they live in a museum.",
+              "text": "A level is one part of the game with its own challenges.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about levels. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Levels often introduce one new idea each.",
+              "correct": false
+            },
+            {
+              "text": "Levels argue with each other about who's hardest.",
+              "correct": true
+            },
+            {
+              "text": "A level is one part of the game with its own challenges.",
+              "correct": false
+            },
+            {
+              "text": "Players remember tough fair levels fondly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about levels. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Each level can have new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels never change — they live in a museum.",
+              "correct": true
+            },
+            {
+              "text": "Level design is its own art.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about levels. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Level design is its own art.",
+              "correct": false
+            },
+            {
+              "text": "Levels usually get harder.",
+              "correct": false
+            },
+            {
+              "text": "All levels are the same difficulty by treaty.",
+              "correct": true
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about levels. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Levels never add new pieces — they are stingy.",
+              "correct": true
+            },
+            {
+              "text": "A level is one chunk of the game.",
+              "correct": false
+            },
+            {
+              "text": "A game with many levels gives the player something to work toward.",
+              "correct": false
+            },
+            {
+              "text": "Level design is its own art.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about levels. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Each level can have new pieces.",
+              "correct": false
+            },
+            {
+              "text": "Levels often introduce one new idea each.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels bad and warm.",
+              "correct": true
+            },
+            {
+              "text": "Level design is its own art.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -910,28 +1645,28 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type AIM and press Send to keep going!",
-          "target_display": "AIM",
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
           "targets": [
-            "aim"
+            "code"
           ],
-          "hint_wrong": "Type the word AIM (any case is fine)."
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Fill in the blank: when we talk about levels, ___",
+          "prompt": "Listen up — Which rule about levels is a GOOD rule?",
           "options": [
+            {
+              "text": "Levels argue with each other in private.",
+              "correct": false
+            },
             {
               "text": "All levels are the same difficulty by treaty.",
               "correct": false
             },
             {
-              "text": "Levels never add new pieces — they are stingy.",
-              "correct": false
-            },
-            {
-              "text": "Players remember tough fair levels fondly.",
+              "text": "Beat one level to unlock the next.",
               "correct": true
             },
             {
@@ -942,36 +1677,32 @@
           "_audio": "assets/audio/q/lesson_39_q8_v0.wav"
         },
         {
-          "prompt": "Quick! Fill in the blank: when we talk about levels, ___",
+          "prompt": "Here's a thinker: Which rule about levels is a GOOD rule?",
           "options": [
             {
-              "text": "Levels make games stale and slightly damp.",
+              "text": "Levels skip themselves randomly.",
               "correct": false
             },
             {
-              "text": "Levels argue with each other in private.",
+              "text": "All levels must be the exact same color.",
               "correct": false
             },
             {
-              "text": "A level is one chunk of the game.",
+              "text": "Levels usually get harder as you go.",
               "correct": true
             },
             {
-              "text": "Levels demand a parade to load.",
+              "text": "Levels never add new pieces — they are stingy.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q8_v1.wav"
         },
         {
-          "prompt": "Hey friend — Fill in the blank: when we talk about levels, ___",
+          "prompt": "OK quick one: Which rule about levels is a GOOD rule?",
           "options": [
             {
-              "text": "All levels are the same difficulty by treaty.",
-              "correct": false
-            },
-            {
-              "text": "Levels never change — they live in a museum.",
+              "text": "Levels make games stale and slightly damp.",
               "correct": false
             },
             {
@@ -979,39 +1710,43 @@
               "correct": false
             },
             {
-              "text": "Levels usually get harder.",
+              "text": "Levels never change — they live in a museum.",
+              "correct": false
+            },
+            {
+              "text": "A game with many levels gives the player something to work toward.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q8_v2.wav"
         },
         {
-          "prompt": "Bytey wonders: Fill in the blank: when we talk about levels, ___",
+          "prompt": "Hmm... Which rule about levels is a GOOD rule?",
           "options": [
             {
-              "text": "Levels never change — they live in a museum.",
+              "text": "Levels skip themselves randomly.",
               "correct": false
             },
             {
-              "text": "Each level can have new pieces.",
+              "text": "A level is one chunk of the game.",
               "correct": true
             },
             {
-              "text": "Levels never add new pieces — they are stingy.",
+              "text": "Each level has a tiny door at the bottom.",
               "correct": false
             },
             {
-              "text": "Levels argue with each other in private.",
+              "text": "Beating a level feels bad and warm.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q8_v3.wav"
         },
         {
-          "prompt": "Tell me — Fill in the blank: when we talk about levels, ___",
+          "prompt": "Which rule about levels is a GOOD rule?",
           "options": [
             {
-              "text": "Beating a level feels great.",
+              "text": "Levels usually get harder.",
               "correct": true
             },
             {
@@ -1019,15 +1754,120 @@
               "correct": false
             },
             {
-              "text": "Levels argue with each other in private.",
+              "text": "Beating a level feels bad and warm.",
               "correct": false
             },
             {
-              "text": "All levels are the same difficulty by treaty.",
+              "text": "Levels never add new pieces — they are stingy.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_39_q8_v4.wav"
+        },
+        {
+          "prompt": "Quick! Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "Each level can have new pieces.",
+              "correct": true
+            },
+            {
+              "text": "Levels argue with each other about who's hardest.",
+              "correct": false
+            },
+            {
+              "text": "Levels skip themselves randomly.",
+              "correct": false
+            },
+            {
+              "text": "Levels demand a parade to load.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "Levels argue with each other about who's hardest.",
+              "correct": false
+            },
+            {
+              "text": "Each level has a tiny door at the bottom.",
+              "correct": false
+            },
+            {
+              "text": "Beating a level feels great.",
+              "correct": true
+            },
+            {
+              "text": "Levels argue with each other in private.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "Levels keep games fresh.",
+              "correct": true
+            },
+            {
+              "text": "Levels argue with each other about who's hardest.",
+              "correct": false
+            },
+            {
+              "text": "All levels must be the exact same color.",
+              "correct": false
+            },
+            {
+              "text": "Levels skip themselves randomly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "Levels often introduce one new idea each.",
+              "correct": true
+            },
+            {
+              "text": "Levels never change — they live in a museum.",
+              "correct": false
+            },
+            {
+              "text": "Levels skip themselves randomly.",
+              "correct": false
+            },
+            {
+              "text": "Levels argue with each other about who's hardest.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which rule about levels is a GOOD rule?",
+          "options": [
+            {
+              "text": "All levels must be the exact same color.",
+              "correct": false
+            },
+            {
+              "text": "Each level has a tiny door at the bottom.",
+              "correct": false
+            },
+            {
+              "text": "Levels demand a parade to load.",
+              "correct": false
+            },
+            {
+              "text": "Level design is its own art.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

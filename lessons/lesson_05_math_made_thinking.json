@@ -89,11 +89,11 @@
           "prompt": "What is math made of thinking?",
           "options": [
             {
-              "text": "Zero is the king of all numbers and demands tribute.",
+              "text": "Computers prefer odd numbers because they look funny.",
               "correct": false
             },
             {
-              "text": "Computers add numbers wrong on purpose for fun.",
+              "text": "1 plus 1 sometimes equals 7 on rainy days.",
               "correct": false
             },
             {
@@ -111,7 +111,7 @@
           "prompt": "Quick! Which one is TRUE about math made of thinking?",
           "options": [
             {
-              "text": "Math is just opinions in a bow tie.",
+              "text": "Math only works on paper made of moss.",
               "correct": false
             },
             {
@@ -123,7 +123,7 @@
               "correct": false
             },
             {
-              "text": "1 plus 1 sometimes equals 7 on rainy days.",
+              "text": "When numbers get too big, computers eat them.",
               "correct": false
             }
           ],
@@ -133,11 +133,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
-              "text": "Math helps games count points.",
+              "text": "Computers do math super fast.",
               "correct": false
             },
             {
-              "text": "Math has rules that always work the same way.",
+              "text": "Math helps games count points.",
               "correct": false
             },
             {
@@ -145,7 +145,7 @@
               "correct": true
             },
             {
-              "text": "Computers do math super fast.",
+              "text": "We can use math to compare things.",
               "correct": false
             }
           ],
@@ -155,11 +155,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about math made of thinking. What should he say?",
           "options": [
             {
-              "text": "Numbers are afraid of computers and hide behind 9.",
+              "text": "When numbers get too big, computers eat them.",
               "correct": false
             },
             {
-              "text": "Math only works on paper made of moss.",
+              "text": "Numbers are afraid of computers and hide behind 9.",
               "correct": false
             },
             {
@@ -167,7 +167,7 @@
               "correct": true
             },
             {
-              "text": "Computers fall asleep doing math after lunch.",
+              "text": "Computers add numbers wrong on purpose for fun.",
               "correct": false
             }
           ],
@@ -177,11 +177,11 @@
           "prompt": "Tell me — Which rule about math made of thinking is a GOOD rule?",
           "options": [
             {
-              "text": "Numbers are afraid of computers and hide behind 9.",
+              "text": "Computers prefer odd numbers because they look funny.",
               "correct": false
             },
             {
-              "text": "Zero is the king of all numbers and demands tribute.",
+              "text": "Math only works on paper made of moss.",
               "correct": false
             },
             {
@@ -189,11 +189,116 @@
               "correct": true
             },
             {
-              "text": "Math only works on paper made of moss.",
+              "text": "Numbers are afraid of computers and hide behind 9.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_05_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about math made of thinking, ___",
+          "options": [
+            {
+              "text": "Zero is the king of all numbers and demands tribute.",
+              "correct": false
+            },
+            {
+              "text": "Counting is a kind of math.",
+              "correct": true
+            },
+            {
+              "text": "Computers do math by counting their feet.",
+              "correct": false
+            },
+            {
+              "text": "Computers fall asleep doing math after lunch.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about math made of thinking. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Math helps games count points.",
+              "correct": false
+            },
+            {
+              "text": "Computers never get bored of math.",
+              "correct": false
+            },
+            {
+              "text": "If you yell at a number it changes.",
+              "correct": true
+            },
+            {
+              "text": "Counting is a kind of math.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with math made of thinking?",
+          "options": [
+            {
+              "text": "Computers add numbers wrong on purpose for fun.",
+              "correct": false
+            },
+            {
+              "text": "Math is just opinions in a bow tie.",
+              "correct": false
+            },
+            {
+              "text": "We can use math to compare things.",
+              "correct": true
+            },
+            {
+              "text": "Numbers are afraid of computers and hide behind 9.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about math made of thinking is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Computers do math by following the same rules every time.",
+              "correct": false
+            },
+            {
+              "text": "Math helps games count points.",
+              "correct": false
+            },
+            {
+              "text": "Counting is a kind of math.",
+              "correct": false
+            },
+            {
+              "text": "Computers do math by counting their feet.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about math made of thinking. Which fact would help him?",
+          "options": [
+            {
+              "text": "If you give a computer 1 + 1, it always gives back 2.",
+              "correct": true
+            },
+            {
+              "text": "Math is just opinions in a bow tie.",
+              "correct": false
+            },
+            {
+              "text": "If you yell at a number it changes.",
+              "correct": false
+            },
+            {
+              "text": "Math only works on paper made of moss.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -202,12 +307,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GET and press Send to keep going!",
-          "target_display": "GET",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "get"
+            "yes"
           ],
-          "hint_wrong": "Type the word GET (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -320,6 +425,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_05_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
+          "options": [
+            {
+              "text": "The numbers like Bytey today.",
+              "correct": false
+            },
+            {
+              "text": "Bytey is being polite to the computer.",
+              "correct": false
+            },
+            {
+              "text": "Math always gives the same answer for the same numbers.",
+              "correct": true
+            },
+            {
+              "text": "3 and 4 are best friends and always make 7.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
+          "options": [
+            {
+              "text": "Math always gives the same answer for the same numbers.",
+              "correct": true
+            },
+            {
+              "text": "The numbers like Bytey today.",
+              "correct": false
+            },
+            {
+              "text": "3 and 4 are best friends and always make 7.",
+              "correct": false
+            },
+            {
+              "text": "Bytey is being polite to the computer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
+          "options": [
+            {
+              "text": "3 and 4 are best friends and always make 7.",
+              "correct": false
+            },
+            {
+              "text": "The numbers like Bytey today.",
+              "correct": false
+            },
+            {
+              "text": "Bytey is being polite to the computer.",
+              "correct": false
+            },
+            {
+              "text": "Math always gives the same answer for the same numbers.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
+          "options": [
+            {
+              "text": "Bytey is being polite to the computer.",
+              "correct": false
+            },
+            {
+              "text": "The numbers like Bytey today.",
+              "correct": false
+            },
+            {
+              "text": "Math always gives the same answer for the same numbers.",
+              "correct": true
+            },
+            {
+              "text": "3 and 4 are best friends and always make 7.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
+          "options": [
+            {
+              "text": "Bytey is being polite to the computer.",
+              "correct": false
+            },
+            {
+              "text": "3 and 4 are best friends and always make 7.",
+              "correct": false
+            },
+            {
+              "text": "Math always gives the same answer for the same numbers.",
+              "correct": true
+            },
+            {
+              "text": "The numbers like Bytey today.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -328,12 +538,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -446,6 +656,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_05_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why are computers good at math?",
+          "options": [
+            {
+              "text": "They follow rules super fast without getting tired.",
+              "correct": true
+            },
+            {
+              "text": "They have invisible math goggles.",
+              "correct": false
+            },
+            {
+              "text": "They are powered by tiny number-eating ducks.",
+              "correct": false
+            },
+            {
+              "text": "They cheat off your calculator.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why are computers good at math?",
+          "options": [
+            {
+              "text": "They cheat off your calculator.",
+              "correct": false
+            },
+            {
+              "text": "They follow rules super fast without getting tired.",
+              "correct": true
+            },
+            {
+              "text": "They are powered by tiny number-eating ducks.",
+              "correct": false
+            },
+            {
+              "text": "They have invisible math goggles.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why are computers good at math?",
+          "options": [
+            {
+              "text": "They follow rules super fast without getting tired.",
+              "correct": true
+            },
+            {
+              "text": "They have invisible math goggles.",
+              "correct": false
+            },
+            {
+              "text": "They cheat off your calculator.",
+              "correct": false
+            },
+            {
+              "text": "They are powered by tiny number-eating ducks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why are computers good at math?",
+          "options": [
+            {
+              "text": "They follow rules super fast without getting tired.",
+              "correct": true
+            },
+            {
+              "text": "They are powered by tiny number-eating ducks.",
+              "correct": false
+            },
+            {
+              "text": "They have invisible math goggles.",
+              "correct": false
+            },
+            {
+              "text": "They cheat off your calculator.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why are computers good at math?",
+          "options": [
+            {
+              "text": "They have invisible math goggles.",
+              "correct": false
+            },
+            {
+              "text": "They are powered by tiny number-eating ducks.",
+              "correct": false
+            },
+            {
+              "text": "They cheat off your calculator.",
+              "correct": false
+            },
+            {
+              "text": "They follow rules super fast without getting tired.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -454,12 +769,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PUT and press Send to keep going!",
-          "target_display": "PUT",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "put"
+            "cool"
           ],
-          "hint_wrong": "Type the word PUT (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -467,19 +782,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
-              "text": "Math has rules that always work the same way.",
+              "text": "Computers do math super fast.",
               "correct": false
             },
             {
-              "text": "Counting is a kind of math.",
+              "text": "Computers can do millions of math problems while you blink.",
               "correct": false
             },
             {
-              "text": "Computers fall asleep doing math after lunch.",
+              "text": "Computers prefer odd numbers because they look funny.",
               "correct": true
             },
             {
-              "text": "Adding 1 + 1 always equals 2.",
+              "text": "We can use math to make rules.",
               "correct": false
             }
           ],
@@ -489,19 +804,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
-              "text": "Computers never get bored of math.",
+              "text": "Computers do math by following the same rules every time.",
               "correct": false
             },
             {
-              "text": "Numbers are afraid of computers and hide behind 9.",
+              "text": "When numbers get too big, computers eat them.",
               "correct": true
             },
             {
-              "text": "Math has rules that always work the same way.",
+              "text": "Computers do math super fast.",
               "correct": false
             },
             {
-              "text": "Adding 1 + 1 always equals 2.",
+              "text": "Math is the language computers think in.",
               "correct": false
             }
           ],
@@ -511,19 +826,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
-              "text": "Adding 1 + 1 always equals 2.",
+              "text": "We can use math to make rules.",
               "correct": false
             },
             {
-              "text": "Math has rules that always work the same way.",
+              "text": "Computers can do millions of math problems while you blink.",
               "correct": false
             },
             {
-              "text": "Math is just opinions in a bow tie.",
+              "text": "Math is hard for computers when it's raining.",
               "correct": true
             },
             {
-              "text": "We can use math to make rules.",
+              "text": "Computers do math super fast.",
               "correct": false
             }
           ],
@@ -533,11 +848,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
+              "text": "Math has rules that always work the same way.",
+              "correct": false
+            },
+            {
+              "text": "Computers do math by following the same rules every time.",
+              "correct": false
+            },
+            {
+              "text": "Computers add numbers wrong on purpose for fun.",
+              "correct": true
+            },
+            {
+              "text": "Computers never get bored of math.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_05_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
               "text": "We can use math to compare things.",
               "correct": false
             },
             {
+              "text": "Math helps games count points.",
+              "correct": false
+            },
+            {
+              "text": "Computers can do millions of math problems while you blink.",
+              "correct": false
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7 on rainy days.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_05_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "Math is the language computers think in.",
+              "correct": false
+            },
+            {
+              "text": "Math only works on paper made of moss.",
+              "correct": true
+            },
+            {
+              "text": "If you give a computer 1 + 1, it always gives back 2.",
+              "correct": false
+            },
+            {
               "text": "Math has rules that always work the same way.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "Computers do math by following the same rules every time.",
+              "correct": false
+            },
+            {
+              "text": "Math helps games count points.",
+              "correct": false
+            },
+            {
+              "text": "Computers fall asleep doing math after lunch.",
+              "correct": true
+            },
+            {
+              "text": "We can use math to make rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "Computers do math super fast.",
+              "correct": false
+            },
+            {
+              "text": "We can use math to compare things.",
+              "correct": false
+            },
+            {
+              "text": "Math is the language computers think in.",
+              "correct": false
+            },
+            {
+              "text": "Numbers are afraid of computers and hide behind 9.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "Math is just opinions in a bow tie.",
+              "correct": true
+            },
+            {
+              "text": "We can use math to make rules.",
+              "correct": false
+            },
+            {
+              "text": "Counting is a kind of math.",
+              "correct": false
+            },
+            {
+              "text": "Adding 1 + 1 always equals 2.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about math made of thinking.",
+          "options": [
+            {
+              "text": "If you give a computer 1 + 1, it always gives back 2.",
               "correct": false
             },
             {
@@ -545,33 +984,14 @@
               "correct": true
             },
             {
-              "text": "Counting is a kind of math.",
+              "text": "Computers never get bored of math.",
+              "correct": false
+            },
+            {
+              "text": "Computers can do millions of math problems while you blink.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_05_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about math made of thinking.",
-          "options": [
-            {
-              "text": "Math has rules that always work the same way.",
-              "correct": false
-            },
-            {
-              "text": "We can use math to compare things.",
-              "correct": false
-            },
-            {
-              "text": "We can use math to make rules.",
-              "correct": false
-            },
-            {
-              "text": "Zero is the king of all numbers and demands tribute.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_05_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -580,12 +1000,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SET and press Send to keep going!",
-          "target_display": "SET",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "set"
+            "next"
           ],
-          "hint_wrong": "Type the word SET (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -593,19 +1013,19 @@
           "prompt": "Tell me — Which one is TRUE about math made of thinking?",
           "options": [
             {
+              "text": "Math only works on paper made of moss.",
+              "correct": false
+            },
+            {
+              "text": "When numbers get too big, computers eat them.",
+              "correct": false
+            },
+            {
               "text": "Computers add numbers wrong on purpose for fun.",
               "correct": false
             },
             {
-              "text": "1 plus 1 sometimes equals 7 on rainy days.",
-              "correct": false
-            },
-            {
-              "text": "Math is just opinions in a bow tie.",
-              "correct": false
-            },
-            {
-              "text": "Computers never get bored of math.",
+              "text": "Computers do math super fast.",
               "correct": true
             }
           ],
@@ -623,11 +1043,11 @@
               "correct": false
             },
             {
-              "text": "Counting is a kind of math.",
+              "text": "Adding 1 + 1 always equals 2.",
               "correct": true
             },
             {
-              "text": "Computers fall asleep doing math after lunch.",
+              "text": "Computers do math by counting their feet.",
               "correct": false
             }
           ],
@@ -637,27 +1057,121 @@
           "prompt": "Pop quiz! Which one is TRUE about math made of thinking?",
           "options": [
             {
-              "text": "Math has rules that always work the same way.",
+              "text": "We can use math to make rules.",
               "correct": true
             },
             {
-              "text": "Computers add numbers wrong on purpose for fun.",
-              "correct": false
-            },
-            {
-              "text": "Computers fall asleep doing math after lunch.",
-              "correct": false
-            },
-            {
               "text": "Numbers are afraid of computers and hide behind 9.",
+              "correct": false
+            },
+            {
+              "text": "Zero is the king of all numbers and demands tribute.",
+              "correct": false
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7 on rainy days.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_05_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "Computers prefer odd numbers because they look funny.",
+              "correct": false
+            },
+            {
+              "text": "Math helps games count points.",
+              "correct": true
+            },
+            {
+              "text": "Computers do math by counting their feet.",
+              "correct": false
+            },
+            {
+              "text": "Zero is the king of all numbers and demands tribute.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_05_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "Computers never get bored of math.",
+              "correct": true
+            },
+            {
+              "text": "If you yell at a number it changes.",
+              "correct": false
+            },
+            {
+              "text": "Numbers are afraid of computers and hide behind 9.",
+              "correct": false
+            },
+            {
+              "text": "Math is hard for computers when it's raining.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_05_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "Counting is a kind of math.",
+              "correct": true
+            },
+            {
+              "text": "If you yell at a number it changes.",
+              "correct": false
+            },
+            {
+              "text": "Computers add numbers wrong on purpose for fun.",
+              "correct": false
+            },
+            {
+              "text": "1 plus 1 sometimes equals 7 on rainy days.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "Computers fall asleep doing math after lunch.",
+              "correct": false
+            },
+            {
+              "text": "Computers add numbers wrong on purpose for fun.",
+              "correct": false
+            },
+            {
+              "text": "Math has rules that always work the same way.",
+              "correct": true
+            },
+            {
+              "text": "Math only works on paper made of moss.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about math made of thinking?",
           "options": [
+            {
+              "text": "Computers add numbers wrong on purpose for fun.",
+              "correct": false
+            },
+            {
+              "text": "If you yell at a number it changes.",
+              "correct": false
+            },
             {
               "text": "Numbers are afraid of computers and hide behind 9.",
               "correct": false
@@ -665,39 +1179,50 @@
             {
               "text": "We can use math to compare things.",
               "correct": true
-            },
-            {
-              "text": "Computers add numbers wrong on purpose for fun.",
-              "correct": false
-            },
-            {
-              "text": "Math is just opinions in a bow tie.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_05_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about math made of thinking?",
           "options": [
             {
-              "text": "Computers do math super fast.",
+              "text": "Math is hard for computers when it's raining.",
+              "correct": false
+            },
+            {
+              "text": "Computers fall asleep doing math after lunch.",
+              "correct": false
+            },
+            {
+              "text": "Numbers are afraid of computers and hide behind 9.",
+              "correct": false
+            },
+            {
+              "text": "Computers do math by following the same rules every time.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about math made of thinking?",
+          "options": [
+            {
+              "text": "Computers prefer odd numbers because they look funny.",
+              "correct": false
+            },
+            {
+              "text": "When numbers get too big, computers eat them.",
+              "correct": false
             },
             {
               "text": "1 plus 1 sometimes equals 7 on rainy days.",
               "correct": false
             },
             {
-              "text": "Math is just opinions in a bow tie.",
-              "correct": false
-            },
-            {
-              "text": "Computers fall asleep doing math after lunch.",
-              "correct": false
+              "text": "If you give a computer 1 + 1, it always gives back 2.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_05_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -706,124 +1231,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about math made of thinking. Pick the SILLIEST claim.",
+          "prompt": "Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
-              "text": "We can use math to compare things.",
+              "text": "It refuses unless paid in stickers.",
               "correct": false
             },
             {
-              "text": "Math has rules that always work the same way.",
-              "correct": false
-            },
-            {
-              "text": "Math is just opinions in a bow tie.",
+              "text": "8, instantly.",
               "correct": true
             },
             {
-              "text": "Computers do math super fast.",
+              "text": "It tells a joke instead.",
+              "correct": false
+            },
+            {
+              "text": "Maybe 8, maybe 7 -- depends on its mood.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_05_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about math made of thinking. Pick the SILLIEST claim.",
+          "prompt": "Quick! Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
-              "text": "We can use math to make rules.",
+              "text": "It tells a joke instead.",
               "correct": false
             },
             {
-              "text": "We can use math to compare things.",
+              "text": "Maybe 8, maybe 7 -- depends on its mood.",
               "correct": false
             },
             {
-              "text": "If you yell at a number it changes.",
+              "text": "8, instantly.",
               "correct": true
             },
             {
-              "text": "Adding 1 + 1 always equals 2.",
+              "text": "It refuses unless paid in stickers.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_05_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about math made of thinking. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
-              "text": "Math helps games count points.",
+              "text": "Maybe 8, maybe 7 -- depends on its mood.",
               "correct": false
             },
             {
-              "text": "Zero is the king of all numbers and demands tribute.",
+              "text": "It refuses unless paid in stickers.",
+              "correct": false
+            },
+            {
+              "text": "8, instantly.",
               "correct": true
             },
             {
-              "text": "We can use math to compare things.",
-              "correct": false
-            },
-            {
-              "text": "Computers do math super fast.",
+              "text": "It tells a joke instead.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_05_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about math made of thinking. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
-              "text": "Computers do math super fast.",
+              "text": "Maybe 8, maybe 7 -- depends on its mood.",
               "correct": false
             },
             {
-              "text": "Adding 1 + 1 always equals 2.",
-              "correct": false
-            },
-            {
-              "text": "Counting is a kind of math.",
-              "correct": false
-            },
-            {
-              "text": "Computers add numbers wrong on purpose for fun.",
+              "text": "8, instantly.",
               "correct": true
+            },
+            {
+              "text": "It refuses unless paid in stickers.",
+              "correct": false
+            },
+            {
+              "text": "It tells a joke instead.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_05_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about math made of thinking. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
-              "text": "1 plus 1 sometimes equals 7 on rainy days.",
+              "text": "It refuses unless paid in stickers.",
+              "correct": false
+            },
+            {
+              "text": "Maybe 8, maybe 7 -- depends on its mood.",
+              "correct": false
+            },
+            {
+              "text": "8, instantly.",
               "correct": true
             },
             {
-              "text": "Math has rules that always work the same way.",
-              "correct": false
-            },
-            {
-              "text": "Computers do math super fast.",
-              "correct": false
-            },
-            {
-              "text": "Counting is a kind of math.",
+              "text": "It tells a joke instead.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_05_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey asks the computer: 5 + 3. What does it say?",
+          "options": [
+            {
+              "text": "8, instantly.",
+              "correct": true
+            },
+            {
+              "text": "Maybe 8, maybe 7 -- depends on its mood.",
+              "correct": false
+            },
+            {
+              "text": "It tells a joke instead.",
+              "correct": false
+            },
+            {
+              "text": "It refuses unless paid in stickers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey asks the computer: 5 + 3. What does it say?",
+          "options": [
+            {
+              "text": "8, instantly.",
+              "correct": true
+            },
+            {
+              "text": "It tells a joke instead.",
+              "correct": false
+            },
+            {
+              "text": "Maybe 8, maybe 7 -- depends on its mood.",
+              "correct": false
+            },
+            {
+              "text": "It refuses unless paid in stickers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey asks the computer: 5 + 3. What does it say?",
+          "options": [
+            {
+              "text": "Maybe 8, maybe 7 -- depends on its mood.",
+              "correct": false
+            },
+            {
+              "text": "It refuses unless paid in stickers.",
+              "correct": false
+            },
+            {
+              "text": "It tells a joke instead.",
+              "correct": false
+            },
+            {
+              "text": "8, instantly.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey asks the computer: 5 + 3. What does it say?",
+          "options": [
+            {
+              "text": "8, instantly.",
+              "correct": true
+            },
+            {
+              "text": "It tells a joke instead.",
+              "correct": false
+            },
+            {
+              "text": "It refuses unless paid in stickers.",
+              "correct": false
+            },
+            {
+              "text": "Maybe 8, maybe 7 -- depends on its mood.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey asks the computer: 5 + 3. What does it say?",
+          "options": [
+            {
+              "text": "Maybe 8, maybe 7 -- depends on its mood.",
+              "correct": false
+            },
+            {
+              "text": "It refuses unless paid in stickers.",
+              "correct": false
+            },
+            {
+              "text": "It tells a joke instead.",
+              "correct": false
+            },
+            {
+              "text": "8, instantly.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

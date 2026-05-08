@@ -55,14 +55,27 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "type-this-word",
+        "type": "click-the-thing",
         "payload": {
-          "prompt": "Type IT and press Send to keep going!",
-          "target_display": "IT",
-          "targets": [
-            "it"
-          ],
-          "hint_wrong": "Type the word IT (any case is fine)."
+          "prompt": "Coin gives score but stays forever. Pick the fix:",
+          "choices": [
+            {
+              "label": "Make the coin smaller",
+              "right": false
+            },
+            {
+              "label": "Remove the coin from the world after pickup",
+              "right": true
+            },
+            {
+              "label": "Add more coins",
+              "right": false
+            },
+            {
+              "label": "Make the coin sing",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -70,11 +83,11 @@
           "prompt": "What is iter 3: coins and score?",
           "options": [
             {
-              "text": "Coins are afraid of the letter Q.",
+              "text": "Score only counts on the player's birthday.",
               "correct": false
             },
             {
-              "text": "Coins take points away — they're greedy.",
+              "text": "Score is invisible by treaty.",
               "correct": false
             },
             {
@@ -92,7 +105,7 @@
           "prompt": "Quick! Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
-              "text": "Coins can only be picked up by sneezing.",
+              "text": "Coins stay forever — collect them weekly.",
               "correct": false
             },
             {
@@ -104,7 +117,7 @@
               "correct": false
             },
             {
-              "text": "Score is invisible by treaty.",
+              "text": "Each coin must be unique and have a name.",
               "correct": false
             }
           ],
@@ -114,11 +127,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
-              "text": "More coins means more reasons to explore.",
+              "text": "A coin gives points when touched.",
               "correct": false
             },
             {
-              "text": "Coins teach the player where to go.",
+              "text": "More coins means more reasons to explore.",
               "correct": false
             },
             {
@@ -126,7 +139,7 @@
               "correct": true
             },
             {
-              "text": "A coin gives points when touched.",
+              "text": "Pickups make a game feel alive.",
               "correct": false
             }
           ],
@@ -136,11 +149,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 3: coins and score. What should he say?",
           "options": [
             {
-              "text": "Coins are silent always (sad).",
+              "text": "Each coin must be unique and have a name.",
               "correct": false
             },
             {
-              "text": "Coins stay forever — collect them weekly.",
+              "text": "Coins are silent always (sad).",
               "correct": false
             },
             {
@@ -148,7 +161,7 @@
               "correct": true
             },
             {
-              "text": "Coins make exploring boring.",
+              "text": "Coins take points away — they're greedy.",
               "correct": false
             }
           ],
@@ -158,11 +171,11 @@
           "prompt": "Tell me — Which rule about iter 3: coins and score is a GOOD rule?",
           "options": [
             {
-              "text": "Coins are silent always (sad).",
+              "text": "Score only counts on the player's birthday.",
               "correct": false
             },
             {
-              "text": "Coins are afraid of the letter Q.",
+              "text": "Coins stay forever — collect them weekly.",
               "correct": false
             },
             {
@@ -170,11 +183,116 @@
               "correct": true
             },
             {
-              "text": "Coins stay forever — collect them weekly.",
+              "text": "Coins are silent always (sad).",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_52_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about iter 3: coins and score, ___",
+          "options": [
+            {
+              "text": "Coins are afraid of the letter Q.",
+              "correct": false
+            },
+            {
+              "text": "Coins should be visible from a distance.",
+              "correct": true
+            },
+            {
+              "text": "Coins must be made of real metal.",
+              "correct": false
+            },
+            {
+              "text": "Coins make exploring boring.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about iter 3: coins and score. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": false
+            },
+            {
+              "text": "Coins make a happy sound.",
+              "correct": false
+            },
+            {
+              "text": "Coins refuse to count on weekends.",
+              "correct": true
+            },
+            {
+              "text": "Coins should be visible from a distance.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Coins take points away — they're greedy.",
+              "correct": false
+            },
+            {
+              "text": "Coins can only be picked up by sneezing.",
+              "correct": false
+            },
+            {
+              "text": "Pickups make a game feel alive.",
+              "correct": true
+            },
+            {
+              "text": "Coins are silent always (sad).",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about iter 3: coins and score is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Iteration 3 adds COINS and SCORE -- reasons to keep playing.",
+              "correct": false
+            },
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": false
+            },
+            {
+              "text": "Coins should be visible from a distance.",
+              "correct": false
+            },
+            {
+              "text": "Coins must be made of real metal.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about iter 3: coins and score. Which fact would help him?",
+          "options": [
+            {
+              "text": "Hero touches a coin -> score goes up -> coin disappears.",
+              "correct": true
+            },
+            {
+              "text": "Coins can only be picked up by sneezing.",
+              "correct": false
+            },
+            {
+              "text": "Coins refuse to count on weekends.",
+              "correct": false
+            },
+            {
+              "text": "Coins stay forever — collect them weekly.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -301,6 +419,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_52_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Hero touches a coin. What three things happen?",
+          "options": [
+            {
+              "text": "Coin grows wings and flies off in a huff.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up, coin disappears, a happy sound plays.",
+              "correct": true
+            },
+            {
+              "text": "Hero apologizes for stepping on the coin.",
+              "correct": false
+            },
+            {
+              "text": "Game pauses for a TED talk.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Hero touches a coin. What three things happen?",
+          "options": [
+            {
+              "text": "Hero apologizes for stepping on the coin.",
+              "correct": false
+            },
+            {
+              "text": "Coin grows wings and flies off in a huff.",
+              "correct": false
+            },
+            {
+              "text": "Game pauses for a TED talk.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up, coin disappears, a happy sound plays.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Hero touches a coin. What three things happen?",
+          "options": [
+            {
+              "text": "Hero apologizes for stepping on the coin.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up, coin disappears, a happy sound plays.",
+              "correct": true
+            },
+            {
+              "text": "Coin grows wings and flies off in a huff.",
+              "correct": false
+            },
+            {
+              "text": "Game pauses for a TED talk.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Hero touches a coin. What three things happen?",
+          "options": [
+            {
+              "text": "Game pauses for a TED talk.",
+              "correct": false
+            },
+            {
+              "text": "Hero apologizes for stepping on the coin.",
+              "correct": false
+            },
+            {
+              "text": "Coin grows wings and flies off in a huff.",
+              "correct": false
+            },
+            {
+              "text": "Score goes up, coin disappears, a happy sound plays.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Hero touches a coin. What three things happen?",
+          "options": [
+            {
+              "text": "Score goes up, coin disappears, a happy sound plays.",
+              "correct": true
+            },
+            {
+              "text": "Coin grows wings and flies off in a huff.",
+              "correct": false
+            },
+            {
+              "text": "Hero apologizes for stepping on the coin.",
+              "correct": false
+            },
+            {
+              "text": "Game pauses for a TED talk.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -309,12 +532,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -427,6 +650,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_52_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why visible from a distance?",
+          "options": [
+            {
+              "text": "So the wifi can see them.",
+              "correct": false
+            },
+            {
+              "text": "Coins guide the player toward fun areas.",
+              "correct": true
+            },
+            {
+              "text": "Coins are vain.",
+              "correct": false
+            },
+            {
+              "text": "To intimidate other coins.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why visible from a distance?",
+          "options": [
+            {
+              "text": "Coins are vain.",
+              "correct": false
+            },
+            {
+              "text": "To intimidate other coins.",
+              "correct": false
+            },
+            {
+              "text": "So the wifi can see them.",
+              "correct": false
+            },
+            {
+              "text": "Coins guide the player toward fun areas.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why visible from a distance?",
+          "options": [
+            {
+              "text": "So the wifi can see them.",
+              "correct": false
+            },
+            {
+              "text": "Coins guide the player toward fun areas.",
+              "correct": true
+            },
+            {
+              "text": "Coins are vain.",
+              "correct": false
+            },
+            {
+              "text": "To intimidate other coins.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why visible from a distance?",
+          "options": [
+            {
+              "text": "Coins are vain.",
+              "correct": false
+            },
+            {
+              "text": "So the wifi can see them.",
+              "correct": false
+            },
+            {
+              "text": "To intimidate other coins.",
+              "correct": false
+            },
+            {
+              "text": "Coins guide the player toward fun areas.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why visible from a distance?",
+          "options": [
+            {
+              "text": "So the wifi can see them.",
+              "correct": false
+            },
+            {
+              "text": "Coins are vain.",
+              "correct": false
+            },
+            {
+              "text": "To intimidate other coins.",
+              "correct": false
+            },
+            {
+              "text": "Coins guide the player toward fun areas.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -435,12 +763,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "fun"
+            "cool"
           ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -448,19 +776,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
-              "text": "Coins teach the player where to go.",
+              "text": "A coin gives points when touched.",
               "correct": false
             },
             {
-              "text": "Coins should be visible from a distance.",
+              "text": "Score gives the player a goal even without enemies.",
               "correct": false
             },
             {
-              "text": "Coins make exploring boring.",
+              "text": "Score only counts on the player's birthday.",
               "correct": true
             },
             {
-              "text": "Score shows on the top of the screen.",
+              "text": "Each coin disappears after pickup.",
               "correct": false
             }
           ],
@@ -470,19 +798,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
-              "text": "Coins make a happy sound.",
+              "text": "Iteration 3 adds COINS and SCORE -- reasons to keep playing.",
               "correct": false
             },
             {
-              "text": "Coins are silent always (sad).",
+              "text": "Each coin must be unique and have a name.",
               "correct": true
             },
             {
-              "text": "Coins teach the player where to go.",
+              "text": "A coin gives points when touched.",
               "correct": false
             },
             {
-              "text": "Score shows on the top of the screen.",
+              "text": "Pick how many points each coin is worth.",
               "correct": false
             }
           ],
@@ -492,19 +820,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
-              "text": "Score shows on the top of the screen.",
+              "text": "Each coin disappears after pickup.",
               "correct": false
             },
             {
-              "text": "Coins teach the player where to go.",
+              "text": "Score gives the player a goal even without enemies.",
               "correct": false
             },
             {
-              "text": "Coins can only be picked up by sneezing.",
+              "text": "Score is invisible until the game ends.",
               "correct": true
             },
             {
-              "text": "Each coin disappears after pickup.",
+              "text": "A coin gives points when touched.",
               "correct": false
             }
           ],
@@ -514,11 +842,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
+              "text": "Coins teach the player where to go.",
+              "correct": false
+            },
+            {
+              "text": "Iteration 3 adds COINS and SCORE -- reasons to keep playing.",
+              "correct": false
+            },
+            {
+              "text": "Coins take points away — they're greedy.",
+              "correct": true
+            },
+            {
+              "text": "Coins make a happy sound.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_52_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
               "text": "Pickups make a game feel alive.",
               "correct": false
             },
             {
+              "text": "More coins means more reasons to explore.",
+              "correct": false
+            },
+            {
+              "text": "Score gives the player a goal even without enemies.",
+              "correct": false
+            },
+            {
+              "text": "Score is invisible by treaty.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_52_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "Pick how many points each coin is worth.",
+              "correct": false
+            },
+            {
+              "text": "Coins stay forever — collect them weekly.",
+              "correct": true
+            },
+            {
+              "text": "Hero touches a coin -> score goes up -> coin disappears.",
+              "correct": false
+            },
+            {
               "text": "Coins teach the player where to go.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "Iteration 3 adds COINS and SCORE -- reasons to keep playing.",
+              "correct": false
+            },
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": false
+            },
+            {
+              "text": "Coins make exploring boring.",
+              "correct": true
+            },
+            {
+              "text": "Each coin disappears after pickup.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "A coin gives points when touched.",
+              "correct": false
+            },
+            {
+              "text": "Pickups make a game feel alive.",
+              "correct": false
+            },
+            {
+              "text": "Pick how many points each coin is worth.",
+              "correct": false
+            },
+            {
+              "text": "Coins are silent always (sad).",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "Coins can only be picked up by sneezing.",
+              "correct": true
+            },
+            {
+              "text": "Each coin disappears after pickup.",
+              "correct": false
+            },
+            {
+              "text": "Coins should be visible from a distance.",
+              "correct": false
+            },
+            {
+              "text": "Score shows on the top of the screen.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 3: coins and score.",
+          "options": [
+            {
+              "text": "Hero touches a coin -> score goes up -> coin disappears.",
               "correct": false
             },
             {
@@ -526,33 +978,14 @@
               "correct": true
             },
             {
-              "text": "Coins should be visible from a distance.",
+              "text": "Coins make a happy sound.",
+              "correct": false
+            },
+            {
+              "text": "Score gives the player a goal even without enemies.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_52_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about iter 3: coins and score.",
-          "options": [
-            {
-              "text": "Coins teach the player where to go.",
-              "correct": false
-            },
-            {
-              "text": "Pickups make a game feel alive.",
-              "correct": false
-            },
-            {
-              "text": "Each coin disappears after pickup.",
-              "correct": false
-            },
-            {
-              "text": "Coins are afraid of the letter Q.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_52_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -561,12 +994,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type RUN and press Send to keep going!",
-          "target_display": "RUN",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "run"
+            "next"
           ],
-          "hint_wrong": "Type the word RUN (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -574,19 +1007,19 @@
           "prompt": "Tell me — Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
+              "text": "Coins stay forever — collect them weekly.",
+              "correct": false
+            },
+            {
+              "text": "Each coin must be unique and have a name.",
+              "correct": false
+            },
+            {
               "text": "Coins take points away — they're greedy.",
               "correct": false
             },
             {
-              "text": "Score is invisible by treaty.",
-              "correct": false
-            },
-            {
-              "text": "Coins can only be picked up by sneezing.",
-              "correct": false
-            },
-            {
-              "text": "Coins make a happy sound.",
+              "text": "A coin gives points when touched.",
               "correct": true
             }
           ],
@@ -604,11 +1037,11 @@
               "correct": false
             },
             {
-              "text": "Coins should be visible from a distance.",
+              "text": "Score shows on the top of the screen.",
               "correct": true
             },
             {
-              "text": "Coins make exploring boring.",
+              "text": "Coins must be made of real metal.",
               "correct": false
             }
           ],
@@ -618,27 +1051,121 @@
           "prompt": "Pop quiz! Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
-              "text": "Coins teach the player where to go.",
+              "text": "Each coin disappears after pickup.",
               "correct": true
             },
             {
-              "text": "Coins take points away — they're greedy.",
-              "correct": false
-            },
-            {
-              "text": "Coins make exploring boring.",
-              "correct": false
-            },
-            {
               "text": "Coins are silent always (sad).",
+              "correct": false
+            },
+            {
+              "text": "Coins are afraid of the letter Q.",
+              "correct": false
+            },
+            {
+              "text": "Score is invisible by treaty.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_52_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Score only counts on the player's birthday.",
+              "correct": false
+            },
+            {
+              "text": "More coins means more reasons to explore.",
+              "correct": true
+            },
+            {
+              "text": "Coins must be made of real metal.",
+              "correct": false
+            },
+            {
+              "text": "Coins are afraid of the letter Q.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_52_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Coins make a happy sound.",
+              "correct": true
+            },
+            {
+              "text": "Coins refuse to count on weekends.",
+              "correct": false
+            },
+            {
+              "text": "Coins are silent always (sad).",
+              "correct": false
+            },
+            {
+              "text": "Score is invisible until the game ends.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_52_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Coins should be visible from a distance.",
+              "correct": true
+            },
+            {
+              "text": "Coins refuse to count on weekends.",
+              "correct": false
+            },
+            {
+              "text": "Coins take points away — they're greedy.",
+              "correct": false
+            },
+            {
+              "text": "Score is invisible by treaty.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Coins make exploring boring.",
+              "correct": false
+            },
+            {
+              "text": "Coins take points away — they're greedy.",
+              "correct": false
+            },
+            {
+              "text": "Coins teach the player where to go.",
+              "correct": true
+            },
+            {
+              "text": "Coins stay forever — collect them weekly.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about iter 3: coins and score?",
           "options": [
+            {
+              "text": "Coins take points away — they're greedy.",
+              "correct": false
+            },
+            {
+              "text": "Coins refuse to count on weekends.",
+              "correct": false
+            },
             {
               "text": "Coins are silent always (sad).",
               "correct": false
@@ -646,39 +1173,50 @@
             {
               "text": "Pickups make a game feel alive.",
               "correct": true
-            },
-            {
-              "text": "Coins take points away — they're greedy.",
-              "correct": false
-            },
-            {
-              "text": "Coins can only be picked up by sneezing.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_52_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
-              "text": "A coin gives points when touched.",
+              "text": "Score is invisible until the game ends.",
+              "correct": false
+            },
+            {
+              "text": "Coins make exploring boring.",
+              "correct": false
+            },
+            {
+              "text": "Coins are silent always (sad).",
+              "correct": false
+            },
+            {
+              "text": "Iteration 3 adds COINS and SCORE -- reasons to keep playing.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 3: coins and score?",
+          "options": [
+            {
+              "text": "Score only counts on the player's birthday.",
+              "correct": false
+            },
+            {
+              "text": "Each coin must be unique and have a name.",
+              "correct": false
             },
             {
               "text": "Score is invisible by treaty.",
               "correct": false
             },
             {
-              "text": "Coins can only be picked up by sneezing.",
-              "correct": false
-            },
-            {
-              "text": "Coins make exploring boring.",
-              "correct": false
+              "text": "Hero touches a coin -> score goes up -> coin disappears.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_52_q5_v4.wav"
+          ]
         }
       ]
     }

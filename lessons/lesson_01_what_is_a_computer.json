@@ -48,14 +48,27 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "type-this-word",
+        "type": "click-the-thing",
         "payload": {
-          "prompt": "Type GO and press Send to keep going!",
-          "target_display": "GO",
-          "targets": [
-            "go"
-          ],
-          "hint_wrong": "Type the word GO (any case is fine)."
+          "prompt": "Which one is a computer?",
+          "choices": [
+            {
+              "label": "🍎 Apple",
+              "right": false
+            },
+            {
+              "label": "💻 Laptop",
+              "right": true
+            },
+            {
+              "label": "🐶 Dog",
+              "right": false
+            },
+            {
+              "label": "🌳 Tree",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -63,11 +76,11 @@
           "prompt": "What is a computer?",
           "options": [
             {
-              "text": "A computer is filled with tiny bees that do the math.",
+              "text": "Computers prefer when you whisper instead of type.",
               "correct": false
             },
             {
-              "text": "A computer can read your mind through your ears.",
+              "text": "A computer is a kind of small noisy tree.",
               "correct": false
             },
             {
@@ -85,7 +98,7 @@
           "prompt": "Quick! Which one is TRUE about a computer?",
           "options": [
             {
-              "text": "Computers eat one cookie every Tuesday for fuel.",
+              "text": "A computer always knows what is best for you.",
               "correct": false
             },
             {
@@ -97,7 +110,7 @@
               "correct": false
             },
             {
-              "text": "A computer is a kind of small noisy tree.",
+              "text": "A computer needs a tiny pillow before it will work.",
               "correct": false
             }
           ],
@@ -107,11 +120,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about a computer.",
           "options": [
             {
-              "text": "Computers do not guess what we want.",
+              "text": "A computer is a smart helper.",
               "correct": false
             },
             {
-              "text": "Computers help us write, draw, and play.",
+              "text": "Computers do not guess what we want.",
               "correct": false
             },
             {
@@ -119,7 +132,7 @@
               "correct": true
             },
             {
-              "text": "A computer is a smart helper.",
+              "text": "A computer needs power to wake up.",
               "correct": false
             }
           ],
@@ -129,11 +142,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about a computer. What should he say?",
           "options": [
             {
-              "text": "A computer grows on a farm next to the carrots.",
+              "text": "A computer needs a tiny pillow before it will work.",
               "correct": false
             },
             {
-              "text": "A computer always knows what is best for you.",
+              "text": "A computer grows on a farm next to the carrots.",
               "correct": false
             },
             {
@@ -141,7 +154,7 @@
               "correct": true
             },
             {
-              "text": "Computers feel sad when you turn them off and cry oil.",
+              "text": "A computer can read your mind through your ears.",
               "correct": false
             }
           ],
@@ -151,11 +164,11 @@
           "prompt": "Tell me — Which rule about a computer is a GOOD rule?",
           "options": [
             {
-              "text": "A computer grows on a farm next to the carrots.",
+              "text": "Computers prefer when you whisper instead of type.",
               "correct": false
             },
             {
-              "text": "A computer is filled with tiny bees that do the math.",
+              "text": "A computer always knows what is best for you.",
               "correct": false
             },
             {
@@ -163,11 +176,116 @@
               "correct": true
             },
             {
-              "text": "A computer always knows what is best for you.",
+              "text": "A computer grows on a farm next to the carrots.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_01_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about a computer, ___",
+          "options": [
+            {
+              "text": "A computer is filled with tiny bees that do the math.",
+              "correct": false
+            },
+            {
+              "text": "Computers can do math really fast.",
+              "correct": true
+            },
+            {
+              "text": "A computer can sniff your snacks from another room.",
+              "correct": false
+            },
+            {
+              "text": "Computers feel sad when you turn them off and cry oil.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about a computer. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": false
+            },
+            {
+              "text": "A phone is a tiny computer in your pocket.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a real puppy with a glass face.",
+              "correct": true
+            },
+            {
+              "text": "Computers can do math really fast.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with a computer?",
+          "options": [
+            {
+              "text": "A computer can read your mind through your ears.",
+              "correct": false
+            },
+            {
+              "text": "Computers eat one cookie every Tuesday for fuel.",
+              "correct": false
+            },
+            {
+              "text": "A computer needs power to wake up.",
+              "correct": true
+            },
+            {
+              "text": "A computer grows on a farm next to the carrots.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about a computer is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "A computer follows tiny steps super, super fast.",
+              "correct": false
+            },
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": false
+            },
+            {
+              "text": "Computers can do math really fast.",
+              "correct": false
+            },
+            {
+              "text": "A computer can sniff your snacks from another room.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about a computer. Which fact would help him?",
+          "options": [
+            {
+              "text": "Most computers can't do anything until you give them power.",
+              "correct": true
+            },
+            {
+              "text": "Computers eat one cookie every Tuesday for fuel.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a real puppy with a glass face.",
+              "correct": false
+            },
+            {
+              "text": "A computer always knows what is best for you.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -176,12 +294,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type OK and press Send to keep going!",
-          "target_display": "OK",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "ok"
+            "yes"
           ],
-          "hint_wrong": "Type the word OK (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -294,6 +412,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_01_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey wants to write a story but his hands are cold. Which thing is a computer that could help?",
+          "options": [
+            {
+              "text": "A laptop with a keyboard.",
+              "correct": true
+            },
+            {
+              "text": "A grumpy potato.",
+              "correct": false
+            },
+            {
+              "text": "A loaf of bread.",
+              "correct": false
+            },
+            {
+              "text": "A balloon shaped like a duck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey wants to write a story but his hands are cold. Which thing is a computer that could help?",
+          "options": [
+            {
+              "text": "A laptop with a keyboard.",
+              "correct": true
+            },
+            {
+              "text": "A loaf of bread.",
+              "correct": false
+            },
+            {
+              "text": "A grumpy potato.",
+              "correct": false
+            },
+            {
+              "text": "A balloon shaped like a duck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey wants to write a story but his hands are cold. Which thing is a computer that could help?",
+          "options": [
+            {
+              "text": "A grumpy potato.",
+              "correct": false
+            },
+            {
+              "text": "A balloon shaped like a duck.",
+              "correct": false
+            },
+            {
+              "text": "A loaf of bread.",
+              "correct": false
+            },
+            {
+              "text": "A laptop with a keyboard.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey wants to write a story but his hands are cold. Which thing is a computer that could help?",
+          "options": [
+            {
+              "text": "A loaf of bread.",
+              "correct": false
+            },
+            {
+              "text": "A laptop with a keyboard.",
+              "correct": true
+            },
+            {
+              "text": "A grumpy potato.",
+              "correct": false
+            },
+            {
+              "text": "A balloon shaped like a duck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey wants to write a story but his hands are cold. Which thing is a computer that could help?",
+          "options": [
+            {
+              "text": "A grumpy potato.",
+              "correct": false
+            },
+            {
+              "text": "A loaf of bread.",
+              "correct": false
+            },
+            {
+              "text": "A balloon shaped like a duck.",
+              "correct": false
+            },
+            {
+              "text": "A laptop with a keyboard.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -302,12 +525,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -420,6 +643,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_01_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your friend says: 'My toaster is a computer because it has a screen.' Is that right?",
+          "options": [
+            {
+              "text": "Only if the toast is square.",
+              "correct": false
+            },
+            {
+              "text": "Yes! Every screen is a computer with a hat.",
+              "correct": false
+            },
+            {
+              "text": "Only on the third Friday of the month.",
+              "correct": false
+            },
+            {
+              "text": "Not really — a screen does not make something a computer.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your friend says: 'My toaster is a computer because it has a screen.' Is that right?",
+          "options": [
+            {
+              "text": "Only on the third Friday of the month.",
+              "correct": false
+            },
+            {
+              "text": "Only if the toast is square.",
+              "correct": false
+            },
+            {
+              "text": "Not really — a screen does not make something a computer.",
+              "correct": true
+            },
+            {
+              "text": "Yes! Every screen is a computer with a hat.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your friend says: 'My toaster is a computer because it has a screen.' Is that right?",
+          "options": [
+            {
+              "text": "Not really — a screen does not make something a computer.",
+              "correct": true
+            },
+            {
+              "text": "Yes! Every screen is a computer with a hat.",
+              "correct": false
+            },
+            {
+              "text": "Only on the third Friday of the month.",
+              "correct": false
+            },
+            {
+              "text": "Only if the toast is square.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your friend says: 'My toaster is a computer because it has a screen.' Is that right?",
+          "options": [
+            {
+              "text": "Yes! Every screen is a computer with a hat.",
+              "correct": false
+            },
+            {
+              "text": "Not really — a screen does not make something a computer.",
+              "correct": true
+            },
+            {
+              "text": "Only on the third Friday of the month.",
+              "correct": false
+            },
+            {
+              "text": "Only if the toast is square.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your friend says: 'My toaster is a computer because it has a screen.' Is that right?",
+          "options": [
+            {
+              "text": "Not really — a screen does not make something a computer.",
+              "correct": true
+            },
+            {
+              "text": "Yes! Every screen is a computer with a hat.",
+              "correct": false
+            },
+            {
+              "text": "Only on the third Friday of the month.",
+              "correct": false
+            },
+            {
+              "text": "Only if the toast is square.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -428,12 +756,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type ME and press Send to keep going!",
-          "target_display": "ME",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "me"
+            "cool"
           ],
-          "hint_wrong": "Type the word ME (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -441,19 +769,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about a computer.",
           "options": [
             {
-              "text": "Computers help us write, draw, and play.",
+              "text": "A computer is a smart helper.",
               "correct": false
             },
             {
-              "text": "Computers can do math really fast.",
+              "text": "When you click a button, the computer does many tiny jobs at once.",
               "correct": false
             },
             {
-              "text": "Computers feel sad when you turn them off and cry oil.",
+              "text": "Computers prefer when you whisper instead of type.",
               "correct": true
             },
             {
-              "text": "A computer only does what we tell it.",
+              "text": "A laptop is a kind of computer.",
               "correct": false
             }
           ],
@@ -463,19 +791,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about a computer.",
           "options": [
             {
-              "text": "A phone is a tiny computer in your pocket.",
+              "text": "A computer follows tiny steps super, super fast.",
               "correct": false
             },
             {
-              "text": "A computer grows on a farm next to the carrots.",
+              "text": "A computer needs a tiny pillow before it will work.",
               "correct": true
             },
             {
-              "text": "Computers help us write, draw, and play.",
+              "text": "A computer is a smart helper.",
               "correct": false
             },
             {
-              "text": "A computer only does what we tell it.",
+              "text": "A computer never gets bored even if you ask it the same thing all day.",
               "correct": false
             }
           ],
@@ -485,19 +813,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about a computer.",
           "options": [
             {
-              "text": "A computer only does what we tell it.",
+              "text": "A laptop is a kind of computer.",
               "correct": false
             },
             {
-              "text": "Computers help us write, draw, and play.",
+              "text": "When you click a button, the computer does many tiny jobs at once.",
               "correct": false
             },
             {
-              "text": "Computers eat one cookie every Tuesday for fuel.",
+              "text": "A computer grows new keys overnight if you forget to feed it.",
               "correct": true
             },
             {
-              "text": "A laptop is a kind of computer.",
+              "text": "A computer is a smart helper.",
               "correct": false
             }
           ],
@@ -507,11 +835,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about a computer.",
           "options": [
             {
+              "text": "Computers help us write, draw, and play.",
+              "correct": false
+            },
+            {
+              "text": "A computer follows tiny steps super, super fast.",
+              "correct": false
+            },
+            {
+              "text": "A computer can read your mind through your ears.",
+              "correct": true
+            },
+            {
+              "text": "A phone is a tiny computer in your pocket.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_01_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
               "text": "A computer needs power to wake up.",
               "correct": false
             },
             {
+              "text": "Computers do not guess what we want.",
+              "correct": false
+            },
+            {
+              "text": "When you click a button, the computer does many tiny jobs at once.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a kind of small noisy tree.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_01_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "A computer never gets bored even if you ask it the same thing all day.",
+              "correct": false
+            },
+            {
+              "text": "A computer always knows what is best for you.",
+              "correct": true
+            },
+            {
+              "text": "Most computers can't do anything until you give them power.",
+              "correct": false
+            },
+            {
               "text": "Computers help us write, draw, and play.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "A computer follows tiny steps super, super fast.",
+              "correct": false
+            },
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": false
+            },
+            {
+              "text": "Computers feel sad when you turn them off and cry oil.",
+              "correct": true
+            },
+            {
+              "text": "A laptop is a kind of computer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "A computer is a smart helper.",
+              "correct": false
+            },
+            {
+              "text": "A computer needs power to wake up.",
+              "correct": false
+            },
+            {
+              "text": "A computer never gets bored even if you ask it the same thing all day.",
+              "correct": false
+            },
+            {
+              "text": "A computer grows on a farm next to the carrots.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "Computers eat one cookie every Tuesday for fuel.",
+              "correct": true
+            },
+            {
+              "text": "A laptop is a kind of computer.",
+              "correct": false
+            },
+            {
+              "text": "Computers can do math really fast.",
+              "correct": false
+            },
+            {
+              "text": "A computer only does what we tell it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about a computer.",
+          "options": [
+            {
+              "text": "Most computers can't do anything until you give them power.",
               "correct": false
             },
             {
@@ -519,33 +971,14 @@
               "correct": true
             },
             {
-              "text": "Computers can do math really fast.",
+              "text": "A phone is a tiny computer in your pocket.",
+              "correct": false
+            },
+            {
+              "text": "When you click a button, the computer does many tiny jobs at once.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_01_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about a computer.",
-          "options": [
-            {
-              "text": "Computers help us write, draw, and play.",
-              "correct": false
-            },
-            {
-              "text": "A computer needs power to wake up.",
-              "correct": false
-            },
-            {
-              "text": "A laptop is a kind of computer.",
-              "correct": false
-            },
-            {
-              "text": "A computer is filled with tiny bees that do the math.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_01_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -554,12 +987,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type US and press Send to keep going!",
-          "target_display": "US",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "us"
+            "next"
           ],
-          "hint_wrong": "Type the word US (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -567,19 +1000,19 @@
           "prompt": "Tell me — Which one is TRUE about a computer?",
           "options": [
             {
+              "text": "A computer always knows what is best for you.",
+              "correct": false
+            },
+            {
+              "text": "A computer needs a tiny pillow before it will work.",
+              "correct": false
+            },
+            {
               "text": "A computer can read your mind through your ears.",
               "correct": false
             },
             {
-              "text": "A computer is a kind of small noisy tree.",
-              "correct": false
-            },
-            {
-              "text": "Computers eat one cookie every Tuesday for fuel.",
-              "correct": false
-            },
-            {
-              "text": "A phone is a tiny computer in your pocket.",
+              "text": "A computer is a smart helper.",
               "correct": true
             }
           ],
@@ -597,11 +1030,11 @@
               "correct": false
             },
             {
-              "text": "Computers can do math really fast.",
+              "text": "A computer only does what we tell it.",
               "correct": true
             },
             {
-              "text": "Computers feel sad when you turn them off and cry oil.",
+              "text": "A computer can sniff your snacks from another room.",
               "correct": false
             }
           ],
@@ -611,27 +1044,121 @@
           "prompt": "Pop quiz! Which one is TRUE about a computer?",
           "options": [
             {
-              "text": "Computers help us write, draw, and play.",
+              "text": "A laptop is a kind of computer.",
               "correct": true
             },
             {
-              "text": "A computer can read your mind through your ears.",
-              "correct": false
-            },
-            {
-              "text": "Computers feel sad when you turn them off and cry oil.",
-              "correct": false
-            },
-            {
               "text": "A computer grows on a farm next to the carrots.",
+              "correct": false
+            },
+            {
+              "text": "A computer is filled with tiny bees that do the math.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a kind of small noisy tree.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_01_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "Computers prefer when you whisper instead of type.",
+              "correct": false
+            },
+            {
+              "text": "Computers do not guess what we want.",
+              "correct": true
+            },
+            {
+              "text": "A computer can sniff your snacks from another room.",
+              "correct": false
+            },
+            {
+              "text": "A computer is filled with tiny bees that do the math.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_01_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "A phone is a tiny computer in your pocket.",
+              "correct": true
+            },
+            {
+              "text": "A computer is a real puppy with a glass face.",
+              "correct": false
+            },
+            {
+              "text": "A computer grows on a farm next to the carrots.",
+              "correct": false
+            },
+            {
+              "text": "A computer grows new keys overnight if you forget to feed it.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_01_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "Computers can do math really fast.",
+              "correct": true
+            },
+            {
+              "text": "A computer is a real puppy with a glass face.",
+              "correct": false
+            },
+            {
+              "text": "A computer can read your mind through your ears.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a kind of small noisy tree.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "Computers feel sad when you turn them off and cry oil.",
+              "correct": false
+            },
+            {
+              "text": "A computer can read your mind through your ears.",
+              "correct": false
+            },
+            {
+              "text": "Computers help us write, draw, and play.",
+              "correct": true
+            },
+            {
+              "text": "A computer always knows what is best for you.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about a computer?",
           "options": [
+            {
+              "text": "A computer can read your mind through your ears.",
+              "correct": false
+            },
+            {
+              "text": "A computer is a real puppy with a glass face.",
+              "correct": false
+            },
             {
               "text": "A computer grows on a farm next to the carrots.",
               "correct": false
@@ -639,39 +1166,50 @@
             {
               "text": "A computer needs power to wake up.",
               "correct": true
-            },
-            {
-              "text": "A computer can read your mind through your ears.",
-              "correct": false
-            },
-            {
-              "text": "Computers eat one cookie every Tuesday for fuel.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_01_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about a computer?",
           "options": [
             {
-              "text": "A computer is a smart helper.",
+              "text": "A computer grows new keys overnight if you forget to feed it.",
+              "correct": false
+            },
+            {
+              "text": "Computers feel sad when you turn them off and cry oil.",
+              "correct": false
+            },
+            {
+              "text": "A computer grows on a farm next to the carrots.",
+              "correct": false
+            },
+            {
+              "text": "A computer follows tiny steps super, super fast.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about a computer?",
+          "options": [
+            {
+              "text": "Computers prefer when you whisper instead of type.",
+              "correct": false
+            },
+            {
+              "text": "A computer needs a tiny pillow before it will work.",
+              "correct": false
             },
             {
               "text": "A computer is a kind of small noisy tree.",
               "correct": false
             },
             {
-              "text": "Computers eat one cookie every Tuesday for fuel.",
-              "correct": false
-            },
-            {
-              "text": "Computers feel sad when you turn them off and cry oil.",
-              "correct": false
+              "text": "Most computers can't do anything until you give them power.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_01_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -680,124 +1218,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about a computer. Pick the SILLIEST claim.",
+          "prompt": "Bytey's tablet won't turn on. What's the FIRST thing to check?",
           "options": [
             {
-              "text": "A computer needs power to wake up.",
+              "text": "Is the room loud enough for the tablet?",
               "correct": false
             },
             {
-              "text": "Computers help us write, draw, and play.",
+              "text": "Is the moon full?",
               "correct": false
             },
             {
-              "text": "Computers eat one cookie every Tuesday for fuel.",
+              "text": "Has it had its breakfast yet?",
+              "correct": false
+            },
+            {
+              "text": "Is it plugged in or charged?",
               "correct": true
-            },
-            {
-              "text": "A computer is a smart helper.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_01_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about a computer. Pick the SILLIEST claim.",
+          "prompt": "Quick! Bytey's tablet won't turn on. What's the FIRST thing to check?",
           "options": [
             {
-              "text": "A laptop is a kind of computer.",
+              "text": "Is the moon full?",
               "correct": false
             },
             {
-              "text": "A computer needs power to wake up.",
+              "text": "Is the room loud enough for the tablet?",
               "correct": false
             },
             {
-              "text": "A computer is a real puppy with a glass face.",
+              "text": "Has it had its breakfast yet?",
+              "correct": false
+            },
+            {
+              "text": "Is it plugged in or charged?",
               "correct": true
-            },
-            {
-              "text": "A computer only does what we tell it.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_01_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about a computer. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Bytey's tablet won't turn on. What's the FIRST thing to check?",
           "options": [
             {
-              "text": "Computers do not guess what we want.",
+              "text": "Is the moon full?",
               "correct": false
             },
             {
-              "text": "A computer is filled with tiny bees that do the math.",
+              "text": "Is the room loud enough for the tablet?",
+              "correct": false
+            },
+            {
+              "text": "Is it plugged in or charged?",
               "correct": true
             },
             {
-              "text": "A computer needs power to wake up.",
-              "correct": false
-            },
-            {
-              "text": "A computer is a smart helper.",
+              "text": "Has it had its breakfast yet?",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_01_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about a computer. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Bytey's tablet won't turn on. What's the FIRST thing to check?",
           "options": [
             {
-              "text": "A computer is a smart helper.",
+              "text": "Has it had its breakfast yet?",
               "correct": false
             },
             {
-              "text": "A computer only does what we tell it.",
+              "text": "Is the moon full?",
               "correct": false
             },
             {
-              "text": "Computers can do math really fast.",
+              "text": "Is the room loud enough for the tablet?",
               "correct": false
             },
             {
-              "text": "A computer can read your mind through your ears.",
+              "text": "Is it plugged in or charged?",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_01_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about a computer. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Bytey's tablet won't turn on. What's the FIRST thing to check?",
           "options": [
             {
-              "text": "A computer is a kind of small noisy tree.",
+              "text": "Is the room loud enough for the tablet?",
+              "correct": false
+            },
+            {
+              "text": "Is the moon full?",
+              "correct": false
+            },
+            {
+              "text": "Has it had its breakfast yet?",
+              "correct": false
+            },
+            {
+              "text": "Is it plugged in or charged?",
               "correct": true
-            },
-            {
-              "text": "Computers help us write, draw, and play.",
-              "correct": false
-            },
-            {
-              "text": "A computer is a smart helper.",
-              "correct": false
-            },
-            {
-              "text": "Computers can do math really fast.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_01_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey's tablet won't turn on. What's the FIRST thing to check?",
+          "options": [
+            {
+              "text": "Is the moon full?",
+              "correct": false
+            },
+            {
+              "text": "Is it plugged in or charged?",
+              "correct": true
+            },
+            {
+              "text": "Is the room loud enough for the tablet?",
+              "correct": false
+            },
+            {
+              "text": "Has it had its breakfast yet?",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey's tablet won't turn on. What's the FIRST thing to check?",
+          "options": [
+            {
+              "text": "Is it plugged in or charged?",
+              "correct": true
+            },
+            {
+              "text": "Has it had its breakfast yet?",
+              "correct": false
+            },
+            {
+              "text": "Is the moon full?",
+              "correct": false
+            },
+            {
+              "text": "Is the room loud enough for the tablet?",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey's tablet won't turn on. What's the FIRST thing to check?",
+          "options": [
+            {
+              "text": "Is it plugged in or charged?",
+              "correct": true
+            },
+            {
+              "text": "Has it had its breakfast yet?",
+              "correct": false
+            },
+            {
+              "text": "Is the room loud enough for the tablet?",
+              "correct": false
+            },
+            {
+              "text": "Is the moon full?",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey's tablet won't turn on. What's the FIRST thing to check?",
+          "options": [
+            {
+              "text": "Is the moon full?",
+              "correct": false
+            },
+            {
+              "text": "Is it plugged in or charged?",
+              "correct": true
+            },
+            {
+              "text": "Is the room loud enough for the tablet?",
+              "correct": false
+            },
+            {
+              "text": "Has it had its breakfast yet?",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey's tablet won't turn on. What's the FIRST thing to check?",
+          "options": [
+            {
+              "text": "Is the room loud enough for the tablet?",
+              "correct": false
+            },
+            {
+              "text": "Is the moon full?",
+              "correct": false
+            },
+            {
+              "text": "Has it had its breakfast yet?",
+              "correct": false
+            },
+            {
+              "text": "Is it plugged in or charged?",
+              "correct": true
+            }
+          ]
         }
       ]
     }

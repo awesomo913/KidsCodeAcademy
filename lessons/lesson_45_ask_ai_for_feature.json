@@ -55,7 +55,7 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "cursor-mini",
+        "type": "click-the-thing",
         "payload": {
           "prompt": "Which message asks Claude best for a new feature?",
           "choices": [
@@ -83,11 +83,11 @@
           "prompt": "What is asking AI for a feature?",
           "options": [
             {
-              "text": "Use only emoji to describe the feature.",
+              "text": "AI features only stay for 30 seconds.",
               "correct": false
             },
             {
-              "text": "Be vague about everything — surprise yourself.",
+              "text": "Hide the file from the helper — playing hide and seek.",
               "correct": false
             },
             {
@@ -105,7 +105,7 @@
           "prompt": "Quick! Which one is TRUE about asking AI for a feature?",
           "options": [
             {
-              "text": "Each feature must include a haiku.",
+              "text": "Skip testing the new feature — gut feel only.",
               "correct": false
             },
             {
@@ -117,7 +117,7 @@
               "correct": false
             },
             {
-              "text": "Hide the file from the helper — playing hide and seek.",
+              "text": "AI charges $1 per feature.",
               "correct": false
             }
           ],
@@ -127,11 +127,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
-              "text": "Test the new feature after you add it.",
+              "text": "Be clear about what you want to add.",
               "correct": false
             },
             {
-              "text": "Mention what to NOT change.",
+              "text": "Test the new feature after you add it.",
               "correct": false
             },
             {
@@ -139,7 +139,7 @@
               "correct": true
             },
             {
-              "text": "Be clear about what you want to add.",
+              "text": "Add an example output if you can.",
               "correct": false
             }
           ],
@@ -149,11 +149,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about asking AI for a feature. What should he say?",
           "options": [
             {
-              "text": "Helpers like giant features only — small ones bore them.",
+              "text": "AI charges $1 per feature.",
               "correct": false
             },
             {
-              "text": "Skip testing the new feature — gut feel only.",
+              "text": "Helpers like giant features only — small ones bore them.",
               "correct": false
             },
             {
@@ -161,7 +161,7 @@
               "correct": true
             },
             {
-              "text": "Add ten features at once and pray.",
+              "text": "Be vague about everything — surprise yourself.",
               "correct": false
             }
           ],
@@ -171,11 +171,11 @@
           "prompt": "Tell me — Which rule about asking AI for a feature is a GOOD rule?",
           "options": [
             {
-              "text": "Helpers like giant features only — small ones bore them.",
+              "text": "AI features only stay for 30 seconds.",
               "correct": false
             },
             {
-              "text": "Use only emoji to describe the feature.",
+              "text": "Skip testing the new feature — gut feel only.",
               "correct": false
             },
             {
@@ -183,11 +183,116 @@
               "correct": true
             },
             {
-              "text": "Skip testing the new feature — gut feel only.",
+              "text": "Helpers like giant features only — small ones bore them.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_45_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about asking AI for a feature, ___",
+          "options": [
+            {
+              "text": "Use only emoji to describe the feature.",
+              "correct": false
+            },
+            {
+              "text": "Tell the helper what 'done' looks like.",
+              "correct": true
+            },
+            {
+              "text": "Yell at the AI until it adds the feature.",
+              "correct": false
+            },
+            {
+              "text": "Add ten features at once and pray.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Test the new feature after you add it.",
+              "correct": false
+            },
+            {
+              "text": "Helpers do best with small features.",
+              "correct": false
+            },
+            {
+              "text": "Hide your name to make it hard.",
+              "correct": true
+            },
+            {
+              "text": "Tell the helper what 'done' looks like.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with asking AI for a feature?",
+          "options": [
+            {
+              "text": "Be vague about everything — surprise yourself.",
+              "correct": false
+            },
+            {
+              "text": "Each feature must include a haiku.",
+              "correct": false
+            },
+            {
+              "text": "Add an example output if you can.",
+              "correct": true
+            },
+            {
+              "text": "Helpers like giant features only — small ones bore them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about asking AI for a feature is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "You can ask AI to add a feature to your game by describing it.",
+              "correct": false
+            },
+            {
+              "text": "Test the new feature after you add it.",
+              "correct": false
+            },
+            {
+              "text": "Tell the helper what 'done' looks like.",
+              "correct": false
+            },
+            {
+              "text": "Yell at the AI until it adds the feature.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about asking AI for a feature. Which fact would help him?",
+          "options": [
+            {
+              "text": "Be specific: 'Add a jump that makes the hero go up when I press space'.",
+              "correct": true
+            },
+            {
+              "text": "Each feature must include a haiku.",
+              "correct": false
+            },
+            {
+              "text": "Hide your name to make it hard.",
+              "correct": false
+            },
+            {
+              "text": "Skip testing the new feature — gut feel only.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -196,12 +301,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type MOVE and press Send to keep going!",
-          "target_display": "MOVE",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "move"
+            "yes"
           ],
-          "hint_wrong": "Type the word MOVE (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -314,6 +419,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_45_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Pick the better feature request:",
+          "options": [
+            {
+              "text": "Add a 'pause' button in the top-right that stops the timer.",
+              "correct": true
+            },
+            {
+              "text": "Make pausing thing happen good.",
+              "correct": false
+            },
+            {
+              "text": "Pause but secret.",
+              "correct": false
+            },
+            {
+              "text": "Pause? Maybe? Sometimes?",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Pick the better feature request:",
+          "options": [
+            {
+              "text": "Add a 'pause' button in the top-right that stops the timer.",
+              "correct": true
+            },
+            {
+              "text": "Pause? Maybe? Sometimes?",
+              "correct": false
+            },
+            {
+              "text": "Pause but secret.",
+              "correct": false
+            },
+            {
+              "text": "Make pausing thing happen good.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Pick the better feature request:",
+          "options": [
+            {
+              "text": "Pause but secret.",
+              "correct": false
+            },
+            {
+              "text": "Pause? Maybe? Sometimes?",
+              "correct": false
+            },
+            {
+              "text": "Add a 'pause' button in the top-right that stops the timer.",
+              "correct": true
+            },
+            {
+              "text": "Make pausing thing happen good.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Pick the better feature request:",
+          "options": [
+            {
+              "text": "Pause but secret.",
+              "correct": false
+            },
+            {
+              "text": "Make pausing thing happen good.",
+              "correct": false
+            },
+            {
+              "text": "Add a 'pause' button in the top-right that stops the timer.",
+              "correct": true
+            },
+            {
+              "text": "Pause? Maybe? Sometimes?",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Pick the better feature request:",
+          "options": [
+            {
+              "text": "Add a 'pause' button in the top-right that stops the timer.",
+              "correct": true
+            },
+            {
+              "text": "Make pausing thing happen good.",
+              "correct": false
+            },
+            {
+              "text": "Pause but secret.",
+              "correct": false
+            },
+            {
+              "text": "Pause? Maybe? Sometimes?",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -322,12 +532,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -440,6 +650,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_45_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why test the feature after it's added?",
+          "options": [
+            {
+              "text": "To impress the helper.",
+              "correct": false
+            },
+            {
+              "text": "So the keyboard doesn't get bored.",
+              "correct": false
+            },
+            {
+              "text": "Because tests earn 5 stars.",
+              "correct": false
+            },
+            {
+              "text": "To make sure it actually works the way you wanted.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why test the feature after it's added?",
+          "options": [
+            {
+              "text": "So the keyboard doesn't get bored.",
+              "correct": false
+            },
+            {
+              "text": "To impress the helper.",
+              "correct": false
+            },
+            {
+              "text": "To make sure it actually works the way you wanted.",
+              "correct": true
+            },
+            {
+              "text": "Because tests earn 5 stars.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why test the feature after it's added?",
+          "options": [
+            {
+              "text": "Because tests earn 5 stars.",
+              "correct": false
+            },
+            {
+              "text": "To make sure it actually works the way you wanted.",
+              "correct": true
+            },
+            {
+              "text": "So the keyboard doesn't get bored.",
+              "correct": false
+            },
+            {
+              "text": "To impress the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why test the feature after it's added?",
+          "options": [
+            {
+              "text": "So the keyboard doesn't get bored.",
+              "correct": false
+            },
+            {
+              "text": "Because tests earn 5 stars.",
+              "correct": false
+            },
+            {
+              "text": "To make sure it actually works the way you wanted.",
+              "correct": true
+            },
+            {
+              "text": "To impress the helper.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why test the feature after it's added?",
+          "options": [
+            {
+              "text": "So the keyboard doesn't get bored.",
+              "correct": false
+            },
+            {
+              "text": "Because tests earn 5 stars.",
+              "correct": false
+            },
+            {
+              "text": "To impress the helper.",
+              "correct": false
+            },
+            {
+              "text": "To make sure it actually works the way you wanted.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -448,12 +763,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type TEAM and press Send to keep going!",
-          "target_display": "TEAM",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "team"
+            "cool"
           ],
-          "hint_wrong": "Type the word TEAM (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -461,19 +776,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
-              "text": "Mention what to NOT change.",
+              "text": "Be clear about what you want to add.",
               "correct": false
             },
             {
-              "text": "Tell the helper what 'done' looks like.",
+              "text": "The AI shows you the code to add -- your job is to plug it in.",
               "correct": false
             },
             {
-              "text": "Add ten features at once and pray.",
+              "text": "AI features only stay for 30 seconds.",
               "correct": true
             },
             {
-              "text": "Show the file or place where it goes.",
+              "text": "Say what should happen step by step.",
               "correct": false
             }
           ],
@@ -483,19 +798,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
-              "text": "Helpers do best with small features.",
+              "text": "You can ask AI to add a feature to your game by describing it.",
               "correct": false
             },
             {
-              "text": "Helpers like giant features only — small ones bore them.",
+              "text": "AI charges $1 per feature.",
               "correct": true
             },
             {
-              "text": "Mention what to NOT change.",
+              "text": "Be clear about what you want to add.",
               "correct": false
             },
             {
-              "text": "Show the file or place where it goes.",
+              "text": "Asking AI for features is a real coder skill.",
               "correct": false
             }
           ],
@@ -505,19 +820,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
-              "text": "Show the file or place where it goes.",
+              "text": "Say what should happen step by step.",
               "correct": false
             },
             {
-              "text": "Mention what to NOT change.",
+              "text": "The AI shows you the code to add -- your job is to plug it in.",
               "correct": false
             },
             {
-              "text": "Each feature must include a haiku.",
+              "text": "Real features must be drawn first.",
               "correct": true
             },
             {
-              "text": "Say what should happen step by step.",
+              "text": "Be clear about what you want to add.",
               "correct": false
             }
           ],
@@ -527,11 +842,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
+              "text": "Mention what to NOT change.",
+              "correct": false
+            },
+            {
+              "text": "You can ask AI to add a feature to your game by describing it.",
+              "correct": false
+            },
+            {
+              "text": "Be vague about everything — surprise yourself.",
+              "correct": true
+            },
+            {
+              "text": "Helpers do best with small features.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_45_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "options": [
+            {
               "text": "Add an example output if you can.",
               "correct": false
             },
             {
+              "text": "Test the new feature after you add it.",
+              "correct": false
+            },
+            {
+              "text": "The AI shows you the code to add -- your job is to plug it in.",
+              "correct": false
+            },
+            {
+              "text": "Hide the file from the helper — playing hide and seek.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_45_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "options": [
+            {
+              "text": "Asking AI for features is a real coder skill.",
+              "correct": false
+            },
+            {
+              "text": "Skip testing the new feature — gut feel only.",
+              "correct": true
+            },
+            {
+              "text": "Be specific: 'Add a jump that makes the hero go up when I press space'.",
+              "correct": false
+            },
+            {
               "text": "Mention what to NOT change.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "options": [
+            {
+              "text": "You can ask AI to add a feature to your game by describing it.",
+              "correct": false
+            },
+            {
+              "text": "Test the new feature after you add it.",
+              "correct": false
+            },
+            {
+              "text": "Add ten features at once and pray.",
+              "correct": true
+            },
+            {
+              "text": "Say what should happen step by step.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "options": [
+            {
+              "text": "Be clear about what you want to add.",
+              "correct": false
+            },
+            {
+              "text": "Add an example output if you can.",
+              "correct": false
+            },
+            {
+              "text": "Asking AI for features is a real coder skill.",
+              "correct": false
+            },
+            {
+              "text": "Helpers like giant features only — small ones bore them.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "options": [
+            {
+              "text": "Each feature must include a haiku.",
+              "correct": true
+            },
+            {
+              "text": "Say what should happen step by step.",
+              "correct": false
+            },
+            {
+              "text": "Tell the helper what 'done' looks like.",
+              "correct": false
+            },
+            {
+              "text": "Show the file or place where it goes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "options": [
+            {
+              "text": "Be specific: 'Add a jump that makes the hero go up when I press space'.",
               "correct": false
             },
             {
@@ -539,33 +978,14 @@
               "correct": true
             },
             {
-              "text": "Tell the helper what 'done' looks like.",
+              "text": "Helpers do best with small features.",
+              "correct": false
+            },
+            {
+              "text": "The AI shows you the code to add -- your job is to plug it in.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_45_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about asking AI for a feature.",
-          "options": [
-            {
-              "text": "Mention what to NOT change.",
-              "correct": false
-            },
-            {
-              "text": "Add an example output if you can.",
-              "correct": false
-            },
-            {
-              "text": "Say what should happen step by step.",
-              "correct": false
-            },
-            {
-              "text": "Use only emoji to describe the feature.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_45_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -574,12 +994,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SHIP and press Send to keep going!",
-          "target_display": "SHIP",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "ship"
+            "next"
           ],
-          "hint_wrong": "Type the word SHIP (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -587,19 +1007,19 @@
           "prompt": "Tell me — Which one is TRUE about asking AI for a feature?",
           "options": [
             {
+              "text": "Skip testing the new feature — gut feel only.",
+              "correct": false
+            },
+            {
+              "text": "AI charges $1 per feature.",
+              "correct": false
+            },
+            {
               "text": "Be vague about everything — surprise yourself.",
               "correct": false
             },
             {
-              "text": "Hide the file from the helper — playing hide and seek.",
-              "correct": false
-            },
-            {
-              "text": "Each feature must include a haiku.",
-              "correct": false
-            },
-            {
-              "text": "Helpers do best with small features.",
+              "text": "Be clear about what you want to add.",
               "correct": true
             }
           ],
@@ -617,11 +1037,11 @@
               "correct": false
             },
             {
-              "text": "Tell the helper what 'done' looks like.",
+              "text": "Show the file or place where it goes.",
               "correct": true
             },
             {
-              "text": "Add ten features at once and pray.",
+              "text": "Yell at the AI until it adds the feature.",
               "correct": false
             }
           ],
@@ -631,27 +1051,121 @@
           "prompt": "Pop quiz! Which one is TRUE about asking AI for a feature?",
           "options": [
             {
-              "text": "Mention what to NOT change.",
+              "text": "Say what should happen step by step.",
               "correct": true
             },
             {
-              "text": "Be vague about everything — surprise yourself.",
-              "correct": false
-            },
-            {
-              "text": "Add ten features at once and pray.",
-              "correct": false
-            },
-            {
               "text": "Helpers like giant features only — small ones bore them.",
+              "correct": false
+            },
+            {
+              "text": "Use only emoji to describe the feature.",
+              "correct": false
+            },
+            {
+              "text": "Hide the file from the helper — playing hide and seek.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_45_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about asking AI for a feature?",
+          "options": [
+            {
+              "text": "AI features only stay for 30 seconds.",
+              "correct": false
+            },
+            {
+              "text": "Test the new feature after you add it.",
+              "correct": true
+            },
+            {
+              "text": "Yell at the AI until it adds the feature.",
+              "correct": false
+            },
+            {
+              "text": "Use only emoji to describe the feature.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_45_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about asking AI for a feature?",
+          "options": [
+            {
+              "text": "Helpers do best with small features.",
+              "correct": true
+            },
+            {
+              "text": "Hide your name to make it hard.",
+              "correct": false
+            },
+            {
+              "text": "Helpers like giant features only — small ones bore them.",
+              "correct": false
+            },
+            {
+              "text": "Real features must be drawn first.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_45_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about asking AI for a feature?",
+          "options": [
+            {
+              "text": "Tell the helper what 'done' looks like.",
+              "correct": true
+            },
+            {
+              "text": "Hide your name to make it hard.",
+              "correct": false
+            },
+            {
+              "text": "Be vague about everything — surprise yourself.",
+              "correct": false
+            },
+            {
+              "text": "Hide the file from the helper — playing hide and seek.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about asking AI for a feature?",
+          "options": [
+            {
+              "text": "Add ten features at once and pray.",
+              "correct": false
+            },
+            {
+              "text": "Be vague about everything — surprise yourself.",
+              "correct": false
+            },
+            {
+              "text": "Mention what to NOT change.",
+              "correct": true
+            },
+            {
+              "text": "Skip testing the new feature — gut feel only.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about asking AI for a feature?",
           "options": [
+            {
+              "text": "Be vague about everything — surprise yourself.",
+              "correct": false
+            },
+            {
+              "text": "Hide your name to make it hard.",
+              "correct": false
+            },
             {
               "text": "Helpers like giant features only — small ones bore them.",
               "correct": false
@@ -659,39 +1173,50 @@
             {
               "text": "Add an example output if you can.",
               "correct": true
-            },
-            {
-              "text": "Be vague about everything — surprise yourself.",
-              "correct": false
-            },
-            {
-              "text": "Each feature must include a haiku.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_45_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about asking AI for a feature?",
           "options": [
             {
-              "text": "Be clear about what you want to add.",
+              "text": "Real features must be drawn first.",
+              "correct": false
+            },
+            {
+              "text": "Add ten features at once and pray.",
+              "correct": false
+            },
+            {
+              "text": "Helpers like giant features only — small ones bore them.",
+              "correct": false
+            },
+            {
+              "text": "You can ask AI to add a feature to your game by describing it.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about asking AI for a feature?",
+          "options": [
+            {
+              "text": "AI features only stay for 30 seconds.",
+              "correct": false
+            },
+            {
+              "text": "AI charges $1 per feature.",
+              "correct": false
             },
             {
               "text": "Hide the file from the helper — playing hide and seek.",
               "correct": false
             },
             {
-              "text": "Each feature must include a haiku.",
-              "correct": false
-            },
-            {
-              "text": "Add ten features at once and pray.",
-              "correct": false
+              "text": "Be specific: 'Add a jump that makes the hero go up when I press space'.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_45_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -700,124 +1225,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
+          "prompt": "You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
-              "text": "Add an example output if you can.",
+              "text": "'Make it cooler!'",
               "correct": false
             },
             {
-              "text": "Mention what to NOT change.",
+              "text": "'You know what I mean.'",
               "correct": false
             },
             {
-              "text": "Each feature must include a haiku.",
+              "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
               "correct": true
             },
             {
-              "text": "Be clear about what you want to add.",
+              "text": "'Coins.'",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_45_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
+          "prompt": "Quick! You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
-              "text": "Say what should happen step by step.",
+              "text": "'Make it cooler!'",
               "correct": false
             },
             {
-              "text": "Add an example output if you can.",
-              "correct": false
-            },
-            {
-              "text": "Hide your name to make it hard.",
+              "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
               "correct": true
             },
             {
-              "text": "Show the file or place where it goes.",
+              "text": "'You know what I mean.'",
+              "correct": false
+            },
+            {
+              "text": "'Coins.'",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_45_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
-              "text": "Test the new feature after you add it.",
+              "text": "'Coins.'",
               "correct": false
             },
             {
-              "text": "Use only emoji to describe the feature.",
+              "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
               "correct": true
             },
             {
-              "text": "Add an example output if you can.",
+              "text": "'You know what I mean.'",
               "correct": false
             },
             {
-              "text": "Be clear about what you want to add.",
+              "text": "'Make it cooler!'",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_45_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
-              "text": "Be clear about what you want to add.",
+              "text": "'You know what I mean.'",
               "correct": false
             },
             {
-              "text": "Show the file or place where it goes.",
-              "correct": false
-            },
-            {
-              "text": "Tell the helper what 'done' looks like.",
-              "correct": false
-            },
-            {
-              "text": "Be vague about everything — surprise yourself.",
+              "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
               "correct": true
+            },
+            {
+              "text": "'Make it cooler!'",
+              "correct": false
+            },
+            {
+              "text": "'Coins.'",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_45_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
+          "prompt": "Tell me — You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
-              "text": "Hide the file from the helper — playing hide and seek.",
+              "text": "'Coins.'",
+              "correct": false
+            },
+            {
+              "text": "'You know what I mean.'",
+              "correct": false
+            },
+            {
+              "text": "'Make it cooler!'",
+              "correct": false
+            },
+            {
+              "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
               "correct": true
-            },
-            {
-              "text": "Mention what to NOT change.",
-              "correct": false
-            },
-            {
-              "text": "Be clear about what you want to add.",
-              "correct": false
-            },
-            {
-              "text": "Tell the helper what 'done' looks like.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_45_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You want to add coins to your game. What's the smart prompt?",
+          "options": [
+            {
+              "text": "'You know what I mean.'",
+              "correct": false
+            },
+            {
+              "text": "'Coins.'",
+              "correct": false
+            },
+            {
+              "text": "'Make it cooler!'",
+              "correct": false
+            },
+            {
+              "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You want to add coins to your game. What's the smart prompt?",
+          "options": [
+            {
+              "text": "'You know what I mean.'",
+              "correct": false
+            },
+            {
+              "text": "'Coins.'",
+              "correct": false
+            },
+            {
+              "text": "'Make it cooler!'",
+              "correct": false
+            },
+            {
+              "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You want to add coins to your game. What's the smart prompt?",
+          "options": [
+            {
+              "text": "'Make it cooler!'",
+              "correct": false
+            },
+            {
+              "text": "'You know what I mean.'",
+              "correct": false
+            },
+            {
+              "text": "'Coins.'",
+              "correct": false
+            },
+            {
+              "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You want to add coins to your game. What's the smart prompt?",
+          "options": [
+            {
+              "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
+              "correct": true
+            },
+            {
+              "text": "'Coins.'",
+              "correct": false
+            },
+            {
+              "text": "'Make it cooler!'",
+              "correct": false
+            },
+            {
+              "text": "'You know what I mean.'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You want to add coins to your game. What's the smart prompt?",
+          "options": [
+            {
+              "text": "'Coins.'",
+              "correct": false
+            },
+            {
+              "text": "'Make it cooler!'",
+              "correct": false
+            },
+            {
+              "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
+              "correct": true
+            },
+            {
+              "text": "'You know what I mean.'",
+              "correct": false
+            }
+          ]
         }
       ]
     }

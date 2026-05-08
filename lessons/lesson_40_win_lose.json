@@ -69,11 +69,11 @@
           "prompt": "What is win and lose?",
           "options": [
             {
-              "text": "Win is just lose spelled fancy.",
+              "text": "Most games skip win conditions -- too much work.",
               "correct": false
             },
             {
-              "text": "Winning means giving up and going home.",
+              "text": "Losing has no rules and no edges.",
               "correct": false
             },
             {
@@ -91,7 +91,7 @@
           "prompt": "Quick! Which one is TRUE about win and lose?",
           "options": [
             {
-              "text": "Winning costs $5 in soggy crackers.",
+              "text": "Games don't need win or lose — too tiring.",
               "correct": false
             },
             {
@@ -103,7 +103,7 @@
               "correct": false
             },
             {
-              "text": "Losing has no rules and no edges.",
+              "text": "Lose conditions only fire on Tuesdays.",
               "correct": false
             }
           ],
@@ -113,11 +113,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about win and lose.",
           "options": [
             {
-              "text": "Clear rules make winning fair.",
+              "text": "Winning means you reached the goal.",
               "correct": false
             },
             {
-              "text": "Win conditions should be obvious.",
+              "text": "Clear rules make winning fair.",
               "correct": false
             },
             {
@@ -125,7 +125,7 @@
               "correct": true
             },
             {
-              "text": "Winning means you reached the goal.",
+              "text": "Lose conditions should be fair.",
               "correct": false
             }
           ],
@@ -135,11 +135,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about win and lose. What should he say?",
           "options": [
             {
-              "text": "Losing means a tiny pizza falls from the sky.",
+              "text": "Lose conditions only fire on Tuesdays.",
               "correct": false
             },
             {
-              "text": "Games don't need win or lose — too tiring.",
+              "text": "Losing means a tiny pizza falls from the sky.",
               "correct": false
             },
             {
@@ -147,7 +147,7 @@
               "correct": true
             },
             {
-              "text": "Fairness ruins a game with politeness.",
+              "text": "Winning means giving up and going home.",
               "correct": false
             }
           ],
@@ -157,11 +157,11 @@
           "prompt": "Tell me — Which rule about win and lose is a GOOD rule?",
           "options": [
             {
-              "text": "Losing means a tiny pizza falls from the sky.",
+              "text": "Most games skip win conditions -- too much work.",
               "correct": false
             },
             {
-              "text": "Win is just lose spelled fancy.",
+              "text": "Games don't need win or lose — too tiring.",
               "correct": false
             },
             {
@@ -169,11 +169,116 @@
               "correct": true
             },
             {
-              "text": "Games don't need win or lose — too tiring.",
+              "text": "Losing means a tiny pizza falls from the sky.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_40_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about win and lose, ___",
+          "options": [
+            {
+              "text": "Win is just lose spelled fancy.",
+              "correct": false
+            },
+            {
+              "text": "A game without rules is just messing around.",
+              "correct": true
+            },
+            {
+              "text": "Win and lose are the same thing in disguise.",
+              "correct": false
+            },
+            {
+              "text": "Fairness ruins a game with politeness.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about win and lose. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": false
+            },
+            {
+              "text": "Losing teaches us how to try again.",
+              "correct": false
+            },
+            {
+              "text": "Lose conditions involve a sock puppet.",
+              "correct": true
+            },
+            {
+              "text": "A game without rules is just messing around.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with win and lose?",
+          "options": [
+            {
+              "text": "Winning means giving up and going home.",
+              "correct": false
+            },
+            {
+              "text": "Winning costs $5 in soggy crackers.",
+              "correct": false
+            },
+            {
+              "text": "Lose conditions should be fair.",
+              "correct": true
+            },
+            {
+              "text": "Losing means a tiny pizza falls from the sky.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about win and lose is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Win condition: a goal that ends the game with a celebration.",
+              "correct": false
+            },
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": false
+            },
+            {
+              "text": "A game without rules is just messing around.",
+              "correct": false
+            },
+            {
+              "text": "Win and lose are the same thing in disguise.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about win and lose. Which fact would help him?",
+          "options": [
+            {
+              "text": "Lose condition: something that ends the game without success.",
+              "correct": true
+            },
+            {
+              "text": "Winning costs $5 in soggy crackers.",
+              "correct": false
+            },
+            {
+              "text": "Lose conditions involve a sock puppet.",
+              "correct": false
+            },
+            {
+              "text": "Games don't need win or lose — too tiring.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -182,12 +287,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type HOP and press Send to keep going!",
-          "target_display": "HOP",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "hop"
+            "yes"
           ],
-          "hint_wrong": "Type the word HOP (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -300,6 +405,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_40_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your game has no clear way to win. What happens to players?",
+          "options": [
+            {
+              "text": "They get bored — no goal to chase.",
+              "correct": true
+            },
+            {
+              "text": "They invent a goal and live forever.",
+              "correct": false
+            },
+            {
+              "text": "They win every time and rule a kingdom.",
+              "correct": false
+            },
+            {
+              "text": "They become better players by chance.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your game has no clear way to win. What happens to players?",
+          "options": [
+            {
+              "text": "They invent a goal and live forever.",
+              "correct": false
+            },
+            {
+              "text": "They become better players by chance.",
+              "correct": false
+            },
+            {
+              "text": "They win every time and rule a kingdom.",
+              "correct": false
+            },
+            {
+              "text": "They get bored — no goal to chase.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your game has no clear way to win. What happens to players?",
+          "options": [
+            {
+              "text": "They get bored — no goal to chase.",
+              "correct": true
+            },
+            {
+              "text": "They invent a goal and live forever.",
+              "correct": false
+            },
+            {
+              "text": "They win every time and rule a kingdom.",
+              "correct": false
+            },
+            {
+              "text": "They become better players by chance.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your game has no clear way to win. What happens to players?",
+          "options": [
+            {
+              "text": "They win every time and rule a kingdom.",
+              "correct": false
+            },
+            {
+              "text": "They invent a goal and live forever.",
+              "correct": false
+            },
+            {
+              "text": "They get bored — no goal to chase.",
+              "correct": true
+            },
+            {
+              "text": "They become better players by chance.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your game has no clear way to win. What happens to players?",
+          "options": [
+            {
+              "text": "They get bored — no goal to chase.",
+              "correct": true
+            },
+            {
+              "text": "They become better players by chance.",
+              "correct": false
+            },
+            {
+              "text": "They win every time and rule a kingdom.",
+              "correct": false
+            },
+            {
+              "text": "They invent a goal and live forever.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -308,12 +518,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -426,6 +636,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_40_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Pick the FAIRER lose condition:",
+          "options": [
+            {
+              "text": "Lose if your hat is the wrong color.",
+              "correct": false
+            },
+            {
+              "text": "Lose if hit 3 times by clearly visible bad guys.",
+              "correct": true
+            },
+            {
+              "text": "Lose if a random pixel sneezes.",
+              "correct": false
+            },
+            {
+              "text": "Lose if you blink too slowly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Pick the FAIRER lose condition:",
+          "options": [
+            {
+              "text": "Lose if a random pixel sneezes.",
+              "correct": false
+            },
+            {
+              "text": "Lose if you blink too slowly.",
+              "correct": false
+            },
+            {
+              "text": "Lose if your hat is the wrong color.",
+              "correct": false
+            },
+            {
+              "text": "Lose if hit 3 times by clearly visible bad guys.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Pick the FAIRER lose condition:",
+          "options": [
+            {
+              "text": "Lose if a random pixel sneezes.",
+              "correct": false
+            },
+            {
+              "text": "Lose if your hat is the wrong color.",
+              "correct": false
+            },
+            {
+              "text": "Lose if hit 3 times by clearly visible bad guys.",
+              "correct": true
+            },
+            {
+              "text": "Lose if you blink too slowly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Pick the FAIRER lose condition:",
+          "options": [
+            {
+              "text": "Lose if hit 3 times by clearly visible bad guys.",
+              "correct": true
+            },
+            {
+              "text": "Lose if you blink too slowly.",
+              "correct": false
+            },
+            {
+              "text": "Lose if a random pixel sneezes.",
+              "correct": false
+            },
+            {
+              "text": "Lose if your hat is the wrong color.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Pick the FAIRER lose condition:",
+          "options": [
+            {
+              "text": "Lose if your hat is the wrong color.",
+              "correct": false
+            },
+            {
+              "text": "Lose if a random pixel sneezes.",
+              "correct": false
+            },
+            {
+              "text": "Lose if hit 3 times by clearly visible bad guys.",
+              "correct": true
+            },
+            {
+              "text": "Lose if you blink too slowly.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -434,12 +749,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type DAY and press Send to keep going!",
-          "target_display": "DAY",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "day"
+            "cool"
           ],
-          "hint_wrong": "Type the word DAY (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -447,19 +762,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about win and lose.",
           "options": [
             {
-              "text": "Win conditions should be obvious.",
+              "text": "Winning means you reached the goal.",
               "correct": false
             },
             {
-              "text": "A game without rules is just messing around.",
+              "text": "Both conditions must be CLEAR so the player knows what to aim for.",
               "correct": false
             },
             {
-              "text": "Fairness ruins a game with politeness.",
+              "text": "Most games skip win conditions -- too much work.",
               "correct": true
             },
             {
-              "text": "Losing means the rules said you stopped.",
+              "text": "Win and lose make a game a game.",
               "correct": false
             }
           ],
@@ -469,19 +784,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about win and lose.",
           "options": [
             {
-              "text": "Losing teaches us how to try again.",
+              "text": "Win condition: a goal that ends the game with a celebration.",
               "correct": false
             },
             {
-              "text": "Losing means a tiny pizza falls from the sky.",
+              "text": "Lose conditions only fire on Tuesdays.",
               "correct": true
             },
             {
-              "text": "Win conditions should be obvious.",
+              "text": "Winning means you reached the goal.",
               "correct": false
             },
             {
-              "text": "Losing means the rules said you stopped.",
+              "text": "Without a win or lose, players don't feel any accomplishment.",
               "correct": false
             }
           ],
@@ -491,19 +806,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about win and lose.",
           "options": [
             {
-              "text": "Losing means the rules said you stopped.",
+              "text": "Win and lose make a game a game.",
               "correct": false
             },
             {
-              "text": "Win conditions should be obvious.",
+              "text": "Both conditions must be CLEAR so the player knows what to aim for.",
               "correct": false
             },
             {
-              "text": "Winning costs $5 in soggy crackers.",
+              "text": "Winning is illegal in some kinds of games.",
               "correct": true
             },
             {
-              "text": "Win and lose make a game a game.",
+              "text": "Winning means you reached the goal.",
               "correct": false
             }
           ],
@@ -513,11 +828,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about win and lose.",
           "options": [
             {
+              "text": "Win conditions should be obvious.",
+              "correct": false
+            },
+            {
+              "text": "Win condition: a goal that ends the game with a celebration.",
+              "correct": false
+            },
+            {
+              "text": "Winning means giving up and going home.",
+              "correct": true
+            },
+            {
+              "text": "Losing teaches us how to try again.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_40_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
               "text": "Lose conditions should be fair.",
               "correct": false
             },
             {
+              "text": "Clear rules make winning fair.",
+              "correct": false
+            },
+            {
+              "text": "Both conditions must be CLEAR so the player knows what to aim for.",
+              "correct": false
+            },
+            {
+              "text": "Losing has no rules and no edges.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_40_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Without a win or lose, players don't feel any accomplishment.",
+              "correct": false
+            },
+            {
+              "text": "Games don't need win or lose — too tiring.",
+              "correct": true
+            },
+            {
+              "text": "Lose condition: something that ends the game without success.",
+              "correct": false
+            },
+            {
               "text": "Win conditions should be obvious.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Win condition: a goal that ends the game with a celebration.",
+              "correct": false
+            },
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": false
+            },
+            {
+              "text": "Fairness ruins a game with politeness.",
+              "correct": true
+            },
+            {
+              "text": "Win and lose make a game a game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Winning means you reached the goal.",
+              "correct": false
+            },
+            {
+              "text": "Lose conditions should be fair.",
+              "correct": false
+            },
+            {
+              "text": "Without a win or lose, players don't feel any accomplishment.",
+              "correct": false
+            },
+            {
+              "text": "Losing means a tiny pizza falls from the sky.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Winning costs $5 in soggy crackers.",
+              "correct": true
+            },
+            {
+              "text": "Win and lose make a game a game.",
+              "correct": false
+            },
+            {
+              "text": "A game without rules is just messing around.",
+              "correct": false
+            },
+            {
+              "text": "Losing means the rules said you stopped.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about win and lose.",
+          "options": [
+            {
+              "text": "Lose condition: something that ends the game without success.",
               "correct": false
             },
             {
@@ -525,33 +964,14 @@
               "correct": true
             },
             {
-              "text": "A game without rules is just messing around.",
+              "text": "Losing teaches us how to try again.",
+              "correct": false
+            },
+            {
+              "text": "Both conditions must be CLEAR so the player knows what to aim for.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_40_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about win and lose.",
-          "options": [
-            {
-              "text": "Win conditions should be obvious.",
-              "correct": false
-            },
-            {
-              "text": "Lose conditions should be fair.",
-              "correct": false
-            },
-            {
-              "text": "Win and lose make a game a game.",
-              "correct": false
-            },
-            {
-              "text": "Win is just lose spelled fancy.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_40_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -560,12 +980,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type JOY and press Send to keep going!",
-          "target_display": "JOY",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "joy"
+            "next"
           ],
-          "hint_wrong": "Type the word JOY (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -573,19 +993,19 @@
           "prompt": "Tell me — Which one is TRUE about win and lose?",
           "options": [
             {
+              "text": "Games don't need win or lose — too tiring.",
+              "correct": false
+            },
+            {
+              "text": "Lose conditions only fire on Tuesdays.",
+              "correct": false
+            },
+            {
               "text": "Winning means giving up and going home.",
               "correct": false
             },
             {
-              "text": "Losing has no rules and no edges.",
-              "correct": false
-            },
-            {
-              "text": "Winning costs $5 in soggy crackers.",
-              "correct": false
-            },
-            {
-              "text": "Losing teaches us how to try again.",
+              "text": "Winning means you reached the goal.",
               "correct": true
             }
           ],
@@ -603,11 +1023,11 @@
               "correct": false
             },
             {
-              "text": "A game without rules is just messing around.",
+              "text": "Losing means the rules said you stopped.",
               "correct": true
             },
             {
-              "text": "Fairness ruins a game with politeness.",
+              "text": "Win and lose are the same thing in disguise.",
               "correct": false
             }
           ],
@@ -617,27 +1037,121 @@
           "prompt": "Pop quiz! Which one is TRUE about win and lose?",
           "options": [
             {
-              "text": "Win conditions should be obvious.",
+              "text": "Win and lose make a game a game.",
               "correct": true
             },
             {
-              "text": "Winning means giving up and going home.",
-              "correct": false
-            },
-            {
-              "text": "Fairness ruins a game with politeness.",
-              "correct": false
-            },
-            {
               "text": "Losing means a tiny pizza falls from the sky.",
+              "correct": false
+            },
+            {
+              "text": "Win is just lose spelled fancy.",
+              "correct": false
+            },
+            {
+              "text": "Losing has no rules and no edges.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_40_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "Most games skip win conditions -- too much work.",
+              "correct": false
+            },
+            {
+              "text": "Clear rules make winning fair.",
+              "correct": true
+            },
+            {
+              "text": "Win and lose are the same thing in disguise.",
+              "correct": false
+            },
+            {
+              "text": "Win is just lose spelled fancy.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_40_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "Losing teaches us how to try again.",
+              "correct": true
+            },
+            {
+              "text": "Lose conditions involve a sock puppet.",
+              "correct": false
+            },
+            {
+              "text": "Losing means a tiny pizza falls from the sky.",
+              "correct": false
+            },
+            {
+              "text": "Winning is illegal in some kinds of games.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_40_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "A game without rules is just messing around.",
+              "correct": true
+            },
+            {
+              "text": "Lose conditions involve a sock puppet.",
+              "correct": false
+            },
+            {
+              "text": "Winning means giving up and going home.",
+              "correct": false
+            },
+            {
+              "text": "Losing has no rules and no edges.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "Fairness ruins a game with politeness.",
+              "correct": false
+            },
+            {
+              "text": "Winning means giving up and going home.",
+              "correct": false
+            },
+            {
+              "text": "Win conditions should be obvious.",
+              "correct": true
+            },
+            {
+              "text": "Games don't need win or lose — too tiring.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about win and lose?",
           "options": [
+            {
+              "text": "Winning means giving up and going home.",
+              "correct": false
+            },
+            {
+              "text": "Lose conditions involve a sock puppet.",
+              "correct": false
+            },
             {
               "text": "Losing means a tiny pizza falls from the sky.",
               "correct": false
@@ -645,39 +1159,50 @@
             {
               "text": "Lose conditions should be fair.",
               "correct": true
-            },
-            {
-              "text": "Winning means giving up and going home.",
-              "correct": false
-            },
-            {
-              "text": "Winning costs $5 in soggy crackers.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_40_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about win and lose?",
           "options": [
             {
-              "text": "Winning means you reached the goal.",
+              "text": "Winning is illegal in some kinds of games.",
+              "correct": false
+            },
+            {
+              "text": "Fairness ruins a game with politeness.",
+              "correct": false
+            },
+            {
+              "text": "Losing means a tiny pizza falls from the sky.",
+              "correct": false
+            },
+            {
+              "text": "Win condition: a goal that ends the game with a celebration.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about win and lose?",
+          "options": [
+            {
+              "text": "Most games skip win conditions -- too much work.",
+              "correct": false
+            },
+            {
+              "text": "Lose conditions only fire on Tuesdays.",
+              "correct": false
             },
             {
               "text": "Losing has no rules and no edges.",
               "correct": false
             },
             {
-              "text": "Winning costs $5 in soggy crackers.",
-              "correct": false
-            },
-            {
-              "text": "Fairness ruins a game with politeness.",
-              "correct": false
+              "text": "Lose condition: something that ends the game without success.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_40_q5_v4.wav"
+          ]
         }
       ]
     }

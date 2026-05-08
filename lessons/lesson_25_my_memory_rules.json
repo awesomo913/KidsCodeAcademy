@@ -53,11 +53,11 @@
           "prompt": "What is my memory rules?",
           "options": [
             {
-              "text": "Rules must rhyme with 'lemon' or be discarded.",
+              "text": "Sharing your real birthday gives you bonus points.",
               "correct": false
             },
             {
-              "text": "Use somebody else's rules forever — never change them.",
+              "text": "Never update rules — they are sacred forever.",
               "correct": false
             },
             {
@@ -75,7 +75,7 @@
           "prompt": "Quick! Which one is TRUE about my memory rules?",
           "options": [
             {
-              "text": "Rules must be at least 3000 words and very angry.",
+              "text": "More rules are always better — fill the disk!",
               "correct": false
             },
             {
@@ -87,7 +87,7 @@
               "correct": false
             },
             {
-              "text": "Never update rules — they are sacred forever.",
+              "text": "Type your phone number to unlock the deluxe AI.",
               "correct": false
             }
           ],
@@ -97,11 +97,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about my memory rules.",
           "options": [
             {
-              "text": "Tiny rules beat one giant rule.",
+              "text": "Pick rules that fit YOUR work.",
               "correct": false
             },
             {
-              "text": "Don't keep rules you forgot why you added.",
+              "text": "Tiny rules beat one giant rule.",
               "correct": false
             },
             {
@@ -109,7 +109,7 @@
               "correct": true
             },
             {
-              "text": "Pick rules that fit YOUR work.",
+              "text": "Group rules by topic so they don't fight.",
               "correct": false
             }
           ],
@@ -119,11 +119,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about my memory rules. What should he say?",
           "options": [
             {
-              "text": "Rules don't help the helper — they decorate.",
+              "text": "Type your phone number to unlock the deluxe AI.",
               "correct": false
             },
             {
-              "text": "More rules are always better — fill the disk!",
+              "text": "Rules don't help the helper — they decorate.",
               "correct": false
             },
             {
@@ -131,7 +131,7 @@
               "correct": true
             },
             {
-              "text": "One huge rule fits everyone, including aliens.",
+              "text": "Use somebody else's rules forever — never change them.",
               "correct": false
             }
           ],
@@ -141,11 +141,11 @@
           "prompt": "Tell me — Which rule about my memory rules is a GOOD rule?",
           "options": [
             {
-              "text": "Rules don't help the helper — they decorate.",
+              "text": "Sharing your real birthday gives you bonus points.",
               "correct": false
             },
             {
-              "text": "Rules must rhyme with 'lemon' or be discarded.",
+              "text": "More rules are always better — fill the disk!",
               "correct": false
             },
             {
@@ -153,11 +153,116 @@
               "correct": true
             },
             {
-              "text": "More rules are always better — fill the disk!",
+              "text": "Rules don't help the helper — they decorate.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_25_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about my memory rules, ___",
+          "options": [
+            {
+              "text": "Rules must rhyme with 'lemon' or be discarded.",
+              "correct": false
+            },
+            {
+              "text": "Test that the rule actually helps.",
+              "correct": true
+            },
+            {
+              "text": "Always tell the AI your school name to get smarter answers.",
+              "correct": false
+            },
+            {
+              "text": "One huge rule fits everyone, including aliens.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about my memory rules. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": false
+            },
+            {
+              "text": "Rules teach the helper your style.",
+              "correct": false
+            },
+            {
+              "text": "Each rule needs a tiny crown.",
+              "correct": true
+            },
+            {
+              "text": "Test that the rule actually helps.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with my memory rules?",
+          "options": [
+            {
+              "text": "Use somebody else's rules forever — never change them.",
+              "correct": false
+            },
+            {
+              "text": "Rules must be at least 3000 words and very angry.",
+              "correct": false
+            },
+            {
+              "text": "Group rules by topic so they don't fight.",
+              "correct": true
+            },
+            {
+              "text": "Rules don't help the helper — they decorate.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about my memory rules is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "My memory rules: don't store secrets in the chat.",
+              "correct": false
+            },
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": false
+            },
+            {
+              "text": "Test that the rule actually helps.",
+              "correct": false
+            },
+            {
+              "text": "Always tell the AI your school name to get smarter answers.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about my memory rules. Which fact would help him?",
+          "options": [
+            {
+              "text": "Real names, schools, and home info stay OFFLINE.",
+              "correct": true
+            },
+            {
+              "text": "Rules must be at least 3000 words and very angry.",
+              "correct": false
+            },
+            {
+              "text": "Each rule needs a tiny crown.",
+              "correct": false
+            },
+            {
+              "text": "More rules are always better — fill the disk!",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -166,12 +271,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "next"
+            "yes"
           ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -284,6 +389,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_25_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your rule was 'always use 4 spaces' and now you want 2 spaces. What do you do?",
+          "options": [
+            {
+              "text": "Keep both rules and let them fight.",
+              "correct": false
+            },
+            {
+              "text": "Burn the rule and never code again.",
+              "correct": false
+            },
+            {
+              "text": "Update the rule to say 2 spaces.",
+              "correct": true
+            },
+            {
+              "text": "Yell at the keyboard.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your rule was 'always use 4 spaces' and now you want 2 spaces. What do you do?",
+          "options": [
+            {
+              "text": "Burn the rule and never code again.",
+              "correct": false
+            },
+            {
+              "text": "Keep both rules and let them fight.",
+              "correct": false
+            },
+            {
+              "text": "Update the rule to say 2 spaces.",
+              "correct": true
+            },
+            {
+              "text": "Yell at the keyboard.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your rule was 'always use 4 spaces' and now you want 2 spaces. What do you do?",
+          "options": [
+            {
+              "text": "Update the rule to say 2 spaces.",
+              "correct": true
+            },
+            {
+              "text": "Burn the rule and never code again.",
+              "correct": false
+            },
+            {
+              "text": "Keep both rules and let them fight.",
+              "correct": false
+            },
+            {
+              "text": "Yell at the keyboard.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your rule was 'always use 4 spaces' and now you want 2 spaces. What do you do?",
+          "options": [
+            {
+              "text": "Keep both rules and let them fight.",
+              "correct": false
+            },
+            {
+              "text": "Update the rule to say 2 spaces.",
+              "correct": true
+            },
+            {
+              "text": "Yell at the keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Burn the rule and never code again.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your rule was 'always use 4 spaces' and now you want 2 spaces. What do you do?",
+          "options": [
+            {
+              "text": "Update the rule to say 2 spaces.",
+              "correct": true
+            },
+            {
+              "text": "Burn the rule and never code again.",
+              "correct": false
+            },
+            {
+              "text": "Keep both rules and let them fight.",
+              "correct": false
+            },
+            {
+              "text": "Yell at the keyboard.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -292,12 +502,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -410,6 +620,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_25_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Tiny separate rules vs one giant rule — which works better?",
+          "options": [
+            {
+              "text": "Tiny separate rules — easier to keep clean and update.",
+              "correct": true
+            },
+            {
+              "text": "Giant rule — it scares the bugs.",
+              "correct": false
+            },
+            {
+              "text": "Whichever has a longer name.",
+              "correct": false
+            },
+            {
+              "text": "Both are forbidden by ancient law.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Tiny separate rules vs one giant rule — which works better?",
+          "options": [
+            {
+              "text": "Both are forbidden by ancient law.",
+              "correct": false
+            },
+            {
+              "text": "Giant rule — it scares the bugs.",
+              "correct": false
+            },
+            {
+              "text": "Tiny separate rules — easier to keep clean and update.",
+              "correct": true
+            },
+            {
+              "text": "Whichever has a longer name.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Tiny separate rules vs one giant rule — which works better?",
+          "options": [
+            {
+              "text": "Giant rule — it scares the bugs.",
+              "correct": false
+            },
+            {
+              "text": "Whichever has a longer name.",
+              "correct": false
+            },
+            {
+              "text": "Both are forbidden by ancient law.",
+              "correct": false
+            },
+            {
+              "text": "Tiny separate rules — easier to keep clean and update.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Tiny separate rules vs one giant rule — which works better?",
+          "options": [
+            {
+              "text": "Tiny separate rules — easier to keep clean and update.",
+              "correct": true
+            },
+            {
+              "text": "Whichever has a longer name.",
+              "correct": false
+            },
+            {
+              "text": "Both are forbidden by ancient law.",
+              "correct": false
+            },
+            {
+              "text": "Giant rule — it scares the bugs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Tiny separate rules vs one giant rule — which works better?",
+          "options": [
+            {
+              "text": "Tiny separate rules — easier to keep clean and update.",
+              "correct": true
+            },
+            {
+              "text": "Both are forbidden by ancient law.",
+              "correct": false
+            },
+            {
+              "text": "Whichever has a longer name.",
+              "correct": false
+            },
+            {
+              "text": "Giant rule — it scares the bugs.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -418,12 +733,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PLAY and press Send to keep going!",
-          "target_display": "PLAY",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "play"
+            "cool"
           ],
-          "hint_wrong": "Type the word PLAY (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -431,19 +746,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about my memory rules.",
           "options": [
             {
-              "text": "Don't keep rules you forgot why you added.",
+              "text": "Pick rules that fit YOUR work.",
               "correct": false
             },
             {
-              "text": "Test that the rule actually helps.",
+              "text": "If you wouldn't tell a stranger, don't type it to AI.",
               "correct": false
             },
             {
-              "text": "One huge rule fits everyone, including aliens.",
+              "text": "Sharing your real birthday gives you bonus points.",
               "correct": true
             },
             {
-              "text": "Update rules when you learn new tricks.",
+              "text": "Throw out rules you don't need.",
               "correct": false
             }
           ],
@@ -453,19 +768,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about my memory rules.",
           "options": [
             {
-              "text": "Rules teach the helper your style.",
+              "text": "My memory rules: don't store secrets in the chat.",
               "correct": false
             },
             {
-              "text": "Rules don't help the helper — they decorate.",
+              "text": "Type your phone number to unlock the deluxe AI.",
               "correct": true
             },
             {
-              "text": "Don't keep rules you forgot why you added.",
+              "text": "Pick rules that fit YOUR work.",
               "correct": false
             },
             {
-              "text": "Update rules when you learn new tricks.",
+              "text": "Adults can help you decide what's safe to share.",
               "correct": false
             }
           ],
@@ -475,19 +790,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about my memory rules.",
           "options": [
             {
-              "text": "Update rules when you learn new tricks.",
+              "text": "Throw out rules you don't need.",
               "correct": false
             },
             {
-              "text": "Don't keep rules you forgot why you added.",
+              "text": "If you wouldn't tell a stranger, don't type it to AI.",
               "correct": false
             },
             {
-              "text": "Rules must be at least 3000 words and very angry.",
+              "text": "The AI loves it when you share your bedroom number.",
               "correct": true
             },
             {
-              "text": "Throw out rules you don't need.",
+              "text": "Pick rules that fit YOUR work.",
               "correct": false
             }
           ],
@@ -497,11 +812,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about my memory rules.",
           "options": [
             {
+              "text": "Don't keep rules you forgot why you added.",
+              "correct": false
+            },
+            {
+              "text": "My memory rules: don't store secrets in the chat.",
+              "correct": false
+            },
+            {
+              "text": "Use somebody else's rules forever — never change them.",
+              "correct": true
+            },
+            {
+              "text": "Rules teach the helper your style.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_25_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
               "text": "Group rules by topic so they don't fight.",
               "correct": false
             },
             {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": false
+            },
+            {
+              "text": "If you wouldn't tell a stranger, don't type it to AI.",
+              "correct": false
+            },
+            {
+              "text": "Never update rules — they are sacred forever.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_25_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "Adults can help you decide what's safe to share.",
+              "correct": false
+            },
+            {
+              "text": "More rules are always better — fill the disk!",
+              "correct": true
+            },
+            {
+              "text": "Real names, schools, and home info stay OFFLINE.",
+              "correct": false
+            },
+            {
               "text": "Don't keep rules you forgot why you added.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "My memory rules: don't store secrets in the chat.",
+              "correct": false
+            },
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": false
+            },
+            {
+              "text": "One huge rule fits everyone, including aliens.",
+              "correct": true
+            },
+            {
+              "text": "Throw out rules you don't need.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "Pick rules that fit YOUR work.",
+              "correct": false
+            },
+            {
+              "text": "Group rules by topic so they don't fight.",
+              "correct": false
+            },
+            {
+              "text": "Adults can help you decide what's safe to share.",
+              "correct": false
+            },
+            {
+              "text": "Rules don't help the helper — they decorate.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "Rules must be at least 3000 words and very angry.",
+              "correct": true
+            },
+            {
+              "text": "Throw out rules you don't need.",
+              "correct": false
+            },
+            {
+              "text": "Test that the rule actually helps.",
+              "correct": false
+            },
+            {
+              "text": "Update rules when you learn new tricks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about my memory rules.",
+          "options": [
+            {
+              "text": "Real names, schools, and home info stay OFFLINE.",
               "correct": false
             },
             {
@@ -509,33 +948,14 @@
               "correct": true
             },
             {
-              "text": "Test that the rule actually helps.",
+              "text": "Rules teach the helper your style.",
+              "correct": false
+            },
+            {
+              "text": "If you wouldn't tell a stranger, don't type it to AI.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_25_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about my memory rules.",
-          "options": [
-            {
-              "text": "Don't keep rules you forgot why you added.",
-              "correct": false
-            },
-            {
-              "text": "Group rules by topic so they don't fight.",
-              "correct": false
-            },
-            {
-              "text": "Throw out rules you don't need.",
-              "correct": false
-            },
-            {
-              "text": "Rules must rhyme with 'lemon' or be discarded.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_25_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -544,12 +964,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GAME and press Send to keep going!",
-          "target_display": "GAME",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "game"
+            "next"
           ],
-          "hint_wrong": "Type the word GAME (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -557,19 +977,19 @@
           "prompt": "Tell me — Which one is TRUE about my memory rules?",
           "options": [
             {
+              "text": "More rules are always better — fill the disk!",
+              "correct": false
+            },
+            {
+              "text": "Type your phone number to unlock the deluxe AI.",
+              "correct": false
+            },
+            {
               "text": "Use somebody else's rules forever — never change them.",
               "correct": false
             },
             {
-              "text": "Never update rules — they are sacred forever.",
-              "correct": false
-            },
-            {
-              "text": "Rules must be at least 3000 words and very angry.",
-              "correct": false
-            },
-            {
-              "text": "Rules teach the helper your style.",
+              "text": "Pick rules that fit YOUR work.",
               "correct": true
             }
           ],
@@ -587,11 +1007,11 @@
               "correct": false
             },
             {
-              "text": "Test that the rule actually helps.",
+              "text": "Update rules when you learn new tricks.",
               "correct": true
             },
             {
-              "text": "One huge rule fits everyone, including aliens.",
+              "text": "Always tell the AI your school name to get smarter answers.",
               "correct": false
             }
           ],
@@ -601,27 +1021,121 @@
           "prompt": "Pop quiz! Which one is TRUE about my memory rules?",
           "options": [
             {
-              "text": "Don't keep rules you forgot why you added.",
+              "text": "Throw out rules you don't need.",
               "correct": true
             },
             {
-              "text": "Use somebody else's rules forever — never change them.",
-              "correct": false
-            },
-            {
-              "text": "One huge rule fits everyone, including aliens.",
-              "correct": false
-            },
-            {
               "text": "Rules don't help the helper — they decorate.",
+              "correct": false
+            },
+            {
+              "text": "Rules must rhyme with 'lemon' or be discarded.",
+              "correct": false
+            },
+            {
+              "text": "Never update rules — they are sacred forever.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_25_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "Sharing your real birthday gives you bonus points.",
+              "correct": false
+            },
+            {
+              "text": "Tiny rules beat one giant rule.",
+              "correct": true
+            },
+            {
+              "text": "Always tell the AI your school name to get smarter answers.",
+              "correct": false
+            },
+            {
+              "text": "Rules must rhyme with 'lemon' or be discarded.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_25_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "Rules teach the helper your style.",
+              "correct": true
+            },
+            {
+              "text": "Each rule needs a tiny crown.",
+              "correct": false
+            },
+            {
+              "text": "Rules don't help the helper — they decorate.",
+              "correct": false
+            },
+            {
+              "text": "The AI loves it when you share your bedroom number.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_25_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "Test that the rule actually helps.",
+              "correct": true
+            },
+            {
+              "text": "Each rule needs a tiny crown.",
+              "correct": false
+            },
+            {
+              "text": "Use somebody else's rules forever — never change them.",
+              "correct": false
+            },
+            {
+              "text": "Never update rules — they are sacred forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "One huge rule fits everyone, including aliens.",
+              "correct": false
+            },
+            {
+              "text": "Use somebody else's rules forever — never change them.",
+              "correct": false
+            },
+            {
+              "text": "Don't keep rules you forgot why you added.",
+              "correct": true
+            },
+            {
+              "text": "More rules are always better — fill the disk!",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about my memory rules?",
           "options": [
+            {
+              "text": "Use somebody else's rules forever — never change them.",
+              "correct": false
+            },
+            {
+              "text": "Each rule needs a tiny crown.",
+              "correct": false
+            },
             {
               "text": "Rules don't help the helper — they decorate.",
               "correct": false
@@ -629,39 +1143,50 @@
             {
               "text": "Group rules by topic so they don't fight.",
               "correct": true
-            },
-            {
-              "text": "Use somebody else's rules forever — never change them.",
-              "correct": false
-            },
-            {
-              "text": "Rules must be at least 3000 words and very angry.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_25_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about my memory rules?",
           "options": [
             {
-              "text": "Pick rules that fit YOUR work.",
+              "text": "The AI loves it when you share your bedroom number.",
+              "correct": false
+            },
+            {
+              "text": "One huge rule fits everyone, including aliens.",
+              "correct": false
+            },
+            {
+              "text": "Rules don't help the helper — they decorate.",
+              "correct": false
+            },
+            {
+              "text": "My memory rules: don't store secrets in the chat.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about my memory rules?",
+          "options": [
+            {
+              "text": "Sharing your real birthday gives you bonus points.",
+              "correct": false
+            },
+            {
+              "text": "Type your phone number to unlock the deluxe AI.",
+              "correct": false
             },
             {
               "text": "Never update rules — they are sacred forever.",
               "correct": false
             },
             {
-              "text": "Rules must be at least 3000 words and very angry.",
-              "correct": false
-            },
-            {
-              "text": "One huge rule fits everyone, including aliens.",
-              "correct": false
+              "text": "Real names, schools, and home info stay OFFLINE.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_25_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -670,124 +1195,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about my memory rules. Pick the SILLIEST claim.",
+          "prompt": "A site asks for your school name. What's the safe move?",
           "options": [
             {
-              "text": "Group rules by topic so they don't fight.",
+              "text": "Make up a long fake school name.",
               "correct": false
             },
             {
-              "text": "Don't keep rules you forgot why you added.",
+              "text": "Type the school name AND principal's name.",
               "correct": false
             },
             {
-              "text": "Rules must be at least 3000 words and very angry.",
+              "text": "Type your school AND your friend's school.",
+              "correct": false
+            },
+            {
+              "text": "Skip it -- or ask an adult first.",
               "correct": true
-            },
-            {
-              "text": "Pick rules that fit YOUR work.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_25_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about my memory rules. Pick the SILLIEST claim.",
+          "prompt": "Quick! A site asks for your school name. What's the safe move?",
           "options": [
             {
-              "text": "Throw out rules you don't need.",
+              "text": "Type your school AND your friend's school.",
               "correct": false
             },
             {
-              "text": "Group rules by topic so they don't fight.",
+              "text": "Type the school name AND principal's name.",
               "correct": false
             },
             {
-              "text": "Each rule needs a tiny crown.",
+              "text": "Skip it -- or ask an adult first.",
               "correct": true
             },
             {
-              "text": "Update rules when you learn new tricks.",
+              "text": "Make up a long fake school name.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_25_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about my memory rules. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — A site asks for your school name. What's the safe move?",
           "options": [
             {
-              "text": "Tiny rules beat one giant rule.",
+              "text": "Make up a long fake school name.",
               "correct": false
             },
             {
-              "text": "Rules must rhyme with 'lemon' or be discarded.",
+              "text": "Type the school name AND principal's name.",
+              "correct": false
+            },
+            {
+              "text": "Skip it -- or ask an adult first.",
               "correct": true
             },
             {
-              "text": "Group rules by topic so they don't fight.",
-              "correct": false
-            },
-            {
-              "text": "Pick rules that fit YOUR work.",
+              "text": "Type your school AND your friend's school.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_25_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about my memory rules. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: A site asks for your school name. What's the safe move?",
           "options": [
             {
-              "text": "Pick rules that fit YOUR work.",
+              "text": "Type the school name AND principal's name.",
               "correct": false
             },
             {
-              "text": "Update rules when you learn new tricks.",
+              "text": "Make up a long fake school name.",
               "correct": false
             },
             {
-              "text": "Test that the rule actually helps.",
-              "correct": false
-            },
-            {
-              "text": "Use somebody else's rules forever — never change them.",
+              "text": "Skip it -- or ask an adult first.",
               "correct": true
+            },
+            {
+              "text": "Type your school AND your friend's school.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_25_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about my memory rules. Pick the SILLIEST claim.",
+          "prompt": "Tell me — A site asks for your school name. What's the safe move?",
           "options": [
             {
-              "text": "Never update rules — they are sacred forever.",
+              "text": "Type the school name AND principal's name.",
+              "correct": false
+            },
+            {
+              "text": "Make up a long fake school name.",
+              "correct": false
+            },
+            {
+              "text": "Skip it -- or ask an adult first.",
               "correct": true
             },
             {
-              "text": "Don't keep rules you forgot why you added.",
-              "correct": false
-            },
-            {
-              "text": "Pick rules that fit YOUR work.",
-              "correct": false
-            },
-            {
-              "text": "Test that the rule actually helps.",
+              "text": "Type your school AND your friend's school.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_25_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — A site asks for your school name. What's the safe move?",
+          "options": [
+            {
+              "text": "Make up a long fake school name.",
+              "correct": false
+            },
+            {
+              "text": "Skip it -- or ask an adult first.",
+              "correct": true
+            },
+            {
+              "text": "Type your school AND your friend's school.",
+              "correct": false
+            },
+            {
+              "text": "Type the school name AND principal's name.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! A site asks for your school name. What's the safe move?",
+          "options": [
+            {
+              "text": "Type the school name AND principal's name.",
+              "correct": false
+            },
+            {
+              "text": "Skip it -- or ask an adult first.",
+              "correct": true
+            },
+            {
+              "text": "Type your school AND your friend's school.",
+              "correct": false
+            },
+            {
+              "text": "Make up a long fake school name.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — A site asks for your school name. What's the safe move?",
+          "options": [
+            {
+              "text": "Type your school AND your friend's school.",
+              "correct": false
+            },
+            {
+              "text": "Skip it -- or ask an adult first.",
+              "correct": true
+            },
+            {
+              "text": "Type the school name AND principal's name.",
+              "correct": false
+            },
+            {
+              "text": "Make up a long fake school name.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: A site asks for your school name. What's the safe move?",
+          "options": [
+            {
+              "text": "Make up a long fake school name.",
+              "correct": false
+            },
+            {
+              "text": "Type your school AND your friend's school.",
+              "correct": false
+            },
+            {
+              "text": "Skip it -- or ask an adult first.",
+              "correct": true
+            },
+            {
+              "text": "Type the school name AND principal's name.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: A site asks for your school name. What's the safe move?",
+          "options": [
+            {
+              "text": "Make up a long fake school name.",
+              "correct": false
+            },
+            {
+              "text": "Type the school name AND principal's name.",
+              "correct": false
+            },
+            {
+              "text": "Skip it -- or ask an adult first.",
+              "correct": true
+            },
+            {
+              "text": "Type your school AND your friend's school.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

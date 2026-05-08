@@ -53,11 +53,11 @@
           "prompt": "What is making a skill?",
           "options": [
             {
-              "text": "Each skill needs three signatures and a stamp.",
+              "text": "A skill must be approved by a real wizard.",
               "correct": false
             },
             {
-              "text": "Skills are giant blob files that scare cats.",
+              "text": "Skills cannot be shared — they are jealous.",
               "correct": false
             },
             {
@@ -75,7 +75,7 @@
           "prompt": "Quick! Which one is TRUE about making a skill?",
           "options": [
             {
-              "text": "Skills must include a tiny dance.",
+              "text": "Skills load only on holidays and bank closings.",
               "correct": false
             },
             {
@@ -87,7 +87,7 @@
               "correct": false
             },
             {
-              "text": "Skills cannot be shared — they are jealous.",
+              "text": "You can only make 3 skills before the AI gets dizzy.",
               "correct": false
             }
           ],
@@ -97,11 +97,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about making a skill.",
           "options": [
             {
-              "text": "A good skill has clear steps.",
+              "text": "A skill is a small bundle of know-how.",
               "correct": false
             },
             {
-              "text": "A skill should solve one problem well.",
+              "text": "A good skill has clear steps.",
               "correct": false
             },
             {
@@ -109,7 +109,7 @@
               "correct": true
             },
             {
-              "text": "A skill is a small bundle of know-how.",
+              "text": "Skills can be improved over time.",
               "correct": false
             }
           ],
@@ -119,11 +119,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about making a skill. What should he say?",
           "options": [
             {
-              "text": "Skills make tasks harder and bumpier.",
+              "text": "You can only make 3 skills before the AI gets dizzy.",
               "correct": false
             },
             {
-              "text": "Skills load only on holidays and bank closings.",
+              "text": "Skills make tasks harder and bumpier.",
               "correct": false
             },
             {
@@ -131,7 +131,7 @@
               "correct": true
             },
             {
-              "text": "Steps are bad in skills — write a poem instead.",
+              "text": "Skills are giant blob files that scare cats.",
               "correct": false
             }
           ],
@@ -141,11 +141,11 @@
           "prompt": "Tell me — Which rule about making a skill is a GOOD rule?",
           "options": [
             {
-              "text": "Skills make tasks harder and bumpier.",
+              "text": "A skill must be approved by a real wizard.",
               "correct": false
             },
             {
-              "text": "Each skill needs three signatures and a stamp.",
+              "text": "Skills load only on holidays and bank closings.",
               "correct": false
             },
             {
@@ -153,11 +153,116 @@
               "correct": true
             },
             {
-              "text": "Skills load only on holidays and bank closings.",
+              "text": "Skills make tasks harder and bumpier.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about making a skill, ___",
+          "options": [
+            {
+              "text": "Each skill needs three signatures and a stamp.",
+              "correct": false
+            },
+            {
+              "text": "Skills are reusable.",
+              "correct": true
+            },
+            {
+              "text": "Skills only stay alive for 24 hours.",
+              "correct": false
+            },
+            {
+              "text": "Steps are bad in skills — write a poem instead.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A good skill has clear steps.",
+              "correct": false
+            },
+            {
+              "text": "Skills make hard tasks feel easy.",
+              "correct": false
+            },
+            {
+              "text": "Skills require a parade to activate.",
+              "correct": true
+            },
+            {
+              "text": "Skills are reusable.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with making a skill?",
+          "options": [
+            {
+              "text": "Skills are giant blob files that scare cats.",
+              "correct": false
+            },
+            {
+              "text": "Skills must include a tiny dance.",
+              "correct": false
+            },
+            {
+              "text": "Skills can be improved over time.",
+              "correct": true
+            },
+            {
+              "text": "Skills make tasks harder and bumpier.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about making a skill is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "A skill is a custom command you teach the AI.",
+              "correct": false
+            },
+            {
+              "text": "A good skill has clear steps.",
+              "correct": false
+            },
+            {
+              "text": "Skills are reusable.",
+              "correct": false
+            },
+            {
+              "text": "Skills only stay alive for 24 hours.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about making a skill. Which fact would help him?",
+          "options": [
+            {
+              "text": "When you make a skill, you save the steps to do something later.",
+              "correct": true
+            },
+            {
+              "text": "Skills must include a tiny dance.",
+              "correct": false
+            },
+            {
+              "text": "Skills require a parade to activate.",
+              "correct": false
+            },
+            {
+              "text": "Skills load only on holidays and bank closings.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -166,12 +271,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type NICE and press Send to keep going!",
-          "target_display": "NICE",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "nice"
+            "yes"
           ],
-          "hint_wrong": "Type the word NICE (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -284,6 +389,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — What's a good skill to make for fixing typos?",
+          "options": [
+            {
+              "text": "'quack' — quacks loudly, does nothing.",
+              "correct": false
+            },
+            {
+              "text": "'doitall' — fixes typos, makes coffee, walks the dog.",
+              "correct": false
+            },
+            {
+              "text": "'typo-fix' — read the file, suggest tiny fixes, ask before saving.",
+              "correct": true
+            },
+            {
+              "text": "'mystery' — does something. Guess what!",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! What's a good skill to make for fixing typos?",
+          "options": [
+            {
+              "text": "'mystery' — does something. Guess what!",
+              "correct": false
+            },
+            {
+              "text": "'typo-fix' — read the file, suggest tiny fixes, ask before saving.",
+              "correct": true
+            },
+            {
+              "text": "'doitall' — fixes typos, makes coffee, walks the dog.",
+              "correct": false
+            },
+            {
+              "text": "'quack' — quacks loudly, does nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What's a good skill to make for fixing typos?",
+          "options": [
+            {
+              "text": "'typo-fix' — read the file, suggest tiny fixes, ask before saving.",
+              "correct": true
+            },
+            {
+              "text": "'doitall' — fixes typos, makes coffee, walks the dog.",
+              "correct": false
+            },
+            {
+              "text": "'mystery' — does something. Guess what!",
+              "correct": false
+            },
+            {
+              "text": "'quack' — quacks loudly, does nothing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: What's a good skill to make for fixing typos?",
+          "options": [
+            {
+              "text": "'mystery' — does something. Guess what!",
+              "correct": false
+            },
+            {
+              "text": "'doitall' — fixes typos, makes coffee, walks the dog.",
+              "correct": false
+            },
+            {
+              "text": "'quack' — quacks loudly, does nothing.",
+              "correct": false
+            },
+            {
+              "text": "'typo-fix' — read the file, suggest tiny fixes, ask before saving.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: What's a good skill to make for fixing typos?",
+          "options": [
+            {
+              "text": "'typo-fix' — read the file, suggest tiny fixes, ask before saving.",
+              "correct": true
+            },
+            {
+              "text": "'doitall' — fixes typos, makes coffee, walks the dog.",
+              "correct": false
+            },
+            {
+              "text": "'mystery' — does something. Guess what!",
+              "correct": false
+            },
+            {
+              "text": "'quack' — quacks loudly, does nothing.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -292,12 +502,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -410,6 +620,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why have skills instead of one giant prompt?",
+          "options": [
+            {
+              "text": "Big prompts are illegal in odd-numbered years.",
+              "correct": false
+            },
+            {
+              "text": "Skills load only the right rules for the job.",
+              "correct": true
+            },
+            {
+              "text": "Prompts get jealous of each other.",
+              "correct": false
+            },
+            {
+              "text": "Skills have better outfits.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why have skills instead of one giant prompt?",
+          "options": [
+            {
+              "text": "Prompts get jealous of each other.",
+              "correct": false
+            },
+            {
+              "text": "Skills load only the right rules for the job.",
+              "correct": true
+            },
+            {
+              "text": "Big prompts are illegal in odd-numbered years.",
+              "correct": false
+            },
+            {
+              "text": "Skills have better outfits.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why have skills instead of one giant prompt?",
+          "options": [
+            {
+              "text": "Skills have better outfits.",
+              "correct": false
+            },
+            {
+              "text": "Prompts get jealous of each other.",
+              "correct": false
+            },
+            {
+              "text": "Skills load only the right rules for the job.",
+              "correct": true
+            },
+            {
+              "text": "Big prompts are illegal in odd-numbered years.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why have skills instead of one giant prompt?",
+          "options": [
+            {
+              "text": "Skills have better outfits.",
+              "correct": false
+            },
+            {
+              "text": "Big prompts are illegal in odd-numbered years.",
+              "correct": false
+            },
+            {
+              "text": "Skills load only the right rules for the job.",
+              "correct": true
+            },
+            {
+              "text": "Prompts get jealous of each other.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why have skills instead of one giant prompt?",
+          "options": [
+            {
+              "text": "Prompts get jealous of each other.",
+              "correct": false
+            },
+            {
+              "text": "Skills load only the right rules for the job.",
+              "correct": true
+            },
+            {
+              "text": "Big prompts are illegal in odd-numbered years.",
+              "correct": false
+            },
+            {
+              "text": "Skills have better outfits.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -418,12 +733,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type OPEN and press Send to keep going!",
-          "target_display": "OPEN",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "open"
+            "cool"
           ],
-          "hint_wrong": "Type the word OPEN (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -431,19 +746,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about making a skill.",
           "options": [
             {
-              "text": "A skill should solve one problem well.",
+              "text": "A skill is a small bundle of know-how.",
               "correct": false
             },
             {
-              "text": "Skills are reusable.",
+              "text": "Skills are like tiny recipes the AI can follow.",
               "correct": false
             },
             {
-              "text": "Steps are bad in skills — write a poem instead.",
+              "text": "A skill must be approved by a real wizard.",
               "correct": true
             },
             {
-              "text": "Skills can be shared with friends.",
+              "text": "Skills load when their topic appears.",
               "correct": false
             }
           ],
@@ -453,19 +768,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about making a skill.",
           "options": [
             {
-              "text": "Skills make hard tasks feel easy.",
+              "text": "A skill is a custom command you teach the AI.",
               "correct": false
             },
             {
-              "text": "Skills make tasks harder and bumpier.",
+              "text": "You can only make 3 skills before the AI gets dizzy.",
               "correct": true
             },
             {
-              "text": "A skill should solve one problem well.",
+              "text": "A skill is a small bundle of know-how.",
               "correct": false
             },
             {
-              "text": "Skills can be shared with friends.",
+              "text": "Once you build a skill, the AI can use it any time.",
               "correct": false
             }
           ],
@@ -475,19 +790,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about making a skill.",
           "options": [
             {
-              "text": "Skills can be shared with friends.",
+              "text": "Skills load when their topic appears.",
               "correct": false
             },
             {
-              "text": "A skill should solve one problem well.",
+              "text": "Skills are like tiny recipes the AI can follow.",
               "correct": false
             },
             {
-              "text": "Skills must include a tiny dance.",
+              "text": "Skills disappear when the moon is full.",
               "correct": true
             },
             {
-              "text": "Skills load when their topic appears.",
+              "text": "A skill is a small bundle of know-how.",
               "correct": false
             }
           ],
@@ -497,11 +812,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about making a skill.",
           "options": [
             {
+              "text": "A skill should solve one problem well.",
+              "correct": false
+            },
+            {
+              "text": "A skill is a custom command you teach the AI.",
+              "correct": false
+            },
+            {
+              "text": "Skills are giant blob files that scare cats.",
+              "correct": true
+            },
+            {
+              "text": "Skills make hard tasks feel easy.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_27_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about making a skill.",
+          "options": [
+            {
               "text": "Skills can be improved over time.",
               "correct": false
             },
             {
+              "text": "A good skill has clear steps.",
+              "correct": false
+            },
+            {
+              "text": "Skills are like tiny recipes the AI can follow.",
+              "correct": false
+            },
+            {
+              "text": "Skills cannot be shared — they are jealous.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_27_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about making a skill.",
+          "options": [
+            {
+              "text": "Once you build a skill, the AI can use it any time.",
+              "correct": false
+            },
+            {
+              "text": "Skills load only on holidays and bank closings.",
+              "correct": true
+            },
+            {
+              "text": "When you make a skill, you save the steps to do something later.",
+              "correct": false
+            },
+            {
               "text": "A skill should solve one problem well.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about making a skill.",
+          "options": [
+            {
+              "text": "A skill is a custom command you teach the AI.",
+              "correct": false
+            },
+            {
+              "text": "A good skill has clear steps.",
+              "correct": false
+            },
+            {
+              "text": "Steps are bad in skills — write a poem instead.",
+              "correct": true
+            },
+            {
+              "text": "Skills load when their topic appears.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about making a skill.",
+          "options": [
+            {
+              "text": "A skill is a small bundle of know-how.",
+              "correct": false
+            },
+            {
+              "text": "Skills can be improved over time.",
+              "correct": false
+            },
+            {
+              "text": "Once you build a skill, the AI can use it any time.",
+              "correct": false
+            },
+            {
+              "text": "Skills make tasks harder and bumpier.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about making a skill.",
+          "options": [
+            {
+              "text": "Skills must include a tiny dance.",
+              "correct": true
+            },
+            {
+              "text": "Skills load when their topic appears.",
+              "correct": false
+            },
+            {
+              "text": "Skills are reusable.",
+              "correct": false
+            },
+            {
+              "text": "Skills can be shared with friends.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about making a skill.",
+          "options": [
+            {
+              "text": "When you make a skill, you save the steps to do something later.",
               "correct": false
             },
             {
@@ -509,33 +948,14 @@
               "correct": true
             },
             {
-              "text": "Skills are reusable.",
+              "text": "Skills make hard tasks feel easy.",
+              "correct": false
+            },
+            {
+              "text": "Skills are like tiny recipes the AI can follow.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_27_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about making a skill.",
-          "options": [
-            {
-              "text": "A skill should solve one problem well.",
-              "correct": false
-            },
-            {
-              "text": "Skills can be improved over time.",
-              "correct": false
-            },
-            {
-              "text": "Skills load when their topic appears.",
-              "correct": false
-            },
-            {
-              "text": "Each skill needs three signatures and a stamp.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_27_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -544,12 +964,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type HERO and press Send to keep going!",
-          "target_display": "HERO",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "hero"
+            "next"
           ],
-          "hint_wrong": "Type the word HERO (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -557,19 +977,19 @@
           "prompt": "Tell me — Which one is TRUE about making a skill?",
           "options": [
             {
+              "text": "Skills load only on holidays and bank closings.",
+              "correct": false
+            },
+            {
+              "text": "You can only make 3 skills before the AI gets dizzy.",
+              "correct": false
+            },
+            {
               "text": "Skills are giant blob files that scare cats.",
               "correct": false
             },
             {
-              "text": "Skills cannot be shared — they are jealous.",
-              "correct": false
-            },
-            {
-              "text": "Skills must include a tiny dance.",
-              "correct": false
-            },
-            {
-              "text": "Skills make hard tasks feel easy.",
+              "text": "A skill is a small bundle of know-how.",
               "correct": true
             }
           ],
@@ -587,11 +1007,11 @@
               "correct": false
             },
             {
-              "text": "Skills are reusable.",
+              "text": "Skills can be shared with friends.",
               "correct": true
             },
             {
-              "text": "Steps are bad in skills — write a poem instead.",
+              "text": "Skills only stay alive for 24 hours.",
               "correct": false
             }
           ],
@@ -601,27 +1021,121 @@
           "prompt": "Pop quiz! Which one is TRUE about making a skill?",
           "options": [
             {
-              "text": "A skill should solve one problem well.",
+              "text": "Skills load when their topic appears.",
               "correct": true
             },
             {
-              "text": "Skills are giant blob files that scare cats.",
-              "correct": false
-            },
-            {
-              "text": "Steps are bad in skills — write a poem instead.",
-              "correct": false
-            },
-            {
               "text": "Skills make tasks harder and bumpier.",
+              "correct": false
+            },
+            {
+              "text": "Each skill needs three signatures and a stamp.",
+              "correct": false
+            },
+            {
+              "text": "Skills cannot be shared — they are jealous.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about making a skill?",
+          "options": [
+            {
+              "text": "A skill must be approved by a real wizard.",
+              "correct": false
+            },
+            {
+              "text": "A good skill has clear steps.",
+              "correct": true
+            },
+            {
+              "text": "Skills only stay alive for 24 hours.",
+              "correct": false
+            },
+            {
+              "text": "Each skill needs three signatures and a stamp.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_27_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about making a skill?",
+          "options": [
+            {
+              "text": "Skills make hard tasks feel easy.",
+              "correct": true
+            },
+            {
+              "text": "Skills require a parade to activate.",
+              "correct": false
+            },
+            {
+              "text": "Skills make tasks harder and bumpier.",
+              "correct": false
+            },
+            {
+              "text": "Skills disappear when the moon is full.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_27_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about making a skill?",
+          "options": [
+            {
+              "text": "Skills are reusable.",
+              "correct": true
+            },
+            {
+              "text": "Skills require a parade to activate.",
+              "correct": false
+            },
+            {
+              "text": "Skills are giant blob files that scare cats.",
+              "correct": false
+            },
+            {
+              "text": "Skills cannot be shared — they are jealous.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about making a skill?",
+          "options": [
+            {
+              "text": "Steps are bad in skills — write a poem instead.",
+              "correct": false
+            },
+            {
+              "text": "Skills are giant blob files that scare cats.",
+              "correct": false
+            },
+            {
+              "text": "A skill should solve one problem well.",
+              "correct": true
+            },
+            {
+              "text": "Skills load only on holidays and bank closings.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about making a skill?",
           "options": [
+            {
+              "text": "Skills are giant blob files that scare cats.",
+              "correct": false
+            },
+            {
+              "text": "Skills require a parade to activate.",
+              "correct": false
+            },
             {
               "text": "Skills make tasks harder and bumpier.",
               "correct": false
@@ -629,39 +1143,50 @@
             {
               "text": "Skills can be improved over time.",
               "correct": true
-            },
-            {
-              "text": "Skills are giant blob files that scare cats.",
-              "correct": false
-            },
-            {
-              "text": "Skills must include a tiny dance.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_27_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about making a skill?",
           "options": [
             {
-              "text": "A skill is a small bundle of know-how.",
+              "text": "Skills disappear when the moon is full.",
+              "correct": false
+            },
+            {
+              "text": "Steps are bad in skills — write a poem instead.",
+              "correct": false
+            },
+            {
+              "text": "Skills make tasks harder and bumpier.",
+              "correct": false
+            },
+            {
+              "text": "A skill is a custom command you teach the AI.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about making a skill?",
+          "options": [
+            {
+              "text": "A skill must be approved by a real wizard.",
+              "correct": false
+            },
+            {
+              "text": "You can only make 3 skills before the AI gets dizzy.",
+              "correct": false
             },
             {
               "text": "Skills cannot be shared — they are jealous.",
               "correct": false
             },
             {
-              "text": "Skills must include a tiny dance.",
-              "correct": false
-            },
-            {
-              "text": "Steps are bad in skills — write a poem instead.",
-              "correct": false
+              "text": "When you make a skill, you save the steps to do something later.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_27_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -670,124 +1195,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "prompt": "You make the same chart every Friday. What's smart to do?",
           "options": [
             {
-              "text": "Skills can be improved over time.",
-              "correct": false
-            },
-            {
-              "text": "A skill should solve one problem well.",
-              "correct": false
-            },
-            {
-              "text": "Skills must include a tiny dance.",
+              "text": "Build a skill so the AI can do it for you next time.",
               "correct": true
             },
             {
-              "text": "A skill is a small bundle of know-how.",
+              "text": "Quit charts forever.",
+              "correct": false
+            },
+            {
+              "text": "Hide and hope someone else makes it.",
+              "correct": false
+            },
+            {
+              "text": "Make charts on Saturdays only.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "prompt": "Quick! You make the same chart every Friday. What's smart to do?",
           "options": [
             {
-              "text": "Skills load when their topic appears.",
+              "text": "Hide and hope someone else makes it.",
               "correct": false
             },
             {
-              "text": "Skills can be improved over time.",
-              "correct": false
-            },
-            {
-              "text": "Skills require a parade to activate.",
+              "text": "Build a skill so the AI can do it for you next time.",
               "correct": true
             },
             {
-              "text": "Skills can be shared with friends.",
+              "text": "Quit charts forever.",
+              "correct": false
+            },
+            {
+              "text": "Make charts on Saturdays only.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — You make the same chart every Friday. What's smart to do?",
           "options": [
             {
-              "text": "A good skill has clear steps.",
-              "correct": false
-            },
-            {
-              "text": "Each skill needs three signatures and a stamp.",
+              "text": "Build a skill so the AI can do it for you next time.",
               "correct": true
             },
             {
-              "text": "Skills can be improved over time.",
+              "text": "Quit charts forever.",
               "correct": false
             },
             {
-              "text": "A skill is a small bundle of know-how.",
+              "text": "Hide and hope someone else makes it.",
+              "correct": false
+            },
+            {
+              "text": "Make charts on Saturdays only.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: You make the same chart every Friday. What's smart to do?",
           "options": [
             {
-              "text": "A skill is a small bundle of know-how.",
-              "correct": false
-            },
-            {
-              "text": "Skills can be shared with friends.",
-              "correct": false
-            },
-            {
-              "text": "Skills are reusable.",
-              "correct": false
-            },
-            {
-              "text": "Skills are giant blob files that scare cats.",
+              "text": "Build a skill so the AI can do it for you next time.",
               "correct": true
+            },
+            {
+              "text": "Hide and hope someone else makes it.",
+              "correct": false
+            },
+            {
+              "text": "Make charts on Saturdays only.",
+              "correct": false
+            },
+            {
+              "text": "Quit charts forever.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "prompt": "Tell me — You make the same chart every Friday. What's smart to do?",
           "options": [
             {
-              "text": "Skills cannot be shared — they are jealous.",
+              "text": "Hide and hope someone else makes it.",
+              "correct": false
+            },
+            {
+              "text": "Quit charts forever.",
+              "correct": false
+            },
+            {
+              "text": "Make charts on Saturdays only.",
+              "correct": false
+            },
+            {
+              "text": "Build a skill so the AI can do it for you next time.",
               "correct": true
-            },
-            {
-              "text": "A skill should solve one problem well.",
-              "correct": false
-            },
-            {
-              "text": "A skill is a small bundle of know-how.",
-              "correct": false
-            },
-            {
-              "text": "Skills are reusable.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You make the same chart every Friday. What's smart to do?",
+          "options": [
+            {
+              "text": "Make charts on Saturdays only.",
+              "correct": false
+            },
+            {
+              "text": "Hide and hope someone else makes it.",
+              "correct": false
+            },
+            {
+              "text": "Build a skill so the AI can do it for you next time.",
+              "correct": true
+            },
+            {
+              "text": "Quit charts forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You make the same chart every Friday. What's smart to do?",
+          "options": [
+            {
+              "text": "Build a skill so the AI can do it for you next time.",
+              "correct": true
+            },
+            {
+              "text": "Make charts on Saturdays only.",
+              "correct": false
+            },
+            {
+              "text": "Hide and hope someone else makes it.",
+              "correct": false
+            },
+            {
+              "text": "Quit charts forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You make the same chart every Friday. What's smart to do?",
+          "options": [
+            {
+              "text": "Build a skill so the AI can do it for you next time.",
+              "correct": true
+            },
+            {
+              "text": "Make charts on Saturdays only.",
+              "correct": false
+            },
+            {
+              "text": "Hide and hope someone else makes it.",
+              "correct": false
+            },
+            {
+              "text": "Quit charts forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You make the same chart every Friday. What's smart to do?",
+          "options": [
+            {
+              "text": "Hide and hope someone else makes it.",
+              "correct": false
+            },
+            {
+              "text": "Quit charts forever.",
+              "correct": false
+            },
+            {
+              "text": "Make charts on Saturdays only.",
+              "correct": false
+            },
+            {
+              "text": "Build a skill so the AI can do it for you next time.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You make the same chart every Friday. What's smart to do?",
+          "options": [
+            {
+              "text": "Hide and hope someone else makes it.",
+              "correct": false
+            },
+            {
+              "text": "Build a skill so the AI can do it for you next time.",
+              "correct": true
+            },
+            {
+              "text": "Quit charts forever.",
+              "correct": false
+            },
+            {
+              "text": "Make charts on Saturdays only.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -796,124 +1426,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type MAKE and press Send to keep going!",
-          "target_display": "MAKE",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "make"
+            "play"
           ],
-          "hint_wrong": "Type the word MAKE (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about making a skill is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about making a skill. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "A skill should solve one problem well.",
+              "text": "Skills require a parade to activate.",
               "correct": true
             },
             {
-              "text": "Skills make tasks harder and bumpier.",
+              "text": "Skills can be shared with friends.",
               "correct": false
             },
             {
-              "text": "Skills must include a tiny dance.",
+              "text": "A skill is a custom command you teach the AI.",
               "correct": false
             },
             {
-              "text": "Skills are giant blob files that scare cats.",
+              "text": "Once you build a skill, the AI can use it any time.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about making a skill is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about making a skill. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "A skill is a small bundle of know-how.",
+              "correct": false
+            },
+            {
+              "text": "A good skill has clear steps.",
+              "correct": false
+            },
+            {
+              "text": "Skills load when their topic appears.",
+              "correct": false
+            },
+            {
               "text": "Each skill needs three signatures and a stamp.",
-              "correct": false
-            },
-            {
-              "text": "Skills require a parade to activate.",
-              "correct": false
-            },
-            {
-              "text": "Skills load only on holidays and bank closings.",
-              "correct": false
-            },
-            {
-              "text": "Skills can be improved over time.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about making a skill is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about making a skill. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Skills must include a tiny dance.",
+              "text": "A skill should solve one problem well.",
               "correct": false
             },
             {
-              "text": "Steps are bad in skills — write a poem instead.",
+              "text": "Once you build a skill, the AI can use it any time.",
               "correct": false
             },
             {
-              "text": "Skills make tasks harder and bumpier.",
+              "text": "When you make a skill, you save the steps to do something later.",
               "correct": false
             },
             {
-              "text": "A skill is a small bundle of know-how.",
+              "text": "Skills only stay alive for 24 hours.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about making a skill is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about making a skill. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Each skill needs three signatures and a stamp.",
+              "text": "Skills can be shared with friends.",
               "correct": false
             },
             {
-              "text": "Skills can be shared with friends.",
+              "text": "A skill must be approved by a real wizard.",
               "correct": true
             },
             {
-              "text": "Skills make tasks harder and bumpier.",
+              "text": "A skill should solve one problem well.",
               "correct": false
             },
             {
-              "text": "Skills require a parade to activate.",
+              "text": "Skills make hard tasks feel easy.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about making a skill is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about making a skill. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Skills cannot be shared — they are jealous.",
+              "text": "Skills are like tiny recipes the AI can follow.",
               "correct": false
             },
             {
-              "text": "Skills load when their topic appears.",
+              "text": "You can only make 3 skills before the AI gets dizzy.",
               "correct": true
             },
             {
-              "text": "Steps are bad in skills — write a poem instead.",
+              "text": "A skill is a small bundle of know-how.",
               "correct": false
             },
             {
-              "text": "Skills are giant blob files that scare cats.",
+              "text": "A skill is a custom command you teach the AI.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Skills are reusable.",
+              "correct": false
+            },
+            {
+              "text": "Skills disappear when the moon is full.",
+              "correct": true
+            },
+            {
+              "text": "A skill is a custom command you teach the AI.",
+              "correct": false
+            },
+            {
+              "text": "Skills can be improved over time.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Skills load when their topic appears.",
+              "correct": false
+            },
+            {
+              "text": "Skills are giant blob files that scare cats.",
+              "correct": true
+            },
+            {
+              "text": "A skill should solve one problem well.",
+              "correct": false
+            },
+            {
+              "text": "Skills can be shared with friends.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A skill should solve one problem well.",
+              "correct": false
+            },
+            {
+              "text": "Skills can be shared with friends.",
+              "correct": false
+            },
+            {
+              "text": "Skills cannot be shared — they are jealous.",
+              "correct": true
+            },
+            {
+              "text": "A good skill has clear steps.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Skills load only on holidays and bank closings.",
+              "correct": true
+            },
+            {
+              "text": "A skill is a small bundle of know-how.",
+              "correct": false
+            },
+            {
+              "text": "Once you build a skill, the AI can use it any time.",
+              "correct": false
+            },
+            {
+              "text": "A skill should solve one problem well.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about making a skill. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Skills load when their topic appears.",
+              "correct": false
+            },
+            {
+              "text": "Skills are reusable.",
+              "correct": false
+            },
+            {
+              "text": "Steps are bad in skills — write a poem instead.",
+              "correct": true
+            },
+            {
+              "text": "A skill should solve one problem well.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -922,28 +1657,28 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type LOOK and press Send to keep going!",
-          "target_display": "LOOK",
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
           "targets": [
-            "look"
+            "code"
           ],
-          "hint_wrong": "Type the word LOOK (any case is fine)."
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Fill in the blank: when we talk about making a skill, ___",
+          "prompt": "Listen up — Which rule about making a skill is a GOOD rule?",
           "options": [
+            {
+              "text": "Skills require a parade to activate.",
+              "correct": false
+            },
             {
               "text": "Skills cannot be shared — they are jealous.",
               "correct": false
             },
             {
-              "text": "Skills load only on holidays and bank closings.",
-              "correct": false
-            },
-            {
-              "text": "Skills can be improved over time.",
+              "text": "When you make a skill, you save the steps to do something later.",
               "correct": true
             },
             {
@@ -954,36 +1689,32 @@
           "_audio": "assets/audio/q/lesson_27_q8_v0.wav"
         },
         {
-          "prompt": "Quick! Fill in the blank: when we talk about making a skill, ___",
+          "prompt": "Here's a thinker: Which rule about making a skill is a GOOD rule?",
           "options": [
             {
-              "text": "Skills make tasks harder and bumpier.",
+              "text": "A skill must be approved by a real wizard.",
               "correct": false
             },
             {
-              "text": "Skills require a parade to activate.",
+              "text": "Skills only stay alive for 24 hours.",
               "correct": false
             },
             {
-              "text": "A skill is a small bundle of know-how.",
+              "text": "Skills are like tiny recipes the AI can follow.",
               "correct": true
             },
             {
-              "text": "Skills must include a tiny dance.",
+              "text": "Skills load only on holidays and bank closings.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q8_v1.wav"
         },
         {
-          "prompt": "Hey friend — Fill in the blank: when we talk about making a skill, ___",
+          "prompt": "OK quick one: Which rule about making a skill is a GOOD rule?",
           "options": [
             {
-              "text": "Skills cannot be shared — they are jealous.",
-              "correct": false
-            },
-            {
-              "text": "Skills are giant blob files that scare cats.",
+              "text": "Skills make tasks harder and bumpier.",
               "correct": false
             },
             {
@@ -991,39 +1722,43 @@
               "correct": false
             },
             {
-              "text": "Skills can be shared with friends.",
+              "text": "Skills are giant blob files that scare cats.",
+              "correct": false
+            },
+            {
+              "text": "Once you build a skill, the AI can use it any time.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q8_v2.wav"
         },
         {
-          "prompt": "Bytey wonders: Fill in the blank: when we talk about making a skill, ___",
+          "prompt": "Hmm... Which rule about making a skill is a GOOD rule?",
           "options": [
             {
-              "text": "Skills are giant blob files that scare cats.",
+              "text": "A skill must be approved by a real wizard.",
               "correct": false
             },
             {
-              "text": "Skills load when their topic appears.",
+              "text": "A skill is a small bundle of know-how.",
               "correct": true
             },
             {
-              "text": "Skills load only on holidays and bank closings.",
+              "text": "You can only make 3 skills before the AI gets dizzy.",
               "correct": false
             },
             {
-              "text": "Skills require a parade to activate.",
+              "text": "Steps are bad in skills — write a poem instead.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q8_v3.wav"
         },
         {
-          "prompt": "Tell me — Fill in the blank: when we talk about making a skill, ___",
+          "prompt": "Which rule about making a skill is a GOOD rule?",
           "options": [
             {
-              "text": "A good skill has clear steps.",
+              "text": "Skills can be shared with friends.",
               "correct": true
             },
             {
@@ -1031,15 +1766,120 @@
               "correct": false
             },
             {
-              "text": "Skills require a parade to activate.",
+              "text": "Steps are bad in skills — write a poem instead.",
               "correct": false
             },
             {
-              "text": "Skills cannot be shared — they are jealous.",
+              "text": "Skills load only on holidays and bank closings.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_27_q8_v4.wav"
+        },
+        {
+          "prompt": "Quick! Which rule about making a skill is a GOOD rule?",
+          "options": [
+            {
+              "text": "Skills load when their topic appears.",
+              "correct": true
+            },
+            {
+              "text": "Skills disappear when the moon is full.",
+              "correct": false
+            },
+            {
+              "text": "A skill must be approved by a real wizard.",
+              "correct": false
+            },
+            {
+              "text": "Skills must include a tiny dance.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about making a skill is a GOOD rule?",
+          "options": [
+            {
+              "text": "Skills disappear when the moon is full.",
+              "correct": false
+            },
+            {
+              "text": "You can only make 3 skills before the AI gets dizzy.",
+              "correct": false
+            },
+            {
+              "text": "A good skill has clear steps.",
+              "correct": true
+            },
+            {
+              "text": "Skills require a parade to activate.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about making a skill is a GOOD rule?",
+          "options": [
+            {
+              "text": "Skills make hard tasks feel easy.",
+              "correct": true
+            },
+            {
+              "text": "Skills disappear when the moon is full.",
+              "correct": false
+            },
+            {
+              "text": "Skills only stay alive for 24 hours.",
+              "correct": false
+            },
+            {
+              "text": "A skill must be approved by a real wizard.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about making a skill is a GOOD rule?",
+          "options": [
+            {
+              "text": "Skills are reusable.",
+              "correct": true
+            },
+            {
+              "text": "Skills are giant blob files that scare cats.",
+              "correct": false
+            },
+            {
+              "text": "A skill must be approved by a real wizard.",
+              "correct": false
+            },
+            {
+              "text": "Skills disappear when the moon is full.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which rule about making a skill is a GOOD rule?",
+          "options": [
+            {
+              "text": "Skills only stay alive for 24 hours.",
+              "correct": false
+            },
+            {
+              "text": "You can only make 3 skills before the AI gets dizzy.",
+              "correct": false
+            },
+            {
+              "text": "Skills must include a tiny dance.",
+              "correct": false
+            },
+            {
+              "text": "A skill should solve one problem well.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

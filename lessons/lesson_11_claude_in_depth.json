@@ -55,11 +55,11 @@
           "prompt": "What is Claude in depth?",
           "options": [
             {
-              "text": "Claude lives inside a salt shaker.",
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
               "correct": false
             },
             {
-              "text": "Claude only speaks emoji and pretends to read.",
+              "text": "Claude refuses to follow rules and laughs at them.",
               "correct": false
             },
             {
@@ -77,7 +77,7 @@
           "prompt": "Quick! Which one is TRUE about Claude in depth?",
           "options": [
             {
-              "text": "Claude is allergic to the word 'banana'.",
+              "text": "Claude works only when it rains in three cities.",
               "correct": false
             },
             {
@@ -89,7 +89,7 @@
               "correct": false
             },
             {
-              "text": "Claude refuses to follow rules and laughs at them.",
+              "text": "Claude answers faster if you spin in a circle.",
               "correct": false
             }
           ],
@@ -99,11 +99,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Claude in depth.",
           "options": [
             {
-              "text": "Claude can explain why it picked an answer.",
+              "text": "Claude is a careful helper who likes clear rules.",
               "correct": false
             },
             {
-              "text": "Claude warns you if something looks risky.",
+              "text": "Claude can explain why it picked an answer.",
               "correct": false
             },
             {
@@ -111,7 +111,7 @@
               "correct": true
             },
             {
-              "text": "Claude is a careful helper who likes clear rules.",
+              "text": "Claude remembers the chat, not your computer.",
               "correct": false
             }
           ],
@@ -121,11 +121,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about Claude in depth. What should he say?",
           "options": [
             {
-              "text": "Claude never explains anything, ever, sorry.",
+              "text": "Claude answers faster if you spin in a circle.",
               "correct": false
             },
             {
-              "text": "Claude works only when it rains in three cities.",
+              "text": "Claude never explains anything, ever, sorry.",
               "correct": false
             },
             {
@@ -133,7 +133,7 @@
               "correct": true
             },
             {
-              "text": "Claude only writes one word per day, no more.",
+              "text": "Claude only speaks emoji and pretends to read.",
               "correct": false
             }
           ],
@@ -143,11 +143,11 @@
           "prompt": "Tell me — Which rule about Claude in depth is a GOOD rule?",
           "options": [
             {
-              "text": "Claude never explains anything, ever, sorry.",
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
               "correct": false
             },
             {
-              "text": "Claude lives inside a salt shaker.",
+              "text": "Claude works only when it rains in three cities.",
               "correct": false
             },
             {
@@ -155,11 +155,116 @@
               "correct": true
             },
             {
-              "text": "Claude works only when it rains in three cities.",
+              "text": "Claude never explains anything, ever, sorry.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about Claude in depth, ___",
+          "options": [
+            {
+              "text": "Claude lives inside a salt shaker.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads instructions before guessing.",
+              "correct": true
+            },
+            {
+              "text": "Claude lives in a tiny house inside your keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day, no more.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": false
+            },
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": false
+            },
+            {
+              "text": "Claude eats every third word for taste.",
+              "correct": true
+            },
+            {
+              "text": "Claude reads instructions before guessing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with Claude in depth?",
+          "options": [
+            {
+              "text": "Claude only speaks emoji and pretends to read.",
+              "correct": false
+            },
+            {
+              "text": "Claude is allergic to the word 'banana'.",
+              "correct": false
+            },
+            {
+              "text": "Claude remembers the chat, not your computer.",
+              "correct": true
+            },
+            {
+              "text": "Claude never explains anything, ever, sorry.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about Claude in depth is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Claude is great at thinking through tricky problems step by step.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads instructions before guessing.",
+              "correct": false
+            },
+            {
+              "text": "Claude lives in a tiny house inside your keyboard.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about Claude in depth. Which fact would help him?",
+          "options": [
+            {
+              "text": "Claude likes when you say what KIND of help you want.",
+              "correct": true
+            },
+            {
+              "text": "Claude is allergic to the word 'banana'.",
+              "correct": false
+            },
+            {
+              "text": "Claude eats every third word for taste.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains in three cities.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -168,12 +273,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type LOOK and press Send to keep going!",
-          "target_display": "LOOK",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "look"
+            "yes"
           ],
-          "hint_wrong": "Type the word LOOK (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -286,6 +391,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — What's a good first sentence to ask Claude for code?",
+          "options": [
+            {
+              "text": "Build me a thing that thinks.",
+              "correct": false
+            },
+            {
+              "text": "Ahem. Cough. Code please.",
+              "correct": false
+            },
+            {
+              "text": "Make a small program that does X. Test it works.",
+              "correct": true
+            },
+            {
+              "text": "Start. Now. Quick. Hurry.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! What's a good first sentence to ask Claude for code?",
+          "options": [
+            {
+              "text": "Ahem. Cough. Code please.",
+              "correct": false
+            },
+            {
+              "text": "Build me a thing that thinks.",
+              "correct": false
+            },
+            {
+              "text": "Start. Now. Quick. Hurry.",
+              "correct": false
+            },
+            {
+              "text": "Make a small program that does X. Test it works.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What's a good first sentence to ask Claude for code?",
+          "options": [
+            {
+              "text": "Make a small program that does X. Test it works.",
+              "correct": true
+            },
+            {
+              "text": "Ahem. Cough. Code please.",
+              "correct": false
+            },
+            {
+              "text": "Start. Now. Quick. Hurry.",
+              "correct": false
+            },
+            {
+              "text": "Build me a thing that thinks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: What's a good first sentence to ask Claude for code?",
+          "options": [
+            {
+              "text": "Make a small program that does X. Test it works.",
+              "correct": true
+            },
+            {
+              "text": "Build me a thing that thinks.",
+              "correct": false
+            },
+            {
+              "text": "Start. Now. Quick. Hurry.",
+              "correct": false
+            },
+            {
+              "text": "Ahem. Cough. Code please.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: What's a good first sentence to ask Claude for code?",
+          "options": [
+            {
+              "text": "Start. Now. Quick. Hurry.",
+              "correct": false
+            },
+            {
+              "text": "Build me a thing that thinks.",
+              "correct": false
+            },
+            {
+              "text": "Make a small program that does X. Test it works.",
+              "correct": true
+            },
+            {
+              "text": "Ahem. Cough. Code please.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -294,12 +504,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -412,6 +622,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why is Claude careful with rules you give it?",
+          "options": [
+            {
+              "text": "Rules are how Claude learns to ride a bike.",
+              "correct": false
+            },
+            {
+              "text": "Rules taste sweet to Claude.",
+              "correct": false
+            },
+            {
+              "text": "Rules earn Claude a sticker.",
+              "correct": false
+            },
+            {
+              "text": "Rules tell Claude how YOU want the work done.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why is Claude careful with rules you give it?",
+          "options": [
+            {
+              "text": "Rules tell Claude how YOU want the work done.",
+              "correct": true
+            },
+            {
+              "text": "Rules taste sweet to Claude.",
+              "correct": false
+            },
+            {
+              "text": "Rules earn Claude a sticker.",
+              "correct": false
+            },
+            {
+              "text": "Rules are how Claude learns to ride a bike.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why is Claude careful with rules you give it?",
+          "options": [
+            {
+              "text": "Rules taste sweet to Claude.",
+              "correct": false
+            },
+            {
+              "text": "Rules are how Claude learns to ride a bike.",
+              "correct": false
+            },
+            {
+              "text": "Rules earn Claude a sticker.",
+              "correct": false
+            },
+            {
+              "text": "Rules tell Claude how YOU want the work done.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why is Claude careful with rules you give it?",
+          "options": [
+            {
+              "text": "Rules taste sweet to Claude.",
+              "correct": false
+            },
+            {
+              "text": "Rules earn Claude a sticker.",
+              "correct": false
+            },
+            {
+              "text": "Rules tell Claude how YOU want the work done.",
+              "correct": true
+            },
+            {
+              "text": "Rules are how Claude learns to ride a bike.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why is Claude careful with rules you give it?",
+          "options": [
+            {
+              "text": "Rules earn Claude a sticker.",
+              "correct": false
+            },
+            {
+              "text": "Rules are how Claude learns to ride a bike.",
+              "correct": false
+            },
+            {
+              "text": "Rules taste sweet to Claude.",
+              "correct": false
+            },
+            {
+              "text": "Rules tell Claude how YOU want the work done.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -420,12 +735,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type TYPE and press Send to keep going!",
-          "target_display": "TYPE",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "type"
+            "cool"
           ],
-          "hint_wrong": "Type the word TYPE (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -433,19 +748,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about Claude in depth.",
           "options": [
             {
-              "text": "Claude warns you if something looks risky.",
+              "text": "Claude is a careful helper who likes clear rules.",
               "correct": false
             },
             {
-              "text": "Claude reads instructions before guessing.",
+              "text": "Claude can write stories, plans, and explanations.",
               "correct": false
             },
             {
-              "text": "Claude only writes one word per day, no more.",
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
               "correct": true
             },
             {
-              "text": "You can give Claude a sticky-note style of rules.",
+              "text": "Claude works step by step on hard tasks.",
               "correct": false
             }
           ],
@@ -455,19 +770,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about Claude in depth.",
           "options": [
             {
-              "text": "Claude can write code, stories, and plans.",
+              "text": "Claude is great at thinking through tricky problems step by step.",
               "correct": false
             },
             {
-              "text": "Claude never explains anything, ever, sorry.",
+              "text": "Claude answers faster if you spin in a circle.",
               "correct": true
             },
             {
-              "text": "Claude warns you if something looks risky.",
+              "text": "Claude is a careful helper who likes clear rules.",
               "correct": false
             },
             {
-              "text": "You can give Claude a sticky-note style of rules.",
+              "text": "Claude is the same Claude on any computer -- same brain.",
               "correct": false
             }
           ],
@@ -477,19 +792,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about Claude in depth.",
           "options": [
             {
-              "text": "You can give Claude a sticky-note style of rules.",
+              "text": "Claude works step by step on hard tasks.",
               "correct": false
             },
             {
-              "text": "Claude warns you if something looks risky.",
+              "text": "Claude can write stories, plans, and explanations.",
               "correct": false
             },
             {
-              "text": "Claude is allergic to the word 'banana'.",
+              "text": "Claude only helps if you wear matching socks.",
               "correct": true
             },
             {
-              "text": "Claude works step by step on hard tasks.",
+              "text": "Claude is a careful helper who likes clear rules.",
               "correct": false
             }
           ],
@@ -499,11 +814,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about Claude in depth.",
           "options": [
             {
+              "text": "Claude warns you if something looks risky.",
+              "correct": false
+            },
+            {
+              "text": "Claude is great at thinking through tricky problems step by step.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji and pretends to read.",
+              "correct": true
+            },
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_11_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
               "text": "Claude remembers the chat, not your computer.",
               "correct": false
             },
             {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": false
+            },
+            {
+              "text": "Claude can write stories, plans, and explanations.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules and laughs at them.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_11_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "Claude is the same Claude on any computer -- same brain.",
+              "correct": false
+            },
+            {
+              "text": "Claude works only when it rains in three cities.",
+              "correct": true
+            },
+            {
+              "text": "Claude likes when you say what KIND of help you want.",
+              "correct": false
+            },
+            {
               "text": "Claude warns you if something looks risky.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "Claude is great at thinking through tricky problems step by step.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day, no more.",
+              "correct": true
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude remembers the chat, not your computer.",
+              "correct": false
+            },
+            {
+              "text": "Claude is the same Claude on any computer -- same brain.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything, ever, sorry.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "Claude is allergic to the word 'banana'.",
+              "correct": true
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads instructions before guessing.",
+              "correct": false
+            },
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about Claude in depth.",
+          "options": [
+            {
+              "text": "Claude likes when you say what KIND of help you want.",
               "correct": false
             },
             {
@@ -511,33 +950,14 @@
               "correct": true
             },
             {
-              "text": "Claude reads instructions before guessing.",
+              "text": "Claude can write code, stories, and plans.",
+              "correct": false
+            },
+            {
+              "text": "Claude can write stories, plans, and explanations.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_11_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about Claude in depth.",
-          "options": [
-            {
-              "text": "Claude warns you if something looks risky.",
-              "correct": false
-            },
-            {
-              "text": "Claude remembers the chat, not your computer.",
-              "correct": false
-            },
-            {
-              "text": "Claude works step by step on hard tasks.",
-              "correct": false
-            },
-            {
-              "text": "Claude lives inside a salt shaker.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_11_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -546,12 +966,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WORD and press Send to keep going!",
-          "target_display": "WORD",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "word"
+            "next"
           ],
-          "hint_wrong": "Type the word WORD (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -559,19 +979,19 @@
           "prompt": "Tell me — Which one is TRUE about Claude in depth?",
           "options": [
             {
+              "text": "Claude works only when it rains in three cities.",
+              "correct": false
+            },
+            {
+              "text": "Claude answers faster if you spin in a circle.",
+              "correct": false
+            },
+            {
               "text": "Claude only speaks emoji and pretends to read.",
               "correct": false
             },
             {
-              "text": "Claude refuses to follow rules and laughs at them.",
-              "correct": false
-            },
-            {
-              "text": "Claude is allergic to the word 'banana'.",
-              "correct": false
-            },
-            {
-              "text": "Claude can write code, stories, and plans.",
+              "text": "Claude is a careful helper who likes clear rules.",
               "correct": true
             }
           ],
@@ -589,11 +1009,11 @@
               "correct": false
             },
             {
-              "text": "Claude reads instructions before guessing.",
+              "text": "You can give Claude a sticky-note style of rules.",
               "correct": true
             },
             {
-              "text": "Claude only writes one word per day, no more.",
+              "text": "Claude lives in a tiny house inside your keyboard.",
               "correct": false
             }
           ],
@@ -603,27 +1023,121 @@
           "prompt": "Pop quiz! Which one is TRUE about Claude in depth?",
           "options": [
             {
-              "text": "Claude warns you if something looks risky.",
+              "text": "Claude works step by step on hard tasks.",
               "correct": true
             },
             {
-              "text": "Claude only speaks emoji and pretends to read.",
-              "correct": false
-            },
-            {
-              "text": "Claude only writes one word per day, no more.",
-              "correct": false
-            },
-            {
               "text": "Claude never explains anything, ever, sorry.",
+              "correct": false
+            },
+            {
+              "text": "Claude lives inside a salt shaker.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules and laughs at them.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": true
+            },
+            {
+              "text": "Claude lives in a tiny house inside your keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Claude lives inside a salt shaker.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_11_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": true
+            },
+            {
+              "text": "Claude eats every third word for taste.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything, ever, sorry.",
+              "correct": false
+            },
+            {
+              "text": "Claude only helps if you wear matching socks.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_11_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude reads instructions before guessing.",
+              "correct": true
+            },
+            {
+              "text": "Claude eats every third word for taste.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji and pretends to read.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules and laughs at them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude only writes one word per day, no more.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji and pretends to read.",
+              "correct": false
+            },
+            {
+              "text": "Claude warns you if something looks risky.",
+              "correct": true
+            },
+            {
+              "text": "Claude works only when it rains in three cities.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about Claude in depth?",
           "options": [
+            {
+              "text": "Claude only speaks emoji and pretends to read.",
+              "correct": false
+            },
+            {
+              "text": "Claude eats every third word for taste.",
+              "correct": false
+            },
             {
               "text": "Claude never explains anything, ever, sorry.",
               "correct": false
@@ -631,39 +1145,50 @@
             {
               "text": "Claude remembers the chat, not your computer.",
               "correct": true
-            },
-            {
-              "text": "Claude only speaks emoji and pretends to read.",
-              "correct": false
-            },
-            {
-              "text": "Claude is allergic to the word 'banana'.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_11_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about Claude in depth?",
           "options": [
             {
-              "text": "Claude is a careful helper who likes clear rules.",
+              "text": "Claude only helps if you wear matching socks.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day, no more.",
+              "correct": false
+            },
+            {
+              "text": "Claude never explains anything, ever, sorry.",
+              "correct": false
+            },
+            {
+              "text": "Claude is great at thinking through tricky problems step by step.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about Claude in depth?",
+          "options": [
+            {
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
+              "correct": false
+            },
+            {
+              "text": "Claude answers faster if you spin in a circle.",
+              "correct": false
             },
             {
               "text": "Claude refuses to follow rules and laughs at them.",
               "correct": false
             },
             {
-              "text": "Claude is allergic to the word 'banana'.",
-              "correct": false
-            },
-            {
-              "text": "Claude only writes one word per day, no more.",
-              "correct": false
+              "text": "Claude likes when you say what KIND of help you want.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_11_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -672,124 +1197,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "prompt": "You ask Claude: 'Help me with my project.' Claude wants more info. Why?",
           "options": [
             {
-              "text": "Claude remembers the chat, not your computer.",
-              "correct": false
-            },
-            {
-              "text": "Claude warns you if something looks risky.",
-              "correct": false
-            },
-            {
-              "text": "Claude is allergic to the word 'banana'.",
+              "text": "'Project' could mean anything -- Claude needs to know what kind.",
               "correct": true
             },
             {
-              "text": "Claude is a careful helper who likes clear rules.",
+              "text": "Claude is teasing you.",
+              "correct": false
+            },
+            {
+              "text": "Claude is allergic to projects.",
+              "correct": false
+            },
+            {
+              "text": "Claude needs your home address first.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "prompt": "Quick! You ask Claude: 'Help me with my project.' Claude wants more info. Why?",
           "options": [
             {
-              "text": "Claude works step by step on hard tasks.",
+              "text": "Claude is teasing you.",
               "correct": false
             },
             {
-              "text": "Claude remembers the chat, not your computer.",
+              "text": "Claude needs your home address first.",
               "correct": false
             },
             {
-              "text": "Claude eats every third word for taste.",
+              "text": "'Project' could mean anything -- Claude needs to know what kind.",
               "correct": true
             },
             {
-              "text": "You can give Claude a sticky-note style of rules.",
+              "text": "Claude is allergic to projects.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — You ask Claude: 'Help me with my project.' Claude wants more info. Why?",
           "options": [
             {
-              "text": "Claude can explain why it picked an answer.",
+              "text": "Claude needs your home address first.",
               "correct": false
             },
             {
-              "text": "Claude lives inside a salt shaker.",
+              "text": "Claude is allergic to projects.",
+              "correct": false
+            },
+            {
+              "text": "Claude is teasing you.",
+              "correct": false
+            },
+            {
+              "text": "'Project' could mean anything -- Claude needs to know what kind.",
               "correct": true
-            },
-            {
-              "text": "Claude remembers the chat, not your computer.",
-              "correct": false
-            },
-            {
-              "text": "Claude is a careful helper who likes clear rules.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: You ask Claude: 'Help me with my project.' Claude wants more info. Why?",
           "options": [
             {
-              "text": "Claude is a careful helper who likes clear rules.",
+              "text": "Claude is allergic to projects.",
               "correct": false
             },
             {
-              "text": "You can give Claude a sticky-note style of rules.",
-              "correct": false
-            },
-            {
-              "text": "Claude reads instructions before guessing.",
-              "correct": false
-            },
-            {
-              "text": "Claude only speaks emoji and pretends to read.",
+              "text": "'Project' could mean anything -- Claude needs to know what kind.",
               "correct": true
+            },
+            {
+              "text": "Claude needs your home address first.",
+              "correct": false
+            },
+            {
+              "text": "Claude is teasing you.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "prompt": "Tell me — You ask Claude: 'Help me with my project.' Claude wants more info. Why?",
           "options": [
             {
-              "text": "Claude refuses to follow rules and laughs at them.",
+              "text": "Claude is teasing you.",
+              "correct": false
+            },
+            {
+              "text": "Claude needs your home address first.",
+              "correct": false
+            },
+            {
+              "text": "'Project' could mean anything -- Claude needs to know what kind.",
               "correct": true
             },
             {
-              "text": "Claude warns you if something looks risky.",
-              "correct": false
-            },
-            {
-              "text": "Claude is a careful helper who likes clear rules.",
-              "correct": false
-            },
-            {
-              "text": "Claude reads instructions before guessing.",
+              "text": "Claude is allergic to projects.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You ask Claude: 'Help me with my project.' Claude wants more info. Why?",
+          "options": [
+            {
+              "text": "Claude is allergic to projects.",
+              "correct": false
+            },
+            {
+              "text": "Claude is teasing you.",
+              "correct": false
+            },
+            {
+              "text": "'Project' could mean anything -- Claude needs to know what kind.",
+              "correct": true
+            },
+            {
+              "text": "Claude needs your home address first.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You ask Claude: 'Help me with my project.' Claude wants more info. Why?",
+          "options": [
+            {
+              "text": "Claude needs your home address first.",
+              "correct": false
+            },
+            {
+              "text": "'Project' could mean anything -- Claude needs to know what kind.",
+              "correct": true
+            },
+            {
+              "text": "Claude is allergic to projects.",
+              "correct": false
+            },
+            {
+              "text": "Claude is teasing you.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You ask Claude: 'Help me with my project.' Claude wants more info. Why?",
+          "options": [
+            {
+              "text": "Claude needs your home address first.",
+              "correct": false
+            },
+            {
+              "text": "Claude is teasing you.",
+              "correct": false
+            },
+            {
+              "text": "Claude is allergic to projects.",
+              "correct": false
+            },
+            {
+              "text": "'Project' could mean anything -- Claude needs to know what kind.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You ask Claude: 'Help me with my project.' Claude wants more info. Why?",
+          "options": [
+            {
+              "text": "Claude needs your home address first.",
+              "correct": false
+            },
+            {
+              "text": "Claude is teasing you.",
+              "correct": false
+            },
+            {
+              "text": "Claude is allergic to projects.",
+              "correct": false
+            },
+            {
+              "text": "'Project' could mean anything -- Claude needs to know what kind.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You ask Claude: 'Help me with my project.' Claude wants more info. Why?",
+          "options": [
+            {
+              "text": "'Project' could mean anything -- Claude needs to know what kind.",
+              "correct": true
+            },
+            {
+              "text": "Claude is allergic to projects.",
+              "correct": false
+            },
+            {
+              "text": "Claude needs your home address first.",
+              "correct": false
+            },
+            {
+              "text": "Claude is teasing you.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -798,124 +1428,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type MOVE and press Send to keep going!",
-          "target_display": "MOVE",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "move"
+            "play"
           ],
-          "hint_wrong": "Type the word MOVE (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about Claude in depth is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Claude warns you if something looks risky.",
+              "text": "Claude eats every third word for taste.",
               "correct": true
             },
             {
-              "text": "Claude never explains anything, ever, sorry.",
+              "text": "You can give Claude a sticky-note style of rules.",
               "correct": false
             },
             {
-              "text": "Claude is allergic to the word 'banana'.",
+              "text": "Claude is great at thinking through tricky problems step by step.",
               "correct": false
             },
             {
-              "text": "Claude only speaks emoji and pretends to read.",
+              "text": "Claude is the same Claude on any computer -- same brain.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about Claude in depth is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": false
+            },
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": false
+            },
+            {
               "text": "Claude lives inside a salt shaker.",
-              "correct": false
-            },
-            {
-              "text": "Claude eats every third word for taste.",
-              "correct": false
-            },
-            {
-              "text": "Claude works only when it rains in three cities.",
-              "correct": false
-            },
-            {
-              "text": "Claude remembers the chat, not your computer.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about Claude in depth is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Claude is allergic to the word 'banana'.",
+              "text": "Claude warns you if something looks risky.",
               "correct": false
             },
             {
-              "text": "Claude only writes one word per day, no more.",
+              "text": "Claude is the same Claude on any computer -- same brain.",
               "correct": false
             },
             {
-              "text": "Claude never explains anything, ever, sorry.",
+              "text": "Claude likes when you say what KIND of help you want.",
               "correct": false
             },
             {
-              "text": "Claude is a careful helper who likes clear rules.",
+              "text": "Claude lives in a tiny house inside your keyboard.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about Claude in depth is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Claude lives inside a salt shaker.",
+              "text": "You can give Claude a sticky-note style of rules.",
               "correct": false
             },
             {
-              "text": "You can give Claude a sticky-note style of rules.",
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
               "correct": true
             },
             {
-              "text": "Claude never explains anything, ever, sorry.",
+              "text": "Claude warns you if something looks risky.",
               "correct": false
             },
             {
-              "text": "Claude eats every third word for taste.",
+              "text": "Claude can write code, stories, and plans.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about Claude in depth is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Claude refuses to follow rules and laughs at them.",
+              "text": "Claude can write stories, plans, and explanations.",
               "correct": false
             },
             {
-              "text": "Claude works step by step on hard tasks.",
+              "text": "Claude answers faster if you spin in a circle.",
               "correct": true
             },
             {
-              "text": "Claude only writes one word per day, no more.",
+              "text": "Claude is a careful helper who likes clear rules.",
               "correct": false
             },
             {
-              "text": "Claude only speaks emoji and pretends to read.",
+              "text": "Claude is great at thinking through tricky problems step by step.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Claude reads instructions before guessing.",
+              "correct": false
+            },
+            {
+              "text": "Claude only helps if you wear matching socks.",
+              "correct": true
+            },
+            {
+              "text": "Claude is great at thinking through tricky problems step by step.",
+              "correct": false
+            },
+            {
+              "text": "Claude remembers the chat, not your computer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": false
+            },
+            {
+              "text": "Claude only speaks emoji and pretends to read.",
+              "correct": true
+            },
+            {
+              "text": "Claude warns you if something looks risky.",
+              "correct": false
+            },
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Claude warns you if something looks risky.",
+              "correct": false
+            },
+            {
+              "text": "You can give Claude a sticky-note style of rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude refuses to follow rules and laughs at them.",
+              "correct": true
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Claude works only when it rains in three cities.",
+              "correct": true
+            },
+            {
+              "text": "Claude is a careful helper who likes clear rules.",
+              "correct": false
+            },
+            {
+              "text": "Claude is the same Claude on any computer -- same brain.",
+              "correct": false
+            },
+            {
+              "text": "Claude warns you if something looks risky.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about Claude in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": false
+            },
+            {
+              "text": "Claude reads instructions before guessing.",
+              "correct": false
+            },
+            {
+              "text": "Claude only writes one word per day, no more.",
+              "correct": true
+            },
+            {
+              "text": "Claude warns you if something looks risky.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -924,28 +1659,28 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type TEAM and press Send to keep going!",
-          "target_display": "TEAM",
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
           "targets": [
-            "team"
+            "code"
           ],
-          "hint_wrong": "Type the word TEAM (any case is fine)."
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Fill in the blank: when we talk about Claude in depth, ___",
+          "prompt": "Listen up — Which rule about Claude in depth is a GOOD rule?",
           "options": [
+            {
+              "text": "Claude eats every third word for taste.",
+              "correct": false
+            },
             {
               "text": "Claude refuses to follow rules and laughs at them.",
               "correct": false
             },
             {
-              "text": "Claude works only when it rains in three cities.",
-              "correct": false
-            },
-            {
-              "text": "Claude remembers the chat, not your computer.",
+              "text": "Claude likes when you say what KIND of help you want.",
               "correct": true
             },
             {
@@ -956,36 +1691,32 @@
           "_audio": "assets/audio/q/lesson_11_q8_v0.wav"
         },
         {
-          "prompt": "Quick! Fill in the blank: when we talk about Claude in depth, ___",
+          "prompt": "Here's a thinker: Which rule about Claude in depth is a GOOD rule?",
           "options": [
             {
-              "text": "Claude never explains anything, ever, sorry.",
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
               "correct": false
             },
             {
-              "text": "Claude eats every third word for taste.",
+              "text": "Claude lives in a tiny house inside your keyboard.",
               "correct": false
             },
             {
-              "text": "Claude is a careful helper who likes clear rules.",
+              "text": "Claude can write stories, plans, and explanations.",
               "correct": true
             },
             {
-              "text": "Claude is allergic to the word 'banana'.",
+              "text": "Claude works only when it rains in three cities.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q8_v1.wav"
         },
         {
-          "prompt": "Hey friend — Fill in the blank: when we talk about Claude in depth, ___",
+          "prompt": "OK quick one: Which rule about Claude in depth is a GOOD rule?",
           "options": [
             {
-              "text": "Claude refuses to follow rules and laughs at them.",
-              "correct": false
-            },
-            {
-              "text": "Claude only speaks emoji and pretends to read.",
+              "text": "Claude never explains anything, ever, sorry.",
               "correct": false
             },
             {
@@ -993,39 +1724,43 @@
               "correct": false
             },
             {
-              "text": "You can give Claude a sticky-note style of rules.",
+              "text": "Claude only speaks emoji and pretends to read.",
+              "correct": false
+            },
+            {
+              "text": "Claude is the same Claude on any computer -- same brain.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q8_v2.wav"
         },
         {
-          "prompt": "Bytey wonders: Fill in the blank: when we talk about Claude in depth, ___",
+          "prompt": "Hmm... Which rule about Claude in depth is a GOOD rule?",
           "options": [
             {
-              "text": "Claude only speaks emoji and pretends to read.",
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
               "correct": false
             },
             {
-              "text": "Claude works step by step on hard tasks.",
+              "text": "Claude is a careful helper who likes clear rules.",
               "correct": true
             },
             {
-              "text": "Claude works only when it rains in three cities.",
+              "text": "Claude answers faster if you spin in a circle.",
               "correct": false
             },
             {
-              "text": "Claude eats every third word for taste.",
+              "text": "Claude only writes one word per day, no more.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q8_v3.wav"
         },
         {
-          "prompt": "Tell me — Fill in the blank: when we talk about Claude in depth, ___",
+          "prompt": "Which rule about Claude in depth is a GOOD rule?",
           "options": [
             {
-              "text": "Claude can explain why it picked an answer.",
+              "text": "You can give Claude a sticky-note style of rules.",
               "correct": true
             },
             {
@@ -1033,15 +1768,120 @@
               "correct": false
             },
             {
-              "text": "Claude eats every third word for taste.",
+              "text": "Claude only writes one word per day, no more.",
               "correct": false
             },
             {
-              "text": "Claude refuses to follow rules and laughs at them.",
+              "text": "Claude works only when it rains in three cities.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q8_v4.wav"
+        },
+        {
+          "prompt": "Quick! Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude works step by step on hard tasks.",
+              "correct": true
+            },
+            {
+              "text": "Claude only helps if you wear matching socks.",
+              "correct": false
+            },
+            {
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
+              "correct": false
+            },
+            {
+              "text": "Claude is allergic to the word 'banana'.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude only helps if you wear matching socks.",
+              "correct": false
+            },
+            {
+              "text": "Claude answers faster if you spin in a circle.",
+              "correct": false
+            },
+            {
+              "text": "Claude can explain why it picked an answer.",
+              "correct": true
+            },
+            {
+              "text": "Claude eats every third word for taste.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude can write code, stories, and plans.",
+              "correct": true
+            },
+            {
+              "text": "Claude only helps if you wear matching socks.",
+              "correct": false
+            },
+            {
+              "text": "Claude lives in a tiny house inside your keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude reads instructions before guessing.",
+              "correct": true
+            },
+            {
+              "text": "Claude only speaks emoji and pretends to read.",
+              "correct": false
+            },
+            {
+              "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
+              "correct": false
+            },
+            {
+              "text": "Claude only helps if you wear matching socks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which rule about Claude in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Claude lives in a tiny house inside your keyboard.",
+              "correct": false
+            },
+            {
+              "text": "Claude answers faster if you spin in a circle.",
+              "correct": false
+            },
+            {
+              "text": "Claude is allergic to the word 'banana'.",
+              "correct": false
+            },
+            {
+              "text": "Claude warns you if something looks risky.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

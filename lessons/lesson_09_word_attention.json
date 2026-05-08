@@ -89,11 +89,11 @@
           "prompt": "What is word attention?",
           "options": [
             {
-              "text": "All sentences must have a polite frog.",
+              "text": "AI attention runs out after 10 questions and needs a nap.",
               "correct": false
             },
             {
-              "text": "Helpers ignore every word equally and yawn.",
+              "text": "All words have the same meaning and one nose.",
               "correct": false
             },
             {
@@ -111,7 +111,7 @@
           "prompt": "Quick! Which one is TRUE about word attention?",
           "options": [
             {
-              "text": "Words must do squats before being read.",
+              "text": "Attention makes helpers slower and itchy.",
               "correct": false
             },
             {
@@ -123,7 +123,7 @@
               "correct": false
             },
             {
-              "text": "All words have the same meaning and one nose.",
+              "text": "Attention costs the AI a tiny coin every time.",
               "correct": false
             }
           ],
@@ -133,11 +133,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
-              "text": "Big helpers look at many words at once.",
+              "text": "Helpers pay attention to important words.",
               "correct": false
             },
             {
-              "text": "Attention is how helpers stay on topic.",
+              "text": "Big helpers look at many words at once.",
               "correct": false
             },
             {
@@ -145,7 +145,7 @@
               "correct": true
             },
             {
-              "text": "Helpers pay attention to important words.",
+              "text": "Strong words can override weak ones.",
               "correct": false
             }
           ],
@@ -155,11 +155,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about word attention. What should he say?",
           "options": [
             {
-              "text": "Helpers only read every other word backwards.",
+              "text": "Attention costs the AI a tiny coin every time.",
               "correct": false
             },
             {
-              "text": "Attention makes helpers slower and itchy.",
+              "text": "Helpers only read every other word backwards.",
               "correct": false
             },
             {
@@ -167,7 +167,7 @@
               "correct": true
             },
             {
-              "text": "One word never changes anything, ever, ever.",
+              "text": "Helpers ignore every word equally and yawn.",
               "correct": false
             }
           ],
@@ -177,11 +177,11 @@
           "prompt": "Tell me — Which rule about word attention is a GOOD rule?",
           "options": [
             {
-              "text": "Helpers only read every other word backwards.",
+              "text": "AI attention runs out after 10 questions and needs a nap.",
               "correct": false
             },
             {
-              "text": "All sentences must have a polite frog.",
+              "text": "Attention makes helpers slower and itchy.",
               "correct": false
             },
             {
@@ -189,11 +189,116 @@
               "correct": true
             },
             {
-              "text": "Attention makes helpers slower and itchy.",
+              "text": "Helpers only read every other word backwards.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_09_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about word attention, ___",
+          "options": [
+            {
+              "text": "All sentences must have a polite frog.",
+              "correct": false
+            },
+            {
+              "text": "Helpers focus on words that change meaning.",
+              "correct": true
+            },
+            {
+              "text": "Attention only works if you say 'pretty please' first.",
+              "correct": false
+            },
+            {
+              "text": "One word never changes anything, ever, ever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about word attention. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": false
+            },
+            {
+              "text": "The right word can change the whole answer.",
+              "correct": false
+            },
+            {
+              "text": "Helpers count vowels and pick the loudest.",
+              "correct": true
+            },
+            {
+              "text": "Helpers focus on words that change meaning.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with word attention?",
+          "options": [
+            {
+              "text": "Helpers ignore every word equally and yawn.",
+              "correct": false
+            },
+            {
+              "text": "Words must do squats before being read.",
+              "correct": false
+            },
+            {
+              "text": "Strong words can override weak ones.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only read every other word backwards.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about word attention is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Attention means the AI focuses on the most important words.",
+              "correct": false
+            },
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": false
+            },
+            {
+              "text": "Helpers focus on words that change meaning.",
+              "correct": false
+            },
+            {
+              "text": "Attention only works if you say 'pretty please' first.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about word attention. Which fact would help him?",
+          "options": [
+            {
+              "text": "Without attention, an AI gets confused on long sentences.",
+              "correct": true
+            },
+            {
+              "text": "Words must do squats before being read.",
+              "correct": false
+            },
+            {
+              "text": "Helpers count vowels and pick the loudest.",
+              "correct": false
+            },
+            {
+              "text": "Attention makes helpers slower and itchy.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -202,12 +307,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type JUMP and press Send to keep going!",
-          "target_display": "JUMP",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "jump"
+            "yes"
           ],
-          "hint_wrong": "Type the word JUMP (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -320,6 +425,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_09_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
+          "options": [
+            {
+              "text": "'quick' — it tells how fast you need it.",
+              "correct": true
+            },
+            {
+              "text": "'me' — it tells the helper to make YOU.",
+              "correct": false
+            },
+            {
+              "text": "'dinner' is invisible to helpers.",
+              "correct": false
+            },
+            {
+              "text": "'a' — it sets the mood.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
+          "options": [
+            {
+              "text": "'a' — it sets the mood.",
+              "correct": false
+            },
+            {
+              "text": "'dinner' is invisible to helpers.",
+              "correct": false
+            },
+            {
+              "text": "'quick' — it tells how fast you need it.",
+              "correct": true
+            },
+            {
+              "text": "'me' — it tells the helper to make YOU.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
+          "options": [
+            {
+              "text": "'me' — it tells the helper to make YOU.",
+              "correct": false
+            },
+            {
+              "text": "'dinner' is invisible to helpers.",
+              "correct": false
+            },
+            {
+              "text": "'a' — it sets the mood.",
+              "correct": false
+            },
+            {
+              "text": "'quick' — it tells how fast you need it.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
+          "options": [
+            {
+              "text": "'quick' — it tells how fast you need it.",
+              "correct": true
+            },
+            {
+              "text": "'dinner' is invisible to helpers.",
+              "correct": false
+            },
+            {
+              "text": "'a' — it sets the mood.",
+              "correct": false
+            },
+            {
+              "text": "'me' — it tells the helper to make YOU.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
+          "options": [
+            {
+              "text": "'me' — it tells the helper to make YOU.",
+              "correct": false
+            },
+            {
+              "text": "'a' — it sets the mood.",
+              "correct": false
+            },
+            {
+              "text": "'quick' — it tells how fast you need it.",
+              "correct": true
+            },
+            {
+              "text": "'dinner' is invisible to helpers.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -328,12 +538,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -446,6 +656,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_09_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Pick the prompt that gives more useful attention:",
+          "options": [
+            {
+              "text": "Everything but not really.",
+              "correct": false
+            },
+            {
+              "text": "Maybe sort of words now please.",
+              "correct": false
+            },
+            {
+              "text": "Make a thing.",
+              "correct": false
+            },
+            {
+              "text": "Write a short funny poem about a tired cat.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Pick the prompt that gives more useful attention:",
+          "options": [
+            {
+              "text": "Maybe sort of words now please.",
+              "correct": false
+            },
+            {
+              "text": "Make a thing.",
+              "correct": false
+            },
+            {
+              "text": "Write a short funny poem about a tired cat.",
+              "correct": true
+            },
+            {
+              "text": "Everything but not really.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Pick the prompt that gives more useful attention:",
+          "options": [
+            {
+              "text": "Everything but not really.",
+              "correct": false
+            },
+            {
+              "text": "Make a thing.",
+              "correct": false
+            },
+            {
+              "text": "Maybe sort of words now please.",
+              "correct": false
+            },
+            {
+              "text": "Write a short funny poem about a tired cat.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Pick the prompt that gives more useful attention:",
+          "options": [
+            {
+              "text": "Write a short funny poem about a tired cat.",
+              "correct": true
+            },
+            {
+              "text": "Everything but not really.",
+              "correct": false
+            },
+            {
+              "text": "Make a thing.",
+              "correct": false
+            },
+            {
+              "text": "Maybe sort of words now please.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Pick the prompt that gives more useful attention:",
+          "options": [
+            {
+              "text": "Maybe sort of words now please.",
+              "correct": false
+            },
+            {
+              "text": "Write a short funny poem about a tired cat.",
+              "correct": true
+            },
+            {
+              "text": "Everything but not really.",
+              "correct": false
+            },
+            {
+              "text": "Make a thing.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -454,12 +769,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type STEP and press Send to keep going!",
-          "target_display": "STEP",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "step"
+            "cool"
           ],
-          "hint_wrong": "Type the word STEP (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -467,19 +782,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
-              "text": "Attention is how helpers stay on topic.",
+              "text": "Helpers pay attention to important words.",
               "correct": false
             },
             {
-              "text": "Helpers focus on words that change meaning.",
+              "text": "Attention helps the AI know that 'the cat' goes with 'sleeps' in a sentence.",
               "correct": false
             },
             {
-              "text": "One word never changes anything, ever, ever.",
+              "text": "AI attention runs out after 10 questions and needs a nap.",
               "correct": true
             },
             {
-              "text": "Some words matter more than others.",
+              "text": "Attention helps the helper guess what is next.",
               "correct": false
             }
           ],
@@ -489,19 +804,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
-              "text": "The right word can change the whole answer.",
+              "text": "Attention means the AI focuses on the most important words.",
               "correct": false
             },
             {
-              "text": "Helpers only read every other word backwards.",
+              "text": "Attention costs the AI a tiny coin every time.",
               "correct": true
             },
             {
-              "text": "Attention is how helpers stay on topic.",
+              "text": "Helpers pay attention to important words.",
               "correct": false
             },
             {
-              "text": "Some words matter more than others.",
+              "text": "Attention is one of the big inventions that made modern AI smart.",
               "correct": false
             }
           ],
@@ -511,19 +826,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
-              "text": "Some words matter more than others.",
+              "text": "Attention helps the helper guess what is next.",
               "correct": false
             },
             {
-              "text": "Attention is how helpers stay on topic.",
+              "text": "Attention helps the AI know that 'the cat' goes with 'sleeps' in a sentence.",
               "correct": false
             },
             {
-              "text": "Words must do squats before being read.",
+              "text": "AI attention bounces off shiny objects.",
               "correct": true
             },
             {
-              "text": "Attention helps the helper guess what is next.",
+              "text": "Helpers pay attention to important words.",
               "correct": false
             }
           ],
@@ -533,11 +848,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
+              "text": "Attention is how helpers stay on topic.",
+              "correct": false
+            },
+            {
+              "text": "Attention means the AI focuses on the most important words.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore every word equally and yawn.",
+              "correct": true
+            },
+            {
+              "text": "The right word can change the whole answer.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_09_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
               "text": "Strong words can override weak ones.",
               "correct": false
             },
             {
+              "text": "Big helpers look at many words at once.",
+              "correct": false
+            },
+            {
+              "text": "Attention helps the AI know that 'the cat' goes with 'sleeps' in a sentence.",
+              "correct": false
+            },
+            {
+              "text": "All words have the same meaning and one nose.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_09_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "Attention is one of the big inventions that made modern AI smart.",
+              "correct": false
+            },
+            {
+              "text": "Attention makes helpers slower and itchy.",
+              "correct": true
+            },
+            {
+              "text": "Without attention, an AI gets confused on long sentences.",
+              "correct": false
+            },
+            {
               "text": "Attention is how helpers stay on topic.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "Attention means the AI focuses on the most important words.",
+              "correct": false
+            },
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": false
+            },
+            {
+              "text": "One word never changes anything, ever, ever.",
+              "correct": true
+            },
+            {
+              "text": "Attention helps the helper guess what is next.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "Helpers pay attention to important words.",
+              "correct": false
+            },
+            {
+              "text": "Strong words can override weak ones.",
+              "correct": false
+            },
+            {
+              "text": "Attention is one of the big inventions that made modern AI smart.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only read every other word backwards.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "Words must do squats before being read.",
+              "correct": true
+            },
+            {
+              "text": "Attention helps the helper guess what is next.",
+              "correct": false
+            },
+            {
+              "text": "Helpers focus on words that change meaning.",
+              "correct": false
+            },
+            {
+              "text": "Some words matter more than others.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about word attention.",
+          "options": [
+            {
+              "text": "Without attention, an AI gets confused on long sentences.",
               "correct": false
             },
             {
@@ -545,33 +984,14 @@
               "correct": true
             },
             {
-              "text": "Helpers focus on words that change meaning.",
+              "text": "The right word can change the whole answer.",
+              "correct": false
+            },
+            {
+              "text": "Attention helps the AI know that 'the cat' goes with 'sleeps' in a sentence.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_09_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about word attention.",
-          "options": [
-            {
-              "text": "Attention is how helpers stay on topic.",
-              "correct": false
-            },
-            {
-              "text": "Strong words can override weak ones.",
-              "correct": false
-            },
-            {
-              "text": "Attention helps the helper guess what is next.",
-              "correct": false
-            },
-            {
-              "text": "All sentences must have a polite frog.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_09_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -580,12 +1000,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GOOD and press Send to keep going!",
-          "target_display": "GOOD",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "good"
+            "next"
           ],
-          "hint_wrong": "Type the word GOOD (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -593,19 +1013,19 @@
           "prompt": "Tell me — Which one is TRUE about word attention?",
           "options": [
             {
+              "text": "Attention makes helpers slower and itchy.",
+              "correct": false
+            },
+            {
+              "text": "Attention costs the AI a tiny coin every time.",
+              "correct": false
+            },
+            {
               "text": "Helpers ignore every word equally and yawn.",
               "correct": false
             },
             {
-              "text": "All words have the same meaning and one nose.",
-              "correct": false
-            },
-            {
-              "text": "Words must do squats before being read.",
-              "correct": false
-            },
-            {
-              "text": "The right word can change the whole answer.",
+              "text": "Helpers pay attention to important words.",
               "correct": true
             }
           ],
@@ -623,11 +1043,11 @@
               "correct": false
             },
             {
-              "text": "Helpers focus on words that change meaning.",
+              "text": "Some words matter more than others.",
               "correct": true
             },
             {
-              "text": "One word never changes anything, ever, ever.",
+              "text": "Attention only works if you say 'pretty please' first.",
               "correct": false
             }
           ],
@@ -637,27 +1057,121 @@
           "prompt": "Pop quiz! Which one is TRUE about word attention?",
           "options": [
             {
-              "text": "Attention is how helpers stay on topic.",
+              "text": "Attention helps the helper guess what is next.",
               "correct": true
             },
             {
-              "text": "Helpers ignore every word equally and yawn.",
-              "correct": false
-            },
-            {
-              "text": "One word never changes anything, ever, ever.",
-              "correct": false
-            },
-            {
               "text": "Helpers only read every other word backwards.",
+              "correct": false
+            },
+            {
+              "text": "All sentences must have a polite frog.",
+              "correct": false
+            },
+            {
+              "text": "All words have the same meaning and one nose.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_09_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "AI attention runs out after 10 questions and needs a nap.",
+              "correct": false
+            },
+            {
+              "text": "Big helpers look at many words at once.",
+              "correct": true
+            },
+            {
+              "text": "Attention only works if you say 'pretty please' first.",
+              "correct": false
+            },
+            {
+              "text": "All sentences must have a polite frog.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_09_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "The right word can change the whole answer.",
+              "correct": true
+            },
+            {
+              "text": "Helpers count vowels and pick the loudest.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only read every other word backwards.",
+              "correct": false
+            },
+            {
+              "text": "AI attention bounces off shiny objects.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_09_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "Helpers focus on words that change meaning.",
+              "correct": true
+            },
+            {
+              "text": "Helpers count vowels and pick the loudest.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore every word equally and yawn.",
+              "correct": false
+            },
+            {
+              "text": "All words have the same meaning and one nose.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "One word never changes anything, ever, ever.",
+              "correct": false
+            },
+            {
+              "text": "Helpers ignore every word equally and yawn.",
+              "correct": false
+            },
+            {
+              "text": "Attention is how helpers stay on topic.",
+              "correct": true
+            },
+            {
+              "text": "Attention makes helpers slower and itchy.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about word attention?",
           "options": [
+            {
+              "text": "Helpers ignore every word equally and yawn.",
+              "correct": false
+            },
+            {
+              "text": "Helpers count vowels and pick the loudest.",
+              "correct": false
+            },
             {
               "text": "Helpers only read every other word backwards.",
               "correct": false
@@ -665,39 +1179,50 @@
             {
               "text": "Strong words can override weak ones.",
               "correct": true
-            },
-            {
-              "text": "Helpers ignore every word equally and yawn.",
-              "correct": false
-            },
-            {
-              "text": "Words must do squats before being read.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_09_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about word attention?",
           "options": [
             {
-              "text": "Helpers pay attention to important words.",
+              "text": "AI attention bounces off shiny objects.",
+              "correct": false
+            },
+            {
+              "text": "One word never changes anything, ever, ever.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only read every other word backwards.",
+              "correct": false
+            },
+            {
+              "text": "Attention means the AI focuses on the most important words.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about word attention?",
+          "options": [
+            {
+              "text": "AI attention runs out after 10 questions and needs a nap.",
+              "correct": false
+            },
+            {
+              "text": "Attention costs the AI a tiny coin every time.",
+              "correct": false
             },
             {
               "text": "All words have the same meaning and one nose.",
               "correct": false
             },
             {
-              "text": "Words must do squats before being read.",
-              "correct": false
-            },
-            {
-              "text": "One word never changes anything, ever, ever.",
-              "correct": false
+              "text": "Without attention, an AI gets confused on long sentences.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_09_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -706,124 +1231,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about word attention. Pick the SILLIEST claim.",
+          "prompt": "In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
-              "text": "Strong words can override weak ones.",
+              "text": "Picking the prettiest word.",
               "correct": false
             },
             {
-              "text": "Attention is how helpers stay on topic.",
-              "correct": false
-            },
-            {
-              "text": "Words must do squats before being read.",
+              "text": "Knowing that 'dog' is the one doing the chasing.",
               "correct": true
             },
             {
-              "text": "Helpers pay attention to important words.",
+              "text": "Counting how many letters there are.",
+              "correct": false
+            },
+            {
+              "text": "Spelling the words backwards.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_09_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about word attention. Pick the SILLIEST claim.",
+          "prompt": "Quick! In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
-              "text": "Attention helps the helper guess what is next.",
+              "text": "Picking the prettiest word.",
               "correct": false
             },
             {
-              "text": "Strong words can override weak ones.",
+              "text": "Spelling the words backwards.",
               "correct": false
             },
             {
-              "text": "Helpers count vowels and pick the loudest.",
+              "text": "Counting how many letters there are.",
+              "correct": false
+            },
+            {
+              "text": "Knowing that 'dog' is the one doing the chasing.",
               "correct": true
-            },
-            {
-              "text": "Some words matter more than others.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_09_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about word attention. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
-              "text": "Big helpers look at many words at once.",
-              "correct": false
-            },
-            {
-              "text": "All sentences must have a polite frog.",
+              "text": "Knowing that 'dog' is the one doing the chasing.",
               "correct": true
             },
             {
-              "text": "Strong words can override weak ones.",
+              "text": "Spelling the words backwards.",
               "correct": false
             },
             {
-              "text": "Helpers pay attention to important words.",
+              "text": "Picking the prettiest word.",
+              "correct": false
+            },
+            {
+              "text": "Counting how many letters there are.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_09_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about word attention. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
-              "text": "Helpers pay attention to important words.",
-              "correct": false
-            },
-            {
-              "text": "Some words matter more than others.",
-              "correct": false
-            },
-            {
-              "text": "Helpers focus on words that change meaning.",
-              "correct": false
-            },
-            {
-              "text": "Helpers ignore every word equally and yawn.",
+              "text": "Knowing that 'dog' is the one doing the chasing.",
               "correct": true
+            },
+            {
+              "text": "Spelling the words backwards.",
+              "correct": false
+            },
+            {
+              "text": "Picking the prettiest word.",
+              "correct": false
+            },
+            {
+              "text": "Counting how many letters there are.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_09_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about word attention. Pick the SILLIEST claim.",
+          "prompt": "Tell me — In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
-              "text": "All words have the same meaning and one nose.",
+              "text": "Knowing that 'dog' is the one doing the chasing.",
               "correct": true
             },
             {
-              "text": "Attention is how helpers stay on topic.",
+              "text": "Spelling the words backwards.",
               "correct": false
             },
             {
-              "text": "Helpers pay attention to important words.",
+              "text": "Counting how many letters there are.",
               "correct": false
             },
             {
-              "text": "Helpers focus on words that change meaning.",
+              "text": "Picking the prettiest word.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_09_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
+          "options": [
+            {
+              "text": "Picking the prettiest word.",
+              "correct": false
+            },
+            {
+              "text": "Knowing that 'dog' is the one doing the chasing.",
+              "correct": true
+            },
+            {
+              "text": "Spelling the words backwards.",
+              "correct": false
+            },
+            {
+              "text": "Counting how many letters there are.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
+          "options": [
+            {
+              "text": "Spelling the words backwards.",
+              "correct": false
+            },
+            {
+              "text": "Counting how many letters there are.",
+              "correct": false
+            },
+            {
+              "text": "Picking the prettiest word.",
+              "correct": false
+            },
+            {
+              "text": "Knowing that 'dog' is the one doing the chasing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
+          "options": [
+            {
+              "text": "Knowing that 'dog' is the one doing the chasing.",
+              "correct": true
+            },
+            {
+              "text": "Counting how many letters there are.",
+              "correct": false
+            },
+            {
+              "text": "Picking the prettiest word.",
+              "correct": false
+            },
+            {
+              "text": "Spelling the words backwards.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
+          "options": [
+            {
+              "text": "Counting how many letters there are.",
+              "correct": false
+            },
+            {
+              "text": "Spelling the words backwards.",
+              "correct": false
+            },
+            {
+              "text": "Picking the prettiest word.",
+              "correct": false
+            },
+            {
+              "text": "Knowing that 'dog' is the one doing the chasing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
+          "options": [
+            {
+              "text": "Counting how many letters there are.",
+              "correct": false
+            },
+            {
+              "text": "Picking the prettiest word.",
+              "correct": false
+            },
+            {
+              "text": "Knowing that 'dog' is the one doing the chasing.",
+              "correct": true
+            },
+            {
+              "text": "Spelling the words backwards.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

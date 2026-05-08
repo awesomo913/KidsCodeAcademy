@@ -55,14 +55,27 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "type-this-word",
+        "type": "click-the-thing",
         "payload": {
-          "prompt": "Type SEE and press Send to keep going!",
-          "target_display": "SEE",
-          "targets": [
-            "see"
-          ],
-          "hint_wrong": "Type the word SEE (any case is fine)."
+          "prompt": "Hero stays big after dying. Pick the fix:",
+          "choices": [
+            {
+              "label": "Reset hero to small when they lose a heart",
+              "right": true
+            },
+            {
+              "label": "Make the hero glow",
+              "right": false
+            },
+            {
+              "label": "Remove the power-up forever",
+              "right": false
+            },
+            {
+              "label": "Add more hearts",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -70,11 +83,11 @@
           "prompt": "What is iter 5: power-up?",
           "options": [
             {
-              "text": "Power-ups expire if you blink too slowly.",
+              "text": "Power-ups last forever and never expire.",
               "correct": false
             },
             {
-              "text": "Power-ups slow the hero down — the trap kind.",
+              "text": "Boosts always take points away.",
               "correct": false
             },
             {
@@ -92,7 +105,7 @@
           "prompt": "Quick! Which one is TRUE about iter 5: power-up?",
           "options": [
             {
-              "text": "Power-ups must be paid for at the door.",
+              "text": "Power-ups are boring like cold pasta.",
               "correct": false
             },
             {
@@ -104,7 +117,7 @@
               "correct": false
             },
             {
-              "text": "Boosts always take points away.",
+              "text": "Each power-up must come with a song.",
               "correct": false
             }
           ],
@@ -114,11 +127,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 5: power-up.",
           "options": [
             {
-              "text": "A power-up usually has a timer.",
+              "text": "Power-ups give the hero a boost.",
               "correct": false
             },
             {
-              "text": "Stacking many power-ups can be silly fun.",
+              "text": "A power-up usually has a timer.",
               "correct": false
             },
             {
@@ -126,7 +139,7 @@
               "correct": true
             },
             {
-              "text": "Power-ups give the hero a boost.",
+              "text": "End of timer should not feel mean.",
               "correct": false
             }
           ],
@@ -136,11 +149,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 5: power-up. What should he say?",
           "options": [
             {
-              "text": "Visual flash is for ads only.",
+              "text": "Each power-up must come with a song.",
               "correct": false
             },
             {
-              "text": "Power-ups are boring like cold pasta.",
+              "text": "Visual flash is for ads only.",
               "correct": false
             },
             {
@@ -148,7 +161,7 @@
               "correct": true
             },
             {
-              "text": "Power-ups last forever always — no timer.",
+              "text": "Power-ups slow the hero down — the trap kind.",
               "correct": false
             }
           ],
@@ -158,11 +171,11 @@
           "prompt": "Tell me — Which rule about iter 5: power-up is a GOOD rule?",
           "options": [
             {
-              "text": "Visual flash is for ads only.",
+              "text": "Power-ups last forever and never expire.",
               "correct": false
             },
             {
-              "text": "Power-ups expire if you blink too slowly.",
+              "text": "Power-ups are boring like cold pasta.",
               "correct": false
             },
             {
@@ -170,11 +183,116 @@
               "correct": true
             },
             {
-              "text": "Power-ups are boring like cold pasta.",
+              "text": "Visual flash is for ads only.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about iter 5: power-up, ___",
+          "options": [
+            {
+              "text": "Power-ups expire if you blink too slowly.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups should feel earned.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups must be eaten with a fork.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always — no timer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash shows the power is active.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups cause mild thunder.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups should feel earned.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups slow the hero down — the trap kind.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups must be paid for at the door.",
+              "correct": false
+            },
+            {
+              "text": "End of timer should not feel mean.",
+              "correct": true
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about iter 5: power-up is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Iteration 5 adds a POWER-UP -- something that helps the hero.",
+              "correct": false
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups should feel earned.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups must be eaten with a fork.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about iter 5: power-up. Which fact would help him?",
+          "options": [
+            {
+              "text": "Power-ups give the hero a special ability for a short time.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups must be paid for at the door.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups cause mild thunder.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring like cold pasta.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -183,12 +301,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type NEW and press Send to keep going!",
-          "target_display": "NEW",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "new"
+            "yes"
           ],
-          "hint_wrong": "Type the word NEW (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -301,6 +419,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey adds 'super speed' but doesn't show when it ends. What goes wrong?",
+          "options": [
+            {
+              "text": "The wifi sends a bill.",
+              "correct": false
+            },
+            {
+              "text": "The hero gets a sticker as compensation.",
+              "correct": false
+            },
+            {
+              "text": "Hero faints in surprise.",
+              "correct": false
+            },
+            {
+              "text": "Player feels surprised when speed suddenly stops — feels unfair.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey adds 'super speed' but doesn't show when it ends. What goes wrong?",
+          "options": [
+            {
+              "text": "The hero gets a sticker as compensation.",
+              "correct": false
+            },
+            {
+              "text": "The wifi sends a bill.",
+              "correct": false
+            },
+            {
+              "text": "Hero faints in surprise.",
+              "correct": false
+            },
+            {
+              "text": "Player feels surprised when speed suddenly stops — feels unfair.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey adds 'super speed' but doesn't show when it ends. What goes wrong?",
+          "options": [
+            {
+              "text": "The wifi sends a bill.",
+              "correct": false
+            },
+            {
+              "text": "Hero faints in surprise.",
+              "correct": false
+            },
+            {
+              "text": "Player feels surprised when speed suddenly stops — feels unfair.",
+              "correct": true
+            },
+            {
+              "text": "The hero gets a sticker as compensation.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey adds 'super speed' but doesn't show when it ends. What goes wrong?",
+          "options": [
+            {
+              "text": "Hero faints in surprise.",
+              "correct": false
+            },
+            {
+              "text": "Player feels surprised when speed suddenly stops — feels unfair.",
+              "correct": true
+            },
+            {
+              "text": "The wifi sends a bill.",
+              "correct": false
+            },
+            {
+              "text": "The hero gets a sticker as compensation.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey adds 'super speed' but doesn't show when it ends. What goes wrong?",
+          "options": [
+            {
+              "text": "The wifi sends a bill.",
+              "correct": false
+            },
+            {
+              "text": "Hero faints in surprise.",
+              "correct": false
+            },
+            {
+              "text": "The hero gets a sticker as compensation.",
+              "correct": false
+            },
+            {
+              "text": "Player feels surprised when speed suddenly stops — feels unfair.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -309,12 +532,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -427,6 +650,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why does a flash or glow help?",
+          "options": [
+            {
+              "text": "To impress passing pixels.",
+              "correct": false
+            },
+            {
+              "text": "To use up extra battery.",
+              "correct": false
+            },
+            {
+              "text": "Players know the power is active and how special they feel.",
+              "correct": true
+            },
+            {
+              "text": "Glows scare the bug king.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why does a flash or glow help?",
+          "options": [
+            {
+              "text": "To use up extra battery.",
+              "correct": false
+            },
+            {
+              "text": "Glows scare the bug king.",
+              "correct": false
+            },
+            {
+              "text": "To impress passing pixels.",
+              "correct": false
+            },
+            {
+              "text": "Players know the power is active and how special they feel.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why does a flash or glow help?",
+          "options": [
+            {
+              "text": "Glows scare the bug king.",
+              "correct": false
+            },
+            {
+              "text": "To impress passing pixels.",
+              "correct": false
+            },
+            {
+              "text": "Players know the power is active and how special they feel.",
+              "correct": true
+            },
+            {
+              "text": "To use up extra battery.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why does a flash or glow help?",
+          "options": [
+            {
+              "text": "To impress passing pixels.",
+              "correct": false
+            },
+            {
+              "text": "Glows scare the bug king.",
+              "correct": false
+            },
+            {
+              "text": "To use up extra battery.",
+              "correct": false
+            },
+            {
+              "text": "Players know the power is active and how special they feel.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why does a flash or glow help?",
+          "options": [
+            {
+              "text": "To use up extra battery.",
+              "correct": false
+            },
+            {
+              "text": "Players know the power is active and how special they feel.",
+              "correct": true
+            },
+            {
+              "text": "To impress passing pixels.",
+              "correct": false
+            },
+            {
+              "text": "Glows scare the bug king.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -435,12 +763,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type USE and press Send to keep going!",
-          "target_display": "USE",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "use"
+            "cool"
           ],
-          "hint_wrong": "Type the word USE (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -448,19 +776,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 5: power-up.",
           "options": [
             {
-              "text": "Stacking many power-ups can be silly fun.",
+              "text": "Power-ups give the hero a boost.",
               "correct": false
             },
             {
-              "text": "Power-ups should feel earned.",
+              "text": "Common power-ups: speed, double-jump, shield.",
               "correct": false
             },
             {
-              "text": "Power-ups last forever always — no timer.",
+              "text": "Power-ups last forever and never expire.",
               "correct": true
             },
             {
-              "text": "Boosts can be speed, size, or extra jumps.",
+              "text": "Power-ups are exciting to find.",
               "correct": false
             }
           ],
@@ -470,19 +798,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 5: power-up.",
           "options": [
             {
-              "text": "Visual flash shows the power is active.",
+              "text": "Iteration 5 adds a POWER-UP -- something that helps the hero.",
               "correct": false
             },
             {
-              "text": "Visual flash is for ads only.",
+              "text": "Each power-up must come with a song.",
               "correct": true
             },
             {
-              "text": "Stacking many power-ups can be silly fun.",
+              "text": "Power-ups give the hero a boost.",
               "correct": false
             },
             {
-              "text": "Boosts can be speed, size, or extra jumps.",
+              "text": "Power-ups make players feel awesome briefly.",
               "correct": false
             }
           ],
@@ -492,19 +820,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about iter 5: power-up.",
           "options": [
             {
-              "text": "Boosts can be speed, size, or extra jumps.",
+              "text": "Power-ups are exciting to find.",
               "correct": false
             },
             {
-              "text": "Stacking many power-ups can be silly fun.",
+              "text": "Common power-ups: speed, double-jump, shield.",
               "correct": false
             },
             {
-              "text": "Power-ups must be paid for at the door.",
+              "text": "Power-ups only work on rainbow Mondays.",
               "correct": true
             },
             {
-              "text": "Power-ups are exciting to find.",
+              "text": "Power-ups give the hero a boost.",
               "correct": false
             }
           ],
@@ -514,11 +842,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about iter 5: power-up.",
           "options": [
             {
+              "text": "Stacking many power-ups can be silly fun.",
+              "correct": false
+            },
+            {
+              "text": "Iteration 5 adds a POWER-UP -- something that helps the hero.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups slow the hero down — the trap kind.",
+              "correct": true
+            },
+            {
+              "text": "Visual flash shows the power is active.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_54_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
               "text": "End of timer should not feel mean.",
               "correct": false
             },
             {
+              "text": "A power-up usually has a timer.",
+              "correct": false
+            },
+            {
+              "text": "Common power-ups: speed, double-jump, shield.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_54_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "Power-ups make players feel awesome briefly.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are boring like cold pasta.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups give the hero a special ability for a short time.",
+              "correct": false
+            },
+            {
               "text": "Stacking many power-ups can be silly fun.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "Iteration 5 adds a POWER-UP -- something that helps the hero.",
+              "correct": false
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always — no timer.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": false
+            },
+            {
+              "text": "End of timer should not feel mean.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups make players feel awesome briefly.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "Power-ups must be paid for at the door.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups should feel earned.",
+              "correct": false
+            },
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 5: power-up.",
+          "options": [
+            {
+              "text": "Power-ups give the hero a special ability for a short time.",
               "correct": false
             },
             {
@@ -526,33 +978,14 @@
               "correct": true
             },
             {
-              "text": "Power-ups should feel earned.",
+              "text": "Visual flash shows the power is active.",
+              "correct": false
+            },
+            {
+              "text": "Common power-ups: speed, double-jump, shield.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_54_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about iter 5: power-up.",
-          "options": [
-            {
-              "text": "Stacking many power-ups can be silly fun.",
-              "correct": false
-            },
-            {
-              "text": "End of timer should not feel mean.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups are exciting to find.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups expire if you blink too slowly.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_54_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -561,12 +994,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GET and press Send to keep going!",
-          "target_display": "GET",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "get"
+            "next"
           ],
-          "hint_wrong": "Type the word GET (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -574,19 +1007,19 @@
           "prompt": "Tell me — Which one is TRUE about iter 5: power-up?",
           "options": [
             {
+              "text": "Power-ups are boring like cold pasta.",
+              "correct": false
+            },
+            {
+              "text": "Each power-up must come with a song.",
+              "correct": false
+            },
+            {
               "text": "Power-ups slow the hero down — the trap kind.",
               "correct": false
             },
             {
-              "text": "Boosts always take points away.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups must be paid for at the door.",
-              "correct": false
-            },
-            {
-              "text": "Visual flash shows the power is active.",
+              "text": "Power-ups give the hero a boost.",
               "correct": true
             }
           ],
@@ -604,11 +1037,11 @@
               "correct": false
             },
             {
-              "text": "Power-ups should feel earned.",
+              "text": "Boosts can be speed, size, or extra jumps.",
               "correct": true
             },
             {
-              "text": "Power-ups last forever always — no timer.",
+              "text": "Power-ups must be eaten with a fork.",
               "correct": false
             }
           ],
@@ -618,27 +1051,121 @@
           "prompt": "Pop quiz! Which one is TRUE about iter 5: power-up?",
           "options": [
             {
-              "text": "Stacking many power-ups can be silly fun.",
+              "text": "Power-ups are exciting to find.",
               "correct": true
             },
             {
-              "text": "Power-ups slow the hero down — the trap kind.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups last forever always — no timer.",
-              "correct": false
-            },
-            {
               "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups expire if you blink too slowly.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups last forever and never expire.",
+              "correct": false
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups must be eaten with a fork.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups expire if you blink too slowly.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_54_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Visual flash shows the power is active.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups cause mild thunder.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups only work on rainbow Mondays.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_54_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups should feel earned.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups cause mild thunder.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups slow the hero down — the trap kind.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups last forever always — no timer.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups slow the hero down — the trap kind.",
+              "correct": false
+            },
+            {
+              "text": "Stacking many power-ups can be silly fun.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups are boring like cold pasta.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about iter 5: power-up?",
           "options": [
+            {
+              "text": "Power-ups slow the hero down — the trap kind.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups cause mild thunder.",
+              "correct": false
+            },
             {
               "text": "Visual flash is for ads only.",
               "correct": false
@@ -646,39 +1173,50 @@
             {
               "text": "End of timer should not feel mean.",
               "correct": true
-            },
-            {
-              "text": "Power-ups slow the hero down — the trap kind.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups must be paid for at the door.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_54_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 5: power-up?",
           "options": [
             {
-              "text": "Power-ups give the hero a boost.",
+              "text": "Power-ups only work on rainbow Mondays.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always — no timer.",
+              "correct": false
+            },
+            {
+              "text": "Visual flash is for ads only.",
+              "correct": false
+            },
+            {
+              "text": "Iteration 5 adds a POWER-UP -- something that helps the hero.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 5: power-up?",
+          "options": [
+            {
+              "text": "Power-ups last forever and never expire.",
+              "correct": false
+            },
+            {
+              "text": "Each power-up must come with a song.",
+              "correct": false
             },
             {
               "text": "Boosts always take points away.",
               "correct": false
             },
             {
-              "text": "Power-ups must be paid for at the door.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups last forever always — no timer.",
-              "correct": false
+              "text": "Power-ups give the hero a special ability for a short time.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_54_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -687,124 +1225,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "prompt": "Hero touches a star -- what should happen?",
           "options": [
             {
-              "text": "End of timer should not feel mean.",
-              "correct": false
-            },
-            {
-              "text": "Stacking many power-ups can be silly fun.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups must be paid for at the door.",
+              "text": "Hero gets a special power for a few seconds, then back to normal.",
               "correct": true
             },
             {
-              "text": "Power-ups give the hero a boost.",
+              "text": "The hero turns into a star forever.",
+              "correct": false
+            },
+            {
+              "text": "The star calls the hero on the phone.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- stars are decoration.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "prompt": "Quick! Hero touches a star -- what should happen?",
           "options": [
             {
-              "text": "Power-ups are exciting to find.",
-              "correct": false
-            },
-            {
-              "text": "End of timer should not feel mean.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups cause mild thunder.",
+              "text": "Hero gets a special power for a few seconds, then back to normal.",
               "correct": true
             },
             {
-              "text": "Boosts can be speed, size, or extra jumps.",
+              "text": "The star calls the hero on the phone.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- stars are decoration.",
+              "correct": false
+            },
+            {
+              "text": "The hero turns into a star forever.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Hero touches a star -- what should happen?",
           "options": [
             {
-              "text": "A power-up usually has a timer.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups expire if you blink too slowly.",
+              "text": "Hero gets a special power for a few seconds, then back to normal.",
               "correct": true
             },
             {
-              "text": "End of timer should not feel mean.",
+              "text": "Nothing -- stars are decoration.",
               "correct": false
             },
             {
-              "text": "Power-ups give the hero a boost.",
+              "text": "The star calls the hero on the phone.",
+              "correct": false
+            },
+            {
+              "text": "The hero turns into a star forever.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Hero touches a star -- what should happen?",
           "options": [
             {
-              "text": "Power-ups give the hero a boost.",
+              "text": "The hero turns into a star forever.",
               "correct": false
             },
             {
-              "text": "Boosts can be speed, size, or extra jumps.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups should feel earned.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups slow the hero down — the trap kind.",
+              "text": "Hero gets a special power for a few seconds, then back to normal.",
               "correct": true
+            },
+            {
+              "text": "Nothing -- stars are decoration.",
+              "correct": false
+            },
+            {
+              "text": "The star calls the hero on the phone.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Hero touches a star -- what should happen?",
           "options": [
             {
-              "text": "Boosts always take points away.",
+              "text": "Nothing -- stars are decoration.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a special power for a few seconds, then back to normal.",
               "correct": true
             },
             {
-              "text": "Stacking many power-ups can be silly fun.",
+              "text": "The star calls the hero on the phone.",
               "correct": false
             },
             {
-              "text": "Power-ups give the hero a boost.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups should feel earned.",
+              "text": "The hero turns into a star forever.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Hero touches a star -- what should happen?",
+          "options": [
+            {
+              "text": "The hero turns into a star forever.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a special power for a few seconds, then back to normal.",
+              "correct": true
+            },
+            {
+              "text": "Nothing -- stars are decoration.",
+              "correct": false
+            },
+            {
+              "text": "The star calls the hero on the phone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Hero touches a star -- what should happen?",
+          "options": [
+            {
+              "text": "The star calls the hero on the phone.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a special power for a few seconds, then back to normal.",
+              "correct": true
+            },
+            {
+              "text": "Nothing -- stars are decoration.",
+              "correct": false
+            },
+            {
+              "text": "The hero turns into a star forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Hero touches a star -- what should happen?",
+          "options": [
+            {
+              "text": "The hero turns into a star forever.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a special power for a few seconds, then back to normal.",
+              "correct": true
+            },
+            {
+              "text": "The star calls the hero on the phone.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- stars are decoration.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Hero touches a star -- what should happen?",
+          "options": [
+            {
+              "text": "The hero turns into a star forever.",
+              "correct": false
+            },
+            {
+              "text": "The star calls the hero on the phone.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- stars are decoration.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a special power for a few seconds, then back to normal.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Hero touches a star -- what should happen?",
+          "options": [
+            {
+              "text": "Nothing -- stars are decoration.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a special power for a few seconds, then back to normal.",
+              "correct": true
+            },
+            {
+              "text": "The hero turns into a star forever.",
+              "correct": false
+            },
+            {
+              "text": "The star calls the hero on the phone.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -813,124 +1456,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PUT and press Send to keep going!",
-          "target_display": "PUT",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "put"
+            "play"
           ],
-          "hint_wrong": "Type the word PUT (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about iter 5: power-up is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Stacking many power-ups can be silly fun.",
+              "text": "Power-ups cause mild thunder.",
               "correct": true
             },
             {
-              "text": "Visual flash is for ads only.",
+              "text": "Boosts can be speed, size, or extra jumps.",
               "correct": false
             },
             {
-              "text": "Power-ups must be paid for at the door.",
+              "text": "Iteration 5 adds a POWER-UP -- something that helps the hero.",
               "correct": false
             },
             {
-              "text": "Power-ups slow the hero down — the trap kind.",
+              "text": "Power-ups make players feel awesome briefly.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about iter 5: power-up is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "Power-ups give the hero a boost.",
+              "correct": false
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": false
+            },
+            {
               "text": "Power-ups expire if you blink too slowly.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups cause mild thunder.",
-              "correct": false
-            },
-            {
-              "text": "Power-ups are boring like cold pasta.",
-              "correct": false
-            },
-            {
-              "text": "End of timer should not feel mean.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about iter 5: power-up is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Power-ups must be paid for at the door.",
+              "text": "Stacking many power-ups can be silly fun.",
               "correct": false
             },
             {
-              "text": "Power-ups last forever always — no timer.",
+              "text": "Power-ups make players feel awesome briefly.",
               "correct": false
             },
             {
-              "text": "Visual flash is for ads only.",
+              "text": "Power-ups give the hero a special ability for a short time.",
               "correct": false
             },
             {
-              "text": "Power-ups give the hero a boost.",
+              "text": "Power-ups must be eaten with a fork.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about iter 5: power-up is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Power-ups expire if you blink too slowly.",
+              "text": "Boosts can be speed, size, or extra jumps.",
               "correct": false
             },
             {
-              "text": "Boosts can be speed, size, or extra jumps.",
+              "text": "Power-ups last forever and never expire.",
               "correct": true
             },
             {
-              "text": "Visual flash is for ads only.",
+              "text": "Stacking many power-ups can be silly fun.",
               "correct": false
             },
             {
-              "text": "Power-ups cause mild thunder.",
+              "text": "Visual flash shows the power is active.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about iter 5: power-up is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Boosts always take points away.",
+              "text": "Common power-ups: speed, double-jump, shield.",
               "correct": false
             },
             {
-              "text": "Power-ups are exciting to find.",
+              "text": "Each power-up must come with a song.",
               "correct": true
             },
             {
-              "text": "Power-ups last forever always — no timer.",
+              "text": "Power-ups give the hero a boost.",
               "correct": false
             },
             {
-              "text": "Power-ups slow the hero down — the trap kind.",
+              "text": "Iteration 5 adds a POWER-UP -- something that helps the hero.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_54_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Power-ups should feel earned.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups only work on rainbow Mondays.",
+              "correct": true
+            },
+            {
+              "text": "Iteration 5 adds a POWER-UP -- something that helps the hero.",
+              "correct": false
+            },
+            {
+              "text": "End of timer should not feel mean.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups slow the hero down — the trap kind.",
+              "correct": true
+            },
+            {
+              "text": "Stacking many power-ups can be silly fun.",
+              "correct": false
+            },
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Stacking many power-ups can be silly fun.",
+              "correct": false
+            },
+            {
+              "text": "Boosts can be speed, size, or extra jumps.",
+              "correct": false
+            },
+            {
+              "text": "Boosts always take points away.",
+              "correct": true
+            },
+            {
+              "text": "A power-up usually has a timer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Power-ups are boring like cold pasta.",
+              "correct": true
+            },
+            {
+              "text": "Power-ups give the hero a boost.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups make players feel awesome briefly.",
+              "correct": false
+            },
+            {
+              "text": "Stacking many power-ups can be silly fun.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about iter 5: power-up. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Power-ups are exciting to find.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups should feel earned.",
+              "correct": false
+            },
+            {
+              "text": "Power-ups last forever always — no timer.",
+              "correct": true
+            },
+            {
+              "text": "Stacking many power-ups can be silly fun.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

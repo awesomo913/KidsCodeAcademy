@@ -76,11 +76,11 @@
           "prompt": "What is magic boxes (variables)?",
           "options": [
             {
-              "text": "Every box has feelings about Tuesdays.",
+              "text": "A variable changes color when you look away.",
               "correct": false
             },
             {
-              "text": "A box holds a thousand things at once and a frog.",
+              "text": "Boxes have to be square shaped or they cry.",
               "correct": false
             },
             {
@@ -98,7 +98,7 @@
           "prompt": "Quick! Which one is TRUE about magic boxes (variables)?",
           "options": [
             {
-              "text": "A box can hold the smell of summer.",
+              "text": "Boxes only hold candy and tiny opinions.",
               "correct": false
             },
             {
@@ -110,7 +110,7 @@
               "correct": false
             },
             {
-              "text": "Boxes have to be square shaped or they cry.",
+              "text": "Variables only work on Wednesdays after lunch.",
               "correct": false
             }
           ],
@@ -120,11 +120,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about magic boxes (variables).",
           "options": [
             {
-              "text": "A box can hold a number or a word.",
+              "text": "A box can hold one thing at a time.",
               "correct": false
             },
             {
-              "text": "A box keeps its label even if you change what's in it.",
+              "text": "A box can hold a number or a word.",
               "correct": false
             },
             {
@@ -132,7 +132,7 @@
               "correct": true
             },
             {
-              "text": "A box can hold one thing at a time.",
+              "text": "Empty boxes are still boxes — just waiting.",
               "correct": false
             }
           ],
@@ -142,11 +142,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about magic boxes (variables). What should he say?",
           "options": [
             {
-              "text": "Boxes need to be fed three sneakers every night.",
+              "text": "Variables only work on Wednesdays after lunch.",
               "correct": false
             },
             {
-              "text": "Boxes only hold candy and tiny opinions.",
+              "text": "Boxes need to be fed three sneakers every night.",
               "correct": false
             },
             {
@@ -154,7 +154,7 @@
               "correct": true
             },
             {
-              "text": "A box never lets you change what is inside.",
+              "text": "A box holds a thousand things at once and a frog.",
               "correct": false
             }
           ],
@@ -164,11 +164,11 @@
           "prompt": "Tell me — Which rule about magic boxes (variables) is a GOOD rule?",
           "options": [
             {
-              "text": "Boxes need to be fed three sneakers every night.",
+              "text": "A variable changes color when you look away.",
               "correct": false
             },
             {
-              "text": "Every box has feelings about Tuesdays.",
+              "text": "Boxes only hold candy and tiny opinions.",
               "correct": false
             },
             {
@@ -176,11 +176,116 @@
               "correct": true
             },
             {
-              "text": "Boxes only hold candy and tiny opinions.",
+              "text": "Boxes need to be fed three sneakers every night.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about magic boxes (variables), ___",
+          "options": [
+            {
+              "text": "Every box has feelings about Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Boxes are how we remember things in code.",
+              "correct": true
+            },
+            {
+              "text": "Variables float in the air until they get tired.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": false
+            },
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": false
+            },
+            {
+              "text": "Boxes melt if you say their name backwards.",
+              "correct": true
+            },
+            {
+              "text": "Boxes are how we remember things in code.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box holds a thousand things at once and a frog.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold the smell of summer.",
+              "correct": false
+            },
+            {
+              "text": "Empty boxes are still boxes — just waiting.",
+              "correct": true
+            },
+            {
+              "text": "Boxes need to be fed three sneakers every night.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about magic boxes (variables) is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "A variable is a labeled box where you keep a number or word.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": false
+            },
+            {
+              "text": "Boxes are how we remember things in code.",
+              "correct": false
+            },
+            {
+              "text": "Variables float in the air until they get tired.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about magic boxes (variables). Which fact would help him?",
+          "options": [
+            {
+              "text": "You can change what's IN the box later -- that's the whole point.",
+              "correct": true
+            },
+            {
+              "text": "A box can hold the smell of summer.",
+              "correct": false
+            },
+            {
+              "text": "Boxes melt if you say their name backwards.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy and tiny opinions.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -189,12 +294,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type RUN and press Send to keep going!",
-          "target_display": "RUN",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "run"
+            "yes"
           ],
-          "hint_wrong": "Type the word RUN (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -307,6 +412,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — We make a box called 'score' and put 5 in it. Later we put 10 in it. What's in 'score' now?",
+          "options": [
+            {
+              "text": "10 — the new value replaces the old.",
+              "correct": true
+            },
+            {
+              "text": "A small confused goose.",
+              "correct": false
+            },
+            {
+              "text": "Both 5 and 10 stacked like pancakes.",
+              "correct": false
+            },
+            {
+              "text": "The number disappears and we get a riddle.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! We make a box called 'score' and put 5 in it. Later we put 10 in it. What's in 'score' now?",
+          "options": [
+            {
+              "text": "A small confused goose.",
+              "correct": false
+            },
+            {
+              "text": "Both 5 and 10 stacked like pancakes.",
+              "correct": false
+            },
+            {
+              "text": "The number disappears and we get a riddle.",
+              "correct": false
+            },
+            {
+              "text": "10 — the new value replaces the old.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — We make a box called 'score' and put 5 in it. Later we put 10 in it. What's in 'score' now?",
+          "options": [
+            {
+              "text": "Both 5 and 10 stacked like pancakes.",
+              "correct": false
+            },
+            {
+              "text": "10 — the new value replaces the old.",
+              "correct": true
+            },
+            {
+              "text": "A small confused goose.",
+              "correct": false
+            },
+            {
+              "text": "The number disappears and we get a riddle.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: We make a box called 'score' and put 5 in it. Later we put 10 in it. What's in 'score' now?",
+          "options": [
+            {
+              "text": "A small confused goose.",
+              "correct": false
+            },
+            {
+              "text": "The number disappears and we get a riddle.",
+              "correct": false
+            },
+            {
+              "text": "Both 5 and 10 stacked like pancakes.",
+              "correct": false
+            },
+            {
+              "text": "10 — the new value replaces the old.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: We make a box called 'score' and put 5 in it. Later we put 10 in it. What's in 'score' now?",
+          "options": [
+            {
+              "text": "The number disappears and we get a riddle.",
+              "correct": false
+            },
+            {
+              "text": "A small confused goose.",
+              "correct": false
+            },
+            {
+              "text": "Both 5 and 10 stacked like pancakes.",
+              "correct": false
+            },
+            {
+              "text": "10 — the new value replaces the old.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -315,12 +525,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -433,6 +643,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey names a box 'asdfg'. Why is that a silly name?",
+          "options": [
+            {
+              "text": "It tells you nothing about what's inside.",
+              "correct": true
+            },
+            {
+              "text": "Boxes only accept names with vowels.",
+              "correct": false
+            },
+            {
+              "text": "It summons a small storm.",
+              "correct": false
+            },
+            {
+              "text": "It hurts the keyboard's feelings.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey names a box 'asdfg'. Why is that a silly name?",
+          "options": [
+            {
+              "text": "It tells you nothing about what's inside.",
+              "correct": true
+            },
+            {
+              "text": "Boxes only accept names with vowels.",
+              "correct": false
+            },
+            {
+              "text": "It hurts the keyboard's feelings.",
+              "correct": false
+            },
+            {
+              "text": "It summons a small storm.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey names a box 'asdfg'. Why is that a silly name?",
+          "options": [
+            {
+              "text": "It summons a small storm.",
+              "correct": false
+            },
+            {
+              "text": "It tells you nothing about what's inside.",
+              "correct": true
+            },
+            {
+              "text": "It hurts the keyboard's feelings.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only accept names with vowels.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey names a box 'asdfg'. Why is that a silly name?",
+          "options": [
+            {
+              "text": "It hurts the keyboard's feelings.",
+              "correct": false
+            },
+            {
+              "text": "It summons a small storm.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only accept names with vowels.",
+              "correct": false
+            },
+            {
+              "text": "It tells you nothing about what's inside.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey names a box 'asdfg'. Why is that a silly name?",
+          "options": [
+            {
+              "text": "It hurts the keyboard's feelings.",
+              "correct": false
+            },
+            {
+              "text": "It tells you nothing about what's inside.",
+              "correct": true
+            },
+            {
+              "text": "It summons a small storm.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only accept names with vowels.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -441,12 +756,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BIG and press Send to keep going!",
-          "target_display": "BIG",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "big"
+            "cool"
           ],
-          "hint_wrong": "Type the word BIG (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -454,19 +769,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about magic boxes (variables).",
           "options": [
             {
-              "text": "A box keeps its label even if you change what's in it.",
+              "text": "A box can hold one thing at a time.",
               "correct": false
             },
             {
-              "text": "Boxes are how we remember things in code.",
+              "text": "Naming the box clearly helps you remember what's inside.",
               "correct": false
             },
             {
-              "text": "A box never lets you change what is inside.",
+              "text": "A variable changes color when you look away.",
               "correct": true
             },
             {
-              "text": "We give boxes names so we can find them.",
+              "text": "We can change what is inside a box.",
               "correct": false
             }
           ],
@@ -476,19 +791,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about magic boxes (variables).",
           "options": [
             {
-              "text": "Naming a box makes our code easy to read.",
+              "text": "A variable is a labeled box where you keep a number or word.",
               "correct": false
             },
             {
-              "text": "Boxes need to be fed three sneakers every night.",
+              "text": "Variables only work on Wednesdays after lunch.",
               "correct": true
             },
             {
-              "text": "A box keeps its label even if you change what's in it.",
+              "text": "A box can hold one thing at a time.",
               "correct": false
             },
             {
-              "text": "We give boxes names so we can find them.",
+              "text": "Two boxes can hold the same value but still have different names.",
               "correct": false
             }
           ],
@@ -498,19 +813,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about magic boxes (variables).",
           "options": [
             {
-              "text": "We give boxes names so we can find them.",
+              "text": "We can change what is inside a box.",
               "correct": false
             },
             {
-              "text": "A box keeps its label even if you change what's in it.",
+              "text": "Naming the box clearly helps you remember what's inside.",
               "correct": false
             },
             {
-              "text": "A box can hold the smell of summer.",
+              "text": "Each variable has tiny legs and walks home at night.",
               "correct": true
             },
             {
-              "text": "We can change what is inside a box.",
+              "text": "A box can hold one thing at a time.",
               "correct": false
             }
           ],
@@ -520,11 +835,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about magic boxes (variables).",
           "options": [
             {
+              "text": "A box keeps its label even if you change what's in it.",
+              "correct": false
+            },
+            {
+              "text": "A variable is a labeled box where you keep a number or word.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once and a frog.",
+              "correct": true
+            },
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_03_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
               "text": "Empty boxes are still boxes — just waiting.",
               "correct": false
             },
             {
+              "text": "A box can hold a number or a word.",
+              "correct": false
+            },
+            {
+              "text": "Naming the box clearly helps you remember what's inside.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped or they cry.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_03_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "Two boxes can hold the same value but still have different names.",
+              "correct": false
+            },
+            {
+              "text": "Boxes only hold candy and tiny opinions.",
+              "correct": true
+            },
+            {
+              "text": "You can change what's IN the box later -- that's the whole point.",
+              "correct": false
+            },
+            {
               "text": "A box keeps its label even if you change what's in it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "A variable is a labeled box where you keep a number or word.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": true
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": false
+            },
+            {
+              "text": "Empty boxes are still boxes — just waiting.",
+              "correct": false
+            },
+            {
+              "text": "Two boxes can hold the same value but still have different names.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed three sneakers every night.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "A box can hold the smell of summer.",
+              "correct": true
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": false
+            },
+            {
+              "text": "Boxes are how we remember things in code.",
+              "correct": false
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about magic boxes (variables).",
+          "options": [
+            {
+              "text": "You can change what's IN the box later -- that's the whole point.",
               "correct": false
             },
             {
@@ -532,33 +971,14 @@
               "correct": true
             },
             {
-              "text": "Boxes are how we remember things in code.",
+              "text": "Naming a box makes our code easy to read.",
+              "correct": false
+            },
+            {
+              "text": "Naming the box clearly helps you remember what's inside.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_03_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about magic boxes (variables).",
-          "options": [
-            {
-              "text": "A box keeps its label even if you change what's in it.",
-              "correct": false
-            },
-            {
-              "text": "Empty boxes are still boxes — just waiting.",
-              "correct": false
-            },
-            {
-              "text": "We can change what is inside a box.",
-              "correct": false
-            },
-            {
-              "text": "Every box has feelings about Tuesdays.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_03_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -567,12 +987,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BOT and press Send to keep going!",
-          "target_display": "BOT",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "bot"
+            "next"
           ],
-          "hint_wrong": "Type the word BOT (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -580,19 +1000,19 @@
           "prompt": "Tell me — Which one is TRUE about magic boxes (variables)?",
           "options": [
             {
+              "text": "Boxes only hold candy and tiny opinions.",
+              "correct": false
+            },
+            {
+              "text": "Variables only work on Wednesdays after lunch.",
+              "correct": false
+            },
+            {
               "text": "A box holds a thousand things at once and a frog.",
               "correct": false
             },
             {
-              "text": "Boxes have to be square shaped or they cry.",
-              "correct": false
-            },
-            {
-              "text": "A box can hold the smell of summer.",
-              "correct": false
-            },
-            {
-              "text": "Naming a box makes our code easy to read.",
+              "text": "A box can hold one thing at a time.",
               "correct": true
             }
           ],
@@ -610,11 +1030,11 @@
               "correct": false
             },
             {
-              "text": "Boxes are how we remember things in code.",
+              "text": "We give boxes names so we can find them.",
               "correct": true
             },
             {
-              "text": "A box never lets you change what is inside.",
+              "text": "Variables float in the air until they get tired.",
               "correct": false
             }
           ],
@@ -624,27 +1044,121 @@
           "prompt": "Pop quiz! Which one is TRUE about magic boxes (variables)?",
           "options": [
             {
-              "text": "A box keeps its label even if you change what's in it.",
+              "text": "We can change what is inside a box.",
               "correct": true
             },
             {
-              "text": "A box holds a thousand things at once and a frog.",
-              "correct": false
-            },
-            {
-              "text": "A box never lets you change what is inside.",
-              "correct": false
-            },
-            {
               "text": "Boxes need to be fed three sneakers every night.",
+              "correct": false
+            },
+            {
+              "text": "Every box has feelings about Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped or they cry.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A variable changes color when you look away.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": true
+            },
+            {
+              "text": "Variables float in the air until they get tired.",
+              "correct": false
+            },
+            {
+              "text": "Every box has feelings about Tuesdays.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_03_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": true
+            },
+            {
+              "text": "Boxes melt if you say their name backwards.",
+              "correct": false
+            },
+            {
+              "text": "Boxes need to be fed three sneakers every night.",
+              "correct": false
+            },
+            {
+              "text": "Each variable has tiny legs and walks home at night.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_03_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "Boxes are how we remember things in code.",
+              "correct": true
+            },
+            {
+              "text": "Boxes melt if you say their name backwards.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once and a frog.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped or they cry.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once and a frog.",
+              "correct": false
+            },
+            {
+              "text": "A box keeps its label even if you change what's in it.",
+              "correct": true
+            },
+            {
+              "text": "Boxes only hold candy and tiny opinions.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about magic boxes (variables)?",
           "options": [
+            {
+              "text": "A box holds a thousand things at once and a frog.",
+              "correct": false
+            },
+            {
+              "text": "Boxes melt if you say their name backwards.",
+              "correct": false
+            },
             {
               "text": "Boxes need to be fed three sneakers every night.",
               "correct": false
@@ -652,170 +1166,55 @@
             {
               "text": "Empty boxes are still boxes — just waiting.",
               "correct": true
-            },
-            {
-              "text": "A box holds a thousand things at once and a frog.",
-              "correct": false
-            },
-            {
-              "text": "A box can hold the smell of summer.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_03_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about magic boxes (variables)?",
           "options": [
             {
-              "text": "A box can hold one thing at a time.",
-              "correct": true
-            },
-            {
-              "text": "Boxes have to be square shaped or they cry.",
-              "correct": false
-            },
-            {
-              "text": "A box can hold the smell of summer.",
+              "text": "Each variable has tiny legs and walks home at night.",
               "correct": false
             },
             {
               "text": "A box never lets you change what is inside.",
               "correct": false
+            },
+            {
+              "text": "Boxes need to be fed three sneakers every night.",
+              "correct": false
+            },
+            {
+              "text": "A variable is a labeled box where you keep a number or word.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_03_q5_v4.wav"
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about magic boxes (variables)?",
+          "options": [
+            {
+              "text": "A variable changes color when you look away.",
+              "correct": false
+            },
+            {
+              "text": "Variables only work on Wednesdays after lunch.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped or they cry.",
+              "correct": false
+            },
+            {
+              "text": "You can change what's IN the box later -- that's the whole point.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
     {
       "id": "q6",
-      "interaction": {
-        "type": "type-this-word",
-        "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type Y E S and press Send."
-        }
-      },
-      "variations": [
-        {
-          "prompt": "Wait wait wait — Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
-          "options": [
-            {
-              "text": "Empty boxes are still boxes — just waiting.",
-              "correct": false
-            },
-            {
-              "text": "A box keeps its label even if you change what's in it.",
-              "correct": false
-            },
-            {
-              "text": "A box can hold the smell of summer.",
-              "correct": true
-            },
-            {
-              "text": "A box can hold one thing at a time.",
-              "correct": false
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_03_q6_v0.wav"
-        },
-        {
-          "prompt": "Pop quiz! Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
-          "options": [
-            {
-              "text": "We can change what is inside a box.",
-              "correct": false
-            },
-            {
-              "text": "Empty boxes are still boxes — just waiting.",
-              "correct": false
-            },
-            {
-              "text": "Boxes melt if you say their name backwards.",
-              "correct": true
-            },
-            {
-              "text": "We give boxes names so we can find them.",
-              "correct": false
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_03_q6_v1.wav"
-        },
-        {
-          "prompt": "Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
-          "options": [
-            {
-              "text": "A box can hold a number or a word.",
-              "correct": false
-            },
-            {
-              "text": "Every box has feelings about Tuesdays.",
-              "correct": true
-            },
-            {
-              "text": "Empty boxes are still boxes — just waiting.",
-              "correct": false
-            },
-            {
-              "text": "A box can hold one thing at a time.",
-              "correct": false
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_03_q6_v2.wav"
-        },
-        {
-          "prompt": "Quick! Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
-          "options": [
-            {
-              "text": "A box can hold one thing at a time.",
-              "correct": false
-            },
-            {
-              "text": "We give boxes names so we can find them.",
-              "correct": false
-            },
-            {
-              "text": "Boxes are how we remember things in code.",
-              "correct": false
-            },
-            {
-              "text": "A box holds a thousand things at once and a frog.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_03_q6_v3.wav"
-        },
-        {
-          "prompt": "Hey friend — Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
-          "options": [
-            {
-              "text": "Boxes have to be square shaped or they cry.",
-              "correct": true
-            },
-            {
-              "text": "A box keeps its label even if you change what's in it.",
-              "correct": false
-            },
-            {
-              "text": "A box can hold one thing at a time.",
-              "correct": false
-            },
-            {
-              "text": "Boxes are how we remember things in code.",
-              "correct": false
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_03_q6_v4.wav"
-        }
-      ]
-    },
-    {
-      "id": "q7",
       "interaction": {
         "type": "type-this-word",
         "payload": {
@@ -829,114 +1228,450 @@
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about magic boxes (variables) is a GOOD rule?",
+          "prompt": "Bytey writes: score = 10. Then later: score = 20. What's in the box now?",
           "options": [
             {
-              "text": "A box keeps its label even if you change what's in it.",
+              "text": "Both 10 and 20 stacked on top of each other.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- variables empty themselves.",
+              "correct": false
+            },
+            {
+              "text": "20 -- the new value replaced the old one.",
               "correct": true
             },
             {
-              "text": "Boxes need to be fed three sneakers every night.",
+              "text": "Just '30' because they got added.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_03_q6_v0.wav"
+        },
+        {
+          "prompt": "Quick! Bytey writes: score = 10. Then later: score = 20. What's in the box now?",
+          "options": [
+            {
+              "text": "20 -- the new value replaced the old one.",
+              "correct": true
+            },
+            {
+              "text": "Both 10 and 20 stacked on top of each other.",
               "correct": false
             },
             {
-              "text": "A box can hold the smell of summer.",
+              "text": "Nothing -- variables empty themselves.",
               "correct": false
             },
             {
-              "text": "A box holds a thousand things at once and a frog.",
+              "text": "Just '30' because they got added.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_03_q6_v1.wav"
+        },
+        {
+          "prompt": "Hey friend — Bytey writes: score = 10. Then later: score = 20. What's in the box now?",
+          "options": [
+            {
+              "text": "20 -- the new value replaced the old one.",
+              "correct": true
+            },
+            {
+              "text": "Both 10 and 20 stacked on top of each other.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- variables empty themselves.",
+              "correct": false
+            },
+            {
+              "text": "Just '30' because they got added.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_03_q6_v2.wav"
+        },
+        {
+          "prompt": "Bytey wonders: Bytey writes: score = 10. Then later: score = 20. What's in the box now?",
+          "options": [
+            {
+              "text": "Both 10 and 20 stacked on top of each other.",
+              "correct": false
+            },
+            {
+              "text": "20 -- the new value replaced the old one.",
+              "correct": true
+            },
+            {
+              "text": "Nothing -- variables empty themselves.",
+              "correct": false
+            },
+            {
+              "text": "Just '30' because they got added.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_03_q6_v3.wav"
+        },
+        {
+          "prompt": "Tell me — Bytey writes: score = 10. Then later: score = 20. What's in the box now?",
+          "options": [
+            {
+              "text": "Nothing -- variables empty themselves.",
+              "correct": false
+            },
+            {
+              "text": "Both 10 and 20 stacked on top of each other.",
+              "correct": false
+            },
+            {
+              "text": "Just '30' because they got added.",
+              "correct": false
+            },
+            {
+              "text": "20 -- the new value replaced the old one.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_03_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey writes: score = 10. Then later: score = 20. What's in the box now?",
+          "options": [
+            {
+              "text": "Both 10 and 20 stacked on top of each other.",
+              "correct": false
+            },
+            {
+              "text": "Just '30' because they got added.",
+              "correct": false
+            },
+            {
+              "text": "20 -- the new value replaced the old one.",
+              "correct": true
+            },
+            {
+              "text": "Nothing -- variables empty themselves.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey writes: score = 10. Then later: score = 20. What's in the box now?",
+          "options": [
+            {
+              "text": "20 -- the new value replaced the old one.",
+              "correct": true
+            },
+            {
+              "text": "Nothing -- variables empty themselves.",
+              "correct": false
+            },
+            {
+              "text": "Both 10 and 20 stacked on top of each other.",
+              "correct": false
+            },
+            {
+              "text": "Just '30' because they got added.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey writes: score = 10. Then later: score = 20. What's in the box now?",
+          "options": [
+            {
+              "text": "Just '30' because they got added.",
+              "correct": false
+            },
+            {
+              "text": "20 -- the new value replaced the old one.",
+              "correct": true
+            },
+            {
+              "text": "Both 10 and 20 stacked on top of each other.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- variables empty themselves.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey writes: score = 10. Then later: score = 20. What's in the box now?",
+          "options": [
+            {
+              "text": "20 -- the new value replaced the old one.",
+              "correct": true
+            },
+            {
+              "text": "Nothing -- variables empty themselves.",
+              "correct": false
+            },
+            {
+              "text": "Just '30' because they got added.",
+              "correct": false
+            },
+            {
+              "text": "Both 10 and 20 stacked on top of each other.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey writes: score = 10. Then later: score = 20. What's in the box now?",
+          "options": [
+            {
+              "text": "20 -- the new value replaced the old one.",
+              "correct": true
+            },
+            {
+              "text": "Both 10 and 20 stacked on top of each other.",
+              "correct": false
+            },
+            {
+              "text": "Nothing -- variables empty themselves.",
+              "correct": false
+            },
+            {
+              "text": "Just '30' because they got added.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
+          "targets": [
+            "play"
+          ],
+          "hint_wrong": "Type the word PLAY (any case is fine)."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Pop quiz! Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Boxes melt if you say their name backwards.",
+              "correct": true
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": false
+            },
+            {
+              "text": "A variable is a labeled box where you keep a number or word.",
+              "correct": false
+            },
+            {
+              "text": "Two boxes can hold the same value but still have different names.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about magic boxes (variables) is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "A box can hold one thing at a time.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": false
+            },
+            {
+              "text": "We can change what is inside a box.",
+              "correct": false
+            },
+            {
               "text": "Every box has feelings about Tuesdays.",
-              "correct": false
-            },
-            {
-              "text": "Boxes melt if you say their name backwards.",
-              "correct": false
-            },
-            {
-              "text": "Boxes only hold candy and tiny opinions.",
-              "correct": false
-            },
-            {
-              "text": "Empty boxes are still boxes — just waiting.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about magic boxes (variables) is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "A box can hold the smell of summer.",
+              "text": "A box keeps its label even if you change what's in it.",
               "correct": false
             },
             {
-              "text": "A box never lets you change what is inside.",
+              "text": "Two boxes can hold the same value but still have different names.",
               "correct": false
             },
             {
-              "text": "Boxes need to be fed three sneakers every night.",
+              "text": "You can change what's IN the box later -- that's the whole point.",
               "correct": false
             },
             {
-              "text": "A box can hold one thing at a time.",
+              "text": "Variables float in the air until they get tired.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about magic boxes (variables) is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Every box has feelings about Tuesdays.",
+              "text": "We give boxes names so we can find them.",
               "correct": false
             },
             {
-              "text": "We give boxes names so we can find them.",
+              "text": "A variable changes color when you look away.",
               "correct": true
             },
             {
-              "text": "Boxes need to be fed three sneakers every night.",
+              "text": "A box keeps its label even if you change what's in it.",
               "correct": false
             },
             {
-              "text": "Boxes melt if you say their name backwards.",
+              "text": "Naming a box makes our code easy to read.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about magic boxes (variables) is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Boxes have to be square shaped or they cry.",
+              "text": "Naming the box clearly helps you remember what's inside.",
               "correct": false
             },
             {
-              "text": "We can change what is inside a box.",
+              "text": "Variables only work on Wednesdays after lunch.",
               "correct": true
             },
             {
-              "text": "A box never lets you change what is inside.",
+              "text": "A box can hold one thing at a time.",
               "correct": false
             },
             {
-              "text": "A box holds a thousand things at once and a frog.",
+              "text": "A variable is a labeled box where you keep a number or word.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Boxes are how we remember things in code.",
+              "correct": false
+            },
+            {
+              "text": "Each variable has tiny legs and walks home at night.",
+              "correct": true
+            },
+            {
+              "text": "A variable is a labeled box where you keep a number or word.",
+              "correct": false
+            },
+            {
+              "text": "Empty boxes are still boxes — just waiting.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "We can change what is inside a box.",
+              "correct": false
+            },
+            {
+              "text": "A box holds a thousand things at once and a frog.",
+              "correct": true
+            },
+            {
+              "text": "A box keeps its label even if you change what's in it.",
+              "correct": false
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A box keeps its label even if you change what's in it.",
+              "correct": false
+            },
+            {
+              "text": "We give boxes names so we can find them.",
+              "correct": false
+            },
+            {
+              "text": "Boxes have to be square shaped or they cry.",
+              "correct": true
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Boxes only hold candy and tiny opinions.",
+              "correct": true
+            },
+            {
+              "text": "A box can hold one thing at a time.",
+              "correct": false
+            },
+            {
+              "text": "Two boxes can hold the same value but still have different names.",
+              "correct": false
+            },
+            {
+              "text": "A box keeps its label even if you change what's in it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about magic boxes (variables). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "We can change what is inside a box.",
+              "correct": false
+            },
+            {
+              "text": "Boxes are how we remember things in code.",
+              "correct": false
+            },
+            {
+              "text": "A box never lets you change what is inside.",
+              "correct": true
+            },
+            {
+              "text": "A box keeps its label even if you change what's in it.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -945,28 +1680,28 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type TOP and press Send to keep going!",
-          "target_display": "TOP",
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
           "targets": [
-            "top"
+            "code"
           ],
-          "hint_wrong": "Type the word TOP (any case is fine)."
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Fill in the blank: when we talk about magic boxes (variables), ___",
+          "prompt": "Listen up — Which rule about magic boxes (variables) is a GOOD rule?",
           "options": [
+            {
+              "text": "Boxes melt if you say their name backwards.",
+              "correct": false
+            },
             {
               "text": "Boxes have to be square shaped or they cry.",
               "correct": false
             },
             {
-              "text": "Boxes only hold candy and tiny opinions.",
-              "correct": false
-            },
-            {
-              "text": "Empty boxes are still boxes — just waiting.",
+              "text": "You can change what's IN the box later -- that's the whole point.",
               "correct": true
             },
             {
@@ -977,36 +1712,32 @@
           "_audio": "assets/audio/q/lesson_03_q8_v0.wav"
         },
         {
-          "prompt": "Quick! Fill in the blank: when we talk about magic boxes (variables), ___",
+          "prompt": "Here's a thinker: Which rule about magic boxes (variables) is a GOOD rule?",
           "options": [
             {
-              "text": "Boxes need to be fed three sneakers every night.",
+              "text": "A variable changes color when you look away.",
               "correct": false
             },
             {
-              "text": "Boxes melt if you say their name backwards.",
+              "text": "Variables float in the air until they get tired.",
               "correct": false
             },
             {
-              "text": "A box can hold one thing at a time.",
+              "text": "Naming the box clearly helps you remember what's inside.",
               "correct": true
             },
             {
-              "text": "A box can hold the smell of summer.",
+              "text": "Boxes only hold candy and tiny opinions.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q8_v1.wav"
         },
         {
-          "prompt": "Hey friend — Fill in the blank: when we talk about magic boxes (variables), ___",
+          "prompt": "OK quick one: Which rule about magic boxes (variables) is a GOOD rule?",
           "options": [
             {
-              "text": "Boxes have to be square shaped or they cry.",
-              "correct": false
-            },
-            {
-              "text": "A box holds a thousand things at once and a frog.",
+              "text": "Boxes need to be fed three sneakers every night.",
               "correct": false
             },
             {
@@ -1014,39 +1745,43 @@
               "correct": false
             },
             {
-              "text": "We give boxes names so we can find them.",
+              "text": "A box holds a thousand things at once and a frog.",
+              "correct": false
+            },
+            {
+              "text": "Two boxes can hold the same value but still have different names.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q8_v2.wav"
         },
         {
-          "prompt": "Bytey wonders: Fill in the blank: when we talk about magic boxes (variables), ___",
+          "prompt": "Hmm... Which rule about magic boxes (variables) is a GOOD rule?",
           "options": [
             {
-              "text": "A box holds a thousand things at once and a frog.",
+              "text": "A variable changes color when you look away.",
               "correct": false
             },
             {
-              "text": "We can change what is inside a box.",
+              "text": "A box can hold one thing at a time.",
               "correct": true
             },
             {
-              "text": "Boxes only hold candy and tiny opinions.",
+              "text": "Variables only work on Wednesdays after lunch.",
               "correct": false
             },
             {
-              "text": "Boxes melt if you say their name backwards.",
+              "text": "A box never lets you change what is inside.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q8_v3.wav"
         },
         {
-          "prompt": "Tell me — Fill in the blank: when we talk about magic boxes (variables), ___",
+          "prompt": "Which rule about magic boxes (variables) is a GOOD rule?",
           "options": [
             {
-              "text": "A box can hold a number or a word.",
+              "text": "We give boxes names so we can find them.",
               "correct": true
             },
             {
@@ -1054,15 +1789,120 @@
               "correct": false
             },
             {
-              "text": "Boxes melt if you say their name backwards.",
+              "text": "A box never lets you change what is inside.",
               "correct": false
             },
             {
-              "text": "Boxes have to be square shaped or they cry.",
+              "text": "Boxes only hold candy and tiny opinions.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_03_q8_v4.wav"
+        },
+        {
+          "prompt": "Quick! Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "We can change what is inside a box.",
+              "correct": true
+            },
+            {
+              "text": "Each variable has tiny legs and walks home at night.",
+              "correct": false
+            },
+            {
+              "text": "A variable changes color when you look away.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold the smell of summer.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Each variable has tiny legs and walks home at night.",
+              "correct": false
+            },
+            {
+              "text": "Variables only work on Wednesdays after lunch.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold a number or a word.",
+              "correct": true
+            },
+            {
+              "text": "Boxes melt if you say their name backwards.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Naming a box makes our code easy to read.",
+              "correct": true
+            },
+            {
+              "text": "Each variable has tiny legs and walks home at night.",
+              "correct": false
+            },
+            {
+              "text": "Variables float in the air until they get tired.",
+              "correct": false
+            },
+            {
+              "text": "A variable changes color when you look away.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Boxes are how we remember things in code.",
+              "correct": true
+            },
+            {
+              "text": "A box holds a thousand things at once and a frog.",
+              "correct": false
+            },
+            {
+              "text": "A variable changes color when you look away.",
+              "correct": false
+            },
+            {
+              "text": "Each variable has tiny legs and walks home at night.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which rule about magic boxes (variables) is a GOOD rule?",
+          "options": [
+            {
+              "text": "Variables float in the air until they get tired.",
+              "correct": false
+            },
+            {
+              "text": "Variables only work on Wednesdays after lunch.",
+              "correct": false
+            },
+            {
+              "text": "A box can hold the smell of summer.",
+              "correct": false
+            },
+            {
+              "text": "A box keeps its label even if you change what's in it.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

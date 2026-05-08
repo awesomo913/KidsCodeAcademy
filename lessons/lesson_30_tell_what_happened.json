@@ -49,14 +49,27 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "type-this-word",
+        "type": "click-the-thing",
         "payload": {
-          "prompt": "Type WRITE and press Send to keep going!",
-          "target_display": "WRITE",
-          "targets": [
-            "write"
-          ],
-          "hint_wrong": "Type the word WRITE (any case is fine)."
+          "prompt": "Which bug report is best?",
+          "choices": [
+            {
+              "label": "It is broken!",
+              "right": false
+            },
+            {
+              "label": "Help.",
+              "right": false
+            },
+            {
+              "label": "The score went to zero when I touched a coin.",
+              "right": true
+            },
+            {
+              "label": "Idk what happened.",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -64,11 +77,11 @@
           "prompt": "What is telling what happened?",
           "options": [
             {
-              "text": "Use only emoji to describe the bug.",
+              "text": "Always include 5 emoji per sentence.",
               "correct": false
             },
             {
-              "text": "Skip the steps you took — surprise the helper.",
+              "text": "Hide what you expected — let them guess.",
               "correct": false
             },
             {
@@ -86,7 +99,7 @@
           "prompt": "Quick! Which one is TRUE about telling what happened?",
           "options": [
             {
-              "text": "Bug reports must rhyme with 'banana'.",
+              "text": "Sing the bug a lullaby until it falls asleep.",
               "correct": false
             },
             {
@@ -98,7 +111,7 @@
               "correct": false
             },
             {
-              "text": "Hide what you expected — let them guess.",
+              "text": "Real coders never explain bugs -- just complain.",
               "correct": false
             }
           ],
@@ -108,11 +121,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
-              "text": "Show the error or weird thing.",
+              "text": "Explain the steps you took.",
               "correct": false
             },
             {
-              "text": "Mention what changed since it last worked.",
+              "text": "Show the error or weird thing.",
               "correct": false
             },
             {
@@ -120,7 +133,7 @@
               "correct": true
             },
             {
-              "text": "Explain the steps you took.",
+              "text": "Include the error text exactly.",
               "correct": false
             }
           ],
@@ -130,11 +143,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about telling what happened. What should he say?",
           "options": [
             {
-              "text": "Stories make bugs harder and need a chorus.",
+              "text": "Real coders never explain bugs -- just complain.",
               "correct": false
             },
             {
-              "text": "Sing the bug a lullaby until it falls asleep.",
+              "text": "Stories make bugs harder and need a chorus.",
               "correct": false
             },
             {
@@ -142,7 +155,7 @@
               "correct": true
             },
             {
-              "text": "Never share the error — it is your private treasure.",
+              "text": "Skip the steps you took — surprise the helper.",
               "correct": false
             }
           ],
@@ -152,11 +165,11 @@
           "prompt": "Tell me — Which rule about telling what happened is a GOOD rule?",
           "options": [
             {
-              "text": "Stories make bugs harder and need a chorus.",
+              "text": "Always include 5 emoji per sentence.",
               "correct": false
             },
             {
-              "text": "Use only emoji to describe the bug.",
+              "text": "Sing the bug a lullaby until it falls asleep.",
               "correct": false
             },
             {
@@ -164,11 +177,116 @@
               "correct": true
             },
             {
-              "text": "Sing the bug a lullaby until it falls asleep.",
+              "text": "Stories make bugs harder and need a chorus.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about telling what happened, ___",
+          "options": [
+            {
+              "text": "Use only emoji to describe the bug.",
+              "correct": false
+            },
+            {
+              "text": "Be specific about commands and inputs.",
+              "correct": true
+            },
+            {
+              "text": "Bug reports must be at least 1,000 words long.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error — it is your private treasure.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Show the error or weird thing.",
+              "correct": false
+            },
+            {
+              "text": "A good story makes the bug easy to fix.",
+              "correct": false
+            },
+            {
+              "text": "Always include your full grocery list.",
+              "correct": true
+            },
+            {
+              "text": "Be specific about commands and inputs.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with telling what happened?",
+          "options": [
+            {
+              "text": "Skip the steps you took — surprise the helper.",
+              "correct": false
+            },
+            {
+              "text": "Bug reports must rhyme with 'banana'.",
+              "correct": false
+            },
+            {
+              "text": "Include the error text exactly.",
+              "correct": true
+            },
+            {
+              "text": "Stories make bugs harder and need a chorus.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about telling what happened is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
+              "correct": false
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": false
+            },
+            {
+              "text": "Be specific about commands and inputs.",
+              "correct": false
+            },
+            {
+              "text": "Bug reports must be at least 1,000 words long.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about telling what happened. Which fact would help him?",
+          "options": [
+            {
+              "text": "Clear bug reports help others fix the bug fast.",
+              "correct": true
+            },
+            {
+              "text": "Bug reports must rhyme with 'banana'.",
+              "correct": false
+            },
+            {
+              "text": "Always include your full grocery list.",
+              "correct": false
+            },
+            {
+              "text": "Sing the bug a lullaby until it falls asleep.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -177,12 +295,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type HELP and press Send to keep going!",
-          "target_display": "HELP",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "help"
+            "yes"
           ],
-          "hint_wrong": "Type the word HELP (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -295,6 +413,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey says: 'It broke.' Why is that hard for the helper?",
+          "options": [
+            {
+              "text": "Helper needs a snack before short sentences.",
+              "correct": false
+            },
+            {
+              "text": "Helper has no clue what 'it' is or how it broke.",
+              "correct": true
+            },
+            {
+              "text": "Helper cries when the word 'it' is used.",
+              "correct": false
+            },
+            {
+              "text": "Helper is allergic to the word 'broke'.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey says: 'It broke.' Why is that hard for the helper?",
+          "options": [
+            {
+              "text": "Helper is allergic to the word 'broke'.",
+              "correct": false
+            },
+            {
+              "text": "Helper needs a snack before short sentences.",
+              "correct": false
+            },
+            {
+              "text": "Helper has no clue what 'it' is or how it broke.",
+              "correct": true
+            },
+            {
+              "text": "Helper cries when the word 'it' is used.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey says: 'It broke.' Why is that hard for the helper?",
+          "options": [
+            {
+              "text": "Helper has no clue what 'it' is or how it broke.",
+              "correct": true
+            },
+            {
+              "text": "Helper needs a snack before short sentences.",
+              "correct": false
+            },
+            {
+              "text": "Helper is allergic to the word 'broke'.",
+              "correct": false
+            },
+            {
+              "text": "Helper cries when the word 'it' is used.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey says: 'It broke.' Why is that hard for the helper?",
+          "options": [
+            {
+              "text": "Helper needs a snack before short sentences.",
+              "correct": false
+            },
+            {
+              "text": "Helper cries when the word 'it' is used.",
+              "correct": false
+            },
+            {
+              "text": "Helper is allergic to the word 'broke'.",
+              "correct": false
+            },
+            {
+              "text": "Helper has no clue what 'it' is or how it broke.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey says: 'It broke.' Why is that hard for the helper?",
+          "options": [
+            {
+              "text": "Helper cries when the word 'it' is used.",
+              "correct": false
+            },
+            {
+              "text": "Helper has no clue what 'it' is or how it broke.",
+              "correct": true
+            },
+            {
+              "text": "Helper needs a snack before short sentences.",
+              "correct": false
+            },
+            {
+              "text": "Helper is allergic to the word 'broke'.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -303,12 +526,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -421,6 +644,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Pick the better bug report:",
+          "options": [
+            {
+              "text": "'something something it is bad'",
+              "correct": false
+            },
+            {
+              "text": "'help'",
+              "correct": false
+            },
+            {
+              "text": "'pls fix asap thx'",
+              "correct": false
+            },
+            {
+              "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Pick the better bug report:",
+          "options": [
+            {
+              "text": "'something something it is bad'",
+              "correct": false
+            },
+            {
+              "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
+              "correct": true
+            },
+            {
+              "text": "'help'",
+              "correct": false
+            },
+            {
+              "text": "'pls fix asap thx'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Pick the better bug report:",
+          "options": [
+            {
+              "text": "'something something it is bad'",
+              "correct": false
+            },
+            {
+              "text": "'help'",
+              "correct": false
+            },
+            {
+              "text": "'pls fix asap thx'",
+              "correct": false
+            },
+            {
+              "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Pick the better bug report:",
+          "options": [
+            {
+              "text": "'something something it is bad'",
+              "correct": false
+            },
+            {
+              "text": "'help'",
+              "correct": false
+            },
+            {
+              "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
+              "correct": true
+            },
+            {
+              "text": "'pls fix asap thx'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Pick the better bug report:",
+          "options": [
+            {
+              "text": "'something something it is bad'",
+              "correct": false
+            },
+            {
+              "text": "'help'",
+              "correct": false
+            },
+            {
+              "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
+              "correct": true
+            },
+            {
+              "text": "'pls fix asap thx'",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -429,12 +757,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type FAST and press Send to keep going!",
-          "target_display": "FAST",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "fast"
+            "cool"
           ],
-          "hint_wrong": "Type the word FAST (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -442,19 +770,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
-              "text": "Mention what changed since it last worked.",
+              "text": "Explain the steps you took.",
               "correct": false
             },
             {
-              "text": "Be specific about commands and inputs.",
+              "text": "Always say what you EXPECTED vs what you GOT.",
               "correct": false
             },
             {
-              "text": "Never share the error — it is your private treasure.",
+              "text": "Always include 5 emoji per sentence.",
               "correct": true
             },
             {
-              "text": "Say what you expected.",
+              "text": "Say what actually happened.",
               "correct": false
             }
           ],
@@ -464,19 +792,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
-              "text": "A good story makes the bug easy to fix.",
+              "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
               "correct": false
             },
             {
-              "text": "Stories make bugs harder and need a chorus.",
+              "text": "Real coders never explain bugs -- just complain.",
               "correct": true
             },
             {
-              "text": "Mention what changed since it last worked.",
+              "text": "Explain the steps you took.",
               "correct": false
             },
             {
-              "text": "Say what you expected.",
+              "text": "A good bug report is short, honest, and specific.",
               "correct": false
             }
           ],
@@ -486,19 +814,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
-              "text": "Say what you expected.",
+              "text": "Say what actually happened.",
               "correct": false
             },
             {
-              "text": "Mention what changed since it last worked.",
+              "text": "Always say what you EXPECTED vs what you GOT.",
               "correct": false
             },
             {
-              "text": "Bug reports must rhyme with 'banana'.",
+              "text": "Bug reports work better in rhyme.",
               "correct": true
             },
             {
-              "text": "Say what actually happened.",
+              "text": "Explain the steps you took.",
               "correct": false
             }
           ],
@@ -508,11 +836,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
+              "text": "Mention what changed since it last worked.",
+              "correct": false
+            },
+            {
+              "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
+              "correct": false
+            },
+            {
+              "text": "Skip the steps you took — surprise the helper.",
+              "correct": true
+            },
+            {
+              "text": "A good story makes the bug easy to fix.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_30_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
               "text": "Include the error text exactly.",
               "correct": false
             },
             {
+              "text": "Show the error or weird thing.",
+              "correct": false
+            },
+            {
+              "text": "Always say what you EXPECTED vs what you GOT.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected — let them guess.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_30_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "A good bug report is short, honest, and specific.",
+              "correct": false
+            },
+            {
+              "text": "Sing the bug a lullaby until it falls asleep.",
+              "correct": true
+            },
+            {
+              "text": "Clear bug reports help others fix the bug fast.",
+              "correct": false
+            },
+            {
               "text": "Mention what changed since it last worked.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
+              "correct": false
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error — it is your private treasure.",
+              "correct": true
+            },
+            {
+              "text": "Say what actually happened.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "Explain the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Include the error text exactly.",
+              "correct": false
+            },
+            {
+              "text": "A good bug report is short, honest, and specific.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder and need a chorus.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "Bug reports must rhyme with 'banana'.",
+              "correct": true
+            },
+            {
+              "text": "Say what actually happened.",
+              "correct": false
+            },
+            {
+              "text": "Be specific about commands and inputs.",
+              "correct": false
+            },
+            {
+              "text": "Say what you expected.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about telling what happened.",
+          "options": [
+            {
+              "text": "Clear bug reports help others fix the bug fast.",
               "correct": false
             },
             {
@@ -520,33 +972,14 @@
               "correct": true
             },
             {
-              "text": "Be specific about commands and inputs.",
+              "text": "A good story makes the bug easy to fix.",
+              "correct": false
+            },
+            {
+              "text": "Always say what you EXPECTED vs what you GOT.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_30_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about telling what happened.",
-          "options": [
-            {
-              "text": "Mention what changed since it last worked.",
-              "correct": false
-            },
-            {
-              "text": "Include the error text exactly.",
-              "correct": false
-            },
-            {
-              "text": "Say what actually happened.",
-              "correct": false
-            },
-            {
-              "text": "Use only emoji to describe the bug.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_30_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -555,12 +988,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SUPER and press Send to keep going!",
-          "target_display": "SUPER",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "super"
+            "next"
           ],
-          "hint_wrong": "Type the word SUPER (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -568,19 +1001,19 @@
           "prompt": "Tell me — Which one is TRUE about telling what happened?",
           "options": [
             {
+              "text": "Sing the bug a lullaby until it falls asleep.",
+              "correct": false
+            },
+            {
+              "text": "Real coders never explain bugs -- just complain.",
+              "correct": false
+            },
+            {
               "text": "Skip the steps you took — surprise the helper.",
               "correct": false
             },
             {
-              "text": "Hide what you expected — let them guess.",
-              "correct": false
-            },
-            {
-              "text": "Bug reports must rhyme with 'banana'.",
-              "correct": false
-            },
-            {
-              "text": "A good story makes the bug easy to fix.",
+              "text": "Explain the steps you took.",
               "correct": true
             }
           ],
@@ -598,11 +1031,11 @@
               "correct": false
             },
             {
-              "text": "Be specific about commands and inputs.",
+              "text": "Say what you expected.",
               "correct": true
             },
             {
-              "text": "Never share the error — it is your private treasure.",
+              "text": "Bug reports must be at least 1,000 words long.",
               "correct": false
             }
           ],
@@ -612,27 +1045,121 @@
           "prompt": "Pop quiz! Which one is TRUE about telling what happened?",
           "options": [
             {
-              "text": "Mention what changed since it last worked.",
+              "text": "Say what actually happened.",
               "correct": true
             },
             {
-              "text": "Skip the steps you took — surprise the helper.",
-              "correct": false
-            },
-            {
-              "text": "Never share the error — it is your private treasure.",
-              "correct": false
-            },
-            {
               "text": "Stories make bugs harder and need a chorus.",
+              "correct": false
+            },
+            {
+              "text": "Use only emoji to describe the bug.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected — let them guess.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "Always include 5 emoji per sentence.",
+              "correct": false
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": true
+            },
+            {
+              "text": "Bug reports must be at least 1,000 words long.",
+              "correct": false
+            },
+            {
+              "text": "Use only emoji to describe the bug.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_30_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "A good story makes the bug easy to fix.",
+              "correct": true
+            },
+            {
+              "text": "Always include your full grocery list.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder and need a chorus.",
+              "correct": false
+            },
+            {
+              "text": "Bug reports work better in rhyme.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_30_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "Be specific about commands and inputs.",
+              "correct": true
+            },
+            {
+              "text": "Always include your full grocery list.",
+              "correct": false
+            },
+            {
+              "text": "Skip the steps you took — surprise the helper.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected — let them guess.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "Never share the error — it is your private treasure.",
+              "correct": false
+            },
+            {
+              "text": "Skip the steps you took — surprise the helper.",
+              "correct": false
+            },
+            {
+              "text": "Mention what changed since it last worked.",
+              "correct": true
+            },
+            {
+              "text": "Sing the bug a lullaby until it falls asleep.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about telling what happened?",
           "options": [
+            {
+              "text": "Skip the steps you took — surprise the helper.",
+              "correct": false
+            },
+            {
+              "text": "Always include your full grocery list.",
+              "correct": false
+            },
             {
               "text": "Stories make bugs harder and need a chorus.",
               "correct": false
@@ -640,39 +1167,50 @@
             {
               "text": "Include the error text exactly.",
               "correct": true
-            },
-            {
-              "text": "Skip the steps you took — surprise the helper.",
-              "correct": false
-            },
-            {
-              "text": "Bug reports must rhyme with 'banana'.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_30_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about telling what happened?",
           "options": [
             {
-              "text": "Explain the steps you took.",
+              "text": "Bug reports work better in rhyme.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error — it is your private treasure.",
+              "correct": false
+            },
+            {
+              "text": "Stories make bugs harder and need a chorus.",
+              "correct": false
+            },
+            {
+              "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about telling what happened?",
+          "options": [
+            {
+              "text": "Always include 5 emoji per sentence.",
+              "correct": false
+            },
+            {
+              "text": "Real coders never explain bugs -- just complain.",
+              "correct": false
             },
             {
               "text": "Hide what you expected — let them guess.",
               "correct": false
             },
             {
-              "text": "Bug reports must rhyme with 'banana'.",
-              "correct": false
-            },
-            {
-              "text": "Never share the error — it is your private treasure.",
-              "correct": false
+              "text": "Clear bug reports help others fix the bug fast.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_30_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -681,124 +1219,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "prompt": "Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
-              "text": "Include the error text exactly.",
-              "correct": false
-            },
-            {
-              "text": "Mention what changed since it last worked.",
-              "correct": false
-            },
-            {
-              "text": "Bug reports must rhyme with 'banana'.",
+              "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
               "correct": true
             },
             {
-              "text": "Explain the steps you took.",
+              "text": "'Hi how are you'",
+              "correct": false
+            },
+            {
+              "text": "'Game bad'",
+              "correct": false
+            },
+            {
+              "text": "'It is broken!! HELP'",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "prompt": "Quick! Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
-              "text": "Say what actually happened.",
+              "text": "'Game bad'",
               "correct": false
             },
             {
-              "text": "Include the error text exactly.",
+              "text": "'Hi how are you'",
               "correct": false
             },
             {
-              "text": "Always include your full grocery list.",
+              "text": "'It is broken!! HELP'",
+              "correct": false
+            },
+            {
+              "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
               "correct": true
-            },
-            {
-              "text": "Say what you expected.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
-              "text": "Show the error or weird thing.",
+              "text": "'Game bad'",
               "correct": false
             },
             {
-              "text": "Use only emoji to describe the bug.",
+              "text": "'It is broken!! HELP'",
+              "correct": false
+            },
+            {
+              "text": "'Hi how are you'",
+              "correct": false
+            },
+            {
+              "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
               "correct": true
-            },
-            {
-              "text": "Include the error text exactly.",
-              "correct": false
-            },
-            {
-              "text": "Explain the steps you took.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
-              "text": "Explain the steps you took.",
-              "correct": false
-            },
-            {
-              "text": "Say what you expected.",
-              "correct": false
-            },
-            {
-              "text": "Be specific about commands and inputs.",
-              "correct": false
-            },
-            {
-              "text": "Skip the steps you took — surprise the helper.",
+              "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
               "correct": true
+            },
+            {
+              "text": "'It is broken!! HELP'",
+              "correct": false
+            },
+            {
+              "text": "'Hi how are you'",
+              "correct": false
+            },
+            {
+              "text": "'Game bad'",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
-              "text": "Hide what you expected — let them guess.",
+              "text": "'Hi how are you'",
+              "correct": false
+            },
+            {
+              "text": "'It is broken!! HELP'",
+              "correct": false
+            },
+            {
+              "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
               "correct": true
             },
             {
-              "text": "Mention what changed since it last worked.",
-              "correct": false
-            },
-            {
-              "text": "Explain the steps you took.",
-              "correct": false
-            },
-            {
-              "text": "Be specific about commands and inputs.",
+              "text": "'Game bad'",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your game won't start. What's the BEST thing to write to a helper?",
+          "options": [
+            {
+              "text": "'Hi how are you'",
+              "correct": false
+            },
+            {
+              "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
+              "correct": true
+            },
+            {
+              "text": "'It is broken!! HELP'",
+              "correct": false
+            },
+            {
+              "text": "'Game bad'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your game won't start. What's the BEST thing to write to a helper?",
+          "options": [
+            {
+              "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
+              "correct": true
+            },
+            {
+              "text": "'Hi how are you'",
+              "correct": false
+            },
+            {
+              "text": "'It is broken!! HELP'",
+              "correct": false
+            },
+            {
+              "text": "'Game bad'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your game won't start. What's the BEST thing to write to a helper?",
+          "options": [
+            {
+              "text": "'It is broken!! HELP'",
+              "correct": false
+            },
+            {
+              "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
+              "correct": true
+            },
+            {
+              "text": "'Game bad'",
+              "correct": false
+            },
+            {
+              "text": "'Hi how are you'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your game won't start. What's the BEST thing to write to a helper?",
+          "options": [
+            {
+              "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
+              "correct": true
+            },
+            {
+              "text": "'Hi how are you'",
+              "correct": false
+            },
+            {
+              "text": "'It is broken!! HELP'",
+              "correct": false
+            },
+            {
+              "text": "'Game bad'",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your game won't start. What's the BEST thing to write to a helper?",
+          "options": [
+            {
+              "text": "'Game bad'",
+              "correct": false
+            },
+            {
+              "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
+              "correct": true
+            },
+            {
+              "text": "'Hi how are you'",
+              "correct": false
+            },
+            {
+              "text": "'It is broken!! HELP'",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -807,124 +1450,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SMART and press Send to keep going!",
-          "target_display": "SMART",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "smart"
+            "play"
           ],
-          "hint_wrong": "Type the word SMART (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about telling what happened is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Mention what changed since it last worked.",
+              "text": "Always include your full grocery list.",
               "correct": true
             },
             {
-              "text": "Stories make bugs harder and need a chorus.",
+              "text": "Say what you expected.",
               "correct": false
             },
             {
-              "text": "Bug reports must rhyme with 'banana'.",
+              "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
               "correct": false
             },
             {
-              "text": "Skip the steps you took — surprise the helper.",
+              "text": "A good bug report is short, honest, and specific.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about telling what happened is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "Explain the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": false
+            },
+            {
+              "text": "Say what actually happened.",
+              "correct": false
+            },
+            {
               "text": "Use only emoji to describe the bug.",
-              "correct": false
-            },
-            {
-              "text": "Always include your full grocery list.",
-              "correct": false
-            },
-            {
-              "text": "Sing the bug a lullaby until it falls asleep.",
-              "correct": false
-            },
-            {
-              "text": "Include the error text exactly.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about telling what happened is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Bug reports must rhyme with 'banana'.",
+              "text": "Mention what changed since it last worked.",
               "correct": false
             },
             {
-              "text": "Never share the error — it is your private treasure.",
+              "text": "A good bug report is short, honest, and specific.",
               "correct": false
             },
             {
-              "text": "Stories make bugs harder and need a chorus.",
+              "text": "Clear bug reports help others fix the bug fast.",
               "correct": false
             },
             {
-              "text": "Explain the steps you took.",
+              "text": "Bug reports must be at least 1,000 words long.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about telling what happened is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Use only emoji to describe the bug.",
+              "text": "Say what you expected.",
               "correct": false
             },
             {
-              "text": "Say what you expected.",
+              "text": "Always include 5 emoji per sentence.",
               "correct": true
             },
             {
-              "text": "Stories make bugs harder and need a chorus.",
+              "text": "Mention what changed since it last worked.",
               "correct": false
             },
             {
-              "text": "Always include your full grocery list.",
+              "text": "A good story makes the bug easy to fix.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about telling what happened is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Hide what you expected — let them guess.",
+              "text": "Always say what you EXPECTED vs what you GOT.",
               "correct": false
             },
             {
-              "text": "Say what actually happened.",
+              "text": "Real coders never explain bugs -- just complain.",
               "correct": true
             },
             {
-              "text": "Never share the error — it is your private treasure.",
+              "text": "Explain the steps you took.",
               "correct": false
             },
             {
-              "text": "Skip the steps you took — surprise the helper.",
+              "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Be specific about commands and inputs.",
+              "correct": false
+            },
+            {
+              "text": "Bug reports work better in rhyme.",
+              "correct": true
+            },
+            {
+              "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
+              "correct": false
+            },
+            {
+              "text": "Include the error text exactly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Say what actually happened.",
+              "correct": false
+            },
+            {
+              "text": "Skip the steps you took — surprise the helper.",
+              "correct": true
+            },
+            {
+              "text": "Mention what changed since it last worked.",
+              "correct": false
+            },
+            {
+              "text": "Say what you expected.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Mention what changed since it last worked.",
+              "correct": false
+            },
+            {
+              "text": "Say what you expected.",
+              "correct": false
+            },
+            {
+              "text": "Hide what you expected — let them guess.",
+              "correct": true
+            },
+            {
+              "text": "Show the error or weird thing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Sing the bug a lullaby until it falls asleep.",
+              "correct": true
+            },
+            {
+              "text": "Explain the steps you took.",
+              "correct": false
+            },
+            {
+              "text": "A good bug report is short, honest, and specific.",
+              "correct": false
+            },
+            {
+              "text": "Mention what changed since it last worked.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about telling what happened. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Say what actually happened.",
+              "correct": false
+            },
+            {
+              "text": "Be specific about commands and inputs.",
+              "correct": false
+            },
+            {
+              "text": "Never share the error — it is your private treasure.",
+              "correct": true
+            },
+            {
+              "text": "Mention what changed since it last worked.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

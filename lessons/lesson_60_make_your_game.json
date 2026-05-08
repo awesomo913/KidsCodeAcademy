@@ -40,7 +40,7 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "game-capstone",
+        "type": "idea-spark",
         "payload": {
           "prompt": "Tell Bytey about your dream game!",
           "hook": "My dream game is...",
@@ -59,11 +59,11 @@
           "prompt": "What is make your game?",
           "options": [
             {
-              "text": "Save zero versions — bold is best.",
+              "text": "If you finish, you must immediately make a sequel.",
               "correct": false
             },
             {
-              "text": "Pick ten ideas and start huge — go epic.",
+              "text": "Build only, never test or play your game.",
               "correct": false
             },
             {
@@ -81,7 +81,7 @@
           "prompt": "Quick! Which one is TRUE about make your game?",
           "options": [
             {
-              "text": "Each game needs a parade to launch.",
+              "text": "Wrap it in a hundred layers of tape.",
               "correct": false
             },
             {
@@ -93,7 +93,7 @@
               "correct": false
             },
             {
-              "text": "Build only, never test or play your game.",
+              "text": "Games made by kids don't count.",
               "correct": false
             }
           ],
@@ -103,11 +103,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about make your game.",
           "options": [
             {
-              "text": "Polish only after the basics work.",
+              "text": "Pick one idea and start small.",
               "correct": false
             },
             {
-              "text": "Celebrate small wins.",
+              "text": "Polish only after the basics work.",
               "correct": false
             },
             {
@@ -115,7 +115,7 @@
               "correct": true
             },
             {
-              "text": "Pick one idea and start small.",
+              "text": "Done is better than perfect.",
               "correct": false
             }
           ],
@@ -125,11 +125,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about make your game. What should he say?",
           "options": [
             {
-              "text": "Dreaming finishes the game by itself.",
+              "text": "Games made by kids don't count.",
               "correct": false
             },
             {
-              "text": "Wrap it in a hundred layers of tape.",
+              "text": "Dreaming finishes the game by itself.",
               "correct": false
             },
             {
@@ -137,7 +137,7 @@
               "correct": true
             },
             {
-              "text": "Polish before the basics work.",
+              "text": "Pick ten ideas and start huge — go epic.",
               "correct": false
             }
           ],
@@ -147,11 +147,11 @@
           "prompt": "Tell me — Which rule about make your game is a GOOD rule?",
           "options": [
             {
-              "text": "Dreaming finishes the game by itself.",
+              "text": "If you finish, you must immediately make a sequel.",
               "correct": false
             },
             {
-              "text": "Save zero versions — bold is best.",
+              "text": "Wrap it in a hundred layers of tape.",
               "correct": false
             },
             {
@@ -159,11 +159,116 @@
               "correct": true
             },
             {
-              "text": "Wrap it in a hundred layers of tape.",
+              "text": "Dreaming finishes the game by itself.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_60_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about make your game, ___",
+          "options": [
+            {
+              "text": "Save zero versions — bold is best.",
+              "correct": false
+            },
+            {
+              "text": "Save versions as you go.",
+              "correct": true
+            },
+            {
+              "text": "Real games take 10 years and a team of 100.",
+              "correct": false
+            },
+            {
+              "text": "Polish before the basics work.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about make your game. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Polish only after the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Finishing teaches more than dreaming.",
+              "correct": false
+            },
+            {
+              "text": "Game launches must include a goose.",
+              "correct": true
+            },
+            {
+              "text": "Save versions as you go.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with make your game?",
+          "options": [
+            {
+              "text": "Pick ten ideas and start huge — go epic.",
+              "correct": false
+            },
+            {
+              "text": "Each game needs a parade to launch.",
+              "correct": false
+            },
+            {
+              "text": "Done is better than perfect.",
+              "correct": true
+            },
+            {
+              "text": "Dreaming finishes the game by itself.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about make your game is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Make your game means actually doing it -- not just dreaming.",
+              "correct": false
+            },
+            {
+              "text": "Polish only after the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Save versions as you go.",
+              "correct": false
+            },
+            {
+              "text": "Real games take 10 years and a team of 100.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about make your game. Which fact would help him?",
+          "options": [
+            {
+              "text": "Even a tiny game IS a game. You did the thing.",
+              "correct": true
+            },
+            {
+              "text": "Each game needs a parade to launch.",
+              "correct": false
+            },
+            {
+              "text": "Game launches must include a goose.",
+              "correct": false
+            },
+            {
+              "text": "Wrap it in a hundred layers of tape.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -172,12 +277,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WORD and press Send to keep going!",
-          "target_display": "WORD",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "word"
+            "yes"
           ],
-          "hint_wrong": "Type the word WORD (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -290,6 +395,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_60_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey has a little working platformer with one level. What's the BEST next move?",
+          "options": [
+            {
+              "text": "Show it to a friend, watch them play, then add the next small thing.",
+              "correct": true
+            },
+            {
+              "text": "Quit and start a new project from scratch.",
+              "correct": false
+            },
+            {
+              "text": "Add 50 levels before testing any.",
+              "correct": false
+            },
+            {
+              "text": "Rewrite the entire game in a different language.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey has a little working platformer with one level. What's the BEST next move?",
+          "options": [
+            {
+              "text": "Rewrite the entire game in a different language.",
+              "correct": false
+            },
+            {
+              "text": "Add 50 levels before testing any.",
+              "correct": false
+            },
+            {
+              "text": "Show it to a friend, watch them play, then add the next small thing.",
+              "correct": true
+            },
+            {
+              "text": "Quit and start a new project from scratch.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey has a little working platformer with one level. What's the BEST next move?",
+          "options": [
+            {
+              "text": "Rewrite the entire game in a different language.",
+              "correct": false
+            },
+            {
+              "text": "Add 50 levels before testing any.",
+              "correct": false
+            },
+            {
+              "text": "Quit and start a new project from scratch.",
+              "correct": false
+            },
+            {
+              "text": "Show it to a friend, watch them play, then add the next small thing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey has a little working platformer with one level. What's the BEST next move?",
+          "options": [
+            {
+              "text": "Show it to a friend, watch them play, then add the next small thing.",
+              "correct": true
+            },
+            {
+              "text": "Add 50 levels before testing any.",
+              "correct": false
+            },
+            {
+              "text": "Quit and start a new project from scratch.",
+              "correct": false
+            },
+            {
+              "text": "Rewrite the entire game in a different language.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey has a little working platformer with one level. What's the BEST next move?",
+          "options": [
+            {
+              "text": "Rewrite the entire game in a different language.",
+              "correct": false
+            },
+            {
+              "text": "Show it to a friend, watch them play, then add the next small thing.",
+              "correct": true
+            },
+            {
+              "text": "Add 50 levels before testing any.",
+              "correct": false
+            },
+            {
+              "text": "Quit and start a new project from scratch.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -298,12 +508,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -416,6 +626,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_60_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — What's the most important thing about finishing your first game?",
+          "options": [
+            {
+              "text": "You learn way more from finishing one than dreaming about ten.",
+              "correct": true
+            },
+            {
+              "text": "The wifi will reward you with stars.",
+              "correct": false
+            },
+            {
+              "text": "You earn the official Game Maker hat.",
+              "correct": false
+            },
+            {
+              "text": "You become required to make a sequel.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! What's the most important thing about finishing your first game?",
+          "options": [
+            {
+              "text": "You become required to make a sequel.",
+              "correct": false
+            },
+            {
+              "text": "The wifi will reward you with stars.",
+              "correct": false
+            },
+            {
+              "text": "You earn the official Game Maker hat.",
+              "correct": false
+            },
+            {
+              "text": "You learn way more from finishing one than dreaming about ten.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What's the most important thing about finishing your first game?",
+          "options": [
+            {
+              "text": "You earn the official Game Maker hat.",
+              "correct": false
+            },
+            {
+              "text": "You learn way more from finishing one than dreaming about ten.",
+              "correct": true
+            },
+            {
+              "text": "The wifi will reward you with stars.",
+              "correct": false
+            },
+            {
+              "text": "You become required to make a sequel.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: What's the most important thing about finishing your first game?",
+          "options": [
+            {
+              "text": "You learn way more from finishing one than dreaming about ten.",
+              "correct": true
+            },
+            {
+              "text": "The wifi will reward you with stars.",
+              "correct": false
+            },
+            {
+              "text": "You earn the official Game Maker hat.",
+              "correct": false
+            },
+            {
+              "text": "You become required to make a sequel.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: What's the most important thing about finishing your first game?",
+          "options": [
+            {
+              "text": "You learn way more from finishing one than dreaming about ten.",
+              "correct": true
+            },
+            {
+              "text": "You earn the official Game Maker hat.",
+              "correct": false
+            },
+            {
+              "text": "The wifi will reward you with stars.",
+              "correct": false
+            },
+            {
+              "text": "You become required to make a sequel.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -424,12 +739,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type MOVE and press Send to keep going!",
-          "target_display": "MOVE",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "move"
+            "cool"
           ],
-          "hint_wrong": "Type the word MOVE (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -437,19 +752,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about make your game.",
           "options": [
             {
-              "text": "Celebrate small wins.",
+              "text": "Pick one idea and start small.",
               "correct": false
             },
             {
-              "text": "Save versions as you go.",
+              "text": "Share what you made with someone who matters to you.",
               "correct": false
             },
             {
-              "text": "Polish before the basics work.",
+              "text": "If you finish, you must immediately make a sequel.",
               "correct": true
             },
             {
-              "text": "Build, test, and play your game often.",
+              "text": "Show it to a friend for feedback.",
               "correct": false
             }
           ],
@@ -459,19 +774,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about make your game.",
           "options": [
             {
-              "text": "Finishing teaches more than dreaming.",
+              "text": "Make your game means actually doing it -- not just dreaming.",
               "correct": false
             },
             {
-              "text": "Dreaming finishes the game by itself.",
+              "text": "Games made by kids don't count.",
               "correct": true
             },
             {
-              "text": "Celebrate small wins.",
+              "text": "Pick one idea and start small.",
               "correct": false
             },
             {
-              "text": "Build, test, and play your game often.",
+              "text": "The first game is the hardest. The next ones get easier.",
               "correct": false
             }
           ],
@@ -481,19 +796,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about make your game.",
           "options": [
             {
-              "text": "Build, test, and play your game often.",
+              "text": "Show it to a friend for feedback.",
               "correct": false
             },
             {
-              "text": "Celebrate small wins.",
+              "text": "Share what you made with someone who matters to you.",
               "correct": false
             },
             {
-              "text": "Each game needs a parade to launch.",
+              "text": "Only games on TV are real games.",
               "correct": true
             },
             {
-              "text": "Show it to a friend for feedback.",
+              "text": "Pick one idea and start small.",
               "correct": false
             }
           ],
@@ -503,11 +818,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about make your game.",
           "options": [
             {
+              "text": "Celebrate small wins.",
+              "correct": false
+            },
+            {
+              "text": "Make your game means actually doing it -- not just dreaming.",
+              "correct": false
+            },
+            {
+              "text": "Pick ten ideas and start huge — go epic.",
+              "correct": true
+            },
+            {
+              "text": "Finishing teaches more than dreaming.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_60_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
               "text": "Done is better than perfect.",
               "correct": false
             },
             {
+              "text": "Polish only after the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Share what you made with someone who matters to you.",
+              "correct": false
+            },
+            {
+              "text": "Build only, never test or play your game.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_60_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "The first game is the hardest. The next ones get easier.",
+              "correct": false
+            },
+            {
+              "text": "Wrap it in a hundred layers of tape.",
+              "correct": true
+            },
+            {
+              "text": "Even a tiny game IS a game. You did the thing.",
+              "correct": false
+            },
+            {
               "text": "Celebrate small wins.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "Make your game means actually doing it -- not just dreaming.",
+              "correct": false
+            },
+            {
+              "text": "Polish only after the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Polish before the basics work.",
+              "correct": true
+            },
+            {
+              "text": "Show it to a friend for feedback.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "Pick one idea and start small.",
+              "correct": false
+            },
+            {
+              "text": "Done is better than perfect.",
+              "correct": false
+            },
+            {
+              "text": "The first game is the hardest. The next ones get easier.",
+              "correct": false
+            },
+            {
+              "text": "Dreaming finishes the game by itself.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "Each game needs a parade to launch.",
+              "correct": true
+            },
+            {
+              "text": "Show it to a friend for feedback.",
+              "correct": false
+            },
+            {
+              "text": "Save versions as you go.",
+              "correct": false
+            },
+            {
+              "text": "Build, test, and play your game often.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about make your game.",
+          "options": [
+            {
+              "text": "Even a tiny game IS a game. You did the thing.",
               "correct": false
             },
             {
@@ -515,33 +954,14 @@
               "correct": true
             },
             {
-              "text": "Save versions as you go.",
+              "text": "Finishing teaches more than dreaming.",
+              "correct": false
+            },
+            {
+              "text": "Share what you made with someone who matters to you.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_60_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about make your game.",
-          "options": [
-            {
-              "text": "Celebrate small wins.",
-              "correct": false
-            },
-            {
-              "text": "Done is better than perfect.",
-              "correct": false
-            },
-            {
-              "text": "Show it to a friend for feedback.",
-              "correct": false
-            },
-            {
-              "text": "Save zero versions — bold is best.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_60_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -550,12 +970,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type TEAM and press Send to keep going!",
-          "target_display": "TEAM",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "team"
+            "next"
           ],
-          "hint_wrong": "Type the word TEAM (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -563,19 +983,19 @@
           "prompt": "Tell me — Which one is TRUE about make your game?",
           "options": [
             {
+              "text": "Wrap it in a hundred layers of tape.",
+              "correct": false
+            },
+            {
+              "text": "Games made by kids don't count.",
+              "correct": false
+            },
+            {
               "text": "Pick ten ideas and start huge — go epic.",
               "correct": false
             },
             {
-              "text": "Build only, never test or play your game.",
-              "correct": false
-            },
-            {
-              "text": "Each game needs a parade to launch.",
-              "correct": false
-            },
-            {
-              "text": "Finishing teaches more than dreaming.",
+              "text": "Pick one idea and start small.",
               "correct": true
             }
           ],
@@ -593,11 +1013,11 @@
               "correct": false
             },
             {
-              "text": "Save versions as you go.",
+              "text": "Build, test, and play your game often.",
               "correct": true
             },
             {
-              "text": "Polish before the basics work.",
+              "text": "Real games take 10 years and a team of 100.",
               "correct": false
             }
           ],
@@ -607,27 +1027,121 @@
           "prompt": "Pop quiz! Which one is TRUE about make your game?",
           "options": [
             {
-              "text": "Celebrate small wins.",
+              "text": "Show it to a friend for feedback.",
               "correct": true
             },
             {
-              "text": "Pick ten ideas and start huge — go epic.",
-              "correct": false
-            },
-            {
-              "text": "Polish before the basics work.",
-              "correct": false
-            },
-            {
               "text": "Dreaming finishes the game by itself.",
+              "correct": false
+            },
+            {
+              "text": "Save zero versions — bold is best.",
+              "correct": false
+            },
+            {
+              "text": "Build only, never test or play your game.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_60_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "If you finish, you must immediately make a sequel.",
+              "correct": false
+            },
+            {
+              "text": "Polish only after the basics work.",
+              "correct": true
+            },
+            {
+              "text": "Real games take 10 years and a team of 100.",
+              "correct": false
+            },
+            {
+              "text": "Save zero versions — bold is best.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_60_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "Finishing teaches more than dreaming.",
+              "correct": true
+            },
+            {
+              "text": "Game launches must include a goose.",
+              "correct": false
+            },
+            {
+              "text": "Dreaming finishes the game by itself.",
+              "correct": false
+            },
+            {
+              "text": "Only games on TV are real games.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_60_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "Save versions as you go.",
+              "correct": true
+            },
+            {
+              "text": "Game launches must include a goose.",
+              "correct": false
+            },
+            {
+              "text": "Pick ten ideas and start huge — go epic.",
+              "correct": false
+            },
+            {
+              "text": "Build only, never test or play your game.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "Polish before the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Pick ten ideas and start huge — go epic.",
+              "correct": false
+            },
+            {
+              "text": "Celebrate small wins.",
+              "correct": true
+            },
+            {
+              "text": "Wrap it in a hundred layers of tape.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about make your game?",
           "options": [
+            {
+              "text": "Pick ten ideas and start huge — go epic.",
+              "correct": false
+            },
+            {
+              "text": "Game launches must include a goose.",
+              "correct": false
+            },
             {
               "text": "Dreaming finishes the game by itself.",
               "correct": false
@@ -635,39 +1149,50 @@
             {
               "text": "Done is better than perfect.",
               "correct": true
-            },
-            {
-              "text": "Pick ten ideas and start huge — go epic.",
-              "correct": false
-            },
-            {
-              "text": "Each game needs a parade to launch.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_60_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about make your game?",
           "options": [
             {
-              "text": "Pick one idea and start small.",
+              "text": "Only games on TV are real games.",
+              "correct": false
+            },
+            {
+              "text": "Polish before the basics work.",
+              "correct": false
+            },
+            {
+              "text": "Dreaming finishes the game by itself.",
+              "correct": false
+            },
+            {
+              "text": "Make your game means actually doing it -- not just dreaming.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about make your game?",
+          "options": [
+            {
+              "text": "If you finish, you must immediately make a sequel.",
+              "correct": false
+            },
+            {
+              "text": "Games made by kids don't count.",
+              "correct": false
             },
             {
               "text": "Build only, never test or play your game.",
               "correct": false
             },
             {
-              "text": "Each game needs a parade to launch.",
-              "correct": false
-            },
-            {
-              "text": "Polish before the basics work.",
-              "correct": false
+              "text": "Even a tiny game IS a game. You did the thing.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_60_q5_v4.wav"
+          ]
         }
       ]
     }

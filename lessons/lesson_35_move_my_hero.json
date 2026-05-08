@@ -49,11 +49,11 @@
           "prompt": "What is moving my hero?",
           "options": [
             {
-              "text": "Pressing keys causes mild thunder.",
+              "text": "To move, you yell 'go' at the hero.",
               "correct": false
             },
             {
-              "text": "Keys never move heroes — they only sing.",
+              "text": "Speed never matters and is just for show.",
               "correct": false
             },
             {
@@ -71,7 +71,7 @@
           "prompt": "Quick! Which one is TRUE about moving my hero?",
           "options": [
             {
-              "text": "Movement is illegal during weekends.",
+              "text": "Adding moves you up only — it is the law.",
               "correct": false
             },
             {
@@ -83,7 +83,7 @@
               "correct": false
             },
             {
-              "text": "Speed never matters and is just for show.",
+              "text": "Heroes only move when no one is looking.",
               "correct": false
             }
           ],
@@ -93,11 +93,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about moving my hero.",
           "options": [
             {
-              "text": "We subtract to move left.",
+              "text": "Pressing a key changes the hero's position.",
               "correct": false
             },
             {
-              "text": "Fast movement = big number added.",
+              "text": "We subtract to move left.",
               "correct": false
             },
             {
@@ -105,7 +105,7 @@
               "correct": true
             },
             {
-              "text": "Pressing a key changes the hero's position.",
+              "text": "Movement should feel responsive.",
               "correct": false
             }
           ],
@@ -115,11 +115,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about moving my hero. What should he say?",
           "options": [
             {
-              "text": "Movement runs once and then takes a nap.",
+              "text": "Heroes only move when no one is looking.",
               "correct": false
             },
             {
-              "text": "Adding moves you up only — it is the law.",
+              "text": "Movement runs once and then takes a nap.",
               "correct": false
             },
             {
@@ -127,7 +127,7 @@
               "correct": true
             },
             {
-              "text": "Subtracting deletes the hero from history.",
+              "text": "Keys never move heroes — they only sing.",
               "correct": false
             }
           ],
@@ -137,11 +137,11 @@
           "prompt": "Tell me — Which rule about moving my hero is a GOOD rule?",
           "options": [
             {
-              "text": "Movement runs once and then takes a nap.",
+              "text": "To move, you yell 'go' at the hero.",
               "correct": false
             },
             {
-              "text": "Pressing keys causes mild thunder.",
+              "text": "Adding moves you up only — it is the law.",
               "correct": false
             },
             {
@@ -149,11 +149,116 @@
               "correct": true
             },
             {
-              "text": "Adding moves you up only — it is the law.",
+              "text": "Movement runs once and then takes a nap.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about moving my hero, ___",
+          "options": [
+            {
+              "text": "Pressing keys causes mild thunder.",
+              "correct": false
+            },
+            {
+              "text": "Slow movement = small number added.",
+              "correct": true
+            },
+            {
+              "text": "X and Y are the names of the hero's pet parrots.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero from history.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "We subtract to move left.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs every frame.",
+              "correct": false
+            },
+            {
+              "text": "Heroes only move if music plays.",
+              "correct": true
+            },
+            {
+              "text": "Slow movement = small number added.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with moving my hero?",
+          "options": [
+            {
+              "text": "Keys never move heroes — they only sing.",
+              "correct": false
+            },
+            {
+              "text": "Movement is illegal during weekends.",
+              "correct": false
+            },
+            {
+              "text": "Movement should feel responsive.",
+              "correct": true
+            },
+            {
+              "text": "Movement runs once and then takes a nap.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about moving my hero is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Move your hero by changing its X (left-right) and Y (up-down).",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": false
+            },
+            {
+              "text": "Slow movement = small number added.",
+              "correct": false
+            },
+            {
+              "text": "X and Y are the names of the hero's pet parrots.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about moving my hero. Which fact would help him?",
+          "options": [
+            {
+              "text": "When the player presses LEFT, you subtract from X.",
+              "correct": true
+            },
+            {
+              "text": "Movement is illegal during weekends.",
+              "correct": false
+            },
+            {
+              "text": "Heroes only move if music plays.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only — it is the law.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -162,12 +267,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type ME and press Send to keep going!",
-          "target_display": "ME",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "me"
+            "yes"
           ],
-          "hint_wrong": "Type the word ME (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -280,6 +385,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey adds 5 to x every time RIGHT is pressed. What happens?",
+          "options": [
+            {
+              "text": "The screen turns purple.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets shorter.",
+              "correct": false
+            },
+            {
+              "text": "Hero teleports home and gets a sandwich.",
+              "correct": false
+            },
+            {
+              "text": "Hero moves right by 5 pixels each press.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey adds 5 to x every time RIGHT is pressed. What happens?",
+          "options": [
+            {
+              "text": "Hero teleports home and gets a sandwich.",
+              "correct": false
+            },
+            {
+              "text": "Hero moves right by 5 pixels each press.",
+              "correct": true
+            },
+            {
+              "text": "The screen turns purple.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets shorter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey adds 5 to x every time RIGHT is pressed. What happens?",
+          "options": [
+            {
+              "text": "The screen turns purple.",
+              "correct": false
+            },
+            {
+              "text": "Hero teleports home and gets a sandwich.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets shorter.",
+              "correct": false
+            },
+            {
+              "text": "Hero moves right by 5 pixels each press.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey adds 5 to x every time RIGHT is pressed. What happens?",
+          "options": [
+            {
+              "text": "The screen turns purple.",
+              "correct": false
+            },
+            {
+              "text": "Hero moves right by 5 pixels each press.",
+              "correct": true
+            },
+            {
+              "text": "Hero teleports home and gets a sandwich.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets shorter.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey adds 5 to x every time RIGHT is pressed. What happens?",
+          "options": [
+            {
+              "text": "Hero gets shorter.",
+              "correct": false
+            },
+            {
+              "text": "The screen turns purple.",
+              "correct": false
+            },
+            {
+              "text": "Hero teleports home and gets a sandwich.",
+              "correct": false
+            },
+            {
+              "text": "Hero moves right by 5 pixels each press.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -288,12 +498,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -406,6 +616,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why does movement run every frame?",
+          "options": [
+            {
+              "text": "So motion looks smooth instead of jumpy.",
+              "correct": true
+            },
+            {
+              "text": "Frames demand attention.",
+              "correct": false
+            },
+            {
+              "text": "Frames are jealous of one another.",
+              "correct": false
+            },
+            {
+              "text": "To wear out the keyboard faster.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why does movement run every frame?",
+          "options": [
+            {
+              "text": "Frames demand attention.",
+              "correct": false
+            },
+            {
+              "text": "To wear out the keyboard faster.",
+              "correct": false
+            },
+            {
+              "text": "So motion looks smooth instead of jumpy.",
+              "correct": true
+            },
+            {
+              "text": "Frames are jealous of one another.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why does movement run every frame?",
+          "options": [
+            {
+              "text": "Frames are jealous of one another.",
+              "correct": false
+            },
+            {
+              "text": "So motion looks smooth instead of jumpy.",
+              "correct": true
+            },
+            {
+              "text": "To wear out the keyboard faster.",
+              "correct": false
+            },
+            {
+              "text": "Frames demand attention.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why does movement run every frame?",
+          "options": [
+            {
+              "text": "Frames demand attention.",
+              "correct": false
+            },
+            {
+              "text": "Frames are jealous of one another.",
+              "correct": false
+            },
+            {
+              "text": "So motion looks smooth instead of jumpy.",
+              "correct": true
+            },
+            {
+              "text": "To wear out the keyboard faster.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why does movement run every frame?",
+          "options": [
+            {
+              "text": "Frames demand attention.",
+              "correct": false
+            },
+            {
+              "text": "So motion looks smooth instead of jumpy.",
+              "correct": true
+            },
+            {
+              "text": "Frames are jealous of one another.",
+              "correct": false
+            },
+            {
+              "text": "To wear out the keyboard faster.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -414,12 +729,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type US and press Send to keep going!",
-          "target_display": "US",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "us"
+            "cool"
           ],
-          "hint_wrong": "Type the word US (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -427,19 +742,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about moving my hero.",
           "options": [
             {
-              "text": "Fast movement = big number added.",
+              "text": "Pressing a key changes the hero's position.",
               "correct": false
             },
             {
-              "text": "Slow movement = small number added.",
+              "text": "When the player presses UP, you usually subtract from Y (up is less Y).",
               "correct": false
             },
             {
-              "text": "Subtracting deletes the hero from history.",
+              "text": "To move, you yell 'go' at the hero.",
               "correct": true
             },
             {
-              "text": "Speed is how fast the hero moves.",
+              "text": "We add to position to move right.",
               "correct": false
             }
           ],
@@ -449,19 +764,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about moving my hero.",
           "options": [
             {
-              "text": "Movement runs every frame.",
+              "text": "Move your hero by changing its X (left-right) and Y (up-down).",
               "correct": false
             },
             {
-              "text": "Movement runs once and then takes a nap.",
+              "text": "Heroes only move when no one is looking.",
               "correct": true
             },
             {
-              "text": "Fast movement = big number added.",
+              "text": "Pressing a key changes the hero's position.",
               "correct": false
             },
             {
-              "text": "Speed is how fast the hero moves.",
+              "text": "Smooth movement happens when you change position many times per second.",
               "correct": false
             }
           ],
@@ -471,19 +786,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about moving my hero.",
           "options": [
             {
-              "text": "Speed is how fast the hero moves.",
+              "text": "We add to position to move right.",
               "correct": false
             },
             {
-              "text": "Fast movement = big number added.",
+              "text": "When the player presses UP, you usually subtract from Y (up is less Y).",
               "correct": false
             },
             {
-              "text": "Movement is illegal during weekends.",
+              "text": "Movement is decided by the weather.",
               "correct": true
             },
             {
-              "text": "We add to position to move right.",
+              "text": "Pressing a key changes the hero's position.",
               "correct": false
             }
           ],
@@ -493,11 +808,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about moving my hero.",
           "options": [
             {
+              "text": "Fast movement = big number added.",
+              "correct": false
+            },
+            {
+              "text": "Move your hero by changing its X (left-right) and Y (up-down).",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes — they only sing.",
+              "correct": true
+            },
+            {
+              "text": "Movement runs every frame.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_35_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
               "text": "Movement should feel responsive.",
               "correct": false
             },
             {
+              "text": "We subtract to move left.",
+              "correct": false
+            },
+            {
+              "text": "When the player presses UP, you usually subtract from Y (up is less Y).",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters and is just for show.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_35_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "Smooth movement happens when you change position many times per second.",
+              "correct": false
+            },
+            {
+              "text": "Adding moves you up only — it is the law.",
+              "correct": true
+            },
+            {
+              "text": "When the player presses LEFT, you subtract from X.",
+              "correct": false
+            },
+            {
               "text": "Fast movement = big number added.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "Move your hero by changing its X (left-right) and Y (up-down).",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero from history.",
+              "correct": true
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": false
+            },
+            {
+              "text": "Movement should feel responsive.",
+              "correct": false
+            },
+            {
+              "text": "Smooth movement happens when you change position many times per second.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and then takes a nap.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "Movement is illegal during weekends.",
+              "correct": true
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": false
+            },
+            {
+              "text": "Slow movement = small number added.",
+              "correct": false
+            },
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about moving my hero.",
+          "options": [
+            {
+              "text": "When the player presses LEFT, you subtract from X.",
               "correct": false
             },
             {
@@ -505,33 +944,14 @@
               "correct": true
             },
             {
-              "text": "Slow movement = small number added.",
+              "text": "Movement runs every frame.",
+              "correct": false
+            },
+            {
+              "text": "When the player presses UP, you usually subtract from Y (up is less Y).",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_35_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about moving my hero.",
-          "options": [
-            {
-              "text": "Fast movement = big number added.",
-              "correct": false
-            },
-            {
-              "text": "Movement should feel responsive.",
-              "correct": false
-            },
-            {
-              "text": "We add to position to move right.",
-              "correct": false
-            },
-            {
-              "text": "Pressing keys causes mild thunder.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_35_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -540,12 +960,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WE and press Send to keep going!",
-          "target_display": "WE",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "we"
+            "next"
           ],
-          "hint_wrong": "Type the word WE (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -553,19 +973,19 @@
           "prompt": "Tell me — Which one is TRUE about moving my hero?",
           "options": [
             {
+              "text": "Adding moves you up only — it is the law.",
+              "correct": false
+            },
+            {
+              "text": "Heroes only move when no one is looking.",
+              "correct": false
+            },
+            {
               "text": "Keys never move heroes — they only sing.",
               "correct": false
             },
             {
-              "text": "Speed never matters and is just for show.",
-              "correct": false
-            },
-            {
-              "text": "Movement is illegal during weekends.",
-              "correct": false
-            },
-            {
-              "text": "Movement runs every frame.",
+              "text": "Pressing a key changes the hero's position.",
               "correct": true
             }
           ],
@@ -583,11 +1003,11 @@
               "correct": false
             },
             {
-              "text": "Slow movement = small number added.",
+              "text": "Speed is how fast the hero moves.",
               "correct": true
             },
             {
-              "text": "Subtracting deletes the hero from history.",
+              "text": "X and Y are the names of the hero's pet parrots.",
               "correct": false
             }
           ],
@@ -597,27 +1017,121 @@
           "prompt": "Pop quiz! Which one is TRUE about moving my hero?",
           "options": [
             {
-              "text": "Fast movement = big number added.",
+              "text": "We add to position to move right.",
               "correct": true
             },
             {
-              "text": "Keys never move heroes — they only sing.",
-              "correct": false
-            },
-            {
-              "text": "Subtracting deletes the hero from history.",
-              "correct": false
-            },
-            {
               "text": "Movement runs once and then takes a nap.",
+              "correct": false
+            },
+            {
+              "text": "Pressing keys causes mild thunder.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters and is just for show.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "To move, you yell 'go' at the hero.",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": true
+            },
+            {
+              "text": "X and Y are the names of the hero's pet parrots.",
+              "correct": false
+            },
+            {
+              "text": "Pressing keys causes mild thunder.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_35_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Movement runs every frame.",
+              "correct": true
+            },
+            {
+              "text": "Heroes only move if music plays.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and then takes a nap.",
+              "correct": false
+            },
+            {
+              "text": "Movement is decided by the weather.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_35_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Slow movement = small number added.",
+              "correct": true
+            },
+            {
+              "text": "Heroes only move if music plays.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes — they only sing.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters and is just for show.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "Subtracting deletes the hero from history.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes — they only sing.",
+              "correct": false
+            },
+            {
+              "text": "Fast movement = big number added.",
+              "correct": true
+            },
+            {
+              "text": "Adding moves you up only — it is the law.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about moving my hero?",
           "options": [
+            {
+              "text": "Keys never move heroes — they only sing.",
+              "correct": false
+            },
+            {
+              "text": "Heroes only move if music plays.",
+              "correct": false
+            },
             {
               "text": "Movement runs once and then takes a nap.",
               "correct": false
@@ -625,39 +1139,50 @@
             {
               "text": "Movement should feel responsive.",
               "correct": true
-            },
-            {
-              "text": "Keys never move heroes — they only sing.",
-              "correct": false
-            },
-            {
-              "text": "Movement is illegal during weekends.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_35_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about moving my hero?",
           "options": [
             {
-              "text": "Pressing a key changes the hero's position.",
+              "text": "Movement is decided by the weather.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero from history.",
+              "correct": false
+            },
+            {
+              "text": "Movement runs once and then takes a nap.",
+              "correct": false
+            },
+            {
+              "text": "Move your hero by changing its X (left-right) and Y (up-down).",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about moving my hero?",
+          "options": [
+            {
+              "text": "To move, you yell 'go' at the hero.",
+              "correct": false
+            },
+            {
+              "text": "Heroes only move when no one is looking.",
+              "correct": false
             },
             {
               "text": "Speed never matters and is just for show.",
               "correct": false
             },
             {
-              "text": "Movement is illegal during weekends.",
-              "correct": false
-            },
-            {
-              "text": "Subtracting deletes the hero from history.",
-              "correct": false
+              "text": "When the player presses LEFT, you subtract from X.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_35_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -666,124 +1191,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "prompt": "Player presses RIGHT arrow. What math should happen to the hero?",
           "options": [
             {
-              "text": "Movement should feel responsive.",
+              "text": "X turns into Y suddenly.",
               "correct": false
             },
             {
-              "text": "Fast movement = big number added.",
+              "text": "Hero teleports to the moon.",
               "correct": false
             },
             {
-              "text": "Movement is illegal during weekends.",
+              "text": "Hero's X gets a tiny bit bigger (moves right).",
               "correct": true
             },
             {
-              "text": "Pressing a key changes the hero's position.",
+              "text": "Hero gets a snack.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "prompt": "Quick! Player presses RIGHT arrow. What math should happen to the hero?",
           "options": [
             {
-              "text": "We add to position to move right.",
-              "correct": false
-            },
-            {
-              "text": "Movement should feel responsive.",
-              "correct": false
-            },
-            {
-              "text": "Heroes only move if music plays.",
+              "text": "Hero's X gets a tiny bit bigger (moves right).",
               "correct": true
             },
             {
-              "text": "Speed is how fast the hero moves.",
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a snack.",
+              "correct": false
+            },
+            {
+              "text": "X turns into Y suddenly.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Player presses RIGHT arrow. What math should happen to the hero?",
           "options": [
             {
-              "text": "We subtract to move left.",
+              "text": "Hero gets a snack.",
               "correct": false
             },
             {
-              "text": "Pressing keys causes mild thunder.",
+              "text": "X turns into Y suddenly.",
+              "correct": false
+            },
+            {
+              "text": "Hero's X gets a tiny bit bigger (moves right).",
               "correct": true
             },
             {
-              "text": "Movement should feel responsive.",
-              "correct": false
-            },
-            {
-              "text": "Pressing a key changes the hero's position.",
+              "text": "Hero teleports to the moon.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Player presses RIGHT arrow. What math should happen to the hero?",
           "options": [
             {
-              "text": "Pressing a key changes the hero's position.",
-              "correct": false
-            },
-            {
-              "text": "Speed is how fast the hero moves.",
-              "correct": false
-            },
-            {
-              "text": "Slow movement = small number added.",
-              "correct": false
-            },
-            {
-              "text": "Keys never move heroes — they only sing.",
+              "text": "Hero's X gets a tiny bit bigger (moves right).",
               "correct": true
+            },
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a snack.",
+              "correct": false
+            },
+            {
+              "text": "X turns into Y suddenly.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Player presses RIGHT arrow. What math should happen to the hero?",
           "options": [
             {
-              "text": "Speed never matters and is just for show.",
+              "text": "X turns into Y suddenly.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a snack.",
+              "correct": false
+            },
+            {
+              "text": "Hero's X gets a tiny bit bigger (moves right).",
               "correct": true
             },
             {
-              "text": "Fast movement = big number added.",
-              "correct": false
-            },
-            {
-              "text": "Pressing a key changes the hero's position.",
-              "correct": false
-            },
-            {
-              "text": "Slow movement = small number added.",
+              "text": "Hero teleports to the moon.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Player presses RIGHT arrow. What math should happen to the hero?",
+          "options": [
+            {
+              "text": "Hero's X gets a tiny bit bigger (moves right).",
+              "correct": true
+            },
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a snack.",
+              "correct": false
+            },
+            {
+              "text": "X turns into Y suddenly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Player presses RIGHT arrow. What math should happen to the hero?",
+          "options": [
+            {
+              "text": "Hero gets a snack.",
+              "correct": false
+            },
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            },
+            {
+              "text": "X turns into Y suddenly.",
+              "correct": false
+            },
+            {
+              "text": "Hero's X gets a tiny bit bigger (moves right).",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Player presses RIGHT arrow. What math should happen to the hero?",
+          "options": [
+            {
+              "text": "Hero's X gets a tiny bit bigger (moves right).",
+              "correct": true
+            },
+            {
+              "text": "Hero gets a snack.",
+              "correct": false
+            },
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            },
+            {
+              "text": "X turns into Y suddenly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Player presses RIGHT arrow. What math should happen to the hero?",
+          "options": [
+            {
+              "text": "X turns into Y suddenly.",
+              "correct": false
+            },
+            {
+              "text": "Hero's X gets a tiny bit bigger (moves right).",
+              "correct": true
+            },
+            {
+              "text": "Hero gets a snack.",
+              "correct": false
+            },
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Player presses RIGHT arrow. What math should happen to the hero?",
+          "options": [
+            {
+              "text": "X turns into Y suddenly.",
+              "correct": false
+            },
+            {
+              "text": "Hero gets a snack.",
+              "correct": false
+            },
+            {
+              "text": "Hero's X gets a tiny bit bigger (moves right).",
+              "correct": true
+            },
+            {
+              "text": "Hero teleports to the moon.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -792,124 +1422,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type IT and press Send to keep going!",
-          "target_display": "IT",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "it"
+            "play"
           ],
-          "hint_wrong": "Type the word IT (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about moving my hero is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about moving my hero. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Fast movement = big number added.",
+              "text": "Heroes only move if music plays.",
               "correct": true
             },
             {
-              "text": "Movement runs once and then takes a nap.",
+              "text": "Speed is how fast the hero moves.",
               "correct": false
             },
             {
-              "text": "Movement is illegal during weekends.",
+              "text": "Move your hero by changing its X (left-right) and Y (up-down).",
               "correct": false
             },
             {
-              "text": "Keys never move heroes — they only sing.",
+              "text": "Smooth movement happens when you change position many times per second.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about moving my hero is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about moving my hero. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": false
+            },
+            {
+              "text": "We add to position to move right.",
+              "correct": false
+            },
+            {
               "text": "Pressing keys causes mild thunder.",
-              "correct": false
-            },
-            {
-              "text": "Heroes only move if music plays.",
-              "correct": false
-            },
-            {
-              "text": "Adding moves you up only — it is the law.",
-              "correct": false
-            },
-            {
-              "text": "Movement should feel responsive.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about moving my hero is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about moving my hero. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Movement is illegal during weekends.",
+              "text": "Fast movement = big number added.",
               "correct": false
             },
             {
-              "text": "Subtracting deletes the hero from history.",
+              "text": "Smooth movement happens when you change position many times per second.",
               "correct": false
             },
             {
-              "text": "Movement runs once and then takes a nap.",
+              "text": "When the player presses LEFT, you subtract from X.",
               "correct": false
             },
             {
-              "text": "Pressing a key changes the hero's position.",
+              "text": "X and Y are the names of the hero's pet parrots.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about moving my hero is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about moving my hero. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Pressing keys causes mild thunder.",
+              "text": "Speed is how fast the hero moves.",
               "correct": false
             },
             {
-              "text": "Speed is how fast the hero moves.",
+              "text": "To move, you yell 'go' at the hero.",
               "correct": true
             },
             {
-              "text": "Movement runs once and then takes a nap.",
+              "text": "Fast movement = big number added.",
               "correct": false
             },
             {
-              "text": "Heroes only move if music plays.",
+              "text": "Movement runs every frame.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about moving my hero is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about moving my hero. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Speed never matters and is just for show.",
+              "text": "When the player presses UP, you usually subtract from Y (up is less Y).",
               "correct": false
             },
             {
-              "text": "We add to position to move right.",
+              "text": "Heroes only move when no one is looking.",
               "correct": true
             },
             {
-              "text": "Subtracting deletes the hero from history.",
+              "text": "Pressing a key changes the hero's position.",
               "correct": false
             },
             {
-              "text": "Keys never move heroes — they only sing.",
+              "text": "Move your hero by changing its X (left-right) and Y (up-down).",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Slow movement = small number added.",
+              "correct": false
+            },
+            {
+              "text": "Movement is decided by the weather.",
+              "correct": true
+            },
+            {
+              "text": "Move your hero by changing its X (left-right) and Y (up-down).",
+              "correct": false
+            },
+            {
+              "text": "Movement should feel responsive.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "We add to position to move right.",
+              "correct": false
+            },
+            {
+              "text": "Keys never move heroes — they only sing.",
+              "correct": true
+            },
+            {
+              "text": "Fast movement = big number added.",
+              "correct": false
+            },
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Fast movement = big number added.",
+              "correct": false
+            },
+            {
+              "text": "Speed is how fast the hero moves.",
+              "correct": false
+            },
+            {
+              "text": "Speed never matters and is just for show.",
+              "correct": true
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Adding moves you up only — it is the law.",
+              "correct": true
+            },
+            {
+              "text": "Pressing a key changes the hero's position.",
+              "correct": false
+            },
+            {
+              "text": "Smooth movement happens when you change position many times per second.",
+              "correct": false
+            },
+            {
+              "text": "Fast movement = big number added.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about moving my hero. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "We add to position to move right.",
+              "correct": false
+            },
+            {
+              "text": "Slow movement = small number added.",
+              "correct": false
+            },
+            {
+              "text": "Subtracting deletes the hero from history.",
+              "correct": true
+            },
+            {
+              "text": "Fast movement = big number added.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -918,28 +1653,28 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
           "targets": [
-            "yes"
+            "code"
           ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Fill in the blank: when we talk about moving my hero, ___",
+          "prompt": "Listen up — Which rule about moving my hero is a GOOD rule?",
           "options": [
+            {
+              "text": "Heroes only move if music plays.",
+              "correct": false
+            },
             {
               "text": "Speed never matters and is just for show.",
               "correct": false
             },
             {
-              "text": "Adding moves you up only — it is the law.",
-              "correct": false
-            },
-            {
-              "text": "Movement should feel responsive.",
+              "text": "When the player presses LEFT, you subtract from X.",
               "correct": true
             },
             {
@@ -950,36 +1685,32 @@
           "_audio": "assets/audio/q/lesson_35_q8_v0.wav"
         },
         {
-          "prompt": "Quick! Fill in the blank: when we talk about moving my hero, ___",
+          "prompt": "Here's a thinker: Which rule about moving my hero is a GOOD rule?",
           "options": [
             {
-              "text": "Movement runs once and then takes a nap.",
+              "text": "To move, you yell 'go' at the hero.",
               "correct": false
             },
             {
-              "text": "Heroes only move if music plays.",
+              "text": "X and Y are the names of the hero's pet parrots.",
               "correct": false
             },
             {
-              "text": "Pressing a key changes the hero's position.",
+              "text": "When the player presses UP, you usually subtract from Y (up is less Y).",
               "correct": true
             },
             {
-              "text": "Movement is illegal during weekends.",
+              "text": "Adding moves you up only — it is the law.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q8_v1.wav"
         },
         {
-          "prompt": "Hey friend — Fill in the blank: when we talk about moving my hero, ___",
+          "prompt": "OK quick one: Which rule about moving my hero is a GOOD rule?",
           "options": [
             {
-              "text": "Speed never matters and is just for show.",
-              "correct": false
-            },
-            {
-              "text": "Keys never move heroes — they only sing.",
+              "text": "Movement runs once and then takes a nap.",
               "correct": false
             },
             {
@@ -987,39 +1718,43 @@
               "correct": false
             },
             {
-              "text": "Speed is how fast the hero moves.",
+              "text": "Keys never move heroes — they only sing.",
+              "correct": false
+            },
+            {
+              "text": "Smooth movement happens when you change position many times per second.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q8_v2.wav"
         },
         {
-          "prompt": "Bytey wonders: Fill in the blank: when we talk about moving my hero, ___",
+          "prompt": "Hmm... Which rule about moving my hero is a GOOD rule?",
           "options": [
             {
-              "text": "Keys never move heroes — they only sing.",
+              "text": "To move, you yell 'go' at the hero.",
               "correct": false
             },
             {
-              "text": "We add to position to move right.",
+              "text": "Pressing a key changes the hero's position.",
               "correct": true
             },
             {
-              "text": "Adding moves you up only — it is the law.",
+              "text": "Heroes only move when no one is looking.",
               "correct": false
             },
             {
-              "text": "Heroes only move if music plays.",
+              "text": "Subtracting deletes the hero from history.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q8_v3.wav"
         },
         {
-          "prompt": "Tell me — Fill in the blank: when we talk about moving my hero, ___",
+          "prompt": "Which rule about moving my hero is a GOOD rule?",
           "options": [
             {
-              "text": "We subtract to move left.",
+              "text": "Speed is how fast the hero moves.",
               "correct": true
             },
             {
@@ -1027,15 +1762,120 @@
               "correct": false
             },
             {
-              "text": "Heroes only move if music plays.",
+              "text": "Subtracting deletes the hero from history.",
               "correct": false
             },
             {
-              "text": "Speed never matters and is just for show.",
+              "text": "Adding moves you up only — it is the law.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_35_q8_v4.wav"
+        },
+        {
+          "prompt": "Quick! Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "We add to position to move right.",
+              "correct": true
+            },
+            {
+              "text": "Movement is decided by the weather.",
+              "correct": false
+            },
+            {
+              "text": "To move, you yell 'go' at the hero.",
+              "correct": false
+            },
+            {
+              "text": "Movement is illegal during weekends.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "Movement is decided by the weather.",
+              "correct": false
+            },
+            {
+              "text": "Heroes only move when no one is looking.",
+              "correct": false
+            },
+            {
+              "text": "We subtract to move left.",
+              "correct": true
+            },
+            {
+              "text": "Heroes only move if music plays.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "Movement runs every frame.",
+              "correct": true
+            },
+            {
+              "text": "Movement is decided by the weather.",
+              "correct": false
+            },
+            {
+              "text": "X and Y are the names of the hero's pet parrots.",
+              "correct": false
+            },
+            {
+              "text": "To move, you yell 'go' at the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "Slow movement = small number added.",
+              "correct": true
+            },
+            {
+              "text": "Keys never move heroes — they only sing.",
+              "correct": false
+            },
+            {
+              "text": "To move, you yell 'go' at the hero.",
+              "correct": false
+            },
+            {
+              "text": "Movement is decided by the weather.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which rule about moving my hero is a GOOD rule?",
+          "options": [
+            {
+              "text": "X and Y are the names of the hero's pet parrots.",
+              "correct": false
+            },
+            {
+              "text": "Heroes only move when no one is looking.",
+              "correct": false
+            },
+            {
+              "text": "Movement is illegal during weekends.",
+              "correct": false
+            },
+            {
+              "text": "Fast movement = big number added.",
+              "correct": true
+            }
+          ]
         }
       ]
     }

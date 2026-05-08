@@ -77,11 +77,11 @@
           "prompt": "What is magic spells (slash commands)?",
           "options": [
             {
-              "text": "Slash commands need a dance.",
+              "text": "Each slash command costs a real coin.",
               "correct": false
             },
             {
-              "text": "Slash commands are random magic that summons goats.",
+              "text": "Spells need to be retyped each time, every time.",
               "correct": false
             },
             {
@@ -99,7 +99,7 @@
           "prompt": "Quick! Which one is TRUE about magic spells (slash commands)?",
           "options": [
             {
-              "text": "Slash commands are spoken aloud or they fail.",
+              "text": "One spell does every job — even cooking lunch.",
               "correct": false
             },
             {
@@ -111,7 +111,7 @@
               "correct": false
             },
             {
-              "text": "Spells need to be retyped each time, every time.",
+              "text": "Slash commands are typed with your nose.",
               "correct": false
             }
           ],
@@ -121,11 +121,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about magic spells (slash commands).",
           "options": [
             {
-              "text": "We can make our own spells.",
+              "text": "A slash command runs a saved spell.",
               "correct": false
             },
             {
-              "text": "Spells can take an argument.",
+              "text": "We can make our own spells.",
               "correct": false
             },
             {
@@ -133,7 +133,7 @@
               "correct": true
             },
             {
-              "text": "A slash command runs a saved spell.",
+              "text": "Slash commands feel like keyboard shortcuts.",
               "correct": false
             }
           ],
@@ -143,11 +143,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about magic spells (slash commands). What should he say?",
           "options": [
             {
-              "text": "Spells live on the moon in a small post office.",
+              "text": "Slash commands are typed with your nose.",
               "correct": false
             },
             {
-              "text": "One spell does every job — even cooking lunch.",
+              "text": "Spells live on the moon in a small post office.",
               "correct": false
             },
             {
@@ -155,7 +155,7 @@
               "correct": true
             },
             {
-              "text": "We cannot make new spells — the system locks us out.",
+              "text": "Slash commands are random magic that summons goats.",
               "correct": false
             }
           ],
@@ -165,11 +165,11 @@
           "prompt": "Tell me — Which rule about magic spells (slash commands) is a GOOD rule?",
           "options": [
             {
-              "text": "Spells live on the moon in a small post office.",
+              "text": "Each slash command costs a real coin.",
               "correct": false
             },
             {
-              "text": "Slash commands need a dance.",
+              "text": "One spell does every job — even cooking lunch.",
               "correct": false
             },
             {
@@ -177,11 +177,116 @@
               "correct": true
             },
             {
-              "text": "One spell does every job — even cooking lunch.",
+              "text": "Spells live on the moon in a small post office.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about magic spells (slash commands), ___",
+          "options": [
+            {
+              "text": "Slash commands need a dance.",
+              "correct": false
+            },
+            {
+              "text": "A short spell name is easy to remember.",
+              "correct": true
+            },
+            {
+              "text": "Slash commands only work if you say 'abracadabra' first.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells — the system locks us out.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "We can make our own spells.",
+              "correct": false
+            },
+            {
+              "text": "Spells live in a special folder.",
+              "correct": false
+            },
+            {
+              "text": "Spells must be at least 10,000 letters long.",
+              "correct": true
+            },
+            {
+              "text": "A short spell name is easy to remember.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "Slash commands are random magic that summons goats.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are spoken aloud or they fail.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands feel like keyboard shortcuts.",
+              "correct": true
+            },
+            {
+              "text": "Spells live on the moon in a small post office.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about magic spells (slash commands) is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Slash commands are quick shortcuts -- like /help.",
+              "correct": false
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": false
+            },
+            {
+              "text": "A short spell name is easy to remember.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands only work if you say 'abracadabra' first.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about magic spells (slash commands). Which fact would help him?",
+          "options": [
+            {
+              "text": "Type / and the helper shows a list of magic spells.",
+              "correct": true
+            },
+            {
+              "text": "Slash commands are spoken aloud or they fail.",
+              "correct": false
+            },
+            {
+              "text": "Spells must be at least 10,000 letters long.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job — even cooking lunch.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -190,12 +295,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type CODE and press Send to keep going!",
-          "target_display": "CODE",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "code"
+            "yes"
           ],
-          "hint_wrong": "Type the word CODE (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -308,6 +413,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey types `/test` over and over to run his tests. He could…",
+          "options": [
+            {
+              "text": "Hire a parrot to type for him.",
+              "correct": false
+            },
+            {
+              "text": "Build a slash with cardboard.",
+              "correct": false
+            },
+            {
+              "text": "Save it as a slash command and run with one stroke.",
+              "correct": true
+            },
+            {
+              "text": "Practice typing faster.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey types `/test` over and over to run his tests. He could…",
+          "options": [
+            {
+              "text": "Practice typing faster.",
+              "correct": false
+            },
+            {
+              "text": "Build a slash with cardboard.",
+              "correct": false
+            },
+            {
+              "text": "Hire a parrot to type for him.",
+              "correct": false
+            },
+            {
+              "text": "Save it as a slash command and run with one stroke.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey types `/test` over and over to run his tests. He could…",
+          "options": [
+            {
+              "text": "Save it as a slash command and run with one stroke.",
+              "correct": true
+            },
+            {
+              "text": "Build a slash with cardboard.",
+              "correct": false
+            },
+            {
+              "text": "Hire a parrot to type for him.",
+              "correct": false
+            },
+            {
+              "text": "Practice typing faster.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey types `/test` over and over to run his tests. He could…",
+          "options": [
+            {
+              "text": "Practice typing faster.",
+              "correct": false
+            },
+            {
+              "text": "Hire a parrot to type for him.",
+              "correct": false
+            },
+            {
+              "text": "Save it as a slash command and run with one stroke.",
+              "correct": true
+            },
+            {
+              "text": "Build a slash with cardboard.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey types `/test` over and over to run his tests. He could…",
+          "options": [
+            {
+              "text": "Practice typing faster.",
+              "correct": false
+            },
+            {
+              "text": "Hire a parrot to type for him.",
+              "correct": false
+            },
+            {
+              "text": "Build a slash with cardboard.",
+              "correct": false
+            },
+            {
+              "text": "Save it as a slash command and run with one stroke.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -316,12 +526,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -434,6 +644,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Good spells should…",
+          "options": [
+            {
+              "text": "Each do one clear job.",
+              "correct": true
+            },
+            {
+              "text": "Demand permission from a llama.",
+              "correct": false
+            },
+            {
+              "text": "Sing before they run.",
+              "correct": false
+            },
+            {
+              "text": "Each do twelve unrelated jobs at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Good spells should…",
+          "options": [
+            {
+              "text": "Each do one clear job.",
+              "correct": true
+            },
+            {
+              "text": "Demand permission from a llama.",
+              "correct": false
+            },
+            {
+              "text": "Each do twelve unrelated jobs at once.",
+              "correct": false
+            },
+            {
+              "text": "Sing before they run.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Good spells should…",
+          "options": [
+            {
+              "text": "Sing before they run.",
+              "correct": false
+            },
+            {
+              "text": "Demand permission from a llama.",
+              "correct": false
+            },
+            {
+              "text": "Each do one clear job.",
+              "correct": true
+            },
+            {
+              "text": "Each do twelve unrelated jobs at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Good spells should…",
+          "options": [
+            {
+              "text": "Each do twelve unrelated jobs at once.",
+              "correct": false
+            },
+            {
+              "text": "Demand permission from a llama.",
+              "correct": false
+            },
+            {
+              "text": "Each do one clear job.",
+              "correct": true
+            },
+            {
+              "text": "Sing before they run.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Good spells should…",
+          "options": [
+            {
+              "text": "Demand permission from a llama.",
+              "correct": false
+            },
+            {
+              "text": "Sing before they run.",
+              "correct": false
+            },
+            {
+              "text": "Each do one clear job.",
+              "correct": true
+            },
+            {
+              "text": "Each do twelve unrelated jobs at once.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -442,12 +757,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type JUMP and press Send to keep going!",
-          "target_display": "JUMP",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "jump"
+            "cool"
           ],
-          "hint_wrong": "Type the word JUMP (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -455,19 +770,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about magic spells (slash commands).",
           "options": [
             {
-              "text": "Spells can take an argument.",
+              "text": "A slash command runs a saved spell.",
               "correct": false
             },
             {
-              "text": "A short spell name is easy to remember.",
+              "text": "Slash commands save typing for things you do often.",
               "correct": false
             },
             {
-              "text": "We cannot make new spells — the system locks us out.",
+              "text": "Each slash command costs a real coin.",
               "correct": true
             },
             {
-              "text": "Spells save typing the same words again.",
+              "text": "Each spell does one job well.",
               "correct": false
             }
           ],
@@ -477,19 +792,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about magic spells (slash commands).",
           "options": [
             {
-              "text": "Spells live in a special folder.",
+              "text": "Slash commands are quick shortcuts -- like /help.",
               "correct": false
             },
             {
-              "text": "Spells live on the moon in a small post office.",
+              "text": "Slash commands are typed with your nose.",
               "correct": true
             },
             {
-              "text": "Spells can take an argument.",
+              "text": "A slash command runs a saved spell.",
               "correct": false
             },
             {
-              "text": "Spells save typing the same words again.",
+              "text": "Each helper has its own set of slash commands.",
               "correct": false
             }
           ],
@@ -499,19 +814,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about magic spells (slash commands).",
           "options": [
             {
-              "text": "Spells save typing the same words again.",
+              "text": "Each spell does one job well.",
               "correct": false
             },
             {
-              "text": "Spells can take an argument.",
+              "text": "Slash commands save typing for things you do often.",
               "correct": false
             },
             {
-              "text": "Slash commands are spoken aloud or they fail.",
+              "text": "Slash means 'stop' in helper language.",
               "correct": true
             },
             {
-              "text": "Each spell does one job well.",
+              "text": "A slash command runs a saved spell.",
               "correct": false
             }
           ],
@@ -521,11 +836,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about magic spells (slash commands).",
           "options": [
             {
+              "text": "Spells can take an argument.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are quick shortcuts -- like /help.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are random magic that summons goats.",
+              "correct": true
+            },
+            {
+              "text": "Spells live in a special folder.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_26_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
               "text": "Slash commands feel like keyboard shortcuts.",
               "correct": false
             },
             {
+              "text": "We can make our own spells.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands save typing for things you do often.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time, every time.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_26_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "Each helper has its own set of slash commands.",
+              "correct": false
+            },
+            {
+              "text": "One spell does every job — even cooking lunch.",
+              "correct": true
+            },
+            {
+              "text": "Type / and the helper shows a list of magic spells.",
+              "correct": false
+            },
+            {
               "text": "Spells can take an argument.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "Slash commands are quick shortcuts -- like /help.",
+              "correct": false
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells — the system locks us out.",
+              "correct": true
+            },
+            {
+              "text": "Each spell does one job well.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands feel like keyboard shortcuts.",
+              "correct": false
+            },
+            {
+              "text": "Each helper has its own set of slash commands.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon in a small post office.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "Slash commands are spoken aloud or they fail.",
+              "correct": true
+            },
+            {
+              "text": "Each spell does one job well.",
+              "correct": false
+            },
+            {
+              "text": "A short spell name is easy to remember.",
+              "correct": false
+            },
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about magic spells (slash commands).",
+          "options": [
+            {
+              "text": "Type / and the helper shows a list of magic spells.",
               "correct": false
             },
             {
@@ -533,33 +972,14 @@
               "correct": true
             },
             {
-              "text": "A short spell name is easy to remember.",
+              "text": "Spells live in a special folder.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands save typing for things you do often.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_26_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about magic spells (slash commands).",
-          "options": [
-            {
-              "text": "Spells can take an argument.",
-              "correct": false
-            },
-            {
-              "text": "Slash commands feel like keyboard shortcuts.",
-              "correct": false
-            },
-            {
-              "text": "Each spell does one job well.",
-              "correct": false
-            },
-            {
-              "text": "Slash commands need a dance.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_26_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -568,12 +988,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type STEP and press Send to keep going!",
-          "target_display": "STEP",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "step"
+            "next"
           ],
-          "hint_wrong": "Type the word STEP (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -581,19 +1001,19 @@
           "prompt": "Tell me — Which one is TRUE about magic spells (slash commands)?",
           "options": [
             {
+              "text": "One spell does every job — even cooking lunch.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are typed with your nose.",
+              "correct": false
+            },
+            {
               "text": "Slash commands are random magic that summons goats.",
               "correct": false
             },
             {
-              "text": "Spells need to be retyped each time, every time.",
-              "correct": false
-            },
-            {
-              "text": "Slash commands are spoken aloud or they fail.",
-              "correct": false
-            },
-            {
-              "text": "Spells live in a special folder.",
+              "text": "A slash command runs a saved spell.",
               "correct": true
             }
           ],
@@ -611,11 +1031,11 @@
               "correct": false
             },
             {
-              "text": "A short spell name is easy to remember.",
+              "text": "Spells save typing the same words again.",
               "correct": true
             },
             {
-              "text": "We cannot make new spells — the system locks us out.",
+              "text": "Slash commands only work if you say 'abracadabra' first.",
               "correct": false
             }
           ],
@@ -625,27 +1045,121 @@
           "prompt": "Pop quiz! Which one is TRUE about magic spells (slash commands)?",
           "options": [
             {
-              "text": "Spells can take an argument.",
+              "text": "Each spell does one job well.",
               "correct": true
             },
             {
-              "text": "Slash commands are random magic that summons goats.",
-              "correct": false
-            },
-            {
-              "text": "We cannot make new spells — the system locks us out.",
-              "correct": false
-            },
-            {
               "text": "Spells live on the moon in a small post office.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands need a dance.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time, every time.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "Each slash command costs a real coin.",
+              "correct": false
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": true
+            },
+            {
+              "text": "Slash commands only work if you say 'abracadabra' first.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands need a dance.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_26_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "Spells live in a special folder.",
+              "correct": true
+            },
+            {
+              "text": "Spells must be at least 10,000 letters long.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon in a small post office.",
+              "correct": false
+            },
+            {
+              "text": "Slash means 'stop' in helper language.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_26_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "A short spell name is easy to remember.",
+              "correct": true
+            },
+            {
+              "text": "Spells must be at least 10,000 letters long.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are random magic that summons goats.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time, every time.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "We cannot make new spells — the system locks us out.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are random magic that summons goats.",
+              "correct": false
+            },
+            {
+              "text": "Spells can take an argument.",
+              "correct": true
+            },
+            {
+              "text": "One spell does every job — even cooking lunch.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about magic spells (slash commands)?",
           "options": [
+            {
+              "text": "Slash commands are random magic that summons goats.",
+              "correct": false
+            },
+            {
+              "text": "Spells must be at least 10,000 letters long.",
+              "correct": false
+            },
             {
               "text": "Spells live on the moon in a small post office.",
               "correct": false
@@ -653,39 +1167,50 @@
             {
               "text": "Slash commands feel like keyboard shortcuts.",
               "correct": true
-            },
-            {
-              "text": "Slash commands are random magic that summons goats.",
-              "correct": false
-            },
-            {
-              "text": "Slash commands are spoken aloud or they fail.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_26_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about magic spells (slash commands)?",
           "options": [
             {
-              "text": "A slash command runs a saved spell.",
+              "text": "Slash means 'stop' in helper language.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells — the system locks us out.",
+              "correct": false
+            },
+            {
+              "text": "Spells live on the moon in a small post office.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are quick shortcuts -- like /help.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about magic spells (slash commands)?",
+          "options": [
+            {
+              "text": "Each slash command costs a real coin.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are typed with your nose.",
+              "correct": false
             },
             {
               "text": "Spells need to be retyped each time, every time.",
               "correct": false
             },
             {
-              "text": "Slash commands are spoken aloud or they fail.",
-              "correct": false
-            },
-            {
-              "text": "We cannot make new spells — the system locks us out.",
-              "correct": false
+              "text": "Type / and the helper shows a list of magic spells.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_26_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -694,124 +1219,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "prompt": "You want a list of all the magic spells. What do you type?",
           "options": [
             {
-              "text": "Slash commands feel like keyboard shortcuts.",
+              "text": "Wait for spells to fall from the sky.",
               "correct": false
             },
             {
-              "text": "Spells can take an argument.",
+              "text": "Knock on the screen.",
               "correct": false
             },
             {
-              "text": "Slash commands are spoken aloud or they fail.",
+              "text": "Type 'magic, please'.",
+              "correct": false
+            },
+            {
+              "text": "Just type / to see all the commands.",
               "correct": true
-            },
-            {
-              "text": "A slash command runs a saved spell.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "prompt": "Quick! You want a list of all the magic spells. What do you type?",
           "options": [
             {
-              "text": "Each spell does one job well.",
+              "text": "Knock on the screen.",
               "correct": false
             },
             {
-              "text": "Slash commands feel like keyboard shortcuts.",
+              "text": "Wait for spells to fall from the sky.",
               "correct": false
             },
             {
-              "text": "Spells must be at least 10,000 letters long.",
+              "text": "Just type / to see all the commands.",
               "correct": true
             },
             {
-              "text": "Spells save typing the same words again.",
+              "text": "Type 'magic, please'.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "prompt": "Hey friend — You want a list of all the magic spells. What do you type?",
           "options": [
             {
-              "text": "We can make our own spells.",
+              "text": "Knock on the screen.",
               "correct": false
             },
             {
-              "text": "Slash commands need a dance.",
+              "text": "Just type / to see all the commands.",
               "correct": true
             },
             {
-              "text": "Slash commands feel like keyboard shortcuts.",
+              "text": "Wait for spells to fall from the sky.",
               "correct": false
             },
             {
-              "text": "A slash command runs a saved spell.",
+              "text": "Type 'magic, please'.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: You want a list of all the magic spells. What do you type?",
           "options": [
             {
-              "text": "A slash command runs a saved spell.",
-              "correct": false
-            },
-            {
-              "text": "Spells save typing the same words again.",
-              "correct": false
-            },
-            {
-              "text": "A short spell name is easy to remember.",
-              "correct": false
-            },
-            {
-              "text": "Slash commands are random magic that summons goats.",
+              "text": "Just type / to see all the commands.",
               "correct": true
+            },
+            {
+              "text": "Type 'magic, please'.",
+              "correct": false
+            },
+            {
+              "text": "Knock on the screen.",
+              "correct": false
+            },
+            {
+              "text": "Wait for spells to fall from the sky.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "prompt": "Tell me — You want a list of all the magic spells. What do you type?",
           "options": [
             {
-              "text": "Spells need to be retyped each time, every time.",
+              "text": "Knock on the screen.",
+              "correct": false
+            },
+            {
+              "text": "Wait for spells to fall from the sky.",
+              "correct": false
+            },
+            {
+              "text": "Type 'magic, please'.",
+              "correct": false
+            },
+            {
+              "text": "Just type / to see all the commands.",
               "correct": true
-            },
-            {
-              "text": "Spells can take an argument.",
-              "correct": false
-            },
-            {
-              "text": "A slash command runs a saved spell.",
-              "correct": false
-            },
-            {
-              "text": "A short spell name is easy to remember.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You want a list of all the magic spells. What do you type?",
+          "options": [
+            {
+              "text": "Knock on the screen.",
+              "correct": false
+            },
+            {
+              "text": "Just type / to see all the commands.",
+              "correct": true
+            },
+            {
+              "text": "Wait for spells to fall from the sky.",
+              "correct": false
+            },
+            {
+              "text": "Type 'magic, please'.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You want a list of all the magic spells. What do you type?",
+          "options": [
+            {
+              "text": "Just type / to see all the commands.",
+              "correct": true
+            },
+            {
+              "text": "Type 'magic, please'.",
+              "correct": false
+            },
+            {
+              "text": "Knock on the screen.",
+              "correct": false
+            },
+            {
+              "text": "Wait for spells to fall from the sky.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You want a list of all the magic spells. What do you type?",
+          "options": [
+            {
+              "text": "Type 'magic, please'.",
+              "correct": false
+            },
+            {
+              "text": "Knock on the screen.",
+              "correct": false
+            },
+            {
+              "text": "Just type / to see all the commands.",
+              "correct": true
+            },
+            {
+              "text": "Wait for spells to fall from the sky.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You want a list of all the magic spells. What do you type?",
+          "options": [
+            {
+              "text": "Type 'magic, please'.",
+              "correct": false
+            },
+            {
+              "text": "Wait for spells to fall from the sky.",
+              "correct": false
+            },
+            {
+              "text": "Knock on the screen.",
+              "correct": false
+            },
+            {
+              "text": "Just type / to see all the commands.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You want a list of all the magic spells. What do you type?",
+          "options": [
+            {
+              "text": "Just type / to see all the commands.",
+              "correct": true
+            },
+            {
+              "text": "Knock on the screen.",
+              "correct": false
+            },
+            {
+              "text": "Wait for spells to fall from the sky.",
+              "correct": false
+            },
+            {
+              "text": "Type 'magic, please'.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -820,124 +1450,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GOOD and press Send to keep going!",
-          "target_display": "GOOD",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "good"
+            "play"
           ],
-          "hint_wrong": "Type the word GOOD (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about magic spells (slash commands) is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Spells can take an argument.",
+              "text": "Spells must be at least 10,000 letters long.",
               "correct": true
             },
             {
-              "text": "Spells live on the moon in a small post office.",
+              "text": "Spells save typing the same words again.",
               "correct": false
             },
             {
-              "text": "Slash commands are spoken aloud or they fail.",
+              "text": "Slash commands are quick shortcuts -- like /help.",
               "correct": false
             },
             {
-              "text": "Slash commands are random magic that summons goats.",
+              "text": "Each helper has its own set of slash commands.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about magic spells (slash commands) is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "A slash command runs a saved spell.",
+              "correct": false
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": false
+            },
+            {
+              "text": "Each spell does one job well.",
+              "correct": false
+            },
+            {
               "text": "Slash commands need a dance.",
-              "correct": false
-            },
-            {
-              "text": "Spells must be at least 10,000 letters long.",
-              "correct": false
-            },
-            {
-              "text": "One spell does every job — even cooking lunch.",
-              "correct": false
-            },
-            {
-              "text": "Slash commands feel like keyboard shortcuts.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about magic spells (slash commands) is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Slash commands are spoken aloud or they fail.",
+              "text": "Spells can take an argument.",
               "correct": false
             },
             {
-              "text": "We cannot make new spells — the system locks us out.",
+              "text": "Each helper has its own set of slash commands.",
               "correct": false
             },
             {
-              "text": "Spells live on the moon in a small post office.",
+              "text": "Type / and the helper shows a list of magic spells.",
               "correct": false
             },
             {
-              "text": "A slash command runs a saved spell.",
+              "text": "Slash commands only work if you say 'abracadabra' first.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about magic spells (slash commands) is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Slash commands need a dance.",
+              "text": "Spells save typing the same words again.",
               "correct": false
             },
             {
-              "text": "Spells save typing the same words again.",
+              "text": "Each slash command costs a real coin.",
               "correct": true
             },
             {
-              "text": "Spells live on the moon in a small post office.",
+              "text": "Spells can take an argument.",
               "correct": false
             },
             {
-              "text": "Spells must be at least 10,000 letters long.",
+              "text": "Spells live in a special folder.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about magic spells (slash commands) is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Spells need to be retyped each time, every time.",
+              "text": "Slash commands save typing for things you do often.",
               "correct": false
             },
             {
-              "text": "Each spell does one job well.",
+              "text": "Slash commands are typed with your nose.",
               "correct": true
             },
             {
-              "text": "We cannot make new spells — the system locks us out.",
+              "text": "A slash command runs a saved spell.",
               "correct": false
             },
             {
-              "text": "Slash commands are random magic that summons goats.",
+              "text": "Slash commands are quick shortcuts -- like /help.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_26_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A short spell name is easy to remember.",
+              "correct": false
+            },
+            {
+              "text": "Slash means 'stop' in helper language.",
+              "correct": true
+            },
+            {
+              "text": "Slash commands are quick shortcuts -- like /help.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands feel like keyboard shortcuts.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Each spell does one job well.",
+              "correct": false
+            },
+            {
+              "text": "Slash commands are random magic that summons goats.",
+              "correct": true
+            },
+            {
+              "text": "Spells can take an argument.",
+              "correct": false
+            },
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Spells can take an argument.",
+              "correct": false
+            },
+            {
+              "text": "Spells save typing the same words again.",
+              "correct": false
+            },
+            {
+              "text": "Spells need to be retyped each time, every time.",
+              "correct": true
+            },
+            {
+              "text": "We can make our own spells.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "One spell does every job — even cooking lunch.",
+              "correct": true
+            },
+            {
+              "text": "A slash command runs a saved spell.",
+              "correct": false
+            },
+            {
+              "text": "Each helper has its own set of slash commands.",
+              "correct": false
+            },
+            {
+              "text": "Spells can take an argument.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about magic spells (slash commands). Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Each spell does one job well.",
+              "correct": false
+            },
+            {
+              "text": "A short spell name is easy to remember.",
+              "correct": false
+            },
+            {
+              "text": "We cannot make new spells — the system locks us out.",
+              "correct": true
+            },
+            {
+              "text": "Spells can take an argument.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

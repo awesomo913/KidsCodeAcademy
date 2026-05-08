@@ -2112,6 +2112,23 @@ SEEDS: dict[int, dict[str, Any]] = {
 
 
 # ----------------------------------------------------------------------------
+# Merge per-lesson enrichments (4 new facts + 4 new wrongs + 2 new scenarios
+# per lesson) into the base SEEDS dict. This expands content for the 5->10
+# variation jump so each new variation can pull a fresh angle.
+# ----------------------------------------------------------------------------
+try:
+    from seed_enrichments_v4 import ENRICHMENTS as _ENRICHMENTS_V4
+except ImportError:
+    _ENRICHMENTS_V4 = {}
+
+for _lid, _enrich in _ENRICHMENTS_V4.items():
+    if _lid in SEEDS:
+        SEEDS[_lid]["facts"] = list(SEEDS[_lid]["facts"]) + list(_enrich.get("facts", []))
+        SEEDS[_lid]["wrongs"] = list(SEEDS[_lid]["wrongs"]) + list(_enrich.get("wrongs", []))
+        SEEDS[_lid]["scenarios"] = list(SEEDS[_lid]["scenarios"]) + list(_enrich.get("scenarios", []))
+
+
+# ----------------------------------------------------------------------------
 # History-scene overrides for tool-profile lessons (11-16). These set the
 # Q1 interaction to the new history-scene mini-game so the kid watches an
 # animated story tied to that tool before answering questions.
@@ -2128,18 +2145,27 @@ HISTORY_OVERRIDES: dict[int, dict[str, Any]] = {
 
 
 # ----------------------------------------------------------------------------
-# 8 question frames + 7 paraphrases.
+# 14 question frames + 11 paraphrases. 14 × 11 = 154 unique combinations
+# per question pool — easily enough for 10 variations to all feel different.
 # ----------------------------------------------------------------------------
 
+VARIATIONS_PER_QUESTION = 10
+
 FRAMES: list[dict[str, Any]] = [
-    {"key": "what_is",      "prompt": "What is {concept}?",                                                  "pick_truth": True},
-    {"key": "true_fact",    "prompt": "Which one is TRUE about {concept}?",                                  "pick_truth": True},
-    {"key": "spot_lie",     "prompt": "One of these is silly! Pick the WRONG one about {concept}.",          "pick_truth": False},
-    {"key": "best_say",     "prompt": "Bytey wants to teach a friend about {concept}. What should he say?", "pick_truth": True},
-    {"key": "good_rule",    "prompt": "Which rule about {concept} is a GOOD rule?",                          "pick_truth": True},
-    {"key": "fill_blank",   "prompt": "Fill in the blank: when we talk about {concept}, ___",                "pick_truth": True},
-    {"key": "silly_claim",  "prompt": "Bytey claims something about {concept}. Pick the SILLIEST claim.",    "pick_truth": False},
-    {"key": "would_happen", "prompt": "What WOULD really happen with {concept}?",                            "pick_truth": True},
+    {"key": "what_is",         "prompt": "What is {concept}?",                                                  "pick_truth": True},
+    {"key": "true_fact",       "prompt": "Which one is TRUE about {concept}?",                                  "pick_truth": True},
+    {"key": "spot_lie",        "prompt": "One of these is silly! Pick the WRONG one about {concept}.",          "pick_truth": False},
+    {"key": "best_say",        "prompt": "Bytey wants to teach a friend about {concept}. What should he say?", "pick_truth": True},
+    {"key": "good_rule",       "prompt": "Which rule about {concept} is a GOOD rule?",                          "pick_truth": True},
+    {"key": "fill_blank",      "prompt": "Fill in the blank: when we talk about {concept}, ___",                "pick_truth": True},
+    {"key": "silly_claim",     "prompt": "Bytey claims something about {concept}. Pick the SILLIEST claim.",    "pick_truth": False},
+    {"key": "would_happen",    "prompt": "What WOULD really happen with {concept}?",                            "pick_truth": True},
+    {"key": "silly_vs_real",   "prompt": "One of these about {concept} is silly. Pick the silly one!",          "pick_truth": False},
+    {"key": "bytey_confused",  "prompt": "Bytey is confused about {concept}. Which fact would help him?",       "pick_truth": True},
+    {"key": "tell_grandma",    "prompt": "How would you tell your grandma about {concept}? Pick the BEST way.", "pick_truth": True},
+    {"key": "find_truth",      "prompt": "Three of these are jokes. Pick the one that's actually true about {concept}.", "pick_truth": True},
+    {"key": "robot_says",      "prompt": "A robot is learning about {concept}. Which thing it says is right?",  "pick_truth": True},
+    {"key": "which_helps",     "prompt": "Which fact helps the MOST when learning about {concept}?",            "pick_truth": True},
 ]
 
 PARAPHRASES: list[str] = [
@@ -2150,6 +2176,10 @@ PARAPHRASES: list[str] = [
     "Tell me — ",
     "Wait wait wait — ",
     "Pop quiz! ",
+    "Listen up — ",
+    "Here's a thinker: ",
+    "OK quick one: ",
+    "Hmm... ",
 ]
 
 
@@ -2173,11 +2203,12 @@ def _build_variation(frame: dict[str, Any], paraphrase: str, seed: dict[str, Any
     facts = seed["facts"]
     wrongs = seed["wrongs"]
     prompt = paraphrase + frame["prompt"].format(concept=seed["concept"])
+    # Stride by 3 so qi/v cross-product doesn't collide within 10 variations
     if frame["pick_truth"]:
-        correct_text = facts[(variation_idx + question_idx) % len(facts)]
+        correct_text = facts[(variation_idx + question_idx * 3) % len(facts)]
         wrong_texts = _pick_n(wrongs, 3, salt)
     else:
-        correct_text = wrongs[(variation_idx + question_idx) % len(wrongs)]
+        correct_text = wrongs[(variation_idx + question_idx * 3) % len(wrongs)]
         wrong_texts = _pick_n(facts, 3, salt)
     options = [{"text": correct_text, "correct": True}]
     options.extend({"text": t, "correct": False} for t in wrong_texts)
@@ -2185,36 +2216,69 @@ def _build_variation(frame: dict[str, Any], paraphrase: str, seed: dict[str, Any
     return {"prompt": prompt, "options": options}
 
 
-def _scenario_to_variations(scenario: dict[str, Any], salt: int) -> list[dict[str, Any]]:
-    """Convert ONE hand-written scenario into 5 variations.
+def _assert_no_dupes(variations: list[dict[str, Any]], qid: str) -> None:
+    """Fail loud if two variations share the same prompt OR same correct text."""
+    seen_prompts = set()
+    seen_correct = set()
+    for v in variations:
+        p = v.get("prompt", "")
+        c_text = next((o["text"] for o in v.get("options", []) if o.get("correct")), "")
+        if p in seen_prompts:
+            raise ValueError(f"{qid}: duplicate prompt across variations: {p!r}")
+        if c_text in seen_correct:
+            raise ValueError(f"{qid}: duplicate correct-answer across variations: {c_text!r}")
+        seen_prompts.add(p)
+        seen_correct.add(c_text)
 
-    Variations differ only by paraphrase prefix + option shuffle. The prompt
-    + correct answer stay anchored — these scenarios are concept-specific
-    and must not drift from the author's intent.
+
+_SCENARIO_REFRAMES: list[str] = [
+    "{p}",
+    "Imagine: {p}",
+    "Help Bytey decide — {p}",
+    "Picture this: {p}",
+    "Tricky one — {p}",
+]
+
+
+def _scenario_to_variations(scenario: dict[str, Any], salt: int) -> list[dict[str, Any]]:
+    """Convert ONE hand-written scenario into VARIATIONS_PER_QUESTION variations.
+
+    Uses two layers:
+      - layer 1 (v < 11): paraphrase prefix only (existing pattern)
+      - layer 2 (v >= 11 OR fallback): SCENARIO_REFRAMES wrap the prompt itself
+    Within 10 variations, cycle through both layers to ensure unique prompts.
     """
     out = []
-    for v in range(5):
-        prompt = PARAPHRASES[v % len(PARAPHRASES)] + scenario["prompt"]
+    base = scenario["prompt"]
+    for v in range(VARIATIONS_PER_QUESTION):
+        if v < len(PARAPHRASES):
+            prompt = PARAPHRASES[v] + base
+        else:
+            reframe = _SCENARIO_REFRAMES[(v - len(PARAPHRASES)) % len(_SCENARIO_REFRAMES)]
+            prompt = reframe.format(p=base)
         opts = _shuffled(scenario["options"], salt + v * 17)
         out.append({"prompt": prompt, "options": [dict(o) for o in opts]})
     return out
 
 
+def _gate(word: str) -> dict[str, Any]:
+    """Type-this-word gate template — every gate teaches typing across the curriculum."""
+    word = word.upper()
+    return {
+        "type": "type-this-word",
+        "payload": {
+            "prompt": f"Type {word} and press Send to keep going!",
+            "target_display": word,
+            "targets": [word.lower()],
+            "hint_wrong": f"Type the word {word} (any case is fine).",
+        },
+    }
+
+
+# Curated word pool rotated through gate slots. Mix of 2-5 letter words.
 GATE_TEMPLATES: list[dict[str, Any]] = [
-    {"type": "click-the-thing", "payload": {"prompt": "Tap the rocket to launch the next question!",
-        "choices": [{"label": "🚀", "right": True}, {"label": "🐢", "right": False}, {"label": "🪨", "right": False}]}},
-    {"type": "click-the-thing", "payload": {"prompt": "Tap the star to keep going!",
-        "choices": [{"label": "⭐", "right": True}, {"label": "🍌", "right": False}, {"label": "🌱", "right": False}]}},
-    {"type": "type-this-word", "payload": {"prompt": "Type GO and press Send to unlock the next question.",
-        "target_display": "GO", "targets": ["go"], "hint_wrong": "Type the word GO and press Send."}},
-    {"type": "click-the-thing", "payload": {"prompt": "Tap the smiley to wake up Bytey!",
-        "choices": [{"label": "😀", "right": True}, {"label": "🥒", "right": False}, {"label": "🧦", "right": False}]}},
-    {"type": "click-the-thing", "payload": {"prompt": "Tap the heart to keep learning!",
-        "choices": [{"label": "❤️", "right": True}, {"label": "🥒", "right": False}, {"label": "🌶️", "right": False}]}},
-    {"type": "type-this-word", "payload": {"prompt": "Type YES and press Send to see the next question.",
-        "target_display": "YES", "targets": ["yes"], "hint_wrong": "Type Y E S and press Send."}},
-    {"type": "click-the-thing", "payload": {"prompt": "Tap the orange dot to unlock the next question!",
-        "choices": [{"label": "🟠", "right": True}, {"label": "🔵", "right": False}, {"label": "🟢", "right": False}]}},
+    _gate("GO"), _gate("YES"), _gate("FUN"), _gate("COOL"), _gate("NEXT"),
+    _gate("WIN"), _gate("PLAY"), _gate("CODE"), _gate("OK"), _gate("JUMP"),
 ]
 
 
@@ -2229,14 +2293,12 @@ def _build_questions(lesson: dict[str, Any], seed: dict[str, Any]) -> list[dict[
 
     # Q1 — original lesson.game as gate (or history-scene override for lessons 11-16)
     q1_interaction = HISTORY_OVERRIDES.get(lesson["id"]) or lesson.get("game") or GATE_TEMPLATES[0]
-    questions.append({
-        "id": "q1",
-        "interaction": q1_interaction,
-        "variations": [
-            _build_variation(FRAMES[v % len(FRAMES)], PARAPHRASES[v % len(PARAPHRASES)], seed, v, 0)
-            for v in range(5)
-        ],
-    })
+    q1_variations = [
+        _build_variation(FRAMES[v % len(FRAMES)], PARAPHRASES[v % len(PARAPHRASES)], seed, v, 0)
+        for v in range(VARIATIONS_PER_QUESTION)
+    ]
+    _assert_no_dupes(q1_variations, "q1")
+    questions.append({"id": "q1", "interaction": q1_interaction, "variations": q1_variations})
 
     scenarios = list(seed.get("scenarios") or [])
     if scenarios:
@@ -2247,7 +2309,8 @@ def _build_questions(lesson: dict[str, Any], seed: dict[str, Any]) -> list[dict[
             "variations": _scenario_to_variations(sc, salt=1000 + lesson["id"]),
         })
 
-    frame_cycle = ["spot_lie", "true_fact", "silly_claim", "good_rule", "fill_blank", "would_happen", "best_say"]
+    frame_cycle = ["spot_lie", "true_fact", "silly_claim", "good_rule", "fill_blank", "would_happen", "best_say",
+                   "silly_vs_real", "bytey_confused", "tell_grandma", "find_truth", "robot_says", "which_helps"]
     fi = 0
     qi = len(questions)
     while qi < n:
@@ -2262,13 +2325,16 @@ def _build_questions(lesson: dict[str, Any], seed: dict[str, Any]) -> list[dict[
             key = frame_cycle[fi % len(frame_cycle)]
             frame = next(f for f in FRAMES if f["key"] == key)
             fi += 1
+            qid = f"q{qi + 1}"
+            qvars = [
+                _build_variation(frame, PARAPHRASES[(v + qi) % len(PARAPHRASES)], seed, v, qi)
+                for v in range(VARIATIONS_PER_QUESTION)
+            ]
+            _assert_no_dupes(qvars, qid)
             questions.append({
-                "id": f"q{qi + 1}",
+                "id": qid,
                 "interaction": GATE_TEMPLATES[qi % len(GATE_TEMPLATES)],
-                "variations": [
-                    _build_variation(frame, PARAPHRASES[(v + qi) % len(PARAPHRASES)], seed, v, qi)
-                    for v in range(5)
-                ],
+                "variations": qvars,
             })
         qi += 1
 

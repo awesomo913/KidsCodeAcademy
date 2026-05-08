@@ -52,11 +52,11 @@
           "prompt": "What is checking your work?",
           "options": [
             {
-              "text": "Tests refuse to run on full moons.",
+              "text": "Checking the AI's work makes the AI sad.",
               "correct": false
             },
             {
-              "text": "Checking wastes time and angers the bug king.",
+              "text": "Bugs fix themselves overnight if you leave milk.",
               "correct": false
             },
             {
@@ -74,7 +74,7 @@
           "prompt": "Quick! Which one is TRUE about checking your work?",
           "options": [
             {
-              "text": "Tests must be exactly 4 letters long.",
+              "text": "Tests are scary monsters with seventeen teeth.",
               "correct": false
             },
             {
@@ -86,7 +86,7 @@
               "correct": false
             },
             {
-              "text": "Bugs fix themselves overnight if you leave milk.",
+              "text": "Verifying takes 100 hours so just skip it.",
               "correct": false
             }
           ],
@@ -96,11 +96,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about checking your work.",
           "options": [
             {
-              "text": "Catch problems before others see them.",
+              "text": "Reading code finds tiny bugs.",
               "correct": false
             },
             {
-              "text": "Tests can be written before the code.",
+              "text": "Catch problems before others see them.",
               "correct": false
             },
             {
@@ -108,7 +108,7 @@
               "correct": true
             },
             {
-              "text": "Reading code finds tiny bugs.",
+              "text": "If a test breaks, your code probably has a bug.",
               "correct": false
             }
           ],
@@ -118,11 +118,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about checking your work. What should he say?",
           "options": [
             {
-              "text": "Other people will fix it for you, like elves.",
+              "text": "Verifying takes 100 hours so just skip it.",
               "correct": false
             },
             {
-              "text": "Tests are scary monsters with seventeen teeth.",
+              "text": "Other people will fix it for you, like elves.",
               "correct": false
             },
             {
@@ -130,7 +130,7 @@
               "correct": true
             },
             {
-              "text": "Never read your own code — it is private.",
+              "text": "Checking wastes time and angers the bug king.",
               "correct": false
             }
           ],
@@ -140,11 +140,11 @@
           "prompt": "Tell me — Which rule about checking your work is a GOOD rule?",
           "options": [
             {
-              "text": "Other people will fix it for you, like elves.",
+              "text": "Checking the AI's work makes the AI sad.",
               "correct": false
             },
             {
-              "text": "Tests refuse to run on full moons.",
+              "text": "Tests are scary monsters with seventeen teeth.",
               "correct": false
             },
             {
@@ -152,11 +152,116 @@
               "correct": true
             },
             {
-              "text": "Tests are scary monsters with seventeen teeth.",
+              "text": "Other people will fix it for you, like elves.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_28_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about checking your work, ___",
+          "options": [
+            {
+              "text": "Tests refuse to run on full moons.",
+              "correct": false
+            },
+            {
+              "text": "A test passes only if the code does the right thing.",
+              "correct": true
+            },
+            {
+              "text": "If the AI says it, it's always right -- don't double-check.",
+              "correct": false
+            },
+            {
+              "text": "Never read your own code — it is private.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about checking your work. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Catch problems before others see them.",
+              "correct": false
+            },
+            {
+              "text": "Checking saves time later.",
+              "correct": false
+            },
+            {
+              "text": "If you test, the wifi gets jealous.",
+              "correct": true
+            },
+            {
+              "text": "A test passes only if the code does the right thing.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with checking your work?",
+          "options": [
+            {
+              "text": "Checking wastes time and angers the bug king.",
+              "correct": false
+            },
+            {
+              "text": "Tests must be exactly 4 letters long.",
+              "correct": false
+            },
+            {
+              "text": "If a test breaks, your code probably has a bug.",
+              "correct": true
+            },
+            {
+              "text": "Other people will fix it for you, like elves.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about checking your work is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Always check what the AI gave you before using it.",
+              "correct": false
+            },
+            {
+              "text": "Catch problems before others see them.",
+              "correct": false
+            },
+            {
+              "text": "A test passes only if the code does the right thing.",
+              "correct": false
+            },
+            {
+              "text": "If the AI says it, it's always right -- don't double-check.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about checking your work. Which fact would help him?",
+          "options": [
+            {
+              "text": "Even smart helpers make small mistakes sometimes.",
+              "correct": true
+            },
+            {
+              "text": "Tests must be exactly 4 letters long.",
+              "correct": false
+            },
+            {
+              "text": "If you test, the wifi gets jealous.",
+              "correct": false
+            },
+            {
+              "text": "Tests are scary monsters with seventeen teeth.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -165,12 +270,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type TYPE and press Send to keep going!",
-          "target_display": "TYPE",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "type"
+            "yes"
           ],
-          "hint_wrong": "Type the word TYPE (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -283,6 +388,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_28_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You finished a function that adds two numbers. What's a good check?",
+          "options": [
+            {
+              "text": "Print 'I LOVE MATH' at the top.",
+              "correct": false
+            },
+            {
+              "text": "Whistle until the screen goes dim.",
+              "correct": false
+            },
+            {
+              "text": "Bury the code in the yard.",
+              "correct": false
+            },
+            {
+              "text": "Run it on 2 + 3 and see if you get 5.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You finished a function that adds two numbers. What's a good check?",
+          "options": [
+            {
+              "text": "Run it on 2 + 3 and see if you get 5.",
+              "correct": true
+            },
+            {
+              "text": "Print 'I LOVE MATH' at the top.",
+              "correct": false
+            },
+            {
+              "text": "Bury the code in the yard.",
+              "correct": false
+            },
+            {
+              "text": "Whistle until the screen goes dim.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You finished a function that adds two numbers. What's a good check?",
+          "options": [
+            {
+              "text": "Run it on 2 + 3 and see if you get 5.",
+              "correct": true
+            },
+            {
+              "text": "Whistle until the screen goes dim.",
+              "correct": false
+            },
+            {
+              "text": "Bury the code in the yard.",
+              "correct": false
+            },
+            {
+              "text": "Print 'I LOVE MATH' at the top.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You finished a function that adds two numbers. What's a good check?",
+          "options": [
+            {
+              "text": "Bury the code in the yard.",
+              "correct": false
+            },
+            {
+              "text": "Whistle until the screen goes dim.",
+              "correct": false
+            },
+            {
+              "text": "Run it on 2 + 3 and see if you get 5.",
+              "correct": true
+            },
+            {
+              "text": "Print 'I LOVE MATH' at the top.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You finished a function that adds two numbers. What's a good check?",
+          "options": [
+            {
+              "text": "Bury the code in the yard.",
+              "correct": false
+            },
+            {
+              "text": "Print 'I LOVE MATH' at the top.",
+              "correct": false
+            },
+            {
+              "text": "Run it on 2 + 3 and see if you get 5.",
+              "correct": true
+            },
+            {
+              "text": "Whistle until the screen goes dim.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -291,12 +501,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -409,6 +619,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_28_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why test small things?",
+          "options": [
+            {
+              "text": "Small tests find small bugs before they get big.",
+              "correct": true
+            },
+            {
+              "text": "Small tests look cute in lists.",
+              "correct": false
+            },
+            {
+              "text": "Small tests count toward gold stars.",
+              "correct": false
+            },
+            {
+              "text": "Small tests need fewer batteries.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why test small things?",
+          "options": [
+            {
+              "text": "Small tests look cute in lists.",
+              "correct": false
+            },
+            {
+              "text": "Small tests count toward gold stars.",
+              "correct": false
+            },
+            {
+              "text": "Small tests find small bugs before they get big.",
+              "correct": true
+            },
+            {
+              "text": "Small tests need fewer batteries.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why test small things?",
+          "options": [
+            {
+              "text": "Small tests look cute in lists.",
+              "correct": false
+            },
+            {
+              "text": "Small tests need fewer batteries.",
+              "correct": false
+            },
+            {
+              "text": "Small tests count toward gold stars.",
+              "correct": false
+            },
+            {
+              "text": "Small tests find small bugs before they get big.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why test small things?",
+          "options": [
+            {
+              "text": "Small tests find small bugs before they get big.",
+              "correct": true
+            },
+            {
+              "text": "Small tests count toward gold stars.",
+              "correct": false
+            },
+            {
+              "text": "Small tests need fewer batteries.",
+              "correct": false
+            },
+            {
+              "text": "Small tests look cute in lists.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why test small things?",
+          "options": [
+            {
+              "text": "Small tests find small bugs before they get big.",
+              "correct": true
+            },
+            {
+              "text": "Small tests need fewer batteries.",
+              "correct": false
+            },
+            {
+              "text": "Small tests count toward gold stars.",
+              "correct": false
+            },
+            {
+              "text": "Small tests look cute in lists.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -417,12 +732,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WORD and press Send to keep going!",
-          "target_display": "WORD",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "word"
+            "cool"
           ],
-          "hint_wrong": "Type the word WORD (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -430,19 +745,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about checking your work.",
           "options": [
             {
-              "text": "Tests can be written before the code.",
+              "text": "Reading code finds tiny bugs.",
               "correct": false
             },
             {
-              "text": "A test passes only if the code does the right thing.",
+              "text": "Reading the answer carefully is part of being a good coder.",
               "correct": false
             },
             {
-              "text": "Never read your own code — it is private.",
+              "text": "Checking the AI's work makes the AI sad.",
               "correct": true
             },
             {
-              "text": "Run the code to see if it works.",
+              "text": "Tests are small experiments.",
               "correct": false
             }
           ],
@@ -452,19 +767,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about checking your work.",
           "options": [
             {
-              "text": "Checking saves time later.",
+              "text": "Always check what the AI gave you before using it.",
               "correct": false
             },
             {
-              "text": "Other people will fix it for you, like elves.",
+              "text": "Verifying takes 100 hours so just skip it.",
               "correct": true
             },
             {
-              "text": "Tests can be written before the code.",
+              "text": "Reading code finds tiny bugs.",
               "correct": false
             },
             {
-              "text": "Run the code to see if it works.",
+              "text": "Trust but verify: trust the AI to try, verify the result yourself.",
               "correct": false
             }
           ],
@@ -474,19 +789,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about checking your work.",
           "options": [
             {
-              "text": "Run the code to see if it works.",
+              "text": "Tests are small experiments.",
               "correct": false
             },
             {
-              "text": "Tests can be written before the code.",
+              "text": "Reading the answer carefully is part of being a good coder.",
               "correct": false
             },
             {
-              "text": "Tests must be exactly 4 letters long.",
+              "text": "AI never makes mistakes -- only humans do.",
               "correct": true
             },
             {
-              "text": "Tests are small experiments.",
+              "text": "Reading code finds tiny bugs.",
               "correct": false
             }
           ],
@@ -496,11 +811,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about checking your work.",
           "options": [
             {
+              "text": "Tests can be written before the code.",
+              "correct": false
+            },
+            {
+              "text": "Always check what the AI gave you before using it.",
+              "correct": false
+            },
+            {
+              "text": "Checking wastes time and angers the bug king.",
+              "correct": true
+            },
+            {
+              "text": "Checking saves time later.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_28_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
               "text": "If a test breaks, your code probably has a bug.",
               "correct": false
             },
             {
+              "text": "Catch problems before others see them.",
+              "correct": false
+            },
+            {
+              "text": "Reading the answer carefully is part of being a good coder.",
+              "correct": false
+            },
+            {
+              "text": "Bugs fix themselves overnight if you leave milk.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_28_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Trust but verify: trust the AI to try, verify the result yourself.",
+              "correct": false
+            },
+            {
+              "text": "Tests are scary monsters with seventeen teeth.",
+              "correct": true
+            },
+            {
+              "text": "Even smart helpers make small mistakes sometimes.",
+              "correct": false
+            },
+            {
               "text": "Tests can be written before the code.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Always check what the AI gave you before using it.",
+              "correct": false
+            },
+            {
+              "text": "Catch problems before others see them.",
+              "correct": false
+            },
+            {
+              "text": "Never read your own code — it is private.",
+              "correct": true
+            },
+            {
+              "text": "Tests are small experiments.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Reading code finds tiny bugs.",
+              "correct": false
+            },
+            {
+              "text": "If a test breaks, your code probably has a bug.",
+              "correct": false
+            },
+            {
+              "text": "Trust but verify: trust the AI to try, verify the result yourself.",
+              "correct": false
+            },
+            {
+              "text": "Other people will fix it for you, like elves.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Tests must be exactly 4 letters long.",
+              "correct": true
+            },
+            {
+              "text": "Tests are small experiments.",
+              "correct": false
+            },
+            {
+              "text": "A test passes only if the code does the right thing.",
+              "correct": false
+            },
+            {
+              "text": "Run the code to see if it works.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about checking your work.",
+          "options": [
+            {
+              "text": "Even smart helpers make small mistakes sometimes.",
               "correct": false
             },
             {
@@ -508,33 +947,14 @@
               "correct": true
             },
             {
-              "text": "A test passes only if the code does the right thing.",
+              "text": "Checking saves time later.",
+              "correct": false
+            },
+            {
+              "text": "Reading the answer carefully is part of being a good coder.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_28_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about checking your work.",
-          "options": [
-            {
-              "text": "Tests can be written before the code.",
-              "correct": false
-            },
-            {
-              "text": "If a test breaks, your code probably has a bug.",
-              "correct": false
-            },
-            {
-              "text": "Tests are small experiments.",
-              "correct": false
-            },
-            {
-              "text": "Tests refuse to run on full moons.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_28_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -543,12 +963,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type MOVE and press Send to keep going!",
-          "target_display": "MOVE",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "move"
+            "next"
           ],
-          "hint_wrong": "Type the word MOVE (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -556,19 +976,19 @@
           "prompt": "Tell me — Which one is TRUE about checking your work?",
           "options": [
             {
+              "text": "Tests are scary monsters with seventeen teeth.",
+              "correct": false
+            },
+            {
+              "text": "Verifying takes 100 hours so just skip it.",
+              "correct": false
+            },
+            {
               "text": "Checking wastes time and angers the bug king.",
               "correct": false
             },
             {
-              "text": "Bugs fix themselves overnight if you leave milk.",
-              "correct": false
-            },
-            {
-              "text": "Tests must be exactly 4 letters long.",
-              "correct": false
-            },
-            {
-              "text": "Checking saves time later.",
+              "text": "Reading code finds tiny bugs.",
               "correct": true
             }
           ],
@@ -586,11 +1006,11 @@
               "correct": false
             },
             {
-              "text": "A test passes only if the code does the right thing.",
+              "text": "Run the code to see if it works.",
               "correct": true
             },
             {
-              "text": "Never read your own code — it is private.",
+              "text": "If the AI says it, it's always right -- don't double-check.",
               "correct": false
             }
           ],
@@ -600,27 +1020,121 @@
           "prompt": "Pop quiz! Which one is TRUE about checking your work?",
           "options": [
             {
-              "text": "Tests can be written before the code.",
+              "text": "Tests are small experiments.",
               "correct": true
             },
             {
-              "text": "Checking wastes time and angers the bug king.",
-              "correct": false
-            },
-            {
-              "text": "Never read your own code — it is private.",
-              "correct": false
-            },
-            {
               "text": "Other people will fix it for you, like elves.",
+              "correct": false
+            },
+            {
+              "text": "Tests refuse to run on full moons.",
+              "correct": false
+            },
+            {
+              "text": "Bugs fix themselves overnight if you leave milk.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_28_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "Checking the AI's work makes the AI sad.",
+              "correct": false
+            },
+            {
+              "text": "Catch problems before others see them.",
+              "correct": true
+            },
+            {
+              "text": "If the AI says it, it's always right -- don't double-check.",
+              "correct": false
+            },
+            {
+              "text": "Tests refuse to run on full moons.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_28_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "Checking saves time later.",
+              "correct": true
+            },
+            {
+              "text": "If you test, the wifi gets jealous.",
+              "correct": false
+            },
+            {
+              "text": "Other people will fix it for you, like elves.",
+              "correct": false
+            },
+            {
+              "text": "AI never makes mistakes -- only humans do.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_28_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "A test passes only if the code does the right thing.",
+              "correct": true
+            },
+            {
+              "text": "If you test, the wifi gets jealous.",
+              "correct": false
+            },
+            {
+              "text": "Checking wastes time and angers the bug king.",
+              "correct": false
+            },
+            {
+              "text": "Bugs fix themselves overnight if you leave milk.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "Never read your own code — it is private.",
+              "correct": false
+            },
+            {
+              "text": "Checking wastes time and angers the bug king.",
+              "correct": false
+            },
+            {
+              "text": "Tests can be written before the code.",
+              "correct": true
+            },
+            {
+              "text": "Tests are scary monsters with seventeen teeth.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about checking your work?",
           "options": [
+            {
+              "text": "Checking wastes time and angers the bug king.",
+              "correct": false
+            },
+            {
+              "text": "If you test, the wifi gets jealous.",
+              "correct": false
+            },
             {
               "text": "Other people will fix it for you, like elves.",
               "correct": false
@@ -628,39 +1142,50 @@
             {
               "text": "If a test breaks, your code probably has a bug.",
               "correct": true
-            },
-            {
-              "text": "Checking wastes time and angers the bug king.",
-              "correct": false
-            },
-            {
-              "text": "Tests must be exactly 4 letters long.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_28_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about checking your work?",
           "options": [
             {
-              "text": "Reading code finds tiny bugs.",
+              "text": "AI never makes mistakes -- only humans do.",
+              "correct": false
+            },
+            {
+              "text": "Never read your own code — it is private.",
+              "correct": false
+            },
+            {
+              "text": "Other people will fix it for you, like elves.",
+              "correct": false
+            },
+            {
+              "text": "Always check what the AI gave you before using it.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about checking your work?",
+          "options": [
+            {
+              "text": "Checking the AI's work makes the AI sad.",
+              "correct": false
+            },
+            {
+              "text": "Verifying takes 100 hours so just skip it.",
+              "correct": false
             },
             {
               "text": "Bugs fix themselves overnight if you leave milk.",
               "correct": false
             },
             {
-              "text": "Tests must be exactly 4 letters long.",
-              "correct": false
-            },
-            {
-              "text": "Never read your own code — it is private.",
-              "correct": false
+              "text": "Even smart helpers make small mistakes sometimes.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_28_q5_v4.wav"
+          ]
         }
       ]
     }

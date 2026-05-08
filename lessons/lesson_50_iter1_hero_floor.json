@@ -55,14 +55,27 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "type-this-word",
+        "type": "click-the-thing",
         "payload": {
-          "prompt": "Type PIXEL and press Send to keep going!",
-          "target_display": "PIXEL",
-          "targets": [
-            "pixel"
-          ],
-          "hint_wrong": "Type the word PIXEL (any case is fine)."
+          "prompt": "Hero falls forever. Pick the fix:",
+          "choices": [
+            {
+              "label": "Make the hero blue",
+              "right": false
+            },
+            {
+              "label": "Add: stop the hero when it touches the floor",
+              "right": true
+            },
+            {
+              "label": "Remove the floor",
+              "right": false
+            },
+            {
+              "label": "Add more coins",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -70,11 +83,11 @@
           "prompt": "What is iter 1: hero on the floor?",
           "options": [
             {
-              "text": "Heroes refuse to load without a name.",
+              "text": "If iteration 1 is simple, you've failed.",
               "correct": false
             },
             {
-              "text": "Skip placing the hero — let it surprise you.",
+              "text": "Let the hero fall forever — it's a feature.",
               "correct": false
             },
             {
@@ -92,7 +105,7 @@
           "prompt": "Quick! Which one is TRUE about iter 1: hero on the floor?",
           "options": [
             {
-              "text": "Heroes must be placed on a couch only.",
+              "text": "Floors are made of jelly — wobble through!",
               "correct": false
             },
             {
@@ -104,7 +117,7 @@
               "correct": false
             },
             {
-              "text": "Let the hero fall forever — it's a feature.",
+              "text": "Iteration 1 only counts if it has music.",
               "correct": false
             }
           ],
@@ -114,11 +127,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
           "options": [
             {
-              "text": "Test by running and watching the screen.",
+              "text": "Step one: put the hero somewhere.",
               "correct": false
             },
             {
-              "text": "It's OK if it looks ugly at first.",
+              "text": "Test by running and watching the screen.",
               "correct": false
             },
             {
@@ -126,7 +139,7 @@
               "correct": true
             },
             {
-              "text": "Step one: put the hero somewhere.",
+              "text": "If it doesn't work yet, that's normal.",
               "correct": false
             }
           ],
@@ -136,11 +149,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 1: hero on the floor. What should he say?",
           "options": [
             {
-              "text": "Tiny steps hide bugs deep underground.",
+              "text": "Iteration 1 only counts if it has music.",
               "correct": false
             },
             {
-              "text": "Floors are made of jelly — wobble through!",
+              "text": "Tiny steps hide bugs deep underground.",
               "correct": false
             },
             {
@@ -148,7 +161,7 @@
               "correct": true
             },
             {
-              "text": "Never test what you wrote — bad luck.",
+              "text": "Skip placing the hero — let it surprise you.",
               "correct": false
             }
           ],
@@ -158,11 +171,11 @@
           "prompt": "Tell me — Which rule about iter 1: hero on the floor is a GOOD rule?",
           "options": [
             {
-              "text": "Tiny steps hide bugs deep underground.",
+              "text": "If iteration 1 is simple, you've failed.",
               "correct": false
             },
             {
-              "text": "Heroes refuse to load without a name.",
+              "text": "Floors are made of jelly — wobble through!",
               "correct": false
             },
             {
@@ -170,11 +183,116 @@
               "correct": true
             },
             {
-              "text": "Floors are made of jelly — wobble through!",
+              "text": "Tiny steps hide bugs deep underground.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about iter 1: hero on the floor, ___",
+          "options": [
+            {
+              "text": "Heroes refuse to load without a name.",
+              "correct": false
+            },
+            {
+              "text": "First make it appear, then make it move.",
+              "correct": true
+            },
+            {
+              "text": "Iteration 1 must include 50 features.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote — bad luck.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": false
+            },
+            {
+              "text": "First test must be done at midnight.",
+              "correct": true
+            },
+            {
+              "text": "First make it appear, then make it move.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Skip placing the hero — let it surprise you.",
+              "correct": false
+            },
+            {
+              "text": "Heroes must be placed on a couch only.",
+              "correct": false
+            },
+            {
+              "text": "If it doesn't work yet, that's normal.",
+              "correct": true
+            },
+            {
+              "text": "Tiny steps hide bugs deep underground.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about iter 1: hero on the floor is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Iteration 1: get the hero standing on the floor.",
+              "correct": false
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": false
+            },
+            {
+              "text": "First make it appear, then make it move.",
+              "correct": false
+            },
+            {
+              "text": "Iteration 1 must include 50 features.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about iter 1: hero on the floor. Which fact would help him?",
+          "options": [
+            {
+              "text": "Start with the simplest possible thing that works.",
+              "correct": true
+            },
+            {
+              "text": "Heroes must be placed on a couch only.",
+              "correct": false
+            },
+            {
+              "text": "First test must be done at midnight.",
+              "correct": false
+            },
+            {
+              "text": "Floors are made of jelly — wobble through!",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -183,12 +301,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type RIGHT and press Send to keep going!",
-          "target_display": "RIGHT",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "right"
+            "yes"
           ],
-          "hint_wrong": "Type the word RIGHT (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -301,6 +419,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey's hero appears at (0, 0). The hero falls off the bottom of the screen. Why?",
+          "options": [
+            {
+              "text": "The hero is too embarrassed to stay.",
+              "correct": false
+            },
+            {
+              "text": "The screen is upside down.",
+              "correct": false
+            },
+            {
+              "text": "There's no floor yet — gravity pulls the hero down forever.",
+              "correct": true
+            },
+            {
+              "text": "Gravity is unsubscribed.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey's hero appears at (0, 0). The hero falls off the bottom of the screen. Why?",
+          "options": [
+            {
+              "text": "Gravity is unsubscribed.",
+              "correct": false
+            },
+            {
+              "text": "The screen is upside down.",
+              "correct": false
+            },
+            {
+              "text": "The hero is too embarrassed to stay.",
+              "correct": false
+            },
+            {
+              "text": "There's no floor yet — gravity pulls the hero down forever.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey's hero appears at (0, 0). The hero falls off the bottom of the screen. Why?",
+          "options": [
+            {
+              "text": "The hero is too embarrassed to stay.",
+              "correct": false
+            },
+            {
+              "text": "Gravity is unsubscribed.",
+              "correct": false
+            },
+            {
+              "text": "The screen is upside down.",
+              "correct": false
+            },
+            {
+              "text": "There's no floor yet — gravity pulls the hero down forever.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey's hero appears at (0, 0). The hero falls off the bottom of the screen. Why?",
+          "options": [
+            {
+              "text": "Gravity is unsubscribed.",
+              "correct": false
+            },
+            {
+              "text": "There's no floor yet — gravity pulls the hero down forever.",
+              "correct": true
+            },
+            {
+              "text": "The hero is too embarrassed to stay.",
+              "correct": false
+            },
+            {
+              "text": "The screen is upside down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey's hero appears at (0, 0). The hero falls off the bottom of the screen. Why?",
+          "options": [
+            {
+              "text": "The screen is upside down.",
+              "correct": false
+            },
+            {
+              "text": "There's no floor yet — gravity pulls the hero down forever.",
+              "correct": true
+            },
+            {
+              "text": "Gravity is unsubscribed.",
+              "correct": false
+            },
+            {
+              "text": "The hero is too embarrassed to stay.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -309,12 +532,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -427,6 +650,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — What's a smart way to add a floor?",
+          "options": [
+            {
+              "text": "Tape a sock to the bottom of the screen.",
+              "correct": false
+            },
+            {
+              "text": "Draw a flat platform near the bottom and stop falling on it.",
+              "correct": true
+            },
+            {
+              "text": "Add a tiny inflatable couch.",
+              "correct": false
+            },
+            {
+              "text": "Hire a grandparent to catch the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! What's a smart way to add a floor?",
+          "options": [
+            {
+              "text": "Hire a grandparent to catch the hero.",
+              "correct": false
+            },
+            {
+              "text": "Tape a sock to the bottom of the screen.",
+              "correct": false
+            },
+            {
+              "text": "Add a tiny inflatable couch.",
+              "correct": false
+            },
+            {
+              "text": "Draw a flat platform near the bottom and stop falling on it.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What's a smart way to add a floor?",
+          "options": [
+            {
+              "text": "Hire a grandparent to catch the hero.",
+              "correct": false
+            },
+            {
+              "text": "Draw a flat platform near the bottom and stop falling on it.",
+              "correct": true
+            },
+            {
+              "text": "Add a tiny inflatable couch.",
+              "correct": false
+            },
+            {
+              "text": "Tape a sock to the bottom of the screen.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: What's a smart way to add a floor?",
+          "options": [
+            {
+              "text": "Tape a sock to the bottom of the screen.",
+              "correct": false
+            },
+            {
+              "text": "Draw a flat platform near the bottom and stop falling on it.",
+              "correct": true
+            },
+            {
+              "text": "Add a tiny inflatable couch.",
+              "correct": false
+            },
+            {
+              "text": "Hire a grandparent to catch the hero.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: What's a smart way to add a floor?",
+          "options": [
+            {
+              "text": "Hire a grandparent to catch the hero.",
+              "correct": false
+            },
+            {
+              "text": "Draw a flat platform near the bottom and stop falling on it.",
+              "correct": true
+            },
+            {
+              "text": "Tape a sock to the bottom of the screen.",
+              "correct": false
+            },
+            {
+              "text": "Add a tiny inflatable couch.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -435,12 +763,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SPACE and press Send to keep going!",
-          "target_display": "SPACE",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "space"
+            "cool"
           ],
-          "hint_wrong": "Type the word SPACE (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -448,19 +776,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
           "options": [
             {
-              "text": "It's OK if it looks ugly at first.",
+              "text": "Step one: put the hero somewhere.",
               "correct": false
             },
             {
-              "text": "First make it appear, then make it move.",
+              "text": "Even a hero on a floor with no game IS progress.",
               "correct": false
             },
             {
-              "text": "Never test what you wrote — bad luck.",
+              "text": "If iteration 1 is simple, you've failed.",
               "correct": true
             },
             {
-              "text": "Step two: stop them from falling forever.",
+              "text": "A floor blocks the hero from falling.",
               "correct": false
             }
           ],
@@ -470,19 +798,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
           "options": [
             {
-              "text": "Tiny steps catch tiny bugs.",
+              "text": "Iteration 1: get the hero standing on the floor.",
               "correct": false
             },
             {
-              "text": "Tiny steps hide bugs deep underground.",
+              "text": "Iteration 1 only counts if it has music.",
               "correct": true
             },
             {
-              "text": "It's OK if it looks ugly at first.",
+              "text": "Step one: put the hero somewhere.",
               "correct": false
             },
             {
-              "text": "Step two: stop them from falling forever.",
+              "text": "Each iteration adds one tiny feature on top.",
               "correct": false
             }
           ],
@@ -492,19 +820,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
           "options": [
             {
-              "text": "Step two: stop them from falling forever.",
+              "text": "A floor blocks the hero from falling.",
               "correct": false
             },
             {
-              "text": "It's OK if it looks ugly at first.",
+              "text": "Even a hero on a floor with no game IS progress.",
               "correct": false
             },
             {
-              "text": "Heroes must be placed on a couch only.",
+              "text": "Real coders skip iteration 1.",
               "correct": true
             },
             {
-              "text": "A floor blocks the hero from falling.",
+              "text": "Step one: put the hero somewhere.",
               "correct": false
             }
           ],
@@ -514,11 +842,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
           "options": [
             {
+              "text": "It's OK if it looks ugly at first.",
+              "correct": false
+            },
+            {
+              "text": "Iteration 1: get the hero standing on the floor.",
+              "correct": false
+            },
+            {
+              "text": "Skip placing the hero — let it surprise you.",
+              "correct": true
+            },
+            {
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_50_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
               "text": "If it doesn't work yet, that's normal.",
               "correct": false
             },
             {
+              "text": "Test by running and watching the screen.",
+              "correct": false
+            },
+            {
+              "text": "Even a hero on a floor with no game IS progress.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever — it's a feature.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_50_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Each iteration adds one tiny feature on top.",
+              "correct": false
+            },
+            {
+              "text": "Floors are made of jelly — wobble through!",
+              "correct": true
+            },
+            {
+              "text": "Start with the simplest possible thing that works.",
+              "correct": false
+            },
+            {
               "text": "It's OK if it looks ugly at first.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Iteration 1: get the hero standing on the floor.",
+              "correct": false
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote — bad luck.",
+              "correct": true
+            },
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": false
+            },
+            {
+              "text": "If it doesn't work yet, that's normal.",
+              "correct": false
+            },
+            {
+              "text": "Each iteration adds one tiny feature on top.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs deep underground.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Heroes must be placed on a couch only.",
+              "correct": true
+            },
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": false
+            },
+            {
+              "text": "First make it appear, then make it move.",
+              "correct": false
+            },
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
+          "options": [
+            {
+              "text": "Start with the simplest possible thing that works.",
               "correct": false
             },
             {
@@ -526,33 +978,14 @@
               "correct": true
             },
             {
-              "text": "First make it appear, then make it move.",
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": false
+            },
+            {
+              "text": "Even a hero on a floor with no game IS progress.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_50_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about iter 1: hero on the floor.",
-          "options": [
-            {
-              "text": "It's OK if it looks ugly at first.",
-              "correct": false
-            },
-            {
-              "text": "If it doesn't work yet, that's normal.",
-              "correct": false
-            },
-            {
-              "text": "A floor blocks the hero from falling.",
-              "correct": false
-            },
-            {
-              "text": "Heroes refuse to load without a name.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_50_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -561,12 +994,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type POWER and press Send to keep going!",
-          "target_display": "POWER",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "power"
+            "next"
           ],
-          "hint_wrong": "Type the word POWER (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -574,19 +1007,19 @@
           "prompt": "Tell me — Which one is TRUE about iter 1: hero on the floor?",
           "options": [
             {
+              "text": "Floors are made of jelly — wobble through!",
+              "correct": false
+            },
+            {
+              "text": "Iteration 1 only counts if it has music.",
+              "correct": false
+            },
+            {
               "text": "Skip placing the hero — let it surprise you.",
               "correct": false
             },
             {
-              "text": "Let the hero fall forever — it's a feature.",
-              "correct": false
-            },
-            {
-              "text": "Heroes must be placed on a couch only.",
-              "correct": false
-            },
-            {
-              "text": "Tiny steps catch tiny bugs.",
+              "text": "Step one: put the hero somewhere.",
               "correct": true
             }
           ],
@@ -604,11 +1037,11 @@
               "correct": false
             },
             {
-              "text": "First make it appear, then make it move.",
+              "text": "Step two: stop them from falling forever.",
               "correct": true
             },
             {
-              "text": "Never test what you wrote — bad luck.",
+              "text": "Iteration 1 must include 50 features.",
               "correct": false
             }
           ],
@@ -618,27 +1051,121 @@
           "prompt": "Pop quiz! Which one is TRUE about iter 1: hero on the floor?",
           "options": [
             {
-              "text": "It's OK if it looks ugly at first.",
+              "text": "A floor blocks the hero from falling.",
               "correct": true
             },
             {
-              "text": "Skip placing the hero — let it surprise you.",
-              "correct": false
-            },
-            {
-              "text": "Never test what you wrote — bad luck.",
-              "correct": false
-            },
-            {
               "text": "Tiny steps hide bugs deep underground.",
+              "correct": false
+            },
+            {
+              "text": "Heroes refuse to load without a name.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever — it's a feature.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "If iteration 1 is simple, you've failed.",
+              "correct": false
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": true
+            },
+            {
+              "text": "Iteration 1 must include 50 features.",
+              "correct": false
+            },
+            {
+              "text": "Heroes refuse to load without a name.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_50_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Tiny steps catch tiny bugs.",
+              "correct": true
+            },
+            {
+              "text": "First test must be done at midnight.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs deep underground.",
+              "correct": false
+            },
+            {
+              "text": "Real coders skip iteration 1.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_50_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "First make it appear, then make it move.",
+              "correct": true
+            },
+            {
+              "text": "First test must be done at midnight.",
+              "correct": false
+            },
+            {
+              "text": "Skip placing the hero — let it surprise you.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever — it's a feature.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "Never test what you wrote — bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Skip placing the hero — let it surprise you.",
+              "correct": false
+            },
+            {
+              "text": "It's OK if it looks ugly at first.",
+              "correct": true
+            },
+            {
+              "text": "Floors are made of jelly — wobble through!",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about iter 1: hero on the floor?",
           "options": [
+            {
+              "text": "Skip placing the hero — let it surprise you.",
+              "correct": false
+            },
+            {
+              "text": "First test must be done at midnight.",
+              "correct": false
+            },
             {
               "text": "Tiny steps hide bugs deep underground.",
               "correct": false
@@ -646,39 +1173,50 @@
             {
               "text": "If it doesn't work yet, that's normal.",
               "correct": true
-            },
-            {
-              "text": "Skip placing the hero — let it surprise you.",
-              "correct": false
-            },
-            {
-              "text": "Heroes must be placed on a couch only.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_50_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 1: hero on the floor?",
           "options": [
             {
-              "text": "Step one: put the hero somewhere.",
+              "text": "Real coders skip iteration 1.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote — bad luck.",
+              "correct": false
+            },
+            {
+              "text": "Tiny steps hide bugs deep underground.",
+              "correct": false
+            },
+            {
+              "text": "Iteration 1: get the hero standing on the floor.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about iter 1: hero on the floor?",
+          "options": [
+            {
+              "text": "If iteration 1 is simple, you've failed.",
+              "correct": false
+            },
+            {
+              "text": "Iteration 1 only counts if it has music.",
+              "correct": false
             },
             {
               "text": "Let the hero fall forever — it's a feature.",
               "correct": false
             },
             {
-              "text": "Heroes must be placed on a couch only.",
-              "correct": false
-            },
-            {
-              "text": "Never test what you wrote — bad luck.",
-              "correct": false
+              "text": "Start with the simplest possible thing that works.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_50_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -687,124 +1225,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "prompt": "Iteration 1 is just a hero on a floor. Should you stop and celebrate?",
           "options": [
             {
-              "text": "If it doesn't work yet, that's normal.",
+              "text": "Only on Sundays.",
               "correct": false
             },
             {
-              "text": "It's OK if it looks ugly at first.",
-              "correct": false
-            },
-            {
-              "text": "Heroes must be placed on a couch only.",
+              "text": "Yes! That's a real working part of a game.",
               "correct": true
             },
             {
-              "text": "Step one: put the hero somewhere.",
+              "text": "No -- only completed games count.",
+              "correct": false
+            },
+            {
+              "text": "Only if the hero is wearing red.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "prompt": "Quick! Iteration 1 is just a hero on a floor. Should you stop and celebrate?",
           "options": [
             {
-              "text": "A floor blocks the hero from falling.",
+              "text": "Only on Sundays.",
               "correct": false
             },
             {
-              "text": "If it doesn't work yet, that's normal.",
+              "text": "No -- only completed games count.",
               "correct": false
             },
             {
-              "text": "First test must be done at midnight.",
+              "text": "Yes! That's a real working part of a game.",
               "correct": true
             },
             {
-              "text": "Step two: stop them from falling forever.",
+              "text": "Only if the hero is wearing red.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Iteration 1 is just a hero on a floor. Should you stop and celebrate?",
           "options": [
             {
-              "text": "Test by running and watching the screen.",
+              "text": "No -- only completed games count.",
               "correct": false
             },
             {
-              "text": "Heroes refuse to load without a name.",
+              "text": "Yes! That's a real working part of a game.",
               "correct": true
             },
             {
-              "text": "If it doesn't work yet, that's normal.",
+              "text": "Only if the hero is wearing red.",
               "correct": false
             },
             {
-              "text": "Step one: put the hero somewhere.",
+              "text": "Only on Sundays.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Iteration 1 is just a hero on a floor. Should you stop and celebrate?",
           "options": [
             {
-              "text": "Step one: put the hero somewhere.",
+              "text": "Only if the hero is wearing red.",
               "correct": false
             },
             {
-              "text": "Step two: stop them from falling forever.",
+              "text": "Only on Sundays.",
               "correct": false
             },
             {
-              "text": "First make it appear, then make it move.",
+              "text": "No -- only completed games count.",
               "correct": false
             },
             {
-              "text": "Skip placing the hero — let it surprise you.",
+              "text": "Yes! That's a real working part of a game.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Iteration 1 is just a hero on a floor. Should you stop and celebrate?",
           "options": [
             {
-              "text": "Let the hero fall forever — it's a feature.",
+              "text": "Only if the hero is wearing red.",
+              "correct": false
+            },
+            {
+              "text": "No -- only completed games count.",
+              "correct": false
+            },
+            {
+              "text": "Only on Sundays.",
+              "correct": false
+            },
+            {
+              "text": "Yes! That's a real working part of a game.",
               "correct": true
-            },
-            {
-              "text": "It's OK if it looks ugly at first.",
-              "correct": false
-            },
-            {
-              "text": "Step one: put the hero somewhere.",
-              "correct": false
-            },
-            {
-              "text": "First make it appear, then make it move.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Iteration 1 is just a hero on a floor. Should you stop and celebrate?",
+          "options": [
+            {
+              "text": "Only on Sundays.",
+              "correct": false
+            },
+            {
+              "text": "No -- only completed games count.",
+              "correct": false
+            },
+            {
+              "text": "Only if the hero is wearing red.",
+              "correct": false
+            },
+            {
+              "text": "Yes! That's a real working part of a game.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Iteration 1 is just a hero on a floor. Should you stop and celebrate?",
+          "options": [
+            {
+              "text": "Only on Sundays.",
+              "correct": false
+            },
+            {
+              "text": "Yes! That's a real working part of a game.",
+              "correct": true
+            },
+            {
+              "text": "Only if the hero is wearing red.",
+              "correct": false
+            },
+            {
+              "text": "No -- only completed games count.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Iteration 1 is just a hero on a floor. Should you stop and celebrate?",
+          "options": [
+            {
+              "text": "Only if the hero is wearing red.",
+              "correct": false
+            },
+            {
+              "text": "No -- only completed games count.",
+              "correct": false
+            },
+            {
+              "text": "Only on Sundays.",
+              "correct": false
+            },
+            {
+              "text": "Yes! That's a real working part of a game.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Iteration 1 is just a hero on a floor. Should you stop and celebrate?",
+          "options": [
+            {
+              "text": "Only on Sundays.",
+              "correct": false
+            },
+            {
+              "text": "Yes! That's a real working part of a game.",
+              "correct": true
+            },
+            {
+              "text": "Only if the hero is wearing red.",
+              "correct": false
+            },
+            {
+              "text": "No -- only completed games count.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Iteration 1 is just a hero on a floor. Should you stop and celebrate?",
+          "options": [
+            {
+              "text": "Only if the hero is wearing red.",
+              "correct": false
+            },
+            {
+              "text": "Only on Sundays.",
+              "correct": false
+            },
+            {
+              "text": "No -- only completed games count.",
+              "correct": false
+            },
+            {
+              "text": "Yes! That's a real working part of a game.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -813,124 +1456,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type ROBOT and press Send to keep going!",
-          "target_display": "ROBOT",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "robot"
+            "play"
           ],
-          "hint_wrong": "Type the word ROBOT (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "It's OK if it looks ugly at first.",
+              "text": "First test must be done at midnight.",
               "correct": true
             },
             {
-              "text": "Tiny steps hide bugs deep underground.",
+              "text": "Step two: stop them from falling forever.",
               "correct": false
             },
             {
-              "text": "Heroes must be placed on a couch only.",
+              "text": "Iteration 1: get the hero standing on the floor.",
               "correct": false
             },
             {
-              "text": "Skip placing the hero — let it surprise you.",
+              "text": "Each iteration adds one tiny feature on top.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "Step one: put the hero somewhere.",
+              "correct": false
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": false
+            },
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": false
+            },
+            {
               "text": "Heroes refuse to load without a name.",
-              "correct": false
-            },
-            {
-              "text": "First test must be done at midnight.",
-              "correct": false
-            },
-            {
-              "text": "Floors are made of jelly — wobble through!",
-              "correct": false
-            },
-            {
-              "text": "If it doesn't work yet, that's normal.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Heroes must be placed on a couch only.",
+              "text": "It's OK if it looks ugly at first.",
               "correct": false
             },
             {
-              "text": "Never test what you wrote — bad luck.",
+              "text": "Each iteration adds one tiny feature on top.",
               "correct": false
             },
             {
-              "text": "Tiny steps hide bugs deep underground.",
+              "text": "Start with the simplest possible thing that works.",
               "correct": false
             },
             {
-              "text": "Step one: put the hero somewhere.",
+              "text": "Iteration 1 must include 50 features.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Heroes refuse to load without a name.",
+              "text": "Step two: stop them from falling forever.",
               "correct": false
             },
             {
-              "text": "Step two: stop them from falling forever.",
+              "text": "If iteration 1 is simple, you've failed.",
               "correct": true
             },
             {
-              "text": "Tiny steps hide bugs deep underground.",
+              "text": "It's OK if it looks ugly at first.",
               "correct": false
             },
             {
-              "text": "First test must be done at midnight.",
+              "text": "Tiny steps catch tiny bugs.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about iter 1: hero on the floor is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Let the hero fall forever — it's a feature.",
+              "text": "Even a hero on a floor with no game IS progress.",
               "correct": false
             },
             {
-              "text": "A floor blocks the hero from falling.",
+              "text": "Iteration 1 only counts if it has music.",
               "correct": true
             },
             {
-              "text": "Never test what you wrote — bad luck.",
+              "text": "Step one: put the hero somewhere.",
               "correct": false
             },
             {
-              "text": "Skip placing the hero — let it surprise you.",
+              "text": "Iteration 1: get the hero standing on the floor.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_50_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "First make it appear, then make it move.",
+              "correct": false
+            },
+            {
+              "text": "Real coders skip iteration 1.",
+              "correct": true
+            },
+            {
+              "text": "Iteration 1: get the hero standing on the floor.",
+              "correct": false
+            },
+            {
+              "text": "If it doesn't work yet, that's normal.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": false
+            },
+            {
+              "text": "Skip placing the hero — let it surprise you.",
+              "correct": true
+            },
+            {
+              "text": "It's OK if it looks ugly at first.",
+              "correct": false
+            },
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "It's OK if it looks ugly at first.",
+              "correct": false
+            },
+            {
+              "text": "Step two: stop them from falling forever.",
+              "correct": false
+            },
+            {
+              "text": "Let the hero fall forever — it's a feature.",
+              "correct": true
+            },
+            {
+              "text": "Test by running and watching the screen.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Floors are made of jelly — wobble through!",
+              "correct": true
+            },
+            {
+              "text": "Step one: put the hero somewhere.",
+              "correct": false
+            },
+            {
+              "text": "Each iteration adds one tiny feature on top.",
+              "correct": false
+            },
+            {
+              "text": "It's OK if it looks ugly at first.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about iter 1: hero on the floor. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A floor blocks the hero from falling.",
+              "correct": false
+            },
+            {
+              "text": "First make it appear, then make it move.",
+              "correct": false
+            },
+            {
+              "text": "Never test what you wrote — bad luck.",
+              "correct": true
+            },
+            {
+              "text": "It's OK if it looks ugly at first.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

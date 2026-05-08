@@ -55,11 +55,11 @@
           "prompt": "What is idea to plan?",
           "options": [
             {
-              "text": "Plans must have a chapter on dragons.",
+              "text": "Writing the plan uses up the idea.",
               "correct": false
             },
             {
-              "text": "An idea is the same as a plan in a wig.",
+              "text": "Plans never help — they are paperweights.",
               "correct": false
             },
             {
@@ -77,7 +77,7 @@
           "prompt": "Quick! Which one is TRUE about idea to plan?",
           "options": [
             {
-              "text": "Plans must be carved on bread.",
+              "text": "Plans must never change, even if wrong.",
               "correct": false
             },
             {
@@ -89,7 +89,7 @@
               "correct": false
             },
             {
-              "text": "Plans never help — they are paperweights.",
+              "text": "Plans must be at least 10 pages.",
               "correct": false
             }
           ],
@@ -99,11 +99,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about idea to plan.",
           "options": [
             {
-              "text": "Plans can change as we learn.",
+              "text": "An idea is a wish for a thing.",
               "correct": false
             },
             {
-              "text": "Plans break a big idea into doable bits.",
+              "text": "Plans can change as we learn.",
               "correct": false
             },
             {
@@ -111,7 +111,7 @@
               "correct": true
             },
             {
-              "text": "An idea is a wish for a thing.",
+              "text": "Sharing the plan invites help.",
               "correct": false
             }
           ],
@@ -121,11 +121,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about idea to plan. What should he say?",
           "options": [
             {
-              "text": "A plan is bad luck and brings tiny clouds.",
+              "text": "Plans must be at least 10 pages.",
               "correct": false
             },
             {
-              "text": "Plans must never change, even if wrong.",
+              "text": "A plan is bad luck and brings tiny clouds.",
               "correct": false
             },
             {
@@ -133,7 +133,7 @@
               "correct": true
             },
             {
-              "text": "Ideas always ship by themselves at midnight.",
+              "text": "An idea is the same as a plan in a wig.",
               "correct": false
             }
           ],
@@ -143,11 +143,11 @@
           "prompt": "Tell me — Which rule about idea to plan is a GOOD rule?",
           "options": [
             {
-              "text": "A plan is bad luck and brings tiny clouds.",
+              "text": "Writing the plan uses up the idea.",
               "correct": false
             },
             {
-              "text": "Plans must have a chapter on dragons.",
+              "text": "Plans must never change, even if wrong.",
               "correct": false
             },
             {
@@ -155,11 +155,116 @@
               "correct": true
             },
             {
-              "text": "Plans must never change, even if wrong.",
+              "text": "A plan is bad luck and brings tiny clouds.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about idea to plan, ___",
+          "options": [
+            {
+              "text": "Plans must have a chapter on dragons.",
+              "correct": false
+            },
+            {
+              "text": "A plan starts with the smallest first step.",
+              "correct": true
+            },
+            {
+              "text": "Plans are for chickens -- real coders just type.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves at midnight.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Plans can change as we learn.",
+              "correct": false
+            },
+            {
+              "text": "Ideas without plans rarely ship.",
+              "correct": false
+            },
+            {
+              "text": "Each plan needs a pet.",
+              "correct": true
+            },
+            {
+              "text": "A plan starts with the smallest first step.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with idea to plan?",
+          "options": [
+            {
+              "text": "An idea is the same as a plan in a wig.",
+              "correct": false
+            },
+            {
+              "text": "Plans must be carved on bread.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the plan invites help.",
+              "correct": true
+            },
+            {
+              "text": "A plan is bad luck and brings tiny clouds.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about idea to plan is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Going from idea to plan turns dreams into doable steps.",
+              "correct": false
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": false
+            },
+            {
+              "text": "A plan starts with the smallest first step.",
+              "correct": false
+            },
+            {
+              "text": "Plans are for chickens -- real coders just type.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about idea to plan. Which fact would help him?",
+          "options": [
+            {
+              "text": "Write your idea down first -- even one sentence helps.",
+              "correct": true
+            },
+            {
+              "text": "Plans must be carved on bread.",
+              "correct": false
+            },
+            {
+              "text": "Each plan needs a pet.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change, even if wrong.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -168,12 +273,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PLAY and press Send to keep going!",
-          "target_display": "PLAY",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "play"
+            "yes"
           ],
-          "hint_wrong": "Type the word PLAY (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -286,6 +391,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Bytey says 'I want a cool game!' How does he turn that idea into a plan?",
+          "options": [
+            {
+              "text": "Skip planning and ask the wifi.",
+              "correct": false
+            },
+            {
+              "text": "Write a 50-page novel about the game first.",
+              "correct": false
+            },
+            {
+              "text": "List the smallest first thing — like 'show a hero on screen'.",
+              "correct": true
+            },
+            {
+              "text": "Hum the idea for an hour.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey says 'I want a cool game!' How does he turn that idea into a plan?",
+          "options": [
+            {
+              "text": "List the smallest first thing — like 'show a hero on screen'.",
+              "correct": true
+            },
+            {
+              "text": "Skip planning and ask the wifi.",
+              "correct": false
+            },
+            {
+              "text": "Write a 50-page novel about the game first.",
+              "correct": false
+            },
+            {
+              "text": "Hum the idea for an hour.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Bytey says 'I want a cool game!' How does he turn that idea into a plan?",
+          "options": [
+            {
+              "text": "Write a 50-page novel about the game first.",
+              "correct": false
+            },
+            {
+              "text": "List the smallest first thing — like 'show a hero on screen'.",
+              "correct": true
+            },
+            {
+              "text": "Hum the idea for an hour.",
+              "correct": false
+            },
+            {
+              "text": "Skip planning and ask the wifi.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Bytey says 'I want a cool game!' How does he turn that idea into a plan?",
+          "options": [
+            {
+              "text": "List the smallest first thing — like 'show a hero on screen'.",
+              "correct": true
+            },
+            {
+              "text": "Skip planning and ask the wifi.",
+              "correct": false
+            },
+            {
+              "text": "Write a 50-page novel about the game first.",
+              "correct": false
+            },
+            {
+              "text": "Hum the idea for an hour.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey says 'I want a cool game!' How does he turn that idea into a plan?",
+          "options": [
+            {
+              "text": "List the smallest first thing — like 'show a hero on screen'.",
+              "correct": true
+            },
+            {
+              "text": "Hum the idea for an hour.",
+              "correct": false
+            },
+            {
+              "text": "Write a 50-page novel about the game first.",
+              "correct": false
+            },
+            {
+              "text": "Skip planning and ask the wifi.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -294,12 +504,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -412,6 +622,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Why are plans allowed to change?",
+          "options": [
+            {
+              "text": "Plans pay rent in changes.",
+              "correct": false
+            },
+            {
+              "text": "Plans need stretching breaks.",
+              "correct": false
+            },
+            {
+              "text": "Plans get bored sitting still.",
+              "correct": false
+            },
+            {
+              "text": "As we build, we learn — the new info improves the plan.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Why are plans allowed to change?",
+          "options": [
+            {
+              "text": "Plans get bored sitting still.",
+              "correct": false
+            },
+            {
+              "text": "Plans need stretching breaks.",
+              "correct": false
+            },
+            {
+              "text": "Plans pay rent in changes.",
+              "correct": false
+            },
+            {
+              "text": "As we build, we learn — the new info improves the plan.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Why are plans allowed to change?",
+          "options": [
+            {
+              "text": "As we build, we learn — the new info improves the plan.",
+              "correct": true
+            },
+            {
+              "text": "Plans get bored sitting still.",
+              "correct": false
+            },
+            {
+              "text": "Plans need stretching breaks.",
+              "correct": false
+            },
+            {
+              "text": "Plans pay rent in changes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Why are plans allowed to change?",
+          "options": [
+            {
+              "text": "Plans pay rent in changes.",
+              "correct": false
+            },
+            {
+              "text": "Plans get bored sitting still.",
+              "correct": false
+            },
+            {
+              "text": "As we build, we learn — the new info improves the plan.",
+              "correct": true
+            },
+            {
+              "text": "Plans need stretching breaks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Why are plans allowed to change?",
+          "options": [
+            {
+              "text": "Plans get bored sitting still.",
+              "correct": false
+            },
+            {
+              "text": "Plans pay rent in changes.",
+              "correct": false
+            },
+            {
+              "text": "As we build, we learn — the new info improves the plan.",
+              "correct": true
+            },
+            {
+              "text": "Plans need stretching breaks.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -420,12 +735,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GAME and press Send to keep going!",
-          "target_display": "GAME",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "game"
+            "cool"
           ],
-          "hint_wrong": "Type the word GAME (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -433,19 +748,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about idea to plan.",
           "options": [
             {
-              "text": "Plans break a big idea into doable bits.",
+              "text": "An idea is a wish for a thing.",
               "correct": false
             },
             {
-              "text": "A plan starts with the smallest first step.",
+              "text": "Break a big idea into smaller ones until each fits in one sentence.",
               "correct": false
             },
             {
-              "text": "Ideas always ship by themselves at midnight.",
+              "text": "Writing the plan uses up the idea.",
               "correct": true
             },
             {
-              "text": "A plan is the steps to make it.",
+              "text": "Plans help us not get lost.",
               "correct": false
             }
           ],
@@ -455,19 +770,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about idea to plan.",
           "options": [
             {
-              "text": "Ideas without plans rarely ship.",
+              "text": "Going from idea to plan turns dreams into doable steps.",
               "correct": false
             },
             {
-              "text": "A plan is bad luck and brings tiny clouds.",
+              "text": "Plans must be at least 10 pages.",
               "correct": true
             },
             {
-              "text": "Plans break a big idea into doable bits.",
+              "text": "An idea is a wish for a thing.",
               "correct": false
             },
             {
-              "text": "A plan is the steps to make it.",
+              "text": "A plan with 5 small steps beats an idea with no steps.",
               "correct": false
             }
           ],
@@ -477,19 +792,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about idea to plan.",
           "options": [
             {
-              "text": "A plan is the steps to make it.",
+              "text": "Plans help us not get lost.",
               "correct": false
             },
             {
-              "text": "Plans break a big idea into doable bits.",
+              "text": "Break a big idea into smaller ones until each fits in one sentence.",
               "correct": false
             },
             {
-              "text": "Plans must be carved on bread.",
+              "text": "Plans only work if signed by a wizard.",
               "correct": true
             },
             {
-              "text": "Plans help us not get lost.",
+              "text": "An idea is a wish for a thing.",
               "correct": false
             }
           ],
@@ -499,11 +814,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about idea to plan.",
           "options": [
             {
+              "text": "Plans break a big idea into doable bits.",
+              "correct": false
+            },
+            {
+              "text": "Going from idea to plan turns dreams into doable steps.",
+              "correct": false
+            },
+            {
+              "text": "An idea is the same as a plan in a wig.",
+              "correct": true
+            },
+            {
+              "text": "Ideas without plans rarely ship.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_42_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
               "text": "Sharing the plan invites help.",
               "correct": false
             },
             {
+              "text": "Plans can change as we learn.",
+              "correct": false
+            },
+            {
+              "text": "Break a big idea into smaller ones until each fits in one sentence.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help — they are paperweights.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_42_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "A plan with 5 small steps beats an idea with no steps.",
+              "correct": false
+            },
+            {
+              "text": "Plans must never change, even if wrong.",
+              "correct": true
+            },
+            {
+              "text": "Write your idea down first -- even one sentence helps.",
+              "correct": false
+            },
+            {
               "text": "Plans break a big idea into doable bits.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "Going from idea to plan turns dreams into doable steps.",
+              "correct": false
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves at midnight.",
+              "correct": true
+            },
+            {
+              "text": "Plans help us not get lost.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the plan invites help.",
+              "correct": false
+            },
+            {
+              "text": "A plan with 5 small steps beats an idea with no steps.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck and brings tiny clouds.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "Plans must be carved on bread.",
+              "correct": true
+            },
+            {
+              "text": "Plans help us not get lost.",
+              "correct": false
+            },
+            {
+              "text": "A plan starts with the smallest first step.",
+              "correct": false
+            },
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about idea to plan.",
+          "options": [
+            {
+              "text": "Write your idea down first -- even one sentence helps.",
               "correct": false
             },
             {
@@ -511,33 +950,14 @@
               "correct": true
             },
             {
-              "text": "A plan starts with the smallest first step.",
+              "text": "Ideas without plans rarely ship.",
+              "correct": false
+            },
+            {
+              "text": "Break a big idea into smaller ones until each fits in one sentence.",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_42_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about idea to plan.",
-          "options": [
-            {
-              "text": "Plans break a big idea into doable bits.",
-              "correct": false
-            },
-            {
-              "text": "Sharing the plan invites help.",
-              "correct": false
-            },
-            {
-              "text": "Plans help us not get lost.",
-              "correct": false
-            },
-            {
-              "text": "Plans must have a chapter on dragons.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_42_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -546,12 +966,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type CODE and press Send to keep going!",
-          "target_display": "CODE",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "code"
+            "next"
           ],
-          "hint_wrong": "Type the word CODE (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -559,19 +979,19 @@
           "prompt": "Tell me — Which one is TRUE about idea to plan?",
           "options": [
             {
+              "text": "Plans must never change, even if wrong.",
+              "correct": false
+            },
+            {
+              "text": "Plans must be at least 10 pages.",
+              "correct": false
+            },
+            {
               "text": "An idea is the same as a plan in a wig.",
               "correct": false
             },
             {
-              "text": "Plans never help — they are paperweights.",
-              "correct": false
-            },
-            {
-              "text": "Plans must be carved on bread.",
-              "correct": false
-            },
-            {
-              "text": "Ideas without plans rarely ship.",
+              "text": "An idea is a wish for a thing.",
               "correct": true
             }
           ],
@@ -589,11 +1009,11 @@
               "correct": false
             },
             {
-              "text": "A plan starts with the smallest first step.",
+              "text": "A plan is the steps to make it.",
               "correct": true
             },
             {
-              "text": "Ideas always ship by themselves at midnight.",
+              "text": "Plans are for chickens -- real coders just type.",
               "correct": false
             }
           ],
@@ -603,27 +1023,121 @@
           "prompt": "Pop quiz! Which one is TRUE about idea to plan?",
           "options": [
             {
-              "text": "Plans break a big idea into doable bits.",
+              "text": "Plans help us not get lost.",
               "correct": true
             },
             {
-              "text": "An idea is the same as a plan in a wig.",
-              "correct": false
-            },
-            {
-              "text": "Ideas always ship by themselves at midnight.",
-              "correct": false
-            },
-            {
               "text": "A plan is bad luck and brings tiny clouds.",
+              "correct": false
+            },
+            {
+              "text": "Plans must have a chapter on dragons.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help — they are paperweights.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "Writing the plan uses up the idea.",
+              "correct": false
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": true
+            },
+            {
+              "text": "Plans are for chickens -- real coders just type.",
+              "correct": false
+            },
+            {
+              "text": "Plans must have a chapter on dragons.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_42_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "Ideas without plans rarely ship.",
+              "correct": true
+            },
+            {
+              "text": "Each plan needs a pet.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck and brings tiny clouds.",
+              "correct": false
+            },
+            {
+              "text": "Plans only work if signed by a wizard.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_42_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "A plan starts with the smallest first step.",
+              "correct": true
+            },
+            {
+              "text": "Each plan needs a pet.",
+              "correct": false
+            },
+            {
+              "text": "An idea is the same as a plan in a wig.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help — they are paperweights.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "Ideas always ship by themselves at midnight.",
+              "correct": false
+            },
+            {
+              "text": "An idea is the same as a plan in a wig.",
+              "correct": false
+            },
+            {
+              "text": "Plans break a big idea into doable bits.",
+              "correct": true
+            },
+            {
+              "text": "Plans must never change, even if wrong.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about idea to plan?",
           "options": [
+            {
+              "text": "An idea is the same as a plan in a wig.",
+              "correct": false
+            },
+            {
+              "text": "Each plan needs a pet.",
+              "correct": false
+            },
             {
               "text": "A plan is bad luck and brings tiny clouds.",
               "correct": false
@@ -631,39 +1145,50 @@
             {
               "text": "Sharing the plan invites help.",
               "correct": true
-            },
-            {
-              "text": "An idea is the same as a plan in a wig.",
-              "correct": false
-            },
-            {
-              "text": "Plans must be carved on bread.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_42_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about idea to plan?",
           "options": [
             {
-              "text": "An idea is a wish for a thing.",
+              "text": "Plans only work if signed by a wizard.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves at midnight.",
+              "correct": false
+            },
+            {
+              "text": "A plan is bad luck and brings tiny clouds.",
+              "correct": false
+            },
+            {
+              "text": "Going from idea to plan turns dreams into doable steps.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about idea to plan?",
+          "options": [
+            {
+              "text": "Writing the plan uses up the idea.",
+              "correct": false
+            },
+            {
+              "text": "Plans must be at least 10 pages.",
+              "correct": false
             },
             {
               "text": "Plans never help — they are paperweights.",
               "correct": false
             },
             {
-              "text": "Plans must be carved on bread.",
-              "correct": false
-            },
-            {
-              "text": "Ideas always ship by themselves at midnight.",
-              "correct": false
+              "text": "Write your idea down first -- even one sentence helps.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_42_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -672,124 +1197,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "prompt": "Your idea: 'Make a pet game.' First step to turn it into a plan?",
           "options": [
             {
-              "text": "Sharing the plan invites help.",
+              "text": "Wait 1 year for inspiration.",
               "correct": false
             },
             {
-              "text": "Plans break a big idea into doable bits.",
-              "correct": false
-            },
-            {
-              "text": "Plans must be carved on bread.",
+              "text": "Write down what kind of pet, then what it can do.",
               "correct": true
             },
             {
-              "text": "An idea is a wish for a thing.",
+              "text": "Just start typing code with closed eyes.",
+              "correct": false
+            },
+            {
+              "text": "Tell only one person, then forget it.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "prompt": "Quick! Your idea: 'Make a pet game.' First step to turn it into a plan?",
           "options": [
             {
-              "text": "Plans help us not get lost.",
+              "text": "Wait 1 year for inspiration.",
               "correct": false
             },
             {
-              "text": "Sharing the plan invites help.",
+              "text": "Just start typing code with closed eyes.",
               "correct": false
             },
             {
-              "text": "Each plan needs a pet.",
+              "text": "Write down what kind of pet, then what it can do.",
               "correct": true
             },
             {
-              "text": "A plan is the steps to make it.",
+              "text": "Tell only one person, then forget it.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — Your idea: 'Make a pet game.' First step to turn it into a plan?",
           "options": [
             {
-              "text": "Plans can change as we learn.",
+              "text": "Just start typing code with closed eyes.",
               "correct": false
             },
             {
-              "text": "Plans must have a chapter on dragons.",
+              "text": "Wait 1 year for inspiration.",
+              "correct": false
+            },
+            {
+              "text": "Write down what kind of pet, then what it can do.",
               "correct": true
             },
             {
-              "text": "Sharing the plan invites help.",
-              "correct": false
-            },
-            {
-              "text": "An idea is a wish for a thing.",
+              "text": "Tell only one person, then forget it.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: Your idea: 'Make a pet game.' First step to turn it into a plan?",
           "options": [
             {
-              "text": "An idea is a wish for a thing.",
+              "text": "Tell only one person, then forget it.",
               "correct": false
             },
             {
-              "text": "A plan is the steps to make it.",
+              "text": "Wait 1 year for inspiration.",
               "correct": false
             },
             {
-              "text": "A plan starts with the smallest first step.",
-              "correct": false
-            },
-            {
-              "text": "An idea is the same as a plan in a wig.",
+              "text": "Write down what kind of pet, then what it can do.",
               "correct": true
+            },
+            {
+              "text": "Just start typing code with closed eyes.",
+              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "prompt": "Tell me — Your idea: 'Make a pet game.' First step to turn it into a plan?",
           "options": [
             {
-              "text": "Plans never help — they are paperweights.",
+              "text": "Wait 1 year for inspiration.",
+              "correct": false
+            },
+            {
+              "text": "Write down what kind of pet, then what it can do.",
               "correct": true
             },
             {
-              "text": "Plans break a big idea into doable bits.",
+              "text": "Tell only one person, then forget it.",
               "correct": false
             },
             {
-              "text": "An idea is a wish for a thing.",
-              "correct": false
-            },
-            {
-              "text": "A plan starts with the smallest first step.",
+              "text": "Just start typing code with closed eyes.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Your idea: 'Make a pet game.' First step to turn it into a plan?",
+          "options": [
+            {
+              "text": "Write down what kind of pet, then what it can do.",
+              "correct": true
+            },
+            {
+              "text": "Just start typing code with closed eyes.",
+              "correct": false
+            },
+            {
+              "text": "Wait 1 year for inspiration.",
+              "correct": false
+            },
+            {
+              "text": "Tell only one person, then forget it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Your idea: 'Make a pet game.' First step to turn it into a plan?",
+          "options": [
+            {
+              "text": "Write down what kind of pet, then what it can do.",
+              "correct": true
+            },
+            {
+              "text": "Tell only one person, then forget it.",
+              "correct": false
+            },
+            {
+              "text": "Wait 1 year for inspiration.",
+              "correct": false
+            },
+            {
+              "text": "Just start typing code with closed eyes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Your idea: 'Make a pet game.' First step to turn it into a plan?",
+          "options": [
+            {
+              "text": "Write down what kind of pet, then what it can do.",
+              "correct": true
+            },
+            {
+              "text": "Tell only one person, then forget it.",
+              "correct": false
+            },
+            {
+              "text": "Just start typing code with closed eyes.",
+              "correct": false
+            },
+            {
+              "text": "Wait 1 year for inspiration.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Your idea: 'Make a pet game.' First step to turn it into a plan?",
+          "options": [
+            {
+              "text": "Tell only one person, then forget it.",
+              "correct": false
+            },
+            {
+              "text": "Wait 1 year for inspiration.",
+              "correct": false
+            },
+            {
+              "text": "Write down what kind of pet, then what it can do.",
+              "correct": true
+            },
+            {
+              "text": "Just start typing code with closed eyes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Your idea: 'Make a pet game.' First step to turn it into a plan?",
+          "options": [
+            {
+              "text": "Just start typing code with closed eyes.",
+              "correct": false
+            },
+            {
+              "text": "Tell only one person, then forget it.",
+              "correct": false
+            },
+            {
+              "text": "Write down what kind of pet, then what it can do.",
+              "correct": true
+            },
+            {
+              "text": "Wait 1 year for inspiration.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -798,124 +1428,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type JUMP and press Send to keep going!",
-          "target_display": "JUMP",
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
           "targets": [
-            "jump"
+            "play"
           ],
-          "hint_wrong": "Type the word JUMP (any case is fine)."
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Pop quiz! Which rule about idea to plan is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about idea to plan. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Plans break a big idea into doable bits.",
+              "text": "Each plan needs a pet.",
               "correct": true
             },
             {
-              "text": "A plan is bad luck and brings tiny clouds.",
+              "text": "A plan is the steps to make it.",
               "correct": false
             },
             {
-              "text": "Plans must be carved on bread.",
+              "text": "Going from idea to plan turns dreams into doable steps.",
               "correct": false
             },
             {
-              "text": "An idea is the same as a plan in a wig.",
+              "text": "A plan with 5 small steps beats an idea with no steps.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q7_v0.wav"
         },
         {
-          "prompt": "Which rule about idea to plan is a GOOD rule?",
+          "prompt": "Listen up — Bytey claims something about idea to plan. Pick the SILLIEST claim.",
           "options": [
             {
+              "text": "An idea is a wish for a thing.",
+              "correct": false
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": false
+            },
+            {
+              "text": "Plans help us not get lost.",
+              "correct": false
+            },
+            {
               "text": "Plans must have a chapter on dragons.",
-              "correct": false
-            },
-            {
-              "text": "Each plan needs a pet.",
-              "correct": false
-            },
-            {
-              "text": "Plans must never change, even if wrong.",
-              "correct": false
-            },
-            {
-              "text": "Sharing the plan invites help.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q7_v1.wav"
         },
         {
-          "prompt": "Quick! Which rule about idea to plan is a GOOD rule?",
+          "prompt": "Here's a thinker: Bytey claims something about idea to plan. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Plans must be carved on bread.",
+              "text": "Plans break a big idea into doable bits.",
               "correct": false
             },
             {
-              "text": "Ideas always ship by themselves at midnight.",
+              "text": "A plan with 5 small steps beats an idea with no steps.",
               "correct": false
             },
             {
-              "text": "A plan is bad luck and brings tiny clouds.",
+              "text": "Write your idea down first -- even one sentence helps.",
               "correct": false
             },
             {
-              "text": "An idea is a wish for a thing.",
+              "text": "Plans are for chickens -- real coders just type.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q7_v2.wav"
         },
         {
-          "prompt": "Hey friend — Which rule about idea to plan is a GOOD rule?",
+          "prompt": "OK quick one: Bytey claims something about idea to plan. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Plans must have a chapter on dragons.",
+              "text": "A plan is the steps to make it.",
               "correct": false
             },
             {
-              "text": "A plan is the steps to make it.",
+              "text": "Writing the plan uses up the idea.",
               "correct": true
             },
             {
-              "text": "A plan is bad luck and brings tiny clouds.",
+              "text": "Plans break a big idea into doable bits.",
               "correct": false
             },
             {
-              "text": "Each plan needs a pet.",
+              "text": "Ideas without plans rarely ship.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q7_v3.wav"
         },
         {
-          "prompt": "Bytey wonders: Which rule about idea to plan is a GOOD rule?",
+          "prompt": "Hmm... Bytey claims something about idea to plan. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Plans never help — they are paperweights.",
+              "text": "Break a big idea into smaller ones until each fits in one sentence.",
               "correct": false
             },
             {
-              "text": "Plans help us not get lost.",
+              "text": "Plans must be at least 10 pages.",
               "correct": true
             },
             {
-              "text": "Ideas always ship by themselves at midnight.",
+              "text": "An idea is a wish for a thing.",
               "correct": false
             },
             {
-              "text": "An idea is the same as a plan in a wig.",
+              "text": "Going from idea to plan turns dreams into doable steps.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_42_q7_v4.wav"
+        },
+        {
+          "prompt": "Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A plan starts with the smallest first step.",
+              "correct": false
+            },
+            {
+              "text": "Plans only work if signed by a wizard.",
+              "correct": true
+            },
+            {
+              "text": "Going from idea to plan turns dreams into doable steps.",
+              "correct": false
+            },
+            {
+              "text": "Sharing the plan invites help.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Plans help us not get lost.",
+              "correct": false
+            },
+            {
+              "text": "An idea is the same as a plan in a wig.",
+              "correct": true
+            },
+            {
+              "text": "Plans break a big idea into doable bits.",
+              "correct": false
+            },
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Plans break a big idea into doable bits.",
+              "correct": false
+            },
+            {
+              "text": "A plan is the steps to make it.",
+              "correct": false
+            },
+            {
+              "text": "Plans never help — they are paperweights.",
+              "correct": true
+            },
+            {
+              "text": "Plans can change as we learn.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Plans must never change, even if wrong.",
+              "correct": true
+            },
+            {
+              "text": "An idea is a wish for a thing.",
+              "correct": false
+            },
+            {
+              "text": "A plan with 5 small steps beats an idea with no steps.",
+              "correct": false
+            },
+            {
+              "text": "Plans break a big idea into doable bits.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey claims something about idea to plan. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Plans help us not get lost.",
+              "correct": false
+            },
+            {
+              "text": "A plan starts with the smallest first step.",
+              "correct": false
+            },
+            {
+              "text": "Ideas always ship by themselves at midnight.",
+              "correct": true
+            },
+            {
+              "text": "Plans break a big idea into doable bits.",
+              "correct": false
+            }
+          ]
         }
       ]
     }

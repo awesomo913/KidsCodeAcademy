@@ -1204,7 +1204,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
       </div>
 
       <div class="parent-pane" data-pane="transcripts">
-        <p class="muted">What your kid typed to the pretend AI helpers.</p>
+        <p class="muted">What your kid typed to the AI helpers.</p>
         <div id="parentTranscripts" class="transcript-box muted"><em>No conversations yet.</em></div>
       </div>
 
@@ -2838,16 +2838,14 @@ const ToolSimulator = {
 
   build(lesson, helper) {
     const wrap = el("div", { class: "tool-skin tool-" + helper + " collapsed" });
-    // Persistent "pretend mode" chip — non-dismissible
-    const chip = el("div", { class: "pretend-chip" }, "✨ Pretend mode — not real internet");
-    wrap.appendChild(chip);
-    // Tool header
+    const name = this.TITLE[helper] || helper;
+    // Tool header — just the helper's name, no "pretend" qualifier
     const header = el("div", { class: "tool-header" });
     header.appendChild(el("span", { class: "tool-glyph" }, this.GLYPH[helper] || "•"));
-    header.appendChild(el("span", { class: "tool-title" }, "Pretend " + (this.TITLE[helper] || helper)));
+    header.appendChild(el("span", { class: "tool-title" }, name));
     wrap.appendChild(header);
     // Toggle button — hidden until expanded
-    const toggle = el("button", { class: "tool-toggle" }, "Try the pretend helper!");
+    const toggle = el("button", { class: "tool-toggle" }, "Open " + name);
     wrap.appendChild(toggle);
     // The chat itself (built by existing UI.buildChat)
     const chat = UI.buildChat(lesson);
@@ -2864,11 +2862,11 @@ const ToolSimulator = {
       open = !open;
       if (open) {
         wrap.classList.remove("collapsed");
-        toggle.textContent = "Hide the pretend helper";
-        speakText("This is pretend " + (this.TITLE[helper] || helper) + " — let's play!");
+        toggle.textContent = "Hide " + name;
+        speakText("Hi! I'm " + name + " — let's go!");
       } else {
         wrap.classList.add("collapsed");
-        toggle.textContent = "Try the pretend helper!";
+        toggle.textContent = "Open " + name;
       }
     });
     return wrap;
@@ -3676,7 +3674,7 @@ const KidGame = {
 
     /* cursor-mini (lesson 45): pretend Cursor request "make jump higher" → diff. */
     "cursor-mini"(host, p, done) {
-      host.appendChild(el("h3", null, p.prompt || "Ask pretend Cursor for a feature!"));
+      host.appendChild(el("h3", null, p.prompt || "Ask Cursor for a feature!"));
       host.appendChild(el("p", { class: "muted" }, "Type one of: 'make jump higher', 'change color to blue', 'rename hero to bytey'"));
       const inp = el("input", { type: "text", placeholder: "Type your feature request…", maxlength: "80", style: { width: "100%", padding: "10px", fontSize: "16px", marginTop: "10px" } });
       const btn = el("button", { class: "btn-big", style: { marginTop: "8px" } }, "Send");
@@ -6126,7 +6124,7 @@ const UI = {
     const svgStage = el("div", { class: "svg-stage" });
     wrap.appendChild(svgStage);
     const hint = el("div", { class: "muted", style: { fontSize: "14px" } },
-      String(lesson.sandbox.hint || "Try a prompt — the helper has pretend answers ready!"));
+      String(lesson.sandbox.hint || "Try a prompt — the helper is ready to answer!"));
     wrap.appendChild(hint);
 
     let helper = String(lesson.sandbox.helpers[0]);

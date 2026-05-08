@@ -86,11 +86,11 @@
           "prompt": "What is picking the helper?",
           "options": [
             {
-              "text": "Each helper only does one thing: shout the alphabet.",
+              "text": "Pick the helper that's closest to your house.",
               "correct": false
             },
             {
-              "text": "All helpers are exactly the same little robot.",
+              "text": "Pick a helper by smell only.",
               "correct": false
             },
             {
@@ -108,7 +108,7 @@
           "prompt": "Quick! Which one is TRUE about picking the helper?",
           "options": [
             {
-              "text": "Pick the helper that has the longest beard.",
+              "text": "Never switch helpers, ever, it is the law.",
               "correct": false
             },
             {
@@ -120,7 +120,7 @@
               "correct": false
             },
             {
-              "text": "Pick a helper by smell only.",
+              "text": "Never use the same helper twice in one day.",
               "correct": false
             }
           ],
@@ -130,11 +130,11 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about picking the helper.",
           "options": [
             {
-              "text": "Practice helps you know which to pick.",
+              "text": "Different helpers are good at different jobs.",
               "correct": false
             },
             {
-              "text": "It's fine to switch mid-task if you need to.",
+              "text": "Practice helps you know which to pick.",
               "correct": false
             },
             {
@@ -142,7 +142,7 @@
               "correct": true
             },
             {
-              "text": "Different helpers are good at different jobs.",
+              "text": "The cheapest helper that works is usually right.",
               "correct": false
             }
           ],
@@ -152,11 +152,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about picking the helper. What should he say?",
           "options": [
             {
-              "text": "Helpers only work on rainy days and yawn otherwise.",
+              "text": "Never use the same helper twice in one day.",
               "correct": false
             },
             {
-              "text": "Never switch helpers, ever, it is the law.",
+              "text": "Helpers only work on rainy days and yawn otherwise.",
               "correct": false
             },
             {
@@ -164,7 +164,7 @@
               "correct": true
             },
             {
-              "text": "The helper picks YOU based on your shoes.",
+              "text": "All helpers are exactly the same little robot.",
               "correct": false
             }
           ],
@@ -174,11 +174,11 @@
           "prompt": "Tell me — Which rule about picking the helper is a GOOD rule?",
           "options": [
             {
-              "text": "Helpers only work on rainy days and yawn otherwise.",
+              "text": "Pick the helper that's closest to your house.",
               "correct": false
             },
             {
-              "text": "Each helper only does one thing: shout the alphabet.",
+              "text": "Never switch helpers, ever, it is the law.",
               "correct": false
             },
             {
@@ -186,11 +186,116 @@
               "correct": true
             },
             {
-              "text": "Never switch helpers, ever, it is the law.",
+              "text": "Helpers only work on rainy days and yawn otherwise.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q1_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Fill in the blank: when we talk about picking the helper, ___",
+          "options": [
+            {
+              "text": "Each helper only does one thing: shout the alphabet.",
+              "correct": false
+            },
+            {
+              "text": "Some helpers are great at code, others at words.",
+              "correct": true
+            },
+            {
+              "text": "Always use the helper with the prettiest icon.",
+              "correct": false
+            },
+            {
+              "text": "The helper picks YOU based on your shoes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about picking the helper. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": false
+            },
+            {
+              "text": "Tell the helper what success looks like.",
+              "correct": false
+            },
+            {
+              "text": "Helpers must be picked by a coin made of jelly.",
+              "correct": true
+            },
+            {
+              "text": "Some helpers are great at code, others at words.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — What WOULD really happen with picking the helper?",
+          "options": [
+            {
+              "text": "All helpers are exactly the same little robot.",
+              "correct": false
+            },
+            {
+              "text": "Pick the helper that has the longest beard.",
+              "correct": false
+            },
+            {
+              "text": "The cheapest helper that works is usually right.",
+              "correct": true
+            },
+            {
+              "text": "Helpers only work on rainy days and yawn otherwise.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: One of these about picking the helper is silly. Pick the silly one!",
+          "options": [
+            {
+              "text": "Different helpers are good at different things.",
+              "correct": false
+            },
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": false
+            },
+            {
+              "text": "Some helpers are great at code, others at words.",
+              "correct": false
+            },
+            {
+              "text": "Always use the helper with the prettiest icon.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Bytey is confused about picking the helper. Which fact would help him?",
+          "options": [
+            {
+              "text": "Pick the helper that matches what you're trying to do.",
+              "correct": true
+            },
+            {
+              "text": "Pick the helper that has the longest beard.",
+              "correct": false
+            },
+            {
+              "text": "Helpers must be picked by a coin made of jelly.",
+              "correct": false
+            },
+            {
+              "text": "Never switch helpers, ever, it is the law.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -199,12 +304,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SPACE and press Send to keep going!",
-          "target_display": "SPACE",
+          "prompt": "Type YES and press Send to keep going!",
+          "target_display": "YES",
           "targets": [
-            "space"
+            "yes"
           ],
-          "hint_wrong": "Type the word SPACE (any case is fine)."
+          "hint_wrong": "Type the word YES (any case is fine)."
         }
       },
       "variations": [
@@ -317,6 +422,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q2_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You want to write a poem about a tired pigeon. Which helper might be best?",
+          "options": [
+            {
+              "text": "A trumpet — it announces the poem.",
+              "correct": false
+            },
+            {
+              "text": "A robot vacuum — it dusts the words clean.",
+              "correct": false
+            },
+            {
+              "text": "A word helper like Claude — it's good at writing.",
+              "correct": true
+            },
+            {
+              "text": "A flashlight — it shines on the page.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You want to write a poem about a tired pigeon. Which helper might be best?",
+          "options": [
+            {
+              "text": "A robot vacuum — it dusts the words clean.",
+              "correct": false
+            },
+            {
+              "text": "A trumpet — it announces the poem.",
+              "correct": false
+            },
+            {
+              "text": "A flashlight — it shines on the page.",
+              "correct": false
+            },
+            {
+              "text": "A word helper like Claude — it's good at writing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You want to write a poem about a tired pigeon. Which helper might be best?",
+          "options": [
+            {
+              "text": "A flashlight — it shines on the page.",
+              "correct": false
+            },
+            {
+              "text": "A robot vacuum — it dusts the words clean.",
+              "correct": false
+            },
+            {
+              "text": "A trumpet — it announces the poem.",
+              "correct": false
+            },
+            {
+              "text": "A word helper like Claude — it's good at writing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You want to write a poem about a tired pigeon. Which helper might be best?",
+          "options": [
+            {
+              "text": "A trumpet — it announces the poem.",
+              "correct": false
+            },
+            {
+              "text": "A flashlight — it shines on the page.",
+              "correct": false
+            },
+            {
+              "text": "A robot vacuum — it dusts the words clean.",
+              "correct": false
+            },
+            {
+              "text": "A word helper like Claude — it's good at writing.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You want to write a poem about a tired pigeon. Which helper might be best?",
+          "options": [
+            {
+              "text": "A robot vacuum — it dusts the words clean.",
+              "correct": false
+            },
+            {
+              "text": "A flashlight — it shines on the page.",
+              "correct": false
+            },
+            {
+              "text": "A trumpet — it announces the poem.",
+              "correct": false
+            },
+            {
+              "text": "A word helper like Claude — it's good at writing.",
+              "correct": true
+            }
+          ]
         }
       ]
     },
@@ -325,12 +535,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the next question.",
-          "target_display": "GO",
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
           "targets": [
-            "go"
+            "fun"
           ],
-          "hint_wrong": "Type the word GO and press Send."
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -443,6 +653,111 @@
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q3_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — Helper A keeps giving wrong code. What's the smart move?",
+          "options": [
+            {
+              "text": "Beg Helper A and bring it gifts.",
+              "correct": false
+            },
+            {
+              "text": "Yell at the screen until A apologizes.",
+              "correct": false
+            },
+            {
+              "text": "Throw the laptop into a lake.",
+              "correct": false
+            },
+            {
+              "text": "Try Helper B and see if it does better.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Helper A keeps giving wrong code. What's the smart move?",
+          "options": [
+            {
+              "text": "Yell at the screen until A apologizes.",
+              "correct": false
+            },
+            {
+              "text": "Throw the laptop into a lake.",
+              "correct": false
+            },
+            {
+              "text": "Beg Helper A and bring it gifts.",
+              "correct": false
+            },
+            {
+              "text": "Try Helper B and see if it does better.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — Helper A keeps giving wrong code. What's the smart move?",
+          "options": [
+            {
+              "text": "Yell at the screen until A apologizes.",
+              "correct": false
+            },
+            {
+              "text": "Beg Helper A and bring it gifts.",
+              "correct": false
+            },
+            {
+              "text": "Throw the laptop into a lake.",
+              "correct": false
+            },
+            {
+              "text": "Try Helper B and see if it does better.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: Helper A keeps giving wrong code. What's the smart move?",
+          "options": [
+            {
+              "text": "Beg Helper A and bring it gifts.",
+              "correct": false
+            },
+            {
+              "text": "Yell at the screen until A apologizes.",
+              "correct": false
+            },
+            {
+              "text": "Try Helper B and see if it does better.",
+              "correct": true
+            },
+            {
+              "text": "Throw the laptop into a lake.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: Helper A keeps giving wrong code. What's the smart move?",
+          "options": [
+            {
+              "text": "Yell at the screen until A apologizes.",
+              "correct": false
+            },
+            {
+              "text": "Try Helper B and see if it does better.",
+              "correct": true
+            },
+            {
+              "text": "Beg Helper A and bring it gifts.",
+              "correct": false
+            },
+            {
+              "text": "Throw the laptop into a lake.",
+              "correct": false
+            }
+          ]
         }
       ]
     },
@@ -451,12 +766,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type POWER and press Send to keep going!",
-          "target_display": "POWER",
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
           "targets": [
-            "power"
+            "cool"
           ],
-          "hint_wrong": "Type the word POWER (any case is fine)."
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -464,19 +779,19 @@
           "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about picking the helper.",
           "options": [
             {
-              "text": "It's fine to switch mid-task if you need to.",
+              "text": "Different helpers are good at different jobs.",
               "correct": false
             },
             {
-              "text": "Some helpers are great at code, others at words.",
+              "text": "If one helper isn't getting it, try a different one!",
               "correct": false
             },
             {
-              "text": "The helper picks YOU based on your shoes.",
+              "text": "Pick the helper that's closest to your house.",
               "correct": true
             },
             {
-              "text": "Pick a helper that fits the task.",
+              "text": "If one helper is stuck, ask another.",
               "correct": false
             }
           ],
@@ -486,19 +801,19 @@
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about picking the helper.",
           "options": [
             {
-              "text": "Tell the helper what success looks like.",
+              "text": "Different helpers are good at different things.",
               "correct": false
             },
             {
-              "text": "Helpers only work on rainy days and yawn otherwise.",
+              "text": "Never use the same helper twice in one day.",
               "correct": true
             },
             {
-              "text": "It's fine to switch mid-task if you need to.",
+              "text": "Different helpers are good at different jobs.",
               "correct": false
             },
             {
-              "text": "Pick a helper that fits the task.",
+              "text": "Some helpers are fast, some are thoughtful -- both are useful.",
               "correct": false
             }
           ],
@@ -508,19 +823,19 @@
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about picking the helper.",
           "options": [
             {
-              "text": "Pick a helper that fits the task.",
+              "text": "If one helper is stuck, ask another.",
               "correct": false
             },
             {
-              "text": "It's fine to switch mid-task if you need to.",
+              "text": "If one helper isn't getting it, try a different one!",
               "correct": false
             },
             {
-              "text": "Pick the helper that has the longest beard.",
+              "text": "The helper with the longest name is always smartest.",
               "correct": true
             },
             {
-              "text": "If one helper is stuck, ask another.",
+              "text": "Different helpers are good at different jobs.",
               "correct": false
             }
           ],
@@ -530,11 +845,135 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about picking the helper.",
           "options": [
             {
+              "text": "It's fine to switch mid-task if you need to.",
+              "correct": false
+            },
+            {
+              "text": "Different helpers are good at different things.",
+              "correct": false
+            },
+            {
+              "text": "All helpers are exactly the same little robot.",
+              "correct": true
+            },
+            {
+              "text": "Tell the helper what success looks like.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_17_q4_v3.wav"
+        },
+        {
+          "prompt": "Listen up — One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
               "text": "The cheapest helper that works is usually right.",
               "correct": false
             },
             {
+              "text": "Practice helps you know which to pick.",
+              "correct": false
+            },
+            {
+              "text": "If one helper isn't getting it, try a different one!",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper by smell only.",
+              "correct": true
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_17_q4_v4.wav"
+        },
+        {
+          "prompt": "Here's a thinker: One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Some helpers are fast, some are thoughtful -- both are useful.",
+              "correct": false
+            },
+            {
+              "text": "Never switch helpers, ever, it is the law.",
+              "correct": true
+            },
+            {
+              "text": "Pick the helper that matches what you're trying to do.",
+              "correct": false
+            },
+            {
               "text": "It's fine to switch mid-task if you need to.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Different helpers are good at different things.",
+              "correct": false
+            },
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": false
+            },
+            {
+              "text": "The helper picks YOU based on your shoes.",
+              "correct": true
+            },
+            {
+              "text": "If one helper is stuck, ask another.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Different helpers are good at different jobs.",
+              "correct": false
+            },
+            {
+              "text": "The cheapest helper that works is usually right.",
+              "correct": false
+            },
+            {
+              "text": "Some helpers are fast, some are thoughtful -- both are useful.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only work on rainy days and yawn otherwise.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Pick the helper that has the longest beard.",
+              "correct": true
+            },
+            {
+              "text": "If one helper is stuck, ask another.",
+              "correct": false
+            },
+            {
+              "text": "Some helpers are great at code, others at words.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper that fits the task.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! One of these is silly! Pick the WRONG one about picking the helper.",
+          "options": [
+            {
+              "text": "Pick the helper that matches what you're trying to do.",
               "correct": false
             },
             {
@@ -542,33 +981,14 @@
               "correct": true
             },
             {
-              "text": "Some helpers are great at code, others at words.",
+              "text": "Tell the helper what success looks like.",
+              "correct": false
+            },
+            {
+              "text": "If one helper isn't getting it, try a different one!",
               "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_17_q4_v3.wav"
-        },
-        {
-          "prompt": "One of these is silly! Pick the WRONG one about picking the helper.",
-          "options": [
-            {
-              "text": "It's fine to switch mid-task if you need to.",
-              "correct": false
-            },
-            {
-              "text": "The cheapest helper that works is usually right.",
-              "correct": false
-            },
-            {
-              "text": "If one helper is stuck, ask another.",
-              "correct": false
-            },
-            {
-              "text": "Each helper only does one thing: shout the alphabet.",
-              "correct": true
-            }
-          ],
-          "_audio": "assets/audio/q/lesson_17_q4_v4.wav"
+          ]
         }
       ]
     },
@@ -577,12 +997,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type ROBOT and press Send to keep going!",
-          "target_display": "ROBOT",
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
           "targets": [
-            "robot"
+            "next"
           ],
-          "hint_wrong": "Type the word ROBOT (any case is fine)."
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -590,19 +1010,19 @@
           "prompt": "Tell me — Which one is TRUE about picking the helper?",
           "options": [
             {
+              "text": "Never switch helpers, ever, it is the law.",
+              "correct": false
+            },
+            {
+              "text": "Never use the same helper twice in one day.",
+              "correct": false
+            },
+            {
               "text": "All helpers are exactly the same little robot.",
               "correct": false
             },
             {
-              "text": "Pick a helper by smell only.",
-              "correct": false
-            },
-            {
-              "text": "Pick the helper that has the longest beard.",
-              "correct": false
-            },
-            {
-              "text": "Tell the helper what success looks like.",
+              "text": "Different helpers are good at different jobs.",
               "correct": true
             }
           ],
@@ -620,11 +1040,11 @@
               "correct": false
             },
             {
-              "text": "Some helpers are great at code, others at words.",
+              "text": "Pick a helper that fits the task.",
               "correct": true
             },
             {
-              "text": "The helper picks YOU based on your shoes.",
+              "text": "Always use the helper with the prettiest icon.",
               "correct": false
             }
           ],
@@ -634,27 +1054,121 @@
           "prompt": "Pop quiz! Which one is TRUE about picking the helper?",
           "options": [
             {
-              "text": "It's fine to switch mid-task if you need to.",
+              "text": "If one helper is stuck, ask another.",
               "correct": true
             },
             {
-              "text": "All helpers are exactly the same little robot.",
-              "correct": false
-            },
-            {
-              "text": "The helper picks YOU based on your shoes.",
-              "correct": false
-            },
-            {
               "text": "Helpers only work on rainy days and yawn otherwise.",
+              "correct": false
+            },
+            {
+              "text": "Each helper only does one thing: shout the alphabet.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper by smell only.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q5_v2.wav"
         },
         {
+          "prompt": "Listen up — Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "Pick the helper that's closest to your house.",
+              "correct": false
+            },
+            {
+              "text": "Practice helps you know which to pick.",
+              "correct": true
+            },
+            {
+              "text": "Always use the helper with the prettiest icon.",
+              "correct": false
+            },
+            {
+              "text": "Each helper only does one thing: shout the alphabet.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_17_q5_v3.wav"
+        },
+        {
+          "prompt": "Here's a thinker: Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "Tell the helper what success looks like.",
+              "correct": true
+            },
+            {
+              "text": "Helpers must be picked by a coin made of jelly.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only work on rainy days and yawn otherwise.",
+              "correct": false
+            },
+            {
+              "text": "The helper with the longest name is always smartest.",
+              "correct": false
+            }
+          ],
+          "_audio": "assets/audio/q/lesson_17_q5_v4.wav"
+        },
+        {
+          "prompt": "OK quick one: Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "Some helpers are great at code, others at words.",
+              "correct": true
+            },
+            {
+              "text": "Helpers must be picked by a coin made of jelly.",
+              "correct": false
+            },
+            {
+              "text": "All helpers are exactly the same little robot.",
+              "correct": false
+            },
+            {
+              "text": "Pick a helper by smell only.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hmm... Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "The helper picks YOU based on your shoes.",
+              "correct": false
+            },
+            {
+              "text": "All helpers are exactly the same little robot.",
+              "correct": false
+            },
+            {
+              "text": "It's fine to switch mid-task if you need to.",
+              "correct": true
+            },
+            {
+              "text": "Never switch helpers, ever, it is the law.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about picking the helper?",
           "options": [
+            {
+              "text": "All helpers are exactly the same little robot.",
+              "correct": false
+            },
+            {
+              "text": "Helpers must be picked by a coin made of jelly.",
+              "correct": false
+            },
             {
               "text": "Helpers only work on rainy days and yawn otherwise.",
               "correct": false
@@ -662,39 +1176,50 @@
             {
               "text": "The cheapest helper that works is usually right.",
               "correct": true
-            },
-            {
-              "text": "All helpers are exactly the same little robot.",
-              "correct": false
-            },
-            {
-              "text": "Pick the helper that has the longest beard.",
-              "correct": false
             }
-          ],
-          "_audio": "assets/audio/q/lesson_17_q5_v3.wav"
+          ]
         },
         {
           "prompt": "Quick! Which one is TRUE about picking the helper?",
           "options": [
             {
-              "text": "Different helpers are good at different jobs.",
+              "text": "The helper with the longest name is always smartest.",
+              "correct": false
+            },
+            {
+              "text": "The helper picks YOU based on your shoes.",
+              "correct": false
+            },
+            {
+              "text": "Helpers only work on rainy days and yawn otherwise.",
+              "correct": false
+            },
+            {
+              "text": "Different helpers are good at different things.",
               "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which one is TRUE about picking the helper?",
+          "options": [
+            {
+              "text": "Pick the helper that's closest to your house.",
+              "correct": false
+            },
+            {
+              "text": "Never use the same helper twice in one day.",
+              "correct": false
             },
             {
               "text": "Pick a helper by smell only.",
               "correct": false
             },
             {
-              "text": "Pick the helper that has the longest beard.",
-              "correct": false
-            },
-            {
-              "text": "The helper picks YOU based on your shoes.",
-              "correct": false
+              "text": "Pick the helper that matches what you're trying to do.",
+              "correct": true
             }
-          ],
-          "_audio": "assets/audio/q/lesson_17_q5_v4.wav"
+          ]
         }
       ]
     },
@@ -703,124 +1228,229 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
           "targets": [
-            "yes"
+            "win"
           ],
-          "hint_wrong": "Type Y E S and press Send."
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "Wait wait wait — Bytey claims something about picking the helper. Pick the SILLIEST claim.",
+          "prompt": "You want code written quickly from a description. Which helper?",
           "options": [
             {
-              "text": "The cheapest helper that works is usually right.",
+              "text": "A magic 8-ball.",
               "correct": false
             },
             {
-              "text": "It's fine to switch mid-task if you need to.",
+              "text": "A microwave.",
               "correct": false
             },
             {
-              "text": "Pick the helper that has the longest beard.",
+              "text": "Codex -- it turns words into code fast.",
               "correct": true
             },
             {
-              "text": "Different helpers are good at different jobs.",
+              "text": "A stopwatch.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q6_v0.wav"
         },
         {
-          "prompt": "Pop quiz! Bytey claims something about picking the helper. Pick the SILLIEST claim.",
+          "prompt": "Quick! You want code written quickly from a description. Which helper?",
           "options": [
             {
-              "text": "If one helper is stuck, ask another.",
+              "text": "A microwave.",
               "correct": false
             },
             {
-              "text": "The cheapest helper that works is usually right.",
+              "text": "A magic 8-ball.",
               "correct": false
             },
             {
-              "text": "Helpers must be picked by a coin made of jelly.",
+              "text": "Codex -- it turns words into code fast.",
               "correct": true
             },
             {
-              "text": "Pick a helper that fits the task.",
+              "text": "A stopwatch.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q6_v1.wav"
         },
         {
-          "prompt": "Bytey claims something about picking the helper. Pick the SILLIEST claim.",
+          "prompt": "Hey friend — You want code written quickly from a description. Which helper?",
           "options": [
             {
-              "text": "Practice helps you know which to pick.",
+              "text": "A magic 8-ball.",
               "correct": false
             },
             {
-              "text": "Each helper only does one thing: shout the alphabet.",
+              "text": "A microwave.",
+              "correct": false
+            },
+            {
+              "text": "A stopwatch.",
+              "correct": false
+            },
+            {
+              "text": "Codex -- it turns words into code fast.",
               "correct": true
-            },
-            {
-              "text": "The cheapest helper that works is usually right.",
-              "correct": false
-            },
-            {
-              "text": "Different helpers are good at different jobs.",
-              "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q6_v2.wav"
         },
         {
-          "prompt": "Quick! Bytey claims something about picking the helper. Pick the SILLIEST claim.",
+          "prompt": "Bytey wonders: You want code written quickly from a description. Which helper?",
           "options": [
             {
-              "text": "Different helpers are good at different jobs.",
+              "text": "A microwave.",
               "correct": false
             },
             {
-              "text": "Pick a helper that fits the task.",
+              "text": "A magic 8-ball.",
               "correct": false
             },
             {
-              "text": "Some helpers are great at code, others at words.",
+              "text": "A stopwatch.",
               "correct": false
             },
             {
-              "text": "All helpers are exactly the same little robot.",
+              "text": "Codex -- it turns words into code fast.",
               "correct": true
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q6_v3.wav"
         },
         {
-          "prompt": "Hey friend — Bytey claims something about picking the helper. Pick the SILLIEST claim.",
+          "prompt": "Tell me — You want code written quickly from a description. Which helper?",
           "options": [
             {
-              "text": "Pick a helper by smell only.",
+              "text": "A stopwatch.",
+              "correct": false
+            },
+            {
+              "text": "A microwave.",
+              "correct": false
+            },
+            {
+              "text": "Codex -- it turns words into code fast.",
               "correct": true
             },
             {
-              "text": "It's fine to switch mid-task if you need to.",
-              "correct": false
-            },
-            {
-              "text": "Different helpers are good at different jobs.",
-              "correct": false
-            },
-            {
-              "text": "Some helpers are great at code, others at words.",
+              "text": "A magic 8-ball.",
               "correct": false
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q6_v4.wav"
+        },
+        {
+          "prompt": "Wait wait wait — You want code written quickly from a description. Which helper?",
+          "options": [
+            {
+              "text": "A microwave.",
+              "correct": false
+            },
+            {
+              "text": "Codex -- it turns words into code fast.",
+              "correct": true
+            },
+            {
+              "text": "A magic 8-ball.",
+              "correct": false
+            },
+            {
+              "text": "A stopwatch.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! You want code written quickly from a description. Which helper?",
+          "options": [
+            {
+              "text": "A microwave.",
+              "correct": false
+            },
+            {
+              "text": "Codex -- it turns words into code fast.",
+              "correct": true
+            },
+            {
+              "text": "A magic 8-ball.",
+              "correct": false
+            },
+            {
+              "text": "A stopwatch.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Listen up — You want code written quickly from a description. Which helper?",
+          "options": [
+            {
+              "text": "Codex -- it turns words into code fast.",
+              "correct": true
+            },
+            {
+              "text": "A stopwatch.",
+              "correct": false
+            },
+            {
+              "text": "A magic 8-ball.",
+              "correct": false
+            },
+            {
+              "text": "A microwave.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Here's a thinker: You want code written quickly from a description. Which helper?",
+          "options": [
+            {
+              "text": "Codex -- it turns words into code fast.",
+              "correct": true
+            },
+            {
+              "text": "A stopwatch.",
+              "correct": false
+            },
+            {
+              "text": "A magic 8-ball.",
+              "correct": false
+            },
+            {
+              "text": "A microwave.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "OK quick one: You want code written quickly from a description. Which helper?",
+          "options": [
+            {
+              "text": "Codex -- it turns words into code fast.",
+              "correct": true
+            },
+            {
+              "text": "A magic 8-ball.",
+              "correct": false
+            },
+            {
+              "text": "A stopwatch.",
+              "correct": false
+            },
+            {
+              "text": "A microwave.",
+              "correct": false
+            }
+          ]
         }
       ]
     }
