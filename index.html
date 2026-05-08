@@ -490,6 +490,23 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 .fsm-chip:active { transform: translateY(2px); }
 .fsm-chip:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 .chat-input-zone { display: flex; flex-direction: column; gap: 8px; min-height: 56px; }
+
+/* Rare-variation badge — shown for v7-v9 (deep cut variations).
+   Fades in via .visible class so the kid notices the highlight. */
+.rare-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: linear-gradient(90deg, #ffd700, #ff5a78);
+  color: #1a1a3a;
+  border-radius: 999px;
+  font-size: 13px; font-weight: 700;
+  margin-bottom: 8px;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 320ms ease-out, transform 320ms ease-out;
+  box-shadow: 0 3px 10px rgba(255,90,120,0.3);
+}
+.rare-badge.visible { opacity: 1; transform: translateY(0); }
 /* Per-helper chip skins (each tool feels distinct) */
 .tool-claude   .fsm-chip { background: #a067ff; box-shadow: 0 4px 0 #6e3fbb; }
 .tool-claude   .fsm-chip:hover { background: #b58aff; }
@@ -3927,6 +3944,16 @@ const QuestionFlow = {
       setTimeout(onCorrect, 400);
       return;
     }
+    const vIdx = (question.variations || []).indexOf(v);
+
+    // Rare-variation badge: when kid lands on v7-v9 (deep cuts), show a
+    // "Fresh question!" badge so they know the system is varied. Visible
+    // signal that there are deeper variations to discover.
+    if (vIdx >= 7) {
+      const badge = el("div", { class: "rare-badge" }, "⭐ Fresh question!");
+      host.appendChild(badge);
+      requestAnimationFrame(() => badge.classList.add("visible"));
+    }
 
     const promptText = String(v.prompt || "Pick the best answer:");
     host.appendChild(el("h3", { class: "qprompt" }, promptText));
@@ -3950,8 +3977,10 @@ const QuestionFlow = {
         onclick: () => {
           Tracker.click();
           if (opt.correct) {
-            btn.classList.add("right");
+            // Micro-celebration: button animation + confetti burst + Bytey cheer
+            celebrateChoiceBtn(btn, String(opt.text || ""));
             Audio_.sfx("Ding");
+            try { Mascot.set("cheer", { revertAfterMs: 1000, revertTo: "idle" }); } catch (_) {}
             // Disable all buttons so a wrong second-click doesn't fire
             grid.querySelectorAll("button.choice").forEach(b => b.disabled = true);
             setTimeout(() => onCorrect(), 600);
@@ -6272,8 +6301,20 @@ const UI = {
         }
         inputZone.appendChild(chipRow);
       } else if (turn.keywords) {
+        // Spelling-assist chips: tappable shortcuts for common keywords (no
+        // typing needed). Pairs with the text input below so kids who can
+        // type get freedom; kids who can't get one-tap progress.
+        if (Array.isArray(turn.keyword_chips) && turn.keyword_chips.length) {
+          const chipRow = el("div", { class: "chip-row" });
+          for (const kw of turn.keyword_chips) {
+            const label = String(kw).slice(0, 40);
+            const chip = el("button", { class: "fsm-chip", onclick: () => advanceFsm(label) }, label);
+            chipRow.appendChild(chip);
+          }
+          inputZone.appendChild(chipRow);
+        }
         const row = el("div", { class: "chat-row" });
-        const inp = el("input", { type: "text", placeholder: "Type your answer...", maxlength: "80" });
+        const inp = el("input", { type: "text", placeholder: "Or type something...", maxlength: "80" });
         const send = el("button", { class: "btn-big" }, "Send");
         const go = () => { const v = inp.value.trim(); if (v) { inp.value = ""; advanceFsm(v); } };
         send.addEventListener("click", go);

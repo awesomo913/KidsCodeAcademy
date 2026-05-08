@@ -2177,9 +2177,9 @@ PARAPHRASES: list[str] = [
     "Wait wait wait — ",
     "Pop quiz! ",
     "Listen up — ",
-    "Here's a thinker: ",
-    "OK quick one: ",
-    "Hmm... ",
+    "Think about this: ",
+    "Got a quick one: ",
+    "Brain time: ",
 ]
 
 

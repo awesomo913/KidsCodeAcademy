@@ -105,16 +105,18 @@
       "branches": { "Haha!": "t5" }
     },
     "t5": {
-      "bot_lines": ["You just searched the web with an AI!", "Want to ask me about anything else? Just type a topic — kitten, dinosaur, planets, robot, stars... or 'done' when you're finished!"],
+      "bot_lines": ["You just searched the web with an AI!", "Want to ask me about anything else? Tap a topic below or type your own!"],
       "side_effect": { "action": "show_thinking", "steps": ["You asked", "I searched", "Here are facts!"], "duration_ms": 1800 },
-      "keywords": ["kitten", "cat", "dinosaur", "trex", "rex", "solar", "planet", "planets", "space", "robot", "star", "stars", "night", "done", "no", "thanks", "bye"],
+      "keyword_chips": ["kitten", "dinosaur", "planets", "robot", "stars", "I'm done"],
+      "keywords": ["kitten", "cat", "dinosaur", "trex", "rex", "solar", "planet", "planets", "space", "robot", "star", "stars", "night", "done", "no", "thanks", "bye", "i'm done"],
       "branches": {
         "kitten": "t6_kitten", "cat": "t6_kitten",
         "dinosaur": "t6_dino", "trex": "t6_dino", "rex": "t6_dino",
         "solar": "t6_planets", "planet": "t6_planets", "planets": "t6_planets", "space": "t6_planets",
         "robot": "t6_robot",
         "star": "t6_stars", "stars": "t6_stars", "night": "t6_stars",
-        "done": "t6_done", "no": "t6_done", "thanks": "t6_done", "bye": "t6_done"
+        "done": "t6_done", "no": "t6_done", "thanks": "t6_done", "bye": "t6_done",
+        "I'm done": "t6_done"
       },
       "fallback_turn": "t5"
     },
