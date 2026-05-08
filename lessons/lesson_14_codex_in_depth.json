@@ -22,30 +22,24 @@
     }
   },
   "game": {
-    "type": "sequence-the-steps",
+    "type": "history-scene",
     "payload": {
-      "prompt": "Order Codex's steps:",
-      "steps": [
-        "Read your wish",
-        "Write the code",
-        "Save the file",
-        "Run the code"
-      ]
+      "prompt": "Watch Codex finish your line of code!",
+      "scene": {
+        "id": "codex"
+      }
     }
   },
   "questions": [
     {
       "id": "q1",
       "interaction": {
-        "type": "sequence-the-steps",
+        "type": "history-scene",
         "payload": {
-          "prompt": "Order Codex's steps:",
-          "steps": [
-            "Read your wish",
-            "Write the code",
-            "Save the file",
-            "Run the code"
-          ]
+          "prompt": "Watch Codex finish your line of code!",
+          "scene": {
+            "id": "codex"
+          }
         }
       },
       "variations": [
@@ -53,20 +47,20 @@
           "prompt": "What is Codex in depth?",
           "options": [
             {
+              "text": "Codex must be praised before each line.",
+              "correct": false
+            },
+            {
+              "text": "Codex writes only in crayon and likes red.",
+              "correct": false
+            },
+            {
+              "text": "Codex is a real animal of unknown type.",
+              "correct": false
+            },
+            {
               "text": "Codex is a helper that is great at code.",
               "correct": true
-            },
-            {
-              "text": "Codex is a real animal.",
-              "correct": false
-            },
-            {
-              "text": "Codex writes only in crayon.",
-              "correct": false
-            },
-            {
-              "text": "Codex hates code.",
-              "correct": false
             }
           ]
         },
@@ -74,7 +68,7 @@
           "prompt": "Quick! Which one is TRUE about Codex in depth?",
           "options": [
             {
-              "text": "Codex hates code.",
+              "text": "Codex only types capital letters and shouts.",
               "correct": false
             },
             {
@@ -82,11 +76,11 @@
               "correct": true
             },
             {
-              "text": "Codex always picks the wrong answer.",
+              "text": "Codex eats the semicolons.",
               "correct": false
             },
             {
-              "text": "Codex writes only in crayon.",
+              "text": "Codex only knows ten words, all about cheese.",
               "correct": false
             }
           ]
@@ -95,19 +89,19 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
-              "text": "Codex is a helper that is great at code.",
+              "text": "Codex helps fix small bugs fast.",
               "correct": false
             },
             {
-              "text": "Codex is best when we say what we want.",
+              "text": "Codex pairs with you while you type.",
               "correct": false
             },
             {
-              "text": "Codex hates code.",
+              "text": "Codex hates code and is a poet at heart.",
               "correct": true
             },
             {
-              "text": "Codex helps fix small bugs fast.",
+              "text": "Codex is a helper that is great at code.",
               "correct": false
             }
           ]
@@ -116,7 +110,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about Codex in depth. What should he say?",
           "options": [
             {
-              "text": "Codex is a real animal.",
+              "text": "Codex is a real animal of unknown type.",
+              "correct": false
+            },
+            {
+              "text": "Codex hates code and is a poet at heart.",
               "correct": false
             },
             {
@@ -124,11 +122,7 @@
               "correct": true
             },
             {
-              "text": "Codex writes only in crayon.",
-              "correct": false
-            },
-            {
-              "text": "Codex hates code.",
+              "text": "Codex always picks the wrong answer for fun.",
               "correct": false
             }
           ]
@@ -137,19 +131,19 @@
           "prompt": "Tell me — Which rule about Codex in depth is a GOOD rule?",
           "options": [
             {
+              "text": "Codex is a real animal of unknown type.",
+              "correct": false
+            },
+            {
+              "text": "Codex must be praised before each line.",
+              "correct": false
+            },
+            {
               "text": "Codex is best when we say what we want.",
               "correct": true
             },
             {
-              "text": "Codex is a real animal.",
-              "correct": false
-            },
-            {
-              "text": "Codex hates code.",
-              "correct": false
-            },
-            {
-              "text": "Codex always picks the wrong answer.",
+              "text": "Codex hates code and is a poet at heart.",
               "correct": false
             }
           ]
@@ -180,106 +174,106 @@
       },
       "variations": [
         {
-          "prompt": "Which one is TRUE about Codex in depth?",
+          "prompt": "You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
-              "text": "Codex hates code.",
+              "text": "Codex sneezed onto the screen.",
               "correct": false
             },
             {
-              "text": "Codex can finish a line you started.",
-              "correct": true
-            },
-            {
-              "text": "Codex is a real animal.",
+              "text": "Codex guessed your name and added it.",
               "correct": false
             },
             {
-              "text": "Codex always picks the wrong answer.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Which one is TRUE about Codex in depth?",
-          "options": [
-            {
-              "text": "Codex always picks the wrong answer.",
+              "text": "Codex picked your shoe size at random.",
               "correct": false
             },
             {
-              "text": "Codex understands many programming languages.",
-              "correct": true
-            },
-            {
-              "text": "Codex only knows ten words.",
-              "correct": false
-            },
-            {
-              "text": "Codex is a real animal.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Which one is TRUE about Codex in depth?",
-          "options": [
-            {
-              "text": "Codex writes only in crayon.",
-              "correct": false
-            },
-            {
-              "text": "Codex hates code.",
-              "correct": false
-            },
-            {
-              "text": "Codex only knows ten words.",
-              "correct": false
-            },
-            {
-              "text": "Codex helps fix small bugs fast.",
+              "text": "Codex completed the line based on the pattern.",
               "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: Which one is TRUE about Codex in depth?",
+          "prompt": "Quick! You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
-              "text": "Codex always picks the wrong answer.",
+              "text": "Codex sneezed onto the screen.",
               "correct": false
             },
             {
-              "text": "Codex hates code.",
+              "text": "Codex guessed your name and added it.",
               "correct": false
             },
             {
-              "text": "Codex is best when we say what we want.",
+              "text": "Codex picked your shoe size at random.",
+              "correct": false
+            },
+            {
+              "text": "Codex completed the line based on the pattern.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
+          "options": [
+            {
+              "text": "Codex picked your shoe size at random.",
+              "correct": false
+            },
+            {
+              "text": "Codex completed the line based on the pattern.",
               "correct": true
             },
             {
-              "text": "Codex only knows ten words.",
+              "text": "Codex guessed your name and added it.",
+              "correct": false
+            },
+            {
+              "text": "Codex sneezed onto the screen.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — Which one is TRUE about Codex in depth?",
+          "prompt": "Bytey wonders: You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
-              "text": "Codex only knows ten words.",
+              "text": "Codex sneezed onto the screen.",
               "correct": false
             },
             {
-              "text": "Codex is a helper that is great at code.",
+              "text": "Codex picked your shoe size at random.",
+              "correct": false
+            },
+            {
+              "text": "Codex guessed your name and added it.",
+              "correct": false
+            },
+            {
+              "text": "Codex completed the line based on the pattern.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
+          "options": [
+            {
+              "text": "Codex picked your shoe size at random.",
+              "correct": false
+            },
+            {
+              "text": "Codex completed the line based on the pattern.",
               "correct": true
             },
             {
-              "text": "Codex hates code.",
+              "text": "Codex sneezed onto the screen.",
               "correct": false
             },
             {
-              "text": "Codex is a real animal.",
+              "text": "Codex guessed your name and added it.",
               "correct": false
             }
           ]
@@ -291,7 +285,7 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the question.",
+          "prompt": "Type GO and press Send to unlock the next question.",
           "target_display": "GO",
           "targets": [
             "go"
@@ -301,107 +295,107 @@
       },
       "variations": [
         {
-          "prompt": "One of these is silly! Pick the WRONG one about Codex in depth.",
+          "prompt": "Why is saying WHAT you want important with Codex?",
           "options": [
             {
-              "text": "Codex hates code.",
+              "text": "Codex is shy and needs encouragement.",
+              "correct": false
+            },
+            {
+              "text": "Codex charges per syllable.",
+              "correct": false
+            },
+            {
+              "text": "Otherwise Codex doesn't know what 'finish' means.",
               "correct": true
             },
             {
-              "text": "Codex helps fix small bugs fast.",
-              "correct": false
-            },
-            {
-              "text": "Codex can finish a line you started.",
-              "correct": false
-            },
-            {
-              "text": "Codex is a helper that is great at code.",
+              "text": "Codex needs the words to make a sandwich.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! One of these is silly! Pick the WRONG one about Codex in depth.",
+          "prompt": "Quick! Why is saying WHAT you want important with Codex?",
           "options": [
             {
-              "text": "Codex can finish a line you started.",
+              "text": "Codex needs the words to make a sandwich.",
               "correct": false
             },
             {
-              "text": "Codex understands many programming languages.",
-              "correct": false
-            },
-            {
-              "text": "Codex always picks the wrong answer.",
+              "text": "Otherwise Codex doesn't know what 'finish' means.",
               "correct": true
             },
             {
-              "text": "Codex is a helper that is great at code.",
+              "text": "Codex is shy and needs encouragement.",
+              "correct": false
+            },
+            {
+              "text": "Codex charges per syllable.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Codex in depth.",
+          "prompt": "Hey friend — Why is saying WHAT you want important with Codex?",
           "options": [
             {
-              "text": "Codex is a helper that is great at code.",
+              "text": "Codex is shy and needs encouragement.",
               "correct": false
             },
             {
-              "text": "Codex can finish a line you started.",
+              "text": "Otherwise Codex doesn't know what 'finish' means.",
+              "correct": true
+            },
+            {
+              "text": "Codex charges per syllable.",
               "correct": false
             },
             {
-              "text": "Codex understands many programming languages.",
+              "text": "Codex needs the words to make a sandwich.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Why is saying WHAT you want important with Codex?",
+          "options": [
+            {
+              "text": "Codex is shy and needs encouragement.",
               "correct": false
             },
             {
-              "text": "Codex is a real animal.",
+              "text": "Codex charges per syllable.",
+              "correct": false
+            },
+            {
+              "text": "Codex needs the words to make a sandwich.",
+              "correct": false
+            },
+            {
+              "text": "Otherwise Codex doesn't know what 'finish' means.",
               "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about Codex in depth.",
+          "prompt": "Tell me — Why is saying WHAT you want important with Codex?",
           "options": [
             {
-              "text": "Codex is best when we say what we want.",
+              "text": "Codex is shy and needs encouragement.",
               "correct": false
             },
             {
-              "text": "Codex helps fix small bugs fast.",
+              "text": "Codex charges per syllable.",
               "correct": false
             },
             {
-              "text": "Codex understands many programming languages.",
+              "text": "Codex needs the words to make a sandwich.",
               "correct": false
             },
             {
-              "text": "Codex writes only in crayon.",
+              "text": "Otherwise Codex doesn't know what 'finish' means.",
               "correct": true
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — One of these is silly! Pick the WRONG one about Codex in depth.",
-          "options": [
-            {
-              "text": "Codex helps fix small bugs fast.",
-              "correct": false
-            },
-            {
-              "text": "Codex only knows ten words.",
-              "correct": true
-            },
-            {
-              "text": "Codex is a helper that is great at code.",
-              "correct": false
-            },
-            {
-              "text": "Codex understands many programming languages.",
-              "correct": false
             }
           ]
         }
@@ -409,136 +403,6 @@
     },
     {
       "id": "q4",
-      "interaction": {
-        "type": "click-the-thing",
-        "payload": {
-          "prompt": "Tap the rocket to launch the question!",
-          "choices": [
-            {
-              "label": "🚀",
-              "right": true
-            },
-            {
-              "label": "🐢",
-              "right": false
-            },
-            {
-              "label": "🪨",
-              "right": false
-            }
-          ]
-        }
-      },
-      "variations": [
-        {
-          "prompt": "Bytey wants to teach a friend about Codex in depth. What should he say?",
-          "options": [
-            {
-              "text": "Codex writes only in crayon.",
-              "correct": false
-            },
-            {
-              "text": "Codex only knows ten words.",
-              "correct": false
-            },
-            {
-              "text": "Codex always picks the wrong answer.",
-              "correct": false
-            },
-            {
-              "text": "Codex helps fix small bugs fast.",
-              "correct": true
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Bytey wants to teach a friend about Codex in depth. What should he say?",
-          "options": [
-            {
-              "text": "Codex hates code.",
-              "correct": false
-            },
-            {
-              "text": "Codex is best when we say what we want.",
-              "correct": true
-            },
-            {
-              "text": "Codex is a real animal.",
-              "correct": false
-            },
-            {
-              "text": "Codex only knows ten words.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Bytey wants to teach a friend about Codex in depth. What should he say?",
-          "options": [
-            {
-              "text": "Codex only knows ten words.",
-              "correct": false
-            },
-            {
-              "text": "Codex is a real animal.",
-              "correct": false
-            },
-            {
-              "text": "Codex is a helper that is great at code.",
-              "correct": true
-            },
-            {
-              "text": "Codex hates code.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: Bytey wants to teach a friend about Codex in depth. What should he say?",
-          "options": [
-            {
-              "text": "Codex can finish a line you started.",
-              "correct": true
-            },
-            {
-              "text": "Codex writes only in crayon.",
-              "correct": false
-            },
-            {
-              "text": "Codex always picks the wrong answer.",
-              "correct": false
-            },
-            {
-              "text": "Codex is a real animal.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Bytey wants to teach a friend about Codex in depth. What should he say?",
-          "options": [
-            {
-              "text": "Codex hates code.",
-              "correct": false
-            },
-            {
-              "text": "Codex is a real animal.",
-              "correct": false
-            },
-            {
-              "text": "Codex understands many programming languages.",
-              "correct": true
-            },
-            {
-              "text": "Codex only knows ten words.",
-              "correct": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q5",
       "interaction": {
         "type": "click-the-thing",
         "payload": {
@@ -561,107 +425,237 @@
       },
       "variations": [
         {
-          "prompt": "Which rule about Codex in depth is a GOOD rule?",
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
-              "text": "Codex writes only in crayon.",
+              "text": "Codex pairs with you while you type.",
+              "correct": false
+            },
+            {
+              "text": "Codex is friendly to short, clear tasks.",
+              "correct": false
+            },
+            {
+              "text": "Codex always picks the wrong answer for fun.",
+              "correct": true
+            },
+            {
+              "text": "Codex can finish a line you started.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about Codex in depth.",
+          "options": [
+            {
+              "text": "Codex is best when we say what we want.",
+              "correct": false
+            },
+            {
+              "text": "Codex is a real animal of unknown type.",
+              "correct": true
+            },
+            {
+              "text": "Codex pairs with you while you type.",
+              "correct": false
+            },
+            {
+              "text": "Codex can finish a line you started.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about Codex in depth.",
+          "options": [
+            {
+              "text": "Codex can finish a line you started.",
+              "correct": false
+            },
+            {
+              "text": "Codex pairs with you while you type.",
+              "correct": false
+            },
+            {
+              "text": "Codex only types capital letters and shouts.",
+              "correct": true
+            },
+            {
+              "text": "Codex understands many programming languages.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about Codex in depth.",
+          "options": [
+            {
+              "text": "Codex needs a goal to be useful.",
+              "correct": false
+            },
+            {
+              "text": "Codex pairs with you while you type.",
+              "correct": false
+            },
+            {
+              "text": "Codex eats the semicolons.",
+              "correct": true
+            },
+            {
+              "text": "Codex is friendly to short, clear tasks.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about Codex in depth.",
+          "options": [
+            {
+              "text": "Codex pairs with you while you type.",
+              "correct": false
+            },
+            {
+              "text": "Codex needs a goal to be useful.",
+              "correct": false
+            },
+            {
+              "text": "Codex understands many programming languages.",
+              "correct": false
+            },
+            {
+              "text": "Codex must be praised before each line.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Tell me — Which one is TRUE about Codex in depth?",
+          "options": [
+            {
+              "text": "Codex writes only in crayon and likes red.",
+              "correct": false
+            },
+            {
+              "text": "Codex only knows ten words, all about cheese.",
+              "correct": false
+            },
+            {
+              "text": "Codex only types capital letters and shouts.",
               "correct": false
             },
             {
               "text": "Codex is best when we say what we want.",
               "correct": true
-            },
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which one is TRUE about Codex in depth?",
+          "options": [
             {
-              "text": "Codex hates code.",
+              "text": "Codex writes only in crayon and likes red.",
               "correct": false
             },
             {
-              "text": "Codex only knows ten words.",
+              "text": "Codex must be praised before each line.",
+              "correct": false
+            },
+            {
+              "text": "Codex is friendly to short, clear tasks.",
+              "correct": true
+            },
+            {
+              "text": "Codex always picks the wrong answer for fun.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! Which rule about Codex in depth is a GOOD rule?",
+          "prompt": "Pop quiz! Which one is TRUE about Codex in depth?",
           "options": [
             {
-              "text": "Codex only knows ten words.",
+              "text": "Codex pairs with you while you type.",
+              "correct": true
+            },
+            {
+              "text": "Codex writes only in crayon and likes red.",
               "correct": false
             },
+            {
+              "text": "Codex always picks the wrong answer for fun.",
+              "correct": false
+            },
+            {
+              "text": "Codex is a real animal of unknown type.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Which one is TRUE about Codex in depth?",
+          "options": [
+            {
+              "text": "Codex is a real animal of unknown type.",
+              "correct": false
+            },
+            {
+              "text": "Codex needs a goal to be useful.",
+              "correct": true
+            },
+            {
+              "text": "Codex writes only in crayon and likes red.",
+              "correct": false
+            },
+            {
+              "text": "Codex only types capital letters and shouts.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about Codex in depth?",
+          "options": [
             {
               "text": "Codex is a helper that is great at code.",
               "correct": true
             },
             {
-              "text": "Codex always picks the wrong answer.",
+              "text": "Codex only knows ten words, all about cheese.",
               "correct": false
             },
             {
-              "text": "Codex writes only in crayon.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Which rule about Codex in depth is a GOOD rule?",
-          "options": [
-            {
-              "text": "Codex always picks the wrong answer.",
+              "text": "Codex only types capital letters and shouts.",
               "correct": false
             },
             {
-              "text": "Codex only knows ten words.",
+              "text": "Codex always picks the wrong answer for fun.",
               "correct": false
-            },
-            {
-              "text": "Codex can finish a line you started.",
-              "correct": true
-            },
-            {
-              "text": "Codex writes only in crayon.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: Which rule about Codex in depth is a GOOD rule?",
-          "options": [
-            {
-              "text": "Codex understands many programming languages.",
-              "correct": true
-            },
-            {
-              "text": "Codex always picks the wrong answer.",
-              "correct": false
-            },
-            {
-              "text": "Codex hates code.",
-              "correct": false
-            },
-            {
-              "text": "Codex writes only in crayon.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Which rule about Codex in depth is a GOOD rule?",
-          "options": [
-            {
-              "text": "Codex is a real animal.",
-              "correct": false
-            },
-            {
-              "text": "Codex writes only in crayon.",
-              "correct": false
-            },
-            {
-              "text": "Codex only knows ten words.",
-              "correct": false
-            },
-            {
-              "text": "Codex helps fix small bugs fast.",
-              "correct": true
             }
           ]
         }
@@ -682,18 +676,190 @@
       },
       "variations": [
         {
-          "prompt": "What is Codex in depth?",
+          "prompt": "Wait wait wait — Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Codex writes only in crayon.",
+              "text": "Codex needs a goal to be useful.",
               "correct": false
             },
             {
-              "text": "Codex only knows ten words.",
+              "text": "Codex pairs with you while you type.",
               "correct": false
             },
             {
-              "text": "Codex always picks the wrong answer.",
+              "text": "Codex only types capital letters and shouts.",
+              "correct": true
+            },
+            {
+              "text": "Codex is a helper that is great at code.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Codex understands many programming languages.",
+              "correct": false
+            },
+            {
+              "text": "Codex needs a goal to be useful.",
+              "correct": false
+            },
+            {
+              "text": "Codex eats the semicolons.",
+              "correct": true
+            },
+            {
+              "text": "Codex can finish a line you started.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Codex helps fix small bugs fast.",
+              "correct": false
+            },
+            {
+              "text": "Codex must be praised before each line.",
+              "correct": true
+            },
+            {
+              "text": "Codex needs a goal to be useful.",
+              "correct": false
+            },
+            {
+              "text": "Codex is a helper that is great at code.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Codex is a helper that is great at code.",
+              "correct": false
+            },
+            {
+              "text": "Codex can finish a line you started.",
+              "correct": false
+            },
+            {
+              "text": "Codex is friendly to short, clear tasks.",
+              "correct": false
+            },
+            {
+              "text": "Codex writes only in crayon and likes red.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Codex only knows ten words, all about cheese.",
+              "correct": true
+            },
+            {
+              "text": "Codex pairs with you while you type.",
+              "correct": false
+            },
+            {
+              "text": "Codex is a helper that is great at code.",
+              "correct": false
+            },
+            {
+              "text": "Codex is friendly to short, clear tasks.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the orange dot to unlock the next question!",
+          "choices": [
+            {
+              "label": "🟠",
+              "right": true
+            },
+            {
+              "label": "🔵",
+              "right": false
+            },
+            {
+              "label": "🟢",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Pop quiz! Which rule about Codex in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Codex pairs with you while you type.",
+              "correct": true
+            },
+            {
+              "text": "Codex is a real animal of unknown type.",
+              "correct": false
+            },
+            {
+              "text": "Codex only types capital letters and shouts.",
+              "correct": false
+            },
+            {
+              "text": "Codex writes only in crayon and likes red.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Which rule about Codex in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Codex must be praised before each line.",
+              "correct": false
+            },
+            {
+              "text": "Codex eats the semicolons.",
+              "correct": false
+            },
+            {
+              "text": "Codex hates code and is a poet at heart.",
+              "correct": false
+            },
+            {
+              "text": "Codex needs a goal to be useful.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about Codex in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Codex only types capital letters and shouts.",
+              "correct": false
+            },
+            {
+              "text": "Codex always picks the wrong answer for fun.",
+              "correct": false
+            },
+            {
+              "text": "Codex is a real animal of unknown type.",
               "correct": false
             },
             {
@@ -703,10 +869,10 @@
           ]
         },
         {
-          "prompt": "Quick! What is Codex in depth?",
+          "prompt": "Hey friend — Which rule about Codex in depth is a GOOD rule?",
           "options": [
             {
-              "text": "Codex always picks the wrong answer.",
+              "text": "Codex must be praised before each line.",
               "correct": false
             },
             {
@@ -714,24 +880,20 @@
               "correct": true
             },
             {
-              "text": "Codex is a real animal.",
+              "text": "Codex is a real animal of unknown type.",
               "correct": false
             },
             {
-              "text": "Codex hates code.",
+              "text": "Codex eats the semicolons.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Hey friend — What is Codex in depth?",
+          "prompt": "Bytey wonders: Which rule about Codex in depth is a GOOD rule?",
           "options": [
             {
-              "text": "Codex writes only in crayon.",
-              "correct": false
-            },
-            {
-              "text": "Codex is a real animal.",
+              "text": "Codex only knows ten words, all about cheese.",
               "correct": false
             },
             {
@@ -739,49 +901,11 @@
               "correct": true
             },
             {
-              "text": "Codex hates code.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: What is Codex in depth?",
-          "options": [
-            {
-              "text": "Codex helps fix small bugs fast.",
-              "correct": true
-            },
-            {
-              "text": "Codex writes only in crayon.",
+              "text": "Codex always picks the wrong answer for fun.",
               "correct": false
             },
             {
-              "text": "Codex always picks the wrong answer.",
-              "correct": false
-            },
-            {
-              "text": "Codex is a real animal.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — What is Codex in depth?",
-          "options": [
-            {
-              "text": "Codex is a real animal.",
-              "correct": false
-            },
-            {
-              "text": "Codex is best when we say what we want.",
-              "correct": true
-            },
-            {
-              "text": "Codex always picks the wrong answer.",
-              "correct": false
-            },
-            {
-              "text": "Codex hates code.",
+              "text": "Codex writes only in crayon and likes red.",
               "correct": false
             }
           ]

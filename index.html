@@ -232,6 +232,158 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.35;
 }
 
+/* v0.6 — celebrate animations on right pick + confetti + input feedback */
+.kca-confetti {
+  position: fixed;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 4000;
+  animation: kca-confetti-fly 1100ms ease-out forwards;
+  box-shadow: 0 0 8px rgba(255,255,255,0.6);
+}
+@keyframes kca-confetti-fly {
+  0%   { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(var(--dx, 80px), var(--dy, -120px)) scale(0.3) rotate(360deg); opacity: 0; }
+}
+
+.choice.anim-fly-up      { animation: kca-fly-up 950ms cubic-bezier(.42,0,.58,1) forwards; }
+.choice.anim-spin-grow   { animation: kca-spin-grow 950ms ease-out forwards; }
+.choice.anim-heart-pulse { animation: kca-heart-pulse 950ms ease-out forwards; }
+.choice.anim-bounce-glow { animation: kca-bounce-glow 950ms ease-out forwards; }
+.choice.anim-wiggle      { animation: kca-wiggle 950ms ease-out forwards; }
+.choice.anim-pop         { animation: kca-pop 950ms ease-out forwards; }
+
+@keyframes kca-fly-up {
+  0%   { transform: translate(0, 0) rotate(0); }
+  20%  { transform: translate(0, 5px) rotate(-3deg); }
+  100% { transform: translate(0, -360px) rotate(-22deg) scale(0.6); opacity: 0; }
+}
+@keyframes kca-spin-grow {
+  0%   { transform: scale(1) rotate(0); }
+  50%  { transform: scale(1.45) rotate(360deg); }
+  100% { transform: scale(1.1) rotate(720deg); }
+}
+@keyframes kca-heart-pulse {
+  0%, 100% { transform: scale(1); }
+  20%      { transform: scale(1.35); }
+  40%      { transform: scale(0.95); }
+  60%      { transform: scale(1.25); }
+  80%      { transform: scale(1.0); }
+}
+@keyframes kca-bounce-glow {
+  0%, 100% { transform: translateY(0); box-shadow: 0 0 0 rgba(255,255,255,0); }
+  30%      { transform: translateY(-22px); box-shadow: 0 0 30px rgba(90,207,149,0.8); }
+  60%      { transform: translateY(-10px); box-shadow: 0 0 20px rgba(90,207,149,0.5); }
+}
+@keyframes kca-wiggle {
+  0%, 100% { transform: rotate(0); }
+  20%      { transform: rotate(-12deg); }
+  40%      { transform: rotate(12deg); }
+  60%      { transform: rotate(-8deg); }
+  80%      { transform: rotate(8deg); }
+}
+@keyframes kca-pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.15); }
+  100% { transform: scale(1.0); }
+}
+
+input.anim-input-success { animation: kca-input-success 800ms ease-out; }
+input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
+@keyframes kca-input-success {
+  0%   { transform: scale(1); box-shadow: 0 0 0 rgba(90,207,149,0); }
+  30%  { transform: scale(1.05); box-shadow: 0 0 20px rgba(90,207,149,0.7); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(90,207,149,0); }
+}
+@keyframes kca-input-shake {
+  0%, 100% { transform: translateX(0); }
+  20%      { transform: translateX(-8px); }
+  40%      { transform: translateX(8px); }
+  60%      { transform: translateX(-4px); }
+  80%      { transform: translateX(4px); }
+}
+
+/* v0.6 — Chess break overlay + board + 15-min banner */
+.chess-banner {
+  position: fixed;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #ffe88a, #ffd24d);
+  color: #503000;
+  padding: 12px 22px;
+  border-radius: 0 0 18px 18px;
+  font-weight: 800;
+  font-size: 17px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  z-index: 5000;
+  animation: kca-banner-slide 6.5s ease-in-out forwards;
+}
+@keyframes kca-banner-slide {
+  0%   { transform: translate(-50%, -100%); }
+  10%  { transform: translate(-50%, 0); }
+  90%  { transform: translate(-50%, 0); }
+  100% { transform: translate(-50%, -100%); }
+}
+
+.chess-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 40, 0.86);
+  z-index: 4500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.chess-card {
+  background: var(--panel);
+  border-radius: var(--r-md);
+  padding: 24px;
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.55);
+  animation: kca-pop 280ms ease-out;
+}
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 4px solid #2c2510;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 14px 0 8px;
+}
+.chess-sq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(20px, 6vw, 42px);
+  cursor: pointer;
+  user-select: none;
+  transition: filter 80ms;
+}
+.chess-sq.light { background: #f0d9b5; }
+.chess-sq.dark  { background: #b58863; }
+.chess-sq.piece-white { color: #ffffff; text-shadow: 0 1px 2px #555, 0 0 1px #000; }
+.chess-sq.piece-black { color: #1a1a1a; }
+.chess-sq.selected { outline: 4px solid #ffd700; outline-offset: -4px; }
+.chess-sq.legal::after {
+  content: "";
+  position: absolute;
+}
+.chess-sq.legal { box-shadow: inset 0 0 0 5px rgba(46, 184, 96, 0.65); }
+.chess-sq:hover { filter: brightness(1.1); }
+.chess-status {
+  margin: 6px 0 4px;
+  font-size: 17px;
+  min-height: 24px;
+  font-weight: 600;
+}
+.chess-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+
 .match-row { display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-around; }
 .match-col { display: flex; flex-direction: column; gap: 10px; min-width: 180px; }
 .match-item {
@@ -1899,17 +2051,111 @@ function shuffleArr(arr) {
   }
   return a;
 }
+
+/* ============================================================
+ *  v0.6 — Web Speech with FORCED female voice.
+ *
+ *  Voice list loads async — first getVoices() returns []. We register a
+ *  voiceschanged listener and pick a female English voice when it fires.
+ *  Cached after first pick. \bmale\b inside the regex won't match "female"
+ *  because \b requires a word boundary — "female" has 'e' before 'm'.
+ * ============================================================ */
+let _kcaVoice = null;
+let _kcaVoiceReady = false;
+function _kcaPickVoice(voices) {
+  if (!voices || !voices.length) return null;
+  const isEnglish = v => /^en[-_]/i.test(v.lang || "") || (v.lang || "").toLowerCase() === "en";
+  const looksFemale = name => {
+    const n = String(name || "").toLowerCase();
+    if (/\b(male|david|mark|guy|james|jacob|adam|brian|george|ryan|paul|tom|alex)\b/.test(n)) return false;
+    return /female|zira|hazel|samantha|jenny|aria|libby|sonia|ava|emma|eva|olivia|amy|kate|allison|susan|moira|tessa|fiona|karen|veena|chloe|catherine|princess/.test(n);
+  };
+  // 1: English + female
+  let pick = voices.find(v => isEnglish(v) && looksFemale(v.name));
+  if (pick) return pick;
+  // 2: any female
+  pick = voices.find(v => looksFemale(v.name));
+  if (pick) return pick;
+  // 3: first English (avoid males by name)
+  pick = voices.find(v => isEnglish(v) && !/\b(male|david|mark|guy|james|jacob|adam|brian|george|ryan)\b/i.test(v.name || ""));
+  if (pick) return pick;
+  // 4: anything English
+  pick = voices.find(isEnglish);
+  return pick || voices[0] || null;
+}
+function _kcaInitVoice() {
+  if (_kcaVoiceReady) return;
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+    _kcaVoiceReady = true;
+    return;
+  }
+  const apply = () => {
+    const list = window.speechSynthesis.getVoices() || [];
+    if (list.length === 0) return;  // try again on next event
+    _kcaVoice = _kcaPickVoice(list);
+    _kcaVoiceReady = true;
+  };
+  apply();
+  if (!_kcaVoiceReady) {
+    window.speechSynthesis.onvoiceschanged = apply;
+  }
+}
 function speakText(t) {
   if (!t) return;
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  if (!_kcaVoiceReady) _kcaInitVoice();
   try {
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(String(t));
+    if (_kcaVoice) u.voice = _kcaVoice;
     u.rate = 0.95;
-    u.pitch = 1.05;
+    u.pitch = 1.1;
     u.volume = 1.0;
     window.speechSynthesis.speak(u);
-  } catch (_) { /* swallowed: TTS is best-effort */ }
+  } catch (_) { /* TTS is best-effort */ }
+}
+
+/* ============================================================
+ *  v0.6 — Confetti + per-emoji celebrate animations.
+ *
+ *  spawnConfetti drops 12 colored dots from an origin element, each
+ *  with a random angle/distance, fading out via CSS. classify the
+ *  picked button so per-symbol animations (rocket flies, star spins)
+ *  override the default bounce.
+ * ============================================================ */
+function spawnConfetti(originEl) {
+  if (!originEl || !document.body) return;
+  let r;
+  try { r = originEl.getBoundingClientRect(); } catch (_) { return; }
+  const cx = r.left + r.width / 2;
+  const cy = r.top + r.height / 2;
+  const colors = ["#ff5a78", "#ffb84d", "#ffd700", "#5acf95", "#6b8cff", "#a067ff"];
+  for (let i = 0; i < 14; i += 1) {
+    const p = document.createElement("div");
+    p.className = "kca-confetti";
+    p.style.left = cx + "px";
+    p.style.top = cy + "px";
+    p.style.background = colors[i % colors.length];
+    const angle = Math.random() * Math.PI * 2;
+    const dist = 90 + Math.random() * 110;
+    p.style.setProperty("--dx", (Math.cos(angle) * dist) + "px");
+    p.style.setProperty("--dy", (Math.sin(angle) * dist - 40) + "px");
+    p.style.animationDelay = (Math.random() * 80) + "ms";
+    document.body.appendChild(p);
+    setTimeout(() => p.remove(), 1200);
+  }
+}
+function celebrateChoiceBtn(btn, label) {
+  if (!btn) return;
+  btn.classList.add("right");
+  const s = String(label || "");
+  if (/🚀/.test(s)) btn.classList.add("anim-fly-up");
+  else if (/⭐|🌟/.test(s)) btn.classList.add("anim-spin-grow");
+  else if (/❤️|💖|💕/.test(s)) btn.classList.add("anim-heart-pulse");
+  else if (/🟠|🔵|🟢|🟡|🟣|⚪|⚫/.test(s)) btn.classList.add("anim-bounce-glow");
+  else if (/😀|😃|😄|🙂|😊|🤩/.test(s)) btn.classList.add("anim-wiggle");
+  else btn.classList.add("anim-pop");
+  spawnConfetti(btn);
 }
 
 /* ============================================================
@@ -1946,14 +2192,18 @@ const KidGame = {
       const grid = el("div", { class: "choice-grid" });
       host.appendChild(grid);
       (p.choices || []).forEach(c => {
+        const label = String(c.label);
         const btn = el("button", {
           class: "choice",
           onclick: () => {
             Tracker.click();
             if (c.right) {
-              btn.classList.add("right");
+              // v0.6: per-emoji celebrate animation + confetti burst
+              celebrateChoiceBtn(btn, label);
+              // Disable siblings so a stray click doesn't fire while animating
+              grid.querySelectorAll("button.choice").forEach(b => b.disabled = true);
               Audio_.sfx("Ding");
-              setTimeout(() => done(true), 600);
+              setTimeout(() => done(true), 1000);
             } else {
               Tracker.retry();
               btn.classList.add("wrong");
@@ -1961,7 +2211,7 @@ const KidGame = {
               setTimeout(() => btn.classList.remove("wrong"), 600);
             }
           },
-        }, String(c.label));
+        }, label);
         grid.appendChild(btn);
       });
     },
@@ -2031,12 +2281,17 @@ const KidGame = {
         if (!v) return;
         if (targets.some(t => v.includes(t))) {
           clearNode(hint);
-          hint.appendChild(el("span", { class: "success" }, "Yes! You got it."));
+          hint.appendChild(el("span", { class: "success" }, "Yes! You got it!"));
+          // v0.6: input bounces, confetti bursts from input
+          inp.classList.add("anim-input-success");
+          spawnConfetti(inp);
           Audio_.sfx("Ding");
-          setTimeout(() => done(true), 700);
+          setTimeout(() => done(true), 1000);
         } else {
           Tracker.retry();
           hint.textContent = p.hint_wrong || "Try again — read the hint above!";
+          inp.classList.add("anim-input-shake");
+          setTimeout(() => inp.classList.remove("anim-input-shake"), 500);
           Audio_.sfx("Oops");
         }
       };
@@ -2518,6 +2773,378 @@ const QuestionFlow = {
 };
 
 /* ============================================================
+ *  v0.6 — Chess break minigame.
+ *
+ *  Board: 8x8, pseudo-legal moves only (no check / checkmate detection,
+ *  no castling, no en-passant; auto-queen on promotion). Kid plays
+ *  white, bot plays black. Bot rolls a 1/10 chance to play a "best
+ *  move" (highest-value capture, else random); the other 9/10 of the
+ *  time it picks uniformly at random — keeps the bot weak so a 7yo
+ *  wins regularly. Win condition: capture the enemy king.
+ * ============================================================ */
+const Chess = {
+  state: null,
+
+  open(onDone) {
+    this.state = this._initialState();
+    this._render(onDone);
+  },
+
+  _initialState() {
+    return {
+      board: [
+        ["r","n","b","q","k","b","n","r"],
+        ["p","p","p","p","p","p","p","p"],
+        [".",".",".",".",".",".",".","."],
+        [".",".",".",".",".",".",".","."],
+        [".",".",".",".",".",".",".","."],
+        [".",".",".",".",".",".",".","."],
+        ["P","P","P","P","P","P","P","P"],
+        ["R","N","B","Q","K","B","N","R"],
+      ],
+      turn: "w",
+      selected: null,
+      legalSquares: [],
+      gameOver: false,
+      moves: 0,
+    };
+  },
+
+  _render(onDone) {
+    const root = document.body;
+    const existing = document.getElementById("chessOverlay");
+    if (existing) existing.remove();
+
+    const overlay = el("div", { class: "chess-overlay", id: "chessOverlay" });
+    root.appendChild(overlay);
+
+    const card = el("div", { class: "chess-card" });
+    overlay.appendChild(card);
+
+    card.appendChild(el("h2", { style: { margin: "0 0 6px" } }, "🐎 Chess Break!"));
+    card.appendChild(el("p", { class: "muted", style: { margin: "0 0 8px" } },
+      "Click your piece, then click a green square to move. Catch the black king to win!"));
+
+    const board = el("div", { class: "chess-board" });
+    card.appendChild(board);
+
+    const status = el("div", { class: "chess-status", id: "chessStatus" }, "Your move (white).");
+    card.appendChild(status);
+
+    const actions = el("div", { class: "chess-actions" });
+    card.appendChild(actions);
+    actions.appendChild(el("button", {
+      class: "btn-big alt",
+      onclick: () => this._close(onDone),
+    }, "Done playing — back to lessons"));
+    actions.appendChild(el("button", {
+      class: "btn-big",
+      onclick: () => { this.state = this._initialState(); this._renderBoard(board, onDone); this._setStatus("New game! Your move."); },
+    }, "Start over"));
+
+    speakText("Chess break! Catch the black king.");
+    this._renderBoard(board, onDone);
+  },
+
+  _renderBoard(boardEl, onDone) {
+    clearNode(boardEl);
+    const GLYPH = {
+      "K": "♔", "Q": "♕", "R": "♖", "B": "♗", "N": "♘", "P": "♙",
+      "k": "♚", "q": "♛", "r": "♜", "b": "♝", "n": "♞", "p": "♟",
+      ".": "",
+    };
+    for (let r = 0; r < 8; r += 1) {
+      for (let c = 0; c < 8; c += 1) {
+        const piece = this.state.board[r][c];
+        const isLight = (r + c) % 2 === 0;
+        const sq = el("div", {
+          class: "chess-sq " + (isLight ? "light" : "dark"),
+          dataset: { r: String(r), c: String(c) },
+          onclick: () => this._onSquareClick(r, c, boardEl, onDone),
+        });
+        // White pieces drawn dark on light squares; emoji glyphs render fine.
+        sq.textContent = GLYPH[piece] || "";
+        if (this._isWhite(piece)) sq.classList.add("piece-white");
+        else if (this._isBlack(piece)) sq.classList.add("piece-black");
+        if (this.state.selected && this.state.selected.r === r && this.state.selected.c === c) {
+          sq.classList.add("selected");
+        }
+        if (this.state.legalSquares.some(s => s.r === r && s.c === c)) {
+          sq.classList.add("legal");
+        }
+        boardEl.appendChild(sq);
+      }
+    }
+  },
+
+  _setStatus(text) {
+    const s = document.getElementById("chessStatus");
+    if (s) s.textContent = text;
+  },
+
+  _onSquareClick(r, c, boardEl, onDone) {
+    if (this.state.gameOver || this.state.turn !== "w") return;
+    const piece = this.state.board[r][c];
+
+    // Move into a legal target
+    if (this.state.selected && this.state.legalSquares.some(s => s.r === r && s.c === c)) {
+      const captured = this.state.board[r][c];
+      this._doMove(this.state.selected, { r, c });
+      this.state.selected = null;
+      this.state.legalSquares = [];
+      this._renderBoard(boardEl, onDone);
+      if (captured && captured !== "." && this._isBlack(captured)) {
+        Audio_.sfx("Ding");
+      }
+      if (this._checkGameEnd(boardEl, onDone)) return;
+      this.state.turn = "b";
+      this._setStatus("Bytey thinking…");
+      setTimeout(() => this._botMove(boardEl, onDone), 700 + Math.floor(Math.random() * 600));
+      return;
+    }
+
+    // Select own piece
+    if (this._isWhite(piece)) {
+      this.state.selected = { r, c };
+      this.state.legalSquares = this._legalMovesFor(r, c);
+      this._renderBoard(boardEl, onDone);
+      return;
+    }
+
+    // Click on empty / enemy with nothing selected → just deselect
+    this.state.selected = null;
+    this.state.legalSquares = [];
+    this._renderBoard(boardEl, onDone);
+  },
+
+  _doMove(from, to) {
+    let p = this.state.board[from.r][from.c];
+    // Auto-queen promotion
+    if (p === "P" && to.r === 0) p = "Q";
+    if (p === "p" && to.r === 7) p = "q";
+    this.state.board[to.r][to.c] = p;
+    this.state.board[from.r][from.c] = ".";
+    this.state.moves += 1;
+  },
+
+  _isWhite(p) { return p && p !== "." && p === p.toUpperCase(); },
+  _isBlack(p) { return p && p !== "." && p === p.toLowerCase(); },
+
+  _legalMovesFor(r, c) {
+    const board = this.state.board;
+    const p = board[r][c];
+    if (!p || p === ".") return [];
+    const isW = this._isWhite(p);
+    const piece = p.toUpperCase();
+    const enemy = sq => sq && sq !== "." && (isW ? this._isBlack(sq) : this._isWhite(sq));
+    const empty = sq => sq === ".";
+    const moves = [];
+
+    const ray = (dr, dc) => {
+      let nr = r + dr; let nc = c + dc;
+      while (nr >= 0 && nr < 8 && nc >= 0 && nc < 8) {
+        const sq = board[nr][nc];
+        if (empty(sq)) {
+          moves.push({ r: nr, c: nc });
+        } else {
+          if (enemy(sq)) moves.push({ r: nr, c: nc });
+          break;
+        }
+        nr += dr; nc += dc;
+      }
+    };
+    const step = (dr, dc) => {
+      const nr = r + dr; const nc = c + dc;
+      if (nr < 0 || nr >= 8 || nc < 0 || nc >= 8) return;
+      const sq = board[nr][nc];
+      if (empty(sq) || enemy(sq)) moves.push({ r: nr, c: nc });
+    };
+
+    if (piece === "P") {
+      const dir = isW ? -1 : 1;
+      const startRank = isW ? 6 : 1;
+      const f1r = r + dir;
+      if (f1r >= 0 && f1r < 8 && empty(board[f1r][c])) {
+        moves.push({ r: f1r, c });
+        const f2r = r + 2 * dir;
+        if (r === startRank && f2r >= 0 && f2r < 8 && empty(board[f2r][c])) {
+          moves.push({ r: f2r, c });
+        }
+      }
+      for (const dc of [-1, 1]) {
+        const nc = c + dc; const nr = r + dir;
+        if (nr >= 0 && nr < 8 && nc >= 0 && nc < 8 && enemy(board[nr][nc])) {
+          moves.push({ r: nr, c: nc });
+        }
+      }
+    } else if (piece === "N") {
+      const off = [[-2,-1],[-2,1],[-1,-2],[-1,2],[1,-2],[1,2],[2,-1],[2,1]];
+      for (const [dr, dc] of off) step(dr, dc);
+    } else if (piece === "B") {
+      ray(-1,-1); ray(-1,1); ray(1,-1); ray(1,1);
+    } else if (piece === "R") {
+      ray(-1,0); ray(1,0); ray(0,-1); ray(0,1);
+    } else if (piece === "Q") {
+      ray(-1,-1); ray(-1,1); ray(1,-1); ray(1,1);
+      ray(-1,0); ray(1,0); ray(0,-1); ray(0,1);
+    } else if (piece === "K") {
+      for (let dr = -1; dr <= 1; dr += 1) {
+        for (let dc = -1; dc <= 1; dc += 1) {
+          if (dr === 0 && dc === 0) continue;
+          step(dr, dc);
+        }
+      }
+    }
+    return moves;
+  },
+
+  _allBlackMoves() {
+    const out = [];
+    for (let r = 0; r < 8; r += 1) {
+      for (let c = 0; c < 8; c += 1) {
+        if (this._isBlack(this.state.board[r][c])) {
+          for (const m of this._legalMovesFor(r, c)) {
+            out.push({ from: { r, c }, to: m });
+          }
+        }
+      }
+    }
+    return out;
+  },
+
+  _botMove(boardEl, onDone) {
+    const moves = this._allBlackMoves();
+    if (moves.length === 0) {
+      this.state.gameOver = true;
+      this._setStatus("Bytey has no moves — you win by default! 🎉");
+      return;
+    }
+
+    let pick;
+    if (Math.random() < 0.10) {
+      // 1/10: best capture (or random if no captures available)
+      const VALUE = { "P": 1, "N": 3, "B": 3, "R": 5, "Q": 9, "K": 100 };
+      let best = -1;
+      let bestMoves = [];
+      for (const m of moves) {
+        const target = this.state.board[m.to.r][m.to.c];
+        const v = (target && target !== ".") ? (VALUE[target.toUpperCase()] || 0) : 0;
+        if (v > best) { best = v; bestMoves = [m]; }
+        else if (v === best) bestMoves.push(m);
+      }
+      pick = bestMoves[Math.floor(Math.random() * bestMoves.length)];
+    } else {
+      // 9/10: uniformly random — easy bot
+      pick = moves[Math.floor(Math.random() * moves.length)];
+    }
+
+    const captured = this.state.board[pick.to.r][pick.to.c];
+    this._doMove(pick.from, pick.to);
+    this._renderBoard(boardEl, onDone);
+    if (this._checkGameEnd(boardEl, onDone)) return;
+    this.state.turn = "w";
+    if (captured && captured !== "." && this._isWhite(captured)) {
+      this._setStatus("Bytey grabbed your " + this._pieceName(captured) + "! Your turn.");
+    } else {
+      this._setStatus("Your move (white).");
+    }
+  },
+
+  _pieceName(p) {
+    const n = { P: "pawn", N: "knight", B: "bishop", R: "rook", Q: "queen", K: "king" };
+    return n[String(p).toUpperCase()] || "piece";
+  },
+
+  _checkGameEnd(boardEl, onDone) {
+    let whiteKing = false; let blackKing = false;
+    for (let r = 0; r < 8; r += 1) {
+      for (let c = 0; c < 8; c += 1) {
+        const p = this.state.board[r][c];
+        if (p === "K") whiteKing = true;
+        if (p === "k") blackKing = true;
+      }
+    }
+    if (!whiteKing) {
+      this.state.gameOver = true;
+      this._setStatus("Bytey caught your king. Try again? 🐎");
+      Audio_.sfx("Oops");
+      return true;
+    }
+    if (!blackKing) {
+      this.state.gameOver = true;
+      this._setStatus("YOU GOT THE KING! 🎉👑");
+      Audio_.sfx("Tada");
+      try { spawnConfetti(boardEl); } catch (_) {}
+      return true;
+    }
+    return false;
+  },
+
+  _close(onDone) {
+    const overlay = document.getElementById("chessOverlay");
+    if (overlay) overlay.remove();
+    if (typeof onDone === "function") onDone();
+  },
+};
+
+/* ============================================================
+ *  v0.6 — ChessBreak: 15-min timer + queued chess break.
+ *
+ *  Tracks active session time. Once 15 minutes have passed since the
+ *  last break, queues a chess break and shows a friendly banner
+ *  ("Chess break after this lesson!"). The break does NOT interrupt
+ *  the current lesson — it fires AFTER the next lesson completion
+ *  (during what would otherwise be the auto-advance to the next
+ *  lesson). Kid finishes the lesson they're on → board pops up →
+ *  kid plays as long as they like → resume normal lesson flow.
+ * ============================================================ */
+const ChessBreak = {
+  K: "kca.chess.lastBreak.v1",
+  intervalMs: 15 * 60 * 1000,
+  bannerShown: false,
+  _checkTimer: 0,
+
+  init() {
+    // First boot: stamp "now" so the 15-min countdown starts on session start
+    if (!Store.load(this.K, null)) Store.save(this.K, Date.now());
+    if (this._checkTimer) clearInterval(this._checkTimer);
+    this._checkTimer = setInterval(() => this._tick(), 30000);
+    this._tick();
+  },
+
+  _elapsedMs() {
+    const last = Number(Store.load(this.K, Date.now())) || Date.now();
+    return Date.now() - last;
+  },
+
+  _tick() {
+    if (this.shouldFire() && !this.bannerShown) this._showBanner();
+  },
+
+  shouldFire() {
+    return this._elapsedMs() >= this.intervalMs;
+  },
+
+  _showBanner() {
+    this.bannerShown = true;
+    const banner = el("div", { class: "chess-banner", id: "chessBanner" });
+    banner.appendChild(document.createTextNode("🐎 Chess break after this lesson! Finish what you're on first."));
+    document.body.appendChild(banner);
+    speakText("Chess break after this lesson!");
+    setTimeout(() => { if (banner.parentNode) banner.parentNode.removeChild(banner); }, 6500);
+  },
+
+  // Called by completeLesson after celebration. If the timer is up, we
+  // open chess and call `then` only after the kid closes the board.
+  consumeIfDue(then) {
+    if (!this.shouldFire()) { then(); return; }
+    Store.save(this.K, Date.now());
+    this.bannerShown = false;
+    Chess.open(then);
+  },
+};
+
+/* ============================================================
  *  Lesson 16 — Sprite/Bubby color swap, save copy via JS bridge
  * ============================================================ */
 const Lesson16 = {
@@ -2945,6 +3572,126 @@ const HistoryScenes = {
         t.textContent = w;
         svg.appendChild(t);
       });
+    } else if (id === "claude") {
+      // v0.6 — Claude scene: a chat box with words streaming in from the kid
+      // and a thoughtful reply streaming back. Captures Claude's identity as
+      // a careful, word-by-word helper.
+      svg.appendChild(svgEl("rect", { x: 30, y: 30, width: 120, height: 60, rx: 12, fill: "#fff", stroke: "#1a1a3a", "stroke-width": "2" }));
+      const youLabel = svgEl("text", { x: 90, y: 22, "text-anchor": "middle", "font-size": "12", fill: "#4d4d70" });
+      youLabel.textContent = "you";
+      svg.appendChild(youLabel);
+      const youMsg = svgEl("text", { x: 90, y: 65, "text-anchor": "middle", "font-size": "13", fill: "#1a1a3a", id: "scene-claude-you" });
+      youMsg.textContent = "";
+      svg.appendChild(youMsg);
+      svg.appendChild(svgEl("rect", { x: 170, y: 30, width: 120, height: 60, rx: 12, fill: "#ece1ff", stroke: "#a067ff", "stroke-width": "2" }));
+      const claudeLabel = svgEl("text", { x: 230, y: 22, "text-anchor": "middle", "font-size": "12", fill: "#4d4d70" });
+      claudeLabel.textContent = "Claude";
+      svg.appendChild(claudeLabel);
+      const claudeMsg = svgEl("text", { x: 230, y: 65, "text-anchor": "middle", "font-size": "13", fill: "#1a1a3a", id: "scene-claude-reply" });
+      claudeMsg.textContent = "";
+      svg.appendChild(claudeMsg);
+    } else if (id === "cursor") {
+      // v0.6 — Cursor scene: a code editor with a blinking cursor that
+      // types out a function. Captures Cursor's identity as the editor
+      // with a helper inside.
+      svg.appendChild(svgEl("rect", { x: 20, y: 30, width: 280, height: 110, rx: 10, fill: "#1a1a2a", stroke: "#1a1a3a", "stroke-width": "2" }));
+      // Line numbers gutter
+      svg.appendChild(svgEl("rect", { x: 20, y: 30, width: 30, height: 110, fill: "#0e0e1a" }));
+      for (let i = 0; i < 4; i += 1) {
+        const ln = svgEl("text", { x: 35, y: 56 + i * 22, "text-anchor": "middle", "font-size": "11", fill: "#8888aa" });
+        ln.textContent = String(i + 1);
+        svg.appendChild(ln);
+      }
+      const code = svgEl("text", { x: 60, y: 56, "font-size": "13", "font-family": "monospace", fill: "#9ad", id: "scene-cursor-line1" });
+      code.textContent = "";
+      svg.appendChild(code);
+      const cursor = svgEl("rect", { x: 60, y: 44, width: 8, height: 16, fill: "#5acf95", id: "scene-cursor-caret" });
+      svg.appendChild(cursor);
+    } else if (id === "gemini") {
+      // v0.6 — Gemini scene: split panel — picture on left, words on right,
+      // with arrows showing Gemini reads BOTH together.
+      svg.appendChild(svgEl("rect", { x: 25, y: 25, width: 110, height: 80, rx: 8, fill: "#fff", stroke: "#1a1a3a", "stroke-width": "2" }));
+      // A simple "photo" of a sun + tree
+      svg.appendChild(svgEl("circle", { cx: 60, cy: 55, r: 12, fill: "#ffd24d", id: "scene-gem-sun" }));
+      svg.appendChild(svgEl("rect", { x: 95, y: 70, width: 6, height: 25, fill: "#7a4a2a" }));
+      svg.appendChild(svgEl("circle", { cx: 98, cy: 65, r: 14, fill: "#5acf95" }));
+      const photoLabel = svgEl("text", { x: 80, y: 118, "text-anchor": "middle", "font-size": "11", fill: "#4d4d70" });
+      photoLabel.textContent = "picture";
+      svg.appendChild(photoLabel);
+      svg.appendChild(svgEl("rect", { x: 185, y: 25, width: 110, height: 80, rx: 8, fill: "#fff", stroke: "#1a1a3a", "stroke-width": "2" }));
+      const wordsT = svgEl("text", { x: 240, y: 65, "text-anchor": "middle", "font-size": "13", fill: "#1a1a3a", id: "scene-gem-words" });
+      wordsT.textContent = "the sun…";
+      svg.appendChild(wordsT);
+      const wordsLabel = svgEl("text", { x: 240, y: 118, "text-anchor": "middle", "font-size": "11", fill: "#4d4d70" });
+      wordsLabel.textContent = "words";
+      svg.appendChild(wordsLabel);
+      // Arrows from each panel into a central "Gemini" hub
+      svg.appendChild(svgEl("path", { d: "M135 65 Q 155 65 155 80", stroke: "#a067ff", "stroke-width": "3", fill: "none", "stroke-linecap": "round", id: "scene-gem-arrowL" }));
+      svg.appendChild(svgEl("path", { d: "M185 65 Q 165 65 165 80", stroke: "#a067ff", "stroke-width": "3", fill: "none", "stroke-linecap": "round", id: "scene-gem-arrowR" }));
+      svg.appendChild(svgEl("circle", { cx: 160, cy: 95, r: 14, fill: "#a067ff", stroke: "#1a1a3a", "stroke-width": "2", id: "scene-gem-hub" }));
+      const hubLabel = svgEl("text", { x: 160, y: 99, "text-anchor": "middle", "font-size": "11", "font-weight": "700", fill: "#fff" });
+      hubLabel.textContent = "G";
+      svg.appendChild(hubLabel);
+    } else if (id === "codex") {
+      // v0.6 — Codex scene: a partial code line + Codex completing it.
+      // Shows the kid the autocompletion idea.
+      const startX = 40;
+      svg.appendChild(svgEl("rect", { x: 20, y: 60, width: 280, height: 60, rx: 8, fill: "#1a1a2a", stroke: "#1a1a3a", "stroke-width": "2" }));
+      const partial = svgEl("text", { x: startX, y: 95, "font-size": "16", "font-family": "monospace", fill: "#9ad" });
+      partial.textContent = "for i in range(";
+      svg.appendChild(partial);
+      const completion = svgEl("text", { x: startX + 130, y: 95, "font-size": "16", "font-family": "monospace", fill: "#5acf95", id: "scene-codex-suggest", opacity: "0" });
+      completion.textContent = "10):";
+      svg.appendChild(completion);
+      const tag = svgEl("text", { x: 160, y: 38, "text-anchor": "middle", "font-size": "13", fill: "#4d4d70", id: "scene-codex-tag" });
+      tag.textContent = "you start typing…";
+      svg.appendChild(tag);
+    } else if (id === "opencode") {
+      // v0.6 — OpenCode scene: a treasure chest opening + tools flying out
+      // to little stick-figure friends. Captures the "open for everyone"
+      // identity.
+      svg.appendChild(svgEl("rect", { x: 130, y: 70, width: 60, height: 50, rx: 6, fill: "#c98a4a", stroke: "#1a1a3a", "stroke-width": "2" }));
+      const lid = svgEl("rect", { x: 130, y: 50, width: 60, height: 24, rx: 6, fill: "#e0a262", stroke: "#1a1a3a", "stroke-width": "2", id: "scene-open-lid" });
+      svg.appendChild(lid);
+      svg.appendChild(svgEl("rect", { x: 156, y: 60, width: 8, height: 8, fill: "#ffd24d", id: "scene-open-lock" }));
+      // Three little users around the chest — they smile when chest opens
+      const userPos = [[40, 110], [160, 150], [280, 110]];
+      userPos.forEach((p, i) => {
+        svg.appendChild(svgEl("circle", { cx: p[0], cy: p[1], r: 10, fill: "#ffe0cc", stroke: "#1a1a3a", "stroke-width": "2" }));
+        const eyeL = svgEl("circle", { cx: p[0] - 3, cy: p[1] - 1, r: 1.6, fill: "#1a1a3a" });
+        const eyeR = svgEl("circle", { cx: p[0] + 3, cy: p[1] - 1, r: 1.6, fill: "#1a1a3a" });
+        const mouth = svgEl("path", { d: `M${p[0] - 4} ${p[1] + 3} Q ${p[0]} ${p[1] + 3} ${p[0] + 4} ${p[1] + 3}`, stroke: "#1a1a3a", "stroke-width": "1.5", fill: "none", id: `scene-open-mouth-${i}` });
+        svg.appendChild(eyeL); svg.appendChild(eyeR); svg.appendChild(mouth);
+      });
+      // Tool sparks (three small dots that fly out from chest)
+      [0, 1, 2].forEach(i => {
+        svg.appendChild(svgEl("circle", { cx: 160, cy: 80, r: 5, fill: ["#ff5a78","#ffd24d","#5acf95"][i], stroke: "#1a1a3a", "stroke-width": "1", id: `scene-open-spark-${i}`, opacity: "0" }));
+      });
+    } else if (id === "ollama") {
+      // v0.6 — Ollama scene: a laptop with the wifi icon turning OFF + a
+      // friendly llama emoji speech-bubble that still works. Captures the
+      // "local helper that needs no internet" identity.
+      svg.appendChild(svgEl("rect", { x: 80, y: 50, width: 160, height: 90, rx: 8, fill: "#1a1a2a", stroke: "#1a1a3a", "stroke-width": "3" }));
+      svg.appendChild(svgEl("rect", { x: 70, y: 140, width: 180, height: 12, rx: 4, fill: "#3a3a5a", stroke: "#1a1a3a", "stroke-width": "2" }));
+      // Wifi icon (will fade out)
+      const wifi = svgEl("g", { id: "scene-ollama-wifi", opacity: "1" });
+      [18, 12, 6].forEach(r => {
+        wifi.appendChild(svgEl("path", { d: `M${160 - r} 80 a${r} ${r} 0 0 1 ${2 * r} 0`, stroke: "#5acf95", "stroke-width": "2.5", fill: "none" }));
+      });
+      wifi.appendChild(svgEl("circle", { cx: 160, cy: 84, r: 2.5, fill: "#5acf95" }));
+      svg.appendChild(wifi);
+      // A red X over the wifi (will fade in to show "no internet, still works")
+      const xMark = svgEl("g", { id: "scene-ollama-x", opacity: "0" });
+      xMark.appendChild(svgEl("line", { x1: 138, y1: 65, x2: 182, y2: 100, stroke: "#ff5a78", "stroke-width": "5", "stroke-linecap": "round" }));
+      xMark.appendChild(svgEl("line", { x1: 182, y1: 65, x2: 138, y2: 100, stroke: "#ff5a78", "stroke-width": "5", "stroke-linecap": "round" }));
+      svg.appendChild(xMark);
+      // Llama bubble — appears AFTER wifi off, showing local still works
+      const bubble = svgEl("g", { id: "scene-ollama-bubble", opacity: "0" });
+      bubble.appendChild(svgEl("rect", { x: 60, y: 110, width: 130, height: 30, rx: 14, fill: "#fff", stroke: "#1a1a3a", "stroke-width": "2" }));
+      const bubText = svgEl("text", { x: 125, y: 130, "text-anchor": "middle", "font-size": "13", fill: "#1a1a3a" });
+      bubText.textContent = "🦙 still works!";
+      bubble.appendChild(bubText);
+      svg.appendChild(bubble);
     }
   },
   play(id, stage) {
@@ -3020,6 +3767,128 @@ const HistoryScenes = {
           w.setAttribute("y", String(y));
           w.setAttribute("opacity", String(1 - k * 0.7));
         }
+      }
+    } else if (id === "claude") {
+      // Phase 1 (k 0..0.45): kid types message into left bubble
+      // Phase 2 (k 0.45..1):  Claude reply streams into right bubble
+      const you = svg.querySelector("#scene-claude-you");
+      const reply = svg.querySelector("#scene-claude-reply");
+      const youFull = "help me!";
+      const replyFull = "Sure — here's an idea…";
+      if (you) {
+        const phase1 = Math.min(1, k / 0.45);
+        const charsY = Math.floor(phase1 * youFull.length);
+        you.textContent = youFull.slice(0, charsY);
+      }
+      if (reply) {
+        const phase2 = Math.max(0, (k - 0.45) / 0.55);
+        const charsR = Math.floor(phase2 * replyFull.length);
+        reply.textContent = replyFull.slice(0, charsR);
+      }
+    } else if (id === "cursor") {
+      // Caret types `def hi():` across the line, then blinks at end
+      const line = svg.querySelector("#scene-cursor-line1");
+      const caret = svg.querySelector("#scene-cursor-caret");
+      const target = "def hi():";
+      if (line) {
+        const chars = Math.floor(k * target.length);
+        line.textContent = target.slice(0, chars);
+      }
+      if (caret) {
+        // Position caret right after typed text — each char ~9px monospace
+        const chars = Math.floor(k * target.length);
+        const x = 60 + chars * 8;
+        caret.setAttribute("x", String(x));
+        // Blink in last 30% of timeline
+        const visible = (k < 0.7) ? 1 : (Math.floor(k * 20) % 2);
+        caret.setAttribute("opacity", String(visible));
+      }
+    } else if (id === "gemini") {
+      // Both arrows draw in (dash-offset trick) and the central hub pulses
+      const aL = svg.querySelector("#scene-gem-arrowL");
+      const aR = svg.querySelector("#scene-gem-arrowR");
+      const hub = svg.querySelector("#scene-gem-hub");
+      const sun = svg.querySelector("#scene-gem-sun");
+      const words = svg.querySelector("#scene-gem-words");
+      if (aL) {
+        aL.setAttribute("stroke-dasharray", "60");
+        aL.setAttribute("stroke-dashoffset", String(60 * (1 - Math.min(1, k * 1.5))));
+      }
+      if (aR) {
+        aR.setAttribute("stroke-dasharray", "60");
+        aR.setAttribute("stroke-dashoffset", String(60 * (1 - Math.min(1, k * 1.5))));
+      }
+      if (hub) {
+        const r = 14 + Math.sin(k * Math.PI * 2) * 3;
+        hub.setAttribute("r", String(r));
+      }
+      if (sun) {
+        // Subtle bob to feel alive
+        sun.setAttribute("cy", String(55 + Math.sin(k * Math.PI * 4) * 2));
+      }
+      if (words && k > 0.6) {
+        words.textContent = "the sun is yellow.";
+      }
+    } else if (id === "codex") {
+      // Tag changes through three phases then suggestion fades in
+      const tag = svg.querySelector("#scene-codex-tag");
+      const sug = svg.querySelector("#scene-codex-suggest");
+      if (tag) {
+        if (k < 0.35) tag.textContent = "you start typing…";
+        else if (k < 0.7) tag.textContent = "Codex sees the pattern…";
+        else tag.textContent = "Codex suggests the rest!";
+      }
+      if (sug) {
+        const fade = Math.max(0, (k - 0.55) / 0.45);
+        sug.setAttribute("opacity", String(Math.min(1, fade)));
+      }
+    } else if (id === "opencode") {
+      // Lid lifts off, sparks fly out, friends smile bigger
+      const lid = svg.querySelector("#scene-open-lid");
+      const lock = svg.querySelector("#scene-open-lock");
+      if (lid) {
+        const lift = Math.min(1, k * 1.5) * 28;
+        lid.setAttribute("y", String(50 - lift));
+        lid.setAttribute("transform", `rotate(${-Math.min(1, k * 1.5) * 12}, 130, 50)`);
+      }
+      if (lock && k > 0.2) lock.setAttribute("opacity", "0");
+      // Sparks fly out toward the three users
+      const targets = [[40, 110], [160, 150], [280, 110]];
+      [0, 1, 2].forEach(i => {
+        const sp = svg.querySelector(`#scene-open-spark-${i}`);
+        if (!sp) return;
+        const t = Math.max(0, Math.min(1, (k - 0.3) * 1.6));
+        sp.setAttribute("opacity", t > 0 ? "1" : "0");
+        const sx = 160 + (targets[i][0] - 160) * t;
+        const sy = 80 + (targets[i][1] - 80) * t;
+        sp.setAttribute("cx", String(sx));
+        sp.setAttribute("cy", String(sy));
+      });
+      // Smiles widen as sparks arrive
+      [0, 1, 2].forEach(i => {
+        const m = svg.querySelector(`#scene-open-mouth-${i}`);
+        if (!m) return;
+        const p = targets[i];
+        const widen = Math.min(1, Math.max(0, (k - 0.5) * 2)) * 4;
+        m.setAttribute("d", `M${p[0] - 4 - widen} ${p[1] + 3} Q ${p[0]} ${p[1] + 5 + widen} ${p[0] + 4 + widen} ${p[1] + 3}`);
+      });
+    } else if (id === "ollama") {
+      // Phase 1: wifi shows on. Phase 2: red X fades in over wifi (no internet).
+      // Phase 3: llama bubble pops in (still works locally).
+      const wifi = svg.querySelector("#scene-ollama-wifi");
+      const xm = svg.querySelector("#scene-ollama-x");
+      const bub = svg.querySelector("#scene-ollama-bubble");
+      if (wifi) {
+        const op = (k < 0.4) ? 1 : Math.max(0, 1 - (k - 0.4) * 3);
+        wifi.setAttribute("opacity", String(op));
+      }
+      if (xm) {
+        const op = Math.max(0, Math.min(1, (k - 0.35) * 3));
+        xm.setAttribute("opacity", String(op));
+      }
+      if (bub) {
+        const op = Math.max(0, Math.min(1, (k - 0.65) * 3));
+        bub.setAttribute("opacity", String(op));
       }
     }
   },
@@ -4127,7 +4996,12 @@ const UI = {
       } else {
         fireCelebration();
       }
-      if (!skipAuto) AutoAdvance.start(() => this._goNext());
+      if (!skipAuto) AutoAdvance.start(() => {
+        // v0.6: every 15 active minutes, take a chess break BEFORE auto-advancing.
+        // ChessBreak.consumeIfDue calls the continuation (_goNext) either
+        // immediately (if not due) or after the kid closes the chess board.
+        ChessBreak.consumeIfDue(() => this._goNext());
+      });
     };
 
     if (Reflect_.shouldOffer(lesson)) {
@@ -4487,6 +5361,10 @@ async function main() {
     return;
   }
   UI.renderSidebar();
+
+  // v0.6: start the 15-min chess-break timer + warm up Web Speech voice list
+  try { ChessBreak.init(); } catch (_) {}
+  try { _kcaInitVoice(); } catch (_) {}
 
   // Boot: if an unfinished lesson is in flight (within 24h), prompt to resume.
   const inFlight = InFlight.load();

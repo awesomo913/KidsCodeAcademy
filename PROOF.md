@@ -38,6 +38,7 @@ The designer (the user) is the sole owner and decision-maker. Last review: 2026-
 - Build artifacts and run logs live alongside the source for any future review.
 
 ## Changelog
+- **2026-05-07 (later)** — Made the lessons funnier and more lively. Every right answer now gets a little celebration: a rocket flies, a star spins, confetti pops. Switched the question voice to a friendly woman's voice. Added an animated story to each of the six "what is this helper?" lessons. Added a 15-minute chess break — the program quietly waits until the child finishes their current lesson before opening the chess board, and the chess opponent is on purpose easy enough for a 7-year-old to win.
 - **2026-05-07** — Added a way to stop the child from memorizing answers. Every question now appears in five different wordings, picked at random each time. Added 4 to 7 questions per lesson instead of just one. The answer choices stay hidden until the child completes the small demonstration that goes with the question, so they can no longer click through without paying attention.
 - **2026-05-07** — Built a version that runs on Raspberry Pi computers using the same source code as the Windows version.
 - **2026-05-05** — Added an "Idea Lab" set of lessons where the child practices coming up with their own ideas and turning them into small projects.

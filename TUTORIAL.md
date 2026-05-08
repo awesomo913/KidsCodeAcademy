@@ -102,6 +102,13 @@ There are 6 game types woven through the lessons:
 - Added: 16 lessons, mascot animation, read-aloud audio, 6 mini-game types, sandbox AI for Lessons 2 + 8, Parent Corner with PIN, Lesson 16 save-a-copy.
 - Shipped: `KidsCodeAcademy.exe` (~48 MB) on Windows.
 
+### 2026-05-07 — v0.6.0 (comedy + animations + chess break + female voice)
+- Added: a 15-minute chess break that pops up after the kid finishes whatever lesson they're on. Bot is intentionally weak (1-in-10 chance of a smart move) so the kid wins often.
+- Added: animated celebration on every right answer. Pick the rocket → it flies off the screen. Pick the star → it spins and grows. Confetti bursts from the chosen item.
+- Added: animated stories for lessons 11-16. Watching Claude reply, Cursor type, Gemini look at words AND pictures, Codex auto-complete, OpenCode share with friends, Ollama work without wifi.
+- Changed: question reading voice is now a friendly female voice (was a male voice some kids didn't like). Cached on first session start.
+- Changed: lesson questions are MUCH more varied + funnier. Each lesson now has 8 hand-written silly wrong-answers + 2 scenario questions (e.g., "Bytey wants to bake a cake but he's just words. What can a real computer do to help?"). 8 question frames mix factual + comedic angles so the kid can't anchor on one shape.
+
 ### 2026-05-07 — v0.5.0 (anti-memorization + interaction gating)
 - Added: 4-7 multiple-choice questions per lesson (was 1), each with 5 randomly-picked wording variations.
 - Added: answer choices stay hidden until the kid completes the demonstration interaction. Speed-clicking through guesses no longer works.

@@ -84,20 +84,20 @@
           "prompt": "What is asking AI for a feature?",
           "options": [
             {
+              "text": "Use only emoji to describe the feature.",
+              "correct": false
+            },
+            {
+              "text": "Be vague about everything — surprise yourself.",
+              "correct": false
+            },
+            {
+              "text": "Helpers like giant features only — small ones bore them.",
+              "correct": false
+            },
+            {
               "text": "Be clear about what you want to add.",
               "correct": true
-            },
-            {
-              "text": "Helpers like giant features only.",
-              "correct": false
-            },
-            {
-              "text": "Be vague about everything.",
-              "correct": false
-            },
-            {
-              "text": "Skip testing the new feature.",
-              "correct": false
             }
           ]
         },
@@ -105,7 +105,7 @@
           "prompt": "Quick! Which one is TRUE about asking AI for a feature?",
           "options": [
             {
-              "text": "Skip testing the new feature.",
+              "text": "Each feature must include a haiku.",
               "correct": false
             },
             {
@@ -113,11 +113,11 @@
               "correct": true
             },
             {
-              "text": "Add ten features at once.",
+              "text": "Hide your name to make it hard.",
               "correct": false
             },
             {
-              "text": "Be vague about everything.",
+              "text": "Hide the file from the helper — playing hide and seek.",
               "correct": false
             }
           ]
@@ -126,19 +126,19 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
-              "text": "Be clear about what you want to add.",
+              "text": "Test the new feature after you add it.",
               "correct": false
             },
             {
-              "text": "Helpers do best with small features.",
+              "text": "Mention what to NOT change.",
               "correct": false
             },
             {
-              "text": "Skip testing the new feature.",
+              "text": "Skip testing the new feature — gut feel only.",
               "correct": true
             },
             {
-              "text": "Test the new feature after you add it.",
+              "text": "Be clear about what you want to add.",
               "correct": false
             }
           ]
@@ -147,7 +147,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about asking AI for a feature. What should he say?",
           "options": [
             {
-              "text": "Helpers like giant features only.",
+              "text": "Helpers like giant features only — small ones bore them.",
+              "correct": false
+            },
+            {
+              "text": "Skip testing the new feature — gut feel only.",
               "correct": false
             },
             {
@@ -155,11 +159,7 @@
               "correct": true
             },
             {
-              "text": "Be vague about everything.",
-              "correct": false
-            },
-            {
-              "text": "Skip testing the new feature.",
+              "text": "Add ten features at once and pray.",
               "correct": false
             }
           ]
@@ -168,19 +168,19 @@
           "prompt": "Tell me — Which rule about asking AI for a feature is a GOOD rule?",
           "options": [
             {
+              "text": "Helpers like giant features only — small ones bore them.",
+              "correct": false
+            },
+            {
+              "text": "Use only emoji to describe the feature.",
+              "correct": false
+            },
+            {
               "text": "Helpers do best with small features.",
               "correct": true
             },
             {
-              "text": "Helpers like giant features only.",
-              "correct": false
-            },
-            {
-              "text": "Skip testing the new feature.",
-              "correct": false
-            },
-            {
-              "text": "Add ten features at once.",
+              "text": "Skip testing the new feature — gut feel only.",
               "correct": false
             }
           ]
@@ -211,107 +211,107 @@
       },
       "variations": [
         {
-          "prompt": "Which one is TRUE about asking AI for a feature?",
+          "prompt": "Pick the better feature request:",
           "options": [
             {
-              "text": "Skip testing the new feature.",
+              "text": "Pause but secret.",
               "correct": false
             },
             {
-              "text": "Show the file or place where it goes.",
-              "correct": true
-            },
-            {
-              "text": "Helpers like giant features only.",
+              "text": "Make pausing thing happen good.",
               "correct": false
             },
             {
-              "text": "Add ten features at once.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Which one is TRUE about asking AI for a feature?",
-          "options": [
-            {
-              "text": "Add ten features at once.",
+              "text": "Pause? Maybe? Sometimes?",
               "correct": false
             },
             {
-              "text": "Say what should happen step by step.",
-              "correct": true
-            },
-            {
-              "text": "Hide the file from the helper.",
-              "correct": false
-            },
-            {
-              "text": "Helpers like giant features only.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Which one is TRUE about asking AI for a feature?",
-          "options": [
-            {
-              "text": "Be vague about everything.",
-              "correct": false
-            },
-            {
-              "text": "Skip testing the new feature.",
-              "correct": false
-            },
-            {
-              "text": "Hide the file from the helper.",
-              "correct": false
-            },
-            {
-              "text": "Test the new feature after you add it.",
+              "text": "Add a 'pause' button in the top-right that stops the timer.",
               "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: Which one is TRUE about asking AI for a feature?",
+          "prompt": "Quick! Pick the better feature request:",
           "options": [
             {
-              "text": "Add ten features at once.",
+              "text": "Pause? Maybe? Sometimes?",
               "correct": false
             },
             {
-              "text": "Skip testing the new feature.",
+              "text": "Make pausing thing happen good.",
               "correct": false
             },
             {
-              "text": "Helpers do best with small features.",
+              "text": "Pause but secret.",
+              "correct": false
+            },
+            {
+              "text": "Add a 'pause' button in the top-right that stops the timer.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Pick the better feature request:",
+          "options": [
+            {
+              "text": "Make pausing thing happen good.",
+              "correct": false
+            },
+            {
+              "text": "Pause? Maybe? Sometimes?",
+              "correct": false
+            },
+            {
+              "text": "Add a 'pause' button in the top-right that stops the timer.",
               "correct": true
             },
             {
-              "text": "Hide the file from the helper.",
+              "text": "Pause but secret.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — Which one is TRUE about asking AI for a feature?",
+          "prompt": "Bytey wonders: Pick the better feature request:",
           "options": [
             {
-              "text": "Hide the file from the helper.",
+              "text": "Pause? Maybe? Sometimes?",
               "correct": false
             },
             {
-              "text": "Be clear about what you want to add.",
+              "text": "Make pausing thing happen good.",
+              "correct": false
+            },
+            {
+              "text": "Add a 'pause' button in the top-right that stops the timer.",
               "correct": true
             },
             {
-              "text": "Skip testing the new feature.",
+              "text": "Pause but secret.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Pick the better feature request:",
+          "options": [
+            {
+              "text": "Make pausing thing happen good.",
               "correct": false
             },
             {
-              "text": "Helpers like giant features only.",
+              "text": "Pause? Maybe? Sometimes?",
               "correct": false
+            },
+            {
+              "text": "Pause but secret.",
+              "correct": false
+            },
+            {
+              "text": "Add a 'pause' button in the top-right that stops the timer.",
+              "correct": true
             }
           ]
         }
@@ -322,7 +322,7 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the question.",
+          "prompt": "Type GO and press Send to unlock the next question.",
           "target_display": "GO",
           "targets": [
             "go"
@@ -332,106 +332,106 @@
       },
       "variations": [
         {
-          "prompt": "One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "prompt": "Why test the feature after it's added?",
           "options": [
             {
-              "text": "Skip testing the new feature.",
+              "text": "Because tests earn 5 stars.",
+              "correct": false
+            },
+            {
+              "text": "So the keyboard doesn't get bored.",
+              "correct": false
+            },
+            {
+              "text": "To make sure it actually works the way you wanted.",
               "correct": true
             },
             {
-              "text": "Test the new feature after you add it.",
-              "correct": false
-            },
-            {
-              "text": "Show the file or place where it goes.",
-              "correct": false
-            },
-            {
-              "text": "Be clear about what you want to add.",
+              "text": "To impress the helper.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "prompt": "Quick! Why test the feature after it's added?",
           "options": [
             {
-              "text": "Show the file or place where it goes.",
+              "text": "To impress the helper.",
               "correct": false
             },
             {
-              "text": "Say what should happen step by step.",
+              "text": "So the keyboard doesn't get bored.",
               "correct": false
             },
             {
-              "text": "Add ten features at once.",
+              "text": "To make sure it actually works the way you wanted.",
               "correct": true
             },
             {
-              "text": "Be clear about what you want to add.",
+              "text": "Because tests earn 5 stars.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "prompt": "Hey friend — Why test the feature after it's added?",
           "options": [
             {
-              "text": "Be clear about what you want to add.",
+              "text": "Because tests earn 5 stars.",
               "correct": false
             },
             {
-              "text": "Show the file or place where it goes.",
-              "correct": false
-            },
-            {
-              "text": "Say what should happen step by step.",
-              "correct": false
-            },
-            {
-              "text": "Helpers like giant features only.",
+              "text": "To make sure it actually works the way you wanted.",
               "correct": true
+            },
+            {
+              "text": "So the keyboard doesn't get bored.",
+              "correct": false
+            },
+            {
+              "text": "To impress the helper.",
+              "correct": false
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "prompt": "Bytey wonders: Why test the feature after it's added?",
           "options": [
             {
-              "text": "Helpers do best with small features.",
-              "correct": false
-            },
-            {
-              "text": "Test the new feature after you add it.",
-              "correct": false
-            },
-            {
-              "text": "Say what should happen step by step.",
-              "correct": false
-            },
-            {
-              "text": "Be vague about everything.",
+              "text": "To make sure it actually works the way you wanted.",
               "correct": true
+            },
+            {
+              "text": "To impress the helper.",
+              "correct": false
+            },
+            {
+              "text": "So the keyboard doesn't get bored.",
+              "correct": false
+            },
+            {
+              "text": "Because tests earn 5 stars.",
+              "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "prompt": "Tell me — Why test the feature after it's added?",
           "options": [
             {
-              "text": "Test the new feature after you add it.",
+              "text": "To impress the helper.",
               "correct": false
             },
             {
-              "text": "Hide the file from the helper.",
+              "text": "Because tests earn 5 stars.",
+              "correct": false
+            },
+            {
+              "text": "To make sure it actually works the way you wanted.",
               "correct": true
             },
             {
-              "text": "Be clear about what you want to add.",
-              "correct": false
-            },
-            {
-              "text": "Say what should happen step by step.",
+              "text": "So the keyboard doesn't get bored.",
               "correct": false
             }
           ]
@@ -440,136 +440,6 @@
     },
     {
       "id": "q4",
-      "interaction": {
-        "type": "click-the-thing",
-        "payload": {
-          "prompt": "Tap the rocket to launch the question!",
-          "choices": [
-            {
-              "label": "🚀",
-              "right": true
-            },
-            {
-              "label": "🐢",
-              "right": false
-            },
-            {
-              "label": "🪨",
-              "right": false
-            }
-          ]
-        }
-      },
-      "variations": [
-        {
-          "prompt": "Bytey wants to teach a friend about asking AI for a feature. What should he say?",
-          "options": [
-            {
-              "text": "Be vague about everything.",
-              "correct": false
-            },
-            {
-              "text": "Hide the file from the helper.",
-              "correct": false
-            },
-            {
-              "text": "Add ten features at once.",
-              "correct": false
-            },
-            {
-              "text": "Test the new feature after you add it.",
-              "correct": true
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Bytey wants to teach a friend about asking AI for a feature. What should he say?",
-          "options": [
-            {
-              "text": "Skip testing the new feature.",
-              "correct": false
-            },
-            {
-              "text": "Helpers do best with small features.",
-              "correct": true
-            },
-            {
-              "text": "Helpers like giant features only.",
-              "correct": false
-            },
-            {
-              "text": "Hide the file from the helper.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Bytey wants to teach a friend about asking AI for a feature. What should he say?",
-          "options": [
-            {
-              "text": "Hide the file from the helper.",
-              "correct": false
-            },
-            {
-              "text": "Helpers like giant features only.",
-              "correct": false
-            },
-            {
-              "text": "Be clear about what you want to add.",
-              "correct": true
-            },
-            {
-              "text": "Skip testing the new feature.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: Bytey wants to teach a friend about asking AI for a feature. What should he say?",
-          "options": [
-            {
-              "text": "Show the file or place where it goes.",
-              "correct": true
-            },
-            {
-              "text": "Be vague about everything.",
-              "correct": false
-            },
-            {
-              "text": "Add ten features at once.",
-              "correct": false
-            },
-            {
-              "text": "Helpers like giant features only.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Bytey wants to teach a friend about asking AI for a feature. What should he say?",
-          "options": [
-            {
-              "text": "Skip testing the new feature.",
-              "correct": false
-            },
-            {
-              "text": "Helpers like giant features only.",
-              "correct": false
-            },
-            {
-              "text": "Say what should happen step by step.",
-              "correct": true
-            },
-            {
-              "text": "Hide the file from the helper.",
-              "correct": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q5",
       "interaction": {
         "type": "click-the-thing",
         "payload": {
@@ -592,107 +462,358 @@
       },
       "variations": [
         {
-          "prompt": "Which rule about asking AI for a feature is a GOOD rule?",
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
-              "text": "Be vague about everything.",
+              "text": "Mention what to NOT change.",
+              "correct": false
+            },
+            {
+              "text": "Tell the helper what 'done' looks like.",
+              "correct": false
+            },
+            {
+              "text": "Add ten features at once and pray.",
+              "correct": true
+            },
+            {
+              "text": "Show the file or place where it goes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "options": [
+            {
+              "text": "Helpers do best with small features.",
+              "correct": false
+            },
+            {
+              "text": "Helpers like giant features only — small ones bore them.",
+              "correct": true
+            },
+            {
+              "text": "Mention what to NOT change.",
+              "correct": false
+            },
+            {
+              "text": "Show the file or place where it goes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "options": [
+            {
+              "text": "Show the file or place where it goes.",
+              "correct": false
+            },
+            {
+              "text": "Mention what to NOT change.",
+              "correct": false
+            },
+            {
+              "text": "Each feature must include a haiku.",
+              "correct": true
+            },
+            {
+              "text": "Say what should happen step by step.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "options": [
+            {
+              "text": "Add an example output if you can.",
+              "correct": false
+            },
+            {
+              "text": "Mention what to NOT change.",
+              "correct": false
+            },
+            {
+              "text": "Hide your name to make it hard.",
+              "correct": true
+            },
+            {
+              "text": "Tell the helper what 'done' looks like.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about asking AI for a feature.",
+          "options": [
+            {
+              "text": "Mention what to NOT change.",
+              "correct": false
+            },
+            {
+              "text": "Add an example output if you can.",
+              "correct": false
+            },
+            {
+              "text": "Say what should happen step by step.",
+              "correct": false
+            },
+            {
+              "text": "Use only emoji to describe the feature.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Tell me — Which one is TRUE about asking AI for a feature?",
+          "options": [
+            {
+              "text": "Be vague about everything — surprise yourself.",
+              "correct": false
+            },
+            {
+              "text": "Hide the file from the helper — playing hide and seek.",
+              "correct": false
+            },
+            {
+              "text": "Each feature must include a haiku.",
               "correct": false
             },
             {
               "text": "Helpers do best with small features.",
               "correct": true
-            },
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which one is TRUE about asking AI for a feature?",
+          "options": [
             {
-              "text": "Skip testing the new feature.",
+              "text": "Be vague about everything — surprise yourself.",
               "correct": false
             },
             {
-              "text": "Hide the file from the helper.",
+              "text": "Use only emoji to describe the feature.",
+              "correct": false
+            },
+            {
+              "text": "Tell the helper what 'done' looks like.",
+              "correct": true
+            },
+            {
+              "text": "Add ten features at once and pray.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! Which rule about asking AI for a feature is a GOOD rule?",
+          "prompt": "Pop quiz! Which one is TRUE about asking AI for a feature?",
           "options": [
             {
-              "text": "Hide the file from the helper.",
+              "text": "Mention what to NOT change.",
+              "correct": true
+            },
+            {
+              "text": "Be vague about everything — surprise yourself.",
               "correct": false
             },
+            {
+              "text": "Add ten features at once and pray.",
+              "correct": false
+            },
+            {
+              "text": "Helpers like giant features only — small ones bore them.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Which one is TRUE about asking AI for a feature?",
+          "options": [
+            {
+              "text": "Helpers like giant features only — small ones bore them.",
+              "correct": false
+            },
+            {
+              "text": "Add an example output if you can.",
+              "correct": true
+            },
+            {
+              "text": "Be vague about everything — surprise yourself.",
+              "correct": false
+            },
+            {
+              "text": "Each feature must include a haiku.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about asking AI for a feature?",
+          "options": [
             {
               "text": "Be clear about what you want to add.",
               "correct": true
             },
             {
-              "text": "Add ten features at once.",
+              "text": "Hide the file from the helper — playing hide and seek.",
               "correct": false
             },
             {
-              "text": "Be vague about everything.",
+              "text": "Each feature must include a haiku.",
+              "correct": false
+            },
+            {
+              "text": "Add ten features at once and pray.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Wait wait wait — Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Add an example output if you can.",
+              "correct": false
+            },
+            {
+              "text": "Mention what to NOT change.",
+              "correct": false
+            },
+            {
+              "text": "Each feature must include a haiku.",
+              "correct": true
+            },
+            {
+              "text": "Be clear about what you want to add.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Hey friend — Which rule about asking AI for a feature is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Add ten features at once.",
+              "text": "Say what should happen step by step.",
               "correct": false
             },
             {
-              "text": "Hide the file from the helper.",
+              "text": "Add an example output if you can.",
+              "correct": false
+            },
+            {
+              "text": "Hide your name to make it hard.",
+              "correct": true
+            },
+            {
+              "text": "Show the file or place where it goes.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Test the new feature after you add it.",
+              "correct": false
+            },
+            {
+              "text": "Use only emoji to describe the feature.",
+              "correct": true
+            },
+            {
+              "text": "Add an example output if you can.",
+              "correct": false
+            },
+            {
+              "text": "Be clear about what you want to add.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Be clear about what you want to add.",
               "correct": false
             },
             {
               "text": "Show the file or place where it goes.",
-              "correct": true
+              "correct": false
             },
             {
-              "text": "Be vague about everything.",
+              "text": "Tell the helper what 'done' looks like.",
               "correct": false
+            },
+            {
+              "text": "Be vague about everything — surprise yourself.",
+              "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: Which rule about asking AI for a feature is a GOOD rule?",
+          "prompt": "Hey friend — Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Say what should happen step by step.",
+              "text": "Hide the file from the helper — playing hide and seek.",
               "correct": true
             },
             {
-              "text": "Add ten features at once.",
+              "text": "Mention what to NOT change.",
               "correct": false
             },
             {
-              "text": "Skip testing the new feature.",
+              "text": "Be clear about what you want to add.",
               "correct": false
             },
             {
-              "text": "Be vague about everything.",
+              "text": "Tell the helper what 'done' looks like.",
               "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Which rule about asking AI for a feature is a GOOD rule?",
-          "options": [
-            {
-              "text": "Helpers like giant features only.",
-              "correct": false
-            },
-            {
-              "text": "Be vague about everything.",
-              "correct": false
-            },
-            {
-              "text": "Hide the file from the helper.",
-              "correct": false
-            },
-            {
-              "text": "Test the new feature after you add it.",
-              "correct": true
             }
           ]
         }

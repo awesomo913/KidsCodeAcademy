@@ -22,54 +22,24 @@
     }
   },
   "game": {
-    "type": "click-the-thing",
+    "type": "history-scene",
     "payload": {
-      "prompt": "Cursor needs to fix one tiny thing. Which line has a typo?",
-      "choices": [
-        {
-          "label": "Hello, world!",
-          "right": false
-        },
-        {
-          "label": "Hellpp, world!",
-          "right": true
-        },
-        {
-          "label": "Goodbye!",
-          "right": false
-        },
-        {
-          "label": "Have a nice day!",
-          "right": false
-        }
-      ]
+      "prompt": "Watch Cursor read your code!",
+      "scene": {
+        "id": "cursor"
+      }
     }
   },
   "questions": [
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "history-scene",
         "payload": {
-          "prompt": "Cursor needs to fix one tiny thing. Which line has a typo?",
-          "choices": [
-            {
-              "label": "Hello, world!",
-              "right": false
-            },
-            {
-              "label": "Hellpp, world!",
-              "right": true
-            },
-            {
-              "label": "Goodbye!",
-              "right": false
-            },
-            {
-              "label": "Have a nice day!",
-              "right": false
-            }
-          ]
+          "prompt": "Watch Cursor read your code!",
+          "scene": {
+            "id": "cursor"
+          }
         }
       },
       "variations": [
@@ -77,20 +47,20 @@
           "prompt": "What is Cursor in depth?",
           "options": [
             {
+              "text": "Cursor smells the code first to check freshness.",
+              "correct": false
+            },
+            {
+              "text": "Cursor only changes the wallpaper on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Cursor must be paid in stickers and gummy worms.",
+              "correct": false
+            },
+            {
               "text": "Cursor is a code editor with a helper inside.",
               "correct": true
-            },
-            {
-              "text": "Cursor must be paid in stickers.",
-              "correct": false
-            },
-            {
-              "text": "Cursor only changes the wallpaper.",
-              "correct": false
-            },
-            {
-              "text": "Cursor speaks only in numbers.",
-              "correct": false
             }
           ]
         },
@@ -98,7 +68,7 @@
           "prompt": "Quick! Which one is TRUE about Cursor in depth?",
           "options": [
             {
-              "text": "Cursor speaks only in numbers.",
+              "text": "Cursor lives in your shoe and naps a lot.",
               "correct": false
             },
             {
@@ -106,11 +76,11 @@
               "correct": true
             },
             {
-              "text": "Cursor writes code only for video games.",
+              "text": "Cursor refuses to edit files with vowels.",
               "correct": false
             },
             {
-              "text": "Cursor only changes the wallpaper.",
+              "text": "Cursor cannot read your project at all because shy.",
               "correct": false
             }
           ]
@@ -119,19 +89,19 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Cursor in depth.",
           "options": [
             {
-              "text": "Cursor is a code editor with a helper inside.",
+              "text": "Cursor reads our project to help better.",
               "correct": false
             },
             {
-              "text": "Cursor can explain bugs in plain words.",
+              "text": "Cursor can rewrite a function for you.",
               "correct": false
             },
             {
-              "text": "Cursor speaks only in numbers.",
+              "text": "Cursor speaks only in numbers and burps.",
               "correct": true
             },
             {
-              "text": "Cursor reads our project to help better.",
+              "text": "Cursor is a code editor with a helper inside.",
               "correct": false
             }
           ]
@@ -140,7 +110,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about Cursor in depth. What should he say?",
           "options": [
             {
-              "text": "Cursor must be paid in stickers.",
+              "text": "Cursor must be paid in stickers and gummy worms.",
+              "correct": false
+            },
+            {
+              "text": "Cursor speaks only in numbers and burps.",
               "correct": false
             },
             {
@@ -148,11 +122,7 @@
               "correct": true
             },
             {
-              "text": "Cursor only changes the wallpaper.",
-              "correct": false
-            },
-            {
-              "text": "Cursor speaks only in numbers.",
+              "text": "Cursor writes code only for video games about goats.",
               "correct": false
             }
           ]
@@ -161,19 +131,19 @@
           "prompt": "Tell me — Which rule about Cursor in depth is a GOOD rule?",
           "options": [
             {
+              "text": "Cursor must be paid in stickers and gummy worms.",
+              "correct": false
+            },
+            {
+              "text": "Cursor smells the code first to check freshness.",
+              "correct": false
+            },
+            {
               "text": "Cursor can explain bugs in plain words.",
               "correct": true
             },
             {
-              "text": "Cursor must be paid in stickers.",
-              "correct": false
-            },
-            {
-              "text": "Cursor speaks only in numbers.",
-              "correct": false
-            },
-            {
-              "text": "Cursor writes code only for video games.",
+              "text": "Cursor speaks only in numbers and burps.",
               "correct": false
             }
           ]
@@ -204,106 +174,106 @@
       },
       "variations": [
         {
-          "prompt": "Which one is TRUE about Cursor in depth?",
+          "prompt": "You found a bug in one file. What's a smart Cursor move?",
           "options": [
             {
-              "text": "Cursor speaks only in numbers.",
+              "text": "Slap the laptop and run.",
               "correct": false
             },
             {
-              "text": "Cursor can change many files at once.",
+              "text": "Whistle three times near the WiFi.",
+              "correct": false
+            },
+            {
+              "text": "Open that file and tell Cursor exactly what's wrong.",
               "correct": true
             },
             {
-              "text": "Cursor must be paid in stickers.",
-              "correct": false
-            },
-            {
-              "text": "Cursor writes code only for video games.",
+              "text": "Email the bug to the moon.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! Which one is TRUE about Cursor in depth?",
+          "prompt": "Quick! You found a bug in one file. What's a smart Cursor move?",
           "options": [
             {
-              "text": "Cursor writes code only for video games.",
+              "text": "Slap the laptop and run.",
               "correct": false
             },
             {
-              "text": "We can talk to Cursor about the code we wrote.",
+              "text": "Open that file and tell Cursor exactly what's wrong.",
               "correct": true
             },
             {
-              "text": "Cursor cannot read your project at all.",
+              "text": "Whistle three times near the WiFi.",
               "correct": false
             },
             {
-              "text": "Cursor must be paid in stickers.",
+              "text": "Email the bug to the moon.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Hey friend — Which one is TRUE about Cursor in depth?",
+          "prompt": "Hey friend — You found a bug in one file. What's a smart Cursor move?",
           "options": [
             {
-              "text": "Cursor only changes the wallpaper.",
-              "correct": false
-            },
-            {
-              "text": "Cursor speaks only in numbers.",
-              "correct": false
-            },
-            {
-              "text": "Cursor cannot read your project at all.",
-              "correct": false
-            },
-            {
-              "text": "Cursor reads our project to help better.",
-              "correct": true
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: Which one is TRUE about Cursor in depth?",
-          "options": [
-            {
-              "text": "Cursor writes code only for video games.",
-              "correct": false
-            },
-            {
-              "text": "Cursor speaks only in numbers.",
-              "correct": false
-            },
-            {
-              "text": "Cursor can explain bugs in plain words.",
+              "text": "Open that file and tell Cursor exactly what's wrong.",
               "correct": true
             },
             {
-              "text": "Cursor cannot read your project at all.",
+              "text": "Slap the laptop and run.",
+              "correct": false
+            },
+            {
+              "text": "Email the bug to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Whistle three times near the WiFi.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — Which one is TRUE about Cursor in depth?",
+          "prompt": "Bytey wonders: You found a bug in one file. What's a smart Cursor move?",
           "options": [
             {
-              "text": "Cursor cannot read your project at all.",
+              "text": "Email the bug to the moon.",
               "correct": false
             },
             {
-              "text": "Cursor is a code editor with a helper inside.",
+              "text": "Whistle three times near the WiFi.",
+              "correct": false
+            },
+            {
+              "text": "Open that file and tell Cursor exactly what's wrong.",
               "correct": true
             },
             {
-              "text": "Cursor speaks only in numbers.",
+              "text": "Slap the laptop and run.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — You found a bug in one file. What's a smart Cursor move?",
+          "options": [
+            {
+              "text": "Open that file and tell Cursor exactly what's wrong.",
+              "correct": true
+            },
+            {
+              "text": "Slap the laptop and run.",
               "correct": false
             },
             {
-              "text": "Cursor must be paid in stickers.",
+              "text": "Email the bug to the moon.",
+              "correct": false
+            },
+            {
+              "text": "Whistle three times near the WiFi.",
               "correct": false
             }
           ]
@@ -315,7 +285,7 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the question.",
+          "prompt": "Type GO and press Send to unlock the next question.",
           "target_display": "GO",
           "targets": [
             "go"
@@ -325,106 +295,106 @@
       },
       "variations": [
         {
-          "prompt": "One of these is silly! Pick the WRONG one about Cursor in depth.",
+          "prompt": "Why does Cursor work better than a chat by itself for coding?",
           "options": [
             {
-              "text": "Cursor speaks only in numbers.",
+              "text": "Cursor uses extra exclamation marks.",
+              "correct": false
+            },
+            {
+              "text": "Cursor sees your real files, not just words.",
               "correct": true
             },
             {
-              "text": "Cursor reads our project to help better.",
+              "text": "Cursor has way prettier buttons.",
               "correct": false
             },
             {
-              "text": "Cursor can change many files at once.",
-              "correct": false
-            },
-            {
-              "text": "Cursor is a code editor with a helper inside.",
+              "text": "Cursor is fluent in pirate.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! One of these is silly! Pick the WRONG one about Cursor in depth.",
+          "prompt": "Quick! Why does Cursor work better than a chat by itself for coding?",
           "options": [
             {
-              "text": "Cursor can change many files at once.",
+              "text": "Cursor is fluent in pirate.",
               "correct": false
             },
             {
-              "text": "We can talk to Cursor about the code we wrote.",
-              "correct": false
-            },
-            {
-              "text": "Cursor writes code only for video games.",
+              "text": "Cursor sees your real files, not just words.",
               "correct": true
             },
             {
-              "text": "Cursor is a code editor with a helper inside.",
+              "text": "Cursor uses extra exclamation marks.",
+              "correct": false
+            },
+            {
+              "text": "Cursor has way prettier buttons.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Cursor in depth.",
+          "prompt": "Hey friend — Why does Cursor work better than a chat by itself for coding?",
           "options": [
             {
-              "text": "Cursor is a code editor with a helper inside.",
+              "text": "Cursor uses extra exclamation marks.",
               "correct": false
             },
             {
-              "text": "Cursor can change many files at once.",
+              "text": "Cursor has way prettier buttons.",
               "correct": false
             },
             {
-              "text": "We can talk to Cursor about the code we wrote.",
-              "correct": false
-            },
-            {
-              "text": "Cursor must be paid in stickers.",
+              "text": "Cursor sees your real files, not just words.",
               "correct": true
+            },
+            {
+              "text": "Cursor is fluent in pirate.",
+              "correct": false
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about Cursor in depth.",
+          "prompt": "Bytey wonders: Why does Cursor work better than a chat by itself for coding?",
           "options": [
             {
-              "text": "Cursor can explain bugs in plain words.",
-              "correct": false
-            },
-            {
-              "text": "Cursor reads our project to help better.",
-              "correct": false
-            },
-            {
-              "text": "We can talk to Cursor about the code we wrote.",
-              "correct": false
-            },
-            {
-              "text": "Cursor only changes the wallpaper.",
+              "text": "Cursor sees your real files, not just words.",
               "correct": true
+            },
+            {
+              "text": "Cursor uses extra exclamation marks.",
+              "correct": false
+            },
+            {
+              "text": "Cursor is fluent in pirate.",
+              "correct": false
+            },
+            {
+              "text": "Cursor has way prettier buttons.",
+              "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — One of these is silly! Pick the WRONG one about Cursor in depth.",
+          "prompt": "Tell me — Why does Cursor work better than a chat by itself for coding?",
           "options": [
             {
-              "text": "Cursor reads our project to help better.",
+              "text": "Cursor has way prettier buttons.",
               "correct": false
             },
             {
-              "text": "Cursor cannot read your project at all.",
+              "text": "Cursor is fluent in pirate.",
+              "correct": false
+            },
+            {
+              "text": "Cursor sees your real files, not just words.",
               "correct": true
             },
             {
-              "text": "Cursor is a code editor with a helper inside.",
-              "correct": false
-            },
-            {
-              "text": "We can talk to Cursor about the code we wrote.",
+              "text": "Cursor uses extra exclamation marks.",
               "correct": false
             }
           ]
@@ -436,18 +406,18 @@
       "interaction": {
         "type": "click-the-thing",
         "payload": {
-          "prompt": "Tap the rocket to launch the question!",
+          "prompt": "Tap the smiley to wake up Bytey!",
           "choices": [
             {
-              "label": "🚀",
+              "label": "😀",
               "right": true
             },
             {
-              "label": "🐢",
+              "label": "🥒",
               "right": false
             },
             {
-              "label": "🪨",
+              "label": "🧦",
               "right": false
             }
           ]
@@ -455,106 +425,236 @@
       },
       "variations": [
         {
-          "prompt": "Bytey wants to teach a friend about Cursor in depth. What should he say?",
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about Cursor in depth.",
           "options": [
             {
-              "text": "Cursor only changes the wallpaper.",
+              "text": "Cursor can rewrite a function for you.",
               "correct": false
             },
             {
-              "text": "Cursor cannot read your project at all.",
+              "text": "Cursor sees the file you are looking at right now.",
               "correct": false
             },
             {
-              "text": "Cursor writes code only for video games.",
-              "correct": false
-            },
-            {
-              "text": "Cursor reads our project to help better.",
+              "text": "Cursor writes code only for video games about goats.",
               "correct": true
+            },
+            {
+              "text": "Cursor can change many files at once.",
+              "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! Bytey wants to teach a friend about Cursor in depth. What should he say?",
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about Cursor in depth.",
           "options": [
             {
-              "text": "Cursor speaks only in numbers.",
+              "text": "Cursor can explain bugs in plain words.",
+              "correct": false
+            },
+            {
+              "text": "Cursor must be paid in stickers and gummy worms.",
+              "correct": true
+            },
+            {
+              "text": "Cursor can rewrite a function for you.",
+              "correct": false
+            },
+            {
+              "text": "Cursor can change many files at once.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about Cursor in depth.",
+          "options": [
+            {
+              "text": "Cursor can change many files at once.",
+              "correct": false
+            },
+            {
+              "text": "Cursor can rewrite a function for you.",
+              "correct": false
+            },
+            {
+              "text": "Cursor lives in your shoe and naps a lot.",
+              "correct": true
+            },
+            {
+              "text": "We can talk to Cursor about the code we wrote.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about Cursor in depth.",
+          "options": [
+            {
+              "text": "Cursor is best when you point at the part you mean.",
+              "correct": false
+            },
+            {
+              "text": "Cursor can rewrite a function for you.",
+              "correct": false
+            },
+            {
+              "text": "Cursor refuses to edit files with vowels.",
+              "correct": true
+            },
+            {
+              "text": "Cursor sees the file you are looking at right now.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about Cursor in depth.",
+          "options": [
+            {
+              "text": "Cursor can rewrite a function for you.",
+              "correct": false
+            },
+            {
+              "text": "Cursor is best when you point at the part you mean.",
+              "correct": false
+            },
+            {
+              "text": "We can talk to Cursor about the code we wrote.",
+              "correct": false
+            },
+            {
+              "text": "Cursor smells the code first to check freshness.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Tell me — Which one is TRUE about Cursor in depth?",
+          "options": [
+            {
+              "text": "Cursor only changes the wallpaper on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Cursor cannot read your project at all because shy.",
+              "correct": false
+            },
+            {
+              "text": "Cursor lives in your shoe and naps a lot.",
               "correct": false
             },
             {
               "text": "Cursor can explain bugs in plain words.",
               "correct": true
-            },
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which one is TRUE about Cursor in depth?",
+          "options": [
             {
-              "text": "Cursor must be paid in stickers.",
+              "text": "Cursor only changes the wallpaper on Tuesdays.",
               "correct": false
             },
             {
-              "text": "Cursor cannot read your project at all.",
+              "text": "Cursor smells the code first to check freshness.",
+              "correct": false
+            },
+            {
+              "text": "Cursor sees the file you are looking at right now.",
+              "correct": true
+            },
+            {
+              "text": "Cursor writes code only for video games about goats.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Hey friend — Bytey wants to teach a friend about Cursor in depth. What should he say?",
+          "prompt": "Pop quiz! Which one is TRUE about Cursor in depth?",
           "options": [
             {
-              "text": "Cursor cannot read your project at all.",
+              "text": "Cursor can rewrite a function for you.",
+              "correct": true
+            },
+            {
+              "text": "Cursor only changes the wallpaper on Tuesdays.",
               "correct": false
             },
             {
-              "text": "Cursor must be paid in stickers.",
+              "text": "Cursor writes code only for video games about goats.",
               "correct": false
             },
+            {
+              "text": "Cursor must be paid in stickers and gummy worms.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Which one is TRUE about Cursor in depth?",
+          "options": [
+            {
+              "text": "Cursor must be paid in stickers and gummy worms.",
+              "correct": false
+            },
+            {
+              "text": "Cursor is best when you point at the part you mean.",
+              "correct": true
+            },
+            {
+              "text": "Cursor only changes the wallpaper on Tuesdays.",
+              "correct": false
+            },
+            {
+              "text": "Cursor lives in your shoe and naps a lot.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about Cursor in depth?",
+          "options": [
             {
               "text": "Cursor is a code editor with a helper inside.",
               "correct": true
             },
             {
-              "text": "Cursor speaks only in numbers.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: Bytey wants to teach a friend about Cursor in depth. What should he say?",
-          "options": [
-            {
-              "text": "Cursor can change many files at once.",
-              "correct": true
-            },
-            {
-              "text": "Cursor only changes the wallpaper.",
+              "text": "Cursor cannot read your project at all because shy.",
               "correct": false
             },
             {
-              "text": "Cursor writes code only for video games.",
+              "text": "Cursor lives in your shoe and naps a lot.",
               "correct": false
             },
             {
-              "text": "Cursor must be paid in stickers.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Bytey wants to teach a friend about Cursor in depth. What should he say?",
-          "options": [
-            {
-              "text": "Cursor speaks only in numbers.",
-              "correct": false
-            },
-            {
-              "text": "Cursor must be paid in stickers.",
-              "correct": false
-            },
-            {
-              "text": "We can talk to Cursor about the code we wrote.",
-              "correct": true
-            },
-            {
-              "text": "Cursor cannot read your project at all.",
+              "text": "Cursor writes code only for video games about goats.",
               "correct": false
             }
           ]

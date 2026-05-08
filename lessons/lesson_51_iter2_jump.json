@@ -83,20 +83,20 @@
           "prompt": "What is iter 2: jump?",
           "options": [
             {
+              "text": "Jumping requires a parent's signature.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways like a fish.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow and creaky.",
+              "correct": false
+            },
+            {
               "text": "A jump moves the hero up for a moment.",
               "correct": true
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            },
-            {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            },
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
             }
           ]
         },
@@ -104,7 +104,7 @@
           "prompt": "Quick! Which one is TRUE about iter 2: jump?",
           "options": [
             {
-              "text": "Hold time does nothing.",
+              "text": "Jumps must be timed to a metronome.",
               "correct": false
             },
             {
@@ -112,11 +112,11 @@
               "correct": true
             },
             {
-              "text": "Jumping in the air is fine.",
+              "text": "Jumping costs $0.50 in invisible pebbles.",
               "correct": false
             },
             {
-              "text": "Jumps move the hero sideways.",
+              "text": "Gravity pushes us up after a jump.",
               "correct": false
             }
           ]
@@ -125,19 +125,19 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 2: jump.",
           "options": [
             {
-              "text": "A jump moves the hero up for a moment.",
+              "text": "We jump only when we are on the ground.",
               "correct": false
             },
             {
-              "text": "A good jump feels snappy.",
+              "text": "A jump curve is up-fast-then-slow-then-down.",
               "correct": false
             },
             {
-              "text": "Hold time does nothing.",
+              "text": "Hold time does nothing — purely cosmetic.",
               "correct": true
             },
             {
-              "text": "We jump only when we are on the ground.",
+              "text": "A jump moves the hero up for a moment.",
               "correct": false
             }
           ]
@@ -146,7 +146,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 2: jump. What should he say?",
           "options": [
             {
-              "text": "A good jump feels slow.",
+              "text": "A good jump feels slow and creaky.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing — purely cosmetic.",
               "correct": false
             },
             {
@@ -154,11 +158,7 @@
               "correct": true
             },
             {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            },
-            {
-              "text": "Hold time does nothing.",
+              "text": "Jumping in the air is fine and recommended.",
               "correct": false
             }
           ]
@@ -167,19 +167,19 @@
           "prompt": "Tell me — Which rule about iter 2: jump is a GOOD rule?",
           "options": [
             {
+              "text": "A good jump feels slow and creaky.",
+              "correct": false
+            },
+            {
+              "text": "Jumping requires a parent's signature.",
+              "correct": false
+            },
+            {
               "text": "A good jump feels snappy.",
               "correct": true
             },
             {
-              "text": "A good jump feels slow.",
-              "correct": false
-            },
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
-            },
-            {
-              "text": "Jumping in the air is fine.",
+              "text": "Hold time does nothing — purely cosmetic.",
               "correct": false
             }
           ]
@@ -210,107 +210,107 @@
       },
       "variations": [
         {
-          "prompt": "Which one is TRUE about iter 2: jump?",
+          "prompt": "Bytey's hero can jump infinitely in the air. Is that what we want?",
           "options": [
             {
-              "text": "Hold time does nothing.",
+              "text": "Yes — gravity is fake anyway.",
               "correct": false
             },
             {
-              "text": "Gravity pulls the hero back down.",
-              "correct": true
-            },
-            {
-              "text": "A good jump feels slow.",
+              "text": "Only on Sundays.",
               "correct": false
             },
             {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Which one is TRUE about iter 2: jump?",
-          "options": [
-            {
-              "text": "Jumping in the air is fine.",
+              "text": "Maybe, if the hero hums.",
               "correct": false
             },
             {
-              "text": "Hold time decides how high.",
-              "correct": true
-            },
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Which one is TRUE about iter 2: jump?",
-          "options": [
-            {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            },
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            },
-            {
-              "text": "We jump only when we are on the ground.",
+              "text": "Usually no — that breaks the puzzle of platforming.",
               "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: Which one is TRUE about iter 2: jump?",
+          "prompt": "Quick! Bytey's hero can jump infinitely in the air. Is that what we want?",
           "options": [
             {
-              "text": "Jumping in the air is fine.",
+              "text": "Maybe, if the hero hums.",
               "correct": false
             },
             {
-              "text": "Hold time does nothing.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels snappy.",
+              "text": "Usually no — that breaks the puzzle of platforming.",
               "correct": true
             },
             {
-              "text": "Gravity pushes us up after a jump.",
+              "text": "Yes — gravity is fake anyway.",
+              "correct": false
+            },
+            {
+              "text": "Only on Sundays.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — Which one is TRUE about iter 2: jump?",
+          "prompt": "Hey friend — Bytey's hero can jump infinitely in the air. Is that what we want?",
           "options": [
             {
-              "text": "Gravity pushes us up after a jump.",
+              "text": "Yes — gravity is fake anyway.",
               "correct": false
             },
             {
-              "text": "A jump moves the hero up for a moment.",
+              "text": "Usually no — that breaks the puzzle of platforming.",
               "correct": true
             },
             {
-              "text": "Hold time does nothing.",
+              "text": "Only on Sundays.",
               "correct": false
             },
             {
-              "text": "A good jump feels slow.",
+              "text": "Maybe, if the hero hums.",
               "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Bytey's hero can jump infinitely in the air. Is that what we want?",
+          "options": [
+            {
+              "text": "Only on Sundays.",
+              "correct": false
+            },
+            {
+              "text": "Yes — gravity is fake anyway.",
+              "correct": false
+            },
+            {
+              "text": "Usually no — that breaks the puzzle of platforming.",
+              "correct": true
+            },
+            {
+              "text": "Maybe, if the hero hums.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Bytey's hero can jump infinitely in the air. Is that what we want?",
+          "options": [
+            {
+              "text": "Yes — gravity is fake anyway.",
+              "correct": false
+            },
+            {
+              "text": "Only on Sundays.",
+              "correct": false
+            },
+            {
+              "text": "Maybe, if the hero hums.",
+              "correct": false
+            },
+            {
+              "text": "Usually no — that breaks the puzzle of platforming.",
+              "correct": true
             }
           ]
         }
@@ -321,7 +321,7 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the question.",
+          "prompt": "Type GO and press Send to unlock the next question.",
           "target_display": "GO",
           "targets": [
             "go"
@@ -331,107 +331,107 @@
       },
       "variations": [
         {
-          "prompt": "One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "prompt": "What makes a jump feel good?",
           "options": [
             {
-              "text": "Hold time does nothing.",
-              "correct": true
-            },
-            {
-              "text": "We jump only when we are on the ground.",
+              "text": "Hero saying 'wheee' aloud.",
               "correct": false
             },
             {
-              "text": "Gravity pulls the hero back down.",
+              "text": "A 5-second cutscene per jump.",
               "correct": false
             },
             {
-              "text": "A jump moves the hero up for a moment.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 2: jump.",
-          "options": [
-            {
-              "text": "Gravity pulls the hero back down.",
+              "text": "Long rise, longer wait, then a sigh.",
               "correct": false
             },
             {
-              "text": "Hold time decides how high.",
-              "correct": false
-            },
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": true
-            },
-            {
-              "text": "A jump moves the hero up for a moment.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 2: jump.",
-          "options": [
-            {
-              "text": "A jump moves the hero up for a moment.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pulls the hero back down.",
-              "correct": false
-            },
-            {
-              "text": "Hold time decides how high.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels slow.",
+              "text": "Quick rise, slow peak, decisive fall — and ground-only.",
               "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "prompt": "Quick! What makes a jump feel good?",
           "options": [
             {
-              "text": "A good jump feels snappy.",
+              "text": "Hero saying 'wheee' aloud.",
               "correct": false
             },
             {
-              "text": "We jump only when we are on the ground.",
+              "text": "Long rise, longer wait, then a sigh.",
               "correct": false
             },
             {
-              "text": "Hold time decides how high.",
+              "text": "Quick rise, slow peak, decisive fall — and ground-only.",
+              "correct": true
+            },
+            {
+              "text": "A 5-second cutscene per jump.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — What makes a jump feel good?",
+          "options": [
+            {
+              "text": "Hero saying 'wheee' aloud.",
               "correct": false
             },
             {
-              "text": "Jumps move the hero sideways.",
+              "text": "Long rise, longer wait, then a sigh.",
+              "correct": false
+            },
+            {
+              "text": "Quick rise, slow peak, decisive fall — and ground-only.",
+              "correct": true
+            },
+            {
+              "text": "A 5-second cutscene per jump.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: What makes a jump feel good?",
+          "options": [
+            {
+              "text": "A 5-second cutscene per jump.",
+              "correct": false
+            },
+            {
+              "text": "Hero saying 'wheee' aloud.",
+              "correct": false
+            },
+            {
+              "text": "Long rise, longer wait, then a sigh.",
+              "correct": false
+            },
+            {
+              "text": "Quick rise, slow peak, decisive fall — and ground-only.",
               "correct": true
             }
           ]
         },
         {
-          "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "prompt": "Tell me — What makes a jump feel good?",
           "options": [
             {
-              "text": "We jump only when we are on the ground.",
+              "text": "A 5-second cutscene per jump.",
               "correct": false
             },
             {
-              "text": "Gravity pushes us up after a jump.",
+              "text": "Long rise, longer wait, then a sigh.",
+              "correct": false
+            },
+            {
+              "text": "Hero saying 'wheee' aloud.",
+              "correct": false
+            },
+            {
+              "text": "Quick rise, slow peak, decisive fall — and ground-only.",
               "correct": true
-            },
-            {
-              "text": "A jump moves the hero up for a moment.",
-              "correct": false
-            },
-            {
-              "text": "Hold time decides how high.",
-              "correct": false
             }
           ]
         }
@@ -439,136 +439,6 @@
     },
     {
       "id": "q4",
-      "interaction": {
-        "type": "click-the-thing",
-        "payload": {
-          "prompt": "Tap the rocket to launch the question!",
-          "choices": [
-            {
-              "label": "🚀",
-              "right": true
-            },
-            {
-              "label": "🐢",
-              "right": false
-            },
-            {
-              "label": "🪨",
-              "right": false
-            }
-          ]
-        }
-      },
-      "variations": [
-        {
-          "prompt": "Bytey wants to teach a friend about iter 2: jump. What should he say?",
-          "options": [
-            {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            },
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            },
-            {
-              "text": "We jump only when we are on the ground.",
-              "correct": true
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Bytey wants to teach a friend about iter 2: jump. What should he say?",
-          "options": [
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels snappy.",
-              "correct": true
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Bytey wants to teach a friend about iter 2: jump. What should he say?",
-          "options": [
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            },
-            {
-              "text": "A jump moves the hero up for a moment.",
-              "correct": true
-            },
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 2: jump. What should he say?",
-          "options": [
-            {
-              "text": "Gravity pulls the hero back down.",
-              "correct": true
-            },
-            {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            },
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Bytey wants to teach a friend about iter 2: jump. What should he say?",
-          "options": [
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            },
-            {
-              "text": "Hold time decides how high.",
-              "correct": true
-            },
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q5",
       "interaction": {
         "type": "click-the-thing",
         "payload": {
@@ -591,106 +461,106 @@
       },
       "variations": [
         {
-          "prompt": "Which rule about iter 2: jump is a GOOD rule?",
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about iter 2: jump.",
           "options": [
             {
-              "text": "Jumps move the hero sideways.",
+              "text": "A jump curve is up-fast-then-slow-then-down.",
               "correct": false
             },
+            {
+              "text": "Jumping in the air makes for floaty controls.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine and recommended.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "options": [
             {
               "text": "A good jump feels snappy.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow and creaky.",
               "correct": true
             },
             {
-              "text": "Hold time does nothing.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Which rule about iter 2: jump is a GOOD rule?",
-          "options": [
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            },
-            {
-              "text": "A jump moves the hero up for a moment.",
-              "correct": true
-            },
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            },
-            {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Which rule about iter 2: jump is a GOOD rule?",
-          "options": [
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pushes us up after a jump.",
+              "text": "A jump curve is up-fast-then-slow-then-down.",
               "correct": false
             },
             {
               "text": "Gravity pulls the hero back down.",
-              "correct": true
-            },
-            {
-              "text": "Jumps move the hero sideways.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: Which rule about iter 2: jump is a GOOD rule?",
+          "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about iter 2: jump.",
           "options": [
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": false
+            },
+            {
+              "text": "A jump curve is up-fast-then-slow-then-down.",
+              "correct": false
+            },
+            {
+              "text": "Jumps must be timed to a metronome.",
+              "correct": true
+            },
             {
               "text": "Hold time decides how high.",
-              "correct": true
-            },
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            },
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
-            },
-            {
-              "text": "Jumps move the hero sideways.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — Which rule about iter 2: jump is a GOOD rule?",
+          "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about iter 2: jump.",
           "options": [
             {
-              "text": "A good jump feels slow.",
+              "text": "Tiny tweaks to jump can change everything.",
               "correct": false
             },
             {
-              "text": "Jumps move the hero sideways.",
+              "text": "A jump curve is up-fast-then-slow-then-down.",
               "correct": false
             },
             {
-              "text": "Gravity pushes us up after a jump.",
+              "text": "Jumping costs $0.50 in invisible pebbles.",
+              "correct": true
+            },
+            {
+              "text": "Jumping in the air makes for floaty controls.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about iter 2: jump.",
+          "options": [
+            {
+              "text": "A jump curve is up-fast-then-slow-then-down.",
               "correct": false
             },
             {
-              "text": "We jump only when we are on the ground.",
+              "text": "Tiny tweaks to jump can change everything.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": false
+            },
+            {
+              "text": "Jumping requires a parent's signature.",
               "correct": true
             }
           ]
@@ -698,128 +568,7 @@
       ]
     },
     {
-      "id": "q6",
-      "interaction": {
-        "type": "type-this-word",
-        "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type Y E S and press Send."
-        }
-      },
-      "variations": [
-        {
-          "prompt": "What is iter 2: jump?",
-          "options": [
-            {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            },
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            },
-            {
-              "text": "A jump moves the hero up for a moment.",
-              "correct": true
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! What is iter 2: jump?",
-          "options": [
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pulls the hero back down.",
-              "correct": true
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            },
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — What is iter 2: jump?",
-          "options": [
-            {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            },
-            {
-              "text": "Hold time decides how high.",
-              "correct": true
-            },
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: What is iter 2: jump?",
-          "options": [
-            {
-              "text": "We jump only when we are on the ground.",
-              "correct": true
-            },
-            {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            },
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — What is iter 2: jump?",
-          "options": [
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels snappy.",
-              "correct": true
-            },
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            },
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q7",
+      "id": "q5",
       "interaction": {
         "type": "click-the-thing",
         "payload": {
@@ -842,91 +591,91 @@
       },
       "variations": [
         {
+          "prompt": "Tell me — Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Jumps move the hero sideways like a fish.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "Jumps must be timed to a metronome.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels snappy.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "Jumps move the hero sideways like a fish.",
+              "correct": false
+            },
+            {
+              "text": "Jumping requires a parent's signature.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air makes for floaty controls.",
+              "correct": true
+            },
+            {
+              "text": "Jumping in the air is fine and recommended.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Which one is TRUE about iter 2: jump?",
+          "options": [
+            {
+              "text": "A jump curve is up-fast-then-slow-then-down.",
+              "correct": true
+            },
+            {
+              "text": "Jumps move the hero sideways like a fish.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine and recommended.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow and creaky.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about iter 2: jump?",
           "options": [
             {
-              "text": "Jumping in the air is fine.",
+              "text": "A good jump feels slow and creaky.",
               "correct": false
             },
             {
-              "text": "Hold time does nothing.",
-              "correct": false
-            },
-            {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pulls the hero back down.",
+              "text": "Tiny tweaks to jump can change everything.",
               "correct": true
+            },
+            {
+              "text": "Jumps move the hero sideways like a fish.",
+              "correct": false
+            },
+            {
+              "text": "Jumps must be timed to a metronome.",
+              "correct": false
             }
           ]
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 2: jump?",
-          "options": [
-            {
-              "text": "Jumps move the hero sideways.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            },
-            {
-              "text": "Hold time decides how high.",
-              "correct": true
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Which one is TRUE about iter 2: jump?",
-          "options": [
-            {
-              "text": "Hold time does nothing.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            },
-            {
-              "text": "We jump only when we are on the ground.",
-              "correct": true
-            },
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: Which one is TRUE about iter 2: jump?",
-          "options": [
-            {
-              "text": "A good jump feels snappy.",
-              "correct": true
-            },
-            {
-              "text": "Jumping in the air is fine.",
-              "correct": false
-            },
-            {
-              "text": "Gravity pushes us up after a jump.",
-              "correct": false
-            },
-            {
-              "text": "A good jump feels slow.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Which one is TRUE about iter 2: jump?",
           "options": [
             {
               "text": "A jump moves the hero up for a moment.",
@@ -937,11 +686,392 @@
               "correct": false
             },
             {
-              "text": "Jumps move the hero sideways.",
+              "text": "Jumps must be timed to a metronome.",
               "correct": false
             },
             {
-              "text": "Jumping in the air is fine.",
+              "text": "Jumping in the air is fine and recommended.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Wait wait wait — Bytey claims something about iter 2: jump. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Tiny tweaks to jump can change everything.",
+              "correct": false
+            },
+            {
+              "text": "A jump curve is up-fast-then-slow-then-down.",
+              "correct": false
+            },
+            {
+              "text": "Jumps must be timed to a metronome.",
+              "correct": true
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about iter 2: jump. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Hold time decides how high.",
+              "correct": false
+            },
+            {
+              "text": "Tiny tweaks to jump can change everything.",
+              "correct": false
+            },
+            {
+              "text": "Jumping costs $0.50 in invisible pebbles.",
+              "correct": true
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey claims something about iter 2: jump. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": false
+            },
+            {
+              "text": "Jumping requires a parent's signature.",
+              "correct": true
+            },
+            {
+              "text": "Tiny tweaks to jump can change everything.",
+              "correct": false
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about iter 2: jump. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air makes for floaty controls.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways like a fish.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about iter 2: jump. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": true
+            },
+            {
+              "text": "A jump curve is up-fast-then-slow-then-down.",
+              "correct": false
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air makes for floaty controls.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the orange dot to unlock the next question!",
+          "choices": [
+            {
+              "label": "🟠",
+              "right": true
+            },
+            {
+              "label": "🔵",
+              "right": false
+            },
+            {
+              "label": "🟢",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Pop quiz! Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "A jump curve is up-fast-then-slow-then-down.",
+              "correct": true
+            },
+            {
+              "text": "A good jump feels slow and creaky.",
+              "correct": false
+            },
+            {
+              "text": "Jumps must be timed to a metronome.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways like a fish.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "Jumping requires a parent's signature.",
+              "correct": false
+            },
+            {
+              "text": "Jumping costs $0.50 in invisible pebbles.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing — purely cosmetic.",
+              "correct": false
+            },
+            {
+              "text": "Tiny tweaks to jump can change everything.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "Jumps must be timed to a metronome.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine and recommended.",
+              "correct": false
+            },
+            {
+              "text": "A good jump feels slow and creaky.",
+              "correct": false
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "Jumping requires a parent's signature.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": true
+            },
+            {
+              "text": "A good jump feels slow and creaky.",
+              "correct": false
+            },
+            {
+              "text": "Jumping costs $0.50 in invisible pebbles.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about iter 2: jump is a GOOD rule?",
+          "options": [
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": true
+            },
+            {
+              "text": "Jumping in the air is fine and recommended.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways like a fish.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the next question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Fill in the blank: when we talk about iter 2: jump, ___",
+          "options": [
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "Hold time does nothing — purely cosmetic.",
+              "correct": false
+            },
+            {
+              "text": "Tiny tweaks to jump can change everything.",
+              "correct": true
+            },
+            {
+              "text": "Jumps must be timed to a metronome.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Fill in the blank: when we talk about iter 2: jump, ___",
+          "options": [
+            {
+              "text": "A good jump feels slow and creaky.",
+              "correct": false
+            },
+            {
+              "text": "Jumping costs $0.50 in invisible pebbles.",
+              "correct": false
+            },
+            {
+              "text": "A jump moves the hero up for a moment.",
+              "correct": true
+            },
+            {
+              "text": "Jumps must be timed to a metronome.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Fill in the blank: when we talk about iter 2: jump, ___",
+          "options": [
+            {
+              "text": "Gravity pushes us up after a jump.",
+              "correct": false
+            },
+            {
+              "text": "Jumps move the hero sideways like a fish.",
+              "correct": false
+            },
+            {
+              "text": "Jumping in the air is fine and recommended.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pulls the hero back down.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Fill in the blank: when we talk about iter 2: jump, ___",
+          "options": [
+            {
+              "text": "Jumps move the hero sideways like a fish.",
+              "correct": false
+            },
+            {
+              "text": "Hold time decides how high.",
+              "correct": true
+            },
+            {
+              "text": "Hold time does nothing — purely cosmetic.",
+              "correct": false
+            },
+            {
+              "text": "Jumping costs $0.50 in invisible pebbles.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Fill in the blank: when we talk about iter 2: jump, ___",
+          "options": [
+            {
+              "text": "We jump only when we are on the ground.",
+              "correct": true
+            },
+            {
+              "text": "A good jump feels slow and creaky.",
+              "correct": false
+            },
+            {
+              "text": "Jumping costs $0.50 in invisible pebbles.",
+              "correct": false
+            },
+            {
+              "text": "Gravity pushes us up after a jump.",
               "correct": false
             }
           ]

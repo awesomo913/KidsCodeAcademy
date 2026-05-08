@@ -22,46 +22,24 @@
     }
   },
   "game": {
-    "type": "drag-to-match",
+    "type": "history-scene",
     "payload": {
-      "prompt": "Match each helper to its best job:",
-      "pairs": [
-        {
-          "left": "Plan a treehouse",
-          "right": "Claude"
-        },
-        {
-          "left": "Fix a typo fast",
-          "right": "Cursor"
-        },
-        {
-          "left": "How big is the moon?",
-          "right": "Gemini"
-        }
-      ]
+      "prompt": "Watch Gemini look at words AND pictures!",
+      "scene": {
+        "id": "gemini"
+      }
     }
   },
   "questions": [
     {
       "id": "q1",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "history-scene",
         "payload": {
-          "prompt": "Match each helper to its best job:",
-          "pairs": [
-            {
-              "left": "Plan a treehouse",
-              "right": "Claude"
-            },
-            {
-              "left": "Fix a typo fast",
-              "right": "Cursor"
-            },
-            {
-              "left": "How big is the moon?",
-              "right": "Gemini"
-            }
-          ]
+          "prompt": "Watch Gemini look at words AND pictures!",
+          "scene": {
+            "id": "gemini"
+          }
         }
       },
       "variations": [
@@ -69,20 +47,20 @@
           "prompt": "What is Gemini in depth?",
           "options": [
             {
+              "text": "Gemini sneezes if you ask about Tuesday.",
+              "correct": false
+            },
+            {
+              "text": "Gemini only works on a flip phone from 2003.",
+              "correct": false
+            },
+            {
+              "text": "Gemini speaks one word at a time, very slowly.",
+              "correct": false
+            },
+            {
               "text": "Gemini is a helper made by Google.",
               "correct": true
-            },
-            {
-              "text": "Gemini speaks one word at a time.",
-              "correct": false
-            },
-            {
-              "text": "Gemini only works on a flip phone.",
-              "correct": false
-            },
-            {
-              "text": "Gemini eats batteries to wake up.",
-              "correct": false
             }
           ]
         },
@@ -90,7 +68,7 @@
           "prompt": "Quick! Which one is TRUE about Gemini in depth?",
           "options": [
             {
-              "text": "Gemini eats batteries to wake up.",
+              "text": "Gemini is two people in a trench coat.",
               "correct": false
             },
             {
@@ -98,11 +76,11 @@
               "correct": true
             },
             {
-              "text": "Gemini only knows about clouds.",
+              "text": "Gemini hates being called Gemini.",
               "correct": false
             },
             {
-              "text": "Gemini only works on a flip phone.",
+              "text": "Gemini cannot see pictures because of dust.",
               "correct": false
             }
           ]
@@ -111,19 +89,19 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
-              "text": "Gemini is a helper made by Google.",
+              "text": "Gemini works on phones, tablets, and laptops.",
               "correct": false
             },
             {
-              "text": "Gemini can help with school and play.",
+              "text": "Gemini can search before answering.",
               "correct": false
             },
             {
-              "text": "Gemini eats batteries to wake up.",
+              "text": "Gemini eats batteries to wake up properly.",
               "correct": true
             },
             {
-              "text": "Gemini works on phones, tablets, and laptops.",
+              "text": "Gemini is a helper made by Google.",
               "correct": false
             }
           ]
@@ -132,7 +110,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about Gemini in depth. What should he say?",
           "options": [
             {
-              "text": "Gemini speaks one word at a time.",
+              "text": "Gemini speaks one word at a time, very slowly.",
+              "correct": false
+            },
+            {
+              "text": "Gemini eats batteries to wake up properly.",
               "correct": false
             },
             {
@@ -140,11 +122,7 @@
               "correct": true
             },
             {
-              "text": "Gemini only works on a flip phone.",
-              "correct": false
-            },
-            {
-              "text": "Gemini eats batteries to wake up.",
+              "text": "Gemini only knows about clouds and seagulls.",
               "correct": false
             }
           ]
@@ -153,19 +131,19 @@
           "prompt": "Tell me — Which rule about Gemini in depth is a GOOD rule?",
           "options": [
             {
+              "text": "Gemini speaks one word at a time, very slowly.",
+              "correct": false
+            },
+            {
+              "text": "Gemini sneezes if you ask about Tuesday.",
+              "correct": false
+            },
+            {
               "text": "Gemini can help with school and play.",
               "correct": true
             },
             {
-              "text": "Gemini speaks one word at a time.",
-              "correct": false
-            },
-            {
-              "text": "Gemini eats batteries to wake up.",
-              "correct": false
-            },
-            {
-              "text": "Gemini only knows about clouds.",
+              "text": "Gemini eats batteries to wake up properly.",
               "correct": false
             }
           ]
@@ -196,106 +174,106 @@
       },
       "variations": [
         {
-          "prompt": "Which one is TRUE about Gemini in depth?",
+          "prompt": "You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
-              "text": "Gemini eats batteries to wake up.",
+              "text": "Refuse — it only sees rectangles.",
               "correct": false
             },
             {
-              "text": "Gemini can look at pictures and words together.",
+              "text": "Describe the photo and suggest where to start cleaning.",
               "correct": true
             },
             {
-              "text": "Gemini speaks one word at a time.",
+              "text": "Send a tiny robot to vacuum it.",
               "correct": false
             },
             {
-              "text": "Gemini only knows about clouds.",
+              "text": "Charge you a sticker fee.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! Which one is TRUE about Gemini in depth?",
+          "prompt": "Quick! You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
-              "text": "Gemini only knows about clouds.",
+              "text": "Refuse — it only sees rectangles.",
               "correct": false
             },
             {
-              "text": "Gemini can answer using the web's facts.",
-              "correct": true
-            },
-            {
-              "text": "Gemini cannot see pictures.",
+              "text": "Charge you a sticker fee.",
               "correct": false
             },
             {
-              "text": "Gemini speaks one word at a time.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Which one is TRUE about Gemini in depth?",
-          "options": [
-            {
-              "text": "Gemini only works on a flip phone.",
+              "text": "Send a tiny robot to vacuum it.",
               "correct": false
             },
             {
-              "text": "Gemini eats batteries to wake up.",
-              "correct": false
-            },
-            {
-              "text": "Gemini cannot see pictures.",
-              "correct": false
-            },
-            {
-              "text": "Gemini works on phones, tablets, and laptops.",
+              "text": "Describe the photo and suggest where to start cleaning.",
               "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: Which one is TRUE about Gemini in depth?",
+          "prompt": "Hey friend — You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
-              "text": "Gemini only knows about clouds.",
+              "text": "Charge you a sticker fee.",
               "correct": false
             },
             {
-              "text": "Gemini eats batteries to wake up.",
+              "text": "Refuse — it only sees rectangles.",
               "correct": false
             },
             {
-              "text": "Gemini can help with school and play.",
+              "text": "Send a tiny robot to vacuum it.",
+              "correct": false
+            },
+            {
+              "text": "Describe the photo and suggest where to start cleaning.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: You hand Gemini a photo of your messy room. What can it do?",
+          "options": [
+            {
+              "text": "Charge you a sticker fee.",
+              "correct": false
+            },
+            {
+              "text": "Describe the photo and suggest where to start cleaning.",
               "correct": true
             },
             {
-              "text": "Gemini cannot see pictures.",
+              "text": "Refuse — it only sees rectangles.",
+              "correct": false
+            },
+            {
+              "text": "Send a tiny robot to vacuum it.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — Which one is TRUE about Gemini in depth?",
+          "prompt": "Tell me — You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
-              "text": "Gemini cannot see pictures.",
+              "text": "Refuse — it only sees rectangles.",
               "correct": false
             },
             {
-              "text": "Gemini is a helper made by Google.",
+              "text": "Describe the photo and suggest where to start cleaning.",
               "correct": true
             },
             {
-              "text": "Gemini eats batteries to wake up.",
+              "text": "Send a tiny robot to vacuum it.",
               "correct": false
             },
             {
-              "text": "Gemini speaks one word at a time.",
+              "text": "Charge you a sticker fee.",
               "correct": false
             }
           ]
@@ -307,7 +285,7 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the question.",
+          "prompt": "Type GO and press Send to unlock the next question.",
           "target_display": "GO",
           "targets": [
             "go"
@@ -317,106 +295,106 @@
       },
       "variations": [
         {
-          "prompt": "One of these is silly! Pick the WRONG one about Gemini in depth.",
+          "prompt": "What makes Gemini different from a helper that only reads words?",
           "options": [
             {
-              "text": "Gemini eats batteries to wake up.",
+              "text": "Gemini wears a small bow tie.",
+              "correct": false
+            },
+            {
+              "text": "Gemini is louder.",
+              "correct": false
+            },
+            {
+              "text": "Gemini can also look at pictures.",
               "correct": true
             },
             {
-              "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": false
-            },
-            {
-              "text": "Gemini can look at pictures and words together.",
-              "correct": false
-            },
-            {
-              "text": "Gemini is a helper made by Google.",
+              "text": "Gemini is allergic to fonts.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! One of these is silly! Pick the WRONG one about Gemini in depth.",
+          "prompt": "Quick! What makes Gemini different from a helper that only reads words?",
           "options": [
             {
-              "text": "Gemini can look at pictures and words together.",
+              "text": "Gemini is louder.",
               "correct": false
             },
             {
-              "text": "Gemini can answer using the web's facts.",
+              "text": "Gemini is allergic to fonts.",
               "correct": false
             },
             {
-              "text": "Gemini only knows about clouds.",
-              "correct": true
-            },
-            {
-              "text": "Gemini is a helper made by Google.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Gemini in depth.",
-          "options": [
-            {
-              "text": "Gemini is a helper made by Google.",
+              "text": "Gemini wears a small bow tie.",
               "correct": false
             },
             {
-              "text": "Gemini can look at pictures and words together.",
-              "correct": false
-            },
-            {
-              "text": "Gemini can answer using the web's facts.",
-              "correct": false
-            },
-            {
-              "text": "Gemini speaks one word at a time.",
+              "text": "Gemini can also look at pictures.",
               "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about Gemini in depth.",
+          "prompt": "Hey friend — What makes Gemini different from a helper that only reads words?",
           "options": [
             {
-              "text": "Gemini can help with school and play.",
+              "text": "Gemini is allergic to fonts.",
               "correct": false
             },
             {
-              "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": false
-            },
-            {
-              "text": "Gemini can answer using the web's facts.",
-              "correct": false
-            },
-            {
-              "text": "Gemini only works on a flip phone.",
+              "text": "Gemini can also look at pictures.",
               "correct": true
+            },
+            {
+              "text": "Gemini is louder.",
+              "correct": false
+            },
+            {
+              "text": "Gemini wears a small bow tie.",
+              "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — One of these is silly! Pick the WRONG one about Gemini in depth.",
+          "prompt": "Bytey wonders: What makes Gemini different from a helper that only reads words?",
           "options": [
             {
-              "text": "Gemini works on phones, tablets, and laptops.",
+              "text": "Gemini wears a small bow tie.",
               "correct": false
             },
             {
-              "text": "Gemini cannot see pictures.",
+              "text": "Gemini is louder.",
+              "correct": false
+            },
+            {
+              "text": "Gemini can also look at pictures.",
               "correct": true
             },
             {
-              "text": "Gemini is a helper made by Google.",
+              "text": "Gemini is allergic to fonts.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — What makes Gemini different from a helper that only reads words?",
+          "options": [
+            {
+              "text": "Gemini is allergic to fonts.",
               "correct": false
             },
             {
-              "text": "Gemini can answer using the web's facts.",
+              "text": "Gemini wears a small bow tie.",
+              "correct": false
+            },
+            {
+              "text": "Gemini can also look at pictures.",
+              "correct": true
+            },
+            {
+              "text": "Gemini is louder.",
               "correct": false
             }
           ]
@@ -425,136 +403,6 @@
     },
     {
       "id": "q4",
-      "interaction": {
-        "type": "click-the-thing",
-        "payload": {
-          "prompt": "Tap the rocket to launch the question!",
-          "choices": [
-            {
-              "label": "🚀",
-              "right": true
-            },
-            {
-              "label": "🐢",
-              "right": false
-            },
-            {
-              "label": "🪨",
-              "right": false
-            }
-          ]
-        }
-      },
-      "variations": [
-        {
-          "prompt": "Bytey wants to teach a friend about Gemini in depth. What should he say?",
-          "options": [
-            {
-              "text": "Gemini only works on a flip phone.",
-              "correct": false
-            },
-            {
-              "text": "Gemini cannot see pictures.",
-              "correct": false
-            },
-            {
-              "text": "Gemini only knows about clouds.",
-              "correct": false
-            },
-            {
-              "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": true
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Bytey wants to teach a friend about Gemini in depth. What should he say?",
-          "options": [
-            {
-              "text": "Gemini eats batteries to wake up.",
-              "correct": false
-            },
-            {
-              "text": "Gemini can help with school and play.",
-              "correct": true
-            },
-            {
-              "text": "Gemini speaks one word at a time.",
-              "correct": false
-            },
-            {
-              "text": "Gemini cannot see pictures.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Bytey wants to teach a friend about Gemini in depth. What should he say?",
-          "options": [
-            {
-              "text": "Gemini cannot see pictures.",
-              "correct": false
-            },
-            {
-              "text": "Gemini speaks one word at a time.",
-              "correct": false
-            },
-            {
-              "text": "Gemini is a helper made by Google.",
-              "correct": true
-            },
-            {
-              "text": "Gemini eats batteries to wake up.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: Bytey wants to teach a friend about Gemini in depth. What should he say?",
-          "options": [
-            {
-              "text": "Gemini can look at pictures and words together.",
-              "correct": true
-            },
-            {
-              "text": "Gemini only works on a flip phone.",
-              "correct": false
-            },
-            {
-              "text": "Gemini only knows about clouds.",
-              "correct": false
-            },
-            {
-              "text": "Gemini speaks one word at a time.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Bytey wants to teach a friend about Gemini in depth. What should he say?",
-          "options": [
-            {
-              "text": "Gemini eats batteries to wake up.",
-              "correct": false
-            },
-            {
-              "text": "Gemini speaks one word at a time.",
-              "correct": false
-            },
-            {
-              "text": "Gemini can answer using the web's facts.",
-              "correct": true
-            },
-            {
-              "text": "Gemini cannot see pictures.",
-              "correct": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q5",
       "interaction": {
         "type": "click-the-thing",
         "payload": {
@@ -577,107 +425,358 @@
       },
       "variations": [
         {
-          "prompt": "Which rule about Gemini in depth is a GOOD rule?",
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
-              "text": "Gemini only works on a flip phone.",
+              "text": "Gemini can search before answering.",
+              "correct": false
+            },
+            {
+              "text": "Gemini can describe a photo you show it.",
+              "correct": false
+            },
+            {
+              "text": "Gemini only knows about clouds and seagulls.",
+              "correct": true
+            },
+            {
+              "text": "Gemini can look at pictures and words together.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about Gemini in depth.",
+          "options": [
+            {
+              "text": "Gemini can help with school and play.",
+              "correct": false
+            },
+            {
+              "text": "Gemini speaks one word at a time, very slowly.",
+              "correct": true
+            },
+            {
+              "text": "Gemini can search before answering.",
+              "correct": false
+            },
+            {
+              "text": "Gemini can look at pictures and words together.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about Gemini in depth.",
+          "options": [
+            {
+              "text": "Gemini can look at pictures and words together.",
+              "correct": false
+            },
+            {
+              "text": "Gemini can search before answering.",
+              "correct": false
+            },
+            {
+              "text": "Gemini is two people in a trench coat.",
+              "correct": true
+            },
+            {
+              "text": "Gemini can answer using the web's facts.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about Gemini in depth.",
+          "options": [
+            {
+              "text": "Gemini handles images, words, and sometimes sounds.",
+              "correct": false
+            },
+            {
+              "text": "Gemini can search before answering.",
+              "correct": false
+            },
+            {
+              "text": "Gemini hates being called Gemini.",
+              "correct": true
+            },
+            {
+              "text": "Gemini can describe a photo you show it.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about Gemini in depth.",
+          "options": [
+            {
+              "text": "Gemini can search before answering.",
+              "correct": false
+            },
+            {
+              "text": "Gemini handles images, words, and sometimes sounds.",
+              "correct": false
+            },
+            {
+              "text": "Gemini can answer using the web's facts.",
+              "correct": false
+            },
+            {
+              "text": "Gemini sneezes if you ask about Tuesday.",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the heart to keep learning!",
+          "choices": [
+            {
+              "label": "❤️",
+              "right": true
+            },
+            {
+              "label": "🥒",
+              "right": false
+            },
+            {
+              "label": "🌶️",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Tell me — Which one is TRUE about Gemini in depth?",
+          "options": [
+            {
+              "text": "Gemini only works on a flip phone from 2003.",
+              "correct": false
+            },
+            {
+              "text": "Gemini cannot see pictures because of dust.",
+              "correct": false
+            },
+            {
+              "text": "Gemini is two people in a trench coat.",
               "correct": false
             },
             {
               "text": "Gemini can help with school and play.",
               "correct": true
-            },
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which one is TRUE about Gemini in depth?",
+          "options": [
             {
-              "text": "Gemini eats batteries to wake up.",
+              "text": "Gemini only works on a flip phone from 2003.",
               "correct": false
             },
             {
-              "text": "Gemini cannot see pictures.",
+              "text": "Gemini sneezes if you ask about Tuesday.",
+              "correct": false
+            },
+            {
+              "text": "Gemini can describe a photo you show it.",
+              "correct": true
+            },
+            {
+              "text": "Gemini only knows about clouds and seagulls.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! Which rule about Gemini in depth is a GOOD rule?",
+          "prompt": "Pop quiz! Which one is TRUE about Gemini in depth?",
           "options": [
             {
-              "text": "Gemini cannot see pictures.",
+              "text": "Gemini can search before answering.",
+              "correct": true
+            },
+            {
+              "text": "Gemini only works on a flip phone from 2003.",
               "correct": false
             },
+            {
+              "text": "Gemini only knows about clouds and seagulls.",
+              "correct": false
+            },
+            {
+              "text": "Gemini speaks one word at a time, very slowly.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Which one is TRUE about Gemini in depth?",
+          "options": [
+            {
+              "text": "Gemini speaks one word at a time, very slowly.",
+              "correct": false
+            },
+            {
+              "text": "Gemini handles images, words, and sometimes sounds.",
+              "correct": true
+            },
+            {
+              "text": "Gemini only works on a flip phone from 2003.",
+              "correct": false
+            },
+            {
+              "text": "Gemini is two people in a trench coat.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about Gemini in depth?",
+          "options": [
             {
               "text": "Gemini is a helper made by Google.",
               "correct": true
             },
             {
-              "text": "Gemini only knows about clouds.",
+              "text": "Gemini cannot see pictures because of dust.",
               "correct": false
             },
             {
-              "text": "Gemini only works on a flip phone.",
+              "text": "Gemini is two people in a trench coat.",
+              "correct": false
+            },
+            {
+              "text": "Gemini only knows about clouds and seagulls.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Wait wait wait — Bytey claims something about Gemini in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Gemini handles images, words, and sometimes sounds.",
+              "correct": false
+            },
+            {
+              "text": "Gemini can search before answering.",
+              "correct": false
+            },
+            {
+              "text": "Gemini is two people in a trench coat.",
+              "correct": true
+            },
+            {
+              "text": "Gemini is a helper made by Google.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Hey friend — Which rule about Gemini in depth is a GOOD rule?",
+          "prompt": "Pop quiz! Bytey claims something about Gemini in depth. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Gemini only knows about clouds.",
+              "text": "Gemini can answer using the web's facts.",
               "correct": false
             },
             {
-              "text": "Gemini cannot see pictures.",
+              "text": "Gemini handles images, words, and sometimes sounds.",
+              "correct": false
+            },
+            {
+              "text": "Gemini hates being called Gemini.",
+              "correct": true
+            },
+            {
+              "text": "Gemini can look at pictures and words together.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey claims something about Gemini in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Gemini works on phones, tablets, and laptops.",
+              "correct": false
+            },
+            {
+              "text": "Gemini sneezes if you ask about Tuesday.",
+              "correct": true
+            },
+            {
+              "text": "Gemini handles images, words, and sometimes sounds.",
+              "correct": false
+            },
+            {
+              "text": "Gemini is a helper made by Google.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about Gemini in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Gemini is a helper made by Google.",
               "correct": false
             },
             {
               "text": "Gemini can look at pictures and words together.",
-              "correct": true
+              "correct": false
             },
             {
-              "text": "Gemini only works on a flip phone.",
+              "text": "Gemini can describe a photo you show it.",
               "correct": false
+            },
+            {
+              "text": "Gemini only works on a flip phone from 2003.",
+              "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: Which rule about Gemini in depth is a GOOD rule?",
+          "prompt": "Hey friend — Bytey claims something about Gemini in depth. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Gemini can answer using the web's facts.",
+              "text": "Gemini cannot see pictures because of dust.",
               "correct": true
             },
             {
-              "text": "Gemini only knows about clouds.",
+              "text": "Gemini can search before answering.",
               "correct": false
             },
             {
-              "text": "Gemini eats batteries to wake up.",
+              "text": "Gemini is a helper made by Google.",
               "correct": false
             },
             {
-              "text": "Gemini only works on a flip phone.",
+              "text": "Gemini can describe a photo you show it.",
               "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Which rule about Gemini in depth is a GOOD rule?",
-          "options": [
-            {
-              "text": "Gemini speaks one word at a time.",
-              "correct": false
-            },
-            {
-              "text": "Gemini only works on a flip phone.",
-              "correct": false
-            },
-            {
-              "text": "Gemini cannot see pictures.",
-              "correct": false
-            },
-            {
-              "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": true
             }
           ]
         }

@@ -23,46 +23,24 @@
     }
   },
   "game": {
-    "type": "drag-to-match",
+    "type": "history-scene",
     "payload": {
-      "prompt": "Open or closed? Drag each helper to the right side:",
-      "pairs": [
-        {
-          "left": "OpenCode",
-          "right": "🔓 OPEN"
-        },
-        {
-          "left": "Ollama",
-          "right": "🔓 OPEN"
-        },
-        {
-          "left": "ChatGPT",
-          "right": "🔒 CLOSED"
-        }
-      ]
+      "prompt": "Watch how open tools share with everybody!",
+      "scene": {
+        "id": "opencode"
+      }
     }
   },
   "questions": [
     {
       "id": "q1",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "history-scene",
         "payload": {
-          "prompt": "Open or closed? Drag each helper to the right side:",
-          "pairs": [
-            {
-              "left": "OpenCode",
-              "right": "🔓 OPEN"
-            },
-            {
-              "left": "Ollama",
-              "right": "🔓 OPEN"
-            },
-            {
-              "left": "ChatGPT",
-              "right": "🔒 CLOSED"
-            }
-          ]
+          "prompt": "Watch how open tools share with everybody!",
+          "scene": {
+            "id": "opencode"
+          }
         }
       },
       "variations": [
@@ -70,20 +48,20 @@
           "prompt": "What is OpenCode in depth?",
           "options": [
             {
+              "text": "OpenCode lives inside a tin can on a shelf.",
+              "correct": false
+            },
+            {
+              "text": "Open tools are always secret and hide in caves.",
+              "correct": false
+            },
+            {
+              "text": "Open tools turn off at sunset like fireflies.",
+              "correct": false
+            },
+            {
               "text": "OpenCode is a helper that is open for everyone.",
               "correct": true
-            },
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            },
-            {
-              "text": "Open tools are always secret.",
-              "correct": false
-            },
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
             }
           ]
         },
@@ -91,7 +69,7 @@
           "prompt": "Quick! Which one is TRUE about OpenCode in depth?",
           "options": [
             {
-              "text": "Open tools cost a million dollars.",
+              "text": "Open tools whisper to your printer at night.",
               "correct": false
             },
             {
@@ -99,11 +77,11 @@
               "correct": true
             },
             {
-              "text": "Nobody is allowed to see open tools.",
+              "text": "Open tools must be greeted in three languages.",
               "correct": false
             },
             {
-              "text": "Open tools are always secret.",
+              "text": "OpenCode only works on Saturdays after lunch.",
               "correct": false
             }
           ]
@@ -112,19 +90,19 @@
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about OpenCode in depth.",
           "options": [
             {
-              "text": "OpenCode is a helper that is open for everyone.",
+              "text": "Sharing helps tools get better fast.",
               "correct": false
             },
             {
-              "text": "Open tools are often free to use.",
+              "text": "Anyone can suggest improvements.",
               "correct": false
             },
             {
-              "text": "Open tools cost a million dollars.",
+              "text": "Open tools cost a million dollars and a goat.",
               "correct": true
             },
             {
-              "text": "Sharing helps tools get better fast.",
+              "text": "OpenCode is a helper that is open for everyone.",
               "correct": false
             }
           ]
@@ -133,7 +111,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about OpenCode in depth. What should he say?",
           "options": [
             {
-              "text": "Open tools turn off at sunset.",
+              "text": "Open tools turn off at sunset like fireflies.",
+              "correct": false
+            },
+            {
+              "text": "Open tools cost a million dollars and a goat.",
               "correct": false
             },
             {
@@ -141,11 +123,7 @@
               "correct": true
             },
             {
-              "text": "Open tools are always secret.",
-              "correct": false
-            },
-            {
-              "text": "Open tools cost a million dollars.",
+              "text": "Nobody is allowed to see open tools, ever.",
               "correct": false
             }
           ]
@@ -154,19 +132,19 @@
           "prompt": "Tell me — Which rule about OpenCode in depth is a GOOD rule?",
           "options": [
             {
+              "text": "Open tools turn off at sunset like fireflies.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode lives inside a tin can on a shelf.",
+              "correct": false
+            },
+            {
               "text": "Open tools are often free to use.",
               "correct": true
             },
             {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            },
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
+              "text": "Open tools cost a million dollars and a goat.",
               "correct": false
             }
           ]
@@ -197,106 +175,106 @@
       },
       "variations": [
         {
-          "prompt": "Which one is TRUE about OpenCode in depth?",
+          "prompt": "Why might a family pick an open tool?",
           "options": [
             {
-              "text": "Open tools cost a million dollars.",
+              "text": "Because open tools come with stickers.",
               "correct": false
             },
             {
-              "text": "Open tools can be checked by anyone.",
-              "correct": true
-            },
-            {
-              "text": "Open tools turn off at sunset.",
+              "text": "Because closed tools always taste like onions.",
               "correct": false
             },
             {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Which one is TRUE about OpenCode in depth?",
-          "options": [
-            {
-              "text": "Nobody is allowed to see open tools.",
+              "text": "Because open tools have shinier buttons.",
               "correct": false
             },
             {
-              "text": "OpenCode can be run on your own computer.",
-              "correct": true
-            },
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            },
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Which one is TRUE about OpenCode in depth?",
-          "options": [
-            {
-              "text": "Open tools are always secret.",
-              "correct": false
-            },
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            },
-            {
-              "text": "Sharing helps tools get better fast.",
+              "text": "To check what it does and run it without paying.",
               "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: Which one is TRUE about OpenCode in depth?",
+          "prompt": "Quick! Why might a family pick an open tool?",
           "options": [
             {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            },
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            },
-            {
-              "text": "Open tools are often free to use.",
+              "text": "To check what it does and run it without paying.",
               "correct": true
             },
             {
-              "text": "OpenCode only works on Saturdays.",
+              "text": "Because open tools have shinier buttons.",
+              "correct": false
+            },
+            {
+              "text": "Because closed tools always taste like onions.",
+              "correct": false
+            },
+            {
+              "text": "Because open tools come with stickers.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — Which one is TRUE about OpenCode in depth?",
+          "prompt": "Hey friend — Why might a family pick an open tool?",
           "options": [
             {
-              "text": "OpenCode only works on Saturdays.",
+              "text": "Because open tools have shinier buttons.",
               "correct": false
             },
             {
-              "text": "OpenCode is a helper that is open for everyone.",
+              "text": "Because closed tools always taste like onions.",
+              "correct": false
+            },
+            {
+              "text": "To check what it does and run it without paying.",
               "correct": true
             },
             {
-              "text": "Open tools cost a million dollars.",
+              "text": "Because open tools come with stickers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Why might a family pick an open tool?",
+          "options": [
+            {
+              "text": "To check what it does and run it without paying.",
+              "correct": true
+            },
+            {
+              "text": "Because open tools have shinier buttons.",
               "correct": false
             },
             {
-              "text": "Open tools turn off at sunset.",
+              "text": "Because closed tools always taste like onions.",
+              "correct": false
+            },
+            {
+              "text": "Because open tools come with stickers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — Why might a family pick an open tool?",
+          "options": [
+            {
+              "text": "To check what it does and run it without paying.",
+              "correct": true
+            },
+            {
+              "text": "Because closed tools always taste like onions.",
+              "correct": false
+            },
+            {
+              "text": "Because open tools come with stickers.",
+              "correct": false
+            },
+            {
+              "text": "Because open tools have shinier buttons.",
               "correct": false
             }
           ]
@@ -308,7 +286,7 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GO and press Send to unlock the question.",
+          "prompt": "Type GO and press Send to unlock the next question.",
           "target_display": "GO",
           "targets": [
             "go"
@@ -318,106 +296,106 @@
       },
       "variations": [
         {
-          "prompt": "One of these is silly! Pick the WRONG one about OpenCode in depth.",
+          "prompt": "An 'open' tool means…",
           "options": [
             {
-              "text": "Open tools cost a million dollars.",
+              "text": "It says 'open!' a lot.",
+              "correct": false
+            },
+            {
+              "text": "It is always wide open and full of bees.",
+              "correct": false
+            },
+            {
+              "text": "You can read how it works and use it freely.",
               "correct": true
             },
             {
-              "text": "Sharing helps tools get better fast.",
-              "correct": false
-            },
-            {
-              "text": "Open tools can be checked by anyone.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode is a helper that is open for everyone.",
+              "text": "It opens at 9 a.m. like a shop.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Quick! One of these is silly! Pick the WRONG one about OpenCode in depth.",
+          "prompt": "Quick! An 'open' tool means…",
           "options": [
             {
-              "text": "Open tools can be checked by anyone.",
+              "text": "It is always wide open and full of bees.",
               "correct": false
             },
             {
-              "text": "OpenCode can be run on your own computer.",
-              "correct": false
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
+              "text": "You can read how it works and use it freely.",
               "correct": true
             },
             {
-              "text": "OpenCode is a helper that is open for everyone.",
+              "text": "It opens at 9 a.m. like a shop.",
+              "correct": false
+            },
+            {
+              "text": "It says 'open!' a lot.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Hey friend — One of these is silly! Pick the WRONG one about OpenCode in depth.",
+          "prompt": "Hey friend — An 'open' tool means…",
           "options": [
             {
-              "text": "OpenCode is a helper that is open for everyone.",
+              "text": "It opens at 9 a.m. like a shop.",
               "correct": false
             },
             {
-              "text": "Open tools can be checked by anyone.",
+              "text": "It is always wide open and full of bees.",
               "correct": false
             },
             {
-              "text": "OpenCode can be run on your own computer.",
+              "text": "It says 'open!' a lot.",
               "correct": false
             },
             {
-              "text": "Open tools turn off at sunset.",
+              "text": "You can read how it works and use it freely.",
               "correct": true
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about OpenCode in depth.",
+          "prompt": "Bytey wonders: An 'open' tool means…",
           "options": [
             {
-              "text": "Open tools are often free to use.",
-              "correct": false
-            },
-            {
-              "text": "Sharing helps tools get better fast.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode can be run on your own computer.",
-              "correct": false
-            },
-            {
-              "text": "Open tools are always secret.",
+              "text": "You can read how it works and use it freely.",
               "correct": true
+            },
+            {
+              "text": "It is always wide open and full of bees.",
+              "correct": false
+            },
+            {
+              "text": "It opens at 9 a.m. like a shop.",
+              "correct": false
+            },
+            {
+              "text": "It says 'open!' a lot.",
+              "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — One of these is silly! Pick the WRONG one about OpenCode in depth.",
+          "prompt": "Tell me — An 'open' tool means…",
           "options": [
             {
-              "text": "Sharing helps tools get better fast.",
+              "text": "It says 'open!' a lot.",
               "correct": false
             },
             {
-              "text": "OpenCode only works on Saturdays.",
+              "text": "It is always wide open and full of bees.",
+              "correct": false
+            },
+            {
+              "text": "You can read how it works and use it freely.",
               "correct": true
             },
             {
-              "text": "OpenCode is a helper that is open for everyone.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode can be run on your own computer.",
+              "text": "It opens at 9 a.m. like a shop.",
               "correct": false
             }
           ]
@@ -426,136 +404,6 @@
     },
     {
       "id": "q4",
-      "interaction": {
-        "type": "click-the-thing",
-        "payload": {
-          "prompt": "Tap the rocket to launch the question!",
-          "choices": [
-            {
-              "label": "🚀",
-              "right": true
-            },
-            {
-              "label": "🐢",
-              "right": false
-            },
-            {
-              "label": "🪨",
-              "right": false
-            }
-          ]
-        }
-      },
-      "variations": [
-        {
-          "prompt": "Bytey wants to teach a friend about OpenCode in depth. What should he say?",
-          "options": [
-            {
-              "text": "Open tools are always secret.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            },
-            {
-              "text": "Sharing helps tools get better fast.",
-              "correct": true
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Bytey wants to teach a friend about OpenCode in depth. What should he say?",
-          "options": [
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            },
-            {
-              "text": "Open tools are often free to use.",
-              "correct": true
-            },
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Bytey wants to teach a friend about OpenCode in depth. What should he say?",
-          "options": [
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            },
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode is a helper that is open for everyone.",
-              "correct": true
-            },
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: Bytey wants to teach a friend about OpenCode in depth. What should he say?",
-          "options": [
-            {
-              "text": "Open tools can be checked by anyone.",
-              "correct": true
-            },
-            {
-              "text": "Open tools are always secret.",
-              "correct": false
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            },
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Bytey wants to teach a friend about OpenCode in depth. What should he say?",
-          "options": [
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            },
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode can be run on your own computer.",
-              "correct": true
-            },
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q5",
       "interaction": {
         "type": "click-the-thing",
         "payload": {
@@ -578,106 +426,106 @@
       },
       "variations": [
         {
-          "prompt": "Which rule about OpenCode in depth is a GOOD rule?",
+          "prompt": "Bytey wonders: One of these is silly! Pick the WRONG one about OpenCode in depth.",
           "options": [
             {
-              "text": "Open tools are always secret.",
+              "text": "Anyone can suggest improvements.",
               "correct": false
             },
+            {
+              "text": "Open tools have community helpers.",
+              "correct": false
+            },
+            {
+              "text": "Nobody is allowed to see open tools, ever.",
+              "correct": true
+            },
+            {
+              "text": "Open tools can be checked by anyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Tell me — One of these is silly! Pick the WRONG one about OpenCode in depth.",
+          "options": [
             {
               "text": "Open tools are often free to use.",
+              "correct": false
+            },
+            {
+              "text": "Open tools turn off at sunset like fireflies.",
               "correct": true
             },
             {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! Which rule about OpenCode in depth is a GOOD rule?",
-          "options": [
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode is a helper that is open for everyone.",
-              "correct": true
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            },
-            {
-              "text": "Open tools are always secret.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — Which rule about OpenCode in depth is a GOOD rule?",
-          "options": [
-            {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode only works on Saturdays.",
+              "text": "Anyone can suggest improvements.",
               "correct": false
             },
             {
               "text": "Open tools can be checked by anyone.",
-              "correct": true
-            },
-            {
-              "text": "Open tools are always secret.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Bytey wonders: Which rule about OpenCode in depth is a GOOD rule?",
+          "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about OpenCode in depth.",
           "options": [
+            {
+              "text": "Open tools can be checked by anyone.",
+              "correct": false
+            },
+            {
+              "text": "Anyone can suggest improvements.",
+              "correct": false
+            },
+            {
+              "text": "Open tools whisper to your printer at night.",
+              "correct": true
+            },
             {
               "text": "OpenCode can be run on your own computer.",
-              "correct": true
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            },
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            },
-            {
-              "text": "Open tools are always secret.",
               "correct": false
             }
           ]
         },
         {
-          "prompt": "Tell me — Which rule about OpenCode in depth is a GOOD rule?",
+          "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about OpenCode in depth.",
           "options": [
             {
-              "text": "Open tools turn off at sunset.",
+              "text": "Open tools tend to be transparent about how they work.",
               "correct": false
             },
             {
-              "text": "Open tools are always secret.",
+              "text": "Anyone can suggest improvements.",
               "correct": false
             },
             {
-              "text": "OpenCode only works on Saturdays.",
+              "text": "Open tools must be greeted in three languages.",
+              "correct": true
+            },
+            {
+              "text": "Open tools have community helpers.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "One of these is silly! Pick the WRONG one about OpenCode in depth.",
+          "options": [
+            {
+              "text": "Anyone can suggest improvements.",
               "correct": false
             },
             {
-              "text": "Sharing helps tools get better fast.",
+              "text": "Open tools tend to be transparent about how they work.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode can be run on your own computer.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode lives inside a tin can on a shelf.",
               "correct": true
             }
           ]
@@ -685,128 +533,7 @@
       ]
     },
     {
-      "id": "q6",
-      "interaction": {
-        "type": "type-this-word",
-        "payload": {
-          "prompt": "Type YES and press Send to see the next question.",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type Y E S and press Send."
-        }
-      },
-      "variations": [
-        {
-          "prompt": "What is OpenCode in depth?",
-          "options": [
-            {
-              "text": "Open tools are always secret.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode is a helper that is open for everyone.",
-              "correct": true
-            }
-          ]
-        },
-        {
-          "prompt": "Quick! What is OpenCode in depth?",
-          "options": [
-            {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            },
-            {
-              "text": "Open tools can be checked by anyone.",
-              "correct": true
-            },
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            },
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Hey friend — What is OpenCode in depth?",
-          "options": [
-            {
-              "text": "Open tools are always secret.",
-              "correct": false
-            },
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode can be run on your own computer.",
-              "correct": true
-            },
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: What is OpenCode in depth?",
-          "options": [
-            {
-              "text": "Sharing helps tools get better fast.",
-              "correct": true
-            },
-            {
-              "text": "Open tools are always secret.",
-              "correct": false
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            },
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — What is OpenCode in depth?",
-          "options": [
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            },
-            {
-              "text": "Open tools are often free to use.",
-              "correct": true
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            },
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q7",
+      "id": "q5",
       "interaction": {
         "type": "click-the-thing",
         "payload": {
@@ -829,18 +556,441 @@
       },
       "variations": [
         {
+          "prompt": "Tell me — Which one is TRUE about OpenCode in depth?",
+          "options": [
+            {
+              "text": "Open tools are always secret and hide in caves.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode only works on Saturdays after lunch.",
+              "correct": false
+            },
+            {
+              "text": "Open tools whisper to your printer at night.",
+              "correct": false
+            },
+            {
+              "text": "Open tools are often free to use.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Wait wait wait — Which one is TRUE about OpenCode in depth?",
+          "options": [
+            {
+              "text": "Open tools are always secret and hide in caves.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode lives inside a tin can on a shelf.",
+              "correct": false
+            },
+            {
+              "text": "Open tools have community helpers.",
+              "correct": true
+            },
+            {
+              "text": "Nobody is allowed to see open tools, ever.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Which one is TRUE about OpenCode in depth?",
+          "options": [
+            {
+              "text": "Anyone can suggest improvements.",
+              "correct": true
+            },
+            {
+              "text": "Open tools are always secret and hide in caves.",
+              "correct": false
+            },
+            {
+              "text": "Nobody is allowed to see open tools, ever.",
+              "correct": false
+            },
+            {
+              "text": "Open tools turn off at sunset like fireflies.",
+              "correct": false
+            }
+          ]
+        },
+        {
           "prompt": "Which one is TRUE about OpenCode in depth?",
           "options": [
             {
-              "text": "Nobody is allowed to see open tools.",
+              "text": "Open tools turn off at sunset like fireflies.",
               "correct": false
             },
             {
-              "text": "Open tools cost a million dollars.",
+              "text": "Open tools tend to be transparent about how they work.",
+              "correct": true
+            },
+            {
+              "text": "Open tools are always secret and hide in caves.",
               "correct": false
             },
             {
-              "text": "Open tools are always secret.",
+              "text": "Open tools whisper to your printer at night.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which one is TRUE about OpenCode in depth?",
+          "options": [
+            {
+              "text": "OpenCode is a helper that is open for everyone.",
+              "correct": true
+            },
+            {
+              "text": "OpenCode only works on Saturdays after lunch.",
+              "correct": false
+            },
+            {
+              "text": "Open tools whisper to your printer at night.",
+              "correct": false
+            },
+            {
+              "text": "Nobody is allowed to see open tools, ever.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "interaction": {
+        "type": "type-this-word",
+        "payload": {
+          "prompt": "Type YES and press Send to see the next question.",
+          "target_display": "YES",
+          "targets": [
+            "yes"
+          ],
+          "hint_wrong": "Type Y E S and press Send."
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Wait wait wait — Bytey claims something about OpenCode in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Open tools tend to be transparent about how they work.",
+              "correct": false
+            },
+            {
+              "text": "Anyone can suggest improvements.",
+              "correct": false
+            },
+            {
+              "text": "Open tools whisper to your printer at night.",
+              "correct": true
+            },
+            {
+              "text": "OpenCode is a helper that is open for everyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Pop quiz! Bytey claims something about OpenCode in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "OpenCode can be run on your own computer.",
+              "correct": false
+            },
+            {
+              "text": "Open tools tend to be transparent about how they work.",
+              "correct": false
+            },
+            {
+              "text": "Open tools must be greeted in three languages.",
+              "correct": true
+            },
+            {
+              "text": "Open tools can be checked by anyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey claims something about OpenCode in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "Sharing helps tools get better fast.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode lives inside a tin can on a shelf.",
+              "correct": true
+            },
+            {
+              "text": "Open tools tend to be transparent about how they work.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode is a helper that is open for everyone.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Bytey claims something about OpenCode in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "OpenCode is a helper that is open for everyone.",
+              "correct": false
+            },
+            {
+              "text": "Open tools can be checked by anyone.",
+              "correct": false
+            },
+            {
+              "text": "Open tools have community helpers.",
+              "correct": false
+            },
+            {
+              "text": "Open tools are always secret and hide in caves.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Bytey claims something about OpenCode in depth. Pick the SILLIEST claim.",
+          "options": [
+            {
+              "text": "OpenCode only works on Saturdays after lunch.",
+              "correct": true
+            },
+            {
+              "text": "Anyone can suggest improvements.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode is a helper that is open for everyone.",
+              "correct": false
+            },
+            {
+              "text": "Open tools have community helpers.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the orange dot to unlock the next question!",
+          "choices": [
+            {
+              "label": "🟠",
+              "right": true
+            },
+            {
+              "label": "🔵",
+              "right": false
+            },
+            {
+              "label": "🟢",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Pop quiz! Which rule about OpenCode in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Anyone can suggest improvements.",
+              "correct": true
+            },
+            {
+              "text": "Open tools turn off at sunset like fireflies.",
+              "correct": false
+            },
+            {
+              "text": "Open tools whisper to your printer at night.",
+              "correct": false
+            },
+            {
+              "text": "Open tools are always secret and hide in caves.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Which rule about OpenCode in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "OpenCode lives inside a tin can on a shelf.",
+              "correct": false
+            },
+            {
+              "text": "Open tools must be greeted in three languages.",
+              "correct": false
+            },
+            {
+              "text": "Open tools cost a million dollars and a goat.",
+              "correct": false
+            },
+            {
+              "text": "Open tools tend to be transparent about how they work.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Which rule about OpenCode in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "Open tools whisper to your printer at night.",
+              "correct": false
+            },
+            {
+              "text": "Nobody is allowed to see open tools, ever.",
+              "correct": false
+            },
+            {
+              "text": "Open tools turn off at sunset like fireflies.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode is a helper that is open for everyone.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Which rule about OpenCode in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "OpenCode lives inside a tin can on a shelf.",
+              "correct": false
+            },
+            {
+              "text": "Open tools can be checked by anyone.",
+              "correct": true
+            },
+            {
+              "text": "Open tools turn off at sunset like fireflies.",
+              "correct": false
+            },
+            {
+              "text": "Open tools must be greeted in three languages.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Bytey wonders: Which rule about OpenCode in depth is a GOOD rule?",
+          "options": [
+            {
+              "text": "OpenCode only works on Saturdays after lunch.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode can be run on your own computer.",
+              "correct": true
+            },
+            {
+              "text": "Nobody is allowed to see open tools, ever.",
+              "correct": false
+            },
+            {
+              "text": "Open tools are always secret and hide in caves.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "interaction": {
+        "type": "click-the-thing",
+        "payload": {
+          "prompt": "Tap the rocket to launch the next question!",
+          "choices": [
+            {
+              "label": "🚀",
+              "right": true
+            },
+            {
+              "label": "🐢",
+              "right": false
+            },
+            {
+              "label": "🪨",
+              "right": false
+            }
+          ]
+        }
+      },
+      "variations": [
+        {
+          "prompt": "Fill in the blank: when we talk about OpenCode in depth, ___",
+          "options": [
+            {
+              "text": "OpenCode only works on Saturdays after lunch.",
+              "correct": false
+            },
+            {
+              "text": "Open tools cost a million dollars and a goat.",
+              "correct": false
+            },
+            {
+              "text": "Open tools tend to be transparent about how they work.",
+              "correct": true
+            },
+            {
+              "text": "Open tools whisper to your printer at night.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Quick! Fill in the blank: when we talk about OpenCode in depth, ___",
+          "options": [
+            {
+              "text": "Open tools turn off at sunset like fireflies.",
+              "correct": false
+            },
+            {
+              "text": "Open tools must be greeted in three languages.",
+              "correct": false
+            },
+            {
+              "text": "OpenCode is a helper that is open for everyone.",
+              "correct": true
+            },
+            {
+              "text": "Open tools whisper to your printer at night.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "Hey friend — Fill in the blank: when we talk about OpenCode in depth, ___",
+          "options": [
+            {
+              "text": "OpenCode only works on Saturdays after lunch.",
+              "correct": false
+            },
+            {
+              "text": "Open tools are always secret and hide in caves.",
+              "correct": false
+            },
+            {
+              "text": "Nobody is allowed to see open tools, ever.",
               "correct": false
             },
             {
@@ -850,85 +1000,43 @@
           ]
         },
         {
-          "prompt": "Quick! Which one is TRUE about OpenCode in depth?",
+          "prompt": "Bytey wonders: Fill in the blank: when we talk about OpenCode in depth, ___",
           "options": [
             {
-              "text": "Open tools are always secret.",
-              "correct": false
-            },
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            },
-            {
-              "text": "Open tools turn off at sunset.",
+              "text": "Open tools are always secret and hide in caves.",
               "correct": false
             },
             {
               "text": "OpenCode can be run on your own computer.",
               "correct": true
+            },
+            {
+              "text": "Open tools cost a million dollars and a goat.",
+              "correct": false
+            },
+            {
+              "text": "Open tools must be greeted in three languages.",
+              "correct": false
             }
           ]
         },
         {
-          "prompt": "Hey friend — Which one is TRUE about OpenCode in depth?",
+          "prompt": "Tell me — Fill in the blank: when we talk about OpenCode in depth, ___",
           "options": [
-            {
-              "text": "Open tools cost a million dollars.",
-              "correct": false
-            },
-            {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            },
             {
               "text": "Sharing helps tools get better fast.",
               "correct": true
             },
             {
-              "text": "Nobody is allowed to see open tools.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Bytey wonders: Which one is TRUE about OpenCode in depth?",
-          "options": [
-            {
-              "text": "Open tools are often free to use.",
-              "correct": true
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
+              "text": "Open tools turn off at sunset like fireflies.",
               "correct": false
             },
             {
-              "text": "OpenCode only works on Saturdays.",
+              "text": "Open tools must be greeted in three languages.",
               "correct": false
             },
             {
-              "text": "Open tools turn off at sunset.",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "prompt": "Tell me — Which one is TRUE about OpenCode in depth?",
-          "options": [
-            {
-              "text": "OpenCode is a helper that is open for everyone.",
-              "correct": true
-            },
-            {
-              "text": "OpenCode only works on Saturdays.",
-              "correct": false
-            },
-            {
-              "text": "Open tools are always secret.",
-              "correct": false
-            },
-            {
-              "text": "Nobody is allowed to see open tools.",
+              "text": "OpenCode only works on Saturdays after lunch.",
               "correct": false
             }
           ]
