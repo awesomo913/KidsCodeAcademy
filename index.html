@@ -460,6 +460,8 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   display: flex; align-items: center; gap: 8px;
   font-style: italic; color: var(--ink-soft); font-size: 16px;
   padding: 10px 14px;
+  opacity: 1;
+  transition: opacity 200ms ease-out;
 }
 .thinking-dots { display: inline-flex; gap: 4px; }
 .thinking-dots span {
@@ -2599,18 +2601,77 @@ const ImageChip_ = {
   },
 };
 
-/* Tool personality: thinking delay, thinking message, typing speed per helper.
+/* Tool personality: thinking delay, thinking messages (random per call), typing speed.
  * Teaches kids real differences — Cursor is instant (IDE autocomplete),
- * Ollama is slow (running on local hardware), Claude is deliberate (careful reasoning). */
+ * Ollama is slow (running on local hardware), Claude is deliberate (careful reasoning).
+ * thinking_messages varies each call to avoid the obvious-script feel. */
 const TOOL_PERSONALITY = {
-  claude:   { thinking_ms: 1400, thinking_msg: "Claude is thinking…",                typing_ms_per_char: 30 },
-  cursor:   { thinking_ms:  500, thinking_msg: "Cursor is analyzing your code…",    typing_ms_per_char: 16 },
-  gemini:   { thinking_ms:  900, thinking_msg: "Gemini is searching…",              typing_ms_per_char: 24 },
-  codex:    { thinking_ms:  650, thinking_msg: "Codex is writing code…",            typing_ms_per_char: 18 },
-  opencode: { thinking_ms:  800, thinking_msg: "OpenCode is thinking…",             typing_ms_per_char: 20 },
-  ollama:   { thinking_ms: 2000, thinking_msg: "Ollama is running on your computer…", typing_ms_per_char: 38 },
+  claude: {
+    thinking_ms: 1400,
+    thinking_messages: [
+      "Claude is thinking…",
+      "Claude is reading your question…",
+      "Claude is drafting a reply…",
+      "Claude is working it out…",
+    ],
+    typing_ms_per_char: 30,
+  },
+  cursor: {
+    thinking_ms: 500,
+    thinking_messages: [
+      "Cursor is analyzing your code…",
+      "Cursor is checking the file…",
+      "Cursor is finding the right spot…",
+      "Cursor is reading line by line…",
+    ],
+    typing_ms_per_char: 16,
+  },
+  gemini: {
+    thinking_ms: 900,
+    thinking_messages: [
+      "Gemini is searching…",
+      "Gemini is looking it up…",
+      "Gemini is finding facts…",
+      "Gemini is checking the web…",
+    ],
+    typing_ms_per_char: 24,
+  },
+  codex: {
+    thinking_ms: 650,
+    thinking_messages: [
+      "Codex is writing code…",
+      "Codex is figuring out the steps…",
+      "Codex is putting it together…",
+      "Codex is picking the best way…",
+    ],
+    typing_ms_per_char: 18,
+  },
+  opencode: {
+    thinking_ms: 800,
+    thinking_messages: [
+      "OpenCode is thinking…",
+      "OpenCode is checking its open brain…",
+      "OpenCode is working it out…",
+      "OpenCode is reading its open code…",
+    ],
+    typing_ms_per_char: 20,
+  },
+  ollama: {
+    thinking_ms: 2000,
+    thinking_messages: [
+      "Ollama is running on your computer…",
+      "Ollama is thinking — locally!",
+      "Ollama is using your CPU to think…",
+      "Ollama is working — no internet needed!",
+    ],
+    typing_ms_per_char: 38,
+  },
 };
-const _TOOL_PERSONALITY_DEFAULT = { thinking_ms: 800, thinking_msg: "Thinking…", typing_ms_per_char: 25 };
+const _TOOL_PERSONALITY_DEFAULT = {
+  thinking_ms: 800,
+  thinking_messages: ["Thinking…"],
+  typing_ms_per_char: 25,
+};
 
 /* ============================================================
  * v0.7 — ToolSimulator: wraps the existing buildChat() with a
@@ -5811,8 +5872,10 @@ const UI = {
       Transcripts.push({ lesson: lesson.id, helper, you: v });
 
       const pers = TOOL_PERSONALITY[helper] || _TOOL_PERSONALITY_DEFAULT;
+      const msgs = pers.thinking_messages || ["Thinking…"];
+      const thinkMsg = msgs[Math.floor(Math.random() * msgs.length)];
       const thinkBubble = el("div", { class: "thinking-bubble" });
-      thinkBubble.appendChild(el("span", null, pers.thinking_msg));
+      thinkBubble.appendChild(el("span", null, thinkMsg));
       const dots = el("span", { class: "thinking-dots" });
       dots.appendChild(el("span")); dots.appendChild(el("span")); dots.appendChild(el("span"));
       thinkBubble.appendChild(dots);
@@ -5825,8 +5888,11 @@ const UI = {
         const m = Sandbox.match(v, script);
         await new Promise(r => setTimeout(r, pers.thinking_ms));
 
-        // Remove bubble and reset mascot BEFORE bot response appears
-        if (thinkBubble.parentNode === log) log.removeChild(thinkBubble);
+        // Fade out bubble (parallel with bot bubble appearing — feels like a transformation)
+        thinkBubble.style.opacity = "0";
+        setTimeout(() => {
+          if (thinkBubble.parentNode === log) log.removeChild(thinkBubble);
+        }, 220);
         Mascot.set("idle");
         _askBusy = false;
 
