@@ -1,65 +1,82 @@
 {
   "helper": "ollama",
   "lesson_id": 16,
-  "fallback": "Try 'wifi off', 'are you fast?', or 'run llama3'!",
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Pick a button, or ask about 'wifi'!",
   "matches": [
-    {
-      "keywords": ["wifi", "internet", "online", "no wifi"],
-      "typing_delay_ms": 800,
-      "reply_lines": [
-        "You don't need WiFi for me!",
-        "I live HERE on your laptop."
-      ],
+    { "keywords": ["wifi","internet"], "typing_delay_ms": 1000, "reply_lines": ["You don't need WiFi for me! I live HERE on your laptop."], "side_effect": { "action": "open_local_badge", "model_name": "llama3:8b", "source_url_label": "local" } },
+    { "keywords": ["hi","hello"], "typing_delay_ms": 1000, "reply_lines": ["Hi! I'm Ollama. I run on YOUR computer — no internet needed."], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["Hey... I'm Ollama.", "I'm running RIGHT HERE on your computer — not on the internet!", "Can you feel me thinking a little slowly?"],
+      "side_effect": { "action": "open_local_badge", "model_name": "llama3:8b", "source_url_label": "local" },
+      "options": ["That's so cool!", "Why are you slow?", "What can you do?"],
+      "branches": { "That's so cool!": "t2_cool", "Why are you slow?": "t2_slow", "What can you do?": "t2_can" },
+      "fallback_turn": "t1"
+    },
+    "t2_cool": {
+      "bot_lines": ["Most AIs live in giant computers far away.", "I live in YOUR computer. Even with WiFi off, I still work!"],
+      "options": ["What if my computer is off?", "Are you as smart as Claude?"],
+      "branches": { "What if my computer is off?": "t3_off", "Are you as smart as Claude?": "t3_smart" },
+      "fallback_turn": "t2_cool"
+    },
+    "t2_slow": {
+      "bot_lines": ["Great question.", "Cloud AIs use giant computers with thousands of chips. I only have what's in YOUR machine.", "Slower — but totally private. Nobody else sees what you ask me!"],
+      "side_effect": { "action": "open_local_badge", "model_name": "llama3:8b", "source_url_label": "local" },
+      "options": ["What does private mean?", "Can I get faster?"],
+      "branches": { "What does private mean?": "t3_private", "Can I get faster?": "t3_faster" },
+      "fallback_turn": "t2_slow"
+    },
+    "t2_can": {
+      "bot_lines": ["I can do a lot — write, explain, brainstorm, just like the others!", "What should I show you?"],
+      "options": ["Write a haiku", "Explain rainbows", "Tell a joke"],
+      "branches": { "Write a haiku": "t3_haiku", "Explain rainbows": "t3_rainbow", "Tell a joke": "t3_joke" },
+      "fallback_turn": "t2_can"
+    },
+    "t3_off": {
+      "bot_lines": ["When your computer turns off, I sleep!", "I only think when your computer is on. Just like a brain — needs power to work."],
+      "options": ["Makes sense!"],
+      "branches": { "Makes sense!": "t5" }
+    },
+    "t3_smart": {
+      "bot_lines": ["Claude lives in giant cloud computers — way more memory than I have.", "But I'm getting smarter every year! Local AIs are the future."],
+      "options": ["Cool!"],
+      "branches": { "Cool!": "t5" }
+    },
+    "t3_private": {
+      "bot_lines": ["Private means your words stay HERE.", "When you talk to a cloud AI, your words travel across the internet to a faraway computer.", "When you talk to me, your words never leave your laptop. Safe and secret!"],
+      "side_effect": { "action": "open_local_badge", "model_name": "llama3:8b", "source_url_label": "local" },
+      "options": ["I love that!"],
+      "branches": { "I love that!": "t5" }
+    },
+    "t3_faster": {
+      "bot_lines": ["Yes! Faster computer chips and smaller AI brains make me speed up.", "Someday every laptop will have a fast local AI like me."],
+      "options": ["That'll be cool!"],
+      "branches": { "That'll be cool!": "t5" }
+    },
+    "t3_haiku": {
+      "bot_lines": ["Generating locally..."],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "ollama run llama3 'haiku about cats'" },{ "kind": "out", "text": "Soft paws on my book" },{ "kind": "out", "text": "Whiskers tickle the page lines" },{ "kind": "out", "text": "Cat reads with me too" }] },
+      "options": ["So pretty!"],
+      "branches": { "So pretty!": "t5" }
+    },
+    "t3_rainbow": {
+      "bot_lines": ["Rainbows happen when sunlight bends through tiny water drops.", "Each drop splits white light into seven colors — that's a rainbow!"],
+      "side_effect": { "action": "show_thinking", "steps": ["Sun shines", "Light bends in water", "Seven colors appear!"], "duration_ms": 2000 },
+      "options": ["Cool science!"],
+      "branches": { "Cool science!": "t5" }
+    },
+    "t3_joke": {
+      "bot_lines": ["Why do programmers prefer dark mode?", "...", "Because light attracts BUGS!"],
+      "options": ["Haha!"],
+      "branches": { "Haha!": "t5" }
+    },
+    "t5": {
+      "bot_lines": ["You just talked to a local AI on YOUR computer!", "Someday every computer might have its own AI brain. You might even run one yourself."],
       "side_effect": { "action": "open_local_badge", "model_name": "llama3:8b", "source_url_label": "local" }
-    },
-    {
-      "keywords": ["fast", "slow", "speed"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["I'm a little slower than cloud helpers. But I'm yours."],
-      "side_effect": { "action": "open_local_badge", "model_name": "llama3:8b", "source_url_label": "local" }
-    },
-    {
-      "keywords": ["run", "llama3", "start"],
-      "typing_delay_ms": 1000,
-      "reply_lines": ["Booting up the local model..."],
-      "side_effect": {
-        "action": "show_terminal",
-        "lines": [
-          { "kind": "in",  "text": "ollama run llama3" },
-          { "kind": "out", "text": "loading model: llama3:8b" },
-          { "kind": "out", "text": "ready! type a question >" }
-        ]
-      }
-    },
-    {
-      "keywords": ["private", "safe", "secret"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Your words stay on YOUR computer. Nobody else sees them."],
-      "side_effect": { "action": "open_local_badge", "model_name": "llama3:8b", "source_url_label": "local" }
-    },
-    {
-      "keywords": ["pick", "model", "which"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["You can pick which model to load. Small ones are fast. Big ones are smart."],
-      "side_effect": null
-    },
-    {
-      "keywords": ["help", "stuck"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Try 'wifi off', 'run llama3', or 'are you private?'."],
-      "side_effect": null
-    },
-    {
-      "keywords": ["hi", "hello", "hey"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Hi! I'm Ollama. I'm a helper on YOUR laptop — no internet needed."],
-      "side_effect": {
-        "action": "show_terminal",
-        "lines": [
-          { "kind": "in",  "text": "ollama run llama3" },
-          { "kind": "out", "text": "ready!" }
-        ]
-      }
     }
-  ]
+  }
 }

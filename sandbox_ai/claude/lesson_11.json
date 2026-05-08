@@ -1,63 +1,82 @@
 {
   "helper": "claude",
   "lesson_id": 11,
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
   "fallback": "Try 'plan a story', 'help me think', or 'three steps'!",
   "matches": [
-    {
-      "keywords": ["plan", "story"],
-      "typing_delay_ms": 900,
-      "reply_lines": [
-        "Sure! Here's a small plan:",
-        "1) Pick a hero. 2) Find a problem. 3) Write the ending.",
-        "Want me to help with step 1?"
-      ],
-      "side_effect": { "action": "show_thinking", "steps": ["I read the question", "I make a plan", "I write step 1"], "duration_ms": 1800 }
+    { "keywords": ["plan","story"], "typing_delay_ms": 900, "reply_lines": ["Sure! Pick a hero, find a problem, write the ending. Want help with step 1?"], "side_effect": { "action": "show_thinking", "steps": ["I read the question", "I make a plan", "I write step 1"], "duration_ms": 1800 } },
+    { "keywords": ["hi","hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I'm Claude. Want me to plan something with you?"], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["I'm Claude. I'm really good at breaking big ideas into small steps.", "What big thing do you want to plan?"],
+      "options": ["Make a video game", "Write a story", "Build a website"],
+      "branches": {
+        "Make a video game": "t2_game",
+        "Write a story": "t2_story",
+        "Build a website": "t2_site"
+      },
+      "fallback_turn": "t1"
     },
-    {
-      "keywords": ["three steps", "3 steps", "steps"],
-      "typing_delay_ms": 800,
-      "reply_lines": [
-        "Step 1 — read what you have.",
-        "Step 2 — think about what is missing.",
-        "Step 3 — write one tiny thing."
-      ],
-      "side_effect": { "action": "show_thinking", "steps": ["read", "think", "write"], "duration_ms": 1500 }
+    "t2_game": {
+      "bot_lines": ["A video game! Awesome.", "Every game needs three things. Can you guess one?"],
+      "options": ["A goal to win", "A player or hero", "Rules"],
+      "branches": { "A goal to win": "t3_game", "A player or hero": "t3_game", "Rules": "t3_game" },
+      "fallback_turn": "t2_game"
     },
-    {
-      "keywords": ["thinking", "think"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["I plan in my head before I write anything down. It saves time later!"],
-      "side_effect": { "action": "show_thinking", "steps": ["pause", "plan", "go"], "duration_ms": 1400 }
+    "t2_story": {
+      "bot_lines": ["Stories rock!", "Great stories have a hero with a problem.", "Who is YOUR hero?"],
+      "options": ["A kid like me", "A robot", "A talking animal"],
+      "branches": { "A kid like me": "t3_story", "A robot": "t3_story", "A talking animal": "t3_story" },
+      "fallback_turn": "t2_story"
     },
-    {
-      "keywords": ["help", "stuck"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["I can help! Try: 'plan a story' or 'three steps'."],
-      "side_effect": null
+    "t2_site": {
+      "bot_lines": ["Websites show information to people.", "What is your website about?"],
+      "options": ["My pets", "Favorite games", "Cool space facts"],
+      "branches": { "My pets": "t3_site", "Favorite games": "t3_site", "Cool space facts": "t3_site" },
+      "fallback_turn": "t2_site"
     },
-    {
-      "keywords": ["code", "build"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["I'm best at the PLAN before code. Tell me what your code should DO."],
-      "side_effect": null
+    "t3_game": {
+      "bot_lines": ["Nice pick!", "Here is your three-step plan to start your game."],
+      "side_effect": { "action": "show_thinking", "steps": ["1. Pick the goal", "2. Draw the hero", "3. Write the rules"], "duration_ms": 2200 },
+      "options": ["Show me step 1", "Show me step 2", "Show me step 3"],
+      "branches": { "Show me step 1": "t4_step1", "Show me step 2": "t4_step2", "Show me step 3": "t4_step3" },
+      "fallback_turn": "t3_game"
     },
-    {
-      "keywords": ["draw", "picture"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["I plan with words. Try 'plan a story' first!"],
-      "side_effect": null
+    "t3_story": {
+      "bot_lines": ["Great hero!", "Here is your three-step plan to start your story."],
+      "side_effect": { "action": "show_thinking", "steps": ["1. Meet the hero", "2. Find the problem", "3. Write the ending"], "duration_ms": 2200 },
+      "options": ["Show me step 1", "Show me step 2", "Show me step 3"],
+      "branches": { "Show me step 1": "t4_step1", "Show me step 2": "t4_step2", "Show me step 3": "t4_step3" },
+      "fallback_turn": "t3_story"
     },
-    {
-      "keywords": ["hi", "hello", "hey"],
-      "typing_delay_ms": 600,
-      "reply_lines": ["Hi! I'm Claude. Want me to plan something with you?"],
-      "side_effect": null
+    "t3_site": {
+      "bot_lines": ["Cool topic!", "Here is a three-step plan for your website."],
+      "side_effect": { "action": "show_thinking", "steps": ["1. Pick a title", "2. Write 3 facts", "3. Add one picture"], "duration_ms": 2200 },
+      "options": ["Show me step 1", "Show me step 2", "Show me step 3"],
+      "branches": { "Show me step 1": "t4_step1", "Show me step 2": "t4_step2", "Show me step 3": "t4_step3" },
+      "fallback_turn": "t3_site"
     },
-    {
-      "keywords": ["thanks", "thank you"],
-      "typing_delay_ms": 600,
-      "reply_lines": ["You're welcome! Plans are my favorite."],
-      "side_effect": null
+    "t4_step1": {
+      "bot_lines": ["Step 1: Start small. Pick just ONE thing first.", "Don't try to do everything at once. That is how plans work!"],
+      "options": ["Got it!"],
+      "branches": { "Got it!": "t5" }
+    },
+    "t4_step2": {
+      "bot_lines": ["Step 2: Once step 1 is done, build on top of it.", "Each step gets easier because you already did the last one."],
+      "options": ["Got it!"],
+      "branches": { "Got it!": "t5" }
+    },
+    "t4_step3": {
+      "bot_lines": ["Step 3: Finish strong! The last step is the most fun.", "When you finish, you can show people what you made."],
+      "options": ["Got it!"],
+      "branches": { "Got it!": "t5" }
+    },
+    "t5": {
+      "bot_lines": ["You just made a real plan with an AI!", "This is how coders start every big project — break it into tiny steps."],
+      "side_effect": { "action": "show_thinking", "steps": ["Big idea", "Three steps", "Start step one!"], "duration_ms": 1800 }
     }
-  ]
+  }
 }

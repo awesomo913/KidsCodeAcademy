@@ -1,49 +1,80 @@
 {
   "helper": "claude",
   "lesson_id": 2,
-  "fallback": "Hmm, try typing 'make me a star' or 'draw a heart'!",
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Pick a shape, or try saying 'star' or 'heart'!",
   "matches": [
-    {
-      "keywords": ["star"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Sure! Here is one shiny star, coming up..."],
-      "side_effect": { "action": "draw_svg", "shape": "star", "color": "gold" }
+    { "keywords": ["star"],     "typing_delay_ms": 700, "reply_lines": ["A shiny star coming up!"],      "side_effect": { "action": "draw_svg", "shape": "star",     "color": "gold" } },
+    { "keywords": ["heart"],    "typing_delay_ms": 700, "reply_lines": ["A heart, just for you!"],       "side_effect": { "action": "draw_svg", "shape": "heart",    "color": "#ff5a78" } },
+    { "keywords": ["rainbow"],  "typing_delay_ms": 800, "reply_lines": ["A rainbow with all the colors!"], "side_effect": { "action": "draw_svg", "shape": "rainbow",  "color": "gold" } },
+    { "keywords": ["circle"],   "typing_delay_ms": 700, "reply_lines": ["A round circle!"],              "side_effect": { "action": "draw_svg", "shape": "circle",   "color": "#ffb84d" } },
+    { "keywords": ["hi","hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! Pick a shape and I will draw it!"], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["Hi! I'm Claude. I can draw shapes for you.", "Which one should I make first?"],
+      "options": ["A star", "A heart", "A rainbow", "A circle"],
+      "branches": {
+        "A star":    "t2_star",
+        "A heart":   "t2_heart",
+        "A rainbow": "t2_rainbow",
+        "A circle":  "t2_circle"
+      },
+      "fallback_turn": "t1"
     },
-    {
-      "keywords": ["heart", "love"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Aww, a heart! Here you go."],
-      "side_effect": { "action": "draw_svg", "shape": "heart", "color": "#ff5a78" }
+    "t2_star": {
+      "bot_lines": ["A shiny star, coming right up!", "Want another shape too?"],
+      "side_effect": { "action": "draw_svg", "shape": "star", "color": "gold" },
+      "options": ["Yes, draw more!", "I'm all done!"],
+      "branches": { "Yes, draw more!": "t3", "I'm all done!": "t4" }
     },
-    {
-      "keywords": ["circle", "ball", "sun"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["A round circle, ta-da!"],
-      "side_effect": { "action": "draw_svg", "shape": "circle", "color": "#ffb84d" }
+    "t2_heart": {
+      "bot_lines": ["A heart, just for you!", "Want another shape?"],
+      "side_effect": { "action": "draw_svg", "shape": "heart", "color": "#ff5a78" },
+      "options": ["Yes, draw more!", "I'm all done!"],
+      "branches": { "Yes, draw more!": "t3", "I'm all done!": "t4" }
     },
-    {
-      "keywords": ["rainbow"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["A rainbow! Look at all those colors."],
-      "side_effect": { "action": "draw_svg", "shape": "rainbow", "color": "gold" }
+    "t2_rainbow": {
+      "bot_lines": ["A rainbow with every color!", "Want another shape?"],
+      "side_effect": { "action": "draw_svg", "shape": "rainbow", "color": "gold" },
+      "options": ["Yes, draw more!", "I'm all done!"],
+      "branches": { "Yes, draw more!": "t3", "I'm all done!": "t4" }
     },
-    {
-      "keywords": ["triangle"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["A triangle, three sides!"],
-      "side_effect": { "action": "draw_svg", "shape": "triangle", "color": "#6b8cff" }
+    "t2_circle": {
+      "bot_lines": ["A round circle!", "Want another shape?"],
+      "side_effect": { "action": "draw_svg", "shape": "circle", "color": "#ffb84d" },
+      "options": ["Yes, draw more!", "I'm all done!"],
+      "branches": { "Yes, draw more!": "t3", "I'm all done!": "t4" }
     },
-    {
-      "keywords": ["square", "box"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["A square box just for you."],
-      "side_effect": { "action": "draw_svg", "shape": "square", "color": "#5acf95" }
+    "t3": {
+      "bot_lines": ["Pick another! I love drawing."],
+      "options": ["A triangle", "A square", "A surprise!"],
+      "branches": { "A triangle": "t3_triangle", "A square": "t3_square", "A surprise!": "t3_surprise" },
+      "fallback_turn": "t3"
     },
-    {
-      "keywords": ["hi", "hello", "hey"],
-      "typing_delay_ms": 600,
-      "reply_lines": ["Hi! I'm Claude. What shape should I draw?"],
-      "side_effect": null
+    "t3_triangle": {
+      "bot_lines": ["Three sides — a triangle!", "Great job picking!"],
+      "side_effect": { "action": "draw_svg", "shape": "triangle", "color": "#6b8cff" },
+      "options": ["Cool!"],
+      "branches": { "Cool!": "t4" }
+    },
+    "t3_square": {
+      "bot_lines": ["A square box, ta-da!"],
+      "side_effect": { "action": "draw_svg", "shape": "square", "color": "#5acf95" },
+      "options": ["Cool!"],
+      "branches": { "Cool!": "t4" }
+    },
+    "t3_surprise": {
+      "bot_lines": ["Surprise! Have a star and a rainbow.", "Two shapes for the price of one!"],
+      "side_effect": { "action": "draw_svg", "shape": "star", "color": "#ff5a78" },
+      "options": ["So cool!"],
+      "branches": { "So cool!": "t4" }
+    },
+    "t4": {
+      "bot_lines": ["You did it! You asked an AI to make art for you.", "That's exactly how real artists use AI helpers!"],
+      "side_effect": { "action": "show_thinking", "steps": ["You asked", "I drew it", "You loved it!"], "duration_ms": 1800 }
     }
-  ]
+  }
 }

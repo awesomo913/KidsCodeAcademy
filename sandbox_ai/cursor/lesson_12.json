@@ -1,85 +1,82 @@
 {
   "helper": "cursor",
   "lesson_id": 12,
-  "fallback": "Try 'fix the typo', 'rename', or 'make it bigger'!",
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Pick a button, or try 'fix the typo'!",
   "matches": [
-    {
-      "keywords": ["fix", "typo"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Got it. Fixed the typo on line 3."],
-      "side_effect": {
-        "action": "show_code_diff",
-        "filename": "greet.py",
-        "before": ["def greet(name):", "    msg = 'hello wrold'", "    print(msg)"],
-        "after":  ["def greet(name):", "    msg = 'hello world'", "    print(msg)"],
-        "highlight": [1]
-      }
+    { "keywords": ["fix","typo"], "typing_delay_ms": 600, "reply_lines": ["Got it. Fixed."], "side_effect": { "action": "show_code_diff", "filename": "greet.py", "before": ["def greet(name):","    msg = 'hello wrold'","    print(msg)"], "after": ["def greet(name):","    msg = 'hello world'","    print(msg)"], "highlight": [1] } },
+    { "keywords": ["hi","hello"], "typing_delay_ms": 500, "reply_lines": ["Hey! I'm Cursor. Tell me a tiny code change to make."], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["Hey! I'm Cursor. I live inside your code editor.", "I am SUPER fast at code edits. What should I fix?"],
+      "options": ["Fix a typo", "Rename something", "Add a new feature"],
+      "branches": {
+        "Fix a typo": "t2_typo",
+        "Rename something": "t2_rename",
+        "Add a new feature": "t2_add"
+      },
+      "fallback_turn": "t1"
     },
-    {
-      "keywords": ["rename"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Renamed 'spd' to 'speed' across 3 files."],
-      "side_effect": {
-        "action": "show_code_diff",
-        "filename": "hero.js",
-        "before": ["let spd = 5;", "hero.x += spd;"],
-        "after":  ["let speed = 5;", "hero.x += speed;"],
-        "highlight": [0, 1]
-      }
+    "t2_typo": {
+      "bot_lines": ["Found it! Line 3 says 'wrold' instead of 'world'.", "Want me to fix it?"],
+      "options": ["Yes, fix it!", "Show me first"],
+      "branches": { "Yes, fix it!": "t3_typo_fixed", "Show me first": "t3_typo_show" },
+      "fallback_turn": "t2_typo"
     },
-    {
-      "keywords": ["bigger", "size", "font"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Made the font bigger."],
-      "side_effect": {
-        "action": "show_code_diff",
-        "filename": "style.css",
-        "before": ["h1 { font-size: 12px; }"],
-        "after":  ["h1 { font-size: 24px; }"],
-        "highlight": [0]
-      }
+    "t2_rename": {
+      "bot_lines": ["What should I rename?", "Pick one — I will rename it everywhere in the code."],
+      "options": ["The hero", "The score", "The speed"],
+      "branches": { "The hero": "t3_rename", "The score": "t3_rename", "The speed": "t3_rename" },
+      "fallback_turn": "t2_rename"
     },
-    {
-      "keywords": ["color", "blue"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Changed the color to blue."],
-      "side_effect": {
-        "action": "show_code_diff",
-        "filename": "style.css",
-        "before": ["button { color: red; }"],
-        "after":  ["button { color: blue; }"],
-        "highlight": [0]
-      }
+    "t2_add": {
+      "bot_lines": ["What new thing do we add?"],
+      "options": ["A jump feature", "A score counter", "A sound when you win"],
+      "branches": { "A jump feature": "t3_jump", "A score counter": "t3_score", "A sound when you win": "t3_sound" },
+      "fallback_turn": "t2_add"
     },
-    {
-      "keywords": ["add function", "new function", "add a"],
-      "typing_delay_ms": 900,
-      "reply_lines": ["Added a small jump() function."],
-      "side_effect": {
-        "action": "show_code_diff",
-        "filename": "hero.js",
-        "before": ["function move() {}"],
-        "after":  ["function move() {}", "", "function jump() {", "  hero.dy = -8;", "}"],
-        "highlight": [2, 3, 4]
-      }
+    "t3_typo_show": {
+      "bot_lines": ["Here is the typo, on line 2.", "Look — 'wrold' should be 'world'."],
+      "side_effect": { "action": "show_code_diff", "filename": "greet.py", "before": ["def greet(name):","    msg = 'hello wrold'","    print(msg)"], "after": ["def greet(name):","    msg = 'hello wrold'","    print(msg)"], "highlight": [1] },
+      "options": ["Fix it now!"],
+      "branches": { "Fix it now!": "t3_typo_fixed" }
     },
-    {
-      "keywords": ["save"],
-      "typing_delay_ms": 600,
-      "reply_lines": ["Saved! Your changes are safe."],
-      "side_effect": null
+    "t3_typo_fixed": {
+      "bot_lines": ["Done! The typo is fixed. That took less than a second."],
+      "side_effect": { "action": "show_code_diff", "filename": "greet.py", "before": ["def greet(name):","    msg = 'hello wrold'","    print(msg)"], "after": ["def greet(name):","    msg = 'hello world'","    print(msg)"], "highlight": [1] },
+      "options": ["So fast!"],
+      "branches": { "So fast!": "t5" }
     },
-    {
-      "keywords": ["help", "stuck"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Tell me which line to change. Try 'fix the typo' or 'rename'."],
-      "side_effect": null
+    "t3_rename": {
+      "bot_lines": ["Done! I renamed it everywhere — even in three other files.", "Real coders use this every day."],
+      "side_effect": { "action": "show_code_diff", "filename": "hero.js", "before": ["let spd = 5;","hero.x += spd;"], "after": ["let speed = 5;","hero.x += speed;"], "highlight": [0,1] },
+      "options": ["Cool!"],
+      "branches": { "Cool!": "t5" }
     },
-    {
-      "keywords": ["hi", "hello", "hey"],
-      "typing_delay_ms": 600,
-      "reply_lines": ["Hi! I'm Cursor. Tell me a tiny code change to make."],
-      "side_effect": null
+    "t3_jump": {
+      "bot_lines": ["Added a jump function. Press the spacebar in your game to use it!"],
+      "side_effect": { "action": "show_code_diff", "filename": "hero.js", "before": ["function move() {}"], "after": ["function move() {}","","function jump() {","  hero.dy = -8;","}"], "highlight": [2,3,4] },
+      "options": ["Awesome!"],
+      "branches": { "Awesome!": "t5" }
+    },
+    "t3_score": {
+      "bot_lines": ["Score counter ready! Every time you collect a coin, the score goes up."],
+      "side_effect": { "action": "show_code_diff", "filename": "game.js", "before": ["let coins = 0;"], "after": ["let coins = 0;","let score = 0;","function addCoin() { coins++; score += 10; }"], "highlight": [1,2] },
+      "options": ["Sweet!"],
+      "branches": { "Sweet!": "t5" }
+    },
+    "t3_sound": {
+      "bot_lines": ["Done! When you win, a happy beep plays."],
+      "side_effect": { "action": "show_code_diff", "filename": "game.js", "before": ["function win() {}"], "after": ["function win() {","  playSound('beep');","}"], "highlight": [1] },
+      "options": ["So cool!"],
+      "branches": { "So cool!": "t5" }
+    },
+    "t5": {
+      "bot_lines": ["That's Cursor in action! I edit code SUPER fast.", "Real coders use me to fix and build things every day."],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "git commit -m 'cursor edit'" },{ "kind": "out", "text": "1 file changed, ready to ship!" }] }
     }
-  ]
+  }
 }

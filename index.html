@@ -475,6 +475,21 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
   40%           { transform: translateY(-6px); opacity: 1; }
 }
+.chip-row {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  padding: 6px 0;
+}
+.fsm-chip {
+  padding: 12px 22px; border-radius: 999px;
+  background: var(--accent-2); color: white; border: none;
+  font-size: 17px; font-family: inherit; font-weight: 600;
+  box-shadow: var(--shadow); cursor: pointer;
+  transition: transform var(--dur), background var(--dur);
+}
+.fsm-chip:hover  { transform: translateY(-3px); background: var(--accent); }
+.fsm-chip:active { transform: translateY(2px); }
+.fsm-chip:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.chat-input-zone { display: flex; flex-direction: column; gap: 8px; min-height: 56px; }
 .chat-row input {
   flex: 1; font-family: inherit; font-size: 18px;
   padding: 10px 14px;
@@ -2148,6 +2163,7 @@ async function fetchJSON(path) {
 
 const Sandbox = {
   cache: {},
+  turn_state: {},  // key: `${helper}/${lesson_id}` → current turn id (FSM mode)
   async load(helper, lessonNum) {
     if (!/^[a-z]+$/.test(helper)) return null;
     const key = `${helper}/${lessonNum}`;
@@ -2165,6 +2181,61 @@ const Sandbox = {
       }
     }
     return { reply_lines: [script.fallback || "Hmm, try something else!"], typing_delay_ms: 600, side_effect: null };
+  },
+
+  /* ─── Multi-turn FSM (mode: "turns") ─────────────────────────── */
+  _stateKey(script) { return `${script.helper}/${script.lesson_id}`; },
+
+  startTurns(script) {
+    if (!script || script.mode !== "turns") return null;
+    const key = this._stateKey(script);
+    this.turn_state[key] = String(script.start_turn || "t1");
+    return this._getTurn(script, this.turn_state[key]);
+  },
+
+  resetTurns(script) {
+    if (!script) return;
+    delete this.turn_state[this._stateKey(script)];
+  },
+
+  currentTurn(script) {
+    if (!script || script.mode !== "turns") return null;
+    const key = this._stateKey(script);
+    return this._getTurn(script, this.turn_state[key] || String(script.start_turn || "t1"));
+  },
+
+  next(script, choice) {
+    if (!script || script.mode !== "turns") return { turn: null, done: false };
+    const key = this._stateKey(script);
+    const cur = this._getTurn(script, this.turn_state[key]);
+    if (!cur) return { turn: null, done: false };
+    const lc = String(choice || "").toLowerCase().trim().slice(0, 80);
+    const branches = cur.branches || {};
+    let nextId = branches[choice] || null;
+    if (!nextId && cur.keywords) {
+      for (const kw of cur.keywords) {
+        if (lc.includes(String(kw).toLowerCase())) { nextId = branches[kw] || null; break; }
+      }
+    }
+    if (!nextId) {
+      // No branch matched. Use fallback_turn if present; otherwise gracefully end
+      // the conversation rather than infinite-looping in the same turn.
+      if (cur.fallback_turn) {
+        nextId = cur.fallback_turn;
+      } else {
+        return { turn: cur, done: true };
+      }
+    }
+    this.turn_state[key] = nextId;
+    const nextTurn = this._getTurn(script, nextId);
+    const done = !nextTurn || (!nextTurn.branches && !nextTurn.keywords);
+    return { turn: nextTurn, done };
+  },
+
+  _getTurn(script, id) {
+    if (!id || !script.turns || typeof script.turns !== "object") return null;
+    const t = script.turns[String(id)];
+    return t && typeof t === "object" ? t : null;
   },
 };
 
@@ -5828,11 +5899,11 @@ const UI = {
     wrap.appendChild(tabs);
     const log = el("div", { class: "chat-log" });
     wrap.appendChild(log);
-    const row = el("div", { class: "chat-row" });
-    const inp = el("input", { type: "text", placeholder: "Ask the helper...", maxlength: "80" });
-    const send = el("button", { class: "btn-big" }, "Ask");
-    row.appendChild(inp); row.appendChild(send);
-    wrap.appendChild(row);
+
+    // inputZone holds either chat-row (legacy/keywords) OR chip-row (FSM options) OR prompt-builder
+    const inputZone = el("div", { class: "chat-input-zone" });
+    wrap.appendChild(inputZone);
+
     const svgStage = el("div", { class: "svg-stage" });
     wrap.appendChild(svgStage);
     const hint = el("div", { class: "muted", style: { fontSize: "14px" } },
@@ -5841,95 +5912,235 @@ const UI = {
 
     let helper = String(lesson.sandbox.helpers[0]);
     let attempts = 0;
+    let script = null;
+    let isTurns = false;
 
+    /* ─── Shared helpers ────────────────────────────────────── */
+    const showThinkingBubble = () => {
+      const pers = TOOL_PERSONALITY[helper] || _TOOL_PERSONALITY_DEFAULT;
+      const msgs = pers.thinking_messages || ["Thinking…"];
+      const thinkMsg = msgs[Math.floor(Math.random() * msgs.length)];
+      const bubble = el("div", { class: "thinking-bubble" });
+      bubble.appendChild(el("span", null, thinkMsg));
+      const dots = el("span", { class: "thinking-dots" });
+      dots.appendChild(el("span")); dots.appendChild(el("span")); dots.appendChild(el("span"));
+      bubble.appendChild(dots);
+      log.appendChild(bubble);
+      log.scrollTop = log.scrollHeight;
+      return bubble;
+    };
+
+    const removeThinking = (bubble) => {
+      if (!bubble) return;
+      bubble.style.opacity = "0";
+      setTimeout(() => {
+        if (bubble.parentNode === log) log.removeChild(bubble);
+      }, 220);
+    };
+
+    const typewriteInto = (botEl, text, customDelayMs) => {
+      const pers = TOOL_PERSONALITY[helper] || _TOOL_PERSONALITY_DEFAULT;
+      let i = 0;
+      const speed = customDelayMs
+        ? Math.max(16, customDelayMs / Math.max(1, text.length))
+        : Math.max(16, pers.typing_ms_per_char);
+      const tick = setInterval(() => {
+        botEl.textContent = text.slice(0, ++i);
+        log.scrollTop = log.scrollHeight;
+        if (i >= text.length) clearInterval(tick);
+      }, speed);
+    };
+
+    /* ─── Tab clicks: reset state, reload script, re-init ──── */
     lesson.sandbox.helpers.forEach((h, i) => {
       const name = String(h);
       const t = el("button", {
         class: "helper-tab" + (i === 0 ? " active" : ""),
-        onclick: () => {
+        onclick: async () => {
+          if (script && script.mode === "turns") Sandbox.resetTurns(script);
           Tracker.click();
           helper = name;
           [...tabs.children].forEach(x => x.classList.remove("active"));
           t.classList.add("active");
-          clearNode(log); attempts = 0;
+          clearNode(log);
+          clearNode(inputZone);
+          clearNode(svgStage);
+          attempts = 0;
+          await initChat();
         },
       }, name[0].toUpperCase() + name.slice(1));
       tabs.appendChild(t);
     });
 
-    let _askBusy = false;
-    const ask = async () => {
-      const v = (inp.value || "").trim();
-      if (!v || _askBusy) return;
-      _askBusy = true;
-      inp.value = "";
+    /* ─── FSM mode (mode: "turns") ─────────────────────────── */
+    const renderTurnUI = (turn) => {
+      clearNode(inputZone);
+      if (!turn) return;
+      if (turn.options && turn.options.length) {
+        const chipRow = el("div", { class: "chip-row" });
+        for (const opt of turn.options) {
+          const label = String(opt).slice(0, 60);
+          const chip = el("button", { class: "fsm-chip", onclick: () => advanceFsm(opt) }, label);
+          chipRow.appendChild(chip);
+        }
+        inputZone.appendChild(chipRow);
+      } else if (turn.keywords) {
+        const row = el("div", { class: "chat-row" });
+        const inp = el("input", { type: "text", placeholder: "Type your answer...", maxlength: "80" });
+        const send = el("button", { class: "btn-big" }, "Send");
+        const go = () => { const v = inp.value.trim(); if (v) { inp.value = ""; advanceFsm(v); } };
+        send.addEventListener("click", go);
+        inp.addEventListener("keydown", e => { if (e.key === "Enter") go(); });
+        row.appendChild(inp); row.appendChild(send);
+        inputZone.appendChild(row);
+      }
+      // No options + no keywords = terminal turn → leave inputZone empty
+    };
+
+    let _fsmBusy = false;
+    const advanceFsm = async (choice) => {
+      if (_fsmBusy) return;
+      _fsmBusy = true;
+      const pers = TOOL_PERSONALITY[helper] || _TOOL_PERSONALITY_DEFAULT;
       Tracker.click();
 
-      const you = el("div", { class: "chat-msg you" }, v);
+      const choiceText = String(choice).slice(0, 80);
+      const you = el("div", { class: "chat-msg you" }, choiceText);
       log.appendChild(you);
       log.scrollTop = log.scrollHeight;
       Audio_.sfx("Type");
-      Transcripts.push({ lesson: lesson.id, helper, you: v });
+      Transcripts.push({ lesson: lesson.id, helper, you: choiceText });
 
-      const pers = TOOL_PERSONALITY[helper] || _TOOL_PERSONALITY_DEFAULT;
-      const msgs = pers.thinking_messages || ["Thinking…"];
-      const thinkMsg = msgs[Math.floor(Math.random() * msgs.length)];
-      const thinkBubble = el("div", { class: "thinking-bubble" });
-      thinkBubble.appendChild(el("span", null, thinkMsg));
-      const dots = el("span", { class: "thinking-dots" });
-      dots.appendChild(el("span")); dots.appendChild(el("span")); dots.appendChild(el("span"));
-      thinkBubble.appendChild(dots);
-      log.appendChild(thinkBubble);
-      log.scrollTop = log.scrollHeight;
+      clearNode(inputZone);  // hide input while bot thinks
+      const bubble = showThinkingBubble();
       Mascot.set("think");
 
       try {
-        const script = await Sandbox.load(helper, lesson.id);
-        const m = Sandbox.match(v, script);
+        const { turn: nextTurn, done } = Sandbox.next(script, choice);
         await new Promise(r => setTimeout(r, pers.thinking_ms));
-
-        // Fade out bubble (parallel with bot bubble appearing — feels like a transformation)
-        thinkBubble.style.opacity = "0";
-        setTimeout(() => {
-          if (thinkBubble.parentNode === log) log.removeChild(thinkBubble);
-        }, 220);
+        removeThinking(bubble);
         Mascot.set("idle");
-        _askBusy = false;
 
-        if (m && m.side_effect) SideFX.run(svgStage, m.side_effect, { helper, lessonId: lesson.id });
-
-        const bot = el("div", { class: "chat-msg bot" }, "");
-        log.appendChild(bot);
-        const text = ((m && m.reply_lines) || []).map(String).join(" ");
-        let i = 0;
-        const speed = (m && m.typing_delay_ms)
-          ? Math.max(16, m.typing_delay_ms / Math.max(1, text.length))
-          : Math.max(16, pers.typing_ms_per_char);
-        const tick = setInterval(() => {
-          bot.textContent = text.slice(0, ++i);
-          log.scrollTop = log.scrollHeight;
-          if (i >= text.length) clearInterval(tick);
-        }, speed);
-
-        attempts += 1;
-        if (lesson.sandbox.complete_after && attempts >= lesson.sandbox.complete_after) {
+        if (nextTurn) {
+          if (nextTurn.side_effect) SideFX.run(svgStage, nextTurn.side_effect, { helper, lessonId: lesson.id });
+          const bot = el("div", { class: "chat-msg bot" }, "");
+          log.appendChild(bot);
+          const text = (nextTurn.bot_lines || []).map(String).join(" ");
+          typewriteInto(bot, text);
+          const settleMs = Math.max(400, text.length * (pers.typing_ms_per_char || 25) + 250);
           setTimeout(() => {
-            if (!Progress.isCompleted(lesson.id) && lesson.sandbox.auto_complete) {
-              this.completeLesson(lesson.id);
+            if (done) {
+              // FSM terminal turn = lesson complete (no auto_complete check needed —
+              // the kid drove the conversation to its end node)
+              setTimeout(() => {
+                if (!Progress.isCompleted(lesson.id)) this.completeLesson(lesson.id);
+              }, 1000);
+            } else {
+              renderTurnUI(nextTurn);
             }
-          }, 1200);
+            _fsmBusy = false;
+          }, settleMs);
+        } else {
+          _fsmBusy = false;
         }
       } catch (e) {
-        console.warn("ask: sandbox error", e);
-      } finally {
-        // Safety net: always clean up bubble + mascot + lock on any error path
-        if (thinkBubble.parentNode === log) log.removeChild(thinkBubble);
+        console.warn("advanceFsm: error", e);
+        removeThinking(bubble);
         Mascot.set("idle");
-        _askBusy = false;
+        _fsmBusy = false;
       }
     };
-    send.addEventListener("click", ask);
-    inp.addEventListener("keydown", e => { if (e.key === "Enter") ask(); });
+
+    /* ─── Legacy mode (matches[]) ──────────────────────────── */
+    let _askBusy = false;
+    const buildLegacyInput = () => {
+      clearNode(inputZone);
+      const row = el("div", { class: "chat-row" });
+      const inp = el("input", { type: "text", placeholder: "Ask the helper...", maxlength: "80" });
+      const send = el("button", { class: "btn-big" }, "Ask");
+      row.appendChild(inp); row.appendChild(send);
+      inputZone.appendChild(row);
+
+      const ask = async () => {
+        const v = (inp.value || "").trim();
+        if (!v || _askBusy) return;
+        _askBusy = true;
+        inp.value = "";
+        Tracker.click();
+
+        const you = el("div", { class: "chat-msg you" }, v);
+        log.appendChild(you);
+        log.scrollTop = log.scrollHeight;
+        Audio_.sfx("Type");
+        Transcripts.push({ lesson: lesson.id, helper, you: v });
+
+        const pers = TOOL_PERSONALITY[helper] || _TOOL_PERSONALITY_DEFAULT;
+        const bubble = showThinkingBubble();
+        Mascot.set("think");
+
+        try {
+          const m = Sandbox.match(v, script);
+          await new Promise(r => setTimeout(r, pers.thinking_ms));
+          removeThinking(bubble);
+          Mascot.set("idle");
+          _askBusy = false;
+
+          if (m && m.side_effect) SideFX.run(svgStage, m.side_effect, { helper, lessonId: lesson.id });
+          const bot = el("div", { class: "chat-msg bot" }, "");
+          log.appendChild(bot);
+          const text = ((m && m.reply_lines) || []).map(String).join(" ");
+          typewriteInto(bot, text, m && m.typing_delay_ms);
+
+          attempts += 1;
+          if (lesson.sandbox.complete_after && attempts >= lesson.sandbox.complete_after) {
+            setTimeout(() => {
+              if (!Progress.isCompleted(lesson.id) && lesson.sandbox.auto_complete) {
+                this.completeLesson(lesson.id);
+              }
+            }, 1200);
+          }
+        } catch (e) {
+          console.warn("ask: sandbox error", e);
+        } finally {
+          if (bubble && bubble.parentNode === log) log.removeChild(bubble);
+          Mascot.set("idle");
+          _askBusy = false;
+        }
+      };
+      send.addEventListener("click", ask);
+      inp.addEventListener("keydown", e => { if (e.key === "Enter") ask(); });
+    };
+
+    /* ─── Init: load script, branch by mode ────────────────── */
+    const initChat = async () => {
+      script = await Sandbox.load(helper, lesson.id);
+      isTurns = !!(script && script.mode === "turns");
+      if (isTurns) {
+        Sandbox.resetTurns(script);
+        const firstTurn = Sandbox.startTurns(script);
+        if (firstTurn) {
+          // Greeting: brief beat, no thinking bubble — bot is initiating, not responding
+          await new Promise(r => setTimeout(r, 400));
+          if (firstTurn.side_effect) SideFX.run(svgStage, firstTurn.side_effect, { helper, lessonId: lesson.id });
+          const bot = el("div", { class: "chat-msg bot" }, "");
+          log.appendChild(bot);
+          const text = (firstTurn.bot_lines || []).map(String).join(" ");
+          typewriteInto(bot, text);
+          const pers = TOOL_PERSONALITY[helper] || _TOOL_PERSONALITY_DEFAULT;
+          const settleMs = Math.max(400, text.length * (pers.typing_ms_per_char || 25) + 250);
+          setTimeout(() => renderTurnUI(firstTurn), settleMs);
+        }
+      } else {
+        buildLegacyInput();
+      }
+    };
+    initChat().catch(e => {
+      console.warn("initChat: load failed", e);
+      const errMsg = el("div", { class: "chat-msg bot" },
+        "Hmm, I had trouble starting up. Try picking a different helper, or come back in a moment!");
+      log.appendChild(errMsg);
+    });
+
     return wrap;
   },
 

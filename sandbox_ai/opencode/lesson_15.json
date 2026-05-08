@@ -1,58 +1,54 @@
 {
   "helper": "opencode",
   "lesson_id": 15,
-  "fallback": "Try 'open', 'see inside', 'free', or 'who made you'!",
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Pick a button — I'll show you why open is awesome!",
   "matches": [
-    {
-      "keywords": ["open", "see inside", "look inside"],
-      "typing_delay_ms": 900,
-      "reply_lines": [
-        "Yes! You can see all my code.",
-        "That's what 'open' means."
-      ],
-      "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" }
+    { "keywords": ["open"], "typing_delay_ms": 800, "reply_lines": ["Yes! You can see all my code. That's what 'open' means."], "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" } },
+    { "keywords": ["hi","hello"], "typing_delay_ms": 700, "reply_lines": ["Hi! I'm OpenCode. My code is open — you can read every line!"], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["Hi! I'm OpenCode. I'm an AI helper that's OPEN SOURCE.", "Do you know what 'open source' means?"],
+      "options": ["Kind of", "No, explain it!", "Is it free?"],
+      "branches": { "Kind of": "t2_explain", "No, explain it!": "t2_explain", "Is it free?": "t2_free" },
+      "fallback_turn": "t1"
     },
-    {
-      "keywords": ["closed", "secret"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Closed helpers hide their code. I'm OPEN — anyone can read mine!"],
-      "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" }
+    "t2_explain": {
+      "bot_lines": ["Open source means anyone can READ the code that makes me work.", "It's like sharing a recipe with the whole world!"],
+      "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" },
+      "options": ["Cool, what else?"],
+      "branches": { "Cool, what else?": "t3_compare" }
     },
-    {
-      "keywords": ["free"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Open helpers are usually free to use. Money is not the catch!"],
-      "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" }
+    "t2_free": {
+      "bot_lines": ["Yes! Most open helpers are free to use.", "But the best part is you can also see HOW they work."],
+      "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" },
+      "options": ["Tell me more!"],
+      "branches": { "Tell me more!": "t3_compare" }
     },
-    {
-      "keywords": ["who made", "who built", "who wrote"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Lots of people made me, together. Anyone can help fix me!"],
-      "side_effect": null
+    "t3_compare": {
+      "bot_lines": ["Here's the difference:", "Some AIs hide their code in secret. I show mine to anyone who asks."],
+      "options": ["Why does that matter?", "Show me your code!"],
+      "branches": { "Why does that matter?": "t4_why", "Show me your code!": "t4_show" },
+      "fallback_turn": "t3_compare"
     },
-    {
-      "keywords": ["safe", "trust"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["You can READ my code to check if I'm safe. That's the open part!"],
-      "side_effect": null
+    "t4_why": {
+      "bot_lines": ["When code is open, anyone can:", "1) Check it's safe. 2) Improve it. 3) Build their own from it.", "It's how the whole coding world gets better — together!"],
+      "side_effect": { "action": "show_thinking", "steps": ["Anyone reads", "Anyone improves", "Everyone benefits"], "duration_ms": 2200 },
+      "options": ["That's awesome!"],
+      "branches": { "That's awesome!": "t5" }
     },
-    {
-      "keywords": ["different", "vs claude"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Claude hides its code. I show mine. Both can be helpful."],
-      "side_effect": null
+    "t4_show": {
+      "bot_lines": ["Here's how you'd find my code online:"],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "git clone github.com/opencode/brain" },{ "kind": "out", "text": "Cloning..." },{ "kind": "out", "text": "Done! All my code is yours to read." }] },
+      "options": ["Cool!"],
+      "branches": { "Cool!": "t5" }
     },
-    {
-      "keywords": ["help", "stuck"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Try 'open', 'free', or 'who made you'."],
-      "side_effect": null
-    },
-    {
-      "keywords": ["hi", "hello", "hey"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Hi! I'm OpenCode. My code is open — you can read every line!"],
+    "t5": {
+      "bot_lines": ["You just learned about open source AI!", "When a helper is open, the whole world can study it, improve it, and share it. That's how coding gets better."],
       "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" }
     }
-  ]
+  }
 }

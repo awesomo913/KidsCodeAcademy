@@ -1,61 +1,97 @@
 {
   "helper": "gemini",
   "lesson_id": 13,
-  "fallback": "Try attaching a picture with the paperclip, or ask 'about dinosaurs', 'about planets'!",
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Pick a button, or ask me about 'dinosaur'!",
   "matches": [
-    {
-      "keywords": ["kitten", "cat"],
-      "typing_delay_ms": 900,
-      "reply_lines": ["I see a fluffy kitten with whiskers. Cats nap up to 16 hours a day!"],
-      "side_effect": { "action": "show_picture", "art_id": "kitten", "caption": "a kitten" }
+    { "keywords": ["dinosaur","trex"], "typing_delay_ms": 900, "reply_lines": ["T-Rex lived about 65 million years ago and had teeth as long as bananas."], "side_effect": { "action": "show_picture", "art_id": "dinosaur", "caption": "T-Rex" } },
+    { "keywords": ["hi","hello"], "typing_delay_ms": 700, "reply_lines": ["Hi! I'm Gemini. I can search the web for you!"], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["Hi! I'm Gemini.", "I can search the whole internet to find facts. What do you want to learn about?"],
+      "options": ["Dinosaurs", "Space", "How computers work"],
+      "branches": {
+        "Dinosaurs": "t2_dino",
+        "Space": "t2_space",
+        "How computers work": "t2_computers"
+      },
+      "fallback_turn": "t1"
     },
-    {
-      "keywords": ["dinosaur", "rex", "trex"],
-      "typing_delay_ms": 1000,
-      "reply_lines": ["T-Rex lived about 65 million years ago and had teeth as long as bananas."],
-      "side_effect": { "action": "show_picture", "art_id": "dinosaur", "caption": "T-Rex" }
+    "t2_dino": {
+      "bot_lines": ["Searching the web for dinosaur facts...", "Found a million pages! Which dino do you like best?"],
+      "options": ["T-Rex", "Triceratops", "Velociraptor"],
+      "branches": { "T-Rex": "t3_trex", "Triceratops": "t3_tri", "Velociraptor": "t3_velo" },
+      "fallback_turn": "t2_dino"
     },
-    {
-      "keywords": ["solar", "planet", "planets", "space"],
-      "typing_delay_ms": 1000,
-      "reply_lines": ["There are 8 planets around our Sun. Earth is the third one!"],
-      "side_effect": { "action": "show_picture", "art_id": "solar_system", "caption": "the solar system" }
+    "t2_space": {
+      "bot_lines": ["Space is huge!", "What part of space?"],
+      "options": ["Planets", "Stars", "Black holes"],
+      "branches": { "Planets": "t3_planets", "Stars": "t3_stars", "Black holes": "t3_black" },
+      "fallback_turn": "t2_space"
     },
-    {
-      "keywords": ["robot"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Here is a friendly robot. Robots follow rules they were taught."],
-      "side_effect": { "action": "show_picture", "art_id": "robot", "caption": "a friendly robot" }
+    "t2_computers": {
+      "bot_lines": ["Great question!", "Pick what you want to know about computers."],
+      "options": ["What is code?", "What is the internet?", "Why are bugs called bugs?"],
+      "branches": { "What is code?": "t3_code", "What is the internet?": "t3_net", "Why are bugs called bugs?": "t3_bugs" },
+      "fallback_turn": "t2_computers"
     },
-    {
-      "keywords": ["star", "stars", "night"],
-      "typing_delay_ms": 900,
-      "reply_lines": ["Stars are huge balls of glowing gas. Our Sun is a star too!"],
-      "side_effect": { "action": "show_picture", "art_id": "star_field", "caption": "stars" }
+    "t3_trex": {
+      "bot_lines": ["T-Rex was the king of the dinosaurs!", "It lived 65 million years ago and had teeth as long as bananas."],
+      "side_effect": { "action": "show_picture", "art_id": "dinosaur", "caption": "Tyrannosaurus Rex" },
+      "options": ["Whoa!"],
+      "branches": { "Whoa!": "t5" }
     },
-    {
-      "keywords": ["picture", "image", "photo", "what is this"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Show me a picture using the paperclip button — then I can describe it!"],
-      "side_effect": null
+    "t3_tri": {
+      "bot_lines": ["Triceratops had three horns and a giant frill on its head.", "It used the horns to fight off T-Rex!"],
+      "side_effect": { "action": "show_picture", "art_id": "dinosaur", "caption": "Triceratops" },
+      "options": ["So cool!"],
+      "branches": { "So cool!": "t5" }
     },
-    {
-      "keywords": ["facts", "fact", "tell me"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["I know lots of facts! Try: dinosaurs, planets, stars, kitten, robot."],
-      "side_effect": null
+    "t3_velo": {
+      "bot_lines": ["Velociraptors were fast and smart — about the size of a turkey!", "They hunted in packs together."],
+      "side_effect": { "action": "show_picture", "art_id": "dinosaur", "caption": "Velociraptor" },
+      "options": ["Wow!"],
+      "branches": { "Wow!": "t5" }
     },
-    {
-      "keywords": ["help", "stuck"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Try attaching a picture, or ask about dinosaurs, planets, or stars!"],
-      "side_effect": null
+    "t3_planets": {
+      "bot_lines": ["There are 8 planets around our Sun.", "Earth is the third one — and the only one we KNOW has life!"],
+      "side_effect": { "action": "show_picture", "art_id": "solar_system", "caption": "the solar system" },
+      "options": ["Amazing!"],
+      "branches": { "Amazing!": "t5" }
     },
-    {
-      "keywords": ["hi", "hello", "hey"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Hi! I'm Gemini. I can read words AND pictures. Try me!"],
-      "side_effect": null
+    "t3_stars": {
+      "bot_lines": ["Stars are giant balls of hot glowing gas.", "Our Sun is a star! There are billions more in the night sky."],
+      "side_effect": { "action": "show_picture", "art_id": "star_field", "caption": "stars" },
+      "options": ["Beautiful!"],
+      "branches": { "Beautiful!": "t5" }
+    },
+    "t3_black": {
+      "bot_lines": ["Black holes are spots in space with so much gravity that even light cannot escape!", "Scientists took the first picture of one in 2019."],
+      "options": ["Mind blown!"],
+      "branches": { "Mind blown!": "t5" }
+    },
+    "t3_code": {
+      "bot_lines": ["Code is a set of instructions for the computer to follow.", "Like a recipe — but for a robot brain!"],
+      "side_effect": { "action": "show_thinking", "steps": ["Read instruction", "Do it", "Next!"], "duration_ms": 1800 },
+      "options": ["Got it!"],
+      "branches": { "Got it!": "t5" }
+    },
+    "t3_net": {
+      "bot_lines": ["The internet is a giant web of computers all connected.", "When you watch a video, your computer asks another one for it — and it travels at light speed!"],
+      "options": ["Whoa!"],
+      "branches": { "Whoa!": "t5" }
+    },
+    "t3_bugs": {
+      "bot_lines": ["Fun fact! In 1947, a real moth got stuck in a computer.", "Coders called the problem a 'bug' — and the name stuck forever!"],
+      "options": ["Haha!"],
+      "branches": { "Haha!": "t5" }
+    },
+    "t5": {
+      "bot_lines": ["You just searched the web with an AI!", "That's how I work — I find facts in seconds. Pretty cool, right?"],
+      "side_effect": { "action": "show_thinking", "steps": ["You asked", "I searched", "Here are facts!"], "duration_ms": 1800 }
     }
-  ]
+  }
 }

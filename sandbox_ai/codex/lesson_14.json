@@ -1,81 +1,142 @@
 {
   "helper": "codex",
   "lesson_id": 14,
-  "fallback": "Try 'say hello', 'write a loop', or 'count to 5'!",
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Pick a button, or say 'hello' or 'hi'!",
   "matches": [
-    {
-      "keywords": ["hello", "say hello"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Run this in your terminal!"],
-      "side_effect": {
-        "action": "show_terminal",
-        "lines": [
-          { "kind": "in",  "text": "echo hello" },
-          { "kind": "out", "text": "hello" }
-        ]
-      }
+    { "keywords": ["hello"], "typing_delay_ms": 700, "reply_lines": ["Run this!"], "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "echo hello" },{ "kind": "out", "text": "hello" }] } },
+    { "keywords": ["hi","hey"], "typing_delay_ms": 600, "reply_lines": ["Hi! I'm Codex. Tell me what to make and I write the code."], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["Hi! I'm Codex.", "You describe it — I write the code. What should I build?"],
+      "options": ["A 'hello' program", "A counting loop", "A list of animals"],
+      "branches": {
+        "A 'hello' program": "t2_hello",
+        "A counting loop": "t2_loop",
+        "A list of animals": "t2_list"
+      },
+      "fallback_turn": "t1"
     },
-    {
-      "keywords": ["loop", "for loop"],
-      "typing_delay_ms": 900,
-      "reply_lines": ["A loop repeats things. I'll finish your line:"],
-      "side_effect": {
-        "action": "show_inline_complete",
-        "before": "for i in ",
-        "suggested": "range(10):",
-        "accept_label": "Tab to accept"
-      }
+    "t2_hello": {
+      "bot_lines": ["Got it.", "Should it say hello to everyone, or just to YOU?"],
+      "options": ["Everyone", "Just me", "A surprise!"],
+      "branches": { "Everyone": "t3_hello_all", "Just me": "t3_hello_me", "A surprise!": "t3_hello_surprise" },
+      "fallback_turn": "t2_hello"
     },
-    {
-      "keywords": ["count", "to 5", "to five"],
-      "typing_delay_ms": 1000,
-      "reply_lines": ["Counting from 1 to 5:"],
-      "side_effect": {
-        "action": "show_terminal",
-        "lines": [
-          { "kind": "in",  "text": "python count.py" },
-          { "kind": "out", "text": "1" },
-          { "kind": "out", "text": "2" },
-          { "kind": "out", "text": "3" },
-          { "kind": "out", "text": "4" },
-          { "kind": "out", "text": "5" }
-        ]
-      }
+    "t2_loop": {
+      "bot_lines": ["Loops repeat things.", "How high should the loop count?"],
+      "options": ["1 to 5", "1 to 10", "By 2s up to 10"],
+      "branches": { "1 to 5": "t3_loop_5", "1 to 10": "t3_loop_10", "By 2s up to 10": "t3_loop_2s" },
+      "fallback_turn": "t2_loop"
     },
-    {
-      "keywords": ["fix", "typo"],
-      "typing_delay_ms": 800,
-      "reply_lines": ["Fixed it!"],
-      "side_effect": {
-        "action": "show_code_diff",
-        "filename": "main.py",
-        "before": ["pritn('hi')"],
-        "after":  ["print('hi')"],
-        "highlight": [0]
-      }
+    "t2_list": {
+      "bot_lines": ["Cool — a list of animals!", "How many animals should be on the list?"],
+      "options": ["3 animals", "5 animals", "10 animals"],
+      "branches": { "3 animals": "t3_list3", "5 animals": "t3_list5", "10 animals": "t3_list10" },
+      "fallback_turn": "t2_list"
     },
-    {
-      "keywords": ["function", "def"],
-      "typing_delay_ms": 900,
-      "reply_lines": ["Here's how to start a function:"],
-      "side_effect": {
-        "action": "show_inline_complete",
-        "before": "def greet(",
-        "suggested": "name):\n    print('hi', name)",
-        "accept_label": "Tab to accept"
-      }
+    "t3_hello_all": {
+      "bot_lines": ["Done! Here is your code:"],
+      "side_effect": { "action": "show_code_diff", "filename": "hello.py", "before": [""], "after": ["def greet():","    print('Hello, everyone!')","","greet()"], "highlight": [0,1,3] },
+      "options": ["Run it!"],
+      "branches": { "Run it!": "t4_hello_all" }
     },
-    {
-      "keywords": ["help", "stuck"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Try: 'say hello', 'write a loop', or 'count to 5'."],
-      "side_effect": null
+    "t3_hello_me": {
+      "bot_lines": ["Done! Here is your code:"],
+      "side_effect": { "action": "show_code_diff", "filename": "hello.py", "before": [""], "after": ["name = 'You'","print(f'Hello, {name}!')"], "highlight": [0,1] },
+      "options": ["Run it!"],
+      "branches": { "Run it!": "t4_hello_me" }
     },
-    {
-      "keywords": ["hi", "hello there", "hey codex"],
-      "typing_delay_ms": 700,
-      "reply_lines": ["Hi! I'm Codex. I write small code with you."],
-      "side_effect": null
+    "t3_hello_surprise": {
+      "bot_lines": ["Surprise mode! Here is your code:"],
+      "side_effect": { "action": "show_code_diff", "filename": "hello.py", "before": [""], "after": ["import random","greetings = ['Hello!', 'Hi!', 'Howdy!', 'Hola!']","print(random.choice(greetings))"], "highlight": [0,2] },
+      "options": ["Run it!"],
+      "branches": { "Run it!": "t4_surprise" }
+    },
+    "t3_loop_5": {
+      "bot_lines": ["Done!"],
+      "side_effect": { "action": "show_code_diff", "filename": "count.py", "before": [""], "after": ["for i in range(1, 6):","    print(i)"], "highlight": [0,1] },
+      "options": ["Run it!"],
+      "branches": { "Run it!": "t4_loop5" }
+    },
+    "t3_loop_10": {
+      "bot_lines": ["Done!"],
+      "side_effect": { "action": "show_code_diff", "filename": "count.py", "before": [""], "after": ["for i in range(1, 11):","    print(i)"], "highlight": [0,1] },
+      "options": ["Run it!"],
+      "branches": { "Run it!": "t4_loop10" }
+    },
+    "t3_loop_2s": {
+      "bot_lines": ["Done!"],
+      "side_effect": { "action": "show_code_diff", "filename": "count.py", "before": [""], "after": ["for i in range(2, 11, 2):","    print(i)"], "highlight": [0,1] },
+      "options": ["Run it!"],
+      "branches": { "Run it!": "t4_loop2s" }
+    },
+    "t3_list3": {
+      "bot_lines": ["Three animals coming up!"],
+      "side_effect": { "action": "show_code_diff", "filename": "animals.py", "before": [""], "after": ["animals = ['cat', 'dog', 'fox']","for a in animals:","    print(a)"], "highlight": [0] },
+      "options": ["Run it!"],
+      "branches": { "Run it!": "t4_list" }
+    },
+    "t3_list5": {
+      "bot_lines": ["Five animals!"],
+      "side_effect": { "action": "show_code_diff", "filename": "animals.py", "before": [""], "after": ["animals = ['cat','dog','fox','owl','bee']","for a in animals:","    print(a)"], "highlight": [0] },
+      "options": ["Run it!"],
+      "branches": { "Run it!": "t4_list" }
+    },
+    "t3_list10": {
+      "bot_lines": ["Ten animals — wow!"],
+      "side_effect": { "action": "show_code_diff", "filename": "animals.py", "before": [""], "after": ["animals = ['cat','dog','fox','owl','bee','rat','elk','ant','pig','cow']","for a in animals:","    print(a)"], "highlight": [0] },
+      "options": ["Run it!"],
+      "branches": { "Run it!": "t4_list" }
+    },
+    "t4_hello_all": {
+      "bot_lines": ["Running your code now..."],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "python hello.py" },{ "kind": "out", "text": "Hello, everyone!" }] },
+      "options": ["It worked!"],
+      "branches": { "It worked!": "t5" }
+    },
+    "t4_hello_me": {
+      "bot_lines": ["Running your code now..."],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "python hello.py" },{ "kind": "out", "text": "Hello, You!" }] },
+      "options": ["It worked!"],
+      "branches": { "It worked!": "t5" }
+    },
+    "t4_surprise": {
+      "bot_lines": ["Each time you run it, you get a different greeting!"],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "python hello.py" },{ "kind": "out", "text": "Howdy!" },{ "kind": "in", "text": "python hello.py" },{ "kind": "out", "text": "Hola!" }] },
+      "options": ["So cool!"],
+      "branches": { "So cool!": "t5" }
+    },
+    "t4_loop5": {
+      "bot_lines": ["Watch the loop go!"],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "python count.py" },{ "kind": "out", "text": "1" },{ "kind": "out", "text": "2" },{ "kind": "out", "text": "3" },{ "kind": "out", "text": "4" },{ "kind": "out", "text": "5" }] },
+      "options": ["Awesome!"],
+      "branches": { "Awesome!": "t5" }
+    },
+    "t4_loop10": {
+      "bot_lines": ["All ten numbers!"],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "python count.py" },{ "kind": "out", "text": "1" },{ "kind": "out", "text": "2" },{ "kind": "out", "text": "3" },{ "kind": "out", "text": "4" },{ "kind": "out", "text": "5" },{ "kind": "out", "text": "6" },{ "kind": "out", "text": "7" },{ "kind": "out", "text": "8" },{ "kind": "out", "text": "9" },{ "kind": "out", "text": "10" }] },
+      "options": ["Counted!"],
+      "branches": { "Counted!": "t5" }
+    },
+    "t4_loop2s": {
+      "bot_lines": ["Even numbers only!"],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "python count.py" },{ "kind": "out", "text": "2" },{ "kind": "out", "text": "4" },{ "kind": "out", "text": "6" },{ "kind": "out", "text": "8" },{ "kind": "out", "text": "10" }] },
+      "options": ["Cool!"],
+      "branches": { "Cool!": "t5" }
+    },
+    "t4_list": {
+      "bot_lines": ["Watch the list print out!"],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "python animals.py" },{ "kind": "out", "text": "cat" },{ "kind": "out", "text": "dog" },{ "kind": "out", "text": "fox" }] },
+      "options": ["Nice!"],
+      "branches": { "Nice!": "t5" }
+    },
+    "t5": {
+      "bot_lines": ["You described it in plain English — and I wrote real code!", "That's exactly how coders use Codex every day."],
+      "side_effect": { "action": "show_thinking", "steps": ["You said it", "I wrote it", "It runs!"], "duration_ms": 1800 }
     }
-  ]
+  }
 }
