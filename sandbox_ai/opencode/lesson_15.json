@@ -1,0 +1,58 @@
+{
+  "helper": "opencode",
+  "lesson_id": 15,
+  "fallback": "Try 'open', 'see inside', 'free', or 'who made you'!",
+  "matches": [
+    {
+      "keywords": ["open", "see inside", "look inside"],
+      "typing_delay_ms": 900,
+      "reply_lines": [
+        "Yes! You can see all my code.",
+        "That's what 'open' means."
+      ],
+      "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" }
+    },
+    {
+      "keywords": ["closed", "secret"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Closed helpers hide their code. I'm OPEN — anyone can read mine!"],
+      "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" }
+    },
+    {
+      "keywords": ["free"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Open helpers are usually free to use. Money is not the catch!"],
+      "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" }
+    },
+    {
+      "keywords": ["who made", "who built", "who wrote"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Lots of people made me, together. Anyone can help fix me!"],
+      "side_effect": null
+    },
+    {
+      "keywords": ["safe", "trust"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["You can READ my code to check if I'm safe. That's the open part!"],
+      "side_effect": null
+    },
+    {
+      "keywords": ["different", "vs claude"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Claude hides its code. I show mine. Both can be helpful."],
+      "side_effect": null
+    },
+    {
+      "keywords": ["help", "stuck"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Try 'open', 'free', or 'who made you'."],
+      "side_effect": null
+    },
+    {
+      "keywords": ["hi", "hello", "hey"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Hi! I'm OpenCode. My code is open — you can read every line!"],
+      "side_effect": { "action": "open_local_badge", "model_name": "OpenCode 1.0", "source_url_label": "github.com/opencode" }
+    }
+  ]
+}

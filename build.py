@@ -54,6 +54,16 @@ def step_assets() -> None:
     run([sys.executable, "scripts/gen_sfx.py"])
 
 
+def step_sandbox_lint() -> None:
+    """v0.7: validate sandbox JSONs before bundling — abort build on any malformed file.
+
+    Catches typos that the runtime would silently mask via the generic fallback
+    string. Exit 1 from sandbox_lint.py propagates via subprocess.run(check=True).
+    """
+    log.info("=== step 1b: validating sandbox JSONs ===")
+    run([sys.executable, "scripts/sandbox_lint.py", "--quiet"])
+
+
 def step_audio() -> None:
     log.info("=== step 2: pre-baking lesson narration ===")
     try:
@@ -162,6 +172,7 @@ def main() -> None:
         log.info("explicit target=%s requested (host=%s)", args.target, sys.platform)
 
     step_assets()
+    step_sandbox_lint()
 
     # Audio: skip on non-Windows by default (pyttsx3 + SAPI Zira is Windows-only;
     # the wavs in assets/audio/ are already pre-baked and committed to the repo).

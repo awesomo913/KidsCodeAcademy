@@ -1,0 +1,61 @@
+{
+  "helper": "gemini",
+  "lesson_id": 13,
+  "fallback": "Try attaching a picture with the paperclip, or ask 'about dinosaurs', 'about planets'!",
+  "matches": [
+    {
+      "keywords": ["kitten", "cat"],
+      "typing_delay_ms": 900,
+      "reply_lines": ["I see a fluffy kitten with whiskers. Cats nap up to 16 hours a day!"],
+      "side_effect": { "action": "show_picture", "art_id": "kitten", "caption": "a kitten" }
+    },
+    {
+      "keywords": ["dinosaur", "rex", "trex"],
+      "typing_delay_ms": 1000,
+      "reply_lines": ["T-Rex lived about 65 million years ago and had teeth as long as bananas."],
+      "side_effect": { "action": "show_picture", "art_id": "dinosaur", "caption": "T-Rex" }
+    },
+    {
+      "keywords": ["solar", "planet", "planets", "space"],
+      "typing_delay_ms": 1000,
+      "reply_lines": ["There are 8 planets around our Sun. Earth is the third one!"],
+      "side_effect": { "action": "show_picture", "art_id": "solar_system", "caption": "the solar system" }
+    },
+    {
+      "keywords": ["robot"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Here is a friendly robot. Robots follow rules they were taught."],
+      "side_effect": { "action": "show_picture", "art_id": "robot", "caption": "a friendly robot" }
+    },
+    {
+      "keywords": ["star", "stars", "night"],
+      "typing_delay_ms": 900,
+      "reply_lines": ["Stars are huge balls of glowing gas. Our Sun is a star too!"],
+      "side_effect": { "action": "show_picture", "art_id": "star_field", "caption": "stars" }
+    },
+    {
+      "keywords": ["picture", "image", "photo", "what is this"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Show me a picture using the paperclip button — then I can describe it!"],
+      "side_effect": null
+    },
+    {
+      "keywords": ["facts", "fact", "tell me"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["I know lots of facts! Try: dinosaurs, planets, stars, kitten, robot."],
+      "side_effect": null
+    },
+    {
+      "keywords": ["help", "stuck"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Try attaching a picture, or ask about dinosaurs, planets, or stars!"],
+      "side_effect": null
+    },
+    {
+      "keywords": ["hi", "hello", "hey"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Hi! I'm Gemini. I can read words AND pictures. Try me!"],
+      "side_effect": null
+    }
+  ]
+}

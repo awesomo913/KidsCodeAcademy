@@ -818,6 +818,186 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 }
 .boot-dialog .card h3 { color: var(--accent); margin: 0 0 10px; }
 .boot-dialog .card .row { justify-content: center; }
+
+/* ============================================================
+ * v0.7 — Tool simulator overlays (Claude/Cursor/Gemini/Codex/OpenCode/Ollama).
+ * Each overlay applies tool-skin tool-<name> to the .chat wrapper from buildChat.
+ * ============================================================ */
+.tool-skin {
+  position: relative;
+  border-radius: 14px;
+  margin-top: 12px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid #d8d8e0;
+}
+.tool-skin .tool-header {
+  display: flex; align-items: center; gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.tool-skin .tool-header .tool-glyph { font-size: 22px; }
+.tool-skin .pretend-chip {
+  position: absolute; top: 8px; right: 10px;
+  font-size: 11px; color: #6a6a80;
+  background: rgba(255,255,255,0.7);
+  padding: 3px 8px; border-radius: 999px;
+  border: 1px solid #d0d0d8;
+  pointer-events: none;
+  user-select: none;
+}
+.tool-skin.collapsed .chat,
+.tool-skin.collapsed .svg-stage { display: none; }
+.tool-skin .tool-toggle {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  background: var(--accent-2);
+  color: #1a1a1a;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Claude — soft lavender + serif */
+.tool-claude { background: #f3eefb; color: #2a1a4a; }
+.tool-claude .tool-header { font-family: Georgia, serif; color: #6a3aaa; }
+.tool-claude .tool-header .tool-glyph { color: #a067ff; }
+.tool-claude .helper-tab.active { background: #a067ff; color: #fff; }
+.tool-claude .chat-msg.bot { background: #fff; border: 1px solid #ded2f2; color: #2a1a4a; }
+.tool-claude .chat-msg.you { background: #a067ff; color: #fff; }
+.think-pill {
+  background: #ece1ff;
+  border-left: 3px solid #a067ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2a1a4a;
+}
+.think-pill .think-icon { color: #a067ff; margin-right: 6px; }
+.think-pill .think-label { font-style: italic; }
+.think-steps { margin: 6px 0 0 18px; padding: 0; }
+.think-step { font-size: 13px; color: #4d2a6a; }
+
+/* Cursor — IDE dark + green accent */
+.tool-cursor { background: #1e1e2e; color: #cdd6f4; border-color: #313244; }
+.tool-cursor .tool-header { color: #94e2d5; border-bottom-color: #313244; }
+.tool-cursor .pretend-chip { background: rgba(0,0,0,0.5); color: #a6adc8; border-color: #45475a; }
+.tool-cursor .helper-tab { background: #313244; color: #cdd6f4; }
+.tool-cursor .helper-tab.active { background: #94e2d5; color: #1e1e2e; }
+.tool-cursor .chat-msg.bot { background: #313244; color: #cdd6f4; border: 1px solid #45475a; }
+.tool-cursor .chat-msg.you { background: #94e2d5; color: #1e1e2e; }
+.tool-cursor input[type="text"], .tool-cursor input { background: #11111b; color: #cdd6f4; border-color: #45475a; }
+.diff-view { font-family: ui-monospace, "Courier New", monospace; font-size: 13px; }
+.diff-file { color: #94e2d5; padding: 6px 0; font-weight: 700; }
+.diff-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.diff-col { background: #11111b; border: 1px solid #313244; border-radius: 6px; overflow: hidden; }
+.diff-col-h { padding: 6px 10px; background: #313244; color: #a6adc8; font-size: 11px; font-weight: 700; }
+.diff-row { display: flex; padding: 4px 8px; }
+.diff-row .diff-num { color: #585b70; width: 24px; text-align: right; padding-right: 8px; }
+.diff-row .diff-text { flex: 1; white-space: pre; word-break: break-all; }
+.diff-row.del { background: #3a1f25; }
+.diff-row.add { background: #1e3a2a; }
+.diff-row.hl.del { background: #5a2530; }
+.diff-row.hl.add { background: #2a5a3a; }
+.diff-row.del .diff-text { color: #f38ba8; }
+.diff-row.add .diff-text { color: #a6e3a1; }
+
+/* Gemini — blue→violet gradient + sparkle */
+.tool-gemini { background: linear-gradient(180deg, #f0f4ff 0%, #faf0ff 100%); color: #1a1a3a; }
+.tool-gemini .tool-header { background: linear-gradient(90deg, #4285f4 0%, #a142f4 100%); color: #fff; padding: 8px 12px; border-radius: 8px; margin: -14px -16px 14px; }
+.tool-gemini .helper-tab.active { background: #6e57f4; color: #fff; }
+.tool-gemini .chat-msg.bot { background: #fff; border: 1px solid #d0d8f0; }
+.tool-gemini .chat-msg.you { background: #6e57f4; color: #fff; }
+.tool-gemini .gemini-attach {
+  background: #fff; border: 1px solid #d0d8f0; padding: 6px 12px;
+  border-radius: 999px; font-size: 13px; cursor: pointer; margin-bottom: 6px;
+}
+.gemini-attach-menu {
+  background: #fff; border: 1px solid #d0d8f0; border-radius: 8px;
+  padding: 4px; margin-top: 4px; display: none;
+}
+.gemini-attach-menu.show { display: block; }
+.gemini-attach-menu button {
+  display: block; width: 100%; text-align: left; background: transparent;
+  border: none; padding: 6px 10px; font-size: 13px; cursor: pointer; border-radius: 4px;
+}
+.gemini-attach-menu button:hover { background: #f0f4ff; }
+.pic-frame { background: #fff; border-radius: 8px; padding: 8px; border: 1px solid #d0d8f0; }
+.pic-caption { text-align: center; padding: 6px; font-size: 13px; color: #4d4d70; font-style: italic; }
+.img-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #e0e8f8; padding: 4px 10px; border-radius: 999px;
+  font-size: 12px; color: #1a1a3a; margin-right: 6px;
+}
+.img-chip .ic-tag { font-size: 14px; }
+
+/* Codex — GitHub gray-green */
+.tool-codex { background: #0d1117; color: #c9d1d9; border-color: #30363d; }
+.tool-codex .tool-header { color: #3fb950; border-bottom-color: #30363d; }
+.tool-codex .pretend-chip { background: rgba(0,0,0,0.5); color: #8b949e; border-color: #30363d; }
+.tool-codex .helper-tab { background: #21262d; color: #c9d1d9; }
+.tool-codex .helper-tab.active { background: #3fb950; color: #0d1117; }
+.tool-codex .chat-msg.bot { background: #161b22; color: #c9d1d9; border: 1px solid #30363d; }
+.tool-codex .chat-msg.you { background: #3fb950; color: #0d1117; }
+.tool-codex input[type="text"], .tool-codex input { background: #0d1117; color: #c9d1d9; border-color: #30363d; }
+.term {
+  background: #010409; color: #a6e3a1; padding: 12px;
+  border-radius: 6px; font-family: ui-monospace, "Courier New", monospace;
+  font-size: 13px; border: 1px solid #30363d;
+}
+.term-line { display: flex; }
+.term-line .term-prefix { color: #585b70; }
+.term-line.term-out .term-text { color: #c9d1d9; }
+.term-line.term-in .term-text { color: #a6e3a1; }
+.term-cursor { color: #3fb950; animation: kca-blink 1s step-start infinite; }
+@keyframes kca-blink { 50% { opacity: 0; } }
+.inline-complete {
+  background: #161b22; padding: 10px; border-radius: 6px;
+  font-family: ui-monospace, "Courier New", monospace; font-size: 13px;
+  border: 1px solid #30363d; color: #c9d1d9; display: flex;
+  flex-wrap: wrap; align-items: center; gap: 8px;
+}
+.inline-complete .ic-typed { color: #c9d1d9; }
+.inline-complete .ic-suggest { color: #6e7681; font-style: italic; }
+.inline-complete .ic-suggest.ic-accepted { color: #c9d1d9; font-style: normal; }
+.inline-complete .ic-chip {
+  background: #21262d; color: #c9d1d9; border: 1px solid #30363d;
+  padding: 2px 8px; border-radius: 4px; font-size: 11px; cursor: pointer;
+  margin-left: auto;
+}
+
+/* OpenCode — light + muted teal + open badge */
+.tool-opencode { background: #fafaf7; color: #1a3a2a; border-color: #d8d8c0; }
+.tool-opencode .tool-header { color: #5b9b7a; }
+.tool-opencode .helper-tab.active { background: #5b9b7a; color: #fff; }
+.tool-opencode .chat-msg.bot { background: #fff; border: 1px solid #d8d8c0; }
+.tool-opencode .chat-msg.you { background: #5b9b7a; color: #fff; }
+.openbadge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #fff; border-radius: 10px; padding: 10px 14px;
+  border: 2px solid #5b9b7a; box-shadow: 0 2px 6px rgba(91,155,122,0.15);
+}
+.openbadge.ob-local { border-color: #6b8cff; }
+.openbadge .ob-icon { font-size: 24px; }
+.openbadge .ob-text { font-size: 13px; }
+.openbadge .ob-line1 { font-weight: 800; color: #1a3a2a; }
+.openbadge.ob-local .ob-line1 { color: #1a2a4a; }
+.openbadge .ob-line2 { color: #6a6a80; font-family: ui-monospace, "Courier New", monospace; font-size: 11px; }
+
+/* Ollama — terminal mono dark */
+.tool-ollama { background: #101010; color: #c8e3c8; border-color: #2a2a2a; font-family: ui-monospace, "Courier New", monospace; }
+.tool-ollama .tool-header { color: #5acf95; border-bottom-color: #2a2a2a; }
+.tool-ollama .pretend-chip { background: rgba(255,255,255,0.06); color: #88a888; border-color: #2a2a2a; }
+.tool-ollama .helper-tab { background: #1a1a1a; color: #c8e3c8; }
+.tool-ollama .helper-tab.active { background: #5acf95; color: #101010; }
+.tool-ollama .chat-msg.bot { background: #1a1a1a; color: #c8e3c8; border: 1px solid #2a2a2a; }
+.tool-ollama .chat-msg.you { background: #5acf95; color: #101010; }
+.tool-ollama input[type="text"], .tool-ollama input { background: #0a0a0a; color: #c8e3c8; border-color: #2a2a2a; font-family: inherit; }
 </style>
   <meta property="og:title" content="Kids Code Academy" />
   <meta property="og:description" content="Sandboxed coding tutorial for ages 7+. Cartoon mascot, read-aloud audio, mini-games. Teaches the workflow used with Claude, Cursor, and Gemini." />
@@ -2159,6 +2339,297 @@ function celebrateChoiceBtn(btn, label) {
 }
 
 /* ============================================================
+ *  v0.7 — SideFX dispatcher.
+ *
+ *  Replaces the v0.3 single-purpose `SVG.draw` call from buildChat with
+ *  a multi-action dispatcher. Each side_effect.action key maps to a
+ *  renderer module. Authors compose chat scripts with rich effects.
+ *
+ *  All text via textContent / setAttribute (NEVER innerHTML).
+ *  Author-supplied strings are length-clamped at the boundary.
+ * ============================================================ */
+const SideFX = {
+  run(stage, action, ctx) {
+    if (!stage || !action || typeof action !== "object") return;
+    const fn = this._handlers[action.action];
+    if (typeof fn === "function") {
+      try { fn(stage, action, ctx || {}); }
+      catch (e) { /* author error shouldn't crash chat */ }
+    }
+  },
+  _handlers: {
+    draw_svg:             (s, a)    => SVG.draw(s, a),
+    show_text:            (s, a)    => SVG.draw(s, a),
+    show_code_diff:       (s, a)    => DiffView.render(s, a),
+    show_picture:         (s, a)    => PictureLib.render(s, a),
+    show_terminal:        (s, a, c) => Terminal_.render(s, a, c),
+    show_thinking:        (s, a)    => Thinking_.render(s, a),
+    show_inline_complete: (s, a)    => InlineComplete_.render(s, a),
+    open_local_badge:     (s, a)    => OpenBadge_.render(s, a),
+    attach_image_chip:    (s, a, c) => ImageChip_.attach(s, a, c),
+  },
+};
+
+/* DiffView — code-diff renderer used by Cursor + Codex. */
+const DiffView = {
+  render(stage, a) {
+    clearNode(stage);
+    const wrap = el("div", { class: "diff-view" });
+    if (a.filename) wrap.appendChild(el("div", { class: "diff-file" }, String(a.filename).slice(0, 60)));
+    const before = (Array.isArray(a.before) ? a.before : []).slice(0, 12);
+    const after = (Array.isArray(a.after) ? a.after : []).slice(0, 12);
+    const hi = new Set(Array.isArray(a.highlight) ? a.highlight : []);
+    const cols = el("div", { class: "diff-cols" });
+    const colB = el("div", { class: "diff-col diff-before" });
+    colB.appendChild(el("div", { class: "diff-col-h" }, "before"));
+    before.forEach((line, i) => {
+      const row = el("div", { class: "diff-row" + (hi.has(i) ? " hl del" : " del") });
+      row.appendChild(el("span", { class: "diff-num" }, String(i + 1)));
+      row.appendChild(el("span", { class: "diff-text" }, String(line || "")));
+      colB.appendChild(row);
+    });
+    const colA = el("div", { class: "diff-col diff-after" });
+    colA.appendChild(el("div", { class: "diff-col-h" }, "after"));
+    after.forEach((line, i) => {
+      const row = el("div", { class: "diff-row" + (hi.has(i) ? " hl add" : " add") });
+      row.appendChild(el("span", { class: "diff-num" }, String(i + 1)));
+      row.appendChild(el("span", { class: "diff-text" }, String(line || "")));
+      colA.appendChild(row);
+    });
+    cols.appendChild(colB); cols.appendChild(colA);
+    wrap.appendChild(cols);
+    stage.appendChild(wrap);
+  },
+};
+
+/* PictureLib — hand-coded SVG drawers for Gemini's pretend image attach. */
+const PictureLib = {
+  render(stage, a) {
+    clearNode(stage);
+    const wrap = el("div", { class: "pic-frame" });
+    const svg = svgEl("svg", { viewBox: "0 0 200 140", width: "100%", style: "max-height:200px;background:#fff;border-radius:8px" });
+    const draw = this._art[a.art_id] || this._art.kitten;
+    draw(svg);
+    wrap.appendChild(svg);
+    if (a.caption) wrap.appendChild(el("figcaption", { class: "pic-caption" }, String(a.caption).slice(0, 80)));
+    stage.appendChild(wrap);
+  },
+  _art: {
+    kitten(svg) {
+      svg.appendChild(svgEl("ellipse", { cx: 100, cy: 90, rx: 50, ry: 36, fill: "#f5cfa0" }));
+      svg.appendChild(svgEl("circle",  { cx: 100, cy: 60, r: 30, fill: "#f5cfa0" }));
+      svg.appendChild(svgEl("polygon", { points: "75,40 80,18 92,38", fill: "#f5cfa0" }));
+      svg.appendChild(svgEl("polygon", { points: "125,40 120,18 108,38", fill: "#f5cfa0" }));
+      svg.appendChild(svgEl("circle",  { cx: 88,  cy: 60, r: 3, fill: "#1a1a3a" }));
+      svg.appendChild(svgEl("circle",  { cx: 112, cy: 60, r: 3, fill: "#1a1a3a" }));
+      svg.appendChild(svgEl("polygon", { points: "98,68 102,68 100,72", fill: "#ff8aa5" }));
+      svg.appendChild(svgEl("path",    { d: "M85 68 Q 70 70 60 65", stroke: "#1a1a3a", "stroke-width": "1.2", fill: "none" }));
+      svg.appendChild(svgEl("path",    { d: "M115 68 Q 130 70 140 65", stroke: "#1a1a3a", "stroke-width": "1.2", fill: "none" }));
+    },
+    dinosaur(svg) {
+      svg.appendChild(svgEl("rect", { x: 0, y: 110, width: 200, height: 30, fill: "#8b6f47" }));
+      svg.appendChild(svgEl("ellipse", { cx: 90, cy: 90, rx: 60, ry: 22, fill: "#5acf95" }));
+      svg.appendChild(svgEl("path", { d: "M150 90 Q 175 80 175 60 Q 165 70 145 75 Z", fill: "#5acf95" }));
+      svg.appendChild(svgEl("circle", { cx: 168, cy: 65, r: 2, fill: "#1a1a3a" }));
+      svg.appendChild(svgEl("path", { d: "M148 78 L 152 80 L 148 82 L 152 84", stroke: "#fff", "stroke-width": "1.2", fill: "none" }));
+      [50, 70, 100, 130].forEach(x => svg.appendChild(svgEl("rect", { x, y: 100, width: 8, height: 16, fill: "#5acf95" })));
+    },
+    solar_system(svg) {
+      svg.appendChild(svgEl("rect", { x: 0, y: 0, width: 200, height: 140, fill: "#0a0a25" }));
+      svg.appendChild(svgEl("circle", { cx: 30, cy: 70, r: 16, fill: "#ffd24d" }));
+      [{ d: 28, r: 4, c: "#a07a55" }, { d: 50, r: 5, c: "#d8b873" }, { d: 70, r: 5, c: "#5acf95" }, { d: 92, r: 4, c: "#ff5a78" }, { d: 120, r: 8, c: "#c8a878" }, { d: 145, r: 7, c: "#d8c878" }, { d: 168, r: 5, c: "#6b8cff" }, { d: 185, r: 4, c: "#4080d8" }].forEach(p => svg.appendChild(svgEl("circle", { cx: 30 + p.d, cy: 70, r: p.r, fill: p.c })));
+    },
+    robot(svg) {
+      svg.appendChild(svgEl("rect", { x: 70, y: 30, width: 60, height: 50, rx: 6, fill: "#b0b8c5", stroke: "#1a1a3a", "stroke-width": "2" }));
+      svg.appendChild(svgEl("circle", { cx: 88, cy: 50, r: 6, fill: "#5acf95" }));
+      svg.appendChild(svgEl("circle", { cx: 112, cy: 50, r: 6, fill: "#5acf95" }));
+      svg.appendChild(svgEl("rect", { x: 88, y: 65, width: 24, height: 4, fill: "#1a1a3a" }));
+      svg.appendChild(svgEl("rect", { x: 60, y: 80, width: 80, height: 40, rx: 4, fill: "#9098a5", stroke: "#1a1a3a", "stroke-width": "2" }));
+      svg.appendChild(svgEl("line", { x1: 100, y1: 18, x2: 100, y2: 30, stroke: "#1a1a3a", "stroke-width": "2" }));
+      svg.appendChild(svgEl("circle", { cx: 100, cy: 14, r: 5, fill: "#ff5a78" }));
+    },
+    star_field(svg) {
+      svg.appendChild(svgEl("rect", { x: 0, y: 0, width: 200, height: 140, fill: "#0a0a25" }));
+      const pts = [[20,30],[50,20],[80,40],[110,15],[140,35],[170,25],[35,80],[70,70],[100,90],[140,75],[175,90],[25,110],[55,120],[90,115],[125,125],[160,110]];
+      pts.forEach(p => svg.appendChild(svgEl("circle", { cx: p[0], cy: p[1], r: 1.5 + Math.random() * 1.5, fill: "#fffae0" })));
+    },
+    cat_in_box(svg) {
+      svg.appendChild(svgEl("rect", { x: 40, y: 70, width: 120, height: 60, fill: "#c98a4a", stroke: "#1a1a3a", "stroke-width": "2" }));
+      svg.appendChild(svgEl("circle", { cx: 100, cy: 60, r: 16, fill: "#888" }));
+      svg.appendChild(svgEl("polygon", { points: "85,55 90,40 95,52", fill: "#888" }));
+      svg.appendChild(svgEl("polygon", { points: "115,55 110,40 105,52", fill: "#888" }));
+      svg.appendChild(svgEl("circle", { cx: 94, cy: 60, r: 2, fill: "#1a1a3a" }));
+      svg.appendChild(svgEl("circle", { cx: 106, cy: 60, r: 2, fill: "#1a1a3a" }));
+    },
+  },
+};
+
+/* Terminal_ — fake terminal output for Codex + Ollama. */
+const Terminal_ = {
+  render(stage, a) {
+    clearNode(stage);
+    const term = el("div", { class: "term" });
+    const lines = (Array.isArray(a.lines) ? a.lines : []).slice(0, 12);
+    lines.forEach((line, i) => {
+      const row = el("div", { class: "term-line term-" + (line.kind === "in" ? "in" : "out") });
+      const prefix = line.kind === "in" ? "$ " : "  ";
+      row.appendChild(el("span", { class: "term-prefix" }, prefix));
+      row.appendChild(el("span", { class: "term-text" }, String(line.text || "").slice(0, 80)));
+      term.appendChild(row);
+      // tiny stagger
+      row.style.opacity = "0";
+      setTimeout(() => { row.style.transition = "opacity 200ms"; row.style.opacity = "1"; }, i * 220);
+    });
+    if (lines.length && lines[lines.length - 1].kind === "out") {
+      const cursor = el("span", { class: "term-cursor" }, "▌");
+      term.appendChild(cursor);
+    }
+    stage.appendChild(term);
+  },
+};
+
+/* Thinking_ — Claude's "thinking" pill above the bot reply. */
+const Thinking_ = {
+  render(stage, a) {
+    clearNode(stage);
+    const pill = el("div", { class: "think-pill" });
+    pill.appendChild(el("span", { class: "think-icon" }, "✦"));
+    pill.appendChild(el("span", { class: "think-label" }, "Thinking…"));
+    const list = el("ul", { class: "think-steps" });
+    const steps = (Array.isArray(a.steps) ? a.steps : ["…"]).slice(0, 5);
+    const dur = Math.max(800, Math.min(4000, Number(a.duration_ms) || 1800));
+    steps.forEach((s, i) => {
+      const li = el("li", { class: "think-step" }, String(s).slice(0, 40));
+      li.style.opacity = "0";
+      setTimeout(() => { li.style.transition = "opacity 250ms"; li.style.opacity = "1"; }, (i + 1) * (dur / (steps.length + 1)));
+      list.appendChild(li);
+    });
+    pill.appendChild(list);
+    stage.appendChild(pill);
+  },
+};
+
+/* InlineComplete_ — Codex inline ghost-text completion. */
+const InlineComplete_ = {
+  render(stage, a) {
+    clearNode(stage);
+    const strip = el("div", { class: "inline-complete" });
+    strip.appendChild(el("span", { class: "ic-typed" }, String(a.before || "").slice(0, 80)));
+    strip.appendChild(el("span", { class: "ic-suggest" }, String(a.suggested || "").slice(0, 80)));
+    const chip = el("button", { class: "ic-chip" }, String(a.accept_label || "Tab to accept"));
+    chip.addEventListener("click", () => {
+      const sug = strip.querySelector(".ic-suggest");
+      if (sug) { sug.classList.add("ic-accepted"); chip.disabled = true; chip.textContent = "Accepted!"; }
+    });
+    strip.appendChild(chip);
+    stage.appendChild(strip);
+  },
+};
+
+/* OpenBadge_ — OpenCode + Ollama corner badge. */
+const OpenBadge_ = {
+  render(stage, a) {
+    clearNode(stage);
+    const isLocal = /local|ollama|llama/i.test(String(a.model_name || a.source_url_label || ""));
+    const card = el("div", { class: "openbadge " + (isLocal ? "ob-local" : "ob-open") });
+    card.appendChild(el("span", { class: "ob-icon" }, isLocal ? "🏠" : "🔓"));
+    const txt = el("div", { class: "ob-text" });
+    txt.appendChild(el("div", { class: "ob-line1" }, isLocal ? "Local" : "Open source"));
+    txt.appendChild(el("div", { class: "ob-line2" }, String(a.model_name || a.source_url_label || "").slice(0, 40)));
+    card.appendChild(txt);
+    stage.appendChild(card);
+  },
+};
+
+/* ImageChip_ — attaches a thumbnail "filename.png" chip to the user's bubble. */
+const ImageChip_ = {
+  attach(stage, a, ctx) {
+    // stage here is unused — chip is appended to the chat input row by caller.
+    // Provided as a hook; full integration in ToolSimulator's Gemini overlay.
+    const chip = el("div", { class: "img-chip" });
+    chip.appendChild(el("span", { class: "ic-tag" }, "📎"));
+    chip.appendChild(el("span", { class: "ic-name" }, String(a.label || "image.png").slice(0, 24)));
+    if (stage && stage.appendChild) stage.appendChild(chip);
+    return chip;
+  },
+};
+
+/* ============================================================
+ * v0.7 — ToolSimulator: wraps the existing buildChat() with a
+ * per-tool overlay (claude/cursor/gemini/codex/opencode/ollama).
+ * Each lesson 11-16 gets a realistic skin + persistent
+ * "Pretend mode" chip + collapsible "Try the helper!" panel.
+ * ============================================================ */
+const ToolSimulator = {
+  GLYPH: { claude: "✦", cursor: ">_", gemini: "✨", codex: "{}", opencode: "🔓", ollama: "🦙" },
+  TITLE: { claude: "Claude", cursor: "Cursor", gemini: "Gemini", codex: "Codex", opencode: "OpenCode", ollama: "Ollama" },
+
+  build(lesson, helper) {
+    const wrap = el("div", { class: "tool-skin tool-" + helper + " collapsed" });
+    // Persistent "pretend mode" chip — non-dismissible
+    const chip = el("div", { class: "pretend-chip" }, "✨ Pretend mode — not real internet");
+    wrap.appendChild(chip);
+    // Tool header
+    const header = el("div", { class: "tool-header" });
+    header.appendChild(el("span", { class: "tool-glyph" }, this.GLYPH[helper] || "•"));
+    header.appendChild(el("span", { class: "tool-title" }, "Pretend " + (this.TITLE[helper] || helper)));
+    wrap.appendChild(header);
+    // Toggle button — hidden until expanded
+    const toggle = el("button", { class: "tool-toggle" }, "Try the pretend helper!");
+    wrap.appendChild(toggle);
+    // The chat itself (built by existing UI.buildChat)
+    const chat = UI.buildChat(lesson);
+    chat.classList.add("tool-chat-body");
+    wrap.appendChild(chat);
+    // Gemini-only: attach-picture button row. Inserts an image chip into the
+    // chat-log as a visual hint that the next message has a picture attached.
+    if (helper === "gemini") {
+      this._attachGeminiAttacher(wrap, chat, lesson);
+    }
+    // Toggle behavior
+    let open = false;
+    toggle.addEventListener("click", () => {
+      open = !open;
+      if (open) {
+        wrap.classList.remove("collapsed");
+        toggle.textContent = "Hide the pretend helper";
+        speakText("This is pretend " + (this.TITLE[helper] || helper) + " — let's play!");
+      } else {
+        wrap.classList.add("collapsed");
+        toggle.textContent = "Try the pretend helper!";
+      }
+    });
+    return wrap;
+  },
+
+  _attachGeminiAttacher(wrap, chat, lesson) {
+    const row = el("div", { class: "gemini-attach-row" });
+    const btn = el("button", { class: "gemini-attach" }, "📎 Attach picture");
+    const menu = el("div", { class: "gemini-attach-menu" });
+    const arts = ["kitten", "dinosaur", "solar_system", "robot", "star_field", "cat_in_box"];
+    arts.forEach(art => {
+      const item = el("button", null, "📎 " + art.replace(/_/g, " ") + ".png");
+      item.addEventListener("click", () => {
+        Tracker.click();
+        menu.classList.remove("show");
+        // Append a chip to the chat-log (last message line) as visual attach feedback
+        const log = chat.querySelector(".chat-log");
+        if (log) {
+          const chipRow = el("div", { class: "chat-msg you", style: { background: "transparent", color: "var(--ink)", padding: "4px 0" } });
+          ImageChip_.attach(chipRow, { label: art + ".png" });
+          log.appendChild(chipRow);
+        }
+      });
+      menu.appendChild(item);
+    });
+    btn.addEventListener("click", () => menu.classList.toggle("show"));
+    row.appendChild(btn);
+    row.appendChild(menu);
+    chat.insertBefore(row, chat.firstChild);
+  },
+};
+
+/* ============================================================
  *  Mini-game engine (6 types) — now Tracker-aware.
  *  Every wrong/right tap calls Tracker.click() / Tracker.retry().
  *
@@ -2624,6 +3095,319 @@ const KidGame = {
         onSaved: () => { Audio_.sfx("Star"); done(true); },
       });
       host.appendChild(session.dom);
+    },
+
+    /* === v0.7 — game-dev gap fillers ============================ */
+
+    /* world-layers (lesson 32): toggle world layers on/off in a tiny SVG. */
+    "world-layers"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Tap layers to see what makes a world!"));
+      const layers = { sky: true, ground: true, hero: true };
+      const stage = el("div", { class: "wl-stage", style: { background: "#fff", borderRadius: "8px", padding: "10px", textAlign: "center" } });
+      const ctrl = el("div", { class: "wl-ctrl row", style: { gap: "10px", justifyContent: "center", marginTop: "10px" } });
+      host.appendChild(stage); host.appendChild(ctrl);
+      const draw = () => {
+        clearNode(stage);
+        const svg = svgEl("svg", { viewBox: "0 0 320 160", width: "100%", style: "max-height:200px" });
+        if (layers.sky) svg.appendChild(svgEl("rect", { x: 0, y: 0, width: 320, height: 120, fill: "#cfe7ff" }));
+        if (layers.ground) svg.appendChild(svgEl("rect", { x: 0, y: 120, width: 320, height: 40, fill: "#5acf95" }));
+        if (layers.hero) {
+          svg.appendChild(svgEl("rect", { x: 140, y: 80, width: 30, height: 40, fill: "#ff5a78", stroke: "#1a1a3a", "stroke-width": "2" }));
+          svg.appendChild(svgEl("circle", { cx: 155, cy: 75, r: 12, fill: "#ffd2a0", stroke: "#1a1a3a", "stroke-width": "2" }));
+        }
+        stage.appendChild(svg);
+      };
+      ["sky", "ground", "hero"].forEach(k => {
+        const btn = el("button", { class: "btn-big alt" }, "Toggle " + k);
+        btn.addEventListener("click", () => { Tracker.click(); layers[k] = !layers[k]; draw(); Audio_.sfx("Page"); });
+        ctrl.appendChild(btn);
+      });
+      const finish = el("button", { class: "btn-big go", style: { marginTop: "10px" } }, "I see! Done.");
+      finish.addEventListener("click", () => { Tracker.click(); Audio_.sfx("Ding"); done(true); });
+      host.appendChild(finish);
+      draw();
+    },
+
+    /* input-trace (lesson 33): each arrow keypress logs input → action → result. */
+    "input-trace"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Press any arrow key 4 times!"));
+      const log = el("div", { class: "trace-log", style: { background: "#11111b", color: "#a6e3a1", padding: "10px", borderRadius: "8px", fontFamily: "monospace", fontSize: "13px", minHeight: "120px", marginTop: "10px" } });
+      host.appendChild(log);
+      let presses = 0;
+      const target = 4;
+      const onKey = (e) => {
+        const arrows = { ArrowLeft: "←", ArrowRight: "→", ArrowUp: "↑", ArrowDown: "↓" };
+        if (!arrows[e.key]) return;
+        e.preventDefault();
+        presses += 1;
+        Tracker.click();
+        log.appendChild(el("div", null, `${presses}: input=${arrows[e.key]} → action=move → result=hero shifts`));
+        Audio_.sfx("Type");
+        if (presses >= target) {
+          window.removeEventListener("keydown", onKey);
+          Audio_.sfx("Ding");
+          setTimeout(() => done(true), 500);
+        }
+      };
+      window.addEventListener("keydown", onKey);
+      const hint = el("p", { class: "muted", style: { marginTop: "8px" } }, "Click here first, then press arrows.");
+      host.appendChild(hint);
+      host.tabIndex = 0;
+      setTimeout(() => host.focus({ preventScroll: true }), 50);
+    },
+
+    /* costume-swapper (lesson 34): swap hero costume + tweak FPS. */
+    "costume-swapper"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Pick a costume and watch your hero!"));
+      const stage = el("div", { class: "cs-stage", style: { background: "#cfe7ff", padding: "20px", borderRadius: "8px", textAlign: "center", minHeight: "100px" } });
+      host.appendChild(stage);
+      let costume = "hat";
+      let fps = 4;
+      let frame = 0;
+      let raf = 0; let lastTs = 0;
+      const drawFrame = () => {
+        clearNode(stage);
+        const svg = svgEl("svg", { viewBox: "0 0 80 80", width: "80", height: "80" });
+        svg.appendChild(svgEl("circle", { cx: 40, cy: 40, r: 20, fill: "#ffd2a0", stroke: "#1a1a3a", "stroke-width": "2" }));
+        if (costume === "hat") svg.appendChild(svgEl("rect", { x: 26, y: 14, width: 28, height: 8, fill: "#1a1a3a" }));
+        if (costume === "cape") svg.appendChild(svgEl("path", { d: "M20 40 Q 40 70 60 40", fill: "#a067ff", stroke: "#1a1a3a", "stroke-width": "2" }));
+        if (costume === "pajamas") svg.appendChild(svgEl("rect", { x: 22, y: 38, width: 36, height: 24, fill: "#ff5a78" }));
+        // Bobbing animation — frame % 2 toggles y
+        svg.style.transform = `translateY(${frame % 2 === 0 ? 0 : -6}px)`;
+        stage.appendChild(svg);
+      };
+      const tick = (ts) => {
+        if (!lastTs) lastTs = ts;
+        if (ts - lastTs >= 1000 / fps) { frame += 1; drawFrame(); lastTs = ts; }
+        raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+      const ctrl = el("div", { class: "row", style: { gap: "10px", marginTop: "10px", justifyContent: "center", flexWrap: "wrap" } });
+      host.appendChild(ctrl);
+      ["hat", "cape", "pajamas"].forEach(c => {
+        const b = el("button", { class: "btn-big alt" }, c);
+        b.addEventListener("click", () => { Tracker.click(); costume = c; drawFrame(); });
+        ctrl.appendChild(b);
+      });
+      const fpsRow = el("div", { class: "row", style: { gap: "10px", marginTop: "8px", justifyContent: "center", alignItems: "center" } });
+      fpsRow.appendChild(el("span", null, "FPS:"));
+      [1, 4, 8, 16].forEach(n => {
+        const b = el("button", { class: "btn-big alt" }, String(n));
+        b.addEventListener("click", () => { Tracker.click(); fps = n; });
+        fpsRow.appendChild(b);
+      });
+      host.appendChild(fpsRow);
+      const finish = el("button", { class: "btn-big go", style: { marginTop: "12px" } }, "Looks great — done!");
+      finish.addEventListener("click", () => { cancelAnimationFrame(raf); Audio_.sfx("Ding"); done(true); });
+      host.appendChild(finish);
+      drawFrame();
+    },
+
+    /* live-hud (lesson 38): touch a coin, see score animate, lose a heart. */
+    "live-hud"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Tap the coin to grab points! Tap the spike to lose a heart."));
+      let score = 0; let lives = 3;
+      const hud = el("div", { class: "hud", style: { display: "flex", gap: "20px", fontSize: "20px", fontWeight: "700", padding: "8px 12px", background: "#11111b", color: "#fff", borderRadius: "8px" } });
+      const scoreEl = el("span", null, "🪙 0");
+      const livesEl = el("span", null, "❤️ 3");
+      hud.appendChild(scoreEl); hud.appendChild(livesEl);
+      host.appendChild(hud);
+      const grid = el("div", { class: "row", style: { gap: "16px", marginTop: "16px", justifyContent: "center" } });
+      host.appendChild(grid);
+      const coin = el("button", { class: "btn-big", style: { fontSize: "32px" } }, "🪙");
+      coin.addEventListener("click", () => {
+        Tracker.click(); score += 10;
+        scoreEl.textContent = "🪙 " + score;
+        scoreEl.classList.add("anim-pop"); setTimeout(() => scoreEl.classList.remove("anim-pop"), 400);
+        Audio_.sfx("Ding");
+        if (score >= 30) { Audio_.sfx("Tada"); setTimeout(() => done(true), 600); }
+      });
+      const spike = el("button", { class: "btn-big alt", style: { fontSize: "32px" } }, "⚠️");
+      spike.addEventListener("click", () => {
+        Tracker.retry(); lives = Math.max(0, lives - 1);
+        livesEl.textContent = "❤️ " + lives;
+        livesEl.classList.add("anim-wiggle"); setTimeout(() => livesEl.classList.remove("anim-wiggle"), 400);
+        Audio_.sfx("Oops");
+      });
+      grid.appendChild(coin); grid.appendChild(spike);
+      host.appendChild(el("p", { class: "muted", style: { marginTop: "10px" } }, "Get to 🪙 30 to finish!"));
+    },
+
+    /* polish-row (lesson 41): toggle shake / particles / sound. Live preview. */
+    "polish-row"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Pick the polish that makes a game feel alive!"));
+      const flags = { shake: false, particles: false, sound: false };
+      const stage = el("div", { class: "polish-stage", style: { background: "#1a1a3a", color: "#fff", textAlign: "center", padding: "30px", borderRadius: "8px", minHeight: "120px", position: "relative", overflow: "hidden" } });
+      const hero = el("div", { style: { fontSize: "48px", display: "inline-block" } }, "🦸");
+      stage.appendChild(hero);
+      host.appendChild(stage);
+      const ctrl = el("div", { class: "row", style: { gap: "10px", marginTop: "10px", justifyContent: "center", flexWrap: "wrap" } });
+      host.appendChild(ctrl);
+      const togglesUsed = new Set();
+      ["shake", "particles", "sound"].forEach(k => {
+        const b = el("button", { class: "btn-big alt" }, "Toggle " + k);
+        b.addEventListener("click", () => {
+          Tracker.click(); flags[k] = !flags[k]; togglesUsed.add(k);
+          b.style.background = flags[k] ? "var(--accent-4)" : "";
+          if (flags[k]) {
+            if (k === "shake") { stage.classList.add("anim-input-shake"); setTimeout(() => stage.classList.remove("anim-input-shake"), 480); }
+            if (k === "particles") spawnConfetti(hero);
+            if (k === "sound") Audio_.sfx("Ding");
+          }
+        });
+        ctrl.appendChild(b);
+      });
+      const finish = el("button", { class: "btn-big go", style: { marginTop: "12px" } }, "I picked my polish!");
+      finish.addEventListener("click", () => {
+        if (togglesUsed.size < 2) { Audio_.sfx("Oops"); finish.textContent = "Try at least 2 toggles first!"; return; }
+        Audio_.sfx("Ding"); done(true);
+      });
+      host.appendChild(finish);
+    },
+
+    /* cursor-mini (lesson 45): pretend Cursor request "make jump higher" → diff. */
+    "cursor-mini"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Ask pretend Cursor for a feature!"));
+      host.appendChild(el("p", { class: "muted" }, "Type one of: 'make jump higher', 'change color to blue', 'rename hero to bytey'"));
+      const inp = el("input", { type: "text", placeholder: "Type your feature request…", maxlength: "80", style: { width: "100%", padding: "10px", fontSize: "16px", marginTop: "10px" } });
+      const btn = el("button", { class: "btn-big", style: { marginTop: "8px" } }, "Send");
+      const out = el("div", { class: "cm-out", style: { marginTop: "10px" } });
+      host.appendChild(inp); host.appendChild(btn); host.appendChild(out);
+      const PATTERNS = {
+        "jump": { before: ["let jumpHeight = 8;"], after: ["let jumpHeight = 14;"], reply: "Made the jump higher!" },
+        "blue": { before: ["color: red;"], after: ["color: blue;"], reply: "Changed the color!" },
+        "rename": { before: ["let hero = 'kid';"], after: ["let bytey = 'kid';"], reply: "Renamed!" },
+      };
+      const submit = () => {
+        const v = (inp.value || "").trim().toLowerCase();
+        Tracker.click(); Audio_.sfx("Type");
+        let pat = null;
+        if (v.includes("jump") || v.includes("higher")) pat = PATTERNS.jump;
+        else if (v.includes("color") || v.includes("blue")) pat = PATTERNS.blue;
+        else if (v.includes("rename") || v.includes("bytey")) pat = PATTERNS.rename;
+        clearNode(out);
+        if (!pat) { out.appendChild(el("p", { class: "muted" }, "Try one of the suggestions above.")); return; }
+        out.appendChild(el("p", null, "Cursor: " + pat.reply));
+        SideFX.run(out, { action: "show_code_diff", filename: "game.js", before: pat.before, after: pat.after, highlight: [0] });
+        Audio_.sfx("Ding");
+        setTimeout(() => done(true), 1200);
+      };
+      btn.addEventListener("click", submit);
+      inp.addEventListener("keydown", e => { if (e.key === "Enter") submit(); });
+    },
+
+    /* playtest-preview (lesson 47): friend reactions on a static demo. */
+    "playtest-preview"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Show your demo to a friend!"));
+      const stage = el("div", { style: { background: "#cfe7ff", padding: "30px", borderRadius: "8px", textAlign: "center", fontSize: "60px", marginTop: "10px" } }, "🎮");
+      host.appendChild(stage);
+      const bubble = el("div", { class: "bubble", style: { marginTop: "10px", fontSize: "16px" } }, "(your friend is watching…)");
+      host.appendChild(bubble);
+      const reactions = [
+        "Whoa, the colors look cool!",
+        "How do you jump? Oh — like that!",
+        "The bad guy is tricky!",
+        "I made it to the flag! 🏁",
+        "Can I play it again?",
+      ];
+      let idx = 0;
+      const ctrl = el("div", { class: "row", style: { gap: "10px", marginTop: "12px", justifyContent: "center" } });
+      host.appendChild(ctrl);
+      const next = el("button", { class: "btn-big" }, "Next reaction →");
+      next.addEventListener("click", () => {
+        Tracker.click(); idx += 1;
+        if (idx < reactions.length) { bubble.textContent = reactions[idx]; Audio_.sfx("Page"); }
+        else { Audio_.sfx("Ding"); done(true); }
+      });
+      ctrl.appendChild(next);
+      // First reaction after a beat
+      setTimeout(() => { bubble.textContent = reactions[0]; }, 800);
+    },
+
+    /* share-card (lesson 48): generate a paper-card share artifact for the kid's game. */
+    "share-card"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Make a share card for your game!"));
+      const inp = el("input", { type: "text", placeholder: "What's your game called?", maxlength: "24", style: { width: "100%", padding: "10px", fontSize: "16px", marginTop: "10px" } });
+      const btn = el("button", { class: "btn-big", style: { marginTop: "8px" } }, "Make my card");
+      const out = el("div", { class: "sc-out", style: { marginTop: "12px" } });
+      host.appendChild(inp); host.appendChild(btn); host.appendChild(out);
+      btn.addEventListener("click", () => {
+        const raw = (inp.value || "").trim();
+        if (!raw.match(/^[A-Za-z0-9 ]+$/)) { Audio_.sfx("Oops"); inp.classList.add("anim-input-shake"); setTimeout(() => inp.classList.remove("anim-input-shake"), 480); return; }
+        const slug = raw.toLowerCase().replace(/\s+/g, "-").slice(0, 24);
+        clearNode(out);
+        const card = el("div", { class: "share-card", style: { background: "#fff", border: "3px solid var(--accent-2)", borderRadius: "12px", padding: "16px", textAlign: "center", boxShadow: "var(--shadow)" } });
+        card.appendChild(el("div", { style: { fontSize: "28px", fontWeight: "800", color: "var(--accent)" } }, raw));
+        card.appendChild(el("div", { style: { fontSize: "16px", color: "#4d4d70" } }, "by you 🎮"));
+        const link = el("div", { style: { marginTop: "10px", fontFamily: "monospace", fontSize: "12px", background: "#f0f0f4", padding: "6px 10px", borderRadius: "6px" } }, "kidcode://share/" + slug);
+        card.appendChild(link);
+        out.appendChild(card);
+        Audio_.sfx("Star"); spawnConfetti(card);
+        // Try to persist via JSBridge if available — best-effort
+        try {
+          if (window.pywebview && window.pywebview.api && window.pywebview.api.save_kid_project) {
+            window.pywebview.api.save_kid_project("share_" + slug + ".txt", "Game: " + raw + "\nLink: kidcode://share/" + slug);
+          }
+        } catch (_) {}
+        setTimeout(() => done(true), 1400);
+      });
+      inp.addEventListener("keydown", e => { if (e.key === "Enter") btn.click(); });
+    },
+
+    /* game-capstone (lesson 60): two-stage capstone — idea-spark THEN mini-builder. */
+    "game-capstone"(host, p, done) {
+      // Stage 1: idea-spark brainstorm
+      const stageBox = el("div");
+      host.appendChild(stageBox);
+      const stage1 = el("div", { class: "cap-stage" });
+      stageBox.appendChild(stage1);
+      stage1.appendChild(el("h3", null, "🎮 Your Game — Stage 1: the IDEA"));
+      const ideaSession = IdeaSpark.build({
+        hook: "I want to make a game where...",
+        questions: [
+          "Who is the hero?",
+          "What is the world like?",
+          "What is the goal?",
+          "What's the silliest part?",
+        ],
+        minTurns: 3,
+        saveAs: "capstone_idea_{timestamp}.txt",
+        lessonId: (UI && UI.current) || "lesson_60",
+        onSaved: () => { Audio_.sfx("Star"); openStage2(); },
+      });
+      stage1.appendChild(ideaSession.dom);
+
+      // Stage 2: paint a level + play it + name + share-card
+      function openStage2() {
+        clearNode(stageBox);
+        const stage2 = el("div", { class: "cap-stage" });
+        stageBox.appendChild(stage2);
+        stage2.appendChild(el("h3", null, "🎨 Stage 2: build the WORLD"));
+        stage2.appendChild(el("p", { class: "muted" }, "Paint your level on the grid below, then press ▶ Play to test it!"));
+        const painterHost = el("div");
+        stage2.appendChild(painterHost);
+        // Re-use existing level-painter handler via direct call — give it a done() that opens stage 3.
+        if (KidGame._handlers["level-painter"]) {
+          KidGame._handlers["level-painter"].call(KidGame, painterHost, {
+            prompt: "Drag tiles to build your world!",
+          }, () => openStage3());
+        } else {
+          // Fallback: skip painter if not present
+          openStage3();
+        }
+      }
+
+      // Stage 3: name + share-card
+      function openStage3() {
+        clearNode(stageBox);
+        const stage3 = el("div", { class: "cap-stage" });
+        stageBox.appendChild(stage3);
+        stage3.appendChild(el("h3", null, "🏁 Stage 3: name it + share it!"));
+        // Re-use share-card handler
+        KidGame._handlers["share-card"].call(KidGame, stage3, {
+          prompt: "Name your game and make a share card!",
+        }, () => { Audio_.sfx("Tada"); done(true); });
+      }
     },
   },
 };
@@ -4844,7 +5628,14 @@ const UI = {
     }
 
     if (lesson.sandbox && Array.isArray(lesson.sandbox.helpers) && lesson.sandbox.helpers.length) {
-      view.appendChild(this.buildChat(lesson));
+      // v0.7: lessons 11-16 get a tool-skinned simulator (collapsed by default).
+      // Other sandbox lessons keep the legacy plain chat.
+      const skinned = [11, 12, 13, 14, 15, 16].includes(Number(lesson.id));
+      if (skinned) {
+        view.appendChild(ToolSimulator.build(lesson, lesson.sandbox.helpers[0]));
+      } else {
+        view.appendChild(this.buildChat(lesson));
+      }
     }
 
     const game = el("div", { class: "game", id: "gameArea", style: { position: "relative" } });
@@ -4931,7 +5722,7 @@ const UI = {
 
       const script = await Sandbox.load(helper, lesson.id);
       const m = Sandbox.match(v, script);
-      if (m && m.side_effect) SVG.draw(svgStage, m.side_effect);
+      if (m && m.side_effect) SideFX.run(svgStage, m.side_effect, { helper, lessonId: lesson.id });
 
       const bot = el("div", { class: "chat-msg bot" }, "...");
       log.appendChild(bot);

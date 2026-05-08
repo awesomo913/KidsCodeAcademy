@@ -1,0 +1,63 @@
+{
+  "helper": "claude",
+  "lesson_id": 11,
+  "fallback": "Try 'plan a story', 'help me think', or 'three steps'!",
+  "matches": [
+    {
+      "keywords": ["plan", "story"],
+      "typing_delay_ms": 900,
+      "reply_lines": [
+        "Sure! Here's a small plan:",
+        "1) Pick a hero. 2) Find a problem. 3) Write the ending.",
+        "Want me to help with step 1?"
+      ],
+      "side_effect": { "action": "show_thinking", "steps": ["I read the question", "I make a plan", "I write step 1"], "duration_ms": 1800 }
+    },
+    {
+      "keywords": ["three steps", "3 steps", "steps"],
+      "typing_delay_ms": 800,
+      "reply_lines": [
+        "Step 1 — read what you have.",
+        "Step 2 — think about what is missing.",
+        "Step 3 — write one tiny thing."
+      ],
+      "side_effect": { "action": "show_thinking", "steps": ["read", "think", "write"], "duration_ms": 1500 }
+    },
+    {
+      "keywords": ["thinking", "think"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["I plan in my head before I write anything down. It saves time later!"],
+      "side_effect": { "action": "show_thinking", "steps": ["pause", "plan", "go"], "duration_ms": 1400 }
+    },
+    {
+      "keywords": ["help", "stuck"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["I can help! Try: 'plan a story' or 'three steps'."],
+      "side_effect": null
+    },
+    {
+      "keywords": ["code", "build"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["I'm best at the PLAN before code. Tell me what your code should DO."],
+      "side_effect": null
+    },
+    {
+      "keywords": ["draw", "picture"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["I plan with words. Try 'plan a story' first!"],
+      "side_effect": null
+    },
+    {
+      "keywords": ["hi", "hello", "hey"],
+      "typing_delay_ms": 600,
+      "reply_lines": ["Hi! I'm Claude. Want me to plan something with you?"],
+      "side_effect": null
+    },
+    {
+      "keywords": ["thanks", "thank you"],
+      "typing_delay_ms": 600,
+      "reply_lines": ["You're welcome! Plans are my favorite."],
+      "side_effect": null
+    }
+  ]
+}

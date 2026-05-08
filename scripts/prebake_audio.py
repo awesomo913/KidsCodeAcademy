@@ -55,6 +55,26 @@ def _load_engine():
     return engine
 
 
+def _piper_synth_all(jobs: list[tuple[Path, str]]) -> int:
+    """v0.7: bake every job via Piper TTS instead of pyttsx3 SAPI.
+
+    Returns the number of jobs successfully synthesized.
+    """
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from piper_bake import synth as _piper_synth  # type: ignore
+    ok = 0
+    for raw_path, text in jobs:
+        try:
+            if _piper_synth(text, raw_path):
+                ok += 1
+            else:
+                log.warning("piper produced no audio for %s", raw_path.name)
+        except Exception as exc:  # noqa: BLE001
+            log.error("piper synth FAILED for %s: %s", raw_path.name, exc)
+    return ok
+
+
 def _post_process(in_path: Path, out_path: Path) -> None:
     """Read SAPI wav, add leading silence + low-pass + slight gain, write final wav."""
     with wave.open(str(in_path), "rb") as r:
@@ -129,10 +149,26 @@ def main() -> None:
     if not lesson_files:
         raise SystemExit(f"No lessons found at {LESSONS_DIR}")
 
-    engine = _load_engine()
+    # v0.7: prefer Piper TTS if voice file is present. Falls back to pyttsx3
+    # SAPI5 for dev boxes without piper installed.
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    try:
+        from piper_bake import is_available as _piper_available  # type: ignore
+        use_piper = _piper_available()
+    except Exception:
+        use_piper = False
 
-    # Pass 1: queue every save_to_file (lesson narration + hint narrations),
-    # then one runAndWait. Avoids the SAPI hang from per-call runAndWait.
+    if use_piper:
+        log.info("v0.7: using Piper TTS (en_US-amy-medium)")
+        engine = None
+    else:
+        log.info("Piper not available; falling back to pyttsx3 SAPI5")
+        engine = _load_engine()
+
+    # Pass 1: collect (raw_path, text) pairs + (raw_path, final_path) for post-process.
+    # For pyttsx3, also queue save_to_file calls; piper is invoked synchronously after.
+    text_jobs: list[tuple[Path, str]] = []
     queued: list[tuple[Path, Path]] = []
     for lf in lesson_files:
         data = json.loads(lf.read_text(encoding="utf-8"))
@@ -143,8 +179,10 @@ def main() -> None:
         text = " ... ".join(str(line) for line in lines).strip()
         if text:
             raw_path = RAW_DIR / f"lesson_{num}.wav"
-            engine.save_to_file(text, str(raw_path))
+            text_jobs.append((raw_path, text))
             queued.append((raw_path, OUT_DIR / f"lesson_{num}.wav"))
+            if engine is not None:
+                engine.save_to_file(text, str(raw_path))
             log.info("queued narration: %s", lf.name)
         else:
             log.warning("lesson %s has no mascot_lines, skipping narration", lf.name)
@@ -154,14 +192,21 @@ def main() -> None:
             if not hint_text:
                 continue
             raw_path = RAW_DIR / raw_name
-            engine.save_to_file(hint_text, str(raw_path))
+            text_jobs.append((raw_path, hint_text))
             queued.append((raw_path, OUT_DIR / raw_name))
+            if engine is not None:
+                engine.save_to_file(hint_text, str(raw_path))
             log.info("queued hint: %s", raw_name)
 
-    log.info("flushing engine for %d clips...", len(queued))
-    engine.runAndWait()
-    engine.stop()
-    log.info("flush complete; post-processing...")
+    if use_piper:
+        log.info("synthesizing %d clips via Piper...", len(text_jobs))
+        ok = _piper_synth_all(text_jobs)
+        log.info("piper synthesized %d/%d clips", ok, len(text_jobs))
+    else:
+        log.info("flushing engine for %d clips...", len(queued))
+        engine.runAndWait()
+        engine.stop()
+    log.info("synthesis complete; post-processing...")
 
     # Pass 2: post-process every raw wav
     for raw_path, final_path in queued:

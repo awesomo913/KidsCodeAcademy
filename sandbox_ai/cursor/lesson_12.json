@@ -1,0 +1,85 @@
+{
+  "helper": "cursor",
+  "lesson_id": 12,
+  "fallback": "Try 'fix the typo', 'rename', or 'make it bigger'!",
+  "matches": [
+    {
+      "keywords": ["fix", "typo"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Got it. Fixed the typo on line 3."],
+      "side_effect": {
+        "action": "show_code_diff",
+        "filename": "greet.py",
+        "before": ["def greet(name):", "    msg = 'hello wrold'", "    print(msg)"],
+        "after":  ["def greet(name):", "    msg = 'hello world'", "    print(msg)"],
+        "highlight": [1]
+      }
+    },
+    {
+      "keywords": ["rename"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Renamed 'spd' to 'speed' across 3 files."],
+      "side_effect": {
+        "action": "show_code_diff",
+        "filename": "hero.js",
+        "before": ["let spd = 5;", "hero.x += spd;"],
+        "after":  ["let speed = 5;", "hero.x += speed;"],
+        "highlight": [0, 1]
+      }
+    },
+    {
+      "keywords": ["bigger", "size", "font"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Made the font bigger."],
+      "side_effect": {
+        "action": "show_code_diff",
+        "filename": "style.css",
+        "before": ["h1 { font-size: 12px; }"],
+        "after":  ["h1 { font-size: 24px; }"],
+        "highlight": [0]
+      }
+    },
+    {
+      "keywords": ["color", "blue"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Changed the color to blue."],
+      "side_effect": {
+        "action": "show_code_diff",
+        "filename": "style.css",
+        "before": ["button { color: red; }"],
+        "after":  ["button { color: blue; }"],
+        "highlight": [0]
+      }
+    },
+    {
+      "keywords": ["add function", "new function", "add a"],
+      "typing_delay_ms": 900,
+      "reply_lines": ["Added a small jump() function."],
+      "side_effect": {
+        "action": "show_code_diff",
+        "filename": "hero.js",
+        "before": ["function move() {}"],
+        "after":  ["function move() {}", "", "function jump() {", "  hero.dy = -8;", "}"],
+        "highlight": [2, 3, 4]
+      }
+    },
+    {
+      "keywords": ["save"],
+      "typing_delay_ms": 600,
+      "reply_lines": ["Saved! Your changes are safe."],
+      "side_effect": null
+    },
+    {
+      "keywords": ["help", "stuck"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Tell me which line to change. Try 'fix the typo' or 'rename'."],
+      "side_effect": null
+    },
+    {
+      "keywords": ["hi", "hello", "hey"],
+      "typing_delay_ms": 600,
+      "reply_lines": ["Hi! I'm Cursor. Tell me a tiny code change to make."],
+      "side_effect": null
+    }
+  ]
+}

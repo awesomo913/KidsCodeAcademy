@@ -1,0 +1,81 @@
+{
+  "helper": "codex",
+  "lesson_id": 14,
+  "fallback": "Try 'say hello', 'write a loop', or 'count to 5'!",
+  "matches": [
+    {
+      "keywords": ["hello", "say hello"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Run this in your terminal!"],
+      "side_effect": {
+        "action": "show_terminal",
+        "lines": [
+          { "kind": "in",  "text": "echo hello" },
+          { "kind": "out", "text": "hello" }
+        ]
+      }
+    },
+    {
+      "keywords": ["loop", "for loop"],
+      "typing_delay_ms": 900,
+      "reply_lines": ["A loop repeats things. I'll finish your line:"],
+      "side_effect": {
+        "action": "show_inline_complete",
+        "before": "for i in ",
+        "suggested": "range(10):",
+        "accept_label": "Tab to accept"
+      }
+    },
+    {
+      "keywords": ["count", "to 5", "to five"],
+      "typing_delay_ms": 1000,
+      "reply_lines": ["Counting from 1 to 5:"],
+      "side_effect": {
+        "action": "show_terminal",
+        "lines": [
+          { "kind": "in",  "text": "python count.py" },
+          { "kind": "out", "text": "1" },
+          { "kind": "out", "text": "2" },
+          { "kind": "out", "text": "3" },
+          { "kind": "out", "text": "4" },
+          { "kind": "out", "text": "5" }
+        ]
+      }
+    },
+    {
+      "keywords": ["fix", "typo"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Fixed it!"],
+      "side_effect": {
+        "action": "show_code_diff",
+        "filename": "main.py",
+        "before": ["pritn('hi')"],
+        "after":  ["print('hi')"],
+        "highlight": [0]
+      }
+    },
+    {
+      "keywords": ["function", "def"],
+      "typing_delay_ms": 900,
+      "reply_lines": ["Here's how to start a function:"],
+      "side_effect": {
+        "action": "show_inline_complete",
+        "before": "def greet(",
+        "suggested": "name):\n    print('hi', name)",
+        "accept_label": "Tab to accept"
+      }
+    },
+    {
+      "keywords": ["help", "stuck"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Try: 'say hello', 'write a loop', or 'count to 5'."],
+      "side_effect": null
+    },
+    {
+      "keywords": ["hi", "hello there", "hey codex"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Hi! I'm Codex. I write small code with you."],
+      "side_effect": null
+    }
+  ]
+}

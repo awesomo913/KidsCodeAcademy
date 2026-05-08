@@ -1,0 +1,65 @@
+{
+  "helper": "ollama",
+  "lesson_id": 16,
+  "fallback": "Try 'wifi off', 'are you fast?', or 'run llama3'!",
+  "matches": [
+    {
+      "keywords": ["wifi", "internet", "online", "no wifi"],
+      "typing_delay_ms": 800,
+      "reply_lines": [
+        "You don't need WiFi for me!",
+        "I live HERE on your laptop."
+      ],
+      "side_effect": { "action": "open_local_badge", "model_name": "llama3:8b", "source_url_label": "local" }
+    },
+    {
+      "keywords": ["fast", "slow", "speed"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["I'm a little slower than cloud helpers. But I'm yours."],
+      "side_effect": { "action": "open_local_badge", "model_name": "llama3:8b", "source_url_label": "local" }
+    },
+    {
+      "keywords": ["run", "llama3", "start"],
+      "typing_delay_ms": 1000,
+      "reply_lines": ["Booting up the local model..."],
+      "side_effect": {
+        "action": "show_terminal",
+        "lines": [
+          { "kind": "in",  "text": "ollama run llama3" },
+          { "kind": "out", "text": "loading model: llama3:8b" },
+          { "kind": "out", "text": "ready! type a question >" }
+        ]
+      }
+    },
+    {
+      "keywords": ["private", "safe", "secret"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Your words stay on YOUR computer. Nobody else sees them."],
+      "side_effect": { "action": "open_local_badge", "model_name": "llama3:8b", "source_url_label": "local" }
+    },
+    {
+      "keywords": ["pick", "model", "which"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["You can pick which model to load. Small ones are fast. Big ones are smart."],
+      "side_effect": null
+    },
+    {
+      "keywords": ["help", "stuck"],
+      "typing_delay_ms": 700,
+      "reply_lines": ["Try 'wifi off', 'run llama3', or 'are you private?'."],
+      "side_effect": null
+    },
+    {
+      "keywords": ["hi", "hello", "hey"],
+      "typing_delay_ms": 800,
+      "reply_lines": ["Hi! I'm Ollama. I'm a helper on YOUR laptop — no internet needed."],
+      "side_effect": {
+        "action": "show_terminal",
+        "lines": [
+          { "kind": "in",  "text": "ollama run llama3" },
+          { "kind": "out", "text": "ready!" }
+        ]
+      }
+    }
+  ]
+}

@@ -24,9 +24,11 @@
   },
   "sandbox": {
     "helpers": [
-      "claude"
+      "ollama"
     ],
-    "hint": "Type 'hi' and see what your local helper says!"
+    "hint": "Type 'hi' and see what your local helper says!",
+    "complete_after": 3,
+    "auto_complete": false
   },
   "game": {
     "type": "history-scene",
