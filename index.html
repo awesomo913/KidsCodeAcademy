@@ -2295,6 +2295,32 @@ function speakText(t) {
   } catch (_) { /* TTS is best-effort */ }
 }
 
+/* v0.7.1 — play a Piper-baked question prompt wav.
+ *
+ * `path` is a relative URL like `assets/audio/q/lesson_NN_qID_vIDX.wav`.
+ * We re-use a single shared <audio> element to avoid leaking nodes when the
+ * kid speed-clicks through questions. Errors silently fall back to Web
+ * Speech via the original prompt text the caller still has.
+ */
+let _kcaQAudio = null;
+function playBakedAudio(path) {
+  if (!path) return;
+  try {
+    if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
+  } catch (_) {}
+  if (!_kcaQAudio) {
+    _kcaQAudio = document.createElement("audio");
+    _kcaQAudio.preload = "auto";
+    document.body.appendChild(_kcaQAudio);
+  }
+  try {
+    _kcaQAudio.pause();
+    _kcaQAudio.src = String(path) + "?_=" + Date.now();
+    _kcaQAudio.currentTime = 0;
+    _kcaQAudio.play().catch(() => {});
+  } catch (_) { /* best-effort */ }
+}
+
 /* ============================================================
  *  v0.6 — Confetti + per-emoji celebrate animations.
  *
@@ -3377,34 +3403,56 @@ const KidGame = {
       });
       stage1.appendChild(ideaSession.dom);
 
-      // Stage 2: paint a level + play it + name + share-card
+      // Stage 2: paint a level. Saves to localStorage; openStage3 reads it back.
       function openStage2() {
         clearNode(stageBox);
         const stage2 = el("div", { class: "cap-stage" });
         stageBox.appendChild(stage2);
         stage2.appendChild(el("h3", null, "🎨 Stage 2: build the WORLD"));
-        stage2.appendChild(el("p", { class: "muted" }, "Paint your level on the grid below, then press ▶ Play to test it!"));
+        stage2.appendChild(el("p", { class: "muted" }, "Paint your level on the grid, save it, then press ▶ Play to test it!"));
         const painterHost = el("div");
         stage2.appendChild(painterHost);
-        // Re-use existing level-painter handler via direct call — give it a done() that opens stage 3.
         if (KidGame._handlers["level-painter"]) {
           KidGame._handlers["level-painter"].call(KidGame, painterHost, {
             prompt: "Drag tiles to build your world!",
           }, () => openStage3());
         } else {
-          // Fallback: skip painter if not present
           openStage3();
         }
       }
 
-      // Stage 3: name + share-card
+      // Stage 3: PLAY the kid's painted level via SpriteMover. Reach the flag → stage 4.
       function openStage3() {
         clearNode(stageBox);
         const stage3 = el("div", { class: "cap-stage" });
         stageBox.appendChild(stage3);
-        stage3.appendChild(el("h3", null, "🏁 Stage 3: name it + share it!"));
-        // Re-use share-card handler
-        KidGame._handlers["share-card"].call(KidGame, stage3, {
+        stage3.appendChild(el("h3", null, "🕹️ Stage 3: PLAY your world!"));
+        stage3.appendChild(el("p", { class: "muted" }, "Use the arrow keys or A/D + space to play your level. Reach the flag to win!"));
+        // Pull saved kid level (LevelPainter persists to kca.kid_levels.v1).
+        let kidLevel = null;
+        try {
+          const saved = Store.load("kca.kid_levels.v1", []);
+          if (Array.isArray(saved) && saved.length) kidLevel = saved[saved.length - 1];
+        } catch (_) { /* ignore — fall back to starter */ }
+        const playerHost = el("div");
+        stage3.appendChild(playerHost);
+        KidGame._handlers["sprite-mover"].call(KidGame, playerHost, {
+          prompt: "Reach the flag!",
+          level: (kidLevel && kidLevel.grid) || undefined,
+        }, () => openStage4());
+        // Skip-play escape hatch — kid can advance even if their level is unreachable
+        const skip = el("button", { class: "btn-big alt", style: { marginTop: "10px" } }, "Skip play → name & share");
+        skip.addEventListener("click", () => { Tracker.click(); openStage4(); });
+        stage3.appendChild(skip);
+      }
+
+      // Stage 4: name + share-card
+      function openStage4() {
+        clearNode(stageBox);
+        const stage4 = el("div", { class: "cap-stage" });
+        stageBox.appendChild(stage4);
+        stage4.appendChild(el("h3", null, "🏁 Stage 4: name it + share it!"));
+        KidGame._handlers["share-card"].call(KidGame, stage4, {
           prompt: "Name your game and make a share card!",
         }, () => { Audio_.sfx("Tada"); done(true); });
       }
@@ -3501,7 +3549,13 @@ const QuestionFlow = {
 
     const promptText = String(v.prompt || "Pick the best answer:");
     host.appendChild(el("h3", { class: "qprompt" }, promptText));
-    speakText(promptText);
+    // v0.7.1: play baked Piper wav if generator emitted one (`_audio` field).
+    // Falls back to runtime Web Speech if the wav is missing (defensive).
+    if (v._audio) {
+      playBakedAudio(String(v._audio));
+    } else {
+      speakText(promptText);
+    }
 
     const grid = el("div", { class: "choice-grid" });
     host.appendChild(grid);

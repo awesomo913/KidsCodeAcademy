@@ -2283,6 +2283,17 @@ def expand_lesson(path: Path) -> bool:
         log.warning("no seed for lesson %d (%s); leaving alone", lesson_id, path.name)
         return False
 
+    # v0.7.1: capture existing _audio paths keyed by (qid, vidx) so we can
+    # restore them after rebuilding `questions[]`. Otherwise running this
+    # generator wipes every prebaked-prompt path forcing a re-bake.
+    prior_audio: dict[tuple[str, int], str] = {}
+    for q in (lesson.get("questions") or []):
+        qid = str(q.get("id") or "")
+        for vidx, v in enumerate(q.get("variations") or []):
+            audio = v.get("_audio")
+            if audio:
+                prior_audio[(qid, vidx)] = audio
+
     # Lessons 11-16: also patch the top-level lesson.game so the lesson list
     # widgets / future migrations see the new history-scene as the demo.
     if lesson_id in HISTORY_OVERRIDES:
@@ -2290,6 +2301,16 @@ def expand_lesson(path: Path) -> bool:
 
     lesson["questions"] = _build_questions(lesson, seed)
     lesson["schema"] = "v2"
+
+    # Restore prior _audio paths where the (qid, vidx) shape matches.
+    if prior_audio:
+        for q in lesson["questions"]:
+            qid = str(q.get("id") or "")
+            for vidx, v in enumerate(q.get("variations") or []):
+                key = (qid, vidx)
+                if key in prior_audio:
+                    v["_audio"] = prior_audio[key]
+
     path.write_text(json.dumps(lesson, indent=2, ensure_ascii=False), encoding="utf-8")
     log.info("expanded %s -- %d questions x %d variations",
              path.name, len(lesson["questions"]), len(lesson["questions"][0]["variations"]))

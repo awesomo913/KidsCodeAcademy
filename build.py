@@ -70,6 +70,12 @@ def step_audio() -> None:
         run([sys.executable, "scripts/prebake_audio.py"])
     except subprocess.CalledProcessError as exc:
         log.warning("prebake_audio failed (%s) — continuing without TTS", exc)
+    # v0.7.1: also bake question prompts (incremental — skips up-to-date wavs).
+    log.info("=== step 2b: pre-baking question prompts ===")
+    try:
+        run([sys.executable, "scripts/bake_question_prompts.py"])
+    except subprocess.CalledProcessError as exc:
+        log.warning("bake_question_prompts failed (%s) — questions will fall back to Web Speech", exc)
 
 
 def step_package() -> None:

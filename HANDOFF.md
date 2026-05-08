@@ -44,6 +44,13 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 - Verified: `KidsCodeAcademy.exe` (48 MB) launches cleanly, loads `index.html` from `_MEIPASS`, lessons render, mini-games dispatch, mascot animates, sticker overlay fires.
 - Shipped: `C:\Users\computer\Desktop\AI\KidsCodeAcademy.exe` (v0.1.0).
 
+### 2026-05-08 (later) — v0.7.1: per-question Piper bake + Pi Piper support
+- **Per-question Piper bake.** New `scripts/bake_question_prompts.py` walks every lesson JSON, synthesizes each variation's prompt via Piper, writes a wav to `assets/audio/q/lesson_<NN>_<qid>_v<idx>.wav`, and stores the relative path back into the variation as `_audio`. Total: 1950 wavs across 60 lessons.
+- **Engine: `playBakedAudio` helper** in `index.html`. `QuestionFlow._renderAnswer` now plays `<audio src=v._audio>` when present (single shared `<audio>` element, no node leak), falls back to runtime Web Speech if missing. Same warm Piper voice everywhere — narration AND question prompts.
+- **Pi Piper.** `scripts/build_pi.sh` now installs `piper-tts` on Pi. New `KCA_BAKE_AUDIO=1` env-var opt-in: when set, the Pi build downloads `voices/en_US-amy-medium.onnx` (~63 MB) once + invokes `prebake_audio.py` to re-bake on the Pi. Default behavior unchanged: Pi ships the wavs that came with the repo.
+- **Re-bake re-runs cheap.** Bake script is incremental — skips wavs whose mtime is newer than the lesson JSON. `--force` re-bakes everything.
+- **Build size:** exe grew from ~89.6 MB to ~165 MB. All 1950 wavs ship inside via PyInstaller `--add-data`.
+
 ### 2026-05-08 — v0.7.0: sandbox sims for 6 helpers + game-dev tools + Piper TTS
 - **Sandbox content authored.** 6 new `sandbox_ai/<helper>/lesson_NN.json` files (claude11/cursor12/gemini13/codex14/opencode15/ollama16) — each ~7-9 keyword→reply patterns with rich side_effects. Lesson 11-16 stop hitting the dead "Hmm, try something else!" fallback.
 - **SideFX dispatcher** replaces single-purpose `SVG.draw` call from `buildChat`. 9 effect renderers: `draw_svg`, `show_text`, `show_code_diff` (Cursor/Codex), `show_picture` (Gemini, with built-in `PictureLib` of 6 hand-coded SVG arts: kitten/dinosaur/solar_system/robot/star_field/cat_in_box), `show_terminal` (Codex/Ollama, animated typing), `show_thinking` (Claude lavender pill), `show_inline_complete` (Codex ghost-text autocomplete), `open_local_badge` (OpenCode 🔓 / Ollama 🏠), `attach_image_chip` (Gemini paperclip).

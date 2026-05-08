@@ -102,6 +102,11 @@ There are 6 game types woven through the lessons:
 - Added: 16 lessons, mascot animation, read-aloud audio, 6 mini-game types, sandbox AI for Lessons 2 + 8, Parent Corner with PIN, Lesson 16 save-a-copy.
 - Shipped: `KidsCodeAcademy.exe` (~48 MB) on Windows.
 
+### 2026-05-08 (later) — v0.7.1 (every question read aloud in the same warm voice)
+- Changed: every question prompt is now pre-baked with the same Piper voice that reads the lessons. No more two-different-voices feel.
+- Added: Pi build supports the same Piper voice. Set `KCA_BAKE_AUDIO=1` when running `build_pi.sh` to re-bake on the Pi instead of using the wavs that came with the repo.
+- Note: build size grew (~165 MB) because all 1950 question-prompt wavs ship inside the exe.
+
 ### 2026-05-08 — v0.7.0 (real-feeling sandbox sims + game-dev tools + warmer voice)
 - Added: pretend versions of 6 real helpers your kid can talk to — Claude, Cursor, Gemini, Codex, OpenCode, and Ollama. Each looks and feels close to the real tool. Click "Try the pretend helper!" inside lessons 11-16 to expand the chat panel.
 - Added: every pretend tool corner shows `✨ Pretend mode — not real internet`. The mascot says "This is pretend X — let's play!" when you open the chat.

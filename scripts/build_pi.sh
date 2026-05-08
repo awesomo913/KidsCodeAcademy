@@ -116,16 +116,39 @@ echo "    gi + WebKit2 imports OK in venv"
 
 # ---------------------------------------------------------------- 4. py deps
 echo "==> [4/5] Installing Python packages (pywebview + pillow + pyinstaller)..."
-# pyttsx3 deliberately omitted: TTS is pre-baked on Windows and the wavs ship
-# with the repo. Skipping pyttsx3 avoids pulling espeak's robotic voice fallback.
+# v0.7.1 on Pi: prefer Piper TTS over pyttsx3/espeak. Piper produces a
+# warmer female voice that matches the Windows build. The Piper voice
+# (~63 MB) is downloaded once into voices/ and cached. If KCA_BAKE_AUDIO=0
+# (default), Pi uses the pre-baked wavs that ship in the repo. If the user
+# sets KCA_BAKE_AUDIO=1 we re-bake on the Pi using Piper.
 pip install --no-input \
     "pywebview>=5.0" \
     "pillow>=10.0" \
-    "pyinstaller>=6.0"
+    "pyinstaller>=6.0" \
+    "piper-tts>=1.2.0" \
+    || true
+
+VOICE_FILE="$REPO_DIR/voices/en_US-amy-medium.onnx"
+if [ "${KCA_BAKE_AUDIO:-0}" = "1" ]; then
+    echo "    KCA_BAKE_AUDIO=1 — ensuring Piper voice is present"
+    if [ ! -f "$VOICE_FILE" ]; then
+        mkdir -p "$REPO_DIR/voices"
+        python -m piper.download_voices en_US-amy-medium --download-dir "$REPO_DIR/voices" || {
+            echo "    WARN: piper voice download failed — Pi will use the wavs that ship with the repo"
+        }
+    else
+        echo "    voice already present at $VOICE_FILE"
+    fi
+fi
 
 # --------------------------------------------------------------- 5. build
 echo "==> [5/5] Building Pi binary..."
-python build.py --target=pi --no-audio
+if [ "${KCA_BAKE_AUDIO:-0}" = "1" ] && [ -f "$VOICE_FILE" ]; then
+    echo "    re-baking audio via Piper on Pi..."
+    python build.py --target=pi
+else
+    python build.py --target=pi --no-audio
+fi
 
 BIN_PATH=""
 if [ -f "$HOME/Desktop/KidsCodeAcademy" ]; then
