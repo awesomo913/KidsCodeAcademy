@@ -12,13 +12,28 @@
   "turns": {
     "t1": {
       "bot_lines": ["I'm Claude. I'm really good at breaking big ideas into small steps.", "What big thing do you want to plan?"],
-      "options": ["Make a video game", "Write a story", "Build a website"],
+      "options": ["Make a video game", "Write a story", "Build a website", "Build a plan with chips!"],
       "branches": {
         "Make a video game": "t2_game",
         "Write a story": "t2_story",
-        "Build a website": "t2_site"
+        "Build a website": "t2_site",
+        "Build a plan with chips!": "t_pb"
       },
       "fallback_turn": "t1"
+    },
+    "t_pb": {
+      "bot_lines": ["Awesome! Pick one chip from each row.", "This is exactly how I plan in my head — what to do, who for, and how big!"],
+      "prompt_builder": true,
+      "builder_cols": {
+        "verb":   { "label": "What to do",   "chips": ["Plan", "Design", "Sketch"] },
+        "what":   { "label": "What",          "chips": ["a birthday", "a school project", "a treasure hunt"] },
+        "scope":  { "label": "How big",       "chips": ["in 3 steps", "for one day", "for the whole class"] }
+      },
+      "next_turn": "t_pb_done"
+    },
+    "t_pb_done": {
+      "bot_lines": ["Perfect prompt!", "I'd start by listing 3 small steps. Each step gets you closer.", "That's how every big plan works — small steps, one at a time."],
+      "side_effect": { "action": "show_thinking", "steps": ["Read your prompt", "Pick 3 small steps", "Show you the plan"], "duration_ms": 2000 }
     },
     "t2_game": {
       "bot_lines": ["A video game! Awesome.", "Every game needs three things. Can you guess one?"],

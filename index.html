@@ -503,6 +503,34 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 .tool-opencode .fsm-chip:hover { background: #6ee0a8; }
 .tool-ollama   .fsm-chip { background: #e07b00; box-shadow: 0 4px 0 #a05400; }
 .tool-ollama   .fsm-chip:hover { background: #f08e1c; }
+
+/* Prompt builder — 3-column chip picker for constrained-but-real prompt writing */
+.prompt-builder { display: flex; flex-direction: column; gap: 12px; }
+.pb-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.pb-col { display: flex; flex-direction: column; gap: 6px; }
+.pb-col-label {
+  font-size: 13px; font-weight: 700; color: var(--ink-soft);
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.pb-chip {
+  padding: 10px 14px; border-radius: var(--r-md);
+  background: var(--panel); border: 3px solid var(--accent-2);
+  font-size: 16px; font-family: inherit; cursor: pointer;
+  transition: background var(--dur), border-color var(--dur), transform var(--dur);
+}
+.pb-chip:hover { transform: translateY(-2px); }
+.pb-chip.selected {
+  background: var(--accent-3); border-color: var(--accent-3);
+  color: #fff;
+}
+.pb-preview {
+  min-height: 44px; padding: 12px 16px; background: var(--bg-1);
+  border-radius: var(--r-md); font-size: 20px; font-weight: 700;
+  border: 2px dashed var(--accent-3); color: var(--ink);
+}
+.pb-preview.placeholder { color: var(--ink-soft); font-weight: 500; font-style: italic; }
+.pb-submit { align-self: flex-end; }
+.pb-submit:disabled { opacity: 0.5; cursor: not-allowed; }
 .chat-row input {
   flex: 1; font-family: inherit; font-size: 18px;
   padding: 10px 14px;
@@ -1542,8 +1570,40 @@ const Grade = {
 /* ============================================================
  *  Audio
  * ============================================================ */
+
+/* Forward-declared at top to avoid TDZ — populated lazily in playBakedAudio. */
+let _kcaQAudio = null;
+
+/* Voice mutex — only ONE voice channel speaks at a time.
+ * Three channels: lessonAudio (long narration), _kcaQAudio (question prompts),
+ * speechSynthesis (Web Speech fallback + chess voice + ToolSimulator intro).
+ * Without this, kid clicks ahead while narration plays → multiple voices overlap.
+ *
+ * Pass `except` ("lesson" | "question" | "speech") to spare one channel. */
+function _silenceVoiceChannels(except) {
+  if (except !== "speech") {
+    try {
+      if (typeof window !== "undefined" && "speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+    } catch (_) {}
+  }
+  if (except !== "question") {
+    try {
+      if (_kcaQAudio) _kcaQAudio.pause();
+    } catch (_) {}
+  }
+  if (except !== "lesson") {
+    try {
+      const a = document.getElementById("lessonAudio");
+      if (a) a.pause();
+    } catch (_) {}
+  }
+}
+
 const Audio_ = {
   sfx(name) {
+    // SFX are short (<300ms), allow overlap — they're meant to layer (type + ding)
     const a = document.getElementById("sfx" + name);
     if (!a) return;
     try { a.currentTime = 0; a.play().catch(e => console.warn("sfx", name, e)); } catch(e) { console.warn("sfx", name, e); }
@@ -1551,14 +1611,17 @@ const Audio_ = {
   playLesson(src, onEnd) {
     const a = document.getElementById("lessonAudio");
     if (!a) return;
+    _silenceVoiceChannels("lesson");  // kill any speech/question prompt before narration starts
     a.onended = onEnd || null;
     a.src = src + "?_=" + Date.now();
     a.play().catch(e => console.warn("playLesson", src, e));
   },
   stop() {
+    // Stop button = kid wants silence everywhere
+    _silenceVoiceChannels();
     const a = document.getElementById("lessonAudio");
     if (!a) return;
-    a.pause(); a.currentTime = 0;
+    a.currentTime = 0;
   },
 };
 
@@ -2231,17 +2294,25 @@ const Sandbox = {
       }
     }
     if (!nextId) {
-      // No branch matched. Use fallback_turn if present; otherwise gracefully end
-      // the conversation rather than infinite-looping in the same turn.
-      if (cur.fallback_turn) {
+      // Prompt builder turn: any assembled phrase is valid → use next_turn directly.
+      if (cur.prompt_builder && cur.next_turn) {
+        nextId = String(cur.next_turn);
+      } else if (cur.fallback_turn) {
         nextId = cur.fallback_turn;
       } else {
+        // No branch + no fallback: gracefully end rather than infinite-looping.
         return { turn: cur, done: true };
       }
     }
-    this.turn_state[key] = nextId;
     const nextTurn = this._getTurn(script, nextId);
-    const done = !nextTurn || (!nextTurn.branches && !nextTurn.keywords);
+    if (!nextTurn) {
+      // Bad turn id (typo in lesson JSON). Don't write it to turn_state — keep
+      // the kid on cur, mark done so the lesson advances rather than deadlocking.
+      console.warn("Sandbox.next: missing turn id", nextId, "in", script.helper, script.lesson_id);
+      return { turn: cur, done: true };
+    }
+    this.turn_state[key] = nextId;
+    const done = !nextTurn.branches && !nextTurn.keywords && !nextTurn.prompt_builder;
     return { turn: nextTurn, done };
   },
 
@@ -2390,7 +2461,8 @@ function speakText(t) {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   if (!_kcaVoiceReady) _kcaInitVoice();
   try {
-    window.speechSynthesis.cancel();
+    _silenceVoiceChannels("speech");  // pause lesson narration + question audio before speaking
+    window.speechSynthesis.cancel();   // cancel any prior queued speech
     const u = new SpeechSynthesisUtterance(String(t));
     if (_kcaVoice) u.voice = _kcaVoice;
     u.rate = 0.95;
@@ -2407,12 +2479,9 @@ function speakText(t) {
  * kid speed-clicks through questions. Errors silently fall back to Web
  * Speech via the original prompt text the caller still has.
  */
-let _kcaQAudio = null;
 function playBakedAudio(path) {
   if (!path) return;
-  try {
-    if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
-  } catch (_) {}
+  _silenceVoiceChannels("question");  // pause lesson narration + speech before question prompt
   if (!_kcaQAudio) {
     _kcaQAudio = document.createElement("audio");
     _kcaQAudio.preload = "auto";
@@ -2422,8 +2491,8 @@ function playBakedAudio(path) {
     _kcaQAudio.pause();
     _kcaQAudio.src = String(path) + "?_=" + Date.now();
     _kcaQAudio.currentTime = 0;
-    _kcaQAudio.play().catch(() => {});
-  } catch (_) { /* best-effort */ }
+    _kcaQAudio.play().catch(e => console.warn("playBakedAudio failed", path, e));
+  } catch (e) { console.warn("playBakedAudio threw", path, e); }
 }
 
 /* ============================================================
@@ -6123,9 +6192,79 @@ const UI = {
     });
 
     /* ─── FSM mode (mode: "turns") ─────────────────────────── */
+
+    // Prompt builder: 3-column chip picker that assembles into a constrained "prompt".
+    // Schema: turn.builder_cols = { col_key: { label: "...", chips: ["..."] } }
+    // On submit: assembled phrase is sent through advanceFsm (which routes via cur.next_turn).
+    const buildPromptBuilder = (turn) => {
+      const cols = turn.builder_cols || {};
+      const colKeys = Object.keys(cols);
+      const picks = {};
+
+      const wrap = el("div", { class: "prompt-builder" });
+      const colsRow = el("div", { class: "pb-cols" });
+      wrap.appendChild(colsRow);
+
+      const placeholderText = "Pick a chip from each column to build your prompt!";
+      const preview = el("div", { class: "pb-preview placeholder" }, placeholderText);
+      wrap.appendChild(preview);
+
+      const submit = el("button", { class: "btn-big pb-submit" }, "Send it!");
+      submit.disabled = true;
+
+      const updatePreview = () => {
+        const allPicked = colKeys.every(k => picks[k]);
+        if (allPicked) {
+          preview.classList.remove("placeholder");
+          preview.textContent = colKeys.map(k => picks[k]).join(" ");
+        } else if (colKeys.some(k => picks[k])) {
+          preview.classList.remove("placeholder");
+          preview.textContent = colKeys.map(k => picks[k] || "___").join(" ");
+        } else {
+          preview.classList.add("placeholder");
+          preview.textContent = placeholderText;
+        }
+        submit.disabled = !allPicked;
+      };
+
+      colKeys.forEach(key => {
+        const def = cols[key] || {};
+        const col = el("div", { class: "pb-col" });
+        col.appendChild(el("div", { class: "pb-col-label" }, String(def.label || key)));
+        (def.chips || []).forEach(chip => {
+          const chipText = String(chip).slice(0, 40);
+          const btn = el("button", { class: "pb-chip" }, chipText);
+          btn.addEventListener("click", () => {
+            Tracker.click();
+            picks[key] = chipText;
+            // Deselect siblings in this column
+            col.querySelectorAll(".pb-chip").forEach(b => b.classList.remove("selected"));
+            btn.classList.add("selected");
+            updatePreview();
+          });
+          col.appendChild(btn);
+        });
+        colsRow.appendChild(col);
+      });
+
+      submit.addEventListener("click", () => {
+        if (submit.disabled) return;
+        submit.disabled = true;  // prevent double-click race during advanceFsm async
+        const phrase = colKeys.map(k => picks[k]).join(" ").slice(0, 80);
+        advanceFsm(phrase);
+      });
+      wrap.appendChild(submit);
+      updatePreview();  // initialize button state correctly even if cols are empty
+      return wrap;
+    };
+
     const renderTurnUI = (turn) => {
       clearNode(inputZone);
       if (!turn) return;
+      if (turn.prompt_builder) {
+        inputZone.appendChild(buildPromptBuilder(turn));
+        return;
+      }
       if (turn.options && turn.options.length) {
         const chipRow = el("div", { class: "chip-row" });
         for (const opt of turn.options) {
@@ -6144,7 +6283,7 @@ const UI = {
         row.appendChild(inp); row.appendChild(send);
         inputZone.appendChild(row);
       }
-      // No options + no keywords = terminal turn → leave inputZone empty
+      // No options + no keywords + no prompt_builder = terminal turn → empty zone
     };
 
     let _fsmBusy = false;

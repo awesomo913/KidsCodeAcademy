@@ -12,13 +12,28 @@
   "turns": {
     "t1": {
       "bot_lines": ["Hi! I'm Gemini.", "I can search the whole internet to find facts. What do you want to learn about?"],
-      "options": ["Dinosaurs", "Space", "How computers work"],
+      "options": ["Dinosaurs", "Space", "How computers work", "Build a search with chips!"],
       "branches": {
         "Dinosaurs": "t2_dino",
         "Space": "t2_space",
-        "How computers work": "t2_computers"
+        "How computers work": "t2_computers",
+        "Build a search with chips!": "t_pb"
       },
       "fallback_turn": "t1"
+    },
+    "t_pb": {
+      "bot_lines": ["Cool! Build your search by picking one chip from each row.", "Good searches mix WHAT you want with WHERE and HOW many."],
+      "prompt_builder": true,
+      "builder_cols": {
+        "what":  { "label": "What", "chips": ["Find facts about", "Show pictures of", "Tell me about"] },
+        "topic": { "label": "Topic", "chips": ["sharks", "rainbows", "robots"] },
+        "how":   { "label": "How",   "chips": ["for kids", "with photos", "in 3 facts"] }
+      },
+      "next_turn": "t_pb_done"
+    },
+    "t_pb_done": {
+      "bot_lines": ["Great search!", "I'd find the top 3 results for that exact question.", "Adding 'for kids' and a number makes searches way better!"],
+      "side_effect": { "action": "show_thinking", "steps": ["Read your search", "Find best 3 results", "Show them in order"], "duration_ms": 2000 }
     },
     "t2_dino": {
       "bot_lines": ["Searching the web for dinosaur facts...", "Found a million pages! Which dino do you like best?"],

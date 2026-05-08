@@ -12,13 +12,28 @@
   "turns": {
     "t1": {
       "bot_lines": ["Hi! I'm Codex.", "You describe it — I write the code. What should I build?"],
-      "options": ["A 'hello' program", "A counting loop", "A list of animals"],
+      "options": ["A 'hello' program", "A counting loop", "A list of animals", "Build a prompt with chips!"],
       "branches": {
         "A 'hello' program": "t2_hello",
         "A counting loop": "t2_loop",
-        "A list of animals": "t2_list"
+        "A list of animals": "t2_list",
+        "Build a prompt with chips!": "t_pb"
       },
       "fallback_turn": "t1"
+    },
+    "t_pb": {
+      "bot_lines": ["Cool! Pick a chip from each row to build a prompt.", "This is how real coders ask AI for code — by being clear and specific!"],
+      "prompt_builder": true,
+      "builder_cols": {
+        "verb":   { "label": "What to do", "chips": ["Make", "Write", "Build"] },
+        "thing":  { "label": "What",        "chips": ["a function", "a list", "a game"] },
+        "extra":  { "label": "About",       "chips": ["that says hi", "of fruits", "with a hero"] }
+      },
+      "next_turn": "t_pb_done"
+    },
+    "t_pb_done": {
+      "bot_lines": ["Great prompt!", "I read every word and wrote your code.", "That clear-and-specific style is the secret to talking to any AI."],
+      "side_effect": { "action": "show_terminal", "lines": [{ "kind": "in", "text": "running your custom prompt..." },{ "kind": "out", "text": "Done!" },{ "kind": "out", "text": "Your code is ready to run." }] }
     },
     "t2_hello": {
       "bot_lines": ["Got it.", "Should it say hello to everyone, or just to YOU?"],
