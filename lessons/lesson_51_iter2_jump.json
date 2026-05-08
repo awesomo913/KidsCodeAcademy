@@ -55,27 +55,14 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Pick the right way a jump should work:",
-          "choices": [
-            {
-              "label": "Hero goes up forever while you hold the arrow",
-              "right": false
-            },
-            {
-              "label": "Hero gets ONE big push up, then falls back down",
-              "right": true
-            },
-            {
-              "label": "Hero teleports to the sky",
-              "right": false
-            },
-            {
-              "label": "Hero goes sideways",
-              "right": false
-            }
-          ]
+          "prompt": "Type LEVEL and press Send to keep going!",
+          "target_display": "LEVEL",
+          "targets": [
+            "level"
+          ],
+          "hint_wrong": "Type the word LEVEL (any case is fine)."
         }
       },
       "variations": [
@@ -194,23 +181,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type GO and press Send to keep going!",
+          "target_display": "GO",
+          "targets": [
+            "go"
+          ],
+          "hint_wrong": "Type the word GO (any case is fine)."
         }
       },
       "variations": [
@@ -455,23 +433,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type OK and press Send to keep going!",
+          "target_display": "OK",
+          "targets": [
+            "ok"
+          ],
+          "hint_wrong": "Type the word OK (any case is fine)."
         }
       },
       "variations": [
@@ -590,23 +559,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type ME and press Send to keep going!",
+          "target_display": "ME",
+          "targets": [
+            "me"
+          ],
+          "hint_wrong": "Type the word ME (any case is fine)."
         }
       },
       "variations": [
@@ -851,23 +811,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the orange dot to unlock the next question!",
-          "choices": [
-            {
-              "label": "🟠",
-              "right": true
-            },
-            {
-              "label": "🔵",
-              "right": false
-            },
-            {
-              "label": "🟢",
-              "right": false
-            }
-          ]
+          "prompt": "Type US and press Send to keep going!",
+          "target_display": "US",
+          "targets": [
+            "us"
+          ],
+          "hint_wrong": "Type the word US (any case is fine)."
         }
       },
       "variations": [
@@ -986,23 +937,14 @@
     {
       "id": "q8",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the rocket to launch the next question!",
-          "choices": [
-            {
-              "label": "🚀",
-              "right": true
-            },
-            {
-              "label": "🐢",
-              "right": false
-            },
-            {
-              "label": "🪨",
-              "right": false
-            }
-          ]
+          "prompt": "Type WE and press Send to keep going!",
+          "target_display": "WE",
+          "targets": [
+            "we"
+          ],
+          "hint_wrong": "Type the word WE (any case is fine)."
         }
       },
       "variations": [

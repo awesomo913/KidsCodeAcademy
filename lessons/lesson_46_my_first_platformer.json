@@ -92,7 +92,7 @@
               "correct": false
             },
             {
-              "text": "Platforms are decorations only — fall through!",
+              "text": "Platforms are made of clouds — fall through!",
               "correct": false
             }
           ],
@@ -169,23 +169,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type SAVE and press Send to keep going!",
+          "target_display": "SAVE",
+          "targets": [
+            "save"
+          ],
+          "hint_wrong": "Type the word SAVE (any case is fine)."
         }
       },
       "variations": [
@@ -430,23 +421,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type READ and press Send to keep going!",
+          "target_display": "READ",
+          "targets": [
+            "read"
+          ],
+          "hint_wrong": "Type the word READ (any case is fine)."
         }
       },
       "variations": [
@@ -565,23 +547,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type WRITE and press Send to keep going!",
+          "target_display": "WRITE",
+          "targets": [
+            "write"
+          ],
+          "hint_wrong": "Type the word WRITE (any case is fine)."
         }
       },
       "variations": [
@@ -593,7 +566,7 @@
               "correct": false
             },
             {
-              "text": "Platforms are decorations only — fall through!",
+              "text": "Platforms are made of clouds — fall through!",
               "correct": false
             },
             {
@@ -681,7 +654,7 @@
               "correct": true
             },
             {
-              "text": "Platforms are decorations only — fall through!",
+              "text": "Platforms are made of clouds — fall through!",
               "correct": false
             },
             {
@@ -803,7 +776,7 @@
           "prompt": "Hey friend — Bytey claims something about my first platformer. Pick the SILLIEST claim.",
           "options": [
             {
-              "text": "Platforms are decorations only — fall through!",
+              "text": "Platforms are made of clouds — fall through!",
               "correct": true
             },
             {
@@ -826,23 +799,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the orange dot to unlock the next question!",
-          "choices": [
-            {
-              "label": "🟠",
-              "right": true
-            },
-            {
-              "label": "🔵",
-              "right": false
-            },
-            {
-              "label": "🟢",
-              "right": false
-            }
-          ]
+          "prompt": "Type HELP and press Send to keep going!",
+          "target_display": "HELP",
+          "targets": [
+            "help"
+          ],
+          "hint_wrong": "Type the word HELP (any case is fine)."
         }
       },
       "variations": [
@@ -938,7 +902,7 @@
           "prompt": "Bytey wonders: Which rule about my first platformer is a GOOD rule?",
           "options": [
             {
-              "text": "Platforms are decorations only — fall through!",
+              "text": "Platforms are made of clouds — fall through!",
               "correct": false
             },
             {

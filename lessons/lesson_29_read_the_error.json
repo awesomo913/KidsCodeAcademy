@@ -49,27 +49,14 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Which part of this error names the problem?\n\"NameError: 'kitten' is not defined on line 3\"",
-          "choices": [
-            {
-              "label": "line 3",
-              "right": false
-            },
-            {
-              "label": "NameError",
-              "right": true
-            },
-            {
-              "label": "kitten",
-              "right": false
-            },
-            {
-              "label": "is not defined",
-              "right": false
-            }
-          ]
+          "prompt": "Type TEAM and press Send to keep going!",
+          "target_display": "TEAM",
+          "targets": [
+            "team"
+          ],
+          "hint_wrong": "Type the word TEAM (any case is fine)."
         }
       },
       "variations": [
@@ -188,23 +175,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type SHIP and press Send to keep going!",
+          "target_display": "SHIP",
+          "targets": [
+            "ship"
+          ],
+          "hint_wrong": "Type the word SHIP (any case is fine)."
         }
       },
       "variations": [
@@ -449,23 +427,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type SAVE and press Send to keep going!",
+          "target_display": "SAVE",
+          "targets": [
+            "save"
+          ],
+          "hint_wrong": "Type the word SAVE (any case is fine)."
         }
       },
       "variations": [
@@ -584,23 +553,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type READ and press Send to keep going!",
+          "target_display": "READ",
+          "targets": [
+            "read"
+          ],
+          "hint_wrong": "Type the word READ (any case is fine)."
         }
       },
       "variations": [

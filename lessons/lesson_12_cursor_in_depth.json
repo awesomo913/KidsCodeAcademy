@@ -158,23 +158,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type SHIP and press Send to keep going!",
+          "target_display": "SHIP",
+          "targets": [
+            "ship"
+          ],
+          "hint_wrong": "Type the word SHIP (any case is fine)."
         }
       },
       "variations": [
@@ -320,7 +311,7 @@
               "correct": false
             },
             {
-              "text": "Cursor is fluent in pirate.",
+              "text": "Cursor only works inside a pumpkin.",
               "correct": false
             }
           ],
@@ -330,7 +321,7 @@
           "prompt": "Quick! Why does Cursor work better than a chat by itself for coding?",
           "options": [
             {
-              "text": "Cursor is fluent in pirate.",
+              "text": "Cursor only works inside a pumpkin.",
               "correct": false
             },
             {
@@ -364,7 +355,7 @@
               "correct": true
             },
             {
-              "text": "Cursor is fluent in pirate.",
+              "text": "Cursor only works inside a pumpkin.",
               "correct": false
             }
           ],
@@ -382,7 +373,7 @@
               "correct": false
             },
             {
-              "text": "Cursor is fluent in pirate.",
+              "text": "Cursor only works inside a pumpkin.",
               "correct": false
             },
             {
@@ -400,7 +391,7 @@
               "correct": false
             },
             {
-              "text": "Cursor is fluent in pirate.",
+              "text": "Cursor only works inside a pumpkin.",
               "correct": false
             },
             {
@@ -419,23 +410,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type SAVE and press Send to keep going!",
+          "target_display": "SAVE",
+          "targets": [
+            "save"
+          ],
+          "hint_wrong": "Type the word SAVE (any case is fine)."
         }
       },
       "variations": [
@@ -554,23 +536,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type READ and press Send to keep going!",
+          "target_display": "READ",
+          "targets": [
+            "read"
+          ],
+          "hint_wrong": "Type the word READ (any case is fine)."
         }
       },
       "variations": [

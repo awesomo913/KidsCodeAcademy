@@ -200,23 +200,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type GET and press Send to keep going!",
+          "target_display": "GET",
+          "targets": [
+            "get"
+          ],
+          "hint_wrong": "Type the word GET (any case is fine)."
         }
       },
       "variations": [
@@ -461,23 +452,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type PUT and press Send to keep going!",
+          "target_display": "PUT",
+          "targets": [
+            "put"
+          ],
+          "hint_wrong": "Type the word PUT (any case is fine)."
         }
       },
       "variations": [
@@ -596,23 +578,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type SET and press Send to keep going!",
+          "target_display": "SET",
+          "targets": [
+            "set"
+          ],
+          "hint_wrong": "Type the word SET (any case is fine)."
         }
       },
       "variations": [

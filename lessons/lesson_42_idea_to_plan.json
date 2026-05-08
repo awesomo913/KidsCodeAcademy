@@ -166,23 +166,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type PLAY and press Send to keep going!",
+          "target_display": "PLAY",
+          "targets": [
+            "play"
+          ],
+          "hint_wrong": "Type the word PLAY (any case is fine)."
         }
       },
       "variations": [
@@ -427,23 +418,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type GAME and press Send to keep going!",
+          "target_display": "GAME",
+          "targets": [
+            "game"
+          ],
+          "hint_wrong": "Type the word GAME (any case is fine)."
         }
       },
       "variations": [
@@ -562,23 +544,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
+          "targets": [
+            "code"
+          ],
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
@@ -823,23 +796,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the orange dot to unlock the next question!",
-          "choices": [
-            {
-              "label": "🟠",
-              "right": true
-            },
-            {
-              "label": "🔵",
-              "right": false
-            },
-            {
-              "label": "🟢",
-              "right": false
-            }
-          ]
+          "prompt": "Type JUMP and press Send to keep going!",
+          "target_display": "JUMP",
+          "targets": [
+            "jump"
+          ],
+          "hint_wrong": "Type the word JUMP (any case is fine)."
         }
       },
       "variations": [

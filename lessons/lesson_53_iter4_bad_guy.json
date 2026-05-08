@@ -55,27 +55,14 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Bad guy walks off the edge. Pick the fix:",
-          "choices": [
-            {
-              "label": "Make it invisible",
-              "right": false
-            },
-            {
-              "label": "If the next tile is empty, turn around",
-              "right": true
-            },
-            {
-              "label": "Make it jump",
-              "right": false
-            },
-            {
-              "label": "Move the floor",
-              "right": false
-            }
-          ]
+          "prompt": "Type BIG and press Send to keep going!",
+          "target_display": "BIG",
+          "targets": [
+            "big"
+          ],
+          "hint_wrong": "Type the word BIG (any case is fine)."
         }
       },
       "variations": [
@@ -194,23 +181,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type BOT and press Send to keep going!",
+          "target_display": "BOT",
+          "targets": [
+            "bot"
+          ],
+          "hint_wrong": "Type the word BOT (any case is fine)."
         }
       },
       "variations": [
@@ -356,7 +334,7 @@
               "correct": false
             },
             {
-              "text": "Patterns are required by old wizards.",
+              "text": "Patterns are required by talking ducks.",
               "correct": false
             }
           ],
@@ -378,7 +356,7 @@
               "correct": true
             },
             {
-              "text": "Patterns are required by old wizards.",
+              "text": "Patterns are required by talking ducks.",
               "correct": false
             }
           ],
@@ -396,7 +374,7 @@
               "correct": false
             },
             {
-              "text": "Patterns are required by old wizards.",
+              "text": "Patterns are required by talking ducks.",
               "correct": false
             },
             {
@@ -418,7 +396,7 @@
               "correct": false
             },
             {
-              "text": "Patterns are required by old wizards.",
+              "text": "Patterns are required by talking ducks.",
               "correct": false
             },
             {
@@ -436,7 +414,7 @@
               "correct": false
             },
             {
-              "text": "Patterns are required by old wizards.",
+              "text": "Patterns are required by talking ducks.",
               "correct": false
             },
             {
@@ -455,23 +433,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type WIN and press Send to keep going!",
+          "target_display": "WIN",
+          "targets": [
+            "win"
+          ],
+          "hint_wrong": "Type the word WIN (any case is fine)."
         }
       },
       "variations": [
@@ -590,23 +559,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type TOP and press Send to keep going!",
+          "target_display": "TOP",
+          "targets": [
+            "top"
+          ],
+          "hint_wrong": "Type the word TOP (any case is fine)."
         }
       },
       "variations": [

@@ -163,23 +163,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type TYPE and press Send to keep going!",
+          "target_display": "TYPE",
+          "targets": [
+            "type"
+          ],
+          "hint_wrong": "Type the word TYPE (any case is fine)."
         }
       },
       "variations": [
@@ -424,23 +415,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type WORD and press Send to keep going!",
+          "target_display": "WORD",
+          "targets": [
+            "word"
+          ],
+          "hint_wrong": "Type the word WORD (any case is fine)."
         }
       },
       "variations": [
@@ -559,23 +541,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type MOVE and press Send to keep going!",
+          "target_display": "MOVE",
+          "targets": [
+            "move"
+          ],
+          "hint_wrong": "Type the word MOVE (any case is fine)."
         }
       },
       "variations": [

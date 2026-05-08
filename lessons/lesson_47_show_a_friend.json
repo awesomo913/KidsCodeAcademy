@@ -58,7 +58,7 @@
               "correct": false
             },
             {
-              "text": "Hide your work from everyone forever.",
+              "text": "Bury your work under a giant pile of socks.",
               "correct": false
             },
             {
@@ -165,23 +165,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type FAST and press Send to keep going!",
+          "target_display": "FAST",
+          "targets": [
+            "fast"
+          ],
+          "hint_wrong": "Type the word FAST (any case is fine)."
         }
       },
       "variations": [
@@ -426,23 +417,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type SUPER and press Send to keep going!",
+          "target_display": "SUPER",
+          "targets": [
+            "super"
+          ],
+          "hint_wrong": "Type the word SUPER (any case is fine)."
         }
       },
       "variations": [
@@ -561,23 +543,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type SMART and press Send to keep going!",
+          "target_display": "SMART",
+          "targets": [
+            "smart"
+          ],
+          "hint_wrong": "Type the word SMART (any case is fine)."
         }
       },
       "variations": [
@@ -585,7 +558,7 @@
           "prompt": "Tell me — Which one is TRUE about showing a friend?",
           "options": [
             {
-              "text": "Hide your work from everyone forever.",
+              "text": "Bury your work under a giant pile of socks.",
               "correct": false
             },
             {
@@ -607,7 +580,7 @@
           "prompt": "Wait wait wait — Which one is TRUE about showing a friend?",
           "options": [
             {
-              "text": "Hide your work from everyone forever.",
+              "text": "Bury your work under a giant pile of socks.",
               "correct": false
             },
             {
@@ -633,7 +606,7 @@
               "correct": true
             },
             {
-              "text": "Hide your work from everyone forever.",
+              "text": "Bury your work under a giant pile of socks.",
               "correct": false
             },
             {
@@ -659,7 +632,7 @@
               "correct": true
             },
             {
-              "text": "Hide your work from everyone forever.",
+              "text": "Bury your work under a giant pile of socks.",
               "correct": false
             },
             {
@@ -789,7 +762,7 @@
               "correct": false
             },
             {
-              "text": "Hide your work from everyone forever.",
+              "text": "Bury your work under a giant pile of socks.",
               "correct": true
             }
           ],
@@ -822,23 +795,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the orange dot to unlock the next question!",
-          "choices": [
-            {
-              "label": "🟠",
-              "right": true
-            },
-            {
-              "label": "🔵",
-              "right": false
-            },
-            {
-              "label": "🟢",
-              "right": false
-            }
-          ]
+          "prompt": "Type READY and press Send to keep going!",
+          "target_display": "READY",
+          "targets": [
+            "ready"
+          ],
+          "hint_wrong": "Type the word READY (any case is fine)."
         }
       },
       "variations": [
@@ -858,7 +822,7 @@
               "correct": false
             },
             {
-              "text": "Hide your work from everyone forever.",
+              "text": "Bury your work under a giant pile of socks.",
               "correct": false
             }
           ],
@@ -946,7 +910,7 @@
               "correct": false
             },
             {
-              "text": "Hide your work from everyone forever.",
+              "text": "Bury your work under a giant pile of socks.",
               "correct": false
             }
           ],
@@ -957,23 +921,14 @@
     {
       "id": "q8",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the rocket to launch the next question!",
-          "choices": [
-            {
-              "label": "🚀",
-              "right": true
-            },
-            {
-              "label": "🐢",
-              "right": false
-            },
-            {
-              "label": "🪨",
-              "right": false
-            }
-          ]
+          "prompt": "Type BUILD and press Send to keep going!",
+          "target_display": "BUILD",
+          "targets": [
+            "build"
+          ],
+          "hint_wrong": "Type the word BUILD (any case is fine)."
         }
       },
       "variations": [
@@ -1029,7 +984,7 @@
               "correct": false
             },
             {
-              "text": "Hide your work from everyone forever.",
+              "text": "Bury your work under a giant pile of socks.",
               "correct": false
             },
             {
@@ -1047,7 +1002,7 @@
           "prompt": "Bytey wonders: Fill in the blank: when we talk about showing a friend, ___",
           "options": [
             {
-              "text": "Hide your work from everyone forever.",
+              "text": "Bury your work under a giant pile of socks.",
               "correct": false
             },
             {

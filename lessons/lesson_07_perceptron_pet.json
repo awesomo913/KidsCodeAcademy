@@ -111,7 +111,7 @@
           "prompt": "Quick! Which one is TRUE about the perceptron pet?",
           "options": [
             {
-              "text": "If you tickle a perceptron it forgets its job.",
+              "text": "If you blow on a model it forgets its job.",
               "correct": false
             },
             {
@@ -200,23 +200,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type DAY and press Send to keep going!",
+          "target_display": "DAY",
+          "targets": [
+            "day"
+          ],
+          "hint_wrong": "Type the word DAY (any case is fine)."
         }
       },
       "variations": [
@@ -461,23 +452,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type JOY and press Send to keep going!",
+          "target_display": "JOY",
+          "targets": [
+            "joy"
+          ],
+          "hint_wrong": "Type the word JOY (any case is fine)."
         }
       },
       "variations": [
@@ -537,7 +519,7 @@
               "correct": false
             },
             {
-              "text": "If you tickle a perceptron it forgets its job.",
+              "text": "If you blow on a model it forgets its job.",
               "correct": true
             },
             {
@@ -596,23 +578,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type RAD and press Send to keep going!",
+          "target_display": "RAD",
+          "targets": [
+            "rad"
+          ],
+          "hint_wrong": "Type the word RAD (any case is fine)."
         }
       },
       "variations": [
@@ -628,7 +601,7 @@
               "correct": false
             },
             {
-              "text": "If you tickle a perceptron it forgets its job.",
+              "text": "If you blow on a model it forgets its job.",
               "correct": false
             },
             {
@@ -698,7 +671,7 @@
               "correct": false
             },
             {
-              "text": "If you tickle a perceptron it forgets its job.",
+              "text": "If you blow on a model it forgets its job.",
               "correct": false
             }
           ],
@@ -716,7 +689,7 @@
               "correct": false
             },
             {
-              "text": "If you tickle a perceptron it forgets its job.",
+              "text": "If you blow on a model it forgets its job.",
               "correct": false
             },
             {
@@ -754,7 +727,7 @@
               "correct": false
             },
             {
-              "text": "If you tickle a perceptron it forgets its job.",
+              "text": "If you blow on a model it forgets its job.",
               "correct": true
             },
             {
@@ -857,23 +830,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the orange dot to unlock the next question!",
-          "choices": [
-            {
-              "label": "🟠",
-              "right": true
-            },
-            {
-              "label": "🔵",
-              "right": false
-            },
-            {
-              "label": "🟢",
-              "right": false
-            }
-          ]
+          "prompt": "Type COOL and press Send to keep going!",
+          "target_display": "COOL",
+          "targets": [
+            "cool"
+          ],
+          "hint_wrong": "Type the word COOL (any case is fine)."
         }
       },
       "variations": [
@@ -889,7 +853,7 @@
               "correct": false
             },
             {
-              "text": "If you tickle a perceptron it forgets its job.",
+              "text": "If you blow on a model it forgets its job.",
               "correct": false
             },
             {
@@ -925,7 +889,7 @@
           "prompt": "Quick! Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
-              "text": "If you tickle a perceptron it forgets its job.",
+              "text": "If you blow on a model it forgets its job.",
               "correct": false
             },
             {
@@ -992,23 +956,14 @@
     {
       "id": "q8",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the rocket to launch the next question!",
-          "choices": [
-            {
-              "label": "🚀",
-              "right": true
-            },
-            {
-              "label": "🐢",
-              "right": false
-            },
-            {
-              "label": "🪨",
-              "right": false
-            }
-          ]
+          "prompt": "Type NEXT and press Send to keep going!",
+          "target_display": "NEXT",
+          "targets": [
+            "next"
+          ],
+          "hint_wrong": "Type the word NEXT (any case is fine)."
         }
       },
       "variations": [
@@ -1028,7 +983,7 @@
               "correct": true
             },
             {
-              "text": "If you tickle a perceptron it forgets its job.",
+              "text": "If you blow on a model it forgets its job.",
               "correct": false
             }
           ],
@@ -1050,7 +1005,7 @@
               "correct": true
             },
             {
-              "text": "If you tickle a perceptron it forgets its job.",
+              "text": "If you blow on a model it forgets its job.",
               "correct": false
             }
           ],

@@ -103,7 +103,7 @@
               "correct": false
             },
             {
-              "text": "Hitboxes are decorations only — like wallpaper.",
+              "text": "Hitboxes are made of fog — you pass right through.",
               "correct": true
             },
             {
@@ -121,7 +121,7 @@
               "correct": false
             },
             {
-              "text": "Hitboxes are decorations only — like wallpaper.",
+              "text": "Hitboxes are made of fog — you pass right through.",
               "correct": false
             },
             {
@@ -151,7 +151,7 @@
               "correct": true
             },
             {
-              "text": "Hitboxes are decorations only — like wallpaper.",
+              "text": "Hitboxes are made of fog — you pass right through.",
               "correct": false
             }
           ],
@@ -162,23 +162,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type FUN and press Send to keep going!",
+          "target_display": "FUN",
+          "targets": [
+            "fun"
+          ],
+          "hint_wrong": "Type the word FUN (any case is fine)."
         }
       },
       "variations": [
@@ -423,23 +414,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type RUN and press Send to keep going!",
+          "target_display": "RUN",
+          "targets": [
+            "run"
+          ],
+          "hint_wrong": "Type the word RUN (any case is fine)."
         }
       },
       "variations": [
@@ -558,23 +540,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type BIG and press Send to keep going!",
+          "target_display": "BIG",
+          "targets": [
+            "big"
+          ],
+          "hint_wrong": "Type the word BIG (any case is fine)."
         }
       },
       "variations": [

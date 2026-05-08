@@ -55,27 +55,14 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Hero falls forever. Pick the fix:",
-          "choices": [
-            {
-              "label": "Make the hero blue",
-              "right": false
-            },
-            {
-              "label": "Add: stop the hero when it touches the floor",
-              "right": true
-            },
-            {
-              "label": "Remove the floor",
-              "right": false
-            },
-            {
-              "label": "Add more coins",
-              "right": false
-            }
-          ]
+          "prompt": "Type PIXEL and press Send to keep going!",
+          "target_display": "PIXEL",
+          "targets": [
+            "pixel"
+          ],
+          "hint_wrong": "Type the word PIXEL (any case is fine)."
         }
       },
       "variations": [
@@ -135,7 +122,7 @@
               "correct": false
             },
             {
-              "text": "Floors are decoration only — pure show.",
+              "text": "Floors are made of jelly — wobble through!",
               "correct": true
             },
             {
@@ -153,7 +140,7 @@
               "correct": false
             },
             {
-              "text": "Floors are decoration only — pure show.",
+              "text": "Floors are made of jelly — wobble through!",
               "correct": false
             },
             {
@@ -183,7 +170,7 @@
               "correct": true
             },
             {
-              "text": "Floors are decoration only — pure show.",
+              "text": "Floors are made of jelly — wobble through!",
               "correct": false
             }
           ],
@@ -194,23 +181,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type RIGHT and press Send to keep going!",
+          "target_display": "RIGHT",
+          "targets": [
+            "right"
+          ],
+          "hint_wrong": "Type the word RIGHT (any case is fine)."
         }
       },
       "variations": [
@@ -455,23 +433,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type SPACE and press Send to keep going!",
+          "target_display": "SPACE",
+          "targets": [
+            "space"
+          ],
+          "hint_wrong": "Type the word SPACE (any case is fine)."
         }
       },
       "variations": [
@@ -590,23 +559,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type POWER and press Send to keep going!",
+          "target_display": "POWER",
+          "targets": [
+            "power"
+          ],
+          "hint_wrong": "Type the word POWER (any case is fine)."
         }
       },
       "variations": [
@@ -851,23 +811,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the orange dot to unlock the next question!",
-          "choices": [
-            {
-              "label": "🟠",
-              "right": true
-            },
-            {
-              "label": "🔵",
-              "right": false
-            },
-            {
-              "label": "🟢",
-              "right": false
-            }
-          ]
+          "prompt": "Type ROBOT and press Send to keep going!",
+          "target_display": "ROBOT",
+          "targets": [
+            "robot"
+          ],
+          "hint_wrong": "Type the word ROBOT (any case is fine)."
         }
       },
       "variations": [
@@ -905,7 +856,7 @@
               "correct": false
             },
             {
-              "text": "Floors are decoration only — pure show.",
+              "text": "Floors are made of jelly — wobble through!",
               "correct": false
             },
             {

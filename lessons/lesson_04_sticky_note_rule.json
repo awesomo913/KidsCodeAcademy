@@ -64,7 +64,7 @@
           "prompt": "What is the sticky-note rule (memory)?",
           "options": [
             {
-              "text": "Helpers eat sticky notes for breakfast.",
+              "text": "Helpers carry sticky notes in tiny backpacks.",
               "correct": false
             },
             {
@@ -156,7 +156,7 @@
               "correct": false
             },
             {
-              "text": "Helpers eat sticky notes for breakfast.",
+              "text": "Helpers carry sticky notes in tiny backpacks.",
               "correct": false
             },
             {
@@ -175,23 +175,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type SEE and press Send to keep going!",
+          "target_display": "SEE",
+          "targets": [
+            "see"
+          ],
+          "hint_wrong": "Type the word SEE (any case is fine)."
         }
       },
       "variations": [
@@ -436,23 +427,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type NEW and press Send to keep going!",
+          "target_display": "NEW",
+          "targets": [
+            "new"
+          ],
+          "hint_wrong": "Type the word NEW (any case is fine)."
         }
       },
       "variations": [
@@ -560,7 +542,7 @@
               "correct": false
             },
             {
-              "text": "Helpers eat sticky notes for breakfast.",
+              "text": "Helpers carry sticky notes in tiny backpacks.",
               "correct": true
             }
           ],
@@ -571,23 +553,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type USE and press Send to keep going!",
+          "target_display": "USE",
+          "targets": [
+            "use"
+          ],
+          "hint_wrong": "Type the word USE (any case is fine)."
         }
       },
       "variations": [
@@ -621,7 +594,7 @@
               "correct": false
             },
             {
-              "text": "Helpers eat sticky notes for breakfast.",
+              "text": "Helpers carry sticky notes in tiny backpacks.",
               "correct": false
             },
             {

@@ -53,7 +53,7 @@
           "prompt": "What is input, action, result?",
           "options": [
             {
-              "text": "Action gets shy and hides.",
+              "text": "Action puts on a tiny hat.",
               "correct": false
             },
             {
@@ -61,7 +61,7 @@
               "correct": false
             },
             {
-              "text": "Action does nothing — it is a decoration.",
+              "text": "Action does nothing — it just naps.",
               "correct": false
             },
             {
@@ -75,7 +75,7 @@
           "prompt": "Quick! Which one is TRUE about input, action, result?",
           "options": [
             {
-              "text": "Inputs must be sung in iambic pentameter.",
+              "text": "Inputs must be sung to a banana.",
               "correct": false
             },
             {
@@ -83,7 +83,7 @@
               "correct": true
             },
             {
-              "text": "Result is the same as breakfast.",
+              "text": "Result is a tiny invisible robot.",
               "correct": false
             },
             {
@@ -105,7 +105,7 @@
               "correct": false
             },
             {
-              "text": "Loops are bad in games — they cause dizziness.",
+              "text": "Loops are bad in games — they get sleepy.",
               "correct": true
             },
             {
@@ -119,11 +119,11 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about input, action, result. What should he say?",
           "options": [
             {
-              "text": "Action does nothing — it is a decoration.",
+              "text": "Action does nothing — it just naps.",
               "correct": false
             },
             {
-              "text": "Loops are bad in games — they cause dizziness.",
+              "text": "Loops are bad in games — they get sleepy.",
               "correct": false
             },
             {
@@ -131,7 +131,7 @@
               "correct": true
             },
             {
-              "text": "Players never see the result — it is private.",
+              "text": "Players never see the result — it floats away.",
               "correct": false
             }
           ],
@@ -141,11 +141,11 @@
           "prompt": "Tell me — Which rule about input, action, result is a GOOD rule?",
           "options": [
             {
-              "text": "Action does nothing — it is a decoration.",
+              "text": "Action does nothing — it just naps.",
               "correct": false
             },
             {
-              "text": "Action gets shy and hides.",
+              "text": "Action puts on a tiny hat.",
               "correct": false
             },
             {
@@ -153,7 +153,7 @@
               "correct": true
             },
             {
-              "text": "Loops are bad in games — they cause dizziness.",
+              "text": "Loops are bad in games — they get sleepy.",
               "correct": false
             }
           ],
@@ -164,23 +164,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type RIGHT and press Send to keep going!",
+          "target_display": "RIGHT",
+          "targets": [
+            "right"
+          ],
+          "hint_wrong": "Type the word RIGHT (any case is fine)."
         }
       },
       "variations": [
@@ -318,7 +309,7 @@
               "correct": true
             },
             {
-              "text": "Loops are required by old wizards.",
+              "text": "Loops are required by the moon.",
               "correct": false
             },
             {
@@ -348,7 +339,7 @@
               "correct": false
             },
             {
-              "text": "Loops are required by old wizards.",
+              "text": "Loops are required by the moon.",
               "correct": false
             }
           ],
@@ -370,7 +361,7 @@
               "correct": false
             },
             {
-              "text": "Loops are required by old wizards.",
+              "text": "Loops are required by the moon.",
               "correct": false
             }
           ],
@@ -384,7 +375,7 @@
               "correct": false
             },
             {
-              "text": "Loops are required by old wizards.",
+              "text": "Loops are required by the moon.",
               "correct": false
             },
             {
@@ -402,7 +393,7 @@
           "prompt": "Tell me — Why is the loop important?",
           "options": [
             {
-              "text": "Loops are required by old wizards.",
+              "text": "Loops are required by the moon.",
               "correct": false
             },
             {
@@ -425,23 +416,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type SPACE and press Send to keep going!",
+          "target_display": "SPACE",
+          "targets": [
+            "space"
+          ],
+          "hint_wrong": "Type the word SPACE (any case is fine)."
         }
       },
       "variations": [
@@ -457,7 +439,7 @@
               "correct": false
             },
             {
-              "text": "Players never see the result — it is private.",
+              "text": "Players never see the result — it floats away.",
               "correct": true
             },
             {
@@ -475,7 +457,7 @@
               "correct": false
             },
             {
-              "text": "Action does nothing — it is a decoration.",
+              "text": "Action does nothing — it just naps.",
               "correct": true
             },
             {
@@ -501,7 +483,7 @@
               "correct": false
             },
             {
-              "text": "Inputs must be sung in iambic pentameter.",
+              "text": "Inputs must be sung to a banana.",
               "correct": true
             },
             {
@@ -523,7 +505,7 @@
               "correct": false
             },
             {
-              "text": "Result is the same as breakfast.",
+              "text": "Result is a tiny invisible robot.",
               "correct": true
             },
             {
@@ -549,7 +531,7 @@
               "correct": false
             },
             {
-              "text": "Action gets shy and hides.",
+              "text": "Action puts on a tiny hat.",
               "correct": true
             }
           ],
@@ -560,23 +542,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type POWER and press Send to keep going!",
+          "target_display": "POWER",
+          "targets": [
+            "power"
+          ],
+          "hint_wrong": "Type the word POWER (any case is fine)."
         }
       },
       "variations": [
@@ -592,7 +565,7 @@
               "correct": false
             },
             {
-              "text": "Inputs must be sung in iambic pentameter.",
+              "text": "Inputs must be sung to a banana.",
               "correct": false
             },
             {
@@ -610,7 +583,7 @@
               "correct": false
             },
             {
-              "text": "Action gets shy and hides.",
+              "text": "Action puts on a tiny hat.",
               "correct": false
             },
             {
@@ -618,7 +591,7 @@
               "correct": true
             },
             {
-              "text": "Players never see the result — it is private.",
+              "text": "Players never see the result — it floats away.",
               "correct": false
             }
           ],
@@ -636,11 +609,11 @@
               "correct": false
             },
             {
-              "text": "Players never see the result — it is private.",
+              "text": "Players never see the result — it floats away.",
               "correct": false
             },
             {
-              "text": "Action does nothing — it is a decoration.",
+              "text": "Action does nothing — it just naps.",
               "correct": false
             }
           ],
@@ -650,7 +623,7 @@
           "prompt": "Which one is TRUE about input, action, result?",
           "options": [
             {
-              "text": "Action does nothing — it is a decoration.",
+              "text": "Action does nothing — it just naps.",
               "correct": false
             },
             {
@@ -662,7 +635,7 @@
               "correct": false
             },
             {
-              "text": "Inputs must be sung in iambic pentameter.",
+              "text": "Inputs must be sung to a banana.",
               "correct": false
             }
           ],
@@ -680,11 +653,11 @@
               "correct": false
             },
             {
-              "text": "Inputs must be sung in iambic pentameter.",
+              "text": "Inputs must be sung to a banana.",
               "correct": false
             },
             {
-              "text": "Players never see the result — it is private.",
+              "text": "Players never see the result — it floats away.",
               "correct": false
             }
           ],
@@ -718,7 +691,7 @@
               "correct": false
             },
             {
-              "text": "Inputs must be sung in iambic pentameter.",
+              "text": "Inputs must be sung to a banana.",
               "correct": true
             },
             {
@@ -740,7 +713,7 @@
               "correct": false
             },
             {
-              "text": "Result is the same as breakfast.",
+              "text": "Result is a tiny invisible robot.",
               "correct": true
             },
             {
@@ -758,7 +731,7 @@
               "correct": false
             },
             {
-              "text": "Action gets shy and hides.",
+              "text": "Action puts on a tiny hat.",
               "correct": true
             },
             {

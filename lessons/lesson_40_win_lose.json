@@ -77,7 +77,7 @@
               "correct": false
             },
             {
-              "text": "Losing teaches us nothing, just shame.",
+              "text": "Losing means a tiny pizza falls from the sky.",
               "correct": false
             },
             {
@@ -135,7 +135,7 @@
           "prompt": "Bytey wonders: Bytey wants to teach a friend about win and lose. What should he say?",
           "options": [
             {
-              "text": "Losing teaches us nothing, just shame.",
+              "text": "Losing means a tiny pizza falls from the sky.",
               "correct": false
             },
             {
@@ -157,7 +157,7 @@
           "prompt": "Tell me — Which rule about win and lose is a GOOD rule?",
           "options": [
             {
-              "text": "Losing teaches us nothing, just shame.",
+              "text": "Losing means a tiny pizza falls from the sky.",
               "correct": false
             },
             {
@@ -180,23 +180,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the star to keep going!",
-          "choices": [
-            {
-              "label": "⭐",
-              "right": true
-            },
-            {
-              "label": "🍌",
-              "right": false
-            },
-            {
-              "label": "🌱",
-              "right": false
-            }
-          ]
+          "prompt": "Type HOP and press Send to keep going!",
+          "target_display": "HOP",
+          "targets": [
+            "hop"
+          ],
+          "hint_wrong": "Type the word HOP (any case is fine)."
         }
       },
       "variations": [
@@ -441,23 +432,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the smiley to wake up Bytey!",
-          "choices": [
-            {
-              "label": "😀",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type DAY and press Send to keep going!",
+          "target_display": "DAY",
+          "targets": [
+            "day"
+          ],
+          "hint_wrong": "Type the word DAY (any case is fine)."
         }
       },
       "variations": [
@@ -491,7 +473,7 @@
               "correct": false
             },
             {
-              "text": "Losing teaches us nothing, just shame.",
+              "text": "Losing means a tiny pizza falls from the sky.",
               "correct": true
             },
             {
@@ -576,23 +558,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the heart to keep learning!",
-          "choices": [
-            {
-              "label": "❤️",
-              "right": true
-            },
-            {
-              "label": "🥒",
-              "right": false
-            },
-            {
-              "label": "🌶️",
-              "right": false
-            }
-          ]
+          "prompt": "Type JOY and press Send to keep going!",
+          "target_display": "JOY",
+          "targets": [
+            "joy"
+          ],
+          "hint_wrong": "Type the word JOY (any case is fine)."
         }
       },
       "variations": [
@@ -656,7 +629,7 @@
               "correct": false
             },
             {
-              "text": "Losing teaches us nothing, just shame.",
+              "text": "Losing means a tiny pizza falls from the sky.",
               "correct": false
             }
           ],
@@ -666,7 +639,7 @@
           "prompt": "Which one is TRUE about win and lose?",
           "options": [
             {
-              "text": "Losing teaches us nothing, just shame.",
+              "text": "Losing means a tiny pizza falls from the sky.",
               "correct": false
             },
             {
