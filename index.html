@@ -1471,7 +1471,7 @@ const Grade = {
   overall() {
     const best = this.bestPerLesson();
     const lessonNums = Object.keys(best).map(Number);
-    if (!lessonNums.length) return { score: 0, letter: "—", completed: 0, total: 16 };
+    if (!lessonNums.length) return { score: 0, letter: "—", completed: 0, total: 60 };
     let weighted = 0, weight = 0;
     for (const n of lessonNums) {
       const w = 1.0 + (n - 1) * 0.05;  // later lessons count slightly more
@@ -1480,7 +1480,7 @@ const Grade = {
     }
     let score = weighted / weight;
     const completed = lessonNums.length;
-    if (completed >= 16) score += 5;
+    if (completed >= 60) score += 5;
     score = Math.max(0, Math.min(100, Math.round(score)));
     let letter = "C";
     if (score >= 90) letter = "A+";
@@ -1488,7 +1488,7 @@ const Grade = {
     else if (score >= 75) letter = "B+";
     else if (score >= 70) letter = "B";
     else if (score >= 60) letter = "C+";
-    return { score, letter, completed, total: 16 };
+    return { score, letter, completed, total: 60 };
   },
 };
 
@@ -1499,16 +1499,18 @@ const Audio_ = {
   sfx(name) {
     const a = document.getElementById("sfx" + name);
     if (!a) return;
-    try { a.currentTime = 0; a.play().catch(() => {}); } catch {}
+    try { a.currentTime = 0; a.play().catch(e => console.warn("sfx", name, e)); } catch(e) { console.warn("sfx", name, e); }
   },
   playLesson(src, onEnd) {
     const a = document.getElementById("lessonAudio");
+    if (!a) return;
     a.onended = onEnd || null;
     a.src = src + "?_=" + Date.now();
-    a.play().catch(() => {});
+    a.play().catch(e => console.warn("playLesson", src, e));
   },
   stop() {
     const a = document.getElementById("lessonAudio");
+    if (!a) return;
     a.pause(); a.currentTime = 0;
   },
 };
@@ -5395,7 +5397,7 @@ const IdeaSpark = {
     const inp = el("input", {
       type: "text",
       placeholder: hook || "I want to make a...",
-      maxlength: "200",
+      maxlength: "80",
     });
     const sendBtn = el("button", { class: "btn-big" }, "Tell Bytey");
     row.appendChild(inp); row.appendChild(sendBtn);
