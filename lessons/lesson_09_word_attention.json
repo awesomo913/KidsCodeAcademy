@@ -55,269 +55,286 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "history-scene",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Watch the scene, then answer the question!",
-          "scene": {
-            "id": "attention",
-            "check": {
-              "prompt": "The arrow showed which word looks at which?",
-              "choices": [
-                {
-                  "label": "She → Mom",
-                  "right": true
-                },
-                {
-                  "label": "smiles → She",
-                  "right": false
-                },
-                {
-                  "label": "No words look at each other",
-                  "right": false
-                },
-                {
-                  "label": "Mom → smiles",
-                  "right": false
-                }
-              ]
-            }
-          }
+          "prompt": "👀 Tap the word that gets ATTENTION!",
+          "glyph": "✨"
         }
       },
       "variations": [
         {
-          "prompt": "What is word attention?",
+          "prompt": "🚀 Bytey's first puzzle of the day: pick the TRUE one about Words That Look at Each Other!",
           "options": [
             {
               "text": "AI attention runs out after 10 questions and needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e9e357ba4.ogg"
             },
             {
               "text": "All words have the same meaning and one nose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89a0f2e17b.ogg"
             },
             {
               "text": "Helpers only read every other word backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/872fa270bc.ogg"
             },
             {
               "text": "Helpers pay attention to important words.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a7cd9eb3ff.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_09_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about word attention?",
           "options": [
             {
               "text": "Attention makes helpers slower and itchy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed4db6f02d.ogg"
             },
             {
               "text": "Some words matter more than others.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e12a5181d6.ogg"
             },
             {
               "text": "Helpers count vowels and pick the loudest.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2111f37623.ogg"
             },
             {
               "text": "Attention costs the AI a tiny coin every time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8951521cc9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_09_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
               "text": "Helpers pay attention to important words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a7cd9eb3ff.ogg"
             },
             {
               "text": "Big helpers look at many words at once.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/813e7e048a.ogg"
             },
             {
               "text": "Attention makes helpers slower and itchy.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ed4db6f02d.ogg"
             },
             {
               "text": "Strong words can override weak ones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3852997322.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_09_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about word attention. What should he say?",
           "options": [
             {
               "text": "Attention costs the AI a tiny coin every time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8951521cc9.ogg"
             },
             {
               "text": "Helpers only read every other word backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/872fa270bc.ogg"
             },
             {
               "text": "Big helpers look at many words at once.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/813e7e048a.ogg"
             },
             {
               "text": "Helpers ignore every word equally and yawn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/730eca44e3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_09_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about word attention is a GOOD rule?",
           "options": [
             {
               "text": "AI attention runs out after 10 questions and needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e9e357ba4.ogg"
             },
             {
               "text": "Attention makes helpers slower and itchy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed4db6f02d.ogg"
             },
             {
               "text": "The right word can change the whole answer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2f4149f8ad.ogg"
             },
             {
               "text": "Helpers only read every other word backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/872fa270bc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_09_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about word attention, ___",
           "options": [
             {
               "text": "All sentences must have a polite frog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11ae2b68e1.ogg"
             },
             {
               "text": "Helpers focus on words that change meaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2b5596b54b.ogg"
             },
             {
               "text": "Attention only works if you say 'pretty please' first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9cccba1ebb.ogg"
             },
             {
               "text": "One word never changes anything, ever, ever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/40cb7c01a3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_09_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about word attention. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Big helpers look at many words at once.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/813e7e048a.ogg"
             },
             {
               "text": "The right word can change the whole answer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2f4149f8ad.ogg"
             },
             {
               "text": "Helpers count vowels and pick the loudest.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2111f37623.ogg"
             },
             {
               "text": "Helpers focus on words that change meaning.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b5596b54b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_09_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with word attention?",
           "options": [
             {
               "text": "Helpers ignore every word equally and yawn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/730eca44e3.ogg"
             },
             {
               "text": "Words must do squats before being read.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89b82c546b.ogg"
             },
             {
               "text": "Strong words can override weak ones.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3852997322.ogg"
             },
             {
               "text": "Helpers only read every other word backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/872fa270bc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_09_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about word attention is silly. Pick the silly one!",
           "options": [
             {
               "text": "Attention means the AI focuses on the most important words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c777c479aa.ogg"
             },
             {
               "text": "Big helpers look at many words at once.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/813e7e048a.ogg"
             },
             {
               "text": "Helpers focus on words that change meaning.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b5596b54b.ogg"
             },
             {
               "text": "Attention only works if you say 'pretty please' first.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9cccba1ebb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_09_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about word attention. Which fact would help him?",
           "options": [
             {
               "text": "Without attention, an AI gets confused on long sentences.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e4c444146f.ogg"
             },
             {
               "text": "Words must do squats before being read.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89b82c546b.ogg"
             },
             {
               "text": "Helpers count vowels and pick the loudest.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2111f37623.ogg"
             },
             {
               "text": "Attention makes helpers slower and itchy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed4db6f02d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_09_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "How does AI pay attention to words?",
+          "steps": [
+            "See all the words",
+            "Decide which ones matter",
+            "Use those to answer"
+          ]
         }
       },
       "variations": [
@@ -326,234 +343,283 @@
           "options": [
             {
               "text": "'a' — it sets the mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bb747ded16.ogg"
             },
             {
               "text": "'dinner' is invisible to helpers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7e52c94c2a.ogg"
             },
             {
               "text": "'quick' — it tells how fast you need it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29160451f7.ogg"
             },
             {
               "text": "'me' — it tells the helper to make YOU.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/81fbb7ad66.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_09_q2_v0.ogg"
         },
         {
           "prompt": "Quick! You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
           "options": [
             {
               "text": "'dinner' is invisible to helpers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7e52c94c2a.ogg"
             },
             {
               "text": "'a' — it sets the mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bb747ded16.ogg"
             },
             {
               "text": "'me' — it tells the helper to make YOU.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/81fbb7ad66.ogg"
             },
             {
               "text": "'quick' — it tells how fast you need it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29160451f7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_09_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
           "options": [
             {
               "text": "'quick' — it tells how fast you need it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29160451f7.ogg"
             },
             {
               "text": "'dinner' is invisible to helpers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7e52c94c2a.ogg"
             },
             {
               "text": "'me' — it tells the helper to make YOU.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/81fbb7ad66.ogg"
             },
             {
               "text": "'a' — it sets the mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bb747ded16.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_09_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
           "options": [
             {
               "text": "'dinner' is invisible to helpers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7e52c94c2a.ogg"
             },
             {
               "text": "'a' — it sets the mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bb747ded16.ogg"
             },
             {
               "text": "'quick' — it tells how fast you need it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29160451f7.ogg"
             },
             {
               "text": "'me' — it tells the helper to make YOU.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/81fbb7ad66.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_09_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
           "options": [
             {
               "text": "'a' — it sets the mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bb747ded16.ogg"
             },
             {
               "text": "'me' — it tells the helper to make YOU.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/81fbb7ad66.ogg"
             },
             {
               "text": "'dinner' is invisible to helpers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7e52c94c2a.ogg"
             },
             {
               "text": "'quick' — it tells how fast you need it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29160451f7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_09_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
           "options": [
             {
               "text": "'quick' — it tells how fast you need it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29160451f7.ogg"
             },
             {
               "text": "'me' — it tells the helper to make YOU.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/81fbb7ad66.ogg"
             },
             {
               "text": "'dinner' is invisible to helpers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7e52c94c2a.ogg"
             },
             {
               "text": "'a' — it sets the mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bb747ded16.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_09_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
           "options": [
             {
               "text": "'a' — it sets the mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bb747ded16.ogg"
             },
             {
               "text": "'dinner' is invisible to helpers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7e52c94c2a.ogg"
             },
             {
               "text": "'quick' — it tells how fast you need it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29160451f7.ogg"
             },
             {
               "text": "'me' — it tells the helper to make YOU.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/81fbb7ad66.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_09_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
           "options": [
             {
               "text": "'me' — it tells the helper to make YOU.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/81fbb7ad66.ogg"
             },
             {
               "text": "'dinner' is invisible to helpers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7e52c94c2a.ogg"
             },
             {
               "text": "'a' — it sets the mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bb747ded16.ogg"
             },
             {
               "text": "'quick' — it tells how fast you need it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29160451f7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_09_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
           "options": [
             {
               "text": "'quick' — it tells how fast you need it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29160451f7.ogg"
             },
             {
               "text": "'dinner' is invisible to helpers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7e52c94c2a.ogg"
             },
             {
               "text": "'a' — it sets the mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bb747ded16.ogg"
             },
             {
               "text": "'me' — it tells the helper to make YOU.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/81fbb7ad66.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_09_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: You ask: 'Make me a quick easy dinner.' Which word helps the helper most?",
           "options": [
             {
               "text": "'me' — it tells the helper to make YOU.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/81fbb7ad66.ogg"
             },
             {
               "text": "'a' — it sets the mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bb747ded16.ogg"
             },
             {
               "text": "'quick' — it tells how fast you need it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29160451f7.ogg"
             },
             {
               "text": "'dinner' is invisible to helpers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7e52c94c2a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_09_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Save",
+              "right": "💾"
+            },
+            {
+              "left": "Share",
+              "right": "📤"
+            },
+            {
+              "left": "Build",
+              "right": "🔨"
+            }
+          ]
         }
       },
       "variations": [
@@ -562,220 +628,260 @@
           "options": [
             {
               "text": "Maybe sort of words now please.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b3c37a526.ogg"
             },
             {
               "text": "Write a short funny poem about a tired cat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c19d495fc0.ogg"
             },
             {
               "text": "Make a thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/edb6c7d2c4.ogg"
             },
             {
               "text": "Everything but not really.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff69ea8a51.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_09_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Pick the prompt that gives more useful attention:",
           "options": [
             {
               "text": "Write a short funny poem about a tired cat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c19d495fc0.ogg"
             },
             {
               "text": "Make a thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/edb6c7d2c4.ogg"
             },
             {
               "text": "Maybe sort of words now please.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b3c37a526.ogg"
             },
             {
               "text": "Everything but not really.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff69ea8a51.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_09_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Pick the prompt that gives more useful attention:",
           "options": [
             {
               "text": "Maybe sort of words now please.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b3c37a526.ogg"
             },
             {
               "text": "Everything but not really.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff69ea8a51.ogg"
             },
             {
               "text": "Write a short funny poem about a tired cat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c19d495fc0.ogg"
             },
             {
               "text": "Make a thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/edb6c7d2c4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_09_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Pick the prompt that gives more useful attention:",
           "options": [
             {
               "text": "Maybe sort of words now please.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b3c37a526.ogg"
             },
             {
               "text": "Everything but not really.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff69ea8a51.ogg"
             },
             {
               "text": "Write a short funny poem about a tired cat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c19d495fc0.ogg"
             },
             {
               "text": "Make a thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/edb6c7d2c4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_09_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Pick the prompt that gives more useful attention:",
           "options": [
             {
               "text": "Write a short funny poem about a tired cat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c19d495fc0.ogg"
             },
             {
               "text": "Make a thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/edb6c7d2c4.ogg"
             },
             {
               "text": "Everything but not really.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff69ea8a51.ogg"
             },
             {
               "text": "Maybe sort of words now please.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b3c37a526.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_09_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Pick the prompt that gives more useful attention:",
           "options": [
             {
               "text": "Everything but not really.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff69ea8a51.ogg"
             },
             {
               "text": "Maybe sort of words now please.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b3c37a526.ogg"
             },
             {
               "text": "Make a thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/edb6c7d2c4.ogg"
             },
             {
               "text": "Write a short funny poem about a tired cat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c19d495fc0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_09_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Pick the prompt that gives more useful attention:",
           "options": [
             {
               "text": "Maybe sort of words now please.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b3c37a526.ogg"
             },
             {
               "text": "Make a thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/edb6c7d2c4.ogg"
             },
             {
               "text": "Write a short funny poem about a tired cat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c19d495fc0.ogg"
             },
             {
               "text": "Everything but not really.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff69ea8a51.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_09_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Pick the prompt that gives more useful attention:",
           "options": [
             {
               "text": "Everything but not really.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff69ea8a51.ogg"
             },
             {
               "text": "Make a thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/edb6c7d2c4.ogg"
             },
             {
               "text": "Maybe sort of words now please.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b3c37a526.ogg"
             },
             {
               "text": "Write a short funny poem about a tired cat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c19d495fc0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_09_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Pick the prompt that gives more useful attention:",
           "options": [
             {
               "text": "Write a short funny poem about a tired cat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c19d495fc0.ogg"
             },
             {
               "text": "Everything but not really.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff69ea8a51.ogg"
             },
             {
               "text": "Make a thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/edb6c7d2c4.ogg"
             },
             {
               "text": "Maybe sort of words now please.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b3c37a526.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_09_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Pick the prompt that gives more useful attention:",
           "options": [
             {
               "text": "Maybe sort of words now please.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b3c37a526.ogg"
             },
             {
               "text": "Write a short funny poem about a tired cat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c19d495fc0.ogg"
             },
             {
               "text": "Everything but not really.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff69ea8a51.ogg"
             },
             {
               "text": "Make a thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/edb6c7d2c4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_09_q3_v9.ogg"
         }
       ]
     },
@@ -784,12 +890,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
+          "prompt": "Type MUD and press Send to keep going!",
+          "target_display": "MUD",
           "targets": [
-            "cool"
+            "mud"
           ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "hint_wrong": "Type the word MUD (any case is fine)."
         }
       },
       "variations": [
@@ -798,234 +904,270 @@
           "options": [
             {
               "text": "Helpers pay attention to important words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a7cd9eb3ff.ogg"
             },
             {
               "text": "Attention helps the AI know that 'the cat' goes with 'sleeps' in a sentence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f223845ddc.ogg"
             },
             {
               "text": "AI attention runs out after 10 questions and needs a nap.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3e9e357ba4.ogg"
             },
             {
               "text": "Attention helps the helper guess what is next.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9244b3b91d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_09_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
               "text": "Attention means the AI focuses on the most important words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c777c479aa.ogg"
             },
             {
               "text": "Attention costs the AI a tiny coin every time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8951521cc9.ogg"
             },
             {
               "text": "Helpers pay attention to important words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a7cd9eb3ff.ogg"
             },
             {
               "text": "Attention is one of the big inventions that made modern AI smart.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1deefb858d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_09_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
               "text": "Attention helps the helper guess what is next.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9244b3b91d.ogg"
             },
             {
               "text": "Attention helps the AI know that 'the cat' goes with 'sleeps' in a sentence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f223845ddc.ogg"
             },
             {
               "text": "AI attention bounces off shiny objects.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8e39d43f27.ogg"
             },
             {
               "text": "Helpers pay attention to important words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a7cd9eb3ff.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_09_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
               "text": "Attention is how helpers stay on topic.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b480b3c4dd.ogg"
             },
             {
               "text": "Attention means the AI focuses on the most important words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c777c479aa.ogg"
             },
             {
               "text": "Helpers ignore every word equally and yawn.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/730eca44e3.ogg"
             },
             {
               "text": "The right word can change the whole answer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2f4149f8ad.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_09_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
               "text": "Strong words can override weak ones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3852997322.ogg"
             },
             {
               "text": "Big helpers look at many words at once.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/813e7e048a.ogg"
             },
             {
               "text": "Attention helps the AI know that 'the cat' goes with 'sleeps' in a sentence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f223845ddc.ogg"
             },
             {
               "text": "All words have the same meaning and one nose.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89a0f2e17b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_09_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
               "text": "Attention is one of the big inventions that made modern AI smart.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1deefb858d.ogg"
             },
             {
               "text": "Attention makes helpers slower and itchy.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ed4db6f02d.ogg"
             },
             {
               "text": "Without attention, an AI gets confused on long sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e4c444146f.ogg"
             },
             {
               "text": "Attention is how helpers stay on topic.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b480b3c4dd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_09_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
               "text": "Attention means the AI focuses on the most important words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c777c479aa.ogg"
             },
             {
               "text": "Big helpers look at many words at once.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/813e7e048a.ogg"
             },
             {
               "text": "One word never changes anything, ever, ever.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/40cb7c01a3.ogg"
             },
             {
               "text": "Attention helps the helper guess what is next.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9244b3b91d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_09_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
               "text": "Helpers pay attention to important words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a7cd9eb3ff.ogg"
             },
             {
               "text": "Strong words can override weak ones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3852997322.ogg"
             },
             {
               "text": "Attention is one of the big inventions that made modern AI smart.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1deefb858d.ogg"
             },
             {
               "text": "Helpers only read every other word backwards.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/872fa270bc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_09_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
               "text": "Words must do squats before being read.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89b82c546b.ogg"
             },
             {
               "text": "Attention helps the helper guess what is next.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9244b3b91d.ogg"
             },
             {
               "text": "Helpers focus on words that change meaning.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2b5596b54b.ogg"
             },
             {
               "text": "Some words matter more than others.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e12a5181d6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_09_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about word attention.",
           "options": [
             {
               "text": "Without attention, an AI gets confused on long sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e4c444146f.ogg"
             },
             {
               "text": "Helpers count vowels and pick the loudest.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2111f37623.ogg"
             },
             {
               "text": "The right word can change the whole answer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2f4149f8ad.ogg"
             },
             {
               "text": "Attention helps the AI know that 'the cat' goes with 'sleeps' in a sentence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f223845ddc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_09_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "🌈"
         }
       },
       "variations": [
@@ -1034,234 +1176,287 @@
           "options": [
             {
               "text": "Attention makes helpers slower and itchy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed4db6f02d.ogg"
             },
             {
               "text": "Attention costs the AI a tiny coin every time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8951521cc9.ogg"
             },
             {
               "text": "Helpers ignore every word equally and yawn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/730eca44e3.ogg"
             },
             {
               "text": "Helpers pay attention to important words.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a7cd9eb3ff.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_09_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about word attention?",
           "options": [
             {
               "text": "Helpers ignore every word equally and yawn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/730eca44e3.ogg"
             },
             {
               "text": "All sentences must have a polite frog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11ae2b68e1.ogg"
             },
             {
               "text": "Some words matter more than others.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e12a5181d6.ogg"
             },
             {
               "text": "Attention only works if you say 'pretty please' first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9cccba1ebb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_09_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about word attention?",
           "options": [
             {
               "text": "Attention helps the helper guess what is next.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9244b3b91d.ogg"
             },
             {
               "text": "Helpers only read every other word backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/872fa270bc.ogg"
             },
             {
               "text": "All sentences must have a polite frog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11ae2b68e1.ogg"
             },
             {
               "text": "All words have the same meaning and one nose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89a0f2e17b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_09_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about word attention?",
           "options": [
             {
               "text": "AI attention runs out after 10 questions and needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e9e357ba4.ogg"
             },
             {
               "text": "Big helpers look at many words at once.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/813e7e048a.ogg"
             },
             {
               "text": "Attention only works if you say 'pretty please' first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9cccba1ebb.ogg"
             },
             {
               "text": "All sentences must have a polite frog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11ae2b68e1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_09_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about word attention?",
           "options": [
             {
               "text": "The right word can change the whole answer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2f4149f8ad.ogg"
             },
             {
               "text": "Helpers count vowels and pick the loudest.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2111f37623.ogg"
             },
             {
               "text": "Helpers only read every other word backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/872fa270bc.ogg"
             },
             {
               "text": "AI attention bounces off shiny objects.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8e39d43f27.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_09_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about word attention?",
           "options": [
             {
               "text": "Helpers focus on words that change meaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2b5596b54b.ogg"
             },
             {
               "text": "Helpers count vowels and pick the loudest.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2111f37623.ogg"
             },
             {
               "text": "Helpers ignore every word equally and yawn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/730eca44e3.ogg"
             },
             {
               "text": "All words have the same meaning and one nose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89a0f2e17b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_09_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about word attention?",
           "options": [
             {
               "text": "One word never changes anything, ever, ever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/40cb7c01a3.ogg"
             },
             {
               "text": "Helpers ignore every word equally and yawn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/730eca44e3.ogg"
             },
             {
               "text": "Attention is how helpers stay on topic.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b480b3c4dd.ogg"
             },
             {
               "text": "Attention makes helpers slower and itchy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed4db6f02d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_09_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about word attention?",
           "options": [
             {
               "text": "Helpers ignore every word equally and yawn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/730eca44e3.ogg"
             },
             {
               "text": "Helpers count vowels and pick the loudest.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2111f37623.ogg"
             },
             {
               "text": "Helpers only read every other word backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/872fa270bc.ogg"
             },
             {
               "text": "Strong words can override weak ones.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3852997322.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_09_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about word attention?",
           "options": [
             {
               "text": "AI attention bounces off shiny objects.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8e39d43f27.ogg"
             },
             {
               "text": "One word never changes anything, ever, ever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/40cb7c01a3.ogg"
             },
             {
               "text": "Helpers only read every other word backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/872fa270bc.ogg"
             },
             {
               "text": "Attention means the AI focuses on the most important words.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c777c479aa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_09_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about word attention?",
           "options": [
             {
               "text": "AI attention runs out after 10 questions and needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e9e357ba4.ogg"
             },
             {
               "text": "Attention costs the AI a tiny coin every time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8951521cc9.ogg"
             },
             {
               "text": "All words have the same meaning and one nose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89a0f2e17b.ogg"
             },
             {
               "text": "Without attention, an AI gets confused on long sentences.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e4c444146f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_09_q5_v9.ogg"
         }
       ]
     },
     {
       "id": "q6",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
-          "targets": [
-            "win"
-          ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🚀",
+              "right": true
+            },
+            {
+              "glyph": "🥬",
+              "right": false
+            },
+            {
+              "glyph": "🧅",
+              "right": false
+            },
+            {
+              "glyph": "🪣",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -1270,220 +1465,260 @@
           "options": [
             {
               "text": "Picking the prettiest word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7da0d4dca.ogg"
             },
             {
               "text": "Knowing that 'dog' is the one doing the chasing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa2398a8cd.ogg"
             },
             {
               "text": "Counting how many letters there are.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/351e23f732.ogg"
             },
             {
               "text": "Spelling the words backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44e31f80de.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_09_q6_v0.ogg"
         },
         {
           "prompt": "Quick! In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
               "text": "Picking the prettiest word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7da0d4dca.ogg"
             },
             {
               "text": "Spelling the words backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44e31f80de.ogg"
             },
             {
               "text": "Counting how many letters there are.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/351e23f732.ogg"
             },
             {
               "text": "Knowing that 'dog' is the one doing the chasing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa2398a8cd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_09_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
               "text": "Knowing that 'dog' is the one doing the chasing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa2398a8cd.ogg"
             },
             {
               "text": "Spelling the words backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44e31f80de.ogg"
             },
             {
               "text": "Picking the prettiest word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7da0d4dca.ogg"
             },
             {
               "text": "Counting how many letters there are.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/351e23f732.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_09_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
               "text": "Knowing that 'dog' is the one doing the chasing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa2398a8cd.ogg"
             },
             {
               "text": "Spelling the words backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44e31f80de.ogg"
             },
             {
               "text": "Picking the prettiest word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7da0d4dca.ogg"
             },
             {
               "text": "Counting how many letters there are.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/351e23f732.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_09_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
               "text": "Knowing that 'dog' is the one doing the chasing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa2398a8cd.ogg"
             },
             {
               "text": "Spelling the words backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44e31f80de.ogg"
             },
             {
               "text": "Counting how many letters there are.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/351e23f732.ogg"
             },
             {
               "text": "Picking the prettiest word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7da0d4dca.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_09_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
               "text": "Picking the prettiest word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7da0d4dca.ogg"
             },
             {
               "text": "Knowing that 'dog' is the one doing the chasing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa2398a8cd.ogg"
             },
             {
               "text": "Spelling the words backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44e31f80de.ogg"
             },
             {
               "text": "Counting how many letters there are.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/351e23f732.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_09_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
               "text": "Spelling the words backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44e31f80de.ogg"
             },
             {
               "text": "Counting how many letters there are.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/351e23f732.ogg"
             },
             {
               "text": "Picking the prettiest word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7da0d4dca.ogg"
             },
             {
               "text": "Knowing that 'dog' is the one doing the chasing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa2398a8cd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_09_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
               "text": "Knowing that 'dog' is the one doing the chasing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa2398a8cd.ogg"
             },
             {
               "text": "Counting how many letters there are.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/351e23f732.ogg"
             },
             {
               "text": "Picking the prettiest word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7da0d4dca.ogg"
             },
             {
               "text": "Spelling the words backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44e31f80de.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_09_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
               "text": "Counting how many letters there are.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/351e23f732.ogg"
             },
             {
               "text": "Spelling the words backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44e31f80de.ogg"
             },
             {
               "text": "Picking the prettiest word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7da0d4dca.ogg"
             },
             {
               "text": "Knowing that 'dog' is the one doing the chasing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa2398a8cd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_09_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: In the sentence 'The dog chased the ball', what does AI 'attention' help with?",
           "options": [
             {
               "text": "Counting how many letters there are.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/351e23f732.ogg"
             },
             {
               "text": "Picking the prettiest word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7da0d4dca.ogg"
             },
             {
               "text": "Knowing that 'dog' is the one doing the chasing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa2398a8cd.ogg"
             },
             {
               "text": "Spelling the words backwards.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44e31f80de.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_09_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_09_q6_v9.ogg"
         }
       ]
     }

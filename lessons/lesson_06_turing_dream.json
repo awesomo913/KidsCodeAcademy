@@ -55,269 +55,299 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "history-scene",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Watch the scene, then answer the question!",
-          "scene": {
-            "id": "turing",
-            "check": {
-              "prompt": "What did the head do across the tape?",
-              "choices": [
-                {
-                  "label": "Read each square one at a time",
-                  "right": true
-                },
-                {
-                  "label": "Threw the tape away",
-                  "right": false
-                },
-                {
-                  "label": "Sang a song",
-                  "right": false
-                },
-                {
-                  "label": "Erased everything",
-                  "right": false
-                }
-              ]
+          "prompt": "🤖 Match the dreamer to the dream!",
+          "pairs": [
+            {
+              "left": "Turing",
+              "right": "🤖 Smart machine"
+            },
+            {
+              "left": "A puzzle",
+              "right": "🧩 Hard problem"
+            },
+            {
+              "left": "An idea",
+              "right": "💡 Imagination"
             }
-          }
+          ]
         }
       },
       "variations": [
         {
-          "prompt": "What is the Turing dream?",
+          "prompt": "🦔 Bytey's pop quiz on Turing's Big Dream — go!",
           "options": [
             {
               "text": "Turing's machine could only think on Sundays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9da65273a.ogg"
             },
             {
               "text": "Turing built a flying horse out of envelopes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e4fa7fcb33.ogg"
             },
             {
               "text": "He lived on the moon with a small dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2a49222f60.ogg"
             },
             {
               "text": "Alan Turing dreamed of a thinking machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/12df596f06.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_06_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about the Turing dream?",
           "options": [
             {
               "text": "He invented bubble gum by accident.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be3c81a0d4.ogg"
             },
             {
               "text": "He wrote rules so a machine could solve puzzles.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1e1e700411.ogg"
             },
             {
               "text": "He invented Tuesday but it was confusing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4989b2f8db.ogg"
             },
             {
               "text": "Turing taught his computer to bark like a dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb0639a0e7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_06_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the Turing dream.",
           "options": [
             {
               "text": "Alan Turing dreamed of a thinking machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12df596f06.ogg"
             },
             {
               "text": "His ideas led to today's computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/acc59a72ac.ogg"
             },
             {
               "text": "He invented bubble gum by accident.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/be3c81a0d4.ogg"
             },
             {
               "text": "Turing was a big dreamer about the future.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5620b117d9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_06_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about the Turing dream. What should he say?",
           "options": [
             {
               "text": "Turing taught his computer to bark like a dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb0639a0e7.ogg"
             },
             {
               "text": "He lived on the moon with a small dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2a49222f60.ogg"
             },
             {
               "text": "His ideas led to today's computers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/acc59a72ac.ogg"
             },
             {
               "text": "Turing was a singing chef who hated soup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9ca5f893e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_06_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about the Turing dream is a GOOD rule?",
           "options": [
             {
               "text": "Turing's machine could only think on Sundays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9da65273a.ogg"
             },
             {
               "text": "He invented bubble gum by accident.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be3c81a0d4.ogg"
             },
             {
               "text": "Turing imagined machines that could learn.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/660298ae3f.ogg"
             },
             {
               "text": "He lived on the moon with a small dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2a49222f60.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_06_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about the Turing dream, ___",
           "options": [
             {
               "text": "He battled robots in a hot air balloon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d1343af9d3.ogg"
             },
             {
               "text": "He asked: can a machine think like a person?",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4ef236c7db.ogg"
             },
             {
               "text": "Turing built the first computer out of pancakes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/91d36235ed.ogg"
             },
             {
               "text": "He thought computers would never work, ever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9d0198868.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_06_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about the Turing dream. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "His ideas led to today's computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/acc59a72ac.ogg"
             },
             {
               "text": "Turing imagined machines that could learn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/660298ae3f.ogg"
             },
             {
               "text": "He invented Tuesday but it was confusing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4989b2f8db.ogg"
             },
             {
               "text": "He asked: can a machine think like a person?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4ef236c7db.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_06_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with the Turing dream?",
           "options": [
             {
               "text": "Turing was a singing chef who hated soup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9ca5f893e.ogg"
             },
             {
               "text": "Turing only spoke in rhyme and shouted at clouds.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dde6c16746.ogg"
             },
             {
               "text": "Turing was a big dreamer about the future.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5620b117d9.ogg"
             },
             {
               "text": "He lived on the moon with a small dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2a49222f60.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_06_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about the Turing dream is silly. Pick the silly one!",
           "options": [
             {
               "text": "Alan Turing dreamed of a machine that could think like a person.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5f90ba5565.ogg"
             },
             {
               "text": "His ideas led to today's computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/acc59a72ac.ogg"
             },
             {
               "text": "He asked: can a machine think like a person?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4ef236c7db.ogg"
             },
             {
               "text": "Turing built the first computer out of pancakes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/91d36235ed.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_06_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about the Turing dream. Which fact would help him?",
           "options": [
             {
               "text": "His idea became the blueprint for every modern computer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fb4a151c35.ogg"
             },
             {
               "text": "Turing only spoke in rhyme and shouted at clouds.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dde6c16746.ogg"
             },
             {
               "text": "He invented Tuesday but it was confusing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4989b2f8db.ogg"
             },
             {
               "text": "He invented bubble gum by accident.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be3c81a0d4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_06_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "How did Turing dream up smart machines? Order it:",
+          "steps": [
+            "Notice a hard puzzle",
+            "Imagine a machine that solves it",
+            "Test the idea"
+          ]
         }
       },
       "variations": [
@@ -326,234 +356,287 @@
           "options": [
             {
               "text": "Because thinking machines need hats too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/518fe4d185.ogg"
             },
             {
               "text": "To pick the best machine for the band.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c436e873e5.ogg"
             },
             {
               "text": "Today we ask the same about helpers like Claude.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3942f5e7bb.ogg"
             },
             {
               "text": "So machines can vote in elections.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c5cbb57cd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_06_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Turing's big question was 'can a machine think?' Why does that question still matter?",
           "options": [
             {
               "text": "Today we ask the same about helpers like Claude.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3942f5e7bb.ogg"
             },
             {
               "text": "Because thinking machines need hats too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/518fe4d185.ogg"
             },
             {
               "text": "So machines can vote in elections.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c5cbb57cd.ogg"
             },
             {
               "text": "To pick the best machine for the band.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c436e873e5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_06_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Turing's big question was 'can a machine think?' Why does that question still matter?",
           "options": [
             {
               "text": "Because thinking machines need hats too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/518fe4d185.ogg"
             },
             {
               "text": "To pick the best machine for the band.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c436e873e5.ogg"
             },
             {
               "text": "Today we ask the same about helpers like Claude.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3942f5e7bb.ogg"
             },
             {
               "text": "So machines can vote in elections.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c5cbb57cd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_06_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Turing's big question was 'can a machine think?' Why does that question still matter?",
           "options": [
             {
               "text": "Today we ask the same about helpers like Claude.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3942f5e7bb.ogg"
             },
             {
               "text": "So machines can vote in elections.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c5cbb57cd.ogg"
             },
             {
               "text": "To pick the best machine for the band.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c436e873e5.ogg"
             },
             {
               "text": "Because thinking machines need hats too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/518fe4d185.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_06_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Turing's big question was 'can a machine think?' Why does that question still matter?",
           "options": [
             {
               "text": "So machines can vote in elections.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c5cbb57cd.ogg"
             },
             {
               "text": "Today we ask the same about helpers like Claude.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3942f5e7bb.ogg"
             },
             {
               "text": "Because thinking machines need hats too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/518fe4d185.ogg"
             },
             {
               "text": "To pick the best machine for the band.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c436e873e5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_06_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Turing's big question was 'can a machine think?' Why does that question still matter?",
           "options": [
             {
               "text": "To pick the best machine for the band.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c436e873e5.ogg"
             },
             {
               "text": "Because thinking machines need hats too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/518fe4d185.ogg"
             },
             {
               "text": "Today we ask the same about helpers like Claude.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3942f5e7bb.ogg"
             },
             {
               "text": "So machines can vote in elections.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c5cbb57cd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_06_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Turing's big question was 'can a machine think?' Why does that question still matter?",
           "options": [
             {
               "text": "Today we ask the same about helpers like Claude.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3942f5e7bb.ogg"
             },
             {
               "text": "To pick the best machine for the band.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c436e873e5.ogg"
             },
             {
               "text": "So machines can vote in elections.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c5cbb57cd.ogg"
             },
             {
               "text": "Because thinking machines need hats too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/518fe4d185.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_06_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Turing's big question was 'can a machine think?' Why does that question still matter?",
           "options": [
             {
               "text": "Today we ask the same about helpers like Claude.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3942f5e7bb.ogg"
             },
             {
               "text": "So machines can vote in elections.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c5cbb57cd.ogg"
             },
             {
               "text": "To pick the best machine for the band.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c436e873e5.ogg"
             },
             {
               "text": "Because thinking machines need hats too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/518fe4d185.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_06_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Turing's big question was 'can a machine think?' Why does that question still matter?",
           "options": [
             {
               "text": "So machines can vote in elections.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c5cbb57cd.ogg"
             },
             {
               "text": "Because thinking machines need hats too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/518fe4d185.ogg"
             },
             {
               "text": "To pick the best machine for the band.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c436e873e5.ogg"
             },
             {
               "text": "Today we ask the same about helpers like Claude.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3942f5e7bb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_06_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Turing's big question was 'can a machine think?' Why does that question still matter?",
           "options": [
             {
               "text": "Today we ask the same about helpers like Claude.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3942f5e7bb.ogg"
             },
             {
               "text": "So machines can vote in elections.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c5cbb57cd.ogg"
             },
             {
               "text": "To pick the best machine for the band.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c436e873e5.ogg"
             },
             {
               "text": "Because thinking machines need hats too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/518fe4d185.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_06_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🎮",
+              "right": true
+            },
+            {
+              "glyph": "🥦",
+              "right": false
+            },
+            {
+              "glyph": "📚",
+              "right": false
+            },
+            {
+              "glyph": "🧦",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -562,234 +645,270 @@
           "options": [
             {
               "text": "A machine that learns to play a game by trying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdc1552e0d.ogg"
             },
             {
               "text": "A machine that lays eggs in your slippers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e013fe70a6.ogg"
             },
             {
               "text": "A machine that yells when it's bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804aea9058.ogg"
             },
             {
               "text": "A machine that judges sandwiches.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec00d07963.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_06_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Pick the most Turing-y idea:",
           "options": [
             {
               "text": "A machine that lays eggs in your slippers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e013fe70a6.ogg"
             },
             {
               "text": "A machine that judges sandwiches.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec00d07963.ogg"
             },
             {
               "text": "A machine that learns to play a game by trying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdc1552e0d.ogg"
             },
             {
               "text": "A machine that yells when it's bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804aea9058.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_06_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Pick the most Turing-y idea:",
           "options": [
             {
               "text": "A machine that judges sandwiches.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec00d07963.ogg"
             },
             {
               "text": "A machine that lays eggs in your slippers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e013fe70a6.ogg"
             },
             {
               "text": "A machine that yells when it's bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804aea9058.ogg"
             },
             {
               "text": "A machine that learns to play a game by trying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdc1552e0d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_06_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Pick the most Turing-y idea:",
           "options": [
             {
               "text": "A machine that yells when it's bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804aea9058.ogg"
             },
             {
               "text": "A machine that judges sandwiches.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec00d07963.ogg"
             },
             {
               "text": "A machine that lays eggs in your slippers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e013fe70a6.ogg"
             },
             {
               "text": "A machine that learns to play a game by trying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdc1552e0d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_06_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Pick the most Turing-y idea:",
           "options": [
             {
               "text": "A machine that judges sandwiches.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec00d07963.ogg"
             },
             {
               "text": "A machine that learns to play a game by trying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdc1552e0d.ogg"
             },
             {
               "text": "A machine that yells when it's bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804aea9058.ogg"
             },
             {
               "text": "A machine that lays eggs in your slippers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e013fe70a6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_06_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Pick the most Turing-y idea:",
           "options": [
             {
               "text": "A machine that learns to play a game by trying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdc1552e0d.ogg"
             },
             {
               "text": "A machine that judges sandwiches.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec00d07963.ogg"
             },
             {
               "text": "A machine that yells when it's bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804aea9058.ogg"
             },
             {
               "text": "A machine that lays eggs in your slippers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e013fe70a6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_06_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Pick the most Turing-y idea:",
           "options": [
             {
               "text": "A machine that lays eggs in your slippers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e013fe70a6.ogg"
             },
             {
               "text": "A machine that learns to play a game by trying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdc1552e0d.ogg"
             },
             {
               "text": "A machine that yells when it's bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804aea9058.ogg"
             },
             {
               "text": "A machine that judges sandwiches.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec00d07963.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_06_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Pick the most Turing-y idea:",
           "options": [
             {
               "text": "A machine that learns to play a game by trying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdc1552e0d.ogg"
             },
             {
               "text": "A machine that yells when it's bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804aea9058.ogg"
             },
             {
               "text": "A machine that judges sandwiches.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec00d07963.ogg"
             },
             {
               "text": "A machine that lays eggs in your slippers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e013fe70a6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_06_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Pick the most Turing-y idea:",
           "options": [
             {
               "text": "A machine that lays eggs in your slippers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e013fe70a6.ogg"
             },
             {
               "text": "A machine that judges sandwiches.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec00d07963.ogg"
             },
             {
               "text": "A machine that yells when it's bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804aea9058.ogg"
             },
             {
               "text": "A machine that learns to play a game by trying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdc1552e0d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_06_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Pick the most Turing-y idea:",
           "options": [
             {
               "text": "A machine that yells when it's bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804aea9058.ogg"
             },
             {
               "text": "A machine that learns to play a game by trying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdc1552e0d.ogg"
             },
             {
               "text": "A machine that judges sandwiches.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec00d07963.ogg"
             },
             {
               "text": "A machine that lays eggs in your slippers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e013fe70a6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_06_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🚀"
         }
       },
       "variations": [
@@ -798,234 +917,274 @@
           "options": [
             {
               "text": "Alan Turing dreamed of a thinking machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12df596f06.ogg"
             },
             {
               "text": "He showed that machines could solve any problem they were given steps for.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0a3d2da4ff.ogg"
             },
             {
               "text": "Turing's machine could only think on Sundays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a9da65273a.ogg"
             },
             {
               "text": "Turing helped end a big war using code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2682600934.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_06_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about the Turing dream.",
           "options": [
             {
               "text": "Alan Turing dreamed of a machine that could think like a person.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5f90ba5565.ogg"
             },
             {
               "text": "Turing taught his computer to bark like a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb0639a0e7.ogg"
             },
             {
               "text": "Alan Turing dreamed of a thinking machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12df596f06.ogg"
             },
             {
               "text": "The 'Turing test' asks: can you tell a person from a computer just by chatting?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/58889abfab.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_06_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about the Turing dream.",
           "options": [
             {
               "text": "Turing helped end a big war using code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2682600934.ogg"
             },
             {
               "text": "He showed that machines could solve any problem they were given steps for.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0a3d2da4ff.ogg"
             },
             {
               "text": "Turing's first computer was the size of a peanut.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/34fd6c5806.ogg"
             },
             {
               "text": "Alan Turing dreamed of a thinking machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12df596f06.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_06_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about the Turing dream.",
           "options": [
             {
               "text": "He invented a test for machine intelligence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29c8f89c9c.ogg"
             },
             {
               "text": "Alan Turing dreamed of a machine that could think like a person.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5f90ba5565.ogg"
             },
             {
               "text": "Turing was a singing chef who hated soup.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e9ca5f893e.ogg"
             },
             {
               "text": "Turing imagined machines that could learn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/660298ae3f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_06_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about the Turing dream.",
           "options": [
             {
               "text": "Turing was a big dreamer about the future.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5620b117d9.ogg"
             },
             {
               "text": "His ideas led to today's computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/acc59a72ac.ogg"
             },
             {
               "text": "He showed that machines could solve any problem they were given steps for.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0a3d2da4ff.ogg"
             },
             {
               "text": "Turing built a flying horse out of envelopes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e4fa7fcb33.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_06_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about the Turing dream.",
           "options": [
             {
               "text": "The 'Turing test' asks: can you tell a person from a computer just by chatting?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/58889abfab.ogg"
             },
             {
               "text": "He invented bubble gum by accident.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/be3c81a0d4.ogg"
             },
             {
               "text": "His idea became the blueprint for every modern computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fb4a151c35.ogg"
             },
             {
               "text": "He invented a test for machine intelligence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29c8f89c9c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_06_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about the Turing dream.",
           "options": [
             {
               "text": "Alan Turing dreamed of a machine that could think like a person.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5f90ba5565.ogg"
             },
             {
               "text": "His ideas led to today's computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/acc59a72ac.ogg"
             },
             {
               "text": "He thought computers would never work, ever.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f9d0198868.ogg"
             },
             {
               "text": "Turing helped end a big war using code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2682600934.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_06_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about the Turing dream.",
           "options": [
             {
               "text": "Alan Turing dreamed of a thinking machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12df596f06.ogg"
             },
             {
               "text": "Turing was a big dreamer about the future.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5620b117d9.ogg"
             },
             {
               "text": "The 'Turing test' asks: can you tell a person from a computer just by chatting?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/58889abfab.ogg"
             },
             {
               "text": "He lived on the moon with a small dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2a49222f60.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_06_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about the Turing dream.",
           "options": [
             {
               "text": "Turing only spoke in rhyme and shouted at clouds.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/dde6c16746.ogg"
             },
             {
               "text": "Turing helped end a big war using code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2682600934.ogg"
             },
             {
               "text": "He asked: can a machine think like a person?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4ef236c7db.ogg"
             },
             {
               "text": "He wrote rules so a machine could solve puzzles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e1e700411.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_06_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about the Turing dream.",
           "options": [
             {
               "text": "His idea became the blueprint for every modern computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fb4a151c35.ogg"
             },
             {
               "text": "He invented Tuesday but it was confusing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4989b2f8db.ogg"
             },
             {
               "text": "Turing imagined machines that could learn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/660298ae3f.ogg"
             },
             {
               "text": "He showed that machines could solve any problem they were given steps for.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0a3d2da4ff.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_06_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "How did Turing dream up smart machines? Order it:",
+          "steps": [
+            "Notice a hard puzzle",
+            "Imagine a machine that solves it",
+            "Test the idea"
+          ]
         }
       },
       "variations": [
@@ -1034,234 +1193,283 @@
           "options": [
             {
               "text": "He invented bubble gum by accident.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be3c81a0d4.ogg"
             },
             {
               "text": "Turing taught his computer to bark like a dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb0639a0e7.ogg"
             },
             {
               "text": "Turing was a singing chef who hated soup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9ca5f893e.ogg"
             },
             {
               "text": "Alan Turing dreamed of a thinking machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/12df596f06.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_06_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about the Turing dream?",
           "options": [
             {
               "text": "Turing was a singing chef who hated soup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9ca5f893e.ogg"
             },
             {
               "text": "He battled robots in a hot air balloon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d1343af9d3.ogg"
             },
             {
               "text": "He wrote rules so a machine could solve puzzles.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1e1e700411.ogg"
             },
             {
               "text": "Turing built the first computer out of pancakes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/91d36235ed.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_06_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about the Turing dream?",
           "options": [
             {
               "text": "Turing helped end a big war using code.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2682600934.ogg"
             },
             {
               "text": "He lived on the moon with a small dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2a49222f60.ogg"
             },
             {
               "text": "He battled robots in a hot air balloon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d1343af9d3.ogg"
             },
             {
               "text": "Turing built a flying horse out of envelopes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e4fa7fcb33.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_06_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about the Turing dream?",
           "options": [
             {
               "text": "Turing's machine could only think on Sundays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9da65273a.ogg"
             },
             {
               "text": "His ideas led to today's computers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/acc59a72ac.ogg"
             },
             {
               "text": "Turing built the first computer out of pancakes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/91d36235ed.ogg"
             },
             {
               "text": "He battled robots in a hot air balloon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d1343af9d3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_06_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about the Turing dream?",
           "options": [
             {
               "text": "Turing imagined machines that could learn.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/660298ae3f.ogg"
             },
             {
               "text": "He invented Tuesday but it was confusing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4989b2f8db.ogg"
             },
             {
               "text": "He lived on the moon with a small dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2a49222f60.ogg"
             },
             {
               "text": "Turing's first computer was the size of a peanut.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34fd6c5806.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_06_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about the Turing dream?",
           "options": [
             {
               "text": "He asked: can a machine think like a person?",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4ef236c7db.ogg"
             },
             {
               "text": "He invented Tuesday but it was confusing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4989b2f8db.ogg"
             },
             {
               "text": "Turing was a singing chef who hated soup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9ca5f893e.ogg"
             },
             {
               "text": "Turing built a flying horse out of envelopes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e4fa7fcb33.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_06_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about the Turing dream?",
           "options": [
             {
               "text": "He thought computers would never work, ever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9d0198868.ogg"
             },
             {
               "text": "Turing was a singing chef who hated soup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9ca5f893e.ogg"
             },
             {
               "text": "He invented a test for machine intelligence.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/29c8f89c9c.ogg"
             },
             {
               "text": "He invented bubble gum by accident.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be3c81a0d4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_06_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about the Turing dream?",
           "options": [
             {
               "text": "Turing was a singing chef who hated soup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9ca5f893e.ogg"
             },
             {
               "text": "He invented Tuesday but it was confusing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4989b2f8db.ogg"
             },
             {
               "text": "He lived on the moon with a small dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2a49222f60.ogg"
             },
             {
               "text": "Turing was a big dreamer about the future.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5620b117d9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_06_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about the Turing dream?",
           "options": [
             {
               "text": "Turing's first computer was the size of a peanut.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34fd6c5806.ogg"
             },
             {
               "text": "He thought computers would never work, ever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9d0198868.ogg"
             },
             {
               "text": "He lived on the moon with a small dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2a49222f60.ogg"
             },
             {
               "text": "Alan Turing dreamed of a machine that could think like a person.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5f90ba5565.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_06_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about the Turing dream?",
           "options": [
             {
               "text": "Turing's machine could only think on Sundays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9da65273a.ogg"
             },
             {
               "text": "Turing taught his computer to bark like a dog.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb0639a0e7.ogg"
             },
             {
               "text": "Turing built a flying horse out of envelopes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e4fa7fcb33.ogg"
             },
             {
               "text": "His idea became the blueprint for every modern computer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fb4a151c35.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_06_q5_v9.ogg"
         }
       ]
     },
     {
       "id": "q6",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
-          "targets": [
-            "win"
-          ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Save",
+              "right": "💾"
+            },
+            {
+              "left": "Share",
+              "right": "📤"
+            },
+            {
+              "left": "Build",
+              "right": "🔨"
+            }
+          ]
         }
       },
       "variations": [
@@ -1270,220 +1478,260 @@
           "options": [
             {
               "text": "It made computers cheaper to grow on trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d18f54d9d.ogg"
             },
             {
               "text": "It made math illegal in some places.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1c82669c25.ogg"
             },
             {
               "text": "It showed every computer could do anything if given the right steps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c99f7e275c.ogg"
             },
             {
               "text": "It helped computers learn to whistle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/febe398458.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_06_q6_v0.ogg"
         },
         {
           "prompt": "Quick! Why did Turing's idea matter so much for the world?",
           "options": [
             {
               "text": "It helped computers learn to whistle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/febe398458.ogg"
             },
             {
               "text": "It made computers cheaper to grow on trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d18f54d9d.ogg"
             },
             {
               "text": "It made math illegal in some places.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1c82669c25.ogg"
             },
             {
               "text": "It showed every computer could do anything if given the right steps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c99f7e275c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_06_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why did Turing's idea matter so much for the world?",
           "options": [
             {
               "text": "It made computers cheaper to grow on trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d18f54d9d.ogg"
             },
             {
               "text": "It showed every computer could do anything if given the right steps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c99f7e275c.ogg"
             },
             {
               "text": "It helped computers learn to whistle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/febe398458.ogg"
             },
             {
               "text": "It made math illegal in some places.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1c82669c25.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_06_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why did Turing's idea matter so much for the world?",
           "options": [
             {
               "text": "It made math illegal in some places.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1c82669c25.ogg"
             },
             {
               "text": "It showed every computer could do anything if given the right steps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c99f7e275c.ogg"
             },
             {
               "text": "It helped computers learn to whistle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/febe398458.ogg"
             },
             {
               "text": "It made computers cheaper to grow on trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d18f54d9d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_06_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — Why did Turing's idea matter so much for the world?",
           "options": [
             {
               "text": "It made math illegal in some places.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1c82669c25.ogg"
             },
             {
               "text": "It helped computers learn to whistle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/febe398458.ogg"
             },
             {
               "text": "It made computers cheaper to grow on trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d18f54d9d.ogg"
             },
             {
               "text": "It showed every computer could do anything if given the right steps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c99f7e275c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_06_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why did Turing's idea matter so much for the world?",
           "options": [
             {
               "text": "It showed every computer could do anything if given the right steps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c99f7e275c.ogg"
             },
             {
               "text": "It made computers cheaper to grow on trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d18f54d9d.ogg"
             },
             {
               "text": "It helped computers learn to whistle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/febe398458.ogg"
             },
             {
               "text": "It made math illegal in some places.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1c82669c25.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_06_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why did Turing's idea matter so much for the world?",
           "options": [
             {
               "text": "It helped computers learn to whistle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/febe398458.ogg"
             },
             {
               "text": "It made math illegal in some places.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1c82669c25.ogg"
             },
             {
               "text": "It made computers cheaper to grow on trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d18f54d9d.ogg"
             },
             {
               "text": "It showed every computer could do anything if given the right steps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c99f7e275c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_06_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — Why did Turing's idea matter so much for the world?",
           "options": [
             {
               "text": "It made computers cheaper to grow on trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d18f54d9d.ogg"
             },
             {
               "text": "It helped computers learn to whistle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/febe398458.ogg"
             },
             {
               "text": "It made math illegal in some places.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1c82669c25.ogg"
             },
             {
               "text": "It showed every computer could do anything if given the right steps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c99f7e275c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_06_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: Why did Turing's idea matter so much for the world?",
           "options": [
             {
               "text": "It helped computers learn to whistle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/febe398458.ogg"
             },
             {
               "text": "It showed every computer could do anything if given the right steps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c99f7e275c.ogg"
             },
             {
               "text": "It made math illegal in some places.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1c82669c25.ogg"
             },
             {
               "text": "It made computers cheaper to grow on trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d18f54d9d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_06_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why did Turing's idea matter so much for the world?",
           "options": [
             {
               "text": "It made math illegal in some places.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1c82669c25.ogg"
             },
             {
               "text": "It helped computers learn to whistle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/febe398458.ogg"
             },
             {
               "text": "It made computers cheaper to grow on trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d18f54d9d.ogg"
             },
             {
               "text": "It showed every computer could do anything if given the right steps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c99f7e275c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_06_q6_v9.ogg"
         }
       ]
     },
@@ -1492,12 +1740,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PLAY and press Send to keep going!",
-          "target_display": "PLAY",
+          "prompt": "Type DIRT and press Send to keep going!",
+          "target_display": "DIRT",
           "targets": [
-            "play"
+            "dirt"
           ],
-          "hint_wrong": "Type the word PLAY (any case is fine)."
+          "hint_wrong": "Type the word DIRT (any case is fine)."
         }
       },
       "variations": [
@@ -1506,220 +1754,260 @@
           "options": [
             {
               "text": "He invented Tuesday but it was confusing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4989b2f8db.ogg"
             },
             {
               "text": "He wrote rules so a machine could solve puzzles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e1e700411.ogg"
             },
             {
               "text": "Alan Turing dreamed of a machine that could think like a person.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5f90ba5565.ogg"
             },
             {
               "text": "The 'Turing test' asks: can you tell a person from a computer just by chatting?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/58889abfab.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q7_v0.wav"
+          "_audio": "assets/audio/q/lesson_06_q7_v0.ogg"
         },
         {
           "prompt": "Listen up — Bytey claims something about the Turing dream. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Alan Turing dreamed of a thinking machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12df596f06.ogg"
             },
             {
               "text": "His ideas led to today's computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/acc59a72ac.ogg"
             },
             {
               "text": "Turing helped end a big war using code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2682600934.ogg"
             },
             {
               "text": "He battled robots in a hot air balloon.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d1343af9d3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q7_v1.wav"
+          "_audio": "assets/audio/q/lesson_06_q7_v1.ogg"
         },
         {
           "prompt": "Think about this: Bytey claims something about the Turing dream. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "He invented a test for machine intelligence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29c8f89c9c.ogg"
             },
             {
               "text": "The 'Turing test' asks: can you tell a person from a computer just by chatting?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/58889abfab.ogg"
             },
             {
               "text": "His idea became the blueprint for every modern computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fb4a151c35.ogg"
             },
             {
               "text": "Turing built the first computer out of pancakes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/91d36235ed.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q7_v2.wav"
+          "_audio": "assets/audio/q/lesson_06_q7_v2.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey claims something about the Turing dream. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "He wrote rules so a machine could solve puzzles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e1e700411.ogg"
             },
             {
               "text": "Turing's machine could only think on Sundays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a9da65273a.ogg"
             },
             {
               "text": "He invented a test for machine intelligence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29c8f89c9c.ogg"
             },
             {
               "text": "Turing imagined machines that could learn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/660298ae3f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q7_v3.wav"
+          "_audio": "assets/audio/q/lesson_06_q7_v3.ogg"
         },
         {
           "prompt": "Brain time: Bytey claims something about the Turing dream. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "He showed that machines could solve any problem they were given steps for.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0a3d2da4ff.ogg"
             },
             {
               "text": "Turing taught his computer to bark like a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb0639a0e7.ogg"
             },
             {
               "text": "Alan Turing dreamed of a thinking machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12df596f06.ogg"
             },
             {
               "text": "Alan Turing dreamed of a machine that could think like a person.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5f90ba5565.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q7_v4.wav"
+          "_audio": "assets/audio/q/lesson_06_q7_v4.ogg"
         },
         {
           "prompt": "Bytey claims something about the Turing dream. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "He asked: can a machine think like a person?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4ef236c7db.ogg"
             },
             {
               "text": "Turing's first computer was the size of a peanut.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/34fd6c5806.ogg"
             },
             {
               "text": "Alan Turing dreamed of a machine that could think like a person.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5f90ba5565.ogg"
             },
             {
               "text": "Turing was a big dreamer about the future.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5620b117d9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q7_v5.wav"
+          "_audio": "assets/audio/q/lesson_06_q7_v5.ogg"
         },
         {
           "prompt": "Quick! Bytey claims something about the Turing dream. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Turing helped end a big war using code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2682600934.ogg"
             },
             {
               "text": "Turing was a singing chef who hated soup.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e9ca5f893e.ogg"
             },
             {
               "text": "He invented a test for machine intelligence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29c8f89c9c.ogg"
             },
             {
               "text": "He wrote rules so a machine could solve puzzles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e1e700411.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q7_v6.wav"
+          "_audio": "assets/audio/q/lesson_06_q7_v6.ogg"
         },
         {
           "prompt": "Hey friend — Bytey claims something about the Turing dream. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "He invented a test for machine intelligence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29c8f89c9c.ogg"
             },
             {
               "text": "He wrote rules so a machine could solve puzzles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e1e700411.ogg"
             },
             {
               "text": "Turing built a flying horse out of envelopes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e4fa7fcb33.ogg"
             },
             {
               "text": "His ideas led to today's computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/acc59a72ac.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q7_v7.wav"
+          "_audio": "assets/audio/q/lesson_06_q7_v7.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey claims something about the Turing dream. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "He invented bubble gum by accident.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/be3c81a0d4.ogg"
             },
             {
               "text": "Alan Turing dreamed of a thinking machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12df596f06.ogg"
             },
             {
               "text": "The 'Turing test' asks: can you tell a person from a computer just by chatting?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/58889abfab.ogg"
             },
             {
               "text": "He invented a test for machine intelligence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29c8f89c9c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q7_v8.wav"
+          "_audio": "assets/audio/q/lesson_06_q7_v8.ogg"
         },
         {
           "prompt": "Tell me — Bytey claims something about the Turing dream. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Turing helped end a big war using code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2682600934.ogg"
             },
             {
               "text": "He asked: can a machine think like a person?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4ef236c7db.ogg"
             },
             {
               "text": "He thought computers would never work, ever.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f9d0198868.ogg"
             },
             {
               "text": "He invented a test for machine intelligence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29c8f89c9c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_06_q7_v9.wav"
+          "_audio": "assets/audio/q/lesson_06_q7_v9.ogg"
         }
       ]
     }

@@ -49,263 +49,286 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Which bug report is best?",
-          "choices": [
-            {
-              "label": "It is broken!",
-              "right": false
-            },
-            {
-              "label": "Help.",
-              "right": false
-            },
-            {
-              "label": "The score went to zero when I touched a coin.",
-              "right": true
-            },
-            {
-              "label": "Idk what happened.",
-              "right": false
-            }
-          ]
+          "prompt": "Type STAR and press Send to keep going!",
+          "target_display": "STAR",
+          "targets": [
+            "star"
+          ],
+          "hint_wrong": "Type the word STAR (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "What is telling what happened?",
+          "prompt": "🦔 Bytey's pop quiz on Tell the Robot What Happened — go!",
           "options": [
             {
               "text": "Always include 5 emoji per sentence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a61a39651.ogg"
             },
             {
               "text": "Hide what you expected — let them guess.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f7920cc885.ogg"
             },
             {
               "text": "Stories make bugs harder and need a chorus.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f94f3f5997.ogg"
             },
             {
               "text": "Explain the steps you took.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c74e5ad1df.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_30_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about telling what happened?",
           "options": [
             {
               "text": "Sing the bug a lullaby until it falls asleep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8f2a843bfc.ogg"
             },
             {
               "text": "Say what you expected.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/07376d28f9.ogg"
             },
             {
               "text": "Always include your full grocery list.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09d3aa25df.ogg"
             },
             {
               "text": "Real coders never explain bugs -- just complain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/84a250aaf0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_30_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
               "text": "Explain the steps you took.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c74e5ad1df.ogg"
             },
             {
               "text": "Show the error or weird thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b000b013b7.ogg"
             },
             {
               "text": "Sing the bug a lullaby until it falls asleep.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8f2a843bfc.ogg"
             },
             {
               "text": "Include the error text exactly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b3d1319dd6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_30_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about telling what happened. What should he say?",
           "options": [
             {
               "text": "Real coders never explain bugs -- just complain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/84a250aaf0.ogg"
             },
             {
               "text": "Stories make bugs harder and need a chorus.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f94f3f5997.ogg"
             },
             {
               "text": "Show the error or weird thing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b000b013b7.ogg"
             },
             {
               "text": "Skip the steps you took — surprise the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37b680cc14.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_30_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about telling what happened is a GOOD rule?",
           "options": [
             {
               "text": "Always include 5 emoji per sentence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a61a39651.ogg"
             },
             {
               "text": "Sing the bug a lullaby until it falls asleep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8f2a843bfc.ogg"
             },
             {
               "text": "A good story makes the bug easy to fix.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c11c936d02.ogg"
             },
             {
               "text": "Stories make bugs harder and need a chorus.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f94f3f5997.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_30_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about telling what happened, ___",
           "options": [
             {
               "text": "Use only emoji to describe the bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aab619512a.ogg"
             },
             {
               "text": "Be specific about commands and inputs.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f9ec06b17c.ogg"
             },
             {
               "text": "Bug reports must be at least 1,000 words long.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0e8ce4b5a3.ogg"
             },
             {
               "text": "Never share the error — it is your private treasure.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d8afab299.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_30_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Show the error or weird thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b000b013b7.ogg"
             },
             {
               "text": "A good story makes the bug easy to fix.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c11c936d02.ogg"
             },
             {
               "text": "Always include your full grocery list.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/09d3aa25df.ogg"
             },
             {
               "text": "Be specific about commands and inputs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9ec06b17c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_30_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with telling what happened?",
           "options": [
             {
               "text": "Skip the steps you took — surprise the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37b680cc14.ogg"
             },
             {
               "text": "Bug reports must rhyme with 'banana'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5417d348aa.ogg"
             },
             {
               "text": "Include the error text exactly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b3d1319dd6.ogg"
             },
             {
               "text": "Stories make bugs harder and need a chorus.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f94f3f5997.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_30_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about telling what happened is silly. Pick the silly one!",
           "options": [
             {
               "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/312f13fefa.ogg"
             },
             {
               "text": "Show the error or weird thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b000b013b7.ogg"
             },
             {
               "text": "Be specific about commands and inputs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9ec06b17c.ogg"
             },
             {
               "text": "Bug reports must be at least 1,000 words long.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/0e8ce4b5a3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_30_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about telling what happened. Which fact would help him?",
           "options": [
             {
               "text": "Clear bug reports help others fix the bug fast.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/956daff945.ogg"
             },
             {
               "text": "Bug reports must rhyme with 'banana'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5417d348aa.ogg"
             },
             {
               "text": "Always include your full grocery list.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09d3aa25df.ogg"
             },
             {
               "text": "Sing the bug a lullaby until it falls asleep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8f2a843bfc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_30_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "⚡"
         }
       },
       "variations": [
@@ -314,234 +337,287 @@
           "options": [
             {
               "text": "Helper is allergic to the word 'broke'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c42d9b8317.ogg"
             },
             {
               "text": "Helper needs a snack before short sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdcb7b8b17.ogg"
             },
             {
               "text": "Helper cries when the word 'it' is used.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c524e6cf5.ogg"
             },
             {
               "text": "Helper has no clue what 'it' is or how it broke.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f39a8d6567.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_30_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Bytey says: 'It broke.' Why is that hard for the helper?",
           "options": [
             {
               "text": "Helper needs a snack before short sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdcb7b8b17.ogg"
             },
             {
               "text": "Helper is allergic to the word 'broke'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c42d9b8317.ogg"
             },
             {
               "text": "Helper cries when the word 'it' is used.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c524e6cf5.ogg"
             },
             {
               "text": "Helper has no clue what 'it' is or how it broke.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f39a8d6567.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_30_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Bytey says: 'It broke.' Why is that hard for the helper?",
           "options": [
             {
               "text": "Helper needs a snack before short sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdcb7b8b17.ogg"
             },
             {
               "text": "Helper has no clue what 'it' is or how it broke.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f39a8d6567.ogg"
             },
             {
               "text": "Helper is allergic to the word 'broke'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c42d9b8317.ogg"
             },
             {
               "text": "Helper cries when the word 'it' is used.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c524e6cf5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_30_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey says: 'It broke.' Why is that hard for the helper?",
           "options": [
             {
               "text": "Helper is allergic to the word 'broke'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c42d9b8317.ogg"
             },
             {
               "text": "Helper has no clue what 'it' is or how it broke.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f39a8d6567.ogg"
             },
             {
               "text": "Helper cries when the word 'it' is used.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c524e6cf5.ogg"
             },
             {
               "text": "Helper needs a snack before short sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdcb7b8b17.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_30_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Bytey says: 'It broke.' Why is that hard for the helper?",
           "options": [
             {
               "text": "Helper has no clue what 'it' is or how it broke.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f39a8d6567.ogg"
             },
             {
               "text": "Helper is allergic to the word 'broke'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c42d9b8317.ogg"
             },
             {
               "text": "Helper needs a snack before short sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdcb7b8b17.ogg"
             },
             {
               "text": "Helper cries when the word 'it' is used.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c524e6cf5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_30_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Bytey says: 'It broke.' Why is that hard for the helper?",
           "options": [
             {
               "text": "Helper needs a snack before short sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdcb7b8b17.ogg"
             },
             {
               "text": "Helper has no clue what 'it' is or how it broke.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f39a8d6567.ogg"
             },
             {
               "text": "Helper cries when the word 'it' is used.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c524e6cf5.ogg"
             },
             {
               "text": "Helper is allergic to the word 'broke'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c42d9b8317.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_30_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey says: 'It broke.' Why is that hard for the helper?",
           "options": [
             {
               "text": "Helper is allergic to the word 'broke'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c42d9b8317.ogg"
             },
             {
               "text": "Helper needs a snack before short sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdcb7b8b17.ogg"
             },
             {
               "text": "Helper has no clue what 'it' is or how it broke.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f39a8d6567.ogg"
             },
             {
               "text": "Helper cries when the word 'it' is used.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c524e6cf5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_30_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Bytey says: 'It broke.' Why is that hard for the helper?",
           "options": [
             {
               "text": "Helper has no clue what 'it' is or how it broke.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f39a8d6567.ogg"
             },
             {
               "text": "Helper needs a snack before short sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdcb7b8b17.ogg"
             },
             {
               "text": "Helper is allergic to the word 'broke'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c42d9b8317.ogg"
             },
             {
               "text": "Helper cries when the word 'it' is used.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c524e6cf5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_30_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Bytey says: 'It broke.' Why is that hard for the helper?",
           "options": [
             {
               "text": "Helper needs a snack before short sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdcb7b8b17.ogg"
             },
             {
               "text": "Helper cries when the word 'it' is used.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c524e6cf5.ogg"
             },
             {
               "text": "Helper is allergic to the word 'broke'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c42d9b8317.ogg"
             },
             {
               "text": "Helper has no clue what 'it' is or how it broke.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f39a8d6567.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_30_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey says: 'It broke.' Why is that hard for the helper?",
           "options": [
             {
               "text": "Helper cries when the word 'it' is used.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c524e6cf5.ogg"
             },
             {
               "text": "Helper has no clue what 'it' is or how it broke.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f39a8d6567.ogg"
             },
             {
               "text": "Helper needs a snack before short sentences.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdcb7b8b17.ogg"
             },
             {
               "text": "Helper is allergic to the word 'broke'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c42d9b8317.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_30_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🚀",
+              "right": true
+            },
+            {
+              "glyph": "🥬",
+              "right": false
+            },
+            {
+              "glyph": "🧅",
+              "right": false
+            },
+            {
+              "glyph": "🪣",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -550,234 +626,270 @@
           "options": [
             {
               "text": "'something something it is bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c956384d92.ogg"
             },
             {
               "text": "'pls fix asap thx'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9da94a4d7.ogg"
             },
             {
               "text": "'help'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/782615cb77.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb6e182056.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_30_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Pick the better bug report:",
           "options": [
             {
               "text": "'something something it is bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c956384d92.ogg"
             },
             {
               "text": "'help'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/782615cb77.ogg"
             },
             {
               "text": "'pls fix asap thx'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9da94a4d7.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb6e182056.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_30_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Pick the better bug report:",
           "options": [
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb6e182056.ogg"
             },
             {
               "text": "'help'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/782615cb77.ogg"
             },
             {
               "text": "'something something it is bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c956384d92.ogg"
             },
             {
               "text": "'pls fix asap thx'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9da94a4d7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_30_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Pick the better bug report:",
           "options": [
             {
               "text": "'pls fix asap thx'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9da94a4d7.ogg"
             },
             {
               "text": "'help'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/782615cb77.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb6e182056.ogg"
             },
             {
               "text": "'something something it is bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c956384d92.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_30_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Pick the better bug report:",
           "options": [
             {
               "text": "'something something it is bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c956384d92.ogg"
             },
             {
               "text": "'help'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/782615cb77.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb6e182056.ogg"
             },
             {
               "text": "'pls fix asap thx'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9da94a4d7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_30_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Pick the better bug report:",
           "options": [
             {
               "text": "'something something it is bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c956384d92.ogg"
             },
             {
               "text": "'help'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/782615cb77.ogg"
             },
             {
               "text": "'pls fix asap thx'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9da94a4d7.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb6e182056.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_30_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Pick the better bug report:",
           "options": [
             {
               "text": "'something something it is bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c956384d92.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb6e182056.ogg"
             },
             {
               "text": "'help'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/782615cb77.ogg"
             },
             {
               "text": "'pls fix asap thx'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9da94a4d7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_30_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Pick the better bug report:",
           "options": [
             {
               "text": "'something something it is bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c956384d92.ogg"
             },
             {
               "text": "'help'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/782615cb77.ogg"
             },
             {
               "text": "'pls fix asap thx'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9da94a4d7.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb6e182056.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_30_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Pick the better bug report:",
           "options": [
             {
               "text": "'something something it is bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c956384d92.ogg"
             },
             {
               "text": "'help'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/782615cb77.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb6e182056.ogg"
             },
             {
               "text": "'pls fix asap thx'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9da94a4d7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_30_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Pick the better bug report:",
           "options": [
             {
               "text": "'something something it is bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c956384d92.ogg"
             },
             {
               "text": "'help'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/782615cb77.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb6e182056.ogg"
             },
             {
               "text": "'pls fix asap thx'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9da94a4d7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_30_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🦖"
         }
       },
       "variations": [
@@ -786,234 +898,274 @@
           "options": [
             {
               "text": "Explain the steps you took.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c74e5ad1df.ogg"
             },
             {
               "text": "Always say what you EXPECTED vs what you GOT.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a82abd15a7.ogg"
             },
             {
               "text": "Always include 5 emoji per sentence.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7a61a39651.ogg"
             },
             {
               "text": "Say what actually happened.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/281ac04b95.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_30_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
               "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/312f13fefa.ogg"
             },
             {
               "text": "Real coders never explain bugs -- just complain.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/84a250aaf0.ogg"
             },
             {
               "text": "Explain the steps you took.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c74e5ad1df.ogg"
             },
             {
               "text": "A good bug report is short, honest, and specific.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf6e4716d0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_30_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
               "text": "Say what actually happened.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/281ac04b95.ogg"
             },
             {
               "text": "Always say what you EXPECTED vs what you GOT.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a82abd15a7.ogg"
             },
             {
               "text": "Bug reports work better in rhyme.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/826ffd9525.ogg"
             },
             {
               "text": "Explain the steps you took.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c74e5ad1df.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_30_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
               "text": "Mention what changed since it last worked.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/377a8e6c31.ogg"
             },
             {
               "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/312f13fefa.ogg"
             },
             {
               "text": "Skip the steps you took — surprise the helper.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/37b680cc14.ogg"
             },
             {
               "text": "A good story makes the bug easy to fix.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c11c936d02.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_30_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
               "text": "Include the error text exactly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b3d1319dd6.ogg"
             },
             {
               "text": "Show the error or weird thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b000b013b7.ogg"
             },
             {
               "text": "Always say what you EXPECTED vs what you GOT.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a82abd15a7.ogg"
             },
             {
               "text": "Hide what you expected — let them guess.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f7920cc885.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_30_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
               "text": "A good bug report is short, honest, and specific.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf6e4716d0.ogg"
             },
             {
               "text": "Sing the bug a lullaby until it falls asleep.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8f2a843bfc.ogg"
             },
             {
               "text": "Clear bug reports help others fix the bug fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/956daff945.ogg"
             },
             {
               "text": "Mention what changed since it last worked.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/377a8e6c31.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_30_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
               "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/312f13fefa.ogg"
             },
             {
               "text": "Show the error or weird thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b000b013b7.ogg"
             },
             {
               "text": "Never share the error — it is your private treasure.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1d8afab299.ogg"
             },
             {
               "text": "Say what actually happened.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/281ac04b95.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_30_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
               "text": "Explain the steps you took.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c74e5ad1df.ogg"
             },
             {
               "text": "Include the error text exactly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b3d1319dd6.ogg"
             },
             {
               "text": "A good bug report is short, honest, and specific.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf6e4716d0.ogg"
             },
             {
               "text": "Stories make bugs harder and need a chorus.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f94f3f5997.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_30_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
               "text": "Bug reports must rhyme with 'banana'.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5417d348aa.ogg"
             },
             {
               "text": "Say what actually happened.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/281ac04b95.ogg"
             },
             {
               "text": "Be specific about commands and inputs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9ec06b17c.ogg"
             },
             {
               "text": "Say what you expected.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07376d28f9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_30_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about telling what happened.",
           "options": [
             {
               "text": "Clear bug reports help others fix the bug fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/956daff945.ogg"
             },
             {
               "text": "Always include your full grocery list.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/09d3aa25df.ogg"
             },
             {
               "text": "A good story makes the bug easy to fix.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c11c936d02.ogg"
             },
             {
               "text": "Always say what you EXPECTED vs what you GOT.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a82abd15a7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_30_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Put the steps in order:",
+          "steps": [
+            "First",
+            "Next",
+            "Last"
+          ]
         }
       },
       "variations": [
@@ -1022,234 +1174,283 @@
           "options": [
             {
               "text": "Sing the bug a lullaby until it falls asleep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8f2a843bfc.ogg"
             },
             {
               "text": "Real coders never explain bugs -- just complain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/84a250aaf0.ogg"
             },
             {
               "text": "Skip the steps you took — surprise the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37b680cc14.ogg"
             },
             {
               "text": "Explain the steps you took.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c74e5ad1df.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_30_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about telling what happened?",
           "options": [
             {
               "text": "Skip the steps you took — surprise the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37b680cc14.ogg"
             },
             {
               "text": "Use only emoji to describe the bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aab619512a.ogg"
             },
             {
               "text": "Say what you expected.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/07376d28f9.ogg"
             },
             {
               "text": "Bug reports must be at least 1,000 words long.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0e8ce4b5a3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_30_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about telling what happened?",
           "options": [
             {
               "text": "Say what actually happened.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/281ac04b95.ogg"
             },
             {
               "text": "Stories make bugs harder and need a chorus.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f94f3f5997.ogg"
             },
             {
               "text": "Use only emoji to describe the bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aab619512a.ogg"
             },
             {
               "text": "Hide what you expected — let them guess.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f7920cc885.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_30_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about telling what happened?",
           "options": [
             {
               "text": "Always include 5 emoji per sentence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a61a39651.ogg"
             },
             {
               "text": "Show the error or weird thing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b000b013b7.ogg"
             },
             {
               "text": "Bug reports must be at least 1,000 words long.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0e8ce4b5a3.ogg"
             },
             {
               "text": "Use only emoji to describe the bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aab619512a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_30_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about telling what happened?",
           "options": [
             {
               "text": "A good story makes the bug easy to fix.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c11c936d02.ogg"
             },
             {
               "text": "Always include your full grocery list.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09d3aa25df.ogg"
             },
             {
               "text": "Stories make bugs harder and need a chorus.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f94f3f5997.ogg"
             },
             {
               "text": "Bug reports work better in rhyme.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/826ffd9525.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_30_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about telling what happened?",
           "options": [
             {
               "text": "Be specific about commands and inputs.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f9ec06b17c.ogg"
             },
             {
               "text": "Always include your full grocery list.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09d3aa25df.ogg"
             },
             {
               "text": "Skip the steps you took — surprise the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37b680cc14.ogg"
             },
             {
               "text": "Hide what you expected — let them guess.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f7920cc885.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_30_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about telling what happened?",
           "options": [
             {
               "text": "Never share the error — it is your private treasure.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d8afab299.ogg"
             },
             {
               "text": "Skip the steps you took — surprise the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37b680cc14.ogg"
             },
             {
               "text": "Mention what changed since it last worked.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/377a8e6c31.ogg"
             },
             {
               "text": "Sing the bug a lullaby until it falls asleep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8f2a843bfc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_30_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about telling what happened?",
           "options": [
             {
               "text": "Skip the steps you took — surprise the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37b680cc14.ogg"
             },
             {
               "text": "Always include your full grocery list.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09d3aa25df.ogg"
             },
             {
               "text": "Stories make bugs harder and need a chorus.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f94f3f5997.ogg"
             },
             {
               "text": "Include the error text exactly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b3d1319dd6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_30_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about telling what happened?",
           "options": [
             {
               "text": "Bug reports work better in rhyme.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/826ffd9525.ogg"
             },
             {
               "text": "Never share the error — it is your private treasure.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1d8afab299.ogg"
             },
             {
               "text": "Stories make bugs harder and need a chorus.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f94f3f5997.ogg"
             },
             {
               "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/312f13fefa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_30_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about telling what happened?",
           "options": [
             {
               "text": "Always include 5 emoji per sentence.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a61a39651.ogg"
             },
             {
               "text": "Real coders never explain bugs -- just complain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/84a250aaf0.ogg"
             },
             {
               "text": "Hide what you expected — let them guess.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f7920cc885.ogg"
             },
             {
               "text": "Clear bug reports help others fix the bug fast.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/956daff945.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_30_q5_v9.ogg"
         }
       ]
     },
     {
       "id": "q6",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
-          "targets": [
-            "win"
-          ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Save",
+              "right": "💾"
+            },
+            {
+              "left": "Share",
+              "right": "📤"
+            },
+            {
+              "left": "Build",
+              "right": "🔨"
+            }
+          ]
         }
       },
       "variations": [
@@ -1258,220 +1459,260 @@
           "options": [
             {
               "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/000f01f8b2.ogg"
             },
             {
               "text": "'Hi how are you'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ed237858f.ogg"
             },
             {
               "text": "'Game bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72e3b42b69.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f18bf942a9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_30_q6_v0.ogg"
         },
         {
           "prompt": "Quick! Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
               "text": "'Game bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72e3b42b69.ogg"
             },
             {
               "text": "'Hi how are you'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ed237858f.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f18bf942a9.ogg"
             },
             {
               "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/000f01f8b2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_30_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
               "text": "'Game bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72e3b42b69.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f18bf942a9.ogg"
             },
             {
               "text": "'Hi how are you'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ed237858f.ogg"
             },
             {
               "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/000f01f8b2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_30_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
               "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/000f01f8b2.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f18bf942a9.ogg"
             },
             {
               "text": "'Hi how are you'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ed237858f.ogg"
             },
             {
               "text": "'Game bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72e3b42b69.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_30_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
               "text": "'Hi how are you'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ed237858f.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f18bf942a9.ogg"
             },
             {
               "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/000f01f8b2.ogg"
             },
             {
               "text": "'Game bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72e3b42b69.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_30_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
               "text": "'Hi how are you'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ed237858f.ogg"
             },
             {
               "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/000f01f8b2.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f18bf942a9.ogg"
             },
             {
               "text": "'Game bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72e3b42b69.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_30_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
               "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/000f01f8b2.ogg"
             },
             {
               "text": "'Hi how are you'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ed237858f.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f18bf942a9.ogg"
             },
             {
               "text": "'Game bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72e3b42b69.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_30_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
               "text": "'It is broken!! HELP'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f18bf942a9.ogg"
             },
             {
               "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/000f01f8b2.ogg"
             },
             {
               "text": "'Game bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72e3b42b69.ogg"
             },
             {
               "text": "'Hi how are you'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ed237858f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_30_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
               "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/000f01f8b2.ogg"
             },
             {
               "text": "'Hi how are you'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ed237858f.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f18bf942a9.ogg"
             },
             {
               "text": "'Game bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72e3b42b69.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_30_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
               "text": "'Game bad'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72e3b42b69.ogg"
             },
             {
               "text": "'I clicked Play. Nothing happened. The screen stayed black.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/000f01f8b2.ogg"
             },
             {
               "text": "'Hi how are you'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ed237858f.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f18bf942a9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_30_q6_v9.ogg"
         }
       ]
     },
@@ -1480,12 +1721,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PLAY and press Send to keep going!",
-          "target_display": "PLAY",
+          "prompt": "Type BARF and press Send to keep going!",
+          "target_display": "BARF",
           "targets": [
-            "play"
+            "barf"
           ],
-          "hint_wrong": "Type the word PLAY (any case is fine)."
+          "hint_wrong": "Type the word BARF (any case is fine)."
         }
       },
       "variations": [
@@ -1494,220 +1735,260 @@
           "options": [
             {
               "text": "Always include your full grocery list.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/09d3aa25df.ogg"
             },
             {
               "text": "Say what you expected.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07376d28f9.ogg"
             },
             {
               "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/312f13fefa.ogg"
             },
             {
               "text": "A good bug report is short, honest, and specific.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf6e4716d0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q7_v0.wav"
+          "_audio": "assets/audio/q/lesson_30_q7_v0.ogg"
         },
         {
           "prompt": "Listen up — Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Explain the steps you took.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c74e5ad1df.ogg"
             },
             {
               "text": "Show the error or weird thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b000b013b7.ogg"
             },
             {
               "text": "Say what actually happened.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/281ac04b95.ogg"
             },
             {
               "text": "Use only emoji to describe the bug.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/aab619512a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q7_v1.wav"
+          "_audio": "assets/audio/q/lesson_30_q7_v1.ogg"
         },
         {
           "prompt": "Think about this: Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Mention what changed since it last worked.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/377a8e6c31.ogg"
             },
             {
               "text": "A good bug report is short, honest, and specific.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf6e4716d0.ogg"
             },
             {
               "text": "Clear bug reports help others fix the bug fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/956daff945.ogg"
             },
             {
               "text": "Bug reports must be at least 1,000 words long.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/0e8ce4b5a3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q7_v2.wav"
+          "_audio": "assets/audio/q/lesson_30_q7_v2.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Say what you expected.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07376d28f9.ogg"
             },
             {
               "text": "Always include 5 emoji per sentence.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7a61a39651.ogg"
             },
             {
               "text": "Mention what changed since it last worked.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/377a8e6c31.ogg"
             },
             {
               "text": "A good story makes the bug easy to fix.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c11c936d02.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q7_v3.wav"
+          "_audio": "assets/audio/q/lesson_30_q7_v3.ogg"
         },
         {
           "prompt": "Brain time: Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Always say what you EXPECTED vs what you GOT.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a82abd15a7.ogg"
             },
             {
               "text": "Real coders never explain bugs -- just complain.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/84a250aaf0.ogg"
             },
             {
               "text": "Explain the steps you took.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c74e5ad1df.ogg"
             },
             {
               "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/312f13fefa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q7_v4.wav"
+          "_audio": "assets/audio/q/lesson_30_q7_v4.ogg"
         },
         {
           "prompt": "Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Be specific about commands and inputs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9ec06b17c.ogg"
             },
             {
               "text": "Bug reports work better in rhyme.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/826ffd9525.ogg"
             },
             {
               "text": "Tell what happened: 'I typed X, and Y happened instead of Z'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/312f13fefa.ogg"
             },
             {
               "text": "Include the error text exactly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b3d1319dd6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q7_v5.wav"
+          "_audio": "assets/audio/q/lesson_30_q7_v5.ogg"
         },
         {
           "prompt": "Quick! Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Say what actually happened.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/281ac04b95.ogg"
             },
             {
               "text": "Skip the steps you took — surprise the helper.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/37b680cc14.ogg"
             },
             {
               "text": "Mention what changed since it last worked.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/377a8e6c31.ogg"
             },
             {
               "text": "Say what you expected.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07376d28f9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q7_v6.wav"
+          "_audio": "assets/audio/q/lesson_30_q7_v6.ogg"
         },
         {
           "prompt": "Hey friend — Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Mention what changed since it last worked.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/377a8e6c31.ogg"
             },
             {
               "text": "Say what you expected.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07376d28f9.ogg"
             },
             {
               "text": "Hide what you expected — let them guess.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f7920cc885.ogg"
             },
             {
               "text": "Show the error or weird thing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b000b013b7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q7_v7.wav"
+          "_audio": "assets/audio/q/lesson_30_q7_v7.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Sing the bug a lullaby until it falls asleep.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8f2a843bfc.ogg"
             },
             {
               "text": "Explain the steps you took.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c74e5ad1df.ogg"
             },
             {
               "text": "A good bug report is short, honest, and specific.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf6e4716d0.ogg"
             },
             {
               "text": "Mention what changed since it last worked.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/377a8e6c31.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q7_v8.wav"
+          "_audio": "assets/audio/q/lesson_30_q7_v8.ogg"
         },
         {
           "prompt": "Tell me — Bytey claims something about telling what happened. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Say what actually happened.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/281ac04b95.ogg"
             },
             {
               "text": "Be specific about commands and inputs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9ec06b17c.ogg"
             },
             {
               "text": "Never share the error — it is your private treasure.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1d8afab299.ogg"
             },
             {
               "text": "Mention what changed since it last worked.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/377a8e6c31.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_30_q7_v9.wav"
+          "_audio": "assets/audio/q/lesson_30_q7_v9.ogg"
         }
       ]
     }

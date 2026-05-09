@@ -55,24 +55,24 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Coin gives score but stays forever. Pick the fix:",
+          "prompt": "🪙 Tap the COIN — that's what gives you score!",
           "choices": [
             {
-              "label": "Make the coin smaller",
-              "right": false
-            },
-            {
-              "label": "Remove the coin from the world after pickup",
+              "glyph": "🪙",
               "right": true
             },
             {
-              "label": "Add more coins",
+              "glyph": "🦖",
               "right": false
             },
             {
-              "label": "Make the coin sing",
+              "glyph": "🥦",
+              "right": false
+            },
+            {
+              "glyph": "🪨",
               "right": false
             }
           ]
@@ -80,238 +80,287 @@
       },
       "variations": [
         {
-          "prompt": "What is iter 3: coins and score?",
+          "prompt": "🎯 Eyes on the prize! Pick the right answer about Iteration 3: Coins & Score.",
           "options": [
             {
               "text": "Score only counts on the player's birthday.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/99094d92a1.ogg"
             },
             {
               "text": "Score is invisible by treaty.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f60a9a213b.ogg"
             },
             {
               "text": "Coins are silent always (sad).",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/61b450e20e.ogg"
             },
             {
               "text": "A coin gives points when touched.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1eb810fe69.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_52_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
               "text": "Coins stay forever — collect them weekly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0f1ab013f5.ogg"
             },
             {
               "text": "Score shows on the top of the screen.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4b8d99432b.ogg"
             },
             {
               "text": "Coins refuse to count on weekends.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7b36af0885.ogg"
             },
             {
               "text": "Each coin must be unique and have a name.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b3979b744d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_52_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
               "text": "A coin gives points when touched.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1eb810fe69.ogg"
             },
             {
               "text": "More coins means more reasons to explore.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a93fbab173.ogg"
             },
             {
               "text": "Coins stay forever — collect them weekly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/0f1ab013f5.ogg"
             },
             {
               "text": "Pickups make a game feel alive.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66f92ea57d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_52_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 3: coins and score. What should he say?",
           "options": [
             {
               "text": "Each coin must be unique and have a name.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b3979b744d.ogg"
             },
             {
               "text": "Coins are silent always (sad).",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/61b450e20e.ogg"
             },
             {
               "text": "More coins means more reasons to explore.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a93fbab173.ogg"
             },
             {
               "text": "Coins take points away — they're greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e790ea878.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_52_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about iter 3: coins and score is a GOOD rule?",
           "options": [
             {
               "text": "Score only counts on the player's birthday.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/99094d92a1.ogg"
             },
             {
               "text": "Coins stay forever — collect them weekly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0f1ab013f5.ogg"
             },
             {
               "text": "Coins make a happy sound.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/948d246cbf.ogg"
             },
             {
               "text": "Coins are silent always (sad).",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/61b450e20e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_52_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about iter 3: coins and score, ___",
           "options": [
             {
               "text": "Coins are afraid of the letter Q.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/560379e303.ogg"
             },
             {
               "text": "Coins should be visible from a distance.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/90a355c137.ogg"
             },
             {
               "text": "Coins must be made of real metal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e860de0cb4.ogg"
             },
             {
               "text": "Coins make exploring boring.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a63285748f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_52_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about iter 3: coins and score. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "More coins means more reasons to explore.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a93fbab173.ogg"
             },
             {
               "text": "Coins make a happy sound.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/948d246cbf.ogg"
             },
             {
               "text": "Coins refuse to count on weekends.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7b36af0885.ogg"
             },
             {
               "text": "Coins should be visible from a distance.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/90a355c137.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_52_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with iter 3: coins and score?",
           "options": [
             {
               "text": "Coins take points away — they're greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e790ea878.ogg"
             },
             {
               "text": "Coins can only be picked up by sneezing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c22172675c.ogg"
             },
             {
               "text": "Pickups make a game feel alive.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/66f92ea57d.ogg"
             },
             {
               "text": "Coins are silent always (sad).",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/61b450e20e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_52_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about iter 3: coins and score is silly. Pick the silly one!",
           "options": [
             {
               "text": "Iteration 3 adds COINS and SCORE -- reasons to keep playing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fcb7253552.ogg"
             },
             {
               "text": "More coins means more reasons to explore.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a93fbab173.ogg"
             },
             {
               "text": "Coins should be visible from a distance.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/90a355c137.ogg"
             },
             {
               "text": "Coins must be made of real metal.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e860de0cb4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_52_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about iter 3: coins and score. Which fact would help him?",
           "options": [
             {
               "text": "Hero touches a coin -> score goes up -> coin disappears.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdf010ba5e.ogg"
             },
             {
               "text": "Coins can only be picked up by sneezing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c22172675c.ogg"
             },
             {
               "text": "Coins refuse to count on weekends.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7b36af0885.ogg"
             },
             {
               "text": "Coins stay forever — collect them weekly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0f1ab013f5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_52_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Hero",
+              "right": "🦸"
+            },
+            {
+              "left": "Code",
+              "right": "💻"
+            },
+            {
+              "left": "Game",
+              "right": "🎮"
+            }
+          ]
         }
       },
       "variations": [
@@ -320,220 +369,260 @@
           "options": [
             {
               "text": "Game pauses for a TED talk.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b52feac4d7.ogg"
             },
             {
               "text": "Score goes up, coin disappears, a happy sound plays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ca64085155.ogg"
             },
             {
               "text": "Hero apologizes for stepping on the coin.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ab4f13f89.ogg"
             },
             {
               "text": "Coin grows wings and flies off in a huff.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f806e73e75.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_52_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Hero touches a coin. What three things happen?",
           "options": [
             {
               "text": "Coin grows wings and flies off in a huff.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f806e73e75.ogg"
             },
             {
               "text": "Score goes up, coin disappears, a happy sound plays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ca64085155.ogg"
             },
             {
               "text": "Game pauses for a TED talk.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b52feac4d7.ogg"
             },
             {
               "text": "Hero apologizes for stepping on the coin.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ab4f13f89.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_52_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Hero touches a coin. What three things happen?",
           "options": [
             {
               "text": "Score goes up, coin disappears, a happy sound plays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ca64085155.ogg"
             },
             {
               "text": "Hero apologizes for stepping on the coin.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ab4f13f89.ogg"
             },
             {
               "text": "Coin grows wings and flies off in a huff.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f806e73e75.ogg"
             },
             {
               "text": "Game pauses for a TED talk.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b52feac4d7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_52_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Hero touches a coin. What three things happen?",
           "options": [
             {
               "text": "Score goes up, coin disappears, a happy sound plays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ca64085155.ogg"
             },
             {
               "text": "Coin grows wings and flies off in a huff.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f806e73e75.ogg"
             },
             {
               "text": "Hero apologizes for stepping on the coin.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ab4f13f89.ogg"
             },
             {
               "text": "Game pauses for a TED talk.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b52feac4d7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_52_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Hero touches a coin. What three things happen?",
           "options": [
             {
               "text": "Hero apologizes for stepping on the coin.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ab4f13f89.ogg"
             },
             {
               "text": "Game pauses for a TED talk.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b52feac4d7.ogg"
             },
             {
               "text": "Coin grows wings and flies off in a huff.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f806e73e75.ogg"
             },
             {
               "text": "Score goes up, coin disappears, a happy sound plays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ca64085155.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_52_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Hero touches a coin. What three things happen?",
           "options": [
             {
               "text": "Coin grows wings and flies off in a huff.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f806e73e75.ogg"
             },
             {
               "text": "Score goes up, coin disappears, a happy sound plays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ca64085155.ogg"
             },
             {
               "text": "Hero apologizes for stepping on the coin.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ab4f13f89.ogg"
             },
             {
               "text": "Game pauses for a TED talk.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b52feac4d7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_52_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Hero touches a coin. What three things happen?",
           "options": [
             {
               "text": "Hero apologizes for stepping on the coin.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ab4f13f89.ogg"
             },
             {
               "text": "Coin grows wings and flies off in a huff.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f806e73e75.ogg"
             },
             {
               "text": "Game pauses for a TED talk.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b52feac4d7.ogg"
             },
             {
               "text": "Score goes up, coin disappears, a happy sound plays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ca64085155.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_52_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Hero touches a coin. What three things happen?",
           "options": [
             {
               "text": "Hero apologizes for stepping on the coin.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ab4f13f89.ogg"
             },
             {
               "text": "Score goes up, coin disappears, a happy sound plays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ca64085155.ogg"
             },
             {
               "text": "Coin grows wings and flies off in a huff.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f806e73e75.ogg"
             },
             {
               "text": "Game pauses for a TED talk.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b52feac4d7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_52_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Hero touches a coin. What three things happen?",
           "options": [
             {
               "text": "Game pauses for a TED talk.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b52feac4d7.ogg"
             },
             {
               "text": "Hero apologizes for stepping on the coin.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ab4f13f89.ogg"
             },
             {
               "text": "Coin grows wings and flies off in a huff.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f806e73e75.ogg"
             },
             {
               "text": "Score goes up, coin disappears, a happy sound plays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ca64085155.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_52_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Hero touches a coin. What three things happen?",
           "options": [
             {
               "text": "Score goes up, coin disappears, a happy sound plays.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ca64085155.ogg"
             },
             {
               "text": "Coin grows wings and flies off in a huff.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f806e73e75.ogg"
             },
             {
               "text": "Hero apologizes for stepping on the coin.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ab4f13f89.ogg"
             },
             {
               "text": "Game pauses for a TED talk.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b52feac4d7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_52_q2_v9.ogg"
         }
       ]
     },
@@ -542,12 +631,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
+          "prompt": "Type AMONG and press Send to keep going!",
+          "target_display": "AMONG",
           "targets": [
-            "fun"
+            "among"
           ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "hint_wrong": "Type the word AMONG (any case is fine)."
         }
       },
       "variations": [
@@ -556,234 +645,270 @@
           "options": [
             {
               "text": "So the wifi can see them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c259fe2da.ogg"
             },
             {
               "text": "To intimidate other coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ad933e081a.ogg"
             },
             {
               "text": "Coins guide the player toward fun areas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa42583d1d.ogg"
             },
             {
               "text": "Coins are vain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3be109f3b2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_52_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Why visible from a distance?",
           "options": [
             {
               "text": "To intimidate other coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ad933e081a.ogg"
             },
             {
               "text": "Coins guide the player toward fun areas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa42583d1d.ogg"
             },
             {
               "text": "Coins are vain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3be109f3b2.ogg"
             },
             {
               "text": "So the wifi can see them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c259fe2da.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_52_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why visible from a distance?",
           "options": [
             {
               "text": "Coins are vain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3be109f3b2.ogg"
             },
             {
               "text": "So the wifi can see them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c259fe2da.ogg"
             },
             {
               "text": "To intimidate other coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ad933e081a.ogg"
             },
             {
               "text": "Coins guide the player toward fun areas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa42583d1d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_52_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why visible from a distance?",
           "options": [
             {
               "text": "Coins are vain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3be109f3b2.ogg"
             },
             {
               "text": "To intimidate other coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ad933e081a.ogg"
             },
             {
               "text": "So the wifi can see them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c259fe2da.ogg"
             },
             {
               "text": "Coins guide the player toward fun areas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa42583d1d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_52_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Why visible from a distance?",
           "options": [
             {
               "text": "So the wifi can see them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c259fe2da.ogg"
             },
             {
               "text": "To intimidate other coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ad933e081a.ogg"
             },
             {
               "text": "Coins are vain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3be109f3b2.ogg"
             },
             {
               "text": "Coins guide the player toward fun areas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa42583d1d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_52_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why visible from a distance?",
           "options": [
             {
               "text": "So the wifi can see them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c259fe2da.ogg"
             },
             {
               "text": "Coins guide the player toward fun areas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa42583d1d.ogg"
             },
             {
               "text": "Coins are vain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3be109f3b2.ogg"
             },
             {
               "text": "To intimidate other coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ad933e081a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_52_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why visible from a distance?",
           "options": [
             {
               "text": "Coins are vain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3be109f3b2.ogg"
             },
             {
               "text": "To intimidate other coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ad933e081a.ogg"
             },
             {
               "text": "So the wifi can see them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c259fe2da.ogg"
             },
             {
               "text": "Coins guide the player toward fun areas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa42583d1d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_52_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Why visible from a distance?",
           "options": [
             {
               "text": "So the wifi can see them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c259fe2da.ogg"
             },
             {
               "text": "Coins guide the player toward fun areas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa42583d1d.ogg"
             },
             {
               "text": "Coins are vain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3be109f3b2.ogg"
             },
             {
               "text": "To intimidate other coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ad933e081a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_52_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Why visible from a distance?",
           "options": [
             {
               "text": "Coins are vain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3be109f3b2.ogg"
             },
             {
               "text": "So the wifi can see them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c259fe2da.ogg"
             },
             {
               "text": "To intimidate other coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ad933e081a.ogg"
             },
             {
               "text": "Coins guide the player toward fun areas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa42583d1d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_52_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why visible from a distance?",
           "options": [
             {
               "text": "So the wifi can see them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c259fe2da.ogg"
             },
             {
               "text": "Coins are vain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3be109f3b2.ogg"
             },
             {
               "text": "To intimidate other coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ad933e081a.ogg"
             },
             {
               "text": "Coins guide the player toward fun areas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa42583d1d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_52_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "⚡"
         }
       },
       "variations": [
@@ -792,234 +917,287 @@
           "options": [
             {
               "text": "A coin gives points when touched.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1eb810fe69.ogg"
             },
             {
               "text": "Score gives the player a goal even without enemies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4385d30e72.ogg"
             },
             {
               "text": "Score only counts on the player's birthday.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/99094d92a1.ogg"
             },
             {
               "text": "Each coin disappears after pickup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/514b22138d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_52_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
               "text": "Iteration 3 adds COINS and SCORE -- reasons to keep playing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fcb7253552.ogg"
             },
             {
               "text": "Each coin must be unique and have a name.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b3979b744d.ogg"
             },
             {
               "text": "A coin gives points when touched.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1eb810fe69.ogg"
             },
             {
               "text": "Pick how many points each coin is worth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff8c53f792.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_52_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
               "text": "Each coin disappears after pickup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/514b22138d.ogg"
             },
             {
               "text": "Score gives the player a goal even without enemies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4385d30e72.ogg"
             },
             {
               "text": "Score is invisible until the game ends.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5ad1f3e49f.ogg"
             },
             {
               "text": "A coin gives points when touched.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1eb810fe69.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_52_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
               "text": "Coins teach the player where to go.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/da87850572.ogg"
             },
             {
               "text": "Iteration 3 adds COINS and SCORE -- reasons to keep playing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fcb7253552.ogg"
             },
             {
               "text": "Coins take points away — they're greedy.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3e790ea878.ogg"
             },
             {
               "text": "Coins make a happy sound.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/948d246cbf.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_52_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
               "text": "Pickups make a game feel alive.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66f92ea57d.ogg"
             },
             {
               "text": "More coins means more reasons to explore.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a93fbab173.ogg"
             },
             {
               "text": "Score gives the player a goal even without enemies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4385d30e72.ogg"
             },
             {
               "text": "Score is invisible by treaty.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f60a9a213b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_52_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
               "text": "Pick how many points each coin is worth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff8c53f792.ogg"
             },
             {
               "text": "Coins stay forever — collect them weekly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/0f1ab013f5.ogg"
             },
             {
               "text": "Hero touches a coin -> score goes up -> coin disappears.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdf010ba5e.ogg"
             },
             {
               "text": "Coins teach the player where to go.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/da87850572.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_52_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
               "text": "Iteration 3 adds COINS and SCORE -- reasons to keep playing.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fcb7253552.ogg"
             },
             {
               "text": "More coins means more reasons to explore.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a93fbab173.ogg"
             },
             {
               "text": "Coins make exploring boring.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a63285748f.ogg"
             },
             {
               "text": "Each coin disappears after pickup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/514b22138d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_52_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
               "text": "A coin gives points when touched.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1eb810fe69.ogg"
             },
             {
               "text": "Pickups make a game feel alive.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66f92ea57d.ogg"
             },
             {
               "text": "Pick how many points each coin is worth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff8c53f792.ogg"
             },
             {
               "text": "Coins are silent always (sad).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/61b450e20e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_52_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
               "text": "Coins can only be picked up by sneezing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c22172675c.ogg"
             },
             {
               "text": "Each coin disappears after pickup.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/514b22138d.ogg"
             },
             {
               "text": "Coins should be visible from a distance.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/90a355c137.ogg"
             },
             {
               "text": "Score shows on the top of the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4b8d99432b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_52_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 3: coins and score.",
           "options": [
             {
               "text": "Hero touches a coin -> score goes up -> coin disappears.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fdf010ba5e.ogg"
             },
             {
               "text": "Coins refuse to count on weekends.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7b36af0885.ogg"
             },
             {
               "text": "Coins make a happy sound.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/948d246cbf.ogg"
             },
             {
               "text": "Score gives the player a goal even without enemies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4385d30e72.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_52_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🎮",
+              "right": true
+            },
+            {
+              "glyph": "🥦",
+              "right": false
+            },
+            {
+              "glyph": "📚",
+              "right": false
+            },
+            {
+              "glyph": "🧦",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -1028,220 +1206,260 @@
           "options": [
             {
               "text": "Coins stay forever — collect them weekly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0f1ab013f5.ogg"
             },
             {
               "text": "Each coin must be unique and have a name.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b3979b744d.ogg"
             },
             {
               "text": "Coins take points away — they're greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e790ea878.ogg"
             },
             {
               "text": "A coin gives points when touched.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1eb810fe69.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_52_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
               "text": "Coins take points away — they're greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e790ea878.ogg"
             },
             {
               "text": "Coins are afraid of the letter Q.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/560379e303.ogg"
             },
             {
               "text": "Score shows on the top of the screen.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4b8d99432b.ogg"
             },
             {
               "text": "Coins must be made of real metal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e860de0cb4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_52_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
               "text": "Each coin disappears after pickup.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/514b22138d.ogg"
             },
             {
               "text": "Coins are silent always (sad).",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/61b450e20e.ogg"
             },
             {
               "text": "Coins are afraid of the letter Q.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/560379e303.ogg"
             },
             {
               "text": "Score is invisible by treaty.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f60a9a213b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_52_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
               "text": "Score only counts on the player's birthday.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/99094d92a1.ogg"
             },
             {
               "text": "More coins means more reasons to explore.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a93fbab173.ogg"
             },
             {
               "text": "Coins must be made of real metal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e860de0cb4.ogg"
             },
             {
               "text": "Coins are afraid of the letter Q.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/560379e303.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_52_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
               "text": "Coins make a happy sound.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/948d246cbf.ogg"
             },
             {
               "text": "Coins refuse to count on weekends.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7b36af0885.ogg"
             },
             {
               "text": "Coins are silent always (sad).",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/61b450e20e.ogg"
             },
             {
               "text": "Score is invisible until the game ends.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ad1f3e49f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_52_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
               "text": "Coins should be visible from a distance.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/90a355c137.ogg"
             },
             {
               "text": "Coins refuse to count on weekends.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7b36af0885.ogg"
             },
             {
               "text": "Coins take points away — they're greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e790ea878.ogg"
             },
             {
               "text": "Score is invisible by treaty.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f60a9a213b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_52_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
               "text": "Coins make exploring boring.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a63285748f.ogg"
             },
             {
               "text": "Coins take points away — they're greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e790ea878.ogg"
             },
             {
               "text": "Coins teach the player where to go.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/da87850572.ogg"
             },
             {
               "text": "Coins stay forever — collect them weekly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0f1ab013f5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_52_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
               "text": "Coins take points away — they're greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3e790ea878.ogg"
             },
             {
               "text": "Coins refuse to count on weekends.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7b36af0885.ogg"
             },
             {
               "text": "Coins are silent always (sad).",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/61b450e20e.ogg"
             },
             {
               "text": "Pickups make a game feel alive.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/66f92ea57d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_52_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
               "text": "Score is invisible until the game ends.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ad1f3e49f.ogg"
             },
             {
               "text": "Coins make exploring boring.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a63285748f.ogg"
             },
             {
               "text": "Coins are silent always (sad).",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/61b450e20e.ogg"
             },
             {
               "text": "Iteration 3 adds COINS and SCORE -- reasons to keep playing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcb7253552.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_52_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about iter 3: coins and score?",
           "options": [
             {
               "text": "Score only counts on the player's birthday.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/99094d92a1.ogg"
             },
             {
               "text": "Each coin must be unique and have a name.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b3979b744d.ogg"
             },
             {
               "text": "Score is invisible by treaty.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f60a9a213b.ogg"
             },
             {
               "text": "Hero touches a coin -> score goes up -> coin disappears.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fdf010ba5e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_52_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_52_q5_v9.ogg"
         }
       ]
     }

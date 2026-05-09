@@ -55,263 +55,290 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Which message asks Claude best for a new feature?",
-          "choices": [
-            {
-              "label": "Stuff.",
-              "right": false
-            },
-            {
-              "label": "Plan a double-jump for my hero with a small wiggle.",
-              "right": true
-            },
-            {
-              "label": "Make it cooler.",
-              "right": false
-            },
-            {
-              "label": "Idk.",
-              "right": false
-            }
-          ]
+          "prompt": "Type LEVEL and press Send to keep going!",
+          "target_display": "LEVEL",
+          "targets": [
+            "level"
+          ],
+          "hint_wrong": "Type the word LEVEL (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "What is asking AI for a feature?",
+          "prompt": "🔥 Round one, FIGHT! Tap the best fact about Ask AI to Add a Feature.",
           "options": [
             {
               "text": "AI features only stay for 30 seconds.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d85d355132.ogg"
             },
             {
               "text": "Hide the file from the helper — playing hide and seek.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9cfdeeb8e.ogg"
             },
             {
               "text": "Helpers like giant features only — small ones bore them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e55046429.ogg"
             },
             {
               "text": "Be clear about what you want to add.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7b3fdf0aa8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_45_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about asking AI for a feature?",
           "options": [
             {
               "text": "Skip testing the new feature — gut feel only.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7dbfebe32f.ogg"
             },
             {
               "text": "Show the file or place where it goes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/139c457f6f.ogg"
             },
             {
               "text": "Hide your name to make it hard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89c93748fc.ogg"
             },
             {
               "text": "AI charges $1 per feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/820263eaf1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_45_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
               "text": "Be clear about what you want to add.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7b3fdf0aa8.ogg"
             },
             {
               "text": "Test the new feature after you add it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/193f1f3965.ogg"
             },
             {
               "text": "Skip testing the new feature — gut feel only.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7dbfebe32f.ogg"
             },
             {
               "text": "Add an example output if you can.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/73b99ba95e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_45_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about asking AI for a feature. What should he say?",
           "options": [
             {
               "text": "AI charges $1 per feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/820263eaf1.ogg"
             },
             {
               "text": "Helpers like giant features only — small ones bore them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e55046429.ogg"
             },
             {
               "text": "Test the new feature after you add it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/193f1f3965.ogg"
             },
             {
               "text": "Be vague about everything — surprise yourself.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb89f2d4f1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_45_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about asking AI for a feature is a GOOD rule?",
           "options": [
             {
               "text": "AI features only stay for 30 seconds.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d85d355132.ogg"
             },
             {
               "text": "Skip testing the new feature — gut feel only.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7dbfebe32f.ogg"
             },
             {
               "text": "Helpers do best with small features.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1f7ff7e6f0.ogg"
             },
             {
               "text": "Helpers like giant features only — small ones bore them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e55046429.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_45_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about asking AI for a feature, ___",
           "options": [
             {
               "text": "Use only emoji to describe the feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dfe640b6ef.ogg"
             },
             {
               "text": "Tell the helper what 'done' looks like.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d9ed910261.ogg"
             },
             {
               "text": "Yell at the AI until it adds the feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2cfb4df808.ogg"
             },
             {
               "text": "Add ten features at once and pray.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4b15f82ebc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_45_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about asking AI for a feature. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Test the new feature after you add it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/193f1f3965.ogg"
             },
             {
               "text": "Helpers do best with small features.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1f7ff7e6f0.ogg"
             },
             {
               "text": "Hide your name to make it hard.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89c93748fc.ogg"
             },
             {
               "text": "Tell the helper what 'done' looks like.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9ed910261.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_45_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with asking AI for a feature?",
           "options": [
             {
               "text": "Be vague about everything — surprise yourself.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb89f2d4f1.ogg"
             },
             {
               "text": "Each feature must include a haiku.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/17acc908fe.ogg"
             },
             {
               "text": "Add an example output if you can.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/73b99ba95e.ogg"
             },
             {
               "text": "Helpers like giant features only — small ones bore them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e55046429.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_45_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about asking AI for a feature is silly. Pick the silly one!",
           "options": [
             {
               "text": "You can ask AI to add a feature to your game by describing it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/16385c738d.ogg"
             },
             {
               "text": "Test the new feature after you add it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/193f1f3965.ogg"
             },
             {
               "text": "Tell the helper what 'done' looks like.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9ed910261.ogg"
             },
             {
               "text": "Yell at the AI until it adds the feature.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2cfb4df808.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_45_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about asking AI for a feature. Which fact would help him?",
           "options": [
             {
               "text": "Be specific: 'Add a jump that makes the hero go up when I press space'.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f4820e9f2a.ogg"
             },
             {
               "text": "Each feature must include a haiku.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/17acc908fe.ogg"
             },
             {
               "text": "Hide your name to make it hard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89c93748fc.ogg"
             },
             {
               "text": "Skip testing the new feature — gut feel only.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7dbfebe32f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_45_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Put the steps in order:",
+          "steps": [
+            "First",
+            "Next",
+            "Last"
+          ]
         }
       },
       "variations": [
@@ -320,234 +347,283 @@
           "options": [
             {
               "text": "Pause but secret.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6097046b3a.ogg"
             },
             {
               "text": "Make pausing thing happen good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8565598c50.ogg"
             },
             {
               "text": "Pause? Maybe? Sometimes?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a44c4053b.ogg"
             },
             {
               "text": "Add a 'pause' button in the top-right that stops the timer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8dfda4f6ea.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_45_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Pick the better feature request:",
           "options": [
             {
               "text": "Pause? Maybe? Sometimes?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a44c4053b.ogg"
             },
             {
               "text": "Make pausing thing happen good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8565598c50.ogg"
             },
             {
               "text": "Pause but secret.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6097046b3a.ogg"
             },
             {
               "text": "Add a 'pause' button in the top-right that stops the timer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8dfda4f6ea.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_45_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Pick the better feature request:",
           "options": [
             {
               "text": "Make pausing thing happen good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8565598c50.ogg"
             },
             {
               "text": "Pause? Maybe? Sometimes?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a44c4053b.ogg"
             },
             {
               "text": "Add a 'pause' button in the top-right that stops the timer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8dfda4f6ea.ogg"
             },
             {
               "text": "Pause but secret.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6097046b3a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_45_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Pick the better feature request:",
           "options": [
             {
               "text": "Pause? Maybe? Sometimes?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a44c4053b.ogg"
             },
             {
               "text": "Make pausing thing happen good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8565598c50.ogg"
             },
             {
               "text": "Add a 'pause' button in the top-right that stops the timer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8dfda4f6ea.ogg"
             },
             {
               "text": "Pause but secret.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6097046b3a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_45_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Pick the better feature request:",
           "options": [
             {
               "text": "Make pausing thing happen good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8565598c50.ogg"
             },
             {
               "text": "Pause? Maybe? Sometimes?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a44c4053b.ogg"
             },
             {
               "text": "Pause but secret.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6097046b3a.ogg"
             },
             {
               "text": "Add a 'pause' button in the top-right that stops the timer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8dfda4f6ea.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_45_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Pick the better feature request:",
           "options": [
             {
               "text": "Add a 'pause' button in the top-right that stops the timer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8dfda4f6ea.ogg"
             },
             {
               "text": "Make pausing thing happen good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8565598c50.ogg"
             },
             {
               "text": "Pause but secret.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6097046b3a.ogg"
             },
             {
               "text": "Pause? Maybe? Sometimes?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a44c4053b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_45_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Pick the better feature request:",
           "options": [
             {
               "text": "Add a 'pause' button in the top-right that stops the timer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8dfda4f6ea.ogg"
             },
             {
               "text": "Pause? Maybe? Sometimes?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a44c4053b.ogg"
             },
             {
               "text": "Pause but secret.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6097046b3a.ogg"
             },
             {
               "text": "Make pausing thing happen good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8565598c50.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_45_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Pick the better feature request:",
           "options": [
             {
               "text": "Pause but secret.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6097046b3a.ogg"
             },
             {
               "text": "Pause? Maybe? Sometimes?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a44c4053b.ogg"
             },
             {
               "text": "Add a 'pause' button in the top-right that stops the timer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8dfda4f6ea.ogg"
             },
             {
               "text": "Make pausing thing happen good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8565598c50.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_45_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Pick the better feature request:",
           "options": [
             {
               "text": "Pause but secret.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6097046b3a.ogg"
             },
             {
               "text": "Make pausing thing happen good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8565598c50.ogg"
             },
             {
               "text": "Add a 'pause' button in the top-right that stops the timer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8dfda4f6ea.ogg"
             },
             {
               "text": "Pause? Maybe? Sometimes?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a44c4053b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_45_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Pick the better feature request:",
           "options": [
             {
               "text": "Add a 'pause' button in the top-right that stops the timer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8dfda4f6ea.ogg"
             },
             {
               "text": "Make pausing thing happen good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8565598c50.ogg"
             },
             {
               "text": "Pause but secret.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6097046b3a.ogg"
             },
             {
               "text": "Pause? Maybe? Sometimes?",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a44c4053b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_45_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Save",
+              "right": "💾"
+            },
+            {
+              "left": "Share",
+              "right": "📤"
+            },
+            {
+              "left": "Build",
+              "right": "🔨"
+            }
+          ]
         }
       },
       "variations": [
@@ -556,220 +632,260 @@
           "options": [
             {
               "text": "Because tests earn 5 stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10d292ddc5.ogg"
             },
             {
               "text": "So the keyboard doesn't get bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11a1f65178.ogg"
             },
             {
               "text": "To make sure it actually works the way you wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f364fef092.ogg"
             },
             {
               "text": "To impress the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee59d77d5a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_45_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Why test the feature after it's added?",
           "options": [
             {
               "text": "To impress the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee59d77d5a.ogg"
             },
             {
               "text": "So the keyboard doesn't get bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11a1f65178.ogg"
             },
             {
               "text": "To make sure it actually works the way you wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f364fef092.ogg"
             },
             {
               "text": "Because tests earn 5 stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10d292ddc5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_45_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why test the feature after it's added?",
           "options": [
             {
               "text": "Because tests earn 5 stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10d292ddc5.ogg"
             },
             {
               "text": "To make sure it actually works the way you wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f364fef092.ogg"
             },
             {
               "text": "So the keyboard doesn't get bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11a1f65178.ogg"
             },
             {
               "text": "To impress the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee59d77d5a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_45_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why test the feature after it's added?",
           "options": [
             {
               "text": "To make sure it actually works the way you wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f364fef092.ogg"
             },
             {
               "text": "To impress the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee59d77d5a.ogg"
             },
             {
               "text": "So the keyboard doesn't get bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11a1f65178.ogg"
             },
             {
               "text": "Because tests earn 5 stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10d292ddc5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_45_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Why test the feature after it's added?",
           "options": [
             {
               "text": "To impress the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee59d77d5a.ogg"
             },
             {
               "text": "Because tests earn 5 stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10d292ddc5.ogg"
             },
             {
               "text": "To make sure it actually works the way you wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f364fef092.ogg"
             },
             {
               "text": "So the keyboard doesn't get bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11a1f65178.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_45_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why test the feature after it's added?",
           "options": [
             {
               "text": "To impress the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee59d77d5a.ogg"
             },
             {
               "text": "So the keyboard doesn't get bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11a1f65178.ogg"
             },
             {
               "text": "Because tests earn 5 stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10d292ddc5.ogg"
             },
             {
               "text": "To make sure it actually works the way you wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f364fef092.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_45_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why test the feature after it's added?",
           "options": [
             {
               "text": "So the keyboard doesn't get bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11a1f65178.ogg"
             },
             {
               "text": "To impress the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee59d77d5a.ogg"
             },
             {
               "text": "To make sure it actually works the way you wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f364fef092.ogg"
             },
             {
               "text": "Because tests earn 5 stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10d292ddc5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_45_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Why test the feature after it's added?",
           "options": [
             {
               "text": "Because tests earn 5 stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10d292ddc5.ogg"
             },
             {
               "text": "To make sure it actually works the way you wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f364fef092.ogg"
             },
             {
               "text": "So the keyboard doesn't get bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11a1f65178.ogg"
             },
             {
               "text": "To impress the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee59d77d5a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_45_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Why test the feature after it's added?",
           "options": [
             {
               "text": "So the keyboard doesn't get bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11a1f65178.ogg"
             },
             {
               "text": "Because tests earn 5 stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10d292ddc5.ogg"
             },
             {
               "text": "To make sure it actually works the way you wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f364fef092.ogg"
             },
             {
               "text": "To impress the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee59d77d5a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_45_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why test the feature after it's added?",
           "options": [
             {
               "text": "So the keyboard doesn't get bored.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/11a1f65178.ogg"
             },
             {
               "text": "Because tests earn 5 stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10d292ddc5.ogg"
             },
             {
               "text": "To impress the helper.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee59d77d5a.ogg"
             },
             {
               "text": "To make sure it actually works the way you wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f364fef092.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_45_q3_v9.ogg"
         }
       ]
     },
@@ -778,12 +894,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
+          "prompt": "Type EEVEE and press Send to keep going!",
+          "target_display": "EEVEE",
           "targets": [
-            "cool"
+            "eevee"
           ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "hint_wrong": "Type the word EEVEE (any case is fine)."
         }
       },
       "variations": [
@@ -792,234 +908,270 @@
           "options": [
             {
               "text": "Be clear about what you want to add.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7b3fdf0aa8.ogg"
             },
             {
               "text": "The AI shows you the code to add -- your job is to plug it in.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d507a61f7.ogg"
             },
             {
               "text": "AI features only stay for 30 seconds.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d85d355132.ogg"
             },
             {
               "text": "Say what should happen step by step.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/55fed2636e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_45_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
               "text": "You can ask AI to add a feature to your game by describing it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/16385c738d.ogg"
             },
             {
               "text": "AI charges $1 per feature.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/820263eaf1.ogg"
             },
             {
               "text": "Be clear about what you want to add.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7b3fdf0aa8.ogg"
             },
             {
               "text": "Asking AI for features is a real coder skill.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/73c622e5db.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_45_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
               "text": "Say what should happen step by step.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/55fed2636e.ogg"
             },
             {
               "text": "The AI shows you the code to add -- your job is to plug it in.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d507a61f7.ogg"
             },
             {
               "text": "Real features must be drawn first.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/0e1f56846a.ogg"
             },
             {
               "text": "Be clear about what you want to add.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7b3fdf0aa8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_45_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
               "text": "Mention what to NOT change.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/14237c9322.ogg"
             },
             {
               "text": "You can ask AI to add a feature to your game by describing it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/16385c738d.ogg"
             },
             {
               "text": "Be vague about everything — surprise yourself.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eb89f2d4f1.ogg"
             },
             {
               "text": "Helpers do best with small features.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1f7ff7e6f0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_45_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
               "text": "Add an example output if you can.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/73b99ba95e.ogg"
             },
             {
               "text": "Test the new feature after you add it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/193f1f3965.ogg"
             },
             {
               "text": "The AI shows you the code to add -- your job is to plug it in.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d507a61f7.ogg"
             },
             {
               "text": "Hide the file from the helper — playing hide and seek.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b9cfdeeb8e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_45_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
               "text": "Asking AI for features is a real coder skill.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/73c622e5db.ogg"
             },
             {
               "text": "Skip testing the new feature — gut feel only.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7dbfebe32f.ogg"
             },
             {
               "text": "Be specific: 'Add a jump that makes the hero go up when I press space'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4820e9f2a.ogg"
             },
             {
               "text": "Mention what to NOT change.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/14237c9322.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_45_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
               "text": "You can ask AI to add a feature to your game by describing it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/16385c738d.ogg"
             },
             {
               "text": "Test the new feature after you add it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/193f1f3965.ogg"
             },
             {
               "text": "Add ten features at once and pray.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4b15f82ebc.ogg"
             },
             {
               "text": "Say what should happen step by step.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/55fed2636e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_45_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
               "text": "Be clear about what you want to add.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7b3fdf0aa8.ogg"
             },
             {
               "text": "Add an example output if you can.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/73b99ba95e.ogg"
             },
             {
               "text": "Asking AI for features is a real coder skill.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/73c622e5db.ogg"
             },
             {
               "text": "Helpers like giant features only — small ones bore them.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6e55046429.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_45_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
               "text": "Each feature must include a haiku.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/17acc908fe.ogg"
             },
             {
               "text": "Say what should happen step by step.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/55fed2636e.ogg"
             },
             {
               "text": "Tell the helper what 'done' looks like.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9ed910261.ogg"
             },
             {
               "text": "Show the file or place where it goes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/139c457f6f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_45_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about asking AI for a feature.",
           "options": [
             {
               "text": "Be specific: 'Add a jump that makes the hero go up when I press space'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4820e9f2a.ogg"
             },
             {
               "text": "Hide your name to make it hard.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89c93748fc.ogg"
             },
             {
               "text": "Helpers do best with small features.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1f7ff7e6f0.ogg"
             },
             {
               "text": "The AI shows you the code to add -- your job is to plug it in.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d507a61f7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_45_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "💎"
         }
       },
       "variations": [
@@ -1028,234 +1180,287 @@
           "options": [
             {
               "text": "Skip testing the new feature — gut feel only.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7dbfebe32f.ogg"
             },
             {
               "text": "AI charges $1 per feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/820263eaf1.ogg"
             },
             {
               "text": "Be vague about everything — surprise yourself.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb89f2d4f1.ogg"
             },
             {
               "text": "Be clear about what you want to add.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7b3fdf0aa8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_45_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about asking AI for a feature?",
           "options": [
             {
               "text": "Be vague about everything — surprise yourself.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb89f2d4f1.ogg"
             },
             {
               "text": "Use only emoji to describe the feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dfe640b6ef.ogg"
             },
             {
               "text": "Show the file or place where it goes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/139c457f6f.ogg"
             },
             {
               "text": "Yell at the AI until it adds the feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2cfb4df808.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_45_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about asking AI for a feature?",
           "options": [
             {
               "text": "Say what should happen step by step.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55fed2636e.ogg"
             },
             {
               "text": "Helpers like giant features only — small ones bore them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e55046429.ogg"
             },
             {
               "text": "Use only emoji to describe the feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dfe640b6ef.ogg"
             },
             {
               "text": "Hide the file from the helper — playing hide and seek.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9cfdeeb8e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_45_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about asking AI for a feature?",
           "options": [
             {
               "text": "AI features only stay for 30 seconds.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d85d355132.ogg"
             },
             {
               "text": "Test the new feature after you add it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/193f1f3965.ogg"
             },
             {
               "text": "Yell at the AI until it adds the feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2cfb4df808.ogg"
             },
             {
               "text": "Use only emoji to describe the feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dfe640b6ef.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_45_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about asking AI for a feature?",
           "options": [
             {
               "text": "Helpers do best with small features.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1f7ff7e6f0.ogg"
             },
             {
               "text": "Hide your name to make it hard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89c93748fc.ogg"
             },
             {
               "text": "Helpers like giant features only — small ones bore them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e55046429.ogg"
             },
             {
               "text": "Real features must be drawn first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0e1f56846a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_45_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about asking AI for a feature?",
           "options": [
             {
               "text": "Tell the helper what 'done' looks like.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d9ed910261.ogg"
             },
             {
               "text": "Hide your name to make it hard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89c93748fc.ogg"
             },
             {
               "text": "Be vague about everything — surprise yourself.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb89f2d4f1.ogg"
             },
             {
               "text": "Hide the file from the helper — playing hide and seek.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9cfdeeb8e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_45_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about asking AI for a feature?",
           "options": [
             {
               "text": "Add ten features at once and pray.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4b15f82ebc.ogg"
             },
             {
               "text": "Be vague about everything — surprise yourself.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb89f2d4f1.ogg"
             },
             {
               "text": "Mention what to NOT change.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/14237c9322.ogg"
             },
             {
               "text": "Skip testing the new feature — gut feel only.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7dbfebe32f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_45_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about asking AI for a feature?",
           "options": [
             {
               "text": "Be vague about everything — surprise yourself.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb89f2d4f1.ogg"
             },
             {
               "text": "Hide your name to make it hard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/89c93748fc.ogg"
             },
             {
               "text": "Helpers like giant features only — small ones bore them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e55046429.ogg"
             },
             {
               "text": "Add an example output if you can.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/73b99ba95e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_45_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about asking AI for a feature?",
           "options": [
             {
               "text": "Real features must be drawn first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0e1f56846a.ogg"
             },
             {
               "text": "Add ten features at once and pray.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4b15f82ebc.ogg"
             },
             {
               "text": "Helpers like giant features only — small ones bore them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e55046429.ogg"
             },
             {
               "text": "You can ask AI to add a feature to your game by describing it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/16385c738d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_45_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about asking AI for a feature?",
           "options": [
             {
               "text": "AI features only stay for 30 seconds.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d85d355132.ogg"
             },
             {
               "text": "AI charges $1 per feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/820263eaf1.ogg"
             },
             {
               "text": "Hide the file from the helper — playing hide and seek.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9cfdeeb8e.ogg"
             },
             {
               "text": "Be specific: 'Add a jump that makes the hero go up when I press space'.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f4820e9f2a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_45_q5_v9.ogg"
         }
       ]
     },
     {
       "id": "q6",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
-          "targets": [
-            "win"
-          ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🎮",
+              "right": true
+            },
+            {
+              "glyph": "🥦",
+              "right": false
+            },
+            {
+              "glyph": "📚",
+              "right": false
+            },
+            {
+              "glyph": "🧦",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -1264,220 +1469,260 @@
           "options": [
             {
               "text": "'Make it cooler!'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5c8d6a5a8f.ogg"
             },
             {
               "text": "'You know what I mean.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/33dc97f79d.ogg"
             },
             {
               "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ecaf1365e7.ogg"
             },
             {
               "text": "'Coins.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4e606abcdb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_45_q6_v0.ogg"
         },
         {
           "prompt": "Quick! You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
               "text": "'Make it cooler!'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5c8d6a5a8f.ogg"
             },
             {
               "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ecaf1365e7.ogg"
             },
             {
               "text": "'You know what I mean.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/33dc97f79d.ogg"
             },
             {
               "text": "'Coins.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4e606abcdb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_45_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
               "text": "'Coins.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4e606abcdb.ogg"
             },
             {
               "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ecaf1365e7.ogg"
             },
             {
               "text": "'You know what I mean.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/33dc97f79d.ogg"
             },
             {
               "text": "'Make it cooler!'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5c8d6a5a8f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_45_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
               "text": "'You know what I mean.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/33dc97f79d.ogg"
             },
             {
               "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ecaf1365e7.ogg"
             },
             {
               "text": "'Make it cooler!'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5c8d6a5a8f.ogg"
             },
             {
               "text": "'Coins.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4e606abcdb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_45_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
               "text": "'Coins.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4e606abcdb.ogg"
             },
             {
               "text": "'You know what I mean.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/33dc97f79d.ogg"
             },
             {
               "text": "'Make it cooler!'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5c8d6a5a8f.ogg"
             },
             {
               "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ecaf1365e7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_45_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
               "text": "'You know what I mean.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/33dc97f79d.ogg"
             },
             {
               "text": "'Coins.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4e606abcdb.ogg"
             },
             {
               "text": "'Make it cooler!'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5c8d6a5a8f.ogg"
             },
             {
               "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ecaf1365e7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_45_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
               "text": "'You know what I mean.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/33dc97f79d.ogg"
             },
             {
               "text": "'Coins.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4e606abcdb.ogg"
             },
             {
               "text": "'Make it cooler!'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5c8d6a5a8f.ogg"
             },
             {
               "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ecaf1365e7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_45_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
               "text": "'Make it cooler!'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5c8d6a5a8f.ogg"
             },
             {
               "text": "'You know what I mean.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/33dc97f79d.ogg"
             },
             {
               "text": "'Coins.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4e606abcdb.ogg"
             },
             {
               "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ecaf1365e7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_45_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
               "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ecaf1365e7.ogg"
             },
             {
               "text": "'Coins.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4e606abcdb.ogg"
             },
             {
               "text": "'Make it cooler!'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5c8d6a5a8f.ogg"
             },
             {
               "text": "'You know what I mean.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/33dc97f79d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_45_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: You want to add coins to your game. What's the smart prompt?",
           "options": [
             {
               "text": "'Coins.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4e606abcdb.ogg"
             },
             {
               "text": "'Make it cooler!'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5c8d6a5a8f.ogg"
             },
             {
               "text": "'Add code that drops 5 coins on the level. Hero collects them by touching.'",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ecaf1365e7.ogg"
             },
             {
               "text": "'You know what I mean.'",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/33dc97f79d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_45_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_45_q6_v9.ogg"
         }
       ]
     }

@@ -55,269 +55,290 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "history-scene",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Watch the scene, then answer the question!",
-          "scene": {
-            "id": "math",
-            "check": {
-              "prompt": "In the scene, what did 2 + 3 become?",
-              "choices": [
-                {
-                  "label": "5 →",
-                  "right": true
-                },
-                {
-                  "label": "7",
-                  "right": false
-                },
-                {
-                  "label": "A picture",
-                  "right": false
-                },
-                {
-                  "label": "0",
-                  "right": false
-                }
-              ]
-            }
-          }
+          "prompt": "🧠 Math thinking happens in steps — put them in order!",
+          "steps": [
+            "See the problem",
+            "Try a step",
+            "Check your answer"
+          ]
         }
       },
       "variations": [
         {
-          "prompt": "What is math made of thinking?",
+          "prompt": "🔥 Round one, FIGHT! Tap the best fact about Math Made Thinking.",
           "options": [
             {
               "text": "Computers prefer odd numbers because they look funny.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10dd196943.ogg"
             },
             {
               "text": "1 plus 1 sometimes equals 7 on rainy days.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/77682ba13a.ogg"
             },
             {
               "text": "Numbers are afraid of computers and hide behind 9.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/049cf73e14.ogg"
             },
             {
               "text": "Computers do math super fast.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6f368e379c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_05_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about math made of thinking?",
           "options": [
             {
               "text": "Math only works on paper made of moss.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/737eb58182.ogg"
             },
             {
               "text": "Adding 1 + 1 always equals 2.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/80fbdf595f.ogg"
             },
             {
               "text": "If you yell at a number it changes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e8345048d1.ogg"
             },
             {
               "text": "When numbers get too big, computers eat them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d43020fdc0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_05_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
               "text": "Computers do math super fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6f368e379c.ogg"
             },
             {
               "text": "Math helps games count points.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/01c3e876e5.ogg"
             },
             {
               "text": "Math only works on paper made of moss.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/737eb58182.ogg"
             },
             {
               "text": "We can use math to compare things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92dd8175b1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_05_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about math made of thinking. What should he say?",
           "options": [
             {
               "text": "When numbers get too big, computers eat them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d43020fdc0.ogg"
             },
             {
               "text": "Numbers are afraid of computers and hide behind 9.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/049cf73e14.ogg"
             },
             {
               "text": "Math helps games count points.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/01c3e876e5.ogg"
             },
             {
               "text": "Computers add numbers wrong on purpose for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/088fba084b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_05_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about math made of thinking is a GOOD rule?",
           "options": [
             {
               "text": "Computers prefer odd numbers because they look funny.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10dd196943.ogg"
             },
             {
               "text": "Math only works on paper made of moss.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/737eb58182.ogg"
             },
             {
               "text": "Computers never get bored of math.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/56b64842e2.ogg"
             },
             {
               "text": "Numbers are afraid of computers and hide behind 9.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/049cf73e14.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_05_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about math made of thinking, ___",
           "options": [
             {
               "text": "Zero is the king of all numbers and demands tribute.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/374204b18a.ogg"
             },
             {
               "text": "Counting is a kind of math.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e2fc80abdb.ogg"
             },
             {
               "text": "Computers do math by counting their feet.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5301a20889.ogg"
             },
             {
               "text": "Computers fall asleep doing math after lunch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92d5cc0347.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_05_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about math made of thinking. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Math helps games count points.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/01c3e876e5.ogg"
             },
             {
               "text": "Computers never get bored of math.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b64842e2.ogg"
             },
             {
               "text": "If you yell at a number it changes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e8345048d1.ogg"
             },
             {
               "text": "Counting is a kind of math.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e2fc80abdb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_05_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with math made of thinking?",
           "options": [
             {
               "text": "Computers add numbers wrong on purpose for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/088fba084b.ogg"
             },
             {
               "text": "Math is just opinions in a bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e221c7e06a.ogg"
             },
             {
               "text": "We can use math to compare things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/92dd8175b1.ogg"
             },
             {
               "text": "Numbers are afraid of computers and hide behind 9.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/049cf73e14.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_05_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about math made of thinking is silly. Pick the silly one!",
           "options": [
             {
               "text": "Computers do math by following the same rules every time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7582d79a80.ogg"
             },
             {
               "text": "Math helps games count points.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/01c3e876e5.ogg"
             },
             {
               "text": "Counting is a kind of math.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e2fc80abdb.ogg"
             },
             {
               "text": "Computers do math by counting their feet.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5301a20889.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_05_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about math made of thinking. Which fact would help him?",
           "options": [
             {
               "text": "If you give a computer 1 + 1, it always gives back 2.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8541a54708.ogg"
             },
             {
               "text": "Math is just opinions in a bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e221c7e06a.ogg"
             },
             {
               "text": "If you yell at a number it changes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e8345048d1.ogg"
             },
             {
               "text": "Math only works on paper made of moss.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/737eb58182.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_05_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Order the math thinking steps:",
+          "steps": [
+            "Look at the problem",
+            "Try a step",
+            "Check your answer"
+          ]
         }
       },
       "variations": [
@@ -326,234 +347,270 @@
           "options": [
             {
               "text": "Math always gives the same answer for the same numbers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ce0e44084f.ogg"
             },
             {
               "text": "The numbers like Bytey today.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/05a4a8e233.ogg"
             },
             {
               "text": "Bytey is being polite to the computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aeec1c75a8.ogg"
             },
             {
               "text": "3 and 4 are best friends and always make 7.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/623ac365f4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_05_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
           "options": [
             {
               "text": "Math always gives the same answer for the same numbers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ce0e44084f.ogg"
             },
             {
               "text": "The numbers like Bytey today.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/05a4a8e233.ogg"
             },
             {
               "text": "3 and 4 are best friends and always make 7.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/623ac365f4.ogg"
             },
             {
               "text": "Bytey is being polite to the computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aeec1c75a8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_05_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
           "options": [
             {
               "text": "3 and 4 are best friends and always make 7.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/623ac365f4.ogg"
             },
             {
               "text": "The numbers like Bytey today.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/05a4a8e233.ogg"
             },
             {
               "text": "Math always gives the same answer for the same numbers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ce0e44084f.ogg"
             },
             {
               "text": "Bytey is being polite to the computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aeec1c75a8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_05_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
           "options": [
             {
               "text": "The numbers like Bytey today.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/05a4a8e233.ogg"
             },
             {
               "text": "Bytey is being polite to the computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aeec1c75a8.ogg"
             },
             {
               "text": "3 and 4 are best friends and always make 7.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/623ac365f4.ogg"
             },
             {
               "text": "Math always gives the same answer for the same numbers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ce0e44084f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_05_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
           "options": [
             {
               "text": "Bytey is being polite to the computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aeec1c75a8.ogg"
             },
             {
               "text": "Math always gives the same answer for the same numbers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ce0e44084f.ogg"
             },
             {
               "text": "3 and 4 are best friends and always make 7.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/623ac365f4.ogg"
             },
             {
               "text": "The numbers like Bytey today.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/05a4a8e233.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_05_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
           "options": [
             {
               "text": "The numbers like Bytey today.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/05a4a8e233.ogg"
             },
             {
               "text": "Bytey is being polite to the computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aeec1c75a8.ogg"
             },
             {
               "text": "Math always gives the same answer for the same numbers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ce0e44084f.ogg"
             },
             {
               "text": "3 and 4 are best friends and always make 7.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/623ac365f4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_05_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
           "options": [
             {
               "text": "Math always gives the same answer for the same numbers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ce0e44084f.ogg"
             },
             {
               "text": "The numbers like Bytey today.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/05a4a8e233.ogg"
             },
             {
               "text": "3 and 4 are best friends and always make 7.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/623ac365f4.ogg"
             },
             {
               "text": "Bytey is being polite to the computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aeec1c75a8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_05_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
           "options": [
             {
               "text": "3 and 4 are best friends and always make 7.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/623ac365f4.ogg"
             },
             {
               "text": "The numbers like Bytey today.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/05a4a8e233.ogg"
             },
             {
               "text": "Bytey is being polite to the computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aeec1c75a8.ogg"
             },
             {
               "text": "Math always gives the same answer for the same numbers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ce0e44084f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_05_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
           "options": [
             {
               "text": "Bytey is being polite to the computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aeec1c75a8.ogg"
             },
             {
               "text": "The numbers like Bytey today.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/05a4a8e233.ogg"
             },
             {
               "text": "Math always gives the same answer for the same numbers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ce0e44084f.ogg"
             },
             {
               "text": "3 and 4 are best friends and always make 7.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/623ac365f4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_05_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey adds 3 + 4 in code and gets 7. He runs it again and gets 7 again. Why?",
           "options": [
             {
               "text": "Bytey is being polite to the computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aeec1c75a8.ogg"
             },
             {
               "text": "3 and 4 are best friends and always make 7.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/623ac365f4.ogg"
             },
             {
               "text": "Math always gives the same answer for the same numbers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ce0e44084f.ogg"
             },
             {
               "text": "The numbers like Bytey today.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/05a4a8e233.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_05_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "⚡"
         }
       },
       "variations": [
@@ -562,234 +619,287 @@
           "options": [
             {
               "text": "They follow rules super fast without getting tired.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/41c3bd1e8c.ogg"
             },
             {
               "text": "They are powered by tiny number-eating ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02f7a39d04.ogg"
             },
             {
               "text": "They have invisible math goggles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf45037de7.ogg"
             },
             {
               "text": "They cheat off your calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ef09fc06d4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_05_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Why are computers good at math?",
           "options": [
             {
               "text": "They follow rules super fast without getting tired.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/41c3bd1e8c.ogg"
             },
             {
               "text": "They are powered by tiny number-eating ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02f7a39d04.ogg"
             },
             {
               "text": "They have invisible math goggles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf45037de7.ogg"
             },
             {
               "text": "They cheat off your calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ef09fc06d4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_05_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why are computers good at math?",
           "options": [
             {
               "text": "They are powered by tiny number-eating ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02f7a39d04.ogg"
             },
             {
               "text": "They follow rules super fast without getting tired.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/41c3bd1e8c.ogg"
             },
             {
               "text": "They have invisible math goggles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf45037de7.ogg"
             },
             {
               "text": "They cheat off your calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ef09fc06d4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_05_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why are computers good at math?",
           "options": [
             {
               "text": "They have invisible math goggles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf45037de7.ogg"
             },
             {
               "text": "They are powered by tiny number-eating ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02f7a39d04.ogg"
             },
             {
               "text": "They cheat off your calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ef09fc06d4.ogg"
             },
             {
               "text": "They follow rules super fast without getting tired.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/41c3bd1e8c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_05_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Why are computers good at math?",
           "options": [
             {
               "text": "They are powered by tiny number-eating ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02f7a39d04.ogg"
             },
             {
               "text": "They cheat off your calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ef09fc06d4.ogg"
             },
             {
               "text": "They follow rules super fast without getting tired.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/41c3bd1e8c.ogg"
             },
             {
               "text": "They have invisible math goggles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf45037de7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_05_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why are computers good at math?",
           "options": [
             {
               "text": "They follow rules super fast without getting tired.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/41c3bd1e8c.ogg"
             },
             {
               "text": "They have invisible math goggles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf45037de7.ogg"
             },
             {
               "text": "They are powered by tiny number-eating ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02f7a39d04.ogg"
             },
             {
               "text": "They cheat off your calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ef09fc06d4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_05_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why are computers good at math?",
           "options": [
             {
               "text": "They cheat off your calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ef09fc06d4.ogg"
             },
             {
               "text": "They follow rules super fast without getting tired.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/41c3bd1e8c.ogg"
             },
             {
               "text": "They are powered by tiny number-eating ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02f7a39d04.ogg"
             },
             {
               "text": "They have invisible math goggles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf45037de7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_05_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Why are computers good at math?",
           "options": [
             {
               "text": "They follow rules super fast without getting tired.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/41c3bd1e8c.ogg"
             },
             {
               "text": "They have invisible math goggles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf45037de7.ogg"
             },
             {
               "text": "They cheat off your calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ef09fc06d4.ogg"
             },
             {
               "text": "They are powered by tiny number-eating ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02f7a39d04.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_05_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Why are computers good at math?",
           "options": [
             {
               "text": "They follow rules super fast without getting tired.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/41c3bd1e8c.ogg"
             },
             {
               "text": "They are powered by tiny number-eating ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02f7a39d04.ogg"
             },
             {
               "text": "They have invisible math goggles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf45037de7.ogg"
             },
             {
               "text": "They cheat off your calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ef09fc06d4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_05_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why are computers good at math?",
           "options": [
             {
               "text": "They have invisible math goggles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cf45037de7.ogg"
             },
             {
               "text": "They are powered by tiny number-eating ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02f7a39d04.ogg"
             },
             {
               "text": "They cheat off your calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ef09fc06d4.ogg"
             },
             {
               "text": "They follow rules super fast without getting tired.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/41c3bd1e8c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_05_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "⭐",
+              "right": true
+            },
+            {
+              "glyph": "🌧️",
+              "right": false
+            },
+            {
+              "glyph": "🥒",
+              "right": false
+            },
+            {
+              "glyph": "🪵",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -798,234 +908,270 @@
           "options": [
             {
               "text": "Computers do math super fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6f368e379c.ogg"
             },
             {
               "text": "Computers can do millions of math problems while you blink.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/97ee6a9d47.ogg"
             },
             {
               "text": "Computers prefer odd numbers because they look funny.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/10dd196943.ogg"
             },
             {
               "text": "We can use math to make rules.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/93d11469bd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_05_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
               "text": "Computers do math by following the same rules every time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7582d79a80.ogg"
             },
             {
               "text": "When numbers get too big, computers eat them.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d43020fdc0.ogg"
             },
             {
               "text": "Computers do math super fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6f368e379c.ogg"
             },
             {
               "text": "Math is the language computers think in.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/549a3bb847.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_05_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
               "text": "We can use math to make rules.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/93d11469bd.ogg"
             },
             {
               "text": "Computers can do millions of math problems while you blink.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/97ee6a9d47.ogg"
             },
             {
               "text": "Math is hard for computers when it's raining.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/af8a43c5ef.ogg"
             },
             {
               "text": "Computers do math super fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6f368e379c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_05_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
               "text": "Math has rules that always work the same way.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5f047dba41.ogg"
             },
             {
               "text": "Computers do math by following the same rules every time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7582d79a80.ogg"
             },
             {
               "text": "Computers add numbers wrong on purpose for fun.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/088fba084b.ogg"
             },
             {
               "text": "Computers never get bored of math.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b64842e2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_05_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
               "text": "We can use math to compare things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92dd8175b1.ogg"
             },
             {
               "text": "Math helps games count points.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/01c3e876e5.ogg"
             },
             {
               "text": "Computers can do millions of math problems while you blink.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/97ee6a9d47.ogg"
             },
             {
               "text": "1 plus 1 sometimes equals 7 on rainy days.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/77682ba13a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_05_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
               "text": "Math is the language computers think in.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/549a3bb847.ogg"
             },
             {
               "text": "Math only works on paper made of moss.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/737eb58182.ogg"
             },
             {
               "text": "If you give a computer 1 + 1, it always gives back 2.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8541a54708.ogg"
             },
             {
               "text": "Math has rules that always work the same way.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5f047dba41.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_05_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
               "text": "Computers do math by following the same rules every time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7582d79a80.ogg"
             },
             {
               "text": "Math helps games count points.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/01c3e876e5.ogg"
             },
             {
               "text": "Computers fall asleep doing math after lunch.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/92d5cc0347.ogg"
             },
             {
               "text": "We can use math to make rules.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/93d11469bd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_05_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
               "text": "Computers do math super fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6f368e379c.ogg"
             },
             {
               "text": "We can use math to compare things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92dd8175b1.ogg"
             },
             {
               "text": "Math is the language computers think in.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/549a3bb847.ogg"
             },
             {
               "text": "Numbers are afraid of computers and hide behind 9.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/049cf73e14.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_05_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
               "text": "Math is just opinions in a bow tie.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e221c7e06a.ogg"
             },
             {
               "text": "We can use math to make rules.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/93d11469bd.ogg"
             },
             {
               "text": "Counting is a kind of math.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e2fc80abdb.ogg"
             },
             {
               "text": "Adding 1 + 1 always equals 2.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80fbdf595f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_05_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about math made of thinking.",
           "options": [
             {
               "text": "If you give a computer 1 + 1, it always gives back 2.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8541a54708.ogg"
             },
             {
               "text": "If you yell at a number it changes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e8345048d1.ogg"
             },
             {
               "text": "Computers never get bored of math.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b64842e2.ogg"
             },
             {
               "text": "Computers can do millions of math problems while you blink.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/97ee6a9d47.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_05_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🚀"
         }
       },
       "variations": [
@@ -1034,234 +1180,274 @@
           "options": [
             {
               "text": "Math only works on paper made of moss.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/737eb58182.ogg"
             },
             {
               "text": "When numbers get too big, computers eat them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d43020fdc0.ogg"
             },
             {
               "text": "Computers add numbers wrong on purpose for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/088fba084b.ogg"
             },
             {
               "text": "Computers do math super fast.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6f368e379c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_05_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about math made of thinking?",
           "options": [
             {
               "text": "Computers add numbers wrong on purpose for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/088fba084b.ogg"
             },
             {
               "text": "Zero is the king of all numbers and demands tribute.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/374204b18a.ogg"
             },
             {
               "text": "Adding 1 + 1 always equals 2.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/80fbdf595f.ogg"
             },
             {
               "text": "Computers do math by counting their feet.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5301a20889.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_05_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about math made of thinking?",
           "options": [
             {
               "text": "We can use math to make rules.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/93d11469bd.ogg"
             },
             {
               "text": "Numbers are afraid of computers and hide behind 9.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/049cf73e14.ogg"
             },
             {
               "text": "Zero is the king of all numbers and demands tribute.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/374204b18a.ogg"
             },
             {
               "text": "1 plus 1 sometimes equals 7 on rainy days.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/77682ba13a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_05_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about math made of thinking?",
           "options": [
             {
               "text": "Computers prefer odd numbers because they look funny.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10dd196943.ogg"
             },
             {
               "text": "Math helps games count points.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/01c3e876e5.ogg"
             },
             {
               "text": "Computers do math by counting their feet.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5301a20889.ogg"
             },
             {
               "text": "Zero is the king of all numbers and demands tribute.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/374204b18a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_05_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about math made of thinking?",
           "options": [
             {
               "text": "Computers never get bored of math.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/56b64842e2.ogg"
             },
             {
               "text": "If you yell at a number it changes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e8345048d1.ogg"
             },
             {
               "text": "Numbers are afraid of computers and hide behind 9.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/049cf73e14.ogg"
             },
             {
               "text": "Math is hard for computers when it's raining.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/af8a43c5ef.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_05_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about math made of thinking?",
           "options": [
             {
               "text": "Counting is a kind of math.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e2fc80abdb.ogg"
             },
             {
               "text": "If you yell at a number it changes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e8345048d1.ogg"
             },
             {
               "text": "Computers add numbers wrong on purpose for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/088fba084b.ogg"
             },
             {
               "text": "1 plus 1 sometimes equals 7 on rainy days.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/77682ba13a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_05_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about math made of thinking?",
           "options": [
             {
               "text": "Computers fall asleep doing math after lunch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92d5cc0347.ogg"
             },
             {
               "text": "Computers add numbers wrong on purpose for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/088fba084b.ogg"
             },
             {
               "text": "Math has rules that always work the same way.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5f047dba41.ogg"
             },
             {
               "text": "Math only works on paper made of moss.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/737eb58182.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_05_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about math made of thinking?",
           "options": [
             {
               "text": "Computers add numbers wrong on purpose for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/088fba084b.ogg"
             },
             {
               "text": "If you yell at a number it changes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e8345048d1.ogg"
             },
             {
               "text": "Numbers are afraid of computers and hide behind 9.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/049cf73e14.ogg"
             },
             {
               "text": "We can use math to compare things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/92dd8175b1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_05_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about math made of thinking?",
           "options": [
             {
               "text": "Math is hard for computers when it's raining.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/af8a43c5ef.ogg"
             },
             {
               "text": "Computers fall asleep doing math after lunch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92d5cc0347.ogg"
             },
             {
               "text": "Numbers are afraid of computers and hide behind 9.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/049cf73e14.ogg"
             },
             {
               "text": "Computers do math by following the same rules every time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7582d79a80.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_05_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about math made of thinking?",
           "options": [
             {
               "text": "Computers prefer odd numbers because they look funny.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/10dd196943.ogg"
             },
             {
               "text": "When numbers get too big, computers eat them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d43020fdc0.ogg"
             },
             {
               "text": "1 plus 1 sometimes equals 7 on rainy days.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/77682ba13a.ogg"
             },
             {
               "text": "If you give a computer 1 + 1, it always gives back 2.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8541a54708.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_05_q5_v9.ogg"
         }
       ]
     },
     {
       "id": "q6",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
-          "targets": [
-            "win"
-          ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "prompt": "Order the math thinking steps:",
+          "steps": [
+            "Look at the problem",
+            "Try a step",
+            "Check your answer"
+          ]
         }
       },
       "variations": [
@@ -1270,220 +1456,260 @@
           "options": [
             {
               "text": "It refuses unless paid in stickers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/35dc152483.ogg"
             },
             {
               "text": "8, instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/972cdaf377.ogg"
             },
             {
               "text": "It tells a joke instead.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c83391bd5c.ogg"
             },
             {
               "text": "Maybe 8, maybe 7 -- depends on its mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be19275ae0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_05_q6_v0.ogg"
         },
         {
           "prompt": "Quick! Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
               "text": "It tells a joke instead.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c83391bd5c.ogg"
             },
             {
               "text": "Maybe 8, maybe 7 -- depends on its mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be19275ae0.ogg"
             },
             {
               "text": "8, instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/972cdaf377.ogg"
             },
             {
               "text": "It refuses unless paid in stickers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/35dc152483.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_05_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
               "text": "Maybe 8, maybe 7 -- depends on its mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be19275ae0.ogg"
             },
             {
               "text": "It refuses unless paid in stickers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/35dc152483.ogg"
             },
             {
               "text": "8, instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/972cdaf377.ogg"
             },
             {
               "text": "It tells a joke instead.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c83391bd5c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_05_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
               "text": "Maybe 8, maybe 7 -- depends on its mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be19275ae0.ogg"
             },
             {
               "text": "8, instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/972cdaf377.ogg"
             },
             {
               "text": "It refuses unless paid in stickers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/35dc152483.ogg"
             },
             {
               "text": "It tells a joke instead.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c83391bd5c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_05_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
               "text": "It refuses unless paid in stickers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/35dc152483.ogg"
             },
             {
               "text": "Maybe 8, maybe 7 -- depends on its mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be19275ae0.ogg"
             },
             {
               "text": "8, instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/972cdaf377.ogg"
             },
             {
               "text": "It tells a joke instead.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c83391bd5c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_05_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
               "text": "8, instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/972cdaf377.ogg"
             },
             {
               "text": "Maybe 8, maybe 7 -- depends on its mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be19275ae0.ogg"
             },
             {
               "text": "It tells a joke instead.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c83391bd5c.ogg"
             },
             {
               "text": "It refuses unless paid in stickers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/35dc152483.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_05_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
               "text": "8, instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/972cdaf377.ogg"
             },
             {
               "text": "It tells a joke instead.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c83391bd5c.ogg"
             },
             {
               "text": "Maybe 8, maybe 7 -- depends on its mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be19275ae0.ogg"
             },
             {
               "text": "It refuses unless paid in stickers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/35dc152483.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_05_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
               "text": "Maybe 8, maybe 7 -- depends on its mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be19275ae0.ogg"
             },
             {
               "text": "It refuses unless paid in stickers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/35dc152483.ogg"
             },
             {
               "text": "It tells a joke instead.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c83391bd5c.ogg"
             },
             {
               "text": "8, instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/972cdaf377.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_05_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
               "text": "8, instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/972cdaf377.ogg"
             },
             {
               "text": "It tells a joke instead.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c83391bd5c.ogg"
             },
             {
               "text": "It refuses unless paid in stickers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/35dc152483.ogg"
             },
             {
               "text": "Maybe 8, maybe 7 -- depends on its mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be19275ae0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_05_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey asks the computer: 5 + 3. What does it say?",
           "options": [
             {
               "text": "Maybe 8, maybe 7 -- depends on its mood.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/be19275ae0.ogg"
             },
             {
               "text": "It refuses unless paid in stickers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/35dc152483.ogg"
             },
             {
               "text": "It tells a joke instead.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c83391bd5c.ogg"
             },
             {
               "text": "8, instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/972cdaf377.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_05_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_05_q6_v9.ogg"
         }
       ]
     }

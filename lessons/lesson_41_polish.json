@@ -58,249 +58,276 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Which one is POLISH (not core gameplay)?",
-          "choices": [
-            {
-              "label": "Hero can walk",
-              "right": false
-            },
-            {
-              "label": "Boing sound when you jump",
-              "right": true
-            },
-            {
-              "label": "Score goes up",
-              "right": false
-            },
-            {
-              "label": "Coin makes points",
-              "right": false
-            }
-          ]
+          "prompt": "Type GOOMBA and press Send to keep going!",
+          "target_display": "GOOMBA",
+          "targets": [
+            "goomba"
+          ],
+          "hint_wrong": "Type the word GOOMBA (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "What is polish?",
+          "prompt": "🚀 Bytey's first puzzle of the day: pick the TRUE one about Make It Feel Good!",
           "options": [
             {
               "text": "Polish is just for shoes, not games.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4db134b717.ogg"
             },
             {
               "text": "Polish never matters — players want raw bones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8ac3eedb99.ogg"
             },
             {
               "text": "Players hate polish — it scares them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4b577f733.ogg"
             },
             {
               "text": "Polish is small touches that make things feel good.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/675da3e0ec.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_41_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about polish?",
           "options": [
             {
               "text": "Polish only means floors and shoes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/378d0ff106.ogg"
             },
             {
               "text": "Sound, color, and shake count as polish.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b9fb4b56aa.ogg"
             },
             {
               "text": "Polish smells like burnt cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ed486be.ogg"
             },
             {
               "text": "Polish costs $5 per click.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83c09dcce9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_41_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about polish.",
           "options": [
             {
               "text": "Polish is small touches that make things feel good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/675da3e0ec.ogg"
             },
             {
               "text": "A little polish goes far.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1ad683590.ogg"
             },
             {
               "text": "Polish only means floors and shoes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/378d0ff106.ogg"
             },
             {
               "text": "Tiny pauses for impact are polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff79eb5556.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_41_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about polish. What should he say?",
           "options": [
             {
               "text": "Polish costs $5 per click.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83c09dcce9.ogg"
             },
             {
               "text": "Players hate polish — it scares them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4b577f733.ogg"
             },
             {
               "text": "A little polish goes far.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1ad683590.ogg"
             },
             {
               "text": "Polish is the very first step — start here always.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a5efea9fba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_41_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about polish is a GOOD rule?",
           "options": [
             {
               "text": "Polish is just for shoes, not games.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4db134b717.ogg"
             },
             {
               "text": "Polish only means floors and shoes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/378d0ff106.ogg"
             },
             {
               "text": "Players notice polish without saying so.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f022cb2e69.ogg"
             },
             {
               "text": "Players hate polish — it scares them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4b577f733.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_41_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about polish, ___",
           "options": [
             {
               "text": "Polish is illegal in games for kids.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5cd021e682.ogg"
             },
             {
               "text": "Animations are polish.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/016cb91230.ogg"
             },
             {
               "text": "Polish only works if applied with a special cloth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/47284c48cf.ogg"
             },
             {
               "text": "More polish is always bad and slippery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4a40aab6ca.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_41_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about polish. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A little polish goes far.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1ad683590.ogg"
             },
             {
               "text": "Players notice polish without saying so.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f022cb2e69.ogg"
             },
             {
               "text": "Polish smells like burnt cookies.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d42ed486be.ogg"
             },
             {
               "text": "Animations are polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/016cb91230.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_41_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with polish?",
           "options": [
             {
               "text": "Polish is the very first step — start here always.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a5efea9fba.ogg"
             },
             {
               "text": "Polish must be applied with a mop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9db665d04.ogg"
             },
             {
               "text": "Tiny pauses for impact are polish.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ff79eb5556.ogg"
             },
             {
               "text": "Players hate polish — it scares them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4b577f733.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_41_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about polish is silly. Pick the silly one!",
           "options": [
             {
               "text": "Polish means small touches that make a game FEEL great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee173c89f9.ogg"
             },
             {
               "text": "A little polish goes far.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1ad683590.ogg"
             },
             {
               "text": "Animations are polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/016cb91230.ogg"
             },
             {
               "text": "Polish only works if applied with a special cloth.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/47284c48cf.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_41_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about polish. Which fact would help him?",
           "options": [
             {
               "text": "Sound effects, screen shake, and tiny animations are polish.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6b4b19f1e4.ogg"
             },
             {
               "text": "Polish must be applied with a mop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9db665d04.ogg"
             },
             {
               "text": "Polish smells like burnt cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ed486be.ogg"
             },
             {
               "text": "Polish only means floors and shoes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/378d0ff106.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_41_q1_v9.ogg"
         }
       ]
     },
@@ -309,12 +336,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
+          "prompt": "Type SCORE and press Send to keep going!",
+          "target_display": "SCORE",
           "targets": [
-            "yes"
+            "score"
           ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "hint_wrong": "Type the word SCORE (any case is fine)."
         }
       },
       "variations": [
@@ -323,234 +350,270 @@
           "options": [
             {
               "text": "Delete one random feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1fd275f463.ogg"
             },
             {
               "text": "Rewrite all the code in another language.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c69f0d6708.ogg"
             },
             {
               "text": "Add a little screen shake when the hero takes damage.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/62830b235b.ogg"
             },
             {
               "text": "Reset the project and start over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee23ea4ebc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_41_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Your basic game works but feels flat. What's a small polish to try?",
           "options": [
             {
               "text": "Rewrite all the code in another language.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c69f0d6708.ogg"
             },
             {
               "text": "Add a little screen shake when the hero takes damage.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/62830b235b.ogg"
             },
             {
               "text": "Reset the project and start over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee23ea4ebc.ogg"
             },
             {
               "text": "Delete one random feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1fd275f463.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_41_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Your basic game works but feels flat. What's a small polish to try?",
           "options": [
             {
               "text": "Rewrite all the code in another language.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c69f0d6708.ogg"
             },
             {
               "text": "Delete one random feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1fd275f463.ogg"
             },
             {
               "text": "Add a little screen shake when the hero takes damage.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/62830b235b.ogg"
             },
             {
               "text": "Reset the project and start over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee23ea4ebc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_41_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Your basic game works but feels flat. What's a small polish to try?",
           "options": [
             {
               "text": "Delete one random feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1fd275f463.ogg"
             },
             {
               "text": "Add a little screen shake when the hero takes damage.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/62830b235b.ogg"
             },
             {
               "text": "Rewrite all the code in another language.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c69f0d6708.ogg"
             },
             {
               "text": "Reset the project and start over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee23ea4ebc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_41_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Your basic game works but feels flat. What's a small polish to try?",
           "options": [
             {
               "text": "Delete one random feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1fd275f463.ogg"
             },
             {
               "text": "Rewrite all the code in another language.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c69f0d6708.ogg"
             },
             {
               "text": "Add a little screen shake when the hero takes damage.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/62830b235b.ogg"
             },
             {
               "text": "Reset the project and start over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee23ea4ebc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_41_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Your basic game works but feels flat. What's a small polish to try?",
           "options": [
             {
               "text": "Rewrite all the code in another language.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c69f0d6708.ogg"
             },
             {
               "text": "Reset the project and start over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee23ea4ebc.ogg"
             },
             {
               "text": "Add a little screen shake when the hero takes damage.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/62830b235b.ogg"
             },
             {
               "text": "Delete one random feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1fd275f463.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_41_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Your basic game works but feels flat. What's a small polish to try?",
           "options": [
             {
               "text": "Add a little screen shake when the hero takes damage.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/62830b235b.ogg"
             },
             {
               "text": "Delete one random feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1fd275f463.ogg"
             },
             {
               "text": "Reset the project and start over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee23ea4ebc.ogg"
             },
             {
               "text": "Rewrite all the code in another language.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c69f0d6708.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_41_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Your basic game works but feels flat. What's a small polish to try?",
           "options": [
             {
               "text": "Delete one random feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1fd275f463.ogg"
             },
             {
               "text": "Rewrite all the code in another language.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c69f0d6708.ogg"
             },
             {
               "text": "Add a little screen shake when the hero takes damage.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/62830b235b.ogg"
             },
             {
               "text": "Reset the project and start over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee23ea4ebc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_41_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Your basic game works but feels flat. What's a small polish to try?",
           "options": [
             {
               "text": "Add a little screen shake when the hero takes damage.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/62830b235b.ogg"
             },
             {
               "text": "Delete one random feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1fd275f463.ogg"
             },
             {
               "text": "Rewrite all the code in another language.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c69f0d6708.ogg"
             },
             {
               "text": "Reset the project and start over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee23ea4ebc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_41_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Your basic game works but feels flat. What's a small polish to try?",
           "options": [
             {
               "text": "Rewrite all the code in another language.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c69f0d6708.ogg"
             },
             {
               "text": "Add a little screen shake when the hero takes damage.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/62830b235b.ogg"
             },
             {
               "text": "Reset the project and start over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee23ea4ebc.ogg"
             },
             {
               "text": "Delete one random feature.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1fd275f463.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_41_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "🎮"
         }
       },
       "variations": [
@@ -559,234 +622,287 @@
           "options": [
             {
               "text": "Only after taxes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b1b94996f.ogg"
             },
             {
               "text": "After the basic gameplay loop already works.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ef48d95ec.ogg"
             },
             {
               "text": "Before any code is written, in your dreams.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c718d521b2.ogg"
             },
             {
               "text": "Only on Saturdays at noon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e28a318fc1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_41_q3_v0.ogg"
         },
         {
           "prompt": "Quick! When is polish worth doing?",
           "options": [
             {
               "text": "Only after taxes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b1b94996f.ogg"
             },
             {
               "text": "Before any code is written, in your dreams.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c718d521b2.ogg"
             },
             {
               "text": "After the basic gameplay loop already works.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ef48d95ec.ogg"
             },
             {
               "text": "Only on Saturdays at noon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e28a318fc1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_41_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — When is polish worth doing?",
           "options": [
             {
               "text": "After the basic gameplay loop already works.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ef48d95ec.ogg"
             },
             {
               "text": "Before any code is written, in your dreams.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c718d521b2.ogg"
             },
             {
               "text": "Only after taxes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b1b94996f.ogg"
             },
             {
               "text": "Only on Saturdays at noon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e28a318fc1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_41_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: When is polish worth doing?",
           "options": [
             {
               "text": "Only on Saturdays at noon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e28a318fc1.ogg"
             },
             {
               "text": "Only after taxes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b1b94996f.ogg"
             },
             {
               "text": "Before any code is written, in your dreams.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c718d521b2.ogg"
             },
             {
               "text": "After the basic gameplay loop already works.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ef48d95ec.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_41_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — When is polish worth doing?",
           "options": [
             {
               "text": "Only on Saturdays at noon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e28a318fc1.ogg"
             },
             {
               "text": "Before any code is written, in your dreams.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c718d521b2.ogg"
             },
             {
               "text": "Only after taxes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b1b94996f.ogg"
             },
             {
               "text": "After the basic gameplay loop already works.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ef48d95ec.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_41_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — When is polish worth doing?",
           "options": [
             {
               "text": "Only on Saturdays at noon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e28a318fc1.ogg"
             },
             {
               "text": "Before any code is written, in your dreams.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c718d521b2.ogg"
             },
             {
               "text": "After the basic gameplay loop already works.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ef48d95ec.ogg"
             },
             {
               "text": "Only after taxes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b1b94996f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_41_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! When is polish worth doing?",
           "options": [
             {
               "text": "Before any code is written, in your dreams.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c718d521b2.ogg"
             },
             {
               "text": "Only after taxes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b1b94996f.ogg"
             },
             {
               "text": "Only on Saturdays at noon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e28a318fc1.ogg"
             },
             {
               "text": "After the basic gameplay loop already works.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ef48d95ec.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_41_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — When is polish worth doing?",
           "options": [
             {
               "text": "Only on Saturdays at noon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e28a318fc1.ogg"
             },
             {
               "text": "Before any code is written, in your dreams.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c718d521b2.ogg"
             },
             {
               "text": "After the basic gameplay loop already works.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ef48d95ec.ogg"
             },
             {
               "text": "Only after taxes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b1b94996f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_41_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: When is polish worth doing?",
           "options": [
             {
               "text": "Only after taxes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b1b94996f.ogg"
             },
             {
               "text": "Before any code is written, in your dreams.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c718d521b2.ogg"
             },
             {
               "text": "After the basic gameplay loop already works.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ef48d95ec.ogg"
             },
             {
               "text": "Only on Saturdays at noon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e28a318fc1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_41_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: When is polish worth doing?",
           "options": [
             {
               "text": "Only after taxes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b1b94996f.ogg"
             },
             {
               "text": "Only on Saturdays at noon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e28a318fc1.ogg"
             },
             {
               "text": "Before any code is written, in your dreams.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c718d521b2.ogg"
             },
             {
               "text": "After the basic gameplay loop already works.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ef48d95ec.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_41_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🤖",
+              "right": true
+            },
+            {
+              "glyph": "🐌",
+              "right": false
+            },
+            {
+              "glyph": "🥒",
+              "right": false
+            },
+            {
+              "glyph": "🪨",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -795,234 +911,270 @@
           "options": [
             {
               "text": "Polish is small touches that make things feel good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/675da3e0ec.ogg"
             },
             {
               "text": "Without polish, even good ideas feel boring.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7ab0e43aad.ogg"
             },
             {
               "text": "Polish is just for shoes, not games.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4db134b717.ogg"
             },
             {
               "text": "Polish comes after the basics work.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee1f7ab079.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_41_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about polish.",
           "options": [
             {
               "text": "Polish means small touches that make a game FEEL great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee173c89f9.ogg"
             },
             {
               "text": "Polish costs $5 per click.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/83c09dcce9.ogg"
             },
             {
               "text": "Polish is small touches that make things feel good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/675da3e0ec.ogg"
             },
             {
               "text": "A game with 5% polish feels 50% better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd8445fb96.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_41_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about polish.",
           "options": [
             {
               "text": "Polish comes after the basics work.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee1f7ab079.ogg"
             },
             {
               "text": "Without polish, even good ideas feel boring.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7ab0e43aad.ogg"
             },
             {
               "text": "Polish makes games heavier and slower.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/931c54d7b5.ogg"
             },
             {
               "text": "Polish is small touches that make things feel good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/675da3e0ec.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_41_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about polish.",
           "options": [
             {
               "text": "Particles are polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8abe40683c.ogg"
             },
             {
               "text": "Polish means small touches that make a game FEEL great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee173c89f9.ogg"
             },
             {
               "text": "Polish is the very first step — start here always.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a5efea9fba.ogg"
             },
             {
               "text": "Players notice polish without saying so.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f022cb2e69.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_41_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about polish.",
           "options": [
             {
               "text": "Tiny pauses for impact are polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff79eb5556.ogg"
             },
             {
               "text": "A little polish goes far.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1ad683590.ogg"
             },
             {
               "text": "Without polish, even good ideas feel boring.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7ab0e43aad.ogg"
             },
             {
               "text": "Polish never matters — players want raw bones.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8ac3eedb99.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_41_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about polish.",
           "options": [
             {
               "text": "A game with 5% polish feels 50% better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd8445fb96.ogg"
             },
             {
               "text": "Polish only means floors and shoes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/378d0ff106.ogg"
             },
             {
               "text": "Sound effects, screen shake, and tiny animations are polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b4b19f1e4.ogg"
             },
             {
               "text": "Particles are polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8abe40683c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_41_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about polish.",
           "options": [
             {
               "text": "Polish means small touches that make a game FEEL great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee173c89f9.ogg"
             },
             {
               "text": "A little polish goes far.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1ad683590.ogg"
             },
             {
               "text": "More polish is always bad and slippery.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4a40aab6ca.ogg"
             },
             {
               "text": "Polish comes after the basics work.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee1f7ab079.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_41_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about polish.",
           "options": [
             {
               "text": "Polish is small touches that make things feel good.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/675da3e0ec.ogg"
             },
             {
               "text": "Tiny pauses for impact are polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff79eb5556.ogg"
             },
             {
               "text": "A game with 5% polish feels 50% better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd8445fb96.ogg"
             },
             {
               "text": "Players hate polish — it scares them.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f4b577f733.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_41_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about polish.",
           "options": [
             {
               "text": "Polish must be applied with a mop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a9db665d04.ogg"
             },
             {
               "text": "Polish comes after the basics work.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ee1f7ab079.ogg"
             },
             {
               "text": "Animations are polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/016cb91230.ogg"
             },
             {
               "text": "Sound, color, and shake count as polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b9fb4b56aa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_41_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about polish.",
           "options": [
             {
               "text": "Sound effects, screen shake, and tiny animations are polish.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b4b19f1e4.ogg"
             },
             {
               "text": "Polish smells like burnt cookies.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d42ed486be.ogg"
             },
             {
               "text": "Players notice polish without saying so.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f022cb2e69.ogg"
             },
             {
               "text": "Without polish, even good ideas feel boring.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7ab0e43aad.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_41_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🐶"
         }
       },
       "variations": [
@@ -1031,234 +1183,274 @@
           "options": [
             {
               "text": "Polish only means floors and shoes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/378d0ff106.ogg"
             },
             {
               "text": "Polish costs $5 per click.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83c09dcce9.ogg"
             },
             {
               "text": "Polish is the very first step — start here always.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a5efea9fba.ogg"
             },
             {
               "text": "Polish is small touches that make things feel good.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/675da3e0ec.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_41_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about polish?",
           "options": [
             {
               "text": "Polish is the very first step — start here always.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a5efea9fba.ogg"
             },
             {
               "text": "Polish is illegal in games for kids.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5cd021e682.ogg"
             },
             {
               "text": "Sound, color, and shake count as polish.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b9fb4b56aa.ogg"
             },
             {
               "text": "Polish only works if applied with a special cloth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/47284c48cf.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_41_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about polish?",
           "options": [
             {
               "text": "Polish comes after the basics work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ee1f7ab079.ogg"
             },
             {
               "text": "Players hate polish — it scares them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4b577f733.ogg"
             },
             {
               "text": "Polish is illegal in games for kids.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5cd021e682.ogg"
             },
             {
               "text": "Polish never matters — players want raw bones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8ac3eedb99.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_41_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about polish?",
           "options": [
             {
               "text": "Polish is just for shoes, not games.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4db134b717.ogg"
             },
             {
               "text": "A little polish goes far.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1ad683590.ogg"
             },
             {
               "text": "Polish only works if applied with a special cloth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/47284c48cf.ogg"
             },
             {
               "text": "Polish is illegal in games for kids.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5cd021e682.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_41_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about polish?",
           "options": [
             {
               "text": "Players notice polish without saying so.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f022cb2e69.ogg"
             },
             {
               "text": "Polish smells like burnt cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ed486be.ogg"
             },
             {
               "text": "Players hate polish — it scares them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4b577f733.ogg"
             },
             {
               "text": "Polish makes games heavier and slower.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/931c54d7b5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_41_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about polish?",
           "options": [
             {
               "text": "Animations are polish.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/016cb91230.ogg"
             },
             {
               "text": "Polish smells like burnt cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ed486be.ogg"
             },
             {
               "text": "Polish is the very first step — start here always.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a5efea9fba.ogg"
             },
             {
               "text": "Polish never matters — players want raw bones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8ac3eedb99.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_41_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about polish?",
           "options": [
             {
               "text": "More polish is always bad and slippery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4a40aab6ca.ogg"
             },
             {
               "text": "Polish is the very first step — start here always.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a5efea9fba.ogg"
             },
             {
               "text": "Particles are polish.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8abe40683c.ogg"
             },
             {
               "text": "Polish only means floors and shoes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/378d0ff106.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_41_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about polish?",
           "options": [
             {
               "text": "Polish is the very first step — start here always.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a5efea9fba.ogg"
             },
             {
               "text": "Polish smells like burnt cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ed486be.ogg"
             },
             {
               "text": "Players hate polish — it scares them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4b577f733.ogg"
             },
             {
               "text": "Tiny pauses for impact are polish.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ff79eb5556.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_41_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about polish?",
           "options": [
             {
               "text": "Polish makes games heavier and slower.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/931c54d7b5.ogg"
             },
             {
               "text": "More polish is always bad and slippery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4a40aab6ca.ogg"
             },
             {
               "text": "Players hate polish — it scares them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4b577f733.ogg"
             },
             {
               "text": "Polish means small touches that make a game FEEL great.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ee173c89f9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_41_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about polish?",
           "options": [
             {
               "text": "Polish is just for shoes, not games.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4db134b717.ogg"
             },
             {
               "text": "Polish costs $5 per click.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83c09dcce9.ogg"
             },
             {
               "text": "Polish never matters — players want raw bones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8ac3eedb99.ogg"
             },
             {
               "text": "Sound effects, screen shake, and tiny animations are polish.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6b4b19f1e4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_41_q5_v9.ogg"
         }
       ]
     },
     {
       "id": "q6",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
-          "targets": [
-            "win"
-          ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "prompt": "Put the steps in order:",
+          "steps": [
+            "First",
+            "Next",
+            "Last"
+          ]
         }
       },
       "variations": [
@@ -1267,220 +1459,260 @@
           "options": [
             {
               "text": "Sound makes games glitch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b686bdabf5.ogg"
             },
             {
               "text": "Doesn't matter, sound is just noise.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b31eb1bbb.ogg"
             },
             {
               "text": "The one with the sound -- that's polish at work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55c6be05d9.ogg"
             },
             {
               "text": "The silent one feels mysterious.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15554e3ddd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_41_q6_v0.ogg"
         },
         {
           "prompt": "Quick! Two games are identical except one has a 'pop' sound when you grab a coin. Which feels better?",
           "options": [
             {
               "text": "The one with the sound -- that's polish at work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55c6be05d9.ogg"
             },
             {
               "text": "The silent one feels mysterious.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15554e3ddd.ogg"
             },
             {
               "text": "Sound makes games glitch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b686bdabf5.ogg"
             },
             {
               "text": "Doesn't matter, sound is just noise.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b31eb1bbb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_41_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — Two games are identical except one has a 'pop' sound when you grab a coin. Which feels better?",
           "options": [
             {
               "text": "Doesn't matter, sound is just noise.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b31eb1bbb.ogg"
             },
             {
               "text": "Sound makes games glitch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b686bdabf5.ogg"
             },
             {
               "text": "The silent one feels mysterious.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15554e3ddd.ogg"
             },
             {
               "text": "The one with the sound -- that's polish at work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55c6be05d9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_41_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Two games are identical except one has a 'pop' sound when you grab a coin. Which feels better?",
           "options": [
             {
               "text": "The one with the sound -- that's polish at work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55c6be05d9.ogg"
             },
             {
               "text": "Sound makes games glitch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b686bdabf5.ogg"
             },
             {
               "text": "The silent one feels mysterious.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15554e3ddd.ogg"
             },
             {
               "text": "Doesn't matter, sound is just noise.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b31eb1bbb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_41_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — Two games are identical except one has a 'pop' sound when you grab a coin. Which feels better?",
           "options": [
             {
               "text": "The one with the sound -- that's polish at work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55c6be05d9.ogg"
             },
             {
               "text": "Sound makes games glitch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b686bdabf5.ogg"
             },
             {
               "text": "Doesn't matter, sound is just noise.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b31eb1bbb.ogg"
             },
             {
               "text": "The silent one feels mysterious.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15554e3ddd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_41_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Two games are identical except one has a 'pop' sound when you grab a coin. Which feels better?",
           "options": [
             {
               "text": "Doesn't matter, sound is just noise.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b31eb1bbb.ogg"
             },
             {
               "text": "The silent one feels mysterious.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15554e3ddd.ogg"
             },
             {
               "text": "Sound makes games glitch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b686bdabf5.ogg"
             },
             {
               "text": "The one with the sound -- that's polish at work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55c6be05d9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_41_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Two games are identical except one has a 'pop' sound when you grab a coin. Which feels better?",
           "options": [
             {
               "text": "The one with the sound -- that's polish at work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55c6be05d9.ogg"
             },
             {
               "text": "Doesn't matter, sound is just noise.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b31eb1bbb.ogg"
             },
             {
               "text": "Sound makes games glitch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b686bdabf5.ogg"
             },
             {
               "text": "The silent one feels mysterious.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15554e3ddd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_41_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — Two games are identical except one has a 'pop' sound when you grab a coin. Which feels better?",
           "options": [
             {
               "text": "Sound makes games glitch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b686bdabf5.ogg"
             },
             {
               "text": "The one with the sound -- that's polish at work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55c6be05d9.ogg"
             },
             {
               "text": "The silent one feels mysterious.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15554e3ddd.ogg"
             },
             {
               "text": "Doesn't matter, sound is just noise.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b31eb1bbb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_41_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: Two games are identical except one has a 'pop' sound when you grab a coin. Which feels better?",
           "options": [
             {
               "text": "Sound makes games glitch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b686bdabf5.ogg"
             },
             {
               "text": "The one with the sound -- that's polish at work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55c6be05d9.ogg"
             },
             {
               "text": "Doesn't matter, sound is just noise.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b31eb1bbb.ogg"
             },
             {
               "text": "The silent one feels mysterious.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15554e3ddd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_41_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Two games are identical except one has a 'pop' sound when you grab a coin. Which feels better?",
           "options": [
             {
               "text": "The silent one feels mysterious.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15554e3ddd.ogg"
             },
             {
               "text": "The one with the sound -- that's polish at work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/55c6be05d9.ogg"
             },
             {
               "text": "Doesn't matter, sound is just noise.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b31eb1bbb.ogg"
             },
             {
               "text": "Sound makes games glitch.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b686bdabf5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_41_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_41_q6_v9.ogg"
         }
       ]
     }

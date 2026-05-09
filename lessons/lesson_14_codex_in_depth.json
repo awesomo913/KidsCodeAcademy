@@ -34,248 +34,290 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "history-scene",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Watch Codex finish your line of code!",
-          "scene": {
-            "id": "codex"
-          }
+          "prompt": "⚙️ Codex finishes your code. What goes first?",
+          "steps": [
+            "You start typing",
+            "Codex spots the pattern",
+            "It finishes the line"
+          ]
         }
       },
       "variations": [
         {
-          "prompt": "What is Codex in depth?",
+          "prompt": "🦔 Bytey's pop quiz on Codex, the Tiny Coder — go!",
           "options": [
             {
               "text": "Codex needs a magic password before it will work.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7f23fe6dd5.ogg"
             },
             {
               "text": "Codex only knows ten words, all about cheese.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e7d5eede9e.ogg"
             },
             {
               "text": "Codex is a real animal of unknown type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44eac29205.ogg"
             },
             {
               "text": "Codex is a helper that is great at code.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a265f8a543.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_14_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about Codex in depth?",
           "options": [
             {
               "text": "Codex hates code and is a poet at heart.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/21c7eed8bd.ogg"
             },
             {
               "text": "Codex can finish a line you started.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/15f90e9299.ogg"
             },
             {
               "text": "Codex eats the semicolons.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e6fd364bc9.ogg"
             },
             {
               "text": "Codex types upside down for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/19ba3df47d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_14_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
               "text": "Codex is a helper that is great at code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a265f8a543.ogg"
             },
             {
               "text": "Codex helps fix small bugs fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/526f011ed1.ogg"
             },
             {
               "text": "Codex hates code and is a poet at heart.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/21c7eed8bd.ogg"
             },
             {
               "text": "Codex needs a goal to be useful.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/97f062e971.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_14_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about Codex in depth. What should he say?",
           "options": [
             {
               "text": "Codex types upside down for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/19ba3df47d.ogg"
             },
             {
               "text": "Codex is a real animal of unknown type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44eac29205.ogg"
             },
             {
               "text": "Codex helps fix small bugs fast.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/526f011ed1.ogg"
             },
             {
               "text": "Codex writes only in crayon and likes red.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/720bf6f184.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_14_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about Codex in depth is a GOOD rule?",
           "options": [
             {
               "text": "Codex needs a magic password before it will work.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7f23fe6dd5.ogg"
             },
             {
               "text": "Codex hates code and is a poet at heart.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/21c7eed8bd.ogg"
             },
             {
               "text": "Codex is best when we say what we want.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3afd37b516.ogg"
             },
             {
               "text": "Codex is a real animal of unknown type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44eac29205.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_14_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about Codex in depth, ___",
           "options": [
             {
               "text": "Codex must be praised before each line.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c6bf003f5.ogg"
             },
             {
               "text": "Codex is friendly to short, clear tasks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6850ff51dd.ogg"
             },
             {
               "text": "Codex writes code by stamping tiny letters.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e46fcafb40.ogg"
             },
             {
               "text": "Codex always picks the wrong answer for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2d34211236.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_14_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Codex helps fix small bugs fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/526f011ed1.ogg"
             },
             {
               "text": "Codex is best when we say what we want.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3afd37b516.ogg"
             },
             {
               "text": "Codex eats the semicolons.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e6fd364bc9.ogg"
             },
             {
               "text": "Codex is friendly to short, clear tasks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6850ff51dd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_14_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with Codex in depth?",
           "options": [
             {
               "text": "Codex writes only in crayon and likes red.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/720bf6f184.ogg"
             },
             {
               "text": "Codex only types capital letters and shouts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/977c96ec9e.ogg"
             },
             {
               "text": "Codex needs a goal to be useful.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/97f062e971.ogg"
             },
             {
               "text": "Codex is a real animal of unknown type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44eac29205.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_14_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about Codex in depth is silly. Pick the silly one!",
           "options": [
             {
               "text": "Codex turns plain English into real code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8581bb108b.ogg"
             },
             {
               "text": "Codex helps fix small bugs fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/526f011ed1.ogg"
             },
             {
               "text": "Codex is friendly to short, clear tasks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6850ff51dd.ogg"
             },
             {
               "text": "Codex writes code by stamping tiny letters.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e46fcafb40.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_14_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about Codex in depth. Which fact would help him?",
           "options": [
             {
               "text": "Codex helps you write code without remembering every keyword.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8e40d00204.ogg"
             },
             {
               "text": "Codex only types capital letters and shouts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/977c96ec9e.ogg"
             },
             {
               "text": "Codex eats the semicolons.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e6fd364bc9.ogg"
             },
             {
               "text": "Codex hates code and is a poet at heart.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/21c7eed8bd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_14_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Codex auto-completes code. Order:",
+          "steps": [
+            "You start typing",
+            "Codex spots the pattern",
+            "It finishes the line"
+          ]
         }
       },
       "variations": [
@@ -284,234 +326,274 @@
           "options": [
             {
               "text": "Codex sneezed onto the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/861ad05723.ogg"
             },
             {
               "text": "Codex guessed your name and added it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4797711357.ogg"
             },
             {
               "text": "Codex picked your shoe size at random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dce65b3d6e.ogg"
             },
             {
               "text": "Codex completed the line based on the pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3dfab3a474.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_14_q2_v0.ogg"
         },
         {
           "prompt": "Quick! You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
               "text": "Codex sneezed onto the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/861ad05723.ogg"
             },
             {
               "text": "Codex guessed your name and added it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4797711357.ogg"
             },
             {
               "text": "Codex picked your shoe size at random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dce65b3d6e.ogg"
             },
             {
               "text": "Codex completed the line based on the pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3dfab3a474.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_14_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
               "text": "Codex picked your shoe size at random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dce65b3d6e.ogg"
             },
             {
               "text": "Codex completed the line based on the pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3dfab3a474.ogg"
             },
             {
               "text": "Codex guessed your name and added it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4797711357.ogg"
             },
             {
               "text": "Codex sneezed onto the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/861ad05723.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_14_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
               "text": "Codex sneezed onto the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/861ad05723.ogg"
             },
             {
               "text": "Codex picked your shoe size at random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dce65b3d6e.ogg"
             },
             {
               "text": "Codex guessed your name and added it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4797711357.ogg"
             },
             {
               "text": "Codex completed the line based on the pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3dfab3a474.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_14_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
               "text": "Codex picked your shoe size at random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dce65b3d6e.ogg"
             },
             {
               "text": "Codex completed the line based on the pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3dfab3a474.ogg"
             },
             {
               "text": "Codex sneezed onto the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/861ad05723.ogg"
             },
             {
               "text": "Codex guessed your name and added it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4797711357.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_14_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
               "text": "Codex guessed your name and added it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4797711357.ogg"
             },
             {
               "text": "Codex sneezed onto the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/861ad05723.ogg"
             },
             {
               "text": "Codex completed the line based on the pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3dfab3a474.ogg"
             },
             {
               "text": "Codex picked your shoe size at random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dce65b3d6e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_14_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
               "text": "Codex sneezed onto the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/861ad05723.ogg"
             },
             {
               "text": "Codex completed the line based on the pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3dfab3a474.ogg"
             },
             {
               "text": "Codex guessed your name and added it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4797711357.ogg"
             },
             {
               "text": "Codex picked your shoe size at random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dce65b3d6e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_14_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
               "text": "Codex completed the line based on the pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3dfab3a474.ogg"
             },
             {
               "text": "Codex sneezed onto the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/861ad05723.ogg"
             },
             {
               "text": "Codex guessed your name and added it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4797711357.ogg"
             },
             {
               "text": "Codex picked your shoe size at random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dce65b3d6e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_14_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
               "text": "Codex sneezed onto the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/861ad05723.ogg"
             },
             {
               "text": "Codex completed the line based on the pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3dfab3a474.ogg"
             },
             {
               "text": "Codex picked your shoe size at random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dce65b3d6e.ogg"
             },
             {
               "text": "Codex guessed your name and added it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4797711357.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_14_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: You wrote `for i in range(` and Codex finishes it with `10):`. What just happened?",
           "options": [
             {
               "text": "Codex sneezed onto the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/861ad05723.ogg"
             },
             {
               "text": "Codex completed the line based on the pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3dfab3a474.ogg"
             },
             {
               "text": "Codex picked your shoe size at random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dce65b3d6e.ogg"
             },
             {
               "text": "Codex guessed your name and added it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4797711357.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_14_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Codex auto-completes code. Order:",
+          "steps": [
+            "You start typing",
+            "Codex spots the pattern",
+            "It finishes the line"
+          ]
         }
       },
       "variations": [
@@ -520,234 +602,283 @@
           "options": [
             {
               "text": "Codex is shy and needs encouragement.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e8e035c6.ogg"
             },
             {
               "text": "Codex charges per syllable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb8482f34e.ogg"
             },
             {
               "text": "Otherwise Codex doesn't know what 'finish' means.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/913e5b7549.ogg"
             },
             {
               "text": "Codex needs the words to make a sandwich.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92710d6b72.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_14_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Why is saying WHAT you want important with Codex?",
           "options": [
             {
               "text": "Codex needs the words to make a sandwich.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92710d6b72.ogg"
             },
             {
               "text": "Otherwise Codex doesn't know what 'finish' means.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/913e5b7549.ogg"
             },
             {
               "text": "Codex is shy and needs encouragement.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e8e035c6.ogg"
             },
             {
               "text": "Codex charges per syllable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb8482f34e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_14_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why is saying WHAT you want important with Codex?",
           "options": [
             {
               "text": "Codex is shy and needs encouragement.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e8e035c6.ogg"
             },
             {
               "text": "Otherwise Codex doesn't know what 'finish' means.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/913e5b7549.ogg"
             },
             {
               "text": "Codex charges per syllable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb8482f34e.ogg"
             },
             {
               "text": "Codex needs the words to make a sandwich.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92710d6b72.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_14_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why is saying WHAT you want important with Codex?",
           "options": [
             {
               "text": "Codex is shy and needs encouragement.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e8e035c6.ogg"
             },
             {
               "text": "Codex charges per syllable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb8482f34e.ogg"
             },
             {
               "text": "Codex needs the words to make a sandwich.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92710d6b72.ogg"
             },
             {
               "text": "Otherwise Codex doesn't know what 'finish' means.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/913e5b7549.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_14_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Why is saying WHAT you want important with Codex?",
           "options": [
             {
               "text": "Codex is shy and needs encouragement.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e8e035c6.ogg"
             },
             {
               "text": "Codex charges per syllable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb8482f34e.ogg"
             },
             {
               "text": "Codex needs the words to make a sandwich.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92710d6b72.ogg"
             },
             {
               "text": "Otherwise Codex doesn't know what 'finish' means.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/913e5b7549.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_14_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why is saying WHAT you want important with Codex?",
           "options": [
             {
               "text": "Otherwise Codex doesn't know what 'finish' means.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/913e5b7549.ogg"
             },
             {
               "text": "Codex is shy and needs encouragement.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e8e035c6.ogg"
             },
             {
               "text": "Codex needs the words to make a sandwich.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92710d6b72.ogg"
             },
             {
               "text": "Codex charges per syllable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb8482f34e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_14_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why is saying WHAT you want important with Codex?",
           "options": [
             {
               "text": "Codex charges per syllable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb8482f34e.ogg"
             },
             {
               "text": "Codex needs the words to make a sandwich.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92710d6b72.ogg"
             },
             {
               "text": "Codex is shy and needs encouragement.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e8e035c6.ogg"
             },
             {
               "text": "Otherwise Codex doesn't know what 'finish' means.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/913e5b7549.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_14_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Why is saying WHAT you want important with Codex?",
           "options": [
             {
               "text": "Codex needs the words to make a sandwich.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92710d6b72.ogg"
             },
             {
               "text": "Otherwise Codex doesn't know what 'finish' means.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/913e5b7549.ogg"
             },
             {
               "text": "Codex is shy and needs encouragement.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e8e035c6.ogg"
             },
             {
               "text": "Codex charges per syllable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb8482f34e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_14_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Why is saying WHAT you want important with Codex?",
           "options": [
             {
               "text": "Codex is shy and needs encouragement.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e8e035c6.ogg"
             },
             {
               "text": "Codex charges per syllable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb8482f34e.ogg"
             },
             {
               "text": "Otherwise Codex doesn't know what 'finish' means.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/913e5b7549.ogg"
             },
             {
               "text": "Codex needs the words to make a sandwich.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92710d6b72.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_14_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why is saying WHAT you want important with Codex?",
           "options": [
             {
               "text": "Otherwise Codex doesn't know what 'finish' means.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/913e5b7549.ogg"
             },
             {
               "text": "Codex needs the words to make a sandwich.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/92710d6b72.ogg"
             },
             {
               "text": "Codex is shy and needs encouragement.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e8e035c6.ogg"
             },
             {
               "text": "Codex charges per syllable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb8482f34e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_14_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Hero",
+              "right": "🦸"
+            },
+            {
+              "left": "Code",
+              "right": "💻"
+            },
+            {
+              "left": "Game",
+              "right": "🎮"
+            }
+          ]
         }
       },
       "variations": [
@@ -756,220 +887,260 @@
           "options": [
             {
               "text": "Codex is a helper that is great at code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a265f8a543.ogg"
             },
             {
               "text": "Codex shows finished code, ready to run.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5882d20a9b.ogg"
             },
             {
               "text": "Codex needs a magic password before it will work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f23fe6dd5.ogg"
             },
             {
               "text": "Codex understands many programming languages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c44d4536f8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_14_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
               "text": "Codex turns plain English into real code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8581bb108b.ogg"
             },
             {
               "text": "Codex types upside down for fun.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/19ba3df47d.ogg"
             },
             {
               "text": "Codex is a helper that is great at code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a265f8a543.ogg"
             },
             {
               "text": "Codex is great when you know what you want but not how to type it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8585fc6e24.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_14_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
               "text": "Codex understands many programming languages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c44d4536f8.ogg"
             },
             {
               "text": "Codex shows finished code, ready to run.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5882d20a9b.ogg"
             },
             {
               "text": "Codex saves all the code in a giant cookie jar.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/63c6bcfc72.ogg"
             },
             {
               "text": "Codex is a helper that is great at code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a265f8a543.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_14_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
               "text": "Codex pairs with you while you type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9bacc0772d.ogg"
             },
             {
               "text": "Codex turns plain English into real code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8581bb108b.ogg"
             },
             {
               "text": "Codex writes only in crayon and likes red.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/720bf6f184.ogg"
             },
             {
               "text": "Codex is best when we say what we want.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3afd37b516.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_14_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
               "text": "Codex needs a goal to be useful.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/97f062e971.ogg"
             },
             {
               "text": "Codex helps fix small bugs fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/526f011ed1.ogg"
             },
             {
               "text": "Codex shows finished code, ready to run.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5882d20a9b.ogg"
             },
             {
               "text": "Codex only knows ten words, all about cheese.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e7d5eede9e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_14_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
               "text": "Codex is great when you know what you want but not how to type it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8585fc6e24.ogg"
             },
             {
               "text": "Codex hates code and is a poet at heart.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/21c7eed8bd.ogg"
             },
             {
               "text": "Codex helps you write code without remembering every keyword.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8e40d00204.ogg"
             },
             {
               "text": "Codex pairs with you while you type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9bacc0772d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_14_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
               "text": "Codex turns plain English into real code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8581bb108b.ogg"
             },
             {
               "text": "Codex helps fix small bugs fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/526f011ed1.ogg"
             },
             {
               "text": "Codex always picks the wrong answer for fun.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2d34211236.ogg"
             },
             {
               "text": "Codex understands many programming languages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c44d4536f8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_14_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
               "text": "Codex is a helper that is great at code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a265f8a543.ogg"
             },
             {
               "text": "Codex needs a goal to be useful.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/97f062e971.ogg"
             },
             {
               "text": "Codex is great when you know what you want but not how to type it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8585fc6e24.ogg"
             },
             {
               "text": "Codex is a real animal of unknown type.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/44eac29205.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_14_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
               "text": "Codex only types capital letters and shouts.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/977c96ec9e.ogg"
             },
             {
               "text": "Codex understands many programming languages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c44d4536f8.ogg"
             },
             {
               "text": "Codex is friendly to short, clear tasks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6850ff51dd.ogg"
             },
             {
               "text": "Codex can finish a line you started.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15f90e9299.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_14_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about Codex in depth.",
           "options": [
             {
               "text": "Codex helps you write code without remembering every keyword.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8e40d00204.ogg"
             },
             {
               "text": "Codex eats the semicolons.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e6fd364bc9.ogg"
             },
             {
               "text": "Codex is best when we say what we want.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3afd37b516.ogg"
             },
             {
               "text": "Codex shows finished code, ready to run.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5882d20a9b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_14_q4_v9.ogg"
         }
       ]
     },
@@ -978,12 +1149,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
+          "prompt": "Type KIRBY and press Send to keep going!",
+          "target_display": "KIRBY",
           "targets": [
-            "next"
+            "kirby"
           ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "hint_wrong": "Type the word KIRBY (any case is fine)."
         }
       },
       "variations": [
@@ -992,234 +1163,270 @@
           "options": [
             {
               "text": "Codex hates code and is a poet at heart.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/21c7eed8bd.ogg"
             },
             {
               "text": "Codex types upside down for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/19ba3df47d.ogg"
             },
             {
               "text": "Codex writes only in crayon and likes red.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/720bf6f184.ogg"
             },
             {
               "text": "Codex is a helper that is great at code.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a265f8a543.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_14_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about Codex in depth?",
           "options": [
             {
               "text": "Codex writes only in crayon and likes red.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/720bf6f184.ogg"
             },
             {
               "text": "Codex must be praised before each line.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c6bf003f5.ogg"
             },
             {
               "text": "Codex can finish a line you started.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/15f90e9299.ogg"
             },
             {
               "text": "Codex writes code by stamping tiny letters.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e46fcafb40.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_14_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about Codex in depth?",
           "options": [
             {
               "text": "Codex understands many programming languages.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c44d4536f8.ogg"
             },
             {
               "text": "Codex is a real animal of unknown type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44eac29205.ogg"
             },
             {
               "text": "Codex must be praised before each line.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c6bf003f5.ogg"
             },
             {
               "text": "Codex only knows ten words, all about cheese.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e7d5eede9e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_14_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about Codex in depth?",
           "options": [
             {
               "text": "Codex needs a magic password before it will work.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7f23fe6dd5.ogg"
             },
             {
               "text": "Codex helps fix small bugs fast.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/526f011ed1.ogg"
             },
             {
               "text": "Codex writes code by stamping tiny letters.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e46fcafb40.ogg"
             },
             {
               "text": "Codex must be praised before each line.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c6bf003f5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_14_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about Codex in depth?",
           "options": [
             {
               "text": "Codex is best when we say what we want.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3afd37b516.ogg"
             },
             {
               "text": "Codex eats the semicolons.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e6fd364bc9.ogg"
             },
             {
               "text": "Codex is a real animal of unknown type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44eac29205.ogg"
             },
             {
               "text": "Codex saves all the code in a giant cookie jar.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/63c6bcfc72.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_14_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about Codex in depth?",
           "options": [
             {
               "text": "Codex is friendly to short, clear tasks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6850ff51dd.ogg"
             },
             {
               "text": "Codex eats the semicolons.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e6fd364bc9.ogg"
             },
             {
               "text": "Codex writes only in crayon and likes red.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/720bf6f184.ogg"
             },
             {
               "text": "Codex only knows ten words, all about cheese.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e7d5eede9e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_14_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about Codex in depth?",
           "options": [
             {
               "text": "Codex always picks the wrong answer for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2d34211236.ogg"
             },
             {
               "text": "Codex writes only in crayon and likes red.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/720bf6f184.ogg"
             },
             {
               "text": "Codex pairs with you while you type.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9bacc0772d.ogg"
             },
             {
               "text": "Codex hates code and is a poet at heart.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/21c7eed8bd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_14_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about Codex in depth?",
           "options": [
             {
               "text": "Codex writes only in crayon and likes red.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/720bf6f184.ogg"
             },
             {
               "text": "Codex eats the semicolons.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e6fd364bc9.ogg"
             },
             {
               "text": "Codex is a real animal of unknown type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44eac29205.ogg"
             },
             {
               "text": "Codex needs a goal to be useful.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/97f062e971.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_14_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about Codex in depth?",
           "options": [
             {
               "text": "Codex saves all the code in a giant cookie jar.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/63c6bcfc72.ogg"
             },
             {
               "text": "Codex always picks the wrong answer for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2d34211236.ogg"
             },
             {
               "text": "Codex is a real animal of unknown type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44eac29205.ogg"
             },
             {
               "text": "Codex turns plain English into real code.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8581bb108b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_14_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about Codex in depth?",
           "options": [
             {
               "text": "Codex needs a magic password before it will work.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7f23fe6dd5.ogg"
             },
             {
               "text": "Codex types upside down for fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/19ba3df47d.ogg"
             },
             {
               "text": "Codex only knows ten words, all about cheese.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e7d5eede9e.ogg"
             },
             {
               "text": "Codex helps you write code without remembering every keyword.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8e40d00204.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_14_q5_v9.ogg"
         }
       ]
     },
     {
       "id": "q6",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
-          "targets": [
-            "win"
-          ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "🎮"
         }
       },
       "variations": [
@@ -1228,234 +1435,287 @@
           "options": [
             {
               "text": "Asks if 5 is a lucky number.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/26363f2156.ogg"
             },
             {
               "text": "Writes real code that does exactly that.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/695997dae7.ogg"
             },
             {
               "text": "Writes a song called 'Five'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/88ead03ac6.ogg"
             },
             {
               "text": "Makes you count first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/119a636cfb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_14_q6_v0.ogg"
         },
         {
           "prompt": "Quick! You say 'Codex, write a loop that counts to 5'. What does Codex do?",
           "options": [
             {
               "text": "Writes real code that does exactly that.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/695997dae7.ogg"
             },
             {
               "text": "Writes a song called 'Five'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/88ead03ac6.ogg"
             },
             {
               "text": "Asks if 5 is a lucky number.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/26363f2156.ogg"
             },
             {
               "text": "Makes you count first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/119a636cfb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_14_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — You say 'Codex, write a loop that counts to 5'. What does Codex do?",
           "options": [
             {
               "text": "Writes real code that does exactly that.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/695997dae7.ogg"
             },
             {
               "text": "Makes you count first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/119a636cfb.ogg"
             },
             {
               "text": "Asks if 5 is a lucky number.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/26363f2156.ogg"
             },
             {
               "text": "Writes a song called 'Five'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/88ead03ac6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_14_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: You say 'Codex, write a loop that counts to 5'. What does Codex do?",
           "options": [
             {
               "text": "Makes you count first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/119a636cfb.ogg"
             },
             {
               "text": "Asks if 5 is a lucky number.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/26363f2156.ogg"
             },
             {
               "text": "Writes a song called 'Five'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/88ead03ac6.ogg"
             },
             {
               "text": "Writes real code that does exactly that.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/695997dae7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_14_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — You say 'Codex, write a loop that counts to 5'. What does Codex do?",
           "options": [
             {
               "text": "Writes real code that does exactly that.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/695997dae7.ogg"
             },
             {
               "text": "Asks if 5 is a lucky number.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/26363f2156.ogg"
             },
             {
               "text": "Makes you count first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/119a636cfb.ogg"
             },
             {
               "text": "Writes a song called 'Five'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/88ead03ac6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_14_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — You say 'Codex, write a loop that counts to 5'. What does Codex do?",
           "options": [
             {
               "text": "Writes a song called 'Five'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/88ead03ac6.ogg"
             },
             {
               "text": "Writes real code that does exactly that.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/695997dae7.ogg"
             },
             {
               "text": "Makes you count first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/119a636cfb.ogg"
             },
             {
               "text": "Asks if 5 is a lucky number.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/26363f2156.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_14_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! You say 'Codex, write a loop that counts to 5'. What does Codex do?",
           "options": [
             {
               "text": "Asks if 5 is a lucky number.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/26363f2156.ogg"
             },
             {
               "text": "Makes you count first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/119a636cfb.ogg"
             },
             {
               "text": "Writes a song called 'Five'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/88ead03ac6.ogg"
             },
             {
               "text": "Writes real code that does exactly that.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/695997dae7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_14_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — You say 'Codex, write a loop that counts to 5'. What does Codex do?",
           "options": [
             {
               "text": "Asks if 5 is a lucky number.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/26363f2156.ogg"
             },
             {
               "text": "Makes you count first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/119a636cfb.ogg"
             },
             {
               "text": "Writes a song called 'Five'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/88ead03ac6.ogg"
             },
             {
               "text": "Writes real code that does exactly that.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/695997dae7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_14_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: You say 'Codex, write a loop that counts to 5'. What does Codex do?",
           "options": [
             {
               "text": "Asks if 5 is a lucky number.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/26363f2156.ogg"
             },
             {
               "text": "Writes real code that does exactly that.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/695997dae7.ogg"
             },
             {
               "text": "Makes you count first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/119a636cfb.ogg"
             },
             {
               "text": "Writes a song called 'Five'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/88ead03ac6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_14_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: You say 'Codex, write a loop that counts to 5'. What does Codex do?",
           "options": [
             {
               "text": "Makes you count first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/119a636cfb.ogg"
             },
             {
               "text": "Writes real code that does exactly that.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/695997dae7.ogg"
             },
             {
               "text": "Asks if 5 is a lucky number.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/26363f2156.ogg"
             },
             {
               "text": "Writes a song called 'Five'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/88ead03ac6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_14_q6_v9.ogg"
         }
       ]
     },
     {
       "id": "q7",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type PLAY and press Send to keep going!",
-          "target_display": "PLAY",
-          "targets": [
-            "play"
-          ],
-          "hint_wrong": "Type the word PLAY (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "⭐",
+              "right": true
+            },
+            {
+              "glyph": "🌧️",
+              "right": false
+            },
+            {
+              "glyph": "🥒",
+              "right": false
+            },
+            {
+              "glyph": "🪵",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -1464,220 +1724,260 @@
           "options": [
             {
               "text": "Codex eats the semicolons.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e6fd364bc9.ogg"
             },
             {
               "text": "Codex can finish a line you started.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15f90e9299.ogg"
             },
             {
               "text": "Codex turns plain English into real code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8581bb108b.ogg"
             },
             {
               "text": "Codex is great when you know what you want but not how to type it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8585fc6e24.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q7_v0.wav"
+          "_audio": "assets/audio/q/lesson_14_q7_v0.ogg"
         },
         {
           "prompt": "Listen up — Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Codex is a helper that is great at code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a265f8a543.ogg"
             },
             {
               "text": "Codex helps fix small bugs fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/526f011ed1.ogg"
             },
             {
               "text": "Codex understands many programming languages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c44d4536f8.ogg"
             },
             {
               "text": "Codex must be praised before each line.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c6bf003f5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q7_v1.wav"
+          "_audio": "assets/audio/q/lesson_14_q7_v1.ogg"
         },
         {
           "prompt": "Think about this: Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Codex pairs with you while you type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9bacc0772d.ogg"
             },
             {
               "text": "Codex is great when you know what you want but not how to type it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8585fc6e24.ogg"
             },
             {
               "text": "Codex helps you write code without remembering every keyword.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8e40d00204.ogg"
             },
             {
               "text": "Codex writes code by stamping tiny letters.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e46fcafb40.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q7_v2.wav"
+          "_audio": "assets/audio/q/lesson_14_q7_v2.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Codex can finish a line you started.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15f90e9299.ogg"
             },
             {
               "text": "Codex needs a magic password before it will work.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f23fe6dd5.ogg"
             },
             {
               "text": "Codex pairs with you while you type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9bacc0772d.ogg"
             },
             {
               "text": "Codex is best when we say what we want.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3afd37b516.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q7_v3.wav"
+          "_audio": "assets/audio/q/lesson_14_q7_v3.ogg"
         },
         {
           "prompt": "Brain time: Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Codex shows finished code, ready to run.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5882d20a9b.ogg"
             },
             {
               "text": "Codex types upside down for fun.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/19ba3df47d.ogg"
             },
             {
               "text": "Codex is a helper that is great at code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a265f8a543.ogg"
             },
             {
               "text": "Codex turns plain English into real code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8581bb108b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q7_v4.wav"
+          "_audio": "assets/audio/q/lesson_14_q7_v4.ogg"
         },
         {
           "prompt": "Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Codex is friendly to short, clear tasks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6850ff51dd.ogg"
             },
             {
               "text": "Codex saves all the code in a giant cookie jar.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/63c6bcfc72.ogg"
             },
             {
               "text": "Codex turns plain English into real code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8581bb108b.ogg"
             },
             {
               "text": "Codex needs a goal to be useful.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/97f062e971.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q7_v5.wav"
+          "_audio": "assets/audio/q/lesson_14_q7_v5.ogg"
         },
         {
           "prompt": "Quick! Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Codex understands many programming languages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c44d4536f8.ogg"
             },
             {
               "text": "Codex writes only in crayon and likes red.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/720bf6f184.ogg"
             },
             {
               "text": "Codex pairs with you while you type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9bacc0772d.ogg"
             },
             {
               "text": "Codex can finish a line you started.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15f90e9299.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q7_v6.wav"
+          "_audio": "assets/audio/q/lesson_14_q7_v6.ogg"
         },
         {
           "prompt": "Hey friend — Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Codex pairs with you while you type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9bacc0772d.ogg"
             },
             {
               "text": "Codex can finish a line you started.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/15f90e9299.ogg"
             },
             {
               "text": "Codex only knows ten words, all about cheese.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e7d5eede9e.ogg"
             },
             {
               "text": "Codex helps fix small bugs fast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/526f011ed1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q7_v7.wav"
+          "_audio": "assets/audio/q/lesson_14_q7_v7.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Codex hates code and is a poet at heart.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/21c7eed8bd.ogg"
             },
             {
               "text": "Codex is a helper that is great at code.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a265f8a543.ogg"
             },
             {
               "text": "Codex is great when you know what you want but not how to type it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8585fc6e24.ogg"
             },
             {
               "text": "Codex pairs with you while you type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9bacc0772d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q7_v8.wav"
+          "_audio": "assets/audio/q/lesson_14_q7_v8.ogg"
         },
         {
           "prompt": "Tell me — Bytey claims something about Codex in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Codex understands many programming languages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c44d4536f8.ogg"
             },
             {
               "text": "Codex is friendly to short, clear tasks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6850ff51dd.ogg"
             },
             {
               "text": "Codex always picks the wrong answer for fun.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2d34211236.ogg"
             },
             {
               "text": "Codex pairs with you while you type.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9bacc0772d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_14_q7_v9.wav"
+          "_audio": "assets/audio/q/lesson_14_q7_v9.ogg"
         }
       ]
     }

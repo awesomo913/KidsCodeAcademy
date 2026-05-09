@@ -198,10 +198,104 @@ button { font-family: inherit; cursor: pointer; }
   text-align: center; cursor: pointer;
   transition: transform var(--dur), background var(--dur);
 }
+.choice { position: relative; }
 .choice:hover { transform: translateY(-3px); background: var(--bg-1); }
 .choice.right { background: var(--accent-4); color: white; border-color: var(--accent-4); }
 .choice.wrong { background: #ffd6d6; border-color: var(--accent); }
 .choice:disabled { opacity: 0.6; cursor: default; transform: none; }
+/* Speaker affordance — top-right corner, tap-to-hear without committing the answer.
+ * Sized for small fingers; pulses softly to invite the kid to try it. */
+.choice-speaker {
+  position: absolute;
+  top: 4px; right: 6px;
+  font-size: 18px; line-height: 1;
+  padding: 4px 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.55);
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.65;
+  transition: opacity var(--dur), transform var(--dur);
+}
+.choice:hover .choice-speaker { opacity: 1; transform: scale(1.08); }
+.choice-speaker:hover { transform: scale(1.18); }
+.choice-speaker:active { transform: scale(0.92); }
+
+/* tap-the-glow gate */
+.glow-arena { display: flex; justify-content: center; align-items: center; padding: 24px; }
+.glow-orb {
+  font-size: 64px; line-height: 1;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--accent-2);
+  background: radial-gradient(circle, #fff8c4, #ffd76b);
+  cursor: pointer;
+  animation: glow-pulse 1.4s ease-in-out infinite;
+}
+.glow-orb.popped { animation: none; transform: scale(1.4); opacity: 0; transition: transform .35s, opacity .35s; }
+@keyframes glow-pulse {
+  0%,100% { transform: scale(1);    box-shadow: 0 0 0 0   rgba(255,215,107,0.8); }
+  50%     { transform: scale(1.08); box-shadow: 0 0 0 24px rgba(255,215,107,0);  }
+}
+
+/* pick-the-pic gate */
+.pic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  padding: 12px;
+}
+.pic-tile {
+  font-size: 56px; line-height: 1;
+  padding: 16px;
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-md);
+  background: var(--bg-2);
+  cursor: pointer;
+  transition: transform var(--dur), background var(--dur);
+}
+.pic-tile:hover    { transform: translateY(-3px); background: var(--bg-1); }
+.pic-tile.right    { background: var(--accent-4); border-color: var(--accent-4); }
+.pic-tile.wrong    { background: #ffd6d6; border-color: var(--accent); animation: shake 0.4s; }
+.pic-tile:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+/* sprite-poke gate */
+.poke-arena {
+  position: relative; height: 120px;
+  border: 3px dashed var(--accent-2);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--bg-2);
+  margin: 12px 0;
+}
+.poke-sprite {
+  position: absolute; top: 30px; left: 0;
+  font-size: 48px; line-height: 1;
+  background: transparent; border: none; cursor: pointer;
+  transition: transform 0s linear;
+}
+.poke-sprite.caught { animation: caught-spin 0.4s ease-out; }
+@keyframes caught-spin { to { transform: rotate(360deg) scale(1.4); opacity: 0; } }
+
+/* timeline-order gate */
+.timeline-list { display: flex; flex-direction: column; gap: 8px; padding: 12px 0; }
+.timeline-item {
+  padding: 10px 14px;
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-md);
+  background: var(--bg-2);
+  cursor: grab;
+  font-size: 16px;
+  user-select: none;
+}
+.timeline-item.dragging { opacity: 0.4; cursor: grabbing; }
+.timeline-list.solved .timeline-item { background: var(--accent-4); color: white; border-color: var(--accent-4); }
+.timeline-list.shake { animation: shake 0.4s; }
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25%     { transform: translateX(-6px); }
+  75%     { transform: translateX(6px); }
+}
 
 /* v0.5 — QuestionFlow: progress chip + gate-lock dim + answer reveal */
 .qprog {
@@ -383,6 +477,54 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   font-weight: 600;
 }
 .chess-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+/* Grade card shown after a chess game ends. */
+.chess-grade-card {
+  background: var(--panel-2);
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-md);
+  padding: 14px;
+  margin: 12px 0 0;
+  text-align: center;
+}
+.cgc-head    { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.cgc-stars   { font-size: 32px; letter-spacing: 4px; }
+.cgc-letter  { font-size: 56px; font-weight: 900; color: var(--accent); line-height: 1; margin: 4px 0; }
+.cgc-score   { font-size: 18px; margin-bottom: 8px; }
+.cgc-stats   { list-style: none; padding: 0; margin: 0; font-size: 14px; color: var(--ink); }
+.cgc-stats li { padding: 2px 0; }
+/* Parent: chess history block */
+.parent-chess-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 90px 60px;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--accent-2);
+}
+.parent-chess-row .cresult.win  { color: var(--accent-4); font-weight: 700; }
+.parent-chess-row .cresult.loss { color: var(--accent);   font-weight: 700; }
+.parent-chess-row .cresult.aband{ color: var(--ink); opacity: 0.7; }
+/* Parent: game launcher tiles */
+.gl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+.gl-tile {
+  padding: 14px;
+  border: 3px solid var(--accent-2);
+  border-radius: var(--r-md);
+  background: var(--bg-2);
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+  transition: transform var(--dur), background var(--dur);
+}
+.gl-tile:hover { transform: translateY(-2px); background: var(--bg-1); }
+.gl-tile-name  { font-weight: 700; font-size: 16px; }
+.gl-tile-desc  { color: var(--ink); opacity: 0.8; font-size: 13px; margin-top: 4px; }
+.gl-section-h  { font-size: 16px; font-weight: 700; margin: 12px 0 4px; color: var(--accent); }
 
 .match-row { display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-around; }
 .match-col { display: flex; flex-direction: column; gap: 10px; min-width: 180px; }
@@ -776,6 +918,50 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 
 .kbd { display: inline-block; padding: 2px 8px; background: var(--bg-2); border-radius: 6px; font-family: monospace; }
 .tag { display: inline-block; padding: 2px 8px; background: var(--accent-3); color: var(--ink); border-radius: 999px; font-size: 14px; font-weight: 600; }
+/* Streak/combo chip — surfaces consecutive-right-answer momentum.
+ * Tier shifts at 3 / 5 / 10 / 20: bigger flame count + color pop. */
+.combo-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 10px;
+  background: linear-gradient(90deg, #fff8c4, #ffd76b);
+  border: 2px solid var(--accent-2);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-left: 8px;
+  transition: transform var(--dur), background var(--dur);
+}
+.combo-chip.tier-1 { background: linear-gradient(90deg, #fff8c4, #ffd76b); }
+.combo-chip.tier-2 { background: linear-gradient(90deg, #ffd76b, #ff9d4d); color: #2a1a0a; animation: combo-pop 0.4s; }
+.combo-chip.tier-3 { background: linear-gradient(90deg, #ff9d4d, #ff5a78); color: #fff; animation: combo-pop 0.5s; }
+.combo-chip.tier-4 { background: linear-gradient(90deg, #ff5a78, #a067ff); color: #fff; animation: combo-pop 0.6s; }
+.combo-flames { font-size: 16px; line-height: 1; }
+.combo-num { font-size: 14px; }
+@keyframes combo-pop {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.4) rotate(-6deg); }
+  70%  { transform: scale(0.9) rotate(4deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+/* Per-lesson collectibles — small drifting glints on the lesson page.
+ * Kid finds + taps for bonus points. */
+.glint {
+  position: absolute;
+  font-size: 22px; line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  z-index: 2;  /* above lesson content but BELOW help-fab + game UI */
+  animation: glint-pulse 1.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(255,215,107,0.8));
+}
+.glint.taken { animation: glint-poof 0.5s ease-out forwards; pointer-events: none; }
+@keyframes glint-pulse {
+  0%,100% { transform: scale(1)   rotate(0deg); opacity: 0.85; }
+  50%     { transform: scale(1.2) rotate(8deg); opacity: 1;    }
+}
+@keyframes glint-poof {
+  to { transform: scale(2.5) rotate(60deg); opacity: 0; }
+}
 .success { color: var(--accent-4); font-weight: 700; }
 .muted { color: var(--ink-soft); }
 
@@ -1130,6 +1316,10 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 <header class="topbar">
   <h1>Kids Code Academy</h1>
   <span class="tag" id="streakTag">0 stickers</span>
+  <span class="combo-chip" id="comboChip" style="display:none;" title="Right answers in a row">
+    <span class="combo-flames" id="comboFlames">🔥</span>
+    <span class="combo-num" id="comboNum">0</span>
+  </span>
   <span class="spacer"></span>
   <button id="readBtn" class="ghost" title="Read aloud">
     <span class="text-only">Read aloud</span>
@@ -1199,6 +1389,8 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
         <button class="parent-tab active" data-tab="progress">Progress</button>
         <button class="parent-tab" data-tab="activity">Activity</button>
         <button class="parent-tab" data-tab="grade">Grade</button>
+        <button class="parent-tab" data-tab="chess">Chess</button>
+        <button class="parent-tab" data-tab="games">Games</button>
         <button class="parent-tab" data-tab="transcripts">Transcripts</button>
         <button class="parent-tab" data-tab="settings">Settings</button>
       </div>
@@ -1218,6 +1410,17 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
           <div class="muted" id="parentGradeBlurb">Complete some lessons to see a coding grade.</div>
           <div class="muted" style="font-size:13px;margin-top:8px;" id="parentGradeBreakdown"></div>
         </div>
+      </div>
+
+      <div class="parent-pane" data-pane="chess">
+        <p class="muted">Every chess match's grade. Stars: 1=tried, 2=good game, 3=excellent.</p>
+        <div id="parentChessSummary" class="summary-card"></div>
+        <div id="parentChessHistory" style="margin-top:10px;"><em class="muted">No chess matches yet.</em></div>
+      </div>
+
+      <div class="parent-pane" data-pane="games">
+        <p class="muted">Pick any game to play right now. Closes Parent Corner.</p>
+        <div id="parentGameLauncher"></div>
       </div>
 
       <div class="parent-pane" data-pane="transcripts">
@@ -1472,6 +1675,138 @@ const Sessions = {
   },
 };
 
+/* Combo / streak tracker — momentum carrot for consecutive right answers.
+ * Tier thresholds: 3 / 5 / 10 / 20. Each tier escalates flames + chip color.
+ * Reset on wrong answer + on lesson abandon. Persists in-session only (not localStorage). */
+const Combo = {
+  count: 0,
+  bestThisSession: 0,
+  _lastCheerAt: 0,   // ms — debounce cheer SFX/voice so a 5→10 burst doesn't
+                     // let the second cancel the first via speechSynthesis.cancel()
+  _tier(n) {
+    if (n >= 20) return 4;
+    if (n >= 10) return 3;
+    if (n >= 5)  return 2;
+    if (n >= 3)  return 1;
+    return 0;
+  },
+  _flames(tier) {
+    return ["", "🔥", "🔥🔥", "🔥🔥🔥", "🔥🔥🔥🔥"][tier] || "🔥";
+  },
+  hit() {
+    this.count += 1;
+    if (this.count > this.bestThisSession) this.bestThisSession = this.count;
+    this._render(true);
+  },
+  miss() {
+    if (this.count >= 3) {
+      // Soft signal — flash, then drop. Avoid harsh reset for kid morale.
+      this._flash();
+    }
+    this.count = 0;
+    this._render(false);
+  },
+  reset() { this.count = 0; this._render(false); },
+  _render(justHit) {
+    const chip = document.getElementById("comboChip");
+    const numEl = document.getElementById("comboNum");
+    const flamesEl = document.getElementById("comboFlames");
+    if (!chip || !numEl || !flamesEl) return;
+    const tier = this._tier(this.count);
+    if (this.count < 3) { chip.style.display = "none"; return; }
+    chip.style.display = "";
+    chip.classList.remove("tier-1","tier-2","tier-3","tier-4");
+    if (tier > 0) chip.classList.add("tier-" + tier);
+    numEl.textContent = String(this.count);
+    flamesEl.textContent = this._flames(tier);
+    if (justHit) {
+      // Threshold cheers — once per crossing AND debounced 2s so a fast 5→10
+      // doesn't let the second cheer's speechSynthesis.cancel() eat the first.
+      if (this.count === 3 || this.count === 5 || this.count === 10 || this.count === 20) {
+        const now = Date.now();
+        if (now - this._lastCheerAt >= 2000) {
+          this._lastCheerAt = now;
+          try { Audio_.sfx("Tada"); } catch (_) {}
+          try { speakText(this.count + " in a row!"); } catch (_) {}
+        }
+      }
+    }
+  },
+  _flash() {
+    const chip = document.getElementById("comboChip");
+    if (!chip) return;
+    chip.style.transition = "transform 0.4s, opacity 0.4s";
+    chip.style.transform = "scale(0.6)"; chip.style.opacity = "0.3";
+    setTimeout(() => { chip.style.transform = ""; chip.style.opacity = ""; }, 420);
+  },
+};
+
+/* Glints — per-lesson collectible system. 3 hidden ⭐ glints drop into the
+ * lesson view at random positions; tapping each adds bonus to the lesson grade
+ * + a small stat to Sessions. Disappear at lesson change. */
+const Glints = {
+  active: [],   // [{ el, taken }]
+  taken: 0,
+  total: 0,
+  reset() {
+    this.active.forEach(g => { try { g.el.remove(); } catch (_) {} });
+    this.active = [];
+    this.taken = 0;
+    this.total = 0;
+  },
+  spawn(host, count) {
+    if (!host) return;
+    this.reset();
+    // Build all glints into a fragment first, then atomic-append. Avoids
+    // partial-spawn race if openLesson re-fires mid-spawn (kid back-taps fast).
+    const frag = document.createDocumentFragment();
+    const slots = [];
+    const usedPos = [];
+    for (let i = 0; i < count; i += 1) {
+      const glyph = ["⭐", "🌟", "✨", "💎"][i % 4];
+      const g = document.createElement("span");
+      g.className = "glint";
+      g.textContent = glyph;
+      g.setAttribute("aria-label", "Bonus star");
+      g.setAttribute("role", "button");
+      let top, left, tries = 0;
+      do {
+        top  = 30 + Math.floor(Math.random() * 60);
+        left = 10 + Math.floor(Math.random() * 80);
+        tries += 1;
+      } while (tries < 8 && usedPos.some(p => Math.abs(p.top - top) < 12 && Math.abs(p.left - left) < 12));
+      usedPos.push({ top, left });
+      g.style.top  = top  + "%";
+      g.style.left = left + "%";
+      const slot = { el: g, taken: false };
+      g.addEventListener("click", () => {
+        // No stopPropagation — glints sit at z-index 2 above lesson content but
+        // below game UI; if a kid taps the OVERLAP zone we want the underlying
+        // game button to ALSO fire so the lesson never feels jammed.
+        if (slot.taken) return;
+        slot.taken = true;
+        this.taken += 1;
+        try { Audio_.sfx("Star"); } catch (_) {}
+        try { speakText("Bonus star!"); } catch (_) {}
+        g.classList.add("taken");
+        setTimeout(() => { try { g.remove(); } catch (_) {} }, 500);
+        try { Tracker.click(); } catch (_) {}
+      });
+      frag.appendChild(g);
+      slots.push(slot);
+    }
+    // Atomic commit: counters + DOM in lockstep.
+    this.total = count;
+    this.active = slots;
+    try {
+      host.appendChild(frag);
+    } catch (e) {
+      console.warn("Glints.spawn append failed:", e);
+      this.reset();
+    }
+  },
+};
+
 const Tracker = {
   current: null,  // { lessonId, lessonNum, start, clicks, retries, gameType }
   start(lesson) {
@@ -1590,13 +1925,17 @@ const Grade = {
 
 /* Forward-declared at top to avoid TDZ — populated lazily in playBakedAudio. */
 let _kcaQAudio = null;
+let _kcaHoverAudio = null;
+let _kcaHoverTimer = null;
+let _kcaHoverActiveBtn = null;
 
 /* Voice mutex — only ONE voice channel speaks at a time.
- * Three channels: lessonAudio (long narration), _kcaQAudio (question prompts),
- * speechSynthesis (Web Speech fallback + chess voice + ToolSimulator intro).
+ * Four channels: lessonAudio (long narration), _kcaQAudio (question prompts),
+ * speechSynthesis (Web Speech fallback + chess voice + ToolSimulator intro),
+ * _kcaHoverAudio (hover-to-speak on answer options).
  * Without this, kid clicks ahead while narration plays → multiple voices overlap.
  *
- * Pass `except` ("lesson" | "question" | "speech") to spare one channel. */
+ * Pass `except` ("lesson" | "question" | "speech" | "hover") to spare one channel. */
 function _silenceVoiceChannels(except) {
   if (except !== "speech") {
     try {
@@ -1616,6 +1955,91 @@ function _silenceVoiceChannels(except) {
       if (a) a.pause();
     } catch (_) {}
   }
+  if (except !== "hover") {
+    try {
+      if (_kcaHoverAudio) _kcaHoverAudio.pause();
+      if (_kcaHoverTimer) { clearTimeout(_kcaHoverTimer); _kcaHoverTimer = null; }
+    } catch (_) {}
+  }
+}
+
+/* Hover-to-speak on answer-option buttons.
+ *
+ * Kid behavior assumed: rapid mouse-overs across all options, leave mid-word,
+ * re-enter same option, finger-mash on touchscreens. Guards:
+ *   - 250ms enter-debounce — doesn't fire on flyover. Kid must intentionally pause.
+ *   - leave-cancels — pulling away kills both the pending timer and the in-flight wav.
+ *   - same-button re-enter is a no-op while audio plays (no cut-and-restart loop).
+ *   - mutex via _silenceVoiceChannels("hover") — narration / question prompt yield,
+ *     so the kid hears ONE voice at a time.
+ *   - bakedPath preferred (warm Piper voice, matches narration); Web Speech fallback.
+ */
+function startHoverAudio(btn, text, bakedPath) {
+  if (!btn || _kcaHoverActiveBtn === btn) return;
+  cancelHoverAudio();
+  // Capture the target btn in closure so async play()/error callbacks can verify
+  // the kid is still on this button before falling back. Without the capture,
+  // a slow play() rejection could speak the WRONG option's text after the kid
+  // has already moved to a different button.
+  const targetBtn = btn;
+  const targetText = text;
+  _kcaHoverTimer = setTimeout(() => {
+    _kcaHoverTimer = null;
+    _kcaHoverActiveBtn = targetBtn;
+    _silenceVoiceChannels("hover");
+    if (bakedPath) {
+      try {
+        if (!_kcaHoverAudio) {
+          _kcaHoverAudio = document.createElement("audio");
+          _kcaHoverAudio.preload = "auto";
+          document.body.appendChild(_kcaHoverAudio);
+          // Clear the active-btn lock when audio finishes naturally so a
+          // stays-hovered kid can re-trigger by leaving + re-entering.
+          _kcaHoverAudio.addEventListener("ended", () => { _kcaHoverActiveBtn = null; });
+          _kcaHoverAudio.addEventListener("error", () => { _kcaHoverActiveBtn = null; });
+        }
+        _kcaHoverAudio.pause();
+        _kcaHoverAudio.src = String(bakedPath) + "?_=" + Date.now();
+        _kcaHoverAudio.currentTime = 0;
+        _kcaHoverAudio.play().catch(() => {
+          // Only fall back if the kid is STILL hovering this same button.
+          if (_kcaHoverActiveBtn !== targetBtn) return;
+          _kcaHoverActiveBtn = null;
+          speakHoverFallback(targetText);
+        });
+      } catch (_) {
+        if (_kcaHoverActiveBtn !== targetBtn) return;
+        _kcaHoverActiveBtn = null;
+        speakHoverFallback(targetText);
+      }
+    } else {
+      speakHoverFallback(targetText);
+    }
+  }, 250);
+}
+function speakHoverFallback(text) {
+  if (!text) return;
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  try {
+    if (!_kcaVoiceReady) _kcaInitVoice();
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(String(text));
+    if (_kcaVoice) u.voice = _kcaVoice;
+    u.rate = 0.95;
+    u.pitch = 1.1;
+    u.volume = 1.0;
+    window.speechSynthesis.speak(u);
+  } catch (_) {}
+}
+function cancelHoverAudio() {
+  if (_kcaHoverTimer) { clearTimeout(_kcaHoverTimer); _kcaHoverTimer = null; }
+  try { if (_kcaHoverAudio) _kcaHoverAudio.pause(); } catch (_) {}
+  try {
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
+  } catch (_) {}
+  _kcaHoverActiveBtn = null;
 }
 
 const Audio_ = {
@@ -1900,7 +2324,7 @@ const Hints = {
       panel.appendChild(el("p", { style: { fontSize: "20px" } }, String(text)));
       // Play hint narration if available
       const num = String(lesson.id).padStart(2, "0");
-      this._playHint(`assets/audio/lesson_${num}_hint_${n}.wav`);
+      this._playHint(`assets/audio/lesson_${num}_hint_${n}.ogg`);
     }
 
     // Action buttons
@@ -2983,7 +3407,13 @@ const KidGame = {
       wrap.appendChild(left); wrap.appendChild(right);
 
       const items = (p.pairs || []).map((pair, idx) => ({ ...pair, idx, matched: false }));
-      const order = items.slice().sort(() => Math.random() - 0.5);
+      // Fisher-Yates shuffle so the right column doesn't bias-cluster index 0 at top
+      // (Math.random()-0.5 is biased on V8 — kid learns position pattern in <1 lesson).
+      const order = items.slice();
+      for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
 
       order.forEach(item => {
         const li = el("div", { class: "match-item", draggable: "true", dataset: { idx: String(item.idx) } }, String(item.left));
@@ -3855,6 +4285,166 @@ const KidGame = {
         }, () => { Audio_.sfx("Tada"); done(true); });
       }
     },
+
+    /* ============================================================
+     *  Gate-flavor handlers — small (<3s) authentic mini-games used
+     *  by the Q2+ gate diversifier. Replace the old "type word" wall
+     *  w/ a rotating palette so every gate feels fresh.
+     * ============================================================ */
+
+    /* tap-the-glow — a single big pulsing circle the kid taps. Reads as a
+     * "press the button" mechanic. Pulsing is CSS-only, completion is one click. */
+    "tap-the-glow"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Tap the glowing star!"));
+      const arena = el("div", { class: "glow-arena" });
+      host.appendChild(arena);
+      const glyph = (p.glyph && String(p.glyph)) || "⭐";
+      const orb = el("button", { class: "glow-orb" }, glyph);
+      let fired = false;
+      orb.addEventListener("click", () => {
+        if (fired) return;  // kid mash-tap can't fire done() twice
+        fired = true;
+        orb.disabled = true;
+        Tracker.click();
+        orb.classList.add("popped");
+        Audio_.sfx("Ding");
+        setTimeout(() => done(true), 360);
+      });
+      arena.appendChild(orb);
+    },
+
+    /* pick-the-pic — choose from emoji/glyph tiles. Visual MCQ — kid taps
+     * the picture that matches the prompt. payload.choices: [{glyph, right}].
+     * If payload missing, falls back to a 4-emoji default w/ random correct. */
+    "pick-the-pic"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Tap the right picture!"));
+      const grid = el("div", { class: "pic-grid" });
+      host.appendChild(grid);
+      let choices = (p.choices && p.choices.length) ? p.choices.slice() : null;
+      if (!choices) {
+        // Defensive default — random-correct 1-of-4 from a stable goofy/game pool.
+        // Fisher-Yates so the winner isn't biased toward index 0 (Math.random()-0.5 is biased).
+        const pool = ["⭐", "🍕", "🎮", "🐱", "🚀", "🦖", "🍩", "🎨", "🤖", "🌈"].slice();
+        for (let i = pool.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [pool[i], pool[j]] = [pool[j], pool[i]];
+        }
+        const shuf = pool.slice(0, 4);
+        const winIdx = Math.floor(Math.random() * shuf.length);
+        choices = shuf.map((g, i) => ({ glyph: g, right: i === winIdx }));
+      }
+      // Shuffle so the right tile's position changes every render (Fisher-Yates)
+      choices = choices.slice();
+      for (let i = choices.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [choices[i], choices[j]] = [choices[j], choices[i]];
+      }
+      choices.forEach(c => {
+        const btn = el("button", { class: "pic-tile" }, String(c.glyph || "•"));
+        btn.addEventListener("click", () => {
+          Tracker.click();
+          if (c.right) {
+            btn.classList.add("right");
+            Audio_.sfx("Ding");
+            grid.querySelectorAll("button.pic-tile").forEach(b => b.disabled = true);
+            setTimeout(() => done(true), 500);
+          } else {
+            Tracker.retry();
+            btn.classList.add("wrong");
+            Audio_.sfx("Oops");
+            setTimeout(() => btn.classList.remove("wrong"), 500);
+          }
+        });
+        grid.appendChild(btn);
+      });
+    },
+
+    /* sprite-poke — a small emoji sprite drifts L→R; kid taps to "catch" it.
+     * Uses requestAnimationFrame, cancels on done so no orphan animations. */
+    "sprite-poke"(host, p, done) {
+      host.appendChild(el("h3", null, p.prompt || "Tap the running hero!"));
+      const arena = el("div", { class: "poke-arena" });
+      host.appendChild(arena);
+      const glyph = (p.glyph && String(p.glyph)) || "🦔";
+      const sprite = el("button", { class: "poke-sprite" }, glyph);
+      arena.appendChild(sprite);
+      let x = 0;
+      let dir = 1;
+      let raf = 0;
+      let fired = false;
+      const tick = () => {
+        // Self-cancel if the host got torn down (lesson abandoned, kid navigated
+        // away). Without this the rAF loop runs against detached DOM forever.
+        if (!arena.isConnected) { cancelAnimationFrame(raf); return; }
+        x += dir * 3;
+        const w = Math.max(80, arena.clientWidth - 60);
+        if (x > w) { x = w; dir = -1; }
+        if (x < 0) { x = 0; dir = 1; }
+        sprite.style.transform = "translateX(" + x + "px)";
+        raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+      sprite.addEventListener("click", () => {
+        if (fired) return;  // mash-tap guard
+        fired = true;
+        sprite.disabled = true;
+        Tracker.click();
+        cancelAnimationFrame(raf);
+        sprite.classList.add("caught");
+        Audio_.sfx("Ding");
+        setTimeout(() => done(true), 400);
+      });
+    },
+
+    /* timeline-order — kid drags 3 events into the right order. Uses the
+     * same draggable pattern as drag-to-match but on a single column.
+     * payload.steps: ["First thing", "Second thing", "Third thing"] (in correct order). */
+    "timeline-order"(host, p, done) {
+      const steps = Array.isArray(p.steps) ? p.steps.slice() : ["Think", "Try", "Win"];
+      host.appendChild(el("h3", null, p.prompt || "Put the steps in order!"));
+      const list = el("div", { class: "timeline-list" });
+      host.appendChild(list);
+      // Shuffle on render — Fisher-Yates so kid sees them out of order
+      const order = steps.map((s, i) => ({ text: s, idx: i }));
+      for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      let dragging = null;
+      order.forEach(item => {
+        const li = el("div", { class: "timeline-item", draggable: "true" }, String(item.text));
+        li.dataset.idx = String(item.idx);
+        li.addEventListener("dragstart", () => { dragging = li; li.classList.add("dragging"); });
+        li.addEventListener("dragend", () => { li.classList.remove("dragging"); dragging = null; });
+        li.addEventListener("dragover", e => {
+          e.preventDefault();
+          if (!dragging || dragging === li) return;
+          const rect = li.getBoundingClientRect();
+          const mid = rect.top + rect.height / 2;
+          if (e.clientY < mid) list.insertBefore(dragging, li);
+          else list.insertBefore(dragging, li.nextSibling);
+        });
+        list.appendChild(li);
+      });
+      const checkBtn = el("button", { class: "btn-big go" }, "Check order");
+      checkBtn.addEventListener("click", () => {
+        Tracker.click();
+        const seq = Array.from(list.querySelectorAll(".timeline-item"))
+                         .map(n => Number(n.dataset.idx));
+        const ok = seq.every((v, i) => v === i);
+        if (ok) {
+          list.classList.add("solved");
+          Audio_.sfx("Ding");
+          setTimeout(() => done(true), 500);
+        } else {
+          Tracker.retry();
+          list.classList.add("shake");
+          Audio_.sfx("Oops");
+          setTimeout(() => list.classList.remove("shake"), 500);
+        }
+      });
+      host.appendChild(checkBtn);
+    },
   },
 };
 
@@ -3972,26 +4562,53 @@ const QuestionFlow = {
     // kid can't memorize "always pick the second one".
     const opts = shuffleArr(Array.isArray(v.options) ? v.options : []);
     opts.forEach(opt => {
+      const optText = String(opt.text || "");
+      const optAudio = opt._audio ? String(opt._audio) : null;
       const btn = el("button", {
         class: "choice",
         onclick: () => {
+          cancelHoverAudio();  // stop any in-flight hover-speech the moment kid commits
           Tracker.click();
           if (opt.correct) {
+            try { Combo.hit(); } catch (_) {}
             // Micro-celebration: button animation + confetti burst + Bytey cheer
-            celebrateChoiceBtn(btn, String(opt.text || ""));
+            celebrateChoiceBtn(btn, optText);
             Audio_.sfx("Ding");
             try { Mascot.set("cheer", { revertAfterMs: 1000, revertTo: "idle" }); } catch (_) {}
             // Disable all buttons so a wrong second-click doesn't fire
             grid.querySelectorAll("button.choice").forEach(b => b.disabled = true);
             setTimeout(() => onCorrect(), 600);
           } else {
+            try { Combo.miss(); } catch (_) {}
             Tracker.retry();
             btn.classList.add("wrong");
             Audio_.sfx("Oops");
             setTimeout(() => btn.classList.remove("wrong"), 600);
           }
         },
-      }, String(opt.text || ""));
+        onmouseenter: () => startHoverAudio(btn, optText, optAudio),
+        onmouseleave: () => cancelHoverAudio(),
+        onfocus:      () => startHoverAudio(btn, optText, optAudio),
+        onblur:       () => cancelHoverAudio(),
+      }, optText);
+      // Touchscreen affordance — tap the speaker icon to hear without committing.
+      // Stop-prop on icon click so the answer doesn't get picked accidentally.
+      const speaker = el("span", {
+        class: "choice-speaker",
+        "aria-label": "Read this answer aloud",
+        role: "button",
+        tabindex: "0",
+        onclick: (e) => {
+          if (e && e.stopPropagation) e.stopPropagation();
+          if (e && e.preventDefault) e.preventDefault();
+          startHoverAudio(btn, optText, optAudio);
+        },
+        ontouchstart: (e) => {
+          if (e && e.stopPropagation) e.stopPropagation();
+          startHoverAudio(btn, optText, optAudio);
+        },
+      }, "🔊");
+      btn.appendChild(speaker);
       grid.appendChild(btn);
     });
   },
@@ -4055,6 +4672,13 @@ const Chess = {
       legalSquares: [],
       gameOver: false,
       moves: 0,
+      // grading inputs
+      kidCaptured: 0,         // pieces the kid took (count)
+      kidCapturedValue: 0,    // captured value sum
+      botCaptured: 0,         // pieces Bytey took from kid
+      botCapturedValue: 0,
+      startedAt: Date.now(),
+      result: null,           // "win" | "loss" | "abandoned"
     };
   },
 
@@ -4083,7 +4707,14 @@ const Chess = {
     card.appendChild(actions);
     actions.appendChild(el("button", {
       class: "btn-big alt",
-      onclick: () => this._close(onDone),
+      onclick: () => {
+        // Treat early exit as "abandoned" only if the game wasn't already finished
+        if (!this.state.gameOver) {
+          this.state.result = "abandoned";
+          ChessHistory.add(this._gradeRecord());
+        }
+        this._close(onDone);
+      },
     }, "Done playing — back to lessons"));
     actions.appendChild(el("button", {
       class: "btn-big",
@@ -4142,6 +4773,10 @@ const Chess = {
       this.state.legalSquares = [];
       this._renderBoard(boardEl, onDone);
       if (captured && captured !== "." && this._isBlack(captured)) {
+        // Track kid's capture (count + value)
+        const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 100 };
+        this.state.kidCaptured += 1;
+        this.state.kidCapturedValue += VALUE[captured.toLowerCase()] || 0;
         Audio_.sfx("Ding");
       }
       if (this._checkGameEnd(boardEl, onDone)) return;
@@ -4287,6 +4922,11 @@ const Chess = {
     }
 
     const captured = this.state.board[pick.to.r][pick.to.c];
+    if (captured && captured !== "." && this._isWhite(captured)) {
+      const VALUE = { P: 1, N: 3, B: 3, R: 5, Q: 9, K: 100 };
+      this.state.botCaptured += 1;
+      this.state.botCapturedValue += VALUE[captured] || 0;
+    }
     this._doMove(pick.from, pick.to);
     this._renderBoard(boardEl, onDone);
     if (this._checkGameEnd(boardEl, onDone)) return;
@@ -4314,24 +4954,148 @@ const Chess = {
     }
     if (!whiteKing) {
       this.state.gameOver = true;
+      this.state.result = "loss";
+      const rec = this._gradeRecord();
+      ChessHistory.add(rec);
       this._setStatus("Bytey caught your king. Try again? 🐎");
       Audio_.sfx("Oops");
+      this._showGradeCard(boardEl, rec);
       return true;
     }
     if (!blackKing) {
       this.state.gameOver = true;
+      this.state.result = "win";
+      const rec = this._gradeRecord();
+      ChessHistory.add(rec);
       this._setStatus("YOU GOT THE KING! 🎉👑");
       Audio_.sfx("Tada");
       try { spawnConfetti(boardEl); } catch (_) {}
+      this._showGradeCard(boardEl, rec);
       return true;
     }
     return false;
+  },
+
+  /* Grade rubric — 0..100 score → letter, plus 1-3 stars.
+   * 60 base for finishing. +30 if won. +0 if lost. +10 abandoned-but-played.
+   * + capture-ratio bonus up to 25. - move-inefficiency penalty up to 15. */
+  _gradeRecord() {
+    const s = this.state;
+    let score = 0;
+    if (s.result === "win") score += 90;
+    else if (s.result === "loss") score += 60;
+    else score += 35;  // abandoned
+
+    const totalCapVal = s.kidCapturedValue + s.botCapturedValue;
+    if (totalCapVal > 0) {
+      const ratio = s.kidCapturedValue / totalCapVal;  // 0..1
+      score += Math.round(ratio * 25 - 12);  // -12..+13
+    }
+    // Move efficiency: under 30 moves to win = bonus, over 60 = penalty
+    if (s.result === "win") {
+      if (s.moves <= 20) score += 10;
+      else if (s.moves <= 30) score += 5;
+      else if (s.moves >= 60) score -= 10;
+    }
+    // Per-result FLOOR — losing a chess game shouldn't earn a D. The kid is 7
+    // and the bot wins ~half the time on purpose; "tried hard, lost" still gets
+    // at least a B-. Abandoned games still get a passing C.
+    const floor = s.result === "win" ? 75 : s.result === "loss" ? 65 : 50;
+    score = Math.max(floor, score);
+    score = Math.max(0, Math.min(100, score));
+
+    let letter = "C";
+    if (score >= 92) letter = "A+";
+    else if (score >= 85) letter = "A";
+    else if (score >= 78) letter = "B+";
+    else if (score >= 70) letter = "B";
+    else if (score >= 60) letter = "C+";
+    else if (score >= 45) letter = "C";
+    else letter = "D";
+
+    let stars = 1;
+    if (score >= 85) stars = 3;
+    else if (score >= 65) stars = 2;
+
+    return {
+      ts: Date.now(),
+      durationMs: Date.now() - s.startedAt,
+      moves: s.moves,
+      kidCaptured: s.kidCaptured,
+      kidCapturedValue: s.kidCapturedValue,
+      botCaptured: s.botCaptured,
+      botCapturedValue: s.botCapturedValue,
+      result: s.result,
+      score: score,
+      letter: letter,
+      stars: stars,
+    };
+  },
+
+  _showGradeCard(boardEl, rec) {
+    const card = boardEl.parentElement;
+    if (!card) return;
+    const old = card.querySelector(".chess-grade-card");
+    if (old) old.remove();
+    const grade = el("div", { class: "chess-grade-card" });
+    const headLine = rec.result === "win" ? "🎉 You won!" :
+                     rec.result === "loss" ? "🐎 Bytey wins this round." :
+                     "👋 Game ended early.";
+    grade.appendChild(el("div", { class: "cgc-head" }, headLine));
+    const stars = "⭐".repeat(rec.stars) + "✩".repeat(3 - rec.stars);
+    grade.appendChild(el("div", { class: "cgc-stars" }, stars));
+    grade.appendChild(el("div", { class: "cgc-letter" }, rec.letter));
+    grade.appendChild(el("div", { class: "cgc-score" }, "Score: " + rec.score + " / 100"));
+    const stats = el("ul", { class: "cgc-stats" });
+    stats.appendChild(el("li", null, "Moves: " + rec.moves));
+    stats.appendChild(el("li", null, "Pieces you took: " + rec.kidCaptured + " (value " + rec.kidCapturedValue + ")"));
+    stats.appendChild(el("li", null, "Pieces Bytey took: " + rec.botCaptured + " (value " + rec.botCapturedValue + ")"));
+    grade.appendChild(stats);
+    card.appendChild(grade);
+    speakText("You scored " + rec.score + " out of 100. Grade " + rec.letter + ".");
   },
 
   _close(onDone) {
     const overlay = document.getElementById("chessOverlay");
     if (overlay) overlay.remove();
     if (typeof onDone === "function") onDone();
+  },
+};
+
+/* ChessHistory — persisted list of every chess game's grade record.
+ * Parent dashboard reads this to show streaks/averages. */
+const ChessHistory = {
+  K: "kca.chess.history.v1",
+  list: [],
+  load() {
+    try { this.list = Store.load(this.K, []) || []; }
+    catch (_) { this.list = []; }
+  },
+  add(rec) {
+    if (!rec) return;
+    this.load();
+    this.list.push(rec);
+    if (this.list.length > 200) this.list = this.list.slice(-200);  // cap
+    try {
+      Store.save(this.K, this.list);
+      // Defense in depth — Store.save swallows quota errors. Verify by re-reading.
+      const verify = Store.load(this.K, []) || [];
+      if (verify.length !== this.list.length) {
+        console.warn("ChessHistory.add — persistence verify failed: expected",
+          this.list.length, "got", verify.length);
+      }
+    } catch (e) {
+      console.warn("ChessHistory.add Store.save threw:", e);
+    }
+  },
+  stats() {
+    this.load();
+    if (!this.list.length) return null;
+    const wins   = this.list.filter(r => r.result === "win").length;
+    const losses = this.list.filter(r => r.result === "loss").length;
+    const aband  = this.list.filter(r => r.result === "abandoned").length;
+    const avgScore = Math.round(this.list.reduce((a, r) => a + (r.score || 0), 0) / this.list.length);
+    return { games: this.list.length, wins, losses, aband, avgScore };
   },
 };
 
@@ -6040,9 +6804,14 @@ const UI = {
 
     const view = document.getElementById("lessonView");
     clearNode(view);
+    // Glints need positioned ancestor so absolute children pin to lesson view.
+    view.style.position = "relative";
 
     view.appendChild(el("h2", null, String(lesson.title || "")));
     view.appendChild(el("p", { class: "goal" }, String(lesson.goal || "")));
+
+    // Spawn 3 collectibles per lesson (Combo + Glints lift retention).
+    try { Glints.spawn(view, 3); } catch (_) {}
 
     const stage = el("div", { class: "stage" });
     view.appendChild(stage);
@@ -6062,7 +6831,7 @@ const UI = {
     const playLessonAudio = () => {
       Mascot.set("think");
       Audio_.playLesson(
-        lesson.narration_audio || `assets/audio/lesson_${String(lesson.id).padStart(2, "0")}.wav`,
+        lesson.narration_audio || `assets/audio/lesson_${String(lesson.id).padStart(2, "0")}.ogg`,
         () => Mascot.set("idle")
       );
     };
@@ -6610,6 +7379,8 @@ const Parent = {
     this._fillProgress();
     this._fillActivity();
     this._fillGrade();
+    this._fillChess();
+    this._fillGames();
     this._fillTranscripts();
   },
   _fillProgress() {
@@ -6706,6 +7477,191 @@ const Parent = {
     const h = Math.floor(m / 60);
     return `${h}h ${m % 60}m`;
   },
+  /* Chess history pane — summary stats + per-match list. */
+  _fillChess() {
+    const summ = document.getElementById("parentChessSummary");
+    const hist = document.getElementById("parentChessHistory");
+    if (!summ || !hist) return;
+    clearNode(summ); clearNode(hist);
+    const stats = ChessHistory.stats();
+    if (!stats) {
+      hist.appendChild(el("em", { class: "muted" }, "No chess matches yet."));
+      return;
+    }
+    [
+      { num: stats.games,    label: "Games played" },
+      { num: stats.wins,     label: "Wins" },
+      { num: stats.losses,   label: "Losses" },
+      { num: stats.aband,    label: "Walked away" },
+      { num: stats.avgScore, label: "Avg score" },
+    ].forEach(b => {
+      const block = el("div", { class: "stat-block" });
+      block.appendChild(el("div", { class: "stat-num" }, String(b.num)));
+      block.appendChild(el("div", { class: "stat-label" }, b.label));
+      summ.appendChild(block);
+    });
+    // Per-match rows (most recent first, cap 50)
+    ChessHistory.list.slice().reverse().slice(0, 50).forEach(rec => {
+      const dt = new Date(rec.ts || Date.now());
+      const when = dt.toISOString().slice(0, 16).replace("T", " ");
+      const row = el("div", { class: "parent-chess-row" });
+      row.appendChild(el("div", null, when));
+      row.appendChild(el("div", null,
+        `Moves ${rec.moves} · You took ${rec.kidCaptured} (${rec.kidCapturedValue}) · Bytey ${rec.botCaptured} (${rec.botCapturedValue})`
+      ));
+      const result = String(rec.result || "aband");
+      row.appendChild(el("div", { class: "cresult " + (result === "abandoned" ? "aband" : result) },
+        result === "win" ? "WIN" : result === "loss" ? "LOSS" : "QUIT"));
+      row.appendChild(el("div", null, `${rec.letter} (${rec.score})`));
+      hist.appendChild(row);
+    });
+  },
+  /* Game launcher — list of every gate-handler + Chess + ChessBreak.
+   * Click → close parent overlay → run that game in #gameArea. */
+  _fillGames() {
+    const host = document.getElementById("parentGameLauncher");
+    if (!host) return;
+    clearNode(host);
+
+    // Default-payload demos for every interaction handler.
+    const HANDLER_DEMOS = [
+      { type: "tap-the-glow",     name: "Tap the glow",     desc: "Tap a pulsing star.", payload: { prompt: "Tap the glowing thing!", glyph: "⭐" } },
+      { type: "pick-the-pic",     name: "Pick the picture", desc: "Choose the right emoji.", payload: { prompt: "Tap the right picture!" } },
+      { type: "sprite-poke",      name: "Sprite poke",      desc: "Catch a moving sprite.", payload: { prompt: "Tap the running hero!", glyph: "🦔" } },
+      { type: "timeline-order",   name: "Timeline order",   desc: "Drag steps in order.", payload: { prompt: "Put these in order:", steps: ["Wake up", "Brush teeth", "Eat breakfast"] } },
+      { type: "click-the-thing",  name: "Click the thing",  desc: "Pick the right one.", payload: {
+          prompt: "Click the goofy one!",
+          choices: [{ label: "Mario", right: false }, { label: "FART", right: true },
+                    { label: "Sonic", right: false }, { label: "Pikachu", right: false }] } },
+      { type: "drag-to-match",    name: "Drag to match",    desc: "Match pairs by drag.", payload: {
+          prompt: "Drag each one to its match!",
+          pairs: [{ left: "Mario", right: "🍄" }, { left: "Sonic", right: "💨" }, { left: "Pokemon", right: "⚡" }] } },
+      { type: "type-this-word",   name: "Type this word",   desc: "Practice typing a word.", payload: {
+          prompt: "Type FORTNITE and press Send!", target_display: "FORTNITE", targets: ["fortnite"], hint_wrong: "Type the word FORTNITE." } },
+      { type: "place-blocks",     name: "Place blocks",     desc: "Drag blocks into slots.", payload: {} },
+      { type: "sequence-the-steps", name: "Sequence steps", desc: "Order steps to win.", payload: {} },
+      { type: "guided-talk",      name: "Guided talk",      desc: "Chat with Bytey.", payload: {} },
+      { type: "history-scene",    name: "History scene",    desc: "Watch a tiny animation.", payload: {} },
+      { type: "sprite-mover",     name: "Sprite mover",     desc: "Move a hero with arrows.", payload: {} },
+      { type: "level-painter",    name: "Level painter",    desc: "Paint a tiny level.", payload: {} },
+      { type: "idea-spark",       name: "Idea spark",       desc: "Brainstorm game ideas.", payload: {} },
+      { type: "world-layers",     name: "World layers",     desc: "Stack game-world layers.", payload: {} },
+      { type: "input-trace",      name: "Input trace",      desc: "Trace input → action.", payload: {} },
+      { type: "costume-swapper",  name: "Costume swapper",  desc: "Swap sprite costumes.", payload: {} },
+      { type: "live-hud",         name: "Live HUD",         desc: "See score + lives update.", payload: {} },
+      { type: "polish-row",       name: "Polish row",       desc: "Try polish toggles.", payload: {} },
+      { type: "cursor-mini",      name: "Cursor mini",      desc: "Type a feature → see diff.", payload: {} },
+      { type: "playtest-preview", name: "Playtest preview", desc: "Friend-reaction bubbles.", payload: {} },
+      { type: "share-card",       name: "Share card",       desc: "Make a share card.", payload: {} },
+      { type: "prompt-grader",    name: "Prompt grader",    desc: "Grade a prompt.", payload: {} },
+      { type: "game-capstone",    name: "Game capstone",    desc: "4-stage game builder.", payload: {} },
+    ];
+
+    // Helper: run a demo. Closes parent overlay, mounts the game in #gameArea,
+    // returns to a friendly "back to launcher" button when done.
+    const runDemo = (type, payload) => {
+      this.close();
+      const area = document.getElementById("gameArea");
+      if (!area) return;
+      clearNode(area);
+      const back = el("button", { class: "btn-big alt", style: { margin: "0 0 10px" } },
+        "← Back to Parent Corner");
+      back.addEventListener("click", () => this.open());
+      area.appendChild(back);
+      const sub = el("div");
+      area.appendChild(sub);
+      try {
+        if (KidGame._handlers[type]) {
+          KidGame._handlers[type].call(KidGame, sub, payload || {}, () => {
+            // Cleanup so any in-flight hover speech / leftover audio stops the
+            // moment the demo finishes — prevents stale audio bleeding into the
+            // next thing the parent triggers.
+            try { cancelHoverAudio(); } catch (_) {}
+            try { _silenceVoiceChannels(); } catch (_) {}
+            clearNode(sub);
+            sub.appendChild(el("p", { class: "muted" }, "✓ Demo finished."));
+            sub.appendChild(el("button", {
+              class: "btn-big alt",
+              onclick: () => this.open(),
+            }, "Back to Parent Corner"));
+          });
+        } else {
+          sub.appendChild(el("p", { class: "muted" }, `Unknown handler: ${type}`));
+        }
+      } catch (e) {
+        sub.appendChild(el("p", { class: "muted" }, `Demo error: ${String(e)}`));
+      }
+    };
+
+    host.appendChild(el("div", { class: "gl-section-h" }, "Mini-games"));
+    const grid = el("div", { class: "gl-grid" });
+    HANDLER_DEMOS.forEach(d => {
+      const tile = el("button", { class: "gl-tile", title: d.type });
+      tile.appendChild(el("div", { class: "gl-tile-name" }, d.name));
+      tile.appendChild(el("div", { class: "gl-tile-desc" }, d.desc));
+      tile.addEventListener("click", () => runDemo(d.type, d.payload));
+      grid.appendChild(tile);
+    });
+    host.appendChild(grid);
+
+    host.appendChild(el("div", { class: "gl-section-h" }, "Special games"));
+    const specials = el("div", { class: "gl-grid" });
+    const chessTile = el("button", { class: "gl-tile" });
+    chessTile.appendChild(el("div", { class: "gl-tile-name" }, "🐎 Chess Break"));
+    chessTile.appendChild(el("div", { class: "gl-tile-desc" }, "Full chess match against Bytey."));
+    chessTile.addEventListener("click", () => {
+      this.close();
+      try { Chess.open(() => this.open()); } catch (e) { console.warn("chess open", e); }
+    });
+    specials.appendChild(chessTile);
+    host.appendChild(specials);
+
+    // Per-lesson option-set summoner — pick a lesson, see its options.
+    host.appendChild(el("div", { class: "gl-section-h" }, "Lesson option sets"));
+    const lessonRow = el("div", { class: "row", style: { gap: "8px", flexWrap: "wrap" } });
+    const sel = el("select", { style: { padding: "8px", borderRadius: "8px", border: "2px solid var(--accent-2)", fontSize: "15px" } });
+    LessonStore.index.forEach(id => {
+      const lesson = LessonStore.byId[id];
+      if (!lesson) return;
+      const num = String(lesson.id).padStart(2, "0");
+      const opt = el("option", { value: String(id) }, `L${num}: ${lesson.title || "(no title)"}`);
+      sel.appendChild(opt);
+    });
+    lessonRow.appendChild(sel);
+    const goBtn = el("button", { class: "btn-big" }, "Show options →");
+    lessonRow.appendChild(goBtn);
+    host.appendChild(lessonRow);
+    const optsHost = el("div", { style: { marginTop: "10px" } });
+    host.appendChild(optsHost);
+    goBtn.addEventListener("click", () => {
+      clearNode(optsHost);
+      const lesson = LessonStore.byId[sel.value];
+      if (!lesson) return;
+      const qs = lesson.questions || [];
+      qs.forEach((q, qi) => {
+        const block = el("div", { style: { marginBottom: "10px", padding: "8px", background: "var(--panel-2)", borderRadius: "8px" } });
+        block.appendChild(el("strong", null, `Q${qi + 1} (${(q.interaction || {}).type || "?"})`));
+        (q.variations || []).forEach((v, vi) => {
+          const row = el("div", { style: { padding: "4px 0", fontSize: "13px" } });
+          row.appendChild(el("strong", null, `v${vi + 1}: `));
+          row.appendChild(el("span", null, String(v.prompt || "").slice(0, 80)));
+          (v.options || []).forEach(opt => {
+            row.appendChild(el("br"));
+            row.appendChild(el("span", { style: { color: opt.correct ? "var(--accent-4)" : "var(--ink)" } },
+              "  " + (opt.correct ? "✓ " : "  ") + String(opt.text || "")));
+            // Click any option to play its baked audio (so parent can preview)
+            if (opt._audio) {
+              const playBtn = el("button", { class: "ghost", style: { fontSize: "12px", marginLeft: "6px" } }, "🔊");
+              playBtn.addEventListener("click", () => startHoverAudio(playBtn, String(opt.text || ""), String(opt._audio)));
+              row.appendChild(playBtn);
+            }
+          });
+          block.appendChild(row);
+        });
+        optsHost.appendChild(block);
+      });
+    });
+  },
   changePin() {
     const v = (document.getElementById("pinNew").value || "").trim();
     if (!/^\d{4}$/.test(v)) { alert("PIN must be 4 digits."); return; }
@@ -6759,7 +7715,7 @@ async function main() {
     const lesson = LessonStore.byId[UI.current];
     Mascot.set("think");
     Audio_.playLesson(
-      lesson.narration_audio || `assets/audio/lesson_${String(lesson.id).padStart(2, "0")}.wav`,
+      lesson.narration_audio || `assets/audio/lesson_${String(lesson.id).padStart(2, "0")}.ogg`,
       () => Mascot.set("idle")
     );
   });

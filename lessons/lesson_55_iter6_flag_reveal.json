@@ -65,24 +65,24 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Flag fires too early. Pick the fix:",
+          "prompt": "🏁 Tap the FLAG — that's how you WIN!",
           "choices": [
             {
-              "label": "Use real hitbox-on-hitbox collision",
+              "glyph": "🏁",
               "right": true
             },
             {
-              "label": "Make the flag bigger",
+              "glyph": "🍕",
               "right": false
             },
             {
-              "label": "Make the flag invisible",
+              "glyph": "🪣",
               "right": false
             },
             {
-              "label": "Remove the flag",
+              "glyph": "🪥",
               "right": false
             }
           ]
@@ -90,238 +90,291 @@
       },
       "variations": [
         {
-          "prompt": "What is iter 6: flag and reveal?",
+          "prompt": "🧠 Power up your brain! Which one is right about Iteration 6: Flag & Finish?",
           "options": [
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             },
             {
               "text": "Reveals are illegal in three states.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9a5d2b8746.ogg"
             },
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             },
             {
               "text": "A flag at the end says you win.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_55_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
               "text": "Win screens are sad and damp.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b0a80c94f8.ogg"
             },
             {
               "text": "Touching the flag triggers a reveal.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b58a44cd59.ogg"
             },
             {
               "text": "Flags must be folded into a swan.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/057d52970c.ogg"
             },
             {
               "text": "Flags walk away if the hero is too slow.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/738c1390cc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_55_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
               "text": "A flag at the end says you win.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             },
             {
               "text": "Try to make the win moment fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a7559c20d.ogg"
             },
             {
               "text": "Win screens are sad and damp.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b0a80c94f8.ogg"
             },
             {
               "text": "Reveal animations are worth the polish time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e724cb27b2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_55_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 6: flag and reveal. What should he say?",
           "options": [
             {
               "text": "Flags walk away if the hero is too slow.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/738c1390cc.ogg"
             },
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             },
             {
               "text": "Try to make the win moment fun.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8a7559c20d.ogg"
             },
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_55_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             },
             {
               "text": "Win screens are sad and damp.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b0a80c94f8.ogg"
             },
             {
               "text": "Sharing the win is a sweet ending.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/aa22043279.ogg"
             },
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_55_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about iter 6: flag and reveal, ___",
           "options": [
             {
               "text": "Reveals must rhyme with 'broccoli'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/52bbd09806.ogg"
             },
             {
               "text": "A surprise at the end leaves players smiling.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4c4463fcd7.ogg"
             },
             {
               "text": "Flags must be made of real cloth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/361d3ae620.ogg"
             },
             {
               "text": "Win moments must be boring to be official.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5dfc28c2f3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_55_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Try to make the win moment fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a7559c20d.ogg"
             },
             {
               "text": "Sharing the win is a sweet ending.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aa22043279.ogg"
             },
             {
               "text": "Flags must be folded into a swan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/057d52970c.ogg"
             },
             {
               "text": "A surprise at the end leaves players smiling.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c4463fcd7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_55_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with iter 6: flag and reveal?",
           "options": [
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             },
             {
               "text": "Each win demands a tiny tax of cheese.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/290c78a011.ogg"
             },
             {
               "text": "Reveal animations are worth the polish time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e724cb27b2.ogg"
             },
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_55_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about iter 6: flag and reveal is silly. Pick the silly one!",
           "options": [
             {
               "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db7f322927.ogg"
             },
             {
               "text": "Try to make the win moment fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a7559c20d.ogg"
             },
             {
               "text": "A surprise at the end leaves players smiling.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c4463fcd7.ogg"
             },
             {
               "text": "Flags must be made of real cloth.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/361d3ae620.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_55_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about iter 6: flag and reveal. Which fact would help him?",
           "options": [
             {
               "text": "The flag is the goal at the end of the level.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/69ef88163b.ogg"
             },
             {
               "text": "Each win demands a tiny tax of cheese.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/290c78a011.ogg"
             },
             {
               "text": "Flags must be folded into a swan.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/057d52970c.ogg"
             },
             {
               "text": "Win screens are sad and damp.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b0a80c94f8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_55_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🤖",
+              "right": true
+            },
+            {
+              "glyph": "🐌",
+              "right": false
+            },
+            {
+              "glyph": "🥒",
+              "right": false
+            },
+            {
+              "glyph": "🪨",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -330,234 +383,270 @@
           "options": [
             {
               "text": "Make the player wait 5 minutes silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b107076b0e.ogg"
             },
             {
               "text": "Replace it with the loading screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f6323b2277.ogg"
             },
             {
               "text": "Show only the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/38a1b33d18.ogg"
             },
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89ee7d9720.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_55_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
           "options": [
             {
               "text": "Make the player wait 5 minutes silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b107076b0e.ogg"
             },
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89ee7d9720.ogg"
             },
             {
               "text": "Replace it with the loading screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f6323b2277.ogg"
             },
             {
               "text": "Show only the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/38a1b33d18.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_55_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
           "options": [
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89ee7d9720.ogg"
             },
             {
               "text": "Show only the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/38a1b33d18.ogg"
             },
             {
               "text": "Replace it with the loading screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f6323b2277.ogg"
             },
             {
               "text": "Make the player wait 5 minutes silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b107076b0e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_55_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
           "options": [
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89ee7d9720.ogg"
             },
             {
               "text": "Make the player wait 5 minutes silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b107076b0e.ogg"
             },
             {
               "text": "Replace it with the loading screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f6323b2277.ogg"
             },
             {
               "text": "Show only the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/38a1b33d18.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_55_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
           "options": [
             {
               "text": "Show only the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/38a1b33d18.ogg"
             },
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89ee7d9720.ogg"
             },
             {
               "text": "Replace it with the loading screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f6323b2277.ogg"
             },
             {
               "text": "Make the player wait 5 minutes silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b107076b0e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_55_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
           "options": [
             {
               "text": "Replace it with the loading screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f6323b2277.ogg"
             },
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89ee7d9720.ogg"
             },
             {
               "text": "Show only the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/38a1b33d18.ogg"
             },
             {
               "text": "Make the player wait 5 minutes silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b107076b0e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_55_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
           "options": [
             {
               "text": "Replace it with the loading screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f6323b2277.ogg"
             },
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89ee7d9720.ogg"
             },
             {
               "text": "Make the player wait 5 minutes silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b107076b0e.ogg"
             },
             {
               "text": "Show only the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/38a1b33d18.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_55_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
           "options": [
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89ee7d9720.ogg"
             },
             {
               "text": "Make the player wait 5 minutes silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b107076b0e.ogg"
             },
             {
               "text": "Show only the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/38a1b33d18.ogg"
             },
             {
               "text": "Replace it with the loading screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f6323b2277.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_55_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
           "options": [
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89ee7d9720.ogg"
             },
             {
               "text": "Make the player wait 5 minutes silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b107076b0e.ogg"
             },
             {
               "text": "Replace it with the loading screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f6323b2277.ogg"
             },
             {
               "text": "Show only the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/38a1b33d18.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_55_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
           "options": [
             {
               "text": "Make the player wait 5 minutes silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b107076b0e.ogg"
             },
             {
               "text": "Replace it with the loading screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f6323b2277.ogg"
             },
             {
               "text": "Show only the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/38a1b33d18.ogg"
             },
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/89ee7d9720.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_55_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🤖"
         }
       },
       "variations": [
@@ -566,234 +655,274 @@
           "options": [
             {
               "text": "Reveals scare bugs away.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f87566fe43.ogg"
             },
             {
               "text": "Reveals only happen on Mondays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccecbab22.ogg"
             },
             {
               "text": "Reveals earn extra wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/569b43ede9.ogg"
             },
             {
               "text": "Players remember the ending — make it a small treat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5df537b75f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_55_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Why do reveals matter?",
           "options": [
             {
               "text": "Reveals earn extra wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/569b43ede9.ogg"
             },
             {
               "text": "Players remember the ending — make it a small treat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5df537b75f.ogg"
             },
             {
               "text": "Reveals scare bugs away.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f87566fe43.ogg"
             },
             {
               "text": "Reveals only happen on Mondays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccecbab22.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_55_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why do reveals matter?",
           "options": [
             {
               "text": "Reveals scare bugs away.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f87566fe43.ogg"
             },
             {
               "text": "Players remember the ending — make it a small treat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5df537b75f.ogg"
             },
             {
               "text": "Reveals earn extra wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/569b43ede9.ogg"
             },
             {
               "text": "Reveals only happen on Mondays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccecbab22.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_55_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why do reveals matter?",
           "options": [
             {
               "text": "Players remember the ending — make it a small treat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5df537b75f.ogg"
             },
             {
               "text": "Reveals scare bugs away.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f87566fe43.ogg"
             },
             {
               "text": "Reveals earn extra wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/569b43ede9.ogg"
             },
             {
               "text": "Reveals only happen on Mondays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccecbab22.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_55_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Why do reveals matter?",
           "options": [
             {
               "text": "Reveals only happen on Mondays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccecbab22.ogg"
             },
             {
               "text": "Reveals earn extra wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/569b43ede9.ogg"
             },
             {
               "text": "Players remember the ending — make it a small treat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5df537b75f.ogg"
             },
             {
               "text": "Reveals scare bugs away.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f87566fe43.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_55_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why do reveals matter?",
           "options": [
             {
               "text": "Players remember the ending — make it a small treat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5df537b75f.ogg"
             },
             {
               "text": "Reveals earn extra wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/569b43ede9.ogg"
             },
             {
               "text": "Reveals scare bugs away.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f87566fe43.ogg"
             },
             {
               "text": "Reveals only happen on Mondays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccecbab22.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_55_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why do reveals matter?",
           "options": [
             {
               "text": "Reveals earn extra wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/569b43ede9.ogg"
             },
             {
               "text": "Reveals only happen on Mondays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccecbab22.ogg"
             },
             {
               "text": "Players remember the ending — make it a small treat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5df537b75f.ogg"
             },
             {
               "text": "Reveals scare bugs away.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f87566fe43.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_55_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Why do reveals matter?",
           "options": [
             {
               "text": "Reveals scare bugs away.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f87566fe43.ogg"
             },
             {
               "text": "Reveals only happen on Mondays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccecbab22.ogg"
             },
             {
               "text": "Reveals earn extra wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/569b43ede9.ogg"
             },
             {
               "text": "Players remember the ending — make it a small treat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5df537b75f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_55_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Why do reveals matter?",
           "options": [
             {
               "text": "Reveals scare bugs away.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f87566fe43.ogg"
             },
             {
               "text": "Reveals only happen on Mondays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccecbab22.ogg"
             },
             {
               "text": "Players remember the ending — make it a small treat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5df537b75f.ogg"
             },
             {
               "text": "Reveals earn extra wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/569b43ede9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_55_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why do reveals matter?",
           "options": [
             {
               "text": "Reveals only happen on Mondays.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccecbab22.ogg"
             },
             {
               "text": "Players remember the ending — make it a small treat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5df537b75f.ogg"
             },
             {
               "text": "Reveals scare bugs away.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f87566fe43.ogg"
             },
             {
               "text": "Reveals earn extra wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/569b43ede9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_55_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Put the steps in order:",
+          "steps": [
+            "First",
+            "Next",
+            "Last"
+          ]
         }
       },
       "variations": [
@@ -802,234 +931,283 @@
           "options": [
             {
               "text": "A flag at the end says you win.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             },
             {
               "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd55b8ef0d.ogg"
             },
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             },
             {
               "text": "A win screen feels great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/898ecd785a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_55_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
               "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db7f322927.ogg"
             },
             {
               "text": "Flags walk away if the hero is too slow.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/738c1390cc.ogg"
             },
             {
               "text": "A flag at the end says you win.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             },
             {
               "text": "The reveal makes the win feel REAL and earned.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0dac81960.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_55_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
               "text": "A win screen feels great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/898ecd785a.ogg"
             },
             {
               "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd55b8ef0d.ogg"
             },
             {
               "text": "Reveals are tiny and easy to miss on purpose.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6aa4e11d28.ogg"
             },
             {
               "text": "A flag at the end says you win.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_55_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
               "text": "End screens should feel like a small celebration.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/501d9aa304.ogg"
             },
             {
               "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db7f322927.ogg"
             },
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             },
             {
               "text": "Sharing the win is a sweet ending.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aa22043279.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_55_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
               "text": "Reveal animations are worth the polish time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e724cb27b2.ogg"
             },
             {
               "text": "Try to make the win moment fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a7559c20d.ogg"
             },
             {
               "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd55b8ef0d.ogg"
             },
             {
               "text": "Reveals are illegal in three states.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9a5d2b8746.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_55_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
               "text": "The reveal makes the win feel REAL and earned.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0dac81960.ogg"
             },
             {
               "text": "Win screens are sad and damp.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b0a80c94f8.ogg"
             },
             {
               "text": "The flag is the goal at the end of the level.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/69ef88163b.ogg"
             },
             {
               "text": "End screens should feel like a small celebration.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/501d9aa304.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_55_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
               "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db7f322927.ogg"
             },
             {
               "text": "Try to make the win moment fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a7559c20d.ogg"
             },
             {
               "text": "Win moments must be boring to be official.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dfc28c2f3.ogg"
             },
             {
               "text": "A win screen feels great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/898ecd785a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_55_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
               "text": "A flag at the end says you win.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             },
             {
               "text": "Reveal animations are worth the polish time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e724cb27b2.ogg"
             },
             {
               "text": "The reveal makes the win feel REAL and earned.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0dac81960.ogg"
             },
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_55_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
               "text": "Each win demands a tiny tax of cheese.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/290c78a011.ogg"
             },
             {
               "text": "A win screen feels great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/898ecd785a.ogg"
             },
             {
               "text": "A surprise at the end leaves players smiling.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c4463fcd7.ogg"
             },
             {
               "text": "Touching the flag triggers a reveal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b58a44cd59.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_55_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 6: flag and reveal.",
           "options": [
             {
               "text": "The flag is the goal at the end of the level.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/69ef88163b.ogg"
             },
             {
               "text": "Flags must be folded into a swan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/057d52970c.ogg"
             },
             {
               "text": "Sharing the win is a sweet ending.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aa22043279.ogg"
             },
             {
               "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd55b8ef0d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_55_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Save",
+              "right": "💾"
+            },
+            {
+              "left": "Share",
+              "right": "📤"
+            },
+            {
+              "left": "Build",
+              "right": "🔨"
+            }
+          ]
         }
       },
       "variations": [
@@ -1038,220 +1216,260 @@
           "options": [
             {
               "text": "Win screens are sad and damp.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b0a80c94f8.ogg"
             },
             {
               "text": "Flags walk away if the hero is too slow.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/738c1390cc.ogg"
             },
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             },
             {
               "text": "A flag at the end says you win.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_55_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             },
             {
               "text": "Reveals must rhyme with 'broccoli'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/52bbd09806.ogg"
             },
             {
               "text": "Touching the flag triggers a reveal.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b58a44cd59.ogg"
             },
             {
               "text": "Flags must be made of real cloth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/361d3ae620.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_55_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
               "text": "A win screen feels great.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/898ecd785a.ogg"
             },
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             },
             {
               "text": "Reveals must rhyme with 'broccoli'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/52bbd09806.ogg"
             },
             {
               "text": "Reveals are illegal in three states.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9a5d2b8746.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_55_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             },
             {
               "text": "Try to make the win moment fun.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8a7559c20d.ogg"
             },
             {
               "text": "Flags must be made of real cloth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/361d3ae620.ogg"
             },
             {
               "text": "Reveals must rhyme with 'broccoli'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/52bbd09806.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_55_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
               "text": "Sharing the win is a sweet ending.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/aa22043279.ogg"
             },
             {
               "text": "Flags must be folded into a swan.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/057d52970c.ogg"
             },
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             },
             {
               "text": "Reveals are tiny and easy to miss on purpose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa4e11d28.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_55_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
               "text": "A surprise at the end leaves players smiling.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4c4463fcd7.ogg"
             },
             {
               "text": "Flags must be folded into a swan.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/057d52970c.ogg"
             },
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             },
             {
               "text": "Reveals are illegal in three states.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9a5d2b8746.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_55_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
               "text": "Win moments must be boring to be official.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5dfc28c2f3.ogg"
             },
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             },
             {
               "text": "End screens should feel like a small celebration.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/501d9aa304.ogg"
             },
             {
               "text": "Win screens are sad and damp.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b0a80c94f8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_55_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             },
             {
               "text": "Flags must be folded into a swan.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/057d52970c.ogg"
             },
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             },
             {
               "text": "Reveal animations are worth the polish time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e724cb27b2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_55_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
               "text": "Reveals are tiny and easy to miss on purpose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa4e11d28.ogg"
             },
             {
               "text": "Win moments must be boring to be official.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5dfc28c2f3.ogg"
             },
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             },
             {
               "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/db7f322927.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_55_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about iter 6: flag and reveal?",
           "options": [
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             },
             {
               "text": "Flags walk away if the hero is too slow.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/738c1390cc.ogg"
             },
             {
               "text": "Reveals are illegal in three states.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9a5d2b8746.ogg"
             },
             {
               "text": "The flag is the goal at the end of the level.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/69ef88163b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_55_q5_v9.ogg"
         }
       ]
     },
@@ -1260,12 +1478,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
+          "prompt": "Type DEBUG and press Send to keep going!",
+          "target_display": "DEBUG",
           "targets": [
-            "win"
+            "debug"
           ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "hint_wrong": "Type the word DEBUG (any case is fine)."
         }
       },
       "variations": [
@@ -1274,234 +1492,270 @@
           "options": [
             {
               "text": "The flag asks for a tip.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/31ac60b71a.ogg"
             },
             {
               "text": "Nothing -- that would be greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd57ce038d.ogg"
             },
             {
               "text": "A celebration -- confetti, win message, music!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f2ac1a6ba.ogg"
             },
             {
               "text": "The screen turns black silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ca14f65800.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_55_q6_v0.ogg"
         },
         {
           "prompt": "Quick! Hero touches the flag. What should happen?",
           "options": [
             {
               "text": "The screen turns black silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ca14f65800.ogg"
             },
             {
               "text": "The flag asks for a tip.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/31ac60b71a.ogg"
             },
             {
               "text": "Nothing -- that would be greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd57ce038d.ogg"
             },
             {
               "text": "A celebration -- confetti, win message, music!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f2ac1a6ba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_55_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — Hero touches the flag. What should happen?",
           "options": [
             {
               "text": "The flag asks for a tip.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/31ac60b71a.ogg"
             },
             {
               "text": "Nothing -- that would be greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd57ce038d.ogg"
             },
             {
               "text": "The screen turns black silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ca14f65800.ogg"
             },
             {
               "text": "A celebration -- confetti, win message, music!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f2ac1a6ba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_55_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Hero touches the flag. What should happen?",
           "options": [
             {
               "text": "Nothing -- that would be greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd57ce038d.ogg"
             },
             {
               "text": "A celebration -- confetti, win message, music!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f2ac1a6ba.ogg"
             },
             {
               "text": "The screen turns black silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ca14f65800.ogg"
             },
             {
               "text": "The flag asks for a tip.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/31ac60b71a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_55_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — Hero touches the flag. What should happen?",
           "options": [
             {
               "text": "The screen turns black silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ca14f65800.ogg"
             },
             {
               "text": "Nothing -- that would be greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd57ce038d.ogg"
             },
             {
               "text": "The flag asks for a tip.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/31ac60b71a.ogg"
             },
             {
               "text": "A celebration -- confetti, win message, music!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f2ac1a6ba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_55_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Hero touches the flag. What should happen?",
           "options": [
             {
               "text": "The screen turns black silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ca14f65800.ogg"
             },
             {
               "text": "Nothing -- that would be greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd57ce038d.ogg"
             },
             {
               "text": "A celebration -- confetti, win message, music!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f2ac1a6ba.ogg"
             },
             {
               "text": "The flag asks for a tip.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/31ac60b71a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_55_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Hero touches the flag. What should happen?",
           "options": [
             {
               "text": "The flag asks for a tip.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/31ac60b71a.ogg"
             },
             {
               "text": "The screen turns black silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ca14f65800.ogg"
             },
             {
               "text": "Nothing -- that would be greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd57ce038d.ogg"
             },
             {
               "text": "A celebration -- confetti, win message, music!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f2ac1a6ba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_55_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — Hero touches the flag. What should happen?",
           "options": [
             {
               "text": "The flag asks for a tip.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/31ac60b71a.ogg"
             },
             {
               "text": "Nothing -- that would be greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd57ce038d.ogg"
             },
             {
               "text": "The screen turns black silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ca14f65800.ogg"
             },
             {
               "text": "A celebration -- confetti, win message, music!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f2ac1a6ba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_55_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: Hero touches the flag. What should happen?",
           "options": [
             {
               "text": "The flag asks for a tip.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/31ac60b71a.ogg"
             },
             {
               "text": "Nothing -- that would be greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd57ce038d.ogg"
             },
             {
               "text": "A celebration -- confetti, win message, music!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f2ac1a6ba.ogg"
             },
             {
               "text": "The screen turns black silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ca14f65800.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_55_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Hero touches the flag. What should happen?",
           "options": [
             {
               "text": "The screen turns black silently.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ca14f65800.ogg"
             },
             {
               "text": "The flag asks for a tip.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/31ac60b71a.ogg"
             },
             {
               "text": "A celebration -- confetti, win message, music!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7f2ac1a6ba.ogg"
             },
             {
               "text": "Nothing -- that would be greedy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dd57ce038d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_55_q6_v9.ogg"
         }
       ]
     },
     {
       "id": "q7",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type PLAY and press Send to keep going!",
-          "target_display": "PLAY",
-          "targets": [
-            "play"
-          ],
-          "hint_wrong": "Type the word PLAY (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "🌈"
         }
       },
       "variations": [
@@ -1510,234 +1764,287 @@
           "options": [
             {
               "text": "Flags must be folded into a swan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/057d52970c.ogg"
             },
             {
               "text": "Touching the flag triggers a reveal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b58a44cd59.ogg"
             },
             {
               "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db7f322927.ogg"
             },
             {
               "text": "The reveal makes the win feel REAL and earned.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0dac81960.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q7_v0.wav"
+          "_audio": "assets/audio/q/lesson_55_q7_v0.ogg"
         },
         {
           "prompt": "Listen up — Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A flag at the end says you win.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             },
             {
               "text": "Try to make the win moment fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a7559c20d.ogg"
             },
             {
               "text": "A win screen feels great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/898ecd785a.ogg"
             },
             {
               "text": "Reveals must rhyme with 'broccoli'.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52bbd09806.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q7_v1.wav"
+          "_audio": "assets/audio/q/lesson_55_q7_v1.ogg"
         },
         {
           "prompt": "Think about this: Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "End screens should feel like a small celebration.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/501d9aa304.ogg"
             },
             {
               "text": "The reveal makes the win feel REAL and earned.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0dac81960.ogg"
             },
             {
               "text": "The flag is the goal at the end of the level.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/69ef88163b.ogg"
             },
             {
               "text": "Flags must be made of real cloth.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/361d3ae620.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q7_v2.wav"
+          "_audio": "assets/audio/q/lesson_55_q7_v2.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Touching the flag triggers a reveal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b58a44cd59.ogg"
             },
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             },
             {
               "text": "End screens should feel like a small celebration.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/501d9aa304.ogg"
             },
             {
               "text": "Sharing the win is a sweet ending.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/aa22043279.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q7_v3.wav"
+          "_audio": "assets/audio/q/lesson_55_q7_v3.ogg"
         },
         {
           "prompt": "Brain time: Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd55b8ef0d.ogg"
             },
             {
               "text": "Flags walk away if the hero is too slow.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/738c1390cc.ogg"
             },
             {
               "text": "A flag at the end says you win.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             },
             {
               "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db7f322927.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q7_v4.wav"
+          "_audio": "assets/audio/q/lesson_55_q7_v4.ogg"
         },
         {
           "prompt": "Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A surprise at the end leaves players smiling.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c4463fcd7.ogg"
             },
             {
               "text": "Reveals are tiny and easy to miss on purpose.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6aa4e11d28.ogg"
             },
             {
               "text": "Iteration 6 adds a FLAG and a REVEAL -- the win moment.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db7f322927.ogg"
             },
             {
               "text": "Reveal animations are worth the polish time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e724cb27b2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q7_v5.wav"
+          "_audio": "assets/audio/q/lesson_55_q7_v5.ogg"
         },
         {
           "prompt": "Quick! Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A win screen feels great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/898ecd785a.ogg"
             },
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             },
             {
               "text": "End screens should feel like a small celebration.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/501d9aa304.ogg"
             },
             {
               "text": "Touching the flag triggers a reveal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b58a44cd59.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q7_v6.wav"
+          "_audio": "assets/audio/q/lesson_55_q7_v6.ogg"
         },
         {
           "prompt": "Hey friend — Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "End screens should feel like a small celebration.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/501d9aa304.ogg"
             },
             {
               "text": "Touching the flag triggers a reveal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b58a44cd59.ogg"
             },
             {
               "text": "Reveals are illegal in three states.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9a5d2b8746.ogg"
             },
             {
               "text": "Try to make the win moment fun.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a7559c20d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q7_v7.wav"
+          "_audio": "assets/audio/q/lesson_55_q7_v7.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Win screens are sad and damp.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b0a80c94f8.ogg"
             },
             {
               "text": "A flag at the end says you win.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             },
             {
               "text": "The reveal makes the win feel REAL and earned.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0dac81960.ogg"
             },
             {
               "text": "End screens should feel like a small celebration.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/501d9aa304.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q7_v8.wav"
+          "_audio": "assets/audio/q/lesson_55_q7_v8.ogg"
         },
         {
           "prompt": "Tell me — Bytey claims something about iter 6: flag and reveal. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A win screen feels great.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/898ecd785a.ogg"
             },
             {
               "text": "A surprise at the end leaves players smiling.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c4463fcd7.ogg"
             },
             {
               "text": "Win moments must be boring to be official.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dfc28c2f3.ogg"
             },
             {
               "text": "End screens should feel like a small celebration.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/501d9aa304.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q7_v9.wav"
+          "_audio": "assets/audio/q/lesson_55_q7_v9.ogg"
         }
       ]
     },
     {
       "id": "q8",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type CODE and press Send to keep going!",
-          "target_display": "CODE",
-          "targets": [
-            "code"
-          ],
-          "hint_wrong": "Type the word CODE (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🚀",
+              "right": true
+            },
+            {
+              "glyph": "🥬",
+              "right": false
+            },
+            {
+              "glyph": "🧅",
+              "right": false
+            },
+            {
+              "glyph": "🪣",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -1746,220 +2053,260 @@
           "options": [
             {
               "text": "Flags must be folded into a swan.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/057d52970c.ogg"
             },
             {
               "text": "Reveals are illegal in three states.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9a5d2b8746.ogg"
             },
             {
               "text": "The flag is the goal at the end of the level.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/69ef88163b.ogg"
             },
             {
               "text": "Each win demands a tiny tax of cheese.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/290c78a011.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q8_v0.wav"
+          "_audio": "assets/audio/q/lesson_55_q8_v0.ogg"
         },
         {
           "prompt": "Think about this: Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             },
             {
               "text": "Flags must be made of real cloth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/361d3ae620.ogg"
             },
             {
               "text": "Reaching the flag triggers a fun reveal -- confetti, music, a message.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/bd55b8ef0d.ogg"
             },
             {
               "text": "Win screens are sad and damp.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b0a80c94f8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q8_v1.wav"
+          "_audio": "assets/audio/q/lesson_55_q8_v1.ogg"
         },
         {
           "prompt": "Got a quick one: Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             },
             {
               "text": "Win moments must be boring to be official.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5dfc28c2f3.ogg"
             },
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             },
             {
               "text": "The reveal makes the win feel REAL and earned.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d0dac81960.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q8_v2.wav"
+          "_audio": "assets/audio/q/lesson_55_q8_v2.ogg"
         },
         {
           "prompt": "Brain time: Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             },
             {
               "text": "A flag at the end says you win.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6a18d04729.ogg"
             },
             {
               "text": "Flags walk away if the hero is too slow.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/738c1390cc.ogg"
             },
             {
               "text": "Win moments must be boring to be official.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5dfc28c2f3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q8_v3.wav"
+          "_audio": "assets/audio/q/lesson_55_q8_v3.ogg"
         },
         {
           "prompt": "Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
               "text": "Touching the flag triggers a reveal.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b58a44cd59.ogg"
             },
             {
               "text": "Sharing the win ruins it for everybody.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8e44bd0c.ogg"
             },
             {
               "text": "Win moments must be boring to be official.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5dfc28c2f3.ogg"
             },
             {
               "text": "Win screens are sad and damp.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b0a80c94f8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q8_v4.wav"
+          "_audio": "assets/audio/q/lesson_55_q8_v4.ogg"
         },
         {
           "prompt": "Quick! Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
               "text": "A win screen feels great.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/898ecd785a.ogg"
             },
             {
               "text": "Reveals are tiny and easy to miss on purpose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa4e11d28.ogg"
             },
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             },
             {
               "text": "Each win demands a tiny tax of cheese.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/290c78a011.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q8_v5.wav"
+          "_audio": "assets/audio/q/lesson_55_q8_v5.ogg"
         },
         {
           "prompt": "Hey friend — Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
               "text": "Reveals are tiny and easy to miss on purpose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa4e11d28.ogg"
             },
             {
               "text": "Flags walk away if the hero is too slow.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/738c1390cc.ogg"
             },
             {
               "text": "Try to make the win moment fun.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8a7559c20d.ogg"
             },
             {
               "text": "Flags must be folded into a swan.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/057d52970c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q8_v6.wav"
+          "_audio": "assets/audio/q/lesson_55_q8_v6.ogg"
         },
         {
           "prompt": "Bytey wonders: Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
               "text": "Sharing the win is a sweet ending.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/aa22043279.ogg"
             },
             {
               "text": "Reveals are tiny and easy to miss on purpose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa4e11d28.ogg"
             },
             {
               "text": "Flags must be made of real cloth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/361d3ae620.ogg"
             },
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q8_v7.wav"
+          "_audio": "assets/audio/q/lesson_55_q8_v7.ogg"
         },
         {
           "prompt": "Tell me — Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
               "text": "A surprise at the end leaves players smiling.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4c4463fcd7.ogg"
             },
             {
               "text": "Flags lose the game and burn the screen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/83cfbc1759.ogg"
             },
             {
               "text": "Reveals only happen if the hero blinks first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67c83de884.ogg"
             },
             {
               "text": "Reveals are tiny and easy to miss on purpose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa4e11d28.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q8_v8.wav"
+          "_audio": "assets/audio/q/lesson_55_q8_v8.ogg"
         },
         {
           "prompt": "Wait wait wait — Which rule about iter 6: flag and reveal is a GOOD rule?",
           "options": [
             {
               "text": "Flags must be made of real cloth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/361d3ae620.ogg"
             },
             {
               "text": "Flags walk away if the hero is too slow.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/738c1390cc.ogg"
             },
             {
               "text": "Each win demands a tiny tax of cheese.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/290c78a011.ogg"
             },
             {
               "text": "End screens should feel like a small celebration.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/501d9aa304.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_55_q8_v9.wav"
+          "_audio": "assets/audio/q/lesson_55_q8_v9.ogg"
         }
       ]
     }

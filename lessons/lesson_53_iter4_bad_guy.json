@@ -55,24 +55,24 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Bad guy walks off the edge. Pick the fix:",
+          "prompt": "👻 Tap the BAD GUY — the thing your hero must dodge!",
           "choices": [
             {
-              "label": "Make it invisible",
-              "right": false
-            },
-            {
-              "label": "If the next tile is empty, turn around",
+              "glyph": "👻",
               "right": true
             },
             {
-              "label": "Make it jump",
+              "glyph": "🦋",
               "right": false
             },
             {
-              "label": "Move the floor",
+              "glyph": "🌈",
+              "right": false
+            },
+            {
+              "glyph": "🍩",
               "right": false
             }
           ]
@@ -80,224 +80,264 @@
       },
       "variations": [
         {
-          "prompt": "What is iter 4: the bad guy?",
+          "prompt": "🔥 Round one, FIGHT! Tap the best fact about Iteration 4: Bad Guy.",
           "options": [
             {
               "text": "Each bad guy must have a real name.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2c6b336dee.ogg"
             },
             {
               "text": "Touching them gives points and a hug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4cd642e1e2.ogg"
             },
             {
               "text": "Bad guys remove tension — they tell jokes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9de29d172b.ogg"
             },
             {
               "text": "A bad guy moves on a path.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/318c1f3232.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_53_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 4: the bad guy?",
           "options": [
             {
               "text": "Patterns ruin everything — go full random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/99d6e6cafb.ogg"
             },
             {
               "text": "Touching a bad guy can hurt the hero.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/873e01e6f1.ogg"
             },
             {
               "text": "Bad guys file paperwork to attack.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6f2bc5489a.ogg"
             },
             {
               "text": "Bad guys are paid in cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/79276d522a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_53_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
           "options": [
             {
               "text": "A bad guy moves on a path.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/318c1f3232.ogg"
             },
             {
               "text": "A bad guy can be jumped on or avoided.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e435ff5013.ogg"
             },
             {
               "text": "Patterns ruin everything — go full random.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/99d6e6cafb.ogg"
             },
             {
               "text": "Bad guys are not the boss — they are the sidekicks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bc1c75640b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_53_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about iter 4: the bad guy. What should he say?",
           "options": [
             {
               "text": "Bad guys are paid in cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/79276d522a.ogg"
             },
             {
               "text": "Bad guys remove tension — they tell jokes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9de29d172b.ogg"
             },
             {
               "text": "A bad guy can be jumped on or avoided.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e435ff5013.ogg"
             },
             {
               "text": "Bad guys never move — pure statues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a8496cc518.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_53_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about iter 4: the bad guy is a GOOD rule?",
           "options": [
             {
               "text": "Each bad guy must have a real name.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2c6b336dee.ogg"
             },
             {
               "text": "Patterns ruin everything — go full random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/99d6e6cafb.ogg"
             },
             {
               "text": "Bad guys add tension to the world.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/0902809329.ogg"
             },
             {
               "text": "Bad guys remove tension — they tell jokes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9de29d172b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_53_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about iter 4: the bad guy, ___",
           "options": [
             {
               "text": "Bad guys are paid in cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/79276d522a.ogg"
             },
             {
               "text": "Bad guys should be telegraphed — visible early.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6522a16176.ogg"
             },
             {
               "text": "Bad guys are required to wear masks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9211b9d440.ogg"
             },
             {
               "text": "Bad guys cannot be avoided — game over instantly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/812880a1d9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_53_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about iter 4: the bad guy. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A bad guy can be jumped on or avoided.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e435ff5013.ogg"
             },
             {
               "text": "Bad guys add tension to the world.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0902809329.ogg"
             },
             {
               "text": "Bad guys file paperwork to attack.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6f2bc5489a.ogg"
             },
             {
               "text": "Bad guys should be telegraphed — visible early.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6522a16176.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_53_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with iter 4: the bad guy?",
           "options": [
             {
               "text": "Bad guys never move — pure statues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a8496cc518.ogg"
             },
             {
               "text": "Bad guys must be greeted by name.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/82f56f8c19.ogg"
             },
             {
               "text": "Bad guys are not the boss — they are the sidekicks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/bc1c75640b.ogg"
             },
             {
               "text": "Bad guys remove tension — they tell jokes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9de29d172b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_53_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about iter 4: the bad guy is silly. Pick the silly one!",
           "options": [
             {
               "text": "Iteration 4 adds a BAD GUY -- something to avoid.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3891102a63.ogg"
             },
             {
               "text": "A bad guy can be jumped on or avoided.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e435ff5013.ogg"
             },
             {
               "text": "Bad guys should be telegraphed — visible early.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6522a16176.ogg"
             },
             {
               "text": "Bad guys are required to wear masks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9211b9d440.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_53_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about iter 4: the bad guy. Which fact would help him?",
           "options": [
             {
               "text": "Bad guys move on a pattern (back and forth, in a circle, etc.).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/47b5a7c401.ogg"
             },
             {
               "text": "Bad guys must be greeted by name.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/82f56f8c19.ogg"
             },
             {
               "text": "Bad guys file paperwork to attack.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6f2bc5489a.ogg"
             },
             {
               "text": "Patterns ruin everything — go full random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/99d6e6cafb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_53_q1_v9.ogg"
         }
       ]
     },
@@ -306,12 +346,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
+          "prompt": "Type GOOGLE and press Send to keep going!",
+          "target_display": "GOOGLE",
           "targets": [
-            "yes"
+            "google"
           ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "hint_wrong": "Type the word GOOGLE (any case is fine)."
         }
       },
       "variations": [
@@ -320,234 +360,270 @@
           "options": [
             {
               "text": "Show bad guys earlier so the player can plan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b359e7f6cb.ogg"
             },
             {
               "text": "Replace bad guys with pillows.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c545756ed7.ogg"
             },
             {
               "text": "Speed up the bad guys.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8b309a700f.ogg"
             },
             {
               "text": "Hide the hero too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/663b84d54e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_53_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Players keep dying because bad guys appear with no warning. What's the fix?",
           "options": [
             {
               "text": "Speed up the bad guys.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8b309a700f.ogg"
             },
             {
               "text": "Show bad guys earlier so the player can plan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b359e7f6cb.ogg"
             },
             {
               "text": "Replace bad guys with pillows.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c545756ed7.ogg"
             },
             {
               "text": "Hide the hero too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/663b84d54e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_53_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Players keep dying because bad guys appear with no warning. What's the fix?",
           "options": [
             {
               "text": "Hide the hero too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/663b84d54e.ogg"
             },
             {
               "text": "Replace bad guys with pillows.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c545756ed7.ogg"
             },
             {
               "text": "Show bad guys earlier so the player can plan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b359e7f6cb.ogg"
             },
             {
               "text": "Speed up the bad guys.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8b309a700f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_53_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Players keep dying because bad guys appear with no warning. What's the fix?",
           "options": [
             {
               "text": "Show bad guys earlier so the player can plan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b359e7f6cb.ogg"
             },
             {
               "text": "Replace bad guys with pillows.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c545756ed7.ogg"
             },
             {
               "text": "Speed up the bad guys.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8b309a700f.ogg"
             },
             {
               "text": "Hide the hero too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/663b84d54e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_53_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Players keep dying because bad guys appear with no warning. What's the fix?",
           "options": [
             {
               "text": "Replace bad guys with pillows.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c545756ed7.ogg"
             },
             {
               "text": "Show bad guys earlier so the player can plan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b359e7f6cb.ogg"
             },
             {
               "text": "Hide the hero too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/663b84d54e.ogg"
             },
             {
               "text": "Speed up the bad guys.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8b309a700f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_53_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Players keep dying because bad guys appear with no warning. What's the fix?",
           "options": [
             {
               "text": "Show bad guys earlier so the player can plan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b359e7f6cb.ogg"
             },
             {
               "text": "Speed up the bad guys.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8b309a700f.ogg"
             },
             {
               "text": "Replace bad guys with pillows.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c545756ed7.ogg"
             },
             {
               "text": "Hide the hero too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/663b84d54e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_53_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Players keep dying because bad guys appear with no warning. What's the fix?",
           "options": [
             {
               "text": "Show bad guys earlier so the player can plan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b359e7f6cb.ogg"
             },
             {
               "text": "Replace bad guys with pillows.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c545756ed7.ogg"
             },
             {
               "text": "Hide the hero too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/663b84d54e.ogg"
             },
             {
               "text": "Speed up the bad guys.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8b309a700f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_53_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Players keep dying because bad guys appear with no warning. What's the fix?",
           "options": [
             {
               "text": "Show bad guys earlier so the player can plan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b359e7f6cb.ogg"
             },
             {
               "text": "Speed up the bad guys.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8b309a700f.ogg"
             },
             {
               "text": "Hide the hero too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/663b84d54e.ogg"
             },
             {
               "text": "Replace bad guys with pillows.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c545756ed7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_53_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Players keep dying because bad guys appear with no warning. What's the fix?",
           "options": [
             {
               "text": "Show bad guys earlier so the player can plan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b359e7f6cb.ogg"
             },
             {
               "text": "Replace bad guys with pillows.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c545756ed7.ogg"
             },
             {
               "text": "Speed up the bad guys.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8b309a700f.ogg"
             },
             {
               "text": "Hide the hero too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/663b84d54e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_53_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Players keep dying because bad guys appear with no warning. What's the fix?",
           "options": [
             {
               "text": "Show bad guys earlier so the player can plan.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b359e7f6cb.ogg"
             },
             {
               "text": "Replace bad guys with pillows.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c545756ed7.ogg"
             },
             {
               "text": "Speed up the bad guys.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8b309a700f.ogg"
             },
             {
               "text": "Hide the hero too.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/663b84d54e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_53_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "⚡"
         }
       },
       "variations": [
@@ -556,234 +632,287 @@
           "options": [
             {
               "text": "Patterns smell sweet to the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ba1c144550.ogg"
             },
             {
               "text": "Players can learn it and feel smart for beating it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/43a9b8e564.ogg"
             },
             {
               "text": "Patterns scare the hero into action.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b44af540.ogg"
             },
             {
               "text": "Patterns are required by talking ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccc8b1971.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_53_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Why a pattern for bad guys?",
           "options": [
             {
               "text": "Patterns scare the hero into action.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b44af540.ogg"
             },
             {
               "text": "Patterns smell sweet to the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ba1c144550.ogg"
             },
             {
               "text": "Players can learn it and feel smart for beating it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/43a9b8e564.ogg"
             },
             {
               "text": "Patterns are required by talking ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccc8b1971.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_53_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why a pattern for bad guys?",
           "options": [
             {
               "text": "Patterns smell sweet to the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ba1c144550.ogg"
             },
             {
               "text": "Patterns scare the hero into action.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b44af540.ogg"
             },
             {
               "text": "Patterns are required by talking ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccc8b1971.ogg"
             },
             {
               "text": "Players can learn it and feel smart for beating it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/43a9b8e564.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_53_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why a pattern for bad guys?",
           "options": [
             {
               "text": "Players can learn it and feel smart for beating it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/43a9b8e564.ogg"
             },
             {
               "text": "Patterns scare the hero into action.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b44af540.ogg"
             },
             {
               "text": "Patterns are required by talking ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccc8b1971.ogg"
             },
             {
               "text": "Patterns smell sweet to the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ba1c144550.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_53_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Why a pattern for bad guys?",
           "options": [
             {
               "text": "Patterns smell sweet to the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ba1c144550.ogg"
             },
             {
               "text": "Patterns are required by talking ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccc8b1971.ogg"
             },
             {
               "text": "Players can learn it and feel smart for beating it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/43a9b8e564.ogg"
             },
             {
               "text": "Patterns scare the hero into action.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b44af540.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_53_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why a pattern for bad guys?",
           "options": [
             {
               "text": "Patterns are required by talking ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccc8b1971.ogg"
             },
             {
               "text": "Patterns smell sweet to the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ba1c144550.ogg"
             },
             {
               "text": "Patterns scare the hero into action.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b44af540.ogg"
             },
             {
               "text": "Players can learn it and feel smart for beating it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/43a9b8e564.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_53_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why a pattern for bad guys?",
           "options": [
             {
               "text": "Patterns are required by talking ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccc8b1971.ogg"
             },
             {
               "text": "Players can learn it and feel smart for beating it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/43a9b8e564.ogg"
             },
             {
               "text": "Patterns smell sweet to the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ba1c144550.ogg"
             },
             {
               "text": "Patterns scare the hero into action.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b44af540.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_53_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Why a pattern for bad guys?",
           "options": [
             {
               "text": "Patterns are required by talking ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccc8b1971.ogg"
             },
             {
               "text": "Patterns smell sweet to the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ba1c144550.ogg"
             },
             {
               "text": "Players can learn it and feel smart for beating it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/43a9b8e564.ogg"
             },
             {
               "text": "Patterns scare the hero into action.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b44af540.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_53_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Why a pattern for bad guys?",
           "options": [
             {
               "text": "Patterns are required by talking ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccc8b1971.ogg"
             },
             {
               "text": "Patterns scare the hero into action.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b44af540.ogg"
             },
             {
               "text": "Players can learn it and feel smart for beating it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/43a9b8e564.ogg"
             },
             {
               "text": "Patterns smell sweet to the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ba1c144550.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_53_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why a pattern for bad guys?",
           "options": [
             {
               "text": "Patterns smell sweet to the bug king.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ba1c144550.ogg"
             },
             {
               "text": "Players can learn it and feel smart for beating it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/43a9b8e564.ogg"
             },
             {
               "text": "Patterns scare the hero into action.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/56b44af540.ogg"
             },
             {
               "text": "Patterns are required by talking ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2ccc8b1971.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_53_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🚀",
+              "right": true
+            },
+            {
+              "glyph": "🥬",
+              "right": false
+            },
+            {
+              "glyph": "🧅",
+              "right": false
+            },
+            {
+              "glyph": "🪣",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -792,234 +921,270 @@
           "options": [
             {
               "text": "A bad guy moves on a path.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/318c1f3232.ogg"
             },
             {
               "text": "Touch the bad guy -> lose a life or game over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/947bba12b8.ogg"
             },
             {
               "text": "Each bad guy must have a real name.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2c6b336dee.ogg"
             },
             {
               "text": "Patterns help the player learn the bad guy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a3cdfaba11.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_53_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
           "options": [
             {
               "text": "Iteration 4 adds a BAD GUY -- something to avoid.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3891102a63.ogg"
             },
             {
               "text": "Bad guys are paid in cookies.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/79276d522a.ogg"
             },
             {
               "text": "A bad guy moves on a path.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/318c1f3232.ogg"
             },
             {
               "text": "Bad guys make the game feel exciting and risky.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5e77150fd5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_53_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
           "options": [
             {
               "text": "Patterns help the player learn the bad guy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a3cdfaba11.ogg"
             },
             {
               "text": "Touch the bad guy -> lose a life or game over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/947bba12b8.ogg"
             },
             {
               "text": "Bad guys never move on weekends.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/40c115ec96.ogg"
             },
             {
               "text": "A bad guy moves on a path.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/318c1f3232.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_53_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
           "options": [
             {
               "text": "Slow, predictable bad guys teach the rules.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/87d158cff6.ogg"
             },
             {
               "text": "Iteration 4 adds a BAD GUY -- something to avoid.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3891102a63.ogg"
             },
             {
               "text": "Bad guys never move — pure statues.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a8496cc518.ogg"
             },
             {
               "text": "Bad guys add tension to the world.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0902809329.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_53_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
           "options": [
             {
               "text": "Bad guys are not the boss — they are the sidekicks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bc1c75640b.ogg"
             },
             {
               "text": "A bad guy can be jumped on or avoided.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e435ff5013.ogg"
             },
             {
               "text": "Touch the bad guy -> lose a life or game over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/947bba12b8.ogg"
             },
             {
               "text": "Touching them gives points and a hug.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4cd642e1e2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_53_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
           "options": [
             {
               "text": "Bad guys make the game feel exciting and risky.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5e77150fd5.ogg"
             },
             {
               "text": "Patterns ruin everything — go full random.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/99d6e6cafb.ogg"
             },
             {
               "text": "Bad guys move on a pattern (back and forth, in a circle, etc.).",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/47b5a7c401.ogg"
             },
             {
               "text": "Slow, predictable bad guys teach the rules.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/87d158cff6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_53_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
           "options": [
             {
               "text": "Iteration 4 adds a BAD GUY -- something to avoid.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3891102a63.ogg"
             },
             {
               "text": "A bad guy can be jumped on or avoided.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e435ff5013.ogg"
             },
             {
               "text": "Bad guys cannot be avoided — game over instantly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/812880a1d9.ogg"
             },
             {
               "text": "Patterns help the player learn the bad guy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a3cdfaba11.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_53_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
           "options": [
             {
               "text": "A bad guy moves on a path.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/318c1f3232.ogg"
             },
             {
               "text": "Bad guys are not the boss — they are the sidekicks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bc1c75640b.ogg"
             },
             {
               "text": "Bad guys make the game feel exciting and risky.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5e77150fd5.ogg"
             },
             {
               "text": "Bad guys remove tension — they tell jokes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9de29d172b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_53_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
           "options": [
             {
               "text": "Bad guys must be greeted by name.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82f56f8c19.ogg"
             },
             {
               "text": "Patterns help the player learn the bad guy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a3cdfaba11.ogg"
             },
             {
               "text": "Bad guys should be telegraphed — visible early.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6522a16176.ogg"
             },
             {
               "text": "Touching a bad guy can hurt the hero.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/873e01e6f1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_53_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about iter 4: the bad guy.",
           "options": [
             {
               "text": "Bad guys move on a pattern (back and forth, in a circle, etc.).",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/47b5a7c401.ogg"
             },
             {
               "text": "Bad guys file paperwork to attack.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6f2bc5489a.ogg"
             },
             {
               "text": "Bad guys add tension to the world.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0902809329.ogg"
             },
             {
               "text": "Touch the bad guy -> lose a life or game over.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/947bba12b8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_53_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🤖"
         }
       },
       "variations": [
@@ -1028,234 +1193,274 @@
           "options": [
             {
               "text": "Patterns ruin everything — go full random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/99d6e6cafb.ogg"
             },
             {
               "text": "Bad guys are paid in cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/79276d522a.ogg"
             },
             {
               "text": "Bad guys never move — pure statues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a8496cc518.ogg"
             },
             {
               "text": "A bad guy moves on a path.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/318c1f3232.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_53_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about iter 4: the bad guy?",
           "options": [
             {
               "text": "Bad guys never move — pure statues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a8496cc518.ogg"
             },
             {
               "text": "Bad guys are paid in cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/79276d522a.ogg"
             },
             {
               "text": "Touching a bad guy can hurt the hero.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/873e01e6f1.ogg"
             },
             {
               "text": "Bad guys are required to wear masks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9211b9d440.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_53_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about iter 4: the bad guy?",
           "options": [
             {
               "text": "Patterns help the player learn the bad guy.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a3cdfaba11.ogg"
             },
             {
               "text": "Bad guys remove tension — they tell jokes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9de29d172b.ogg"
             },
             {
               "text": "Bad guys are paid in cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/79276d522a.ogg"
             },
             {
               "text": "Touching them gives points and a hug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4cd642e1e2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_53_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about iter 4: the bad guy?",
           "options": [
             {
               "text": "Each bad guy must have a real name.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2c6b336dee.ogg"
             },
             {
               "text": "A bad guy can be jumped on or avoided.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e435ff5013.ogg"
             },
             {
               "text": "Bad guys are required to wear masks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9211b9d440.ogg"
             },
             {
               "text": "Bad guys are paid in cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/79276d522a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_53_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about iter 4: the bad guy?",
           "options": [
             {
               "text": "Bad guys add tension to the world.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/0902809329.ogg"
             },
             {
               "text": "Bad guys file paperwork to attack.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6f2bc5489a.ogg"
             },
             {
               "text": "Bad guys remove tension — they tell jokes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9de29d172b.ogg"
             },
             {
               "text": "Bad guys never move on weekends.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/40c115ec96.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_53_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about iter 4: the bad guy?",
           "options": [
             {
               "text": "Bad guys should be telegraphed — visible early.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6522a16176.ogg"
             },
             {
               "text": "Bad guys file paperwork to attack.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6f2bc5489a.ogg"
             },
             {
               "text": "Bad guys never move — pure statues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a8496cc518.ogg"
             },
             {
               "text": "Touching them gives points and a hug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4cd642e1e2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_53_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about iter 4: the bad guy?",
           "options": [
             {
               "text": "Bad guys cannot be avoided — game over instantly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/812880a1d9.ogg"
             },
             {
               "text": "Bad guys never move — pure statues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a8496cc518.ogg"
             },
             {
               "text": "Slow, predictable bad guys teach the rules.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/87d158cff6.ogg"
             },
             {
               "text": "Patterns ruin everything — go full random.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/99d6e6cafb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_53_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about iter 4: the bad guy?",
           "options": [
             {
               "text": "Bad guys never move — pure statues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a8496cc518.ogg"
             },
             {
               "text": "Bad guys file paperwork to attack.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6f2bc5489a.ogg"
             },
             {
               "text": "Bad guys remove tension — they tell jokes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9de29d172b.ogg"
             },
             {
               "text": "Bad guys are not the boss — they are the sidekicks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/bc1c75640b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_53_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about iter 4: the bad guy?",
           "options": [
             {
               "text": "Bad guys never move on weekends.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/40c115ec96.ogg"
             },
             {
               "text": "Bad guys cannot be avoided — game over instantly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/812880a1d9.ogg"
             },
             {
               "text": "Bad guys remove tension — they tell jokes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9de29d172b.ogg"
             },
             {
               "text": "Iteration 4 adds a BAD GUY -- something to avoid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3891102a63.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_53_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about iter 4: the bad guy?",
           "options": [
             {
               "text": "Each bad guy must have a real name.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2c6b336dee.ogg"
             },
             {
               "text": "Bad guys are paid in cookies.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/79276d522a.ogg"
             },
             {
               "text": "Touching them gives points and a hug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4cd642e1e2.ogg"
             },
             {
               "text": "Bad guys move on a pattern (back and forth, in a circle, etc.).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/47b5a7c401.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_53_q5_v9.ogg"
         }
       ]
     },
     {
       "id": "q6",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
-          "targets": [
-            "win"
-          ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "prompt": "Put the steps in order:",
+          "steps": [
+            "First",
+            "Next",
+            "Last"
+          ]
         }
       },
       "variations": [
@@ -1264,220 +1469,260 @@
           "options": [
             {
               "text": "Bad guys can only walk in straight lines.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b6b368166c.ogg"
             },
             {
               "text": "It's required by the bad-guy union.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c3a95428f.ogg"
             },
             {
               "text": "Walking saves battery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86b3c0e461.ogg"
             },
             {
               "text": "It's predictable -- the player can learn the timing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/225fdea637.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_53_q6_v0.ogg"
         },
         {
           "prompt": "Quick! Your first bad guy walks back and forth on a platform. Why is that good?",
           "options": [
             {
               "text": "Walking saves battery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86b3c0e461.ogg"
             },
             {
               "text": "Bad guys can only walk in straight lines.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b6b368166c.ogg"
             },
             {
               "text": "It's required by the bad-guy union.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c3a95428f.ogg"
             },
             {
               "text": "It's predictable -- the player can learn the timing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/225fdea637.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_53_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — Your first bad guy walks back and forth on a platform. Why is that good?",
           "options": [
             {
               "text": "It's required by the bad-guy union.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c3a95428f.ogg"
             },
             {
               "text": "It's predictable -- the player can learn the timing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/225fdea637.ogg"
             },
             {
               "text": "Walking saves battery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86b3c0e461.ogg"
             },
             {
               "text": "Bad guys can only walk in straight lines.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b6b368166c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_53_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Your first bad guy walks back and forth on a platform. Why is that good?",
           "options": [
             {
               "text": "Walking saves battery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86b3c0e461.ogg"
             },
             {
               "text": "It's predictable -- the player can learn the timing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/225fdea637.ogg"
             },
             {
               "text": "It's required by the bad-guy union.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c3a95428f.ogg"
             },
             {
               "text": "Bad guys can only walk in straight lines.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b6b368166c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_53_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — Your first bad guy walks back and forth on a platform. Why is that good?",
           "options": [
             {
               "text": "It's predictable -- the player can learn the timing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/225fdea637.ogg"
             },
             {
               "text": "Walking saves battery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86b3c0e461.ogg"
             },
             {
               "text": "It's required by the bad-guy union.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c3a95428f.ogg"
             },
             {
               "text": "Bad guys can only walk in straight lines.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b6b368166c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_53_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Your first bad guy walks back and forth on a platform. Why is that good?",
           "options": [
             {
               "text": "Bad guys can only walk in straight lines.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b6b368166c.ogg"
             },
             {
               "text": "It's required by the bad-guy union.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c3a95428f.ogg"
             },
             {
               "text": "It's predictable -- the player can learn the timing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/225fdea637.ogg"
             },
             {
               "text": "Walking saves battery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86b3c0e461.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_53_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Your first bad guy walks back and forth on a platform. Why is that good?",
           "options": [
             {
               "text": "It's predictable -- the player can learn the timing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/225fdea637.ogg"
             },
             {
               "text": "It's required by the bad-guy union.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c3a95428f.ogg"
             },
             {
               "text": "Walking saves battery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86b3c0e461.ogg"
             },
             {
               "text": "Bad guys can only walk in straight lines.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b6b368166c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_53_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — Your first bad guy walks back and forth on a platform. Why is that good?",
           "options": [
             {
               "text": "It's required by the bad-guy union.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c3a95428f.ogg"
             },
             {
               "text": "Bad guys can only walk in straight lines.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b6b368166c.ogg"
             },
             {
               "text": "It's predictable -- the player can learn the timing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/225fdea637.ogg"
             },
             {
               "text": "Walking saves battery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86b3c0e461.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_53_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: Your first bad guy walks back and forth on a platform. Why is that good?",
           "options": [
             {
               "text": "Walking saves battery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86b3c0e461.ogg"
             },
             {
               "text": "Bad guys can only walk in straight lines.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b6b368166c.ogg"
             },
             {
               "text": "It's required by the bad-guy union.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c3a95428f.ogg"
             },
             {
               "text": "It's predictable -- the player can learn the timing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/225fdea637.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_53_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Your first bad guy walks back and forth on a platform. Why is that good?",
           "options": [
             {
               "text": "Walking saves battery.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86b3c0e461.ogg"
             },
             {
               "text": "Bad guys can only walk in straight lines.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b6b368166c.ogg"
             },
             {
               "text": "It's predictable -- the player can learn the timing.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/225fdea637.ogg"
             },
             {
               "text": "It's required by the bad-guy union.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4c3a95428f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_53_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_53_q6_v9.ogg"
         }
       ]
     }

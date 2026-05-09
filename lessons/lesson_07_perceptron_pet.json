@@ -55,269 +55,303 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "history-scene",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Watch the scene, then answer the question!",
-          "scene": {
-            "id": "perceptron",
-            "check": {
-              "prompt": "What did the brain cell answer at the end?",
-              "choices": [
-                {
-                  "label": "YES",
-                  "right": true
-                },
-                {
-                  "label": "MAYBE",
-                  "right": false
-                },
-                {
-                  "label": "PIZZA",
-                  "right": false
-                },
-                {
-                  "label": "Nothing",
-                  "right": false
-                }
-              ]
+          "prompt": "🦠 Tap the brain cell — the YES/NO part of an A I!",
+          "choices": [
+            {
+              "glyph": "🧠",
+              "right": true
+            },
+            {
+              "glyph": "🍕",
+              "right": false
+            },
+            {
+              "glyph": "🚗",
+              "right": false
+            },
+            {
+              "glyph": "🎈",
+              "right": false
             }
-          }
+          ]
         }
       },
       "variations": [
         {
-          "prompt": "What is the perceptron pet?",
+          "prompt": "🧠 Power up your brain! Which one is right about First Robot Brain Cell?",
           "options": [
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             },
             {
               "text": "Perceptrons learn by sleeping inside socks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b78a10c627.ogg"
             },
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             },
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_07_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about the perceptron pet?",
           "options": [
             {
               "text": "A perceptron only says 'maybe' and shrugs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/888bb0f881.ogg"
             },
             {
               "text": "It learns by looking at lots of examples.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c207f6b7b0.ogg"
             },
             {
               "text": "Perceptrons need to drink ten lemon waters daily.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7d10d70c31.ogg"
             },
             {
               "text": "A perceptron is a kind of small flower.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9eed46ca0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_07_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about the perceptron pet.",
           "options": [
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             },
             {
               "text": "It can be trained to spot a pattern.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1f7eb0458d.ogg"
             },
             {
               "text": "A perceptron only says 'maybe' and shrugs.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/888bb0f881.ogg"
             },
             {
               "text": "More examples usually mean better answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/18cafa0a2e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_07_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about the perceptron pet. What should he say?",
           "options": [
             {
               "text": "A perceptron is a kind of small flower.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9eed46ca0.ogg"
             },
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             },
             {
               "text": "It can be trained to spot a pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1f7eb0458d.ogg"
             },
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_07_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             },
             {
               "text": "A perceptron only says 'maybe' and shrugs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/888bb0f881.ogg"
             },
             {
               "text": "Many perceptrons together make a big brain.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/80c2c46f30.ogg"
             },
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_07_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about the perceptron pet, ___",
           "options": [
             {
               "text": "A perceptron can sing one note for one second.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4961b44ed6.ogg"
             },
             {
               "text": "Each example helps it learn a little more.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a62aa6e2a5.ogg"
             },
             {
               "text": "A perceptron eats one cracker per question.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ada8f87.ogg"
             },
             {
               "text": "Perceptrons live inside our shoes whispering.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07d14d9a11.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_07_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about the perceptron pet. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "It can be trained to spot a pattern.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1f7eb0458d.ogg"
             },
             {
               "text": "Many perceptrons together make a big brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80c2c46f30.ogg"
             },
             {
               "text": "Perceptrons need to drink ten lemon waters daily.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7d10d70c31.ogg"
             },
             {
               "text": "Each example helps it learn a little more.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a62aa6e2a5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_07_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with the perceptron pet?",
           "options": [
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             },
             {
               "text": "If you blow on a model it forgets its job.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44a5d0a079.ogg"
             },
             {
               "text": "More examples usually mean better answers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/18cafa0a2e.ogg"
             },
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_07_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about the perceptron pet is silly. Pick the silly one!",
           "options": [
             {
               "text": "A perceptron is the tiniest part of an AI brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ac22deb09.ogg"
             },
             {
               "text": "It can be trained to spot a pattern.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1f7eb0458d.ogg"
             },
             {
               "text": "Each example helps it learn a little more.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a62aa6e2a5.ogg"
             },
             {
               "text": "A perceptron eats one cracker per question.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d42ada8f87.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_07_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about the perceptron pet. Which fact would help him?",
           "options": [
             {
               "text": "It looks at inputs and decides 'yes' or 'no'.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3683befc1a.ogg"
             },
             {
               "text": "If you blow on a model it forgets its job.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44a5d0a079.ogg"
             },
             {
               "text": "Perceptrons need to drink ten lemon waters daily.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7d10d70c31.ogg"
             },
             {
               "text": "A perceptron only says 'maybe' and shrugs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/888bb0f881.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_07_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Train your perceptron pet — what comes first?",
+          "steps": [
+            "Show it a picture",
+            "Let it guess",
+            "Tell it if it was right"
+          ]
         }
       },
       "variations": [
@@ -326,234 +360,270 @@
           "options": [
             {
               "text": "Bake a tiny cake for each animal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4ebac566c.ogg"
             },
             {
               "text": "Adopt them all in one afternoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34ba3729ba.ogg"
             },
             {
               "text": "Choose names for them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/08e6180cd0.ogg"
             },
             {
               "text": "Tell which is a cat and which is a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/64286c3113.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_07_q2_v0.ogg"
         },
         {
           "prompt": "Quick! We show a perceptron 100 cat pictures and 100 dog pictures. What can it learn to do?",
           "options": [
             {
               "text": "Adopt them all in one afternoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34ba3729ba.ogg"
             },
             {
               "text": "Choose names for them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/08e6180cd0.ogg"
             },
             {
               "text": "Bake a tiny cake for each animal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4ebac566c.ogg"
             },
             {
               "text": "Tell which is a cat and which is a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/64286c3113.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_07_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — We show a perceptron 100 cat pictures and 100 dog pictures. What can it learn to do?",
           "options": [
             {
               "text": "Choose names for them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/08e6180cd0.ogg"
             },
             {
               "text": "Bake a tiny cake for each animal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4ebac566c.ogg"
             },
             {
               "text": "Tell which is a cat and which is a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/64286c3113.ogg"
             },
             {
               "text": "Adopt them all in one afternoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34ba3729ba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_07_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: We show a perceptron 100 cat pictures and 100 dog pictures. What can it learn to do?",
           "options": [
             {
               "text": "Bake a tiny cake for each animal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4ebac566c.ogg"
             },
             {
               "text": "Tell which is a cat and which is a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/64286c3113.ogg"
             },
             {
               "text": "Adopt them all in one afternoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34ba3729ba.ogg"
             },
             {
               "text": "Choose names for them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/08e6180cd0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_07_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — We show a perceptron 100 cat pictures and 100 dog pictures. What can it learn to do?",
           "options": [
             {
               "text": "Bake a tiny cake for each animal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4ebac566c.ogg"
             },
             {
               "text": "Choose names for them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/08e6180cd0.ogg"
             },
             {
               "text": "Tell which is a cat and which is a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/64286c3113.ogg"
             },
             {
               "text": "Adopt them all in one afternoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34ba3729ba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_07_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — We show a perceptron 100 cat pictures and 100 dog pictures. What can it learn to do?",
           "options": [
             {
               "text": "Choose names for them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/08e6180cd0.ogg"
             },
             {
               "text": "Tell which is a cat and which is a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/64286c3113.ogg"
             },
             {
               "text": "Bake a tiny cake for each animal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4ebac566c.ogg"
             },
             {
               "text": "Adopt them all in one afternoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34ba3729ba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_07_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! We show a perceptron 100 cat pictures and 100 dog pictures. What can it learn to do?",
           "options": [
             {
               "text": "Choose names for them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/08e6180cd0.ogg"
             },
             {
               "text": "Bake a tiny cake for each animal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4ebac566c.ogg"
             },
             {
               "text": "Tell which is a cat and which is a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/64286c3113.ogg"
             },
             {
               "text": "Adopt them all in one afternoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34ba3729ba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_07_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — We show a perceptron 100 cat pictures and 100 dog pictures. What can it learn to do?",
           "options": [
             {
               "text": "Bake a tiny cake for each animal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4ebac566c.ogg"
             },
             {
               "text": "Adopt them all in one afternoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34ba3729ba.ogg"
             },
             {
               "text": "Tell which is a cat and which is a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/64286c3113.ogg"
             },
             {
               "text": "Choose names for them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/08e6180cd0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_07_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: We show a perceptron 100 cat pictures and 100 dog pictures. What can it learn to do?",
           "options": [
             {
               "text": "Tell which is a cat and which is a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/64286c3113.ogg"
             },
             {
               "text": "Choose names for them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/08e6180cd0.ogg"
             },
             {
               "text": "Adopt them all in one afternoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34ba3729ba.ogg"
             },
             {
               "text": "Bake a tiny cake for each animal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4ebac566c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_07_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: We show a perceptron 100 cat pictures and 100 dog pictures. What can it learn to do?",
           "options": [
             {
               "text": "Choose names for them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/08e6180cd0.ogg"
             },
             {
               "text": "Bake a tiny cake for each animal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4ebac566c.ogg"
             },
             {
               "text": "Tell which is a cat and which is a dog.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/64286c3113.ogg"
             },
             {
               "text": "Adopt them all in one afternoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34ba3729ba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_07_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🚀"
         }
       },
       "variations": [
@@ -562,234 +632,274 @@
           "options": [
             {
               "text": "Feed it crumbs and hope.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9886d705f.ogg"
             },
             {
               "text": "Run it around the block in a tiny tracksuit.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/439a0d2a04.ogg"
             },
             {
               "text": "Show it examples so it gets better at saying yes or no.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6eda339032.ogg"
             },
             {
               "text": "Whisper the answers under your breath.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ce841da207.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_07_q3_v0.ogg"
         },
         {
           "prompt": "Quick! What does it mean to 'train' a perceptron?",
           "options": [
             {
               "text": "Run it around the block in a tiny tracksuit.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/439a0d2a04.ogg"
             },
             {
               "text": "Whisper the answers under your breath.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ce841da207.ogg"
             },
             {
               "text": "Show it examples so it gets better at saying yes or no.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6eda339032.ogg"
             },
             {
               "text": "Feed it crumbs and hope.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9886d705f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_07_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — What does it mean to 'train' a perceptron?",
           "options": [
             {
               "text": "Run it around the block in a tiny tracksuit.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/439a0d2a04.ogg"
             },
             {
               "text": "Show it examples so it gets better at saying yes or no.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6eda339032.ogg"
             },
             {
               "text": "Whisper the answers under your breath.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ce841da207.ogg"
             },
             {
               "text": "Feed it crumbs and hope.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9886d705f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_07_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: What does it mean to 'train' a perceptron?",
           "options": [
             {
               "text": "Whisper the answers under your breath.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ce841da207.ogg"
             },
             {
               "text": "Run it around the block in a tiny tracksuit.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/439a0d2a04.ogg"
             },
             {
               "text": "Show it examples so it gets better at saying yes or no.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6eda339032.ogg"
             },
             {
               "text": "Feed it crumbs and hope.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9886d705f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_07_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — What does it mean to 'train' a perceptron?",
           "options": [
             {
               "text": "Show it examples so it gets better at saying yes or no.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6eda339032.ogg"
             },
             {
               "text": "Run it around the block in a tiny tracksuit.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/439a0d2a04.ogg"
             },
             {
               "text": "Feed it crumbs and hope.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9886d705f.ogg"
             },
             {
               "text": "Whisper the answers under your breath.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ce841da207.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_07_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — What does it mean to 'train' a perceptron?",
           "options": [
             {
               "text": "Show it examples so it gets better at saying yes or no.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6eda339032.ogg"
             },
             {
               "text": "Feed it crumbs and hope.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9886d705f.ogg"
             },
             {
               "text": "Run it around the block in a tiny tracksuit.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/439a0d2a04.ogg"
             },
             {
               "text": "Whisper the answers under your breath.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ce841da207.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_07_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! What does it mean to 'train' a perceptron?",
           "options": [
             {
               "text": "Run it around the block in a tiny tracksuit.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/439a0d2a04.ogg"
             },
             {
               "text": "Whisper the answers under your breath.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ce841da207.ogg"
             },
             {
               "text": "Feed it crumbs and hope.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9886d705f.ogg"
             },
             {
               "text": "Show it examples so it gets better at saying yes or no.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6eda339032.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_07_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — What does it mean to 'train' a perceptron?",
           "options": [
             {
               "text": "Show it examples so it gets better at saying yes or no.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6eda339032.ogg"
             },
             {
               "text": "Feed it crumbs and hope.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9886d705f.ogg"
             },
             {
               "text": "Whisper the answers under your breath.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ce841da207.ogg"
             },
             {
               "text": "Run it around the block in a tiny tracksuit.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/439a0d2a04.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_07_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: What does it mean to 'train' a perceptron?",
           "options": [
             {
               "text": "Run it around the block in a tiny tracksuit.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/439a0d2a04.ogg"
             },
             {
               "text": "Whisper the answers under your breath.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ce841da207.ogg"
             },
             {
               "text": "Feed it crumbs and hope.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9886d705f.ogg"
             },
             {
               "text": "Show it examples so it gets better at saying yes or no.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6eda339032.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_07_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: What does it mean to 'train' a perceptron?",
           "options": [
             {
               "text": "Whisper the answers under your breath.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ce841da207.ogg"
             },
             {
               "text": "Show it examples so it gets better at saying yes or no.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6eda339032.ogg"
             },
             {
               "text": "Feed it crumbs and hope.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9886d705f.ogg"
             },
             {
               "text": "Run it around the block in a tiny tracksuit.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/439a0d2a04.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_07_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Train your perceptron pet — what comes first?",
+          "steps": [
+            "Show it a picture",
+            "Let it guess",
+            "Tell it if it was right"
+          ]
         }
       },
       "variations": [
@@ -798,234 +908,283 @@
           "options": [
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             },
             {
               "text": "Many perceptrons together can recognize a cat in a photo.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a6fd42531.ogg"
             },
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             },
             {
               "text": "It says yes or no based on what it sees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c5c2536020.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_07_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about the perceptron pet.",
           "options": [
             {
               "text": "A perceptron is the tiniest part of an AI brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ac22deb09.ogg"
             },
             {
               "text": "A perceptron is a kind of small flower.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e9eed46ca0.ogg"
             },
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             },
             {
               "text": "The first perceptron was built in 1958 -- older than your parents!",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/feae76fcb8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_07_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about the perceptron pet.",
           "options": [
             {
               "text": "It says yes or no based on what it sees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c5c2536020.ogg"
             },
             {
               "text": "Many perceptrons together can recognize a cat in a photo.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a6fd42531.ogg"
             },
             {
               "text": "Perceptrons close their eyes during hard problems.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/404f31a2d4.ogg"
             },
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_07_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about the perceptron pet.",
           "options": [
             {
               "text": "A perceptron is a building block for AI.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db310d49e2.ogg"
             },
             {
               "text": "A perceptron is the tiniest part of an AI brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ac22deb09.ogg"
             },
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             },
             {
               "text": "Many perceptrons together make a big brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80c2c46f30.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_07_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about the perceptron pet.",
           "options": [
             {
               "text": "More examples usually mean better answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/18cafa0a2e.ogg"
             },
             {
               "text": "It can be trained to spot a pattern.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1f7eb0458d.ogg"
             },
             {
               "text": "Many perceptrons together can recognize a cat in a photo.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a6fd42531.ogg"
             },
             {
               "text": "Perceptrons learn by sleeping inside socks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b78a10c627.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_07_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about the perceptron pet.",
           "options": [
             {
               "text": "The first perceptron was built in 1958 -- older than your parents!",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/feae76fcb8.ogg"
             },
             {
               "text": "A perceptron only says 'maybe' and shrugs.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/888bb0f881.ogg"
             },
             {
               "text": "It looks at inputs and decides 'yes' or 'no'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3683befc1a.ogg"
             },
             {
               "text": "A perceptron is a building block for AI.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db310d49e2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_07_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about the perceptron pet.",
           "options": [
             {
               "text": "A perceptron is the tiniest part of an AI brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ac22deb09.ogg"
             },
             {
               "text": "It can be trained to spot a pattern.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1f7eb0458d.ogg"
             },
             {
               "text": "Perceptrons live inside our shoes whispering.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/07d14d9a11.ogg"
             },
             {
               "text": "It says yes or no based on what it sees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c5c2536020.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_07_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about the perceptron pet.",
           "options": [
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             },
             {
               "text": "More examples usually mean better answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/18cafa0a2e.ogg"
             },
             {
               "text": "The first perceptron was built in 1958 -- older than your parents!",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/feae76fcb8.ogg"
             },
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_07_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about the perceptron pet.",
           "options": [
             {
               "text": "If you blow on a model it forgets its job.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/44a5d0a079.ogg"
             },
             {
               "text": "It says yes or no based on what it sees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c5c2536020.ogg"
             },
             {
               "text": "Each example helps it learn a little more.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a62aa6e2a5.ogg"
             },
             {
               "text": "It learns by looking at lots of examples.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c207f6b7b0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_07_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about the perceptron pet.",
           "options": [
             {
               "text": "It looks at inputs and decides 'yes' or 'no'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3683befc1a.ogg"
             },
             {
               "text": "Perceptrons need to drink ten lemon waters daily.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7d10d70c31.ogg"
             },
             {
               "text": "Many perceptrons together make a big brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80c2c46f30.ogg"
             },
             {
               "text": "Many perceptrons together can recognize a cat in a photo.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a6fd42531.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_07_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Save",
+              "right": "💾"
+            },
+            {
+              "left": "Share",
+              "right": "📤"
+            },
+            {
+              "left": "Build",
+              "right": "🔨"
+            }
+          ]
         }
       },
       "variations": [
@@ -1034,220 +1193,260 @@
           "options": [
             {
               "text": "A perceptron only says 'maybe' and shrugs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/888bb0f881.ogg"
             },
             {
               "text": "A perceptron is a kind of small flower.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9eed46ca0.ogg"
             },
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             },
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_07_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about the perceptron pet?",
           "options": [
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             },
             {
               "text": "A perceptron can sing one note for one second.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4961b44ed6.ogg"
             },
             {
               "text": "It learns by looking at lots of examples.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c207f6b7b0.ogg"
             },
             {
               "text": "A perceptron eats one cracker per question.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ada8f87.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_07_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about the perceptron pet?",
           "options": [
             {
               "text": "It says yes or no based on what it sees.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c5c2536020.ogg"
             },
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             },
             {
               "text": "A perceptron can sing one note for one second.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4961b44ed6.ogg"
             },
             {
               "text": "Perceptrons learn by sleeping inside socks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b78a10c627.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_07_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about the perceptron pet?",
           "options": [
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             },
             {
               "text": "It can be trained to spot a pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1f7eb0458d.ogg"
             },
             {
               "text": "A perceptron eats one cracker per question.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ada8f87.ogg"
             },
             {
               "text": "A perceptron can sing one note for one second.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4961b44ed6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_07_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about the perceptron pet?",
           "options": [
             {
               "text": "Many perceptrons together make a big brain.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/80c2c46f30.ogg"
             },
             {
               "text": "Perceptrons need to drink ten lemon waters daily.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7d10d70c31.ogg"
             },
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             },
             {
               "text": "Perceptrons close their eyes during hard problems.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/404f31a2d4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_07_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about the perceptron pet?",
           "options": [
             {
               "text": "Each example helps it learn a little more.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a62aa6e2a5.ogg"
             },
             {
               "text": "Perceptrons need to drink ten lemon waters daily.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7d10d70c31.ogg"
             },
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             },
             {
               "text": "Perceptrons learn by sleeping inside socks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b78a10c627.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_07_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about the perceptron pet?",
           "options": [
             {
               "text": "Perceptrons live inside our shoes whispering.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07d14d9a11.ogg"
             },
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             },
             {
               "text": "A perceptron is a building block for AI.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/db310d49e2.ogg"
             },
             {
               "text": "A perceptron only says 'maybe' and shrugs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/888bb0f881.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_07_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about the perceptron pet?",
           "options": [
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             },
             {
               "text": "Perceptrons need to drink ten lemon waters daily.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7d10d70c31.ogg"
             },
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             },
             {
               "text": "More examples usually mean better answers.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/18cafa0a2e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_07_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about the perceptron pet?",
           "options": [
             {
               "text": "Perceptrons close their eyes during hard problems.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/404f31a2d4.ogg"
             },
             {
               "text": "Perceptrons live inside our shoes whispering.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07d14d9a11.ogg"
             },
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             },
             {
               "text": "A perceptron is the tiniest part of an AI brain.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5ac22deb09.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_07_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about the perceptron pet?",
           "options": [
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             },
             {
               "text": "A perceptron is a kind of small flower.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9eed46ca0.ogg"
             },
             {
               "text": "Perceptrons learn by sleeping inside socks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b78a10c627.ogg"
             },
             {
               "text": "It looks at inputs and decides 'yes' or 'no'.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3683befc1a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_07_q5_v9.ogg"
         }
       ]
     },
@@ -1256,12 +1455,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
+          "prompt": "Type SONIC and press Send to keep going!",
+          "target_display": "SONIC",
           "targets": [
-            "win"
+            "sonic"
           ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "hint_wrong": "Type the word SONIC (any case is fine)."
         }
       },
       "variations": [
@@ -1270,234 +1469,270 @@
           "options": [
             {
               "text": "One alone can only make tiny decisions -- many can recognize complex things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1a782af26.ogg"
             },
             {
               "text": "They share crackers between themselves.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cc7a6a9914.ogg"
             },
             {
               "text": "Perceptrons get lonely on their own.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a845dc211.ogg"
             },
             {
               "text": "They like to play tag during questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f989cb6840.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_07_q6_v0.ogg"
         },
         {
           "prompt": "Quick! Why does AI need MANY perceptrons working together?",
           "options": [
             {
               "text": "They like to play tag during questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f989cb6840.ogg"
             },
             {
               "text": "One alone can only make tiny decisions -- many can recognize complex things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1a782af26.ogg"
             },
             {
               "text": "Perceptrons get lonely on their own.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a845dc211.ogg"
             },
             {
               "text": "They share crackers between themselves.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cc7a6a9914.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_07_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why does AI need MANY perceptrons working together?",
           "options": [
             {
               "text": "One alone can only make tiny decisions -- many can recognize complex things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1a782af26.ogg"
             },
             {
               "text": "Perceptrons get lonely on their own.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a845dc211.ogg"
             },
             {
               "text": "They like to play tag during questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f989cb6840.ogg"
             },
             {
               "text": "They share crackers between themselves.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cc7a6a9914.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_07_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why does AI need MANY perceptrons working together?",
           "options": [
             {
               "text": "They like to play tag during questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f989cb6840.ogg"
             },
             {
               "text": "They share crackers between themselves.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cc7a6a9914.ogg"
             },
             {
               "text": "One alone can only make tiny decisions -- many can recognize complex things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1a782af26.ogg"
             },
             {
               "text": "Perceptrons get lonely on their own.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a845dc211.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_07_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — Why does AI need MANY perceptrons working together?",
           "options": [
             {
               "text": "They like to play tag during questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f989cb6840.ogg"
             },
             {
               "text": "They share crackers between themselves.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cc7a6a9914.ogg"
             },
             {
               "text": "One alone can only make tiny decisions -- many can recognize complex things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1a782af26.ogg"
             },
             {
               "text": "Perceptrons get lonely on their own.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a845dc211.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_07_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why does AI need MANY perceptrons working together?",
           "options": [
             {
               "text": "One alone can only make tiny decisions -- many can recognize complex things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1a782af26.ogg"
             },
             {
               "text": "Perceptrons get lonely on their own.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a845dc211.ogg"
             },
             {
               "text": "They share crackers between themselves.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cc7a6a9914.ogg"
             },
             {
               "text": "They like to play tag during questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f989cb6840.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_07_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why does AI need MANY perceptrons working together?",
           "options": [
             {
               "text": "They share crackers between themselves.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cc7a6a9914.ogg"
             },
             {
               "text": "They like to play tag during questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f989cb6840.ogg"
             },
             {
               "text": "Perceptrons get lonely on their own.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a845dc211.ogg"
             },
             {
               "text": "One alone can only make tiny decisions -- many can recognize complex things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1a782af26.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_07_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — Why does AI need MANY perceptrons working together?",
           "options": [
             {
               "text": "They like to play tag during questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f989cb6840.ogg"
             },
             {
               "text": "Perceptrons get lonely on their own.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a845dc211.ogg"
             },
             {
               "text": "One alone can only make tiny decisions -- many can recognize complex things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1a782af26.ogg"
             },
             {
               "text": "They share crackers between themselves.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cc7a6a9914.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_07_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: Why does AI need MANY perceptrons working together?",
           "options": [
             {
               "text": "They share crackers between themselves.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cc7a6a9914.ogg"
             },
             {
               "text": "Perceptrons get lonely on their own.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a845dc211.ogg"
             },
             {
               "text": "They like to play tag during questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f989cb6840.ogg"
             },
             {
               "text": "One alone can only make tiny decisions -- many can recognize complex things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1a782af26.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_07_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why does AI need MANY perceptrons working together?",
           "options": [
             {
               "text": "One alone can only make tiny decisions -- many can recognize complex things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1a782af26.ogg"
             },
             {
               "text": "They share crackers between themselves.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cc7a6a9914.ogg"
             },
             {
               "text": "Perceptrons get lonely on their own.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a845dc211.ogg"
             },
             {
               "text": "They like to play tag during questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f989cb6840.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_07_q6_v9.ogg"
         }
       ]
     },
     {
       "id": "q7",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type PLAY and press Send to keep going!",
-          "target_display": "PLAY",
-          "targets": [
-            "play"
-          ],
-          "hint_wrong": "Type the word PLAY (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "🌈"
         }
       },
       "variations": [
@@ -1506,234 +1741,287 @@
           "options": [
             {
               "text": "Perceptrons need to drink ten lemon waters daily.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7d10d70c31.ogg"
             },
             {
               "text": "It learns by looking at lots of examples.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c207f6b7b0.ogg"
             },
             {
               "text": "A perceptron is the tiniest part of an AI brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ac22deb09.ogg"
             },
             {
               "text": "The first perceptron was built in 1958 -- older than your parents!",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/feae76fcb8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q7_v0.wav"
+          "_audio": "assets/audio/q/lesson_07_q7_v0.ogg"
         },
         {
           "prompt": "Listen up — Bytey claims something about the perceptron pet. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             },
             {
               "text": "It can be trained to spot a pattern.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1f7eb0458d.ogg"
             },
             {
               "text": "It says yes or no based on what it sees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c5c2536020.ogg"
             },
             {
               "text": "A perceptron can sing one note for one second.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4961b44ed6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q7_v1.wav"
+          "_audio": "assets/audio/q/lesson_07_q7_v1.ogg"
         },
         {
           "prompt": "Think about this: Bytey claims something about the perceptron pet. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A perceptron is a building block for AI.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db310d49e2.ogg"
             },
             {
               "text": "The first perceptron was built in 1958 -- older than your parents!",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/feae76fcb8.ogg"
             },
             {
               "text": "It looks at inputs and decides 'yes' or 'no'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3683befc1a.ogg"
             },
             {
               "text": "A perceptron eats one cracker per question.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d42ada8f87.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q7_v2.wav"
+          "_audio": "assets/audio/q/lesson_07_q7_v2.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey claims something about the perceptron pet. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "It learns by looking at lots of examples.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c207f6b7b0.ogg"
             },
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             },
             {
               "text": "A perceptron is a building block for AI.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db310d49e2.ogg"
             },
             {
               "text": "Many perceptrons together make a big brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80c2c46f30.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q7_v3.wav"
+          "_audio": "assets/audio/q/lesson_07_q7_v3.ogg"
         },
         {
           "prompt": "Brain time: Bytey claims something about the perceptron pet. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Many perceptrons together can recognize a cat in a photo.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5a6fd42531.ogg"
             },
             {
               "text": "A perceptron is a kind of small flower.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e9eed46ca0.ogg"
             },
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             },
             {
               "text": "A perceptron is the tiniest part of an AI brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ac22deb09.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q7_v4.wav"
+          "_audio": "assets/audio/q/lesson_07_q7_v4.ogg"
         },
         {
           "prompt": "Bytey claims something about the perceptron pet. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Each example helps it learn a little more.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a62aa6e2a5.ogg"
             },
             {
               "text": "Perceptrons close their eyes during hard problems.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/404f31a2d4.ogg"
             },
             {
               "text": "A perceptron is the tiniest part of an AI brain.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ac22deb09.ogg"
             },
             {
               "text": "More examples usually mean better answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/18cafa0a2e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q7_v5.wav"
+          "_audio": "assets/audio/q/lesson_07_q7_v5.ogg"
         },
         {
           "prompt": "Quick! Bytey claims something about the perceptron pet. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "It says yes or no based on what it sees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c5c2536020.ogg"
             },
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             },
             {
               "text": "A perceptron is a building block for AI.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db310d49e2.ogg"
             },
             {
               "text": "It learns by looking at lots of examples.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c207f6b7b0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q7_v6.wav"
+          "_audio": "assets/audio/q/lesson_07_q7_v6.ogg"
         },
         {
           "prompt": "Hey friend — Bytey claims something about the perceptron pet. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A perceptron is a building block for AI.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db310d49e2.ogg"
             },
             {
               "text": "It learns by looking at lots of examples.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c207f6b7b0.ogg"
             },
             {
               "text": "Perceptrons learn by sleeping inside socks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b78a10c627.ogg"
             },
             {
               "text": "It can be trained to spot a pattern.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1f7eb0458d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q7_v7.wav"
+          "_audio": "assets/audio/q/lesson_07_q7_v7.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey claims something about the perceptron pet. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A perceptron only says 'maybe' and shrugs.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/888bb0f881.ogg"
             },
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             },
             {
               "text": "The first perceptron was built in 1958 -- older than your parents!",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/feae76fcb8.ogg"
             },
             {
               "text": "A perceptron is a building block for AI.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db310d49e2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q7_v8.wav"
+          "_audio": "assets/audio/q/lesson_07_q7_v8.ogg"
         },
         {
           "prompt": "Tell me — Bytey claims something about the perceptron pet. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "It says yes or no based on what it sees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c5c2536020.ogg"
             },
             {
               "text": "Each example helps it learn a little more.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a62aa6e2a5.ogg"
             },
             {
               "text": "Perceptrons live inside our shoes whispering.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/07d14d9a11.ogg"
             },
             {
               "text": "A perceptron is a building block for AI.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/db310d49e2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q7_v9.wav"
+          "_audio": "assets/audio/q/lesson_07_q7_v9.ogg"
         }
       ]
     },
     {
       "id": "q8",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type CODE and press Send to keep going!",
-          "target_display": "CODE",
-          "targets": [
-            "code"
-          ],
-          "hint_wrong": "Type the word CODE (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "⭐",
+              "right": true
+            },
+            {
+              "glyph": "🌧️",
+              "right": false
+            },
+            {
+              "glyph": "🥒",
+              "right": false
+            },
+            {
+              "glyph": "🪵",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -1742,220 +2030,260 @@
           "options": [
             {
               "text": "Perceptrons need to drink ten lemon waters daily.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7d10d70c31.ogg"
             },
             {
               "text": "Perceptrons learn by sleeping inside socks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b78a10c627.ogg"
             },
             {
               "text": "It looks at inputs and decides 'yes' or 'no'.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3683befc1a.ogg"
             },
             {
               "text": "If you blow on a model it forgets its job.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44a5d0a079.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q8_v0.wav"
+          "_audio": "assets/audio/q/lesson_07_q8_v0.ogg"
         },
         {
           "prompt": "Think about this: Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             },
             {
               "text": "A perceptron eats one cracker per question.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ada8f87.ogg"
             },
             {
               "text": "Many perceptrons together can recognize a cat in a photo.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5a6fd42531.ogg"
             },
             {
               "text": "A perceptron only says 'maybe' and shrugs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/888bb0f881.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q8_v1.wav"
+          "_audio": "assets/audio/q/lesson_07_q8_v1.ogg"
         },
         {
           "prompt": "Got a quick one: Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             },
             {
               "text": "Perceptrons live inside our shoes whispering.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07d14d9a11.ogg"
             },
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             },
             {
               "text": "The first perceptron was built in 1958 -- older than your parents!",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/feae76fcb8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q8_v2.wav"
+          "_audio": "assets/audio/q/lesson_07_q8_v2.ogg"
         },
         {
           "prompt": "Brain time: Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             },
             {
               "text": "A perceptron is a tiny learning machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9786d2c822.ogg"
             },
             {
               "text": "A perceptron is a kind of small flower.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9eed46ca0.ogg"
             },
             {
               "text": "Perceptrons live inside our shoes whispering.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07d14d9a11.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q8_v3.wav"
+          "_audio": "assets/audio/q/lesson_07_q8_v3.ogg"
         },
         {
           "prompt": "Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
               "text": "It learns by looking at lots of examples.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c207f6b7b0.ogg"
             },
             {
               "text": "Perceptrons are made of water and shy thoughts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09cb627ae9.ogg"
             },
             {
               "text": "Perceptrons live inside our shoes whispering.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/07d14d9a11.ogg"
             },
             {
               "text": "A perceptron only says 'maybe' and shrugs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/888bb0f881.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q8_v4.wav"
+          "_audio": "assets/audio/q/lesson_07_q8_v4.ogg"
         },
         {
           "prompt": "Quick! Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
               "text": "It says yes or no based on what it sees.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c5c2536020.ogg"
             },
             {
               "text": "Perceptrons close their eyes during hard problems.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/404f31a2d4.ogg"
             },
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             },
             {
               "text": "If you blow on a model it forgets its job.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44a5d0a079.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q8_v5.wav"
+          "_audio": "assets/audio/q/lesson_07_q8_v5.ogg"
         },
         {
           "prompt": "Hey friend — Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
               "text": "Perceptrons close their eyes during hard problems.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/404f31a2d4.ogg"
             },
             {
               "text": "A perceptron is a kind of small flower.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9eed46ca0.ogg"
             },
             {
               "text": "It can be trained to spot a pattern.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1f7eb0458d.ogg"
             },
             {
               "text": "Perceptrons need to drink ten lemon waters daily.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7d10d70c31.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q8_v6.wav"
+          "_audio": "assets/audio/q/lesson_07_q8_v6.ogg"
         },
         {
           "prompt": "Bytey wonders: Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
               "text": "Many perceptrons together make a big brain.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/80c2c46f30.ogg"
             },
             {
               "text": "Perceptrons close their eyes during hard problems.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/404f31a2d4.ogg"
             },
             {
               "text": "A perceptron eats one cracker per question.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ada8f87.ogg"
             },
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q8_v7.wav"
+          "_audio": "assets/audio/q/lesson_07_q8_v7.ogg"
         },
         {
           "prompt": "Tell me — Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
               "text": "Each example helps it learn a little more.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a62aa6e2a5.ogg"
             },
             {
               "text": "A perceptron is a kind of crunchy cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a79c87a567.ogg"
             },
             {
               "text": "Perceptrons get hiccups if you ask them too many things.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f8dbf53635.ogg"
             },
             {
               "text": "Perceptrons close their eyes during hard problems.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/404f31a2d4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q8_v8.wav"
+          "_audio": "assets/audio/q/lesson_07_q8_v8.ogg"
         },
         {
           "prompt": "Wait wait wait — Which rule about the perceptron pet is a GOOD rule?",
           "options": [
             {
               "text": "A perceptron eats one cracker per question.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d42ada8f87.ogg"
             },
             {
               "text": "A perceptron is a kind of small flower.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e9eed46ca0.ogg"
             },
             {
               "text": "If you blow on a model it forgets its job.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/44a5d0a079.ogg"
             },
             {
               "text": "A perceptron is a building block for AI.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/db310d49e2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_07_q8_v9.wav"
+          "_audio": "assets/audio/q/lesson_07_q8_v9.ogg"
         }
       ]
     }

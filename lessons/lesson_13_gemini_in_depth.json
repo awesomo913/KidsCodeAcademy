@@ -34,248 +34,303 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "history-scene",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Watch Gemini look at words AND pictures!",
-          "scene": {
-            "id": "gemini"
-          }
+          "prompt": "🖼️ Gemini sees pictures! Tap the picture.",
+          "choices": [
+            {
+              "glyph": "🖼️",
+              "right": true
+            },
+            {
+              "glyph": "📞",
+              "right": false
+            },
+            {
+              "glyph": "🧦",
+              "right": false
+            },
+            {
+              "glyph": "🥒",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
         {
-          "prompt": "What is Gemini in depth?",
+          "prompt": "🔥 Round one, FIGHT! Tap the best fact about Gemini, the Big-Library Helper.",
           "options": [
             {
               "text": "Gemini can taste pictures.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c2d1b43fb2.ogg"
             },
             {
               "text": "Gemini cannot see pictures because of dust.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e933bca486.ogg"
             },
             {
               "text": "Gemini speaks one word at a time, very slowly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0334a6eb8.ogg"
             },
             {
               "text": "Gemini is a helper made by Google.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7acb345f9b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_13_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about Gemini in depth?",
           "options": [
             {
               "text": "Gemini eats batteries to wake up properly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/76902a07b6.ogg"
             },
             {
               "text": "Gemini can look at pictures and words together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ff4e81b94e.ogg"
             },
             {
               "text": "Gemini hates being called Gemini.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9614bd172.ogg"
             },
             {
               "text": "Gemini grew up in a treehouse.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/775195ea96.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_13_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
               "text": "Gemini is a helper made by Google.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7acb345f9b.ogg"
             },
             {
               "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2d0d789751.ogg"
             },
             {
               "text": "Gemini eats batteries to wake up properly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/76902a07b6.ogg"
             },
             {
               "text": "Gemini handles images, words, and sometimes sounds.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86ea8f45a1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_13_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about Gemini in depth. What should he say?",
           "options": [
             {
               "text": "Gemini grew up in a treehouse.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/775195ea96.ogg"
             },
             {
               "text": "Gemini speaks one word at a time, very slowly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0334a6eb8.ogg"
             },
             {
               "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2d0d789751.ogg"
             },
             {
               "text": "Gemini only works on a flip phone from 2003.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/45baa6ce09.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_13_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about Gemini in depth is a GOOD rule?",
           "options": [
             {
               "text": "Gemini can taste pictures.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c2d1b43fb2.ogg"
             },
             {
               "text": "Gemini eats batteries to wake up properly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/76902a07b6.ogg"
             },
             {
               "text": "Gemini can help with school and play.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5d46a5c7c0.ogg"
             },
             {
               "text": "Gemini speaks one word at a time, very slowly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0334a6eb8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_13_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about Gemini in depth, ___",
           "options": [
             {
               "text": "Gemini sneezes if you ask about Tuesday.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72c0d61043.ogg"
             },
             {
               "text": "Gemini can describe a photo you show it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d320bae902.ogg"
             },
             {
               "text": "Gemini sees the world through two pairs of glasses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/efa760322e.ogg"
             },
             {
               "text": "Gemini only knows about clouds and seagulls.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7939552861.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_13_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about Gemini in depth. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2d0d789751.ogg"
             },
             {
               "text": "Gemini can help with school and play.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5d46a5c7c0.ogg"
             },
             {
               "text": "Gemini hates being called Gemini.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a9614bd172.ogg"
             },
             {
               "text": "Gemini can describe a photo you show it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d320bae902.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_13_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with Gemini in depth?",
           "options": [
             {
               "text": "Gemini only works on a flip phone from 2003.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/45baa6ce09.ogg"
             },
             {
               "text": "Gemini is two people in a trench coat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3f9e5215a6.ogg"
             },
             {
               "text": "Gemini handles images, words, and sometimes sounds.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/86ea8f45a1.ogg"
             },
             {
               "text": "Gemini speaks one word at a time, very slowly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0334a6eb8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_13_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about Gemini in depth is silly. Pick the silly one!",
           "options": [
             {
               "text": "Gemini can look at words AND pictures at the same time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d2a413735f.ogg"
             },
             {
               "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2d0d789751.ogg"
             },
             {
               "text": "Gemini can describe a photo you show it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d320bae902.ogg"
             },
             {
               "text": "Gemini sees the world through two pairs of glasses.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/efa760322e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_13_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about Gemini in depth. Which fact would help him?",
           "options": [
             {
               "text": "Gemini is good for searching and finding facts.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/09714b061a.ogg"
             },
             {
               "text": "Gemini is two people in a trench coat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3f9e5215a6.ogg"
             },
             {
               "text": "Gemini hates being called Gemini.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9614bd172.ogg"
             },
             {
               "text": "Gemini eats batteries to wake up properly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/76902a07b6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_13_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Gemini handles pictures + words. Order:",
+          "steps": [
+            "Send a picture",
+            "Ask a question about it",
+            "Gemini answers"
+          ]
         }
       },
       "variations": [
@@ -284,234 +339,270 @@
           "options": [
             {
               "text": "Refuse — it only sees rectangles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0857db68d.ogg"
             },
             {
               "text": "Describe the photo and suggest where to start cleaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/717afeea5a.ogg"
             },
             {
               "text": "Send a tiny robot to vacuum it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/496641bcc1.ogg"
             },
             {
               "text": "Charge you a sticker fee.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a45802e75.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_13_q2_v0.ogg"
         },
         {
           "prompt": "Quick! You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
               "text": "Refuse — it only sees rectangles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0857db68d.ogg"
             },
             {
               "text": "Charge you a sticker fee.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a45802e75.ogg"
             },
             {
               "text": "Send a tiny robot to vacuum it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/496641bcc1.ogg"
             },
             {
               "text": "Describe the photo and suggest where to start cleaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/717afeea5a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_13_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
               "text": "Charge you a sticker fee.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a45802e75.ogg"
             },
             {
               "text": "Refuse — it only sees rectangles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0857db68d.ogg"
             },
             {
               "text": "Send a tiny robot to vacuum it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/496641bcc1.ogg"
             },
             {
               "text": "Describe the photo and suggest where to start cleaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/717afeea5a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_13_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
               "text": "Charge you a sticker fee.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a45802e75.ogg"
             },
             {
               "text": "Describe the photo and suggest where to start cleaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/717afeea5a.ogg"
             },
             {
               "text": "Refuse — it only sees rectangles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0857db68d.ogg"
             },
             {
               "text": "Send a tiny robot to vacuum it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/496641bcc1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_13_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
               "text": "Refuse — it only sees rectangles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0857db68d.ogg"
             },
             {
               "text": "Describe the photo and suggest where to start cleaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/717afeea5a.ogg"
             },
             {
               "text": "Send a tiny robot to vacuum it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/496641bcc1.ogg"
             },
             {
               "text": "Charge you a sticker fee.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a45802e75.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_13_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
               "text": "Describe the photo and suggest where to start cleaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/717afeea5a.ogg"
             },
             {
               "text": "Refuse — it only sees rectangles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0857db68d.ogg"
             },
             {
               "text": "Charge you a sticker fee.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a45802e75.ogg"
             },
             {
               "text": "Send a tiny robot to vacuum it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/496641bcc1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_13_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
               "text": "Charge you a sticker fee.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a45802e75.ogg"
             },
             {
               "text": "Describe the photo and suggest where to start cleaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/717afeea5a.ogg"
             },
             {
               "text": "Send a tiny robot to vacuum it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/496641bcc1.ogg"
             },
             {
               "text": "Refuse — it only sees rectangles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0857db68d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_13_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
               "text": "Refuse — it only sees rectangles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0857db68d.ogg"
             },
             {
               "text": "Charge you a sticker fee.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a45802e75.ogg"
             },
             {
               "text": "Describe the photo and suggest where to start cleaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/717afeea5a.ogg"
             },
             {
               "text": "Send a tiny robot to vacuum it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/496641bcc1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_13_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
               "text": "Describe the photo and suggest where to start cleaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/717afeea5a.ogg"
             },
             {
               "text": "Charge you a sticker fee.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a45802e75.ogg"
             },
             {
               "text": "Refuse — it only sees rectangles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0857db68d.ogg"
             },
             {
               "text": "Send a tiny robot to vacuum it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/496641bcc1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_13_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: You hand Gemini a photo of your messy room. What can it do?",
           "options": [
             {
               "text": "Charge you a sticker fee.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a45802e75.ogg"
             },
             {
               "text": "Send a tiny robot to vacuum it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/496641bcc1.ogg"
             },
             {
               "text": "Refuse — it only sees rectangles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0857db68d.ogg"
             },
             {
               "text": "Describe the photo and suggest where to start cleaning.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/717afeea5a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_13_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🐶"
         }
       },
       "variations": [
@@ -520,234 +611,274 @@
           "options": [
             {
               "text": "Gemini wears a small bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b5752e69f2.ogg"
             },
             {
               "text": "Gemini is louder.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/301b9ec9cf.ogg"
             },
             {
               "text": "Gemini can also look at pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/88a05acc76.ogg"
             },
             {
               "text": "Gemini is allergic to fonts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a20b5d84eb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_13_q3_v0.ogg"
         },
         {
           "prompt": "Quick! What makes Gemini different from a helper that only reads words?",
           "options": [
             {
               "text": "Gemini is louder.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/301b9ec9cf.ogg"
             },
             {
               "text": "Gemini is allergic to fonts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a20b5d84eb.ogg"
             },
             {
               "text": "Gemini wears a small bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b5752e69f2.ogg"
             },
             {
               "text": "Gemini can also look at pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/88a05acc76.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_13_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — What makes Gemini different from a helper that only reads words?",
           "options": [
             {
               "text": "Gemini is allergic to fonts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a20b5d84eb.ogg"
             },
             {
               "text": "Gemini can also look at pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/88a05acc76.ogg"
             },
             {
               "text": "Gemini is louder.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/301b9ec9cf.ogg"
             },
             {
               "text": "Gemini wears a small bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b5752e69f2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_13_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: What makes Gemini different from a helper that only reads words?",
           "options": [
             {
               "text": "Gemini wears a small bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b5752e69f2.ogg"
             },
             {
               "text": "Gemini is louder.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/301b9ec9cf.ogg"
             },
             {
               "text": "Gemini can also look at pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/88a05acc76.ogg"
             },
             {
               "text": "Gemini is allergic to fonts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a20b5d84eb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_13_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — What makes Gemini different from a helper that only reads words?",
           "options": [
             {
               "text": "Gemini is allergic to fonts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a20b5d84eb.ogg"
             },
             {
               "text": "Gemini wears a small bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b5752e69f2.ogg"
             },
             {
               "text": "Gemini can also look at pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/88a05acc76.ogg"
             },
             {
               "text": "Gemini is louder.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/301b9ec9cf.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_13_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — What makes Gemini different from a helper that only reads words?",
           "options": [
             {
               "text": "Gemini is louder.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/301b9ec9cf.ogg"
             },
             {
               "text": "Gemini can also look at pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/88a05acc76.ogg"
             },
             {
               "text": "Gemini is allergic to fonts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a20b5d84eb.ogg"
             },
             {
               "text": "Gemini wears a small bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b5752e69f2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_13_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! What makes Gemini different from a helper that only reads words?",
           "options": [
             {
               "text": "Gemini is louder.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/301b9ec9cf.ogg"
             },
             {
               "text": "Gemini wears a small bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b5752e69f2.ogg"
             },
             {
               "text": "Gemini is allergic to fonts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a20b5d84eb.ogg"
             },
             {
               "text": "Gemini can also look at pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/88a05acc76.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_13_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — What makes Gemini different from a helper that only reads words?",
           "options": [
             {
               "text": "Gemini is louder.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/301b9ec9cf.ogg"
             },
             {
               "text": "Gemini wears a small bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b5752e69f2.ogg"
             },
             {
               "text": "Gemini is allergic to fonts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a20b5d84eb.ogg"
             },
             {
               "text": "Gemini can also look at pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/88a05acc76.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_13_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: What makes Gemini different from a helper that only reads words?",
           "options": [
             {
               "text": "Gemini can also look at pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/88a05acc76.ogg"
             },
             {
               "text": "Gemini is allergic to fonts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a20b5d84eb.ogg"
             },
             {
               "text": "Gemini is louder.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/301b9ec9cf.ogg"
             },
             {
               "text": "Gemini wears a small bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b5752e69f2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_13_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: What makes Gemini different from a helper that only reads words?",
           "options": [
             {
               "text": "Gemini is allergic to fonts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a20b5d84eb.ogg"
             },
             {
               "text": "Gemini wears a small bow tie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b5752e69f2.ogg"
             },
             {
               "text": "Gemini can also look at pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/88a05acc76.ogg"
             },
             {
               "text": "Gemini is louder.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/301b9ec9cf.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_13_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Gemini handles pictures + words. Order:",
+          "steps": [
+            "Send a picture",
+            "Ask a question about it",
+            "Gemini answers"
+          ]
         }
       },
       "variations": [
@@ -756,234 +887,283 @@
           "options": [
             {
               "text": "Gemini is a helper made by Google.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7acb345f9b.ogg"
             },
             {
               "text": "Gemini helps when you have a photo and want to know what's in it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5472814e00.ogg"
             },
             {
               "text": "Gemini can taste pictures.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c2d1b43fb2.ogg"
             },
             {
               "text": "Gemini can answer using the web's facts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a24261b26.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_13_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
               "text": "Gemini can look at words AND pictures at the same time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d2a413735f.ogg"
             },
             {
               "text": "Gemini grew up in a treehouse.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/775195ea96.ogg"
             },
             {
               "text": "Gemini is a helper made by Google.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7acb345f9b.ogg"
             },
             {
               "text": "Gemini is made by Google, which also makes the search engine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b5c83be2f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_13_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
               "text": "Gemini can answer using the web's facts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a24261b26.ogg"
             },
             {
               "text": "Gemini helps when you have a photo and want to know what's in it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5472814e00.ogg"
             },
             {
               "text": "Gemini answers questions in haiku form.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/237a113f77.ogg"
             },
             {
               "text": "Gemini is a helper made by Google.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7acb345f9b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_13_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
               "text": "Gemini can search before answering.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0f81e2c5d3.ogg"
             },
             {
               "text": "Gemini can look at words AND pictures at the same time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d2a413735f.ogg"
             },
             {
               "text": "Gemini only works on a flip phone from 2003.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/45baa6ce09.ogg"
             },
             {
               "text": "Gemini can help with school and play.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5d46a5c7c0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_13_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
               "text": "Gemini handles images, words, and sometimes sounds.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86ea8f45a1.ogg"
             },
             {
               "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2d0d789751.ogg"
             },
             {
               "text": "Gemini helps when you have a photo and want to know what's in it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5472814e00.ogg"
             },
             {
               "text": "Gemini cannot see pictures because of dust.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e933bca486.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_13_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
               "text": "Gemini is made by Google, which also makes the search engine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b5c83be2f.ogg"
             },
             {
               "text": "Gemini eats batteries to wake up properly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/76902a07b6.ogg"
             },
             {
               "text": "Gemini is good for searching and finding facts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09714b061a.ogg"
             },
             {
               "text": "Gemini can search before answering.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0f81e2c5d3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_13_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
               "text": "Gemini can look at words AND pictures at the same time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d2a413735f.ogg"
             },
             {
               "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2d0d789751.ogg"
             },
             {
               "text": "Gemini only knows about clouds and seagulls.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7939552861.ogg"
             },
             {
               "text": "Gemini can answer using the web's facts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a24261b26.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_13_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
               "text": "Gemini is a helper made by Google.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7acb345f9b.ogg"
             },
             {
               "text": "Gemini handles images, words, and sometimes sounds.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/86ea8f45a1.ogg"
             },
             {
               "text": "Gemini is made by Google, which also makes the search engine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5b5c83be2f.ogg"
             },
             {
               "text": "Gemini speaks one word at a time, very slowly.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d0334a6eb8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_13_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
               "text": "Gemini is two people in a trench coat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3f9e5215a6.ogg"
             },
             {
               "text": "Gemini can answer using the web's facts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a24261b26.ogg"
             },
             {
               "text": "Gemini can describe a photo you show it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d320bae902.ogg"
             },
             {
               "text": "Gemini can look at pictures and words together.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ff4e81b94e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_13_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about Gemini in depth.",
           "options": [
             {
               "text": "Gemini is good for searching and finding facts.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09714b061a.ogg"
             },
             {
               "text": "Gemini hates being called Gemini.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a9614bd172.ogg"
             },
             {
               "text": "Gemini can help with school and play.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5d46a5c7c0.ogg"
             },
             {
               "text": "Gemini helps when you have a photo and want to know what's in it.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5472814e00.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_13_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Hero",
+              "right": "🦸"
+            },
+            {
+              "left": "Code",
+              "right": "💻"
+            },
+            {
+              "left": "Game",
+              "right": "🎮"
+            }
+          ]
         }
       },
       "variations": [
@@ -992,220 +1172,260 @@
           "options": [
             {
               "text": "Gemini eats batteries to wake up properly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/76902a07b6.ogg"
             },
             {
               "text": "Gemini grew up in a treehouse.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/775195ea96.ogg"
             },
             {
               "text": "Gemini only works on a flip phone from 2003.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/45baa6ce09.ogg"
             },
             {
               "text": "Gemini is a helper made by Google.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7acb345f9b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_13_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about Gemini in depth?",
           "options": [
             {
               "text": "Gemini only works on a flip phone from 2003.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/45baa6ce09.ogg"
             },
             {
               "text": "Gemini sneezes if you ask about Tuesday.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72c0d61043.ogg"
             },
             {
               "text": "Gemini can look at pictures and words together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ff4e81b94e.ogg"
             },
             {
               "text": "Gemini sees the world through two pairs of glasses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/efa760322e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_13_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about Gemini in depth?",
           "options": [
             {
               "text": "Gemini can answer using the web's facts.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7a24261b26.ogg"
             },
             {
               "text": "Gemini speaks one word at a time, very slowly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0334a6eb8.ogg"
             },
             {
               "text": "Gemini sneezes if you ask about Tuesday.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72c0d61043.ogg"
             },
             {
               "text": "Gemini cannot see pictures because of dust.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e933bca486.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_13_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about Gemini in depth?",
           "options": [
             {
               "text": "Gemini can taste pictures.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c2d1b43fb2.ogg"
             },
             {
               "text": "Gemini works on phones, tablets, and laptops.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2d0d789751.ogg"
             },
             {
               "text": "Gemini sees the world through two pairs of glasses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/efa760322e.ogg"
             },
             {
               "text": "Gemini sneezes if you ask about Tuesday.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/72c0d61043.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_13_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about Gemini in depth?",
           "options": [
             {
               "text": "Gemini can help with school and play.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5d46a5c7c0.ogg"
             },
             {
               "text": "Gemini hates being called Gemini.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9614bd172.ogg"
             },
             {
               "text": "Gemini speaks one word at a time, very slowly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0334a6eb8.ogg"
             },
             {
               "text": "Gemini answers questions in haiku form.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/237a113f77.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_13_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about Gemini in depth?",
           "options": [
             {
               "text": "Gemini can describe a photo you show it.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d320bae902.ogg"
             },
             {
               "text": "Gemini hates being called Gemini.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9614bd172.ogg"
             },
             {
               "text": "Gemini only works on a flip phone from 2003.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/45baa6ce09.ogg"
             },
             {
               "text": "Gemini cannot see pictures because of dust.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e933bca486.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_13_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about Gemini in depth?",
           "options": [
             {
               "text": "Gemini only knows about clouds and seagulls.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7939552861.ogg"
             },
             {
               "text": "Gemini only works on a flip phone from 2003.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/45baa6ce09.ogg"
             },
             {
               "text": "Gemini can search before answering.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/0f81e2c5d3.ogg"
             },
             {
               "text": "Gemini eats batteries to wake up properly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/76902a07b6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_13_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about Gemini in depth?",
           "options": [
             {
               "text": "Gemini only works on a flip phone from 2003.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/45baa6ce09.ogg"
             },
             {
               "text": "Gemini hates being called Gemini.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a9614bd172.ogg"
             },
             {
               "text": "Gemini speaks one word at a time, very slowly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0334a6eb8.ogg"
             },
             {
               "text": "Gemini handles images, words, and sometimes sounds.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/86ea8f45a1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_13_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about Gemini in depth?",
           "options": [
             {
               "text": "Gemini answers questions in haiku form.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/237a113f77.ogg"
             },
             {
               "text": "Gemini only knows about clouds and seagulls.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7939552861.ogg"
             },
             {
               "text": "Gemini speaks one word at a time, very slowly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d0334a6eb8.ogg"
             },
             {
               "text": "Gemini can look at words AND pictures at the same time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d2a413735f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_13_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about Gemini in depth?",
           "options": [
             {
               "text": "Gemini can taste pictures.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c2d1b43fb2.ogg"
             },
             {
               "text": "Gemini grew up in a treehouse.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/775195ea96.ogg"
             },
             {
               "text": "Gemini cannot see pictures because of dust.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e933bca486.ogg"
             },
             {
               "text": "Gemini is good for searching and finding facts.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/09714b061a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_13_q5_v9.ogg"
         }
       ]
     },
@@ -1214,12 +1434,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
+          "prompt": "Type GUNK and press Send to keep going!",
+          "target_display": "GUNK",
           "targets": [
-            "win"
+            "gunk"
           ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "hint_wrong": "Type the word GUNK (any case is fine)."
         }
       },
       "variations": [
@@ -1228,220 +1448,260 @@
           "options": [
             {
               "text": "A regular calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1184dba00.ogg"
             },
             {
               "text": "A mirror.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/abfec41f47.ogg"
             },
             {
               "text": "A toaster oven.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd608bb208.ogg"
             },
             {
               "text": "Gemini -- it can see the photo and tell you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4e28b5842c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_13_q6_v0.ogg"
         },
         {
           "prompt": "Quick! You take a photo of a flower and want to know its name. Which helper?",
           "options": [
             {
               "text": "A mirror.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/abfec41f47.ogg"
             },
             {
               "text": "A regular calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1184dba00.ogg"
             },
             {
               "text": "Gemini -- it can see the photo and tell you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4e28b5842c.ogg"
             },
             {
               "text": "A toaster oven.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd608bb208.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_13_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — You take a photo of a flower and want to know its name. Which helper?",
           "options": [
             {
               "text": "A regular calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1184dba00.ogg"
             },
             {
               "text": "Gemini -- it can see the photo and tell you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4e28b5842c.ogg"
             },
             {
               "text": "A toaster oven.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd608bb208.ogg"
             },
             {
               "text": "A mirror.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/abfec41f47.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_13_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: You take a photo of a flower and want to know its name. Which helper?",
           "options": [
             {
               "text": "A toaster oven.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd608bb208.ogg"
             },
             {
               "text": "A regular calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1184dba00.ogg"
             },
             {
               "text": "A mirror.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/abfec41f47.ogg"
             },
             {
               "text": "Gemini -- it can see the photo and tell you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4e28b5842c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_13_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — You take a photo of a flower and want to know its name. Which helper?",
           "options": [
             {
               "text": "Gemini -- it can see the photo and tell you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4e28b5842c.ogg"
             },
             {
               "text": "A regular calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1184dba00.ogg"
             },
             {
               "text": "A toaster oven.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd608bb208.ogg"
             },
             {
               "text": "A mirror.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/abfec41f47.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_13_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — You take a photo of a flower and want to know its name. Which helper?",
           "options": [
             {
               "text": "A mirror.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/abfec41f47.ogg"
             },
             {
               "text": "A regular calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1184dba00.ogg"
             },
             {
               "text": "Gemini -- it can see the photo and tell you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4e28b5842c.ogg"
             },
             {
               "text": "A toaster oven.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd608bb208.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_13_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! You take a photo of a flower and want to know its name. Which helper?",
           "options": [
             {
               "text": "A mirror.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/abfec41f47.ogg"
             },
             {
               "text": "A regular calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1184dba00.ogg"
             },
             {
               "text": "A toaster oven.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd608bb208.ogg"
             },
             {
               "text": "Gemini -- it can see the photo and tell you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4e28b5842c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_13_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — You take a photo of a flower and want to know its name. Which helper?",
           "options": [
             {
               "text": "A toaster oven.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd608bb208.ogg"
             },
             {
               "text": "Gemini -- it can see the photo and tell you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4e28b5842c.ogg"
             },
             {
               "text": "A mirror.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/abfec41f47.ogg"
             },
             {
               "text": "A regular calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1184dba00.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_13_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: You take a photo of a flower and want to know its name. Which helper?",
           "options": [
             {
               "text": "Gemini -- it can see the photo and tell you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4e28b5842c.ogg"
             },
             {
               "text": "A mirror.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/abfec41f47.ogg"
             },
             {
               "text": "A regular calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1184dba00.ogg"
             },
             {
               "text": "A toaster oven.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd608bb208.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_13_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: You take a photo of a flower and want to know its name. Which helper?",
           "options": [
             {
               "text": "A regular calculator.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1184dba00.ogg"
             },
             {
               "text": "A toaster oven.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd608bb208.ogg"
             },
             {
               "text": "Gemini -- it can see the photo and tell you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4e28b5842c.ogg"
             },
             {
               "text": "A mirror.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/abfec41f47.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_13_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_13_q6_v9.ogg"
         }
       ]
     }

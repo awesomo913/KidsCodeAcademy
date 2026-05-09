@@ -42,248 +42,303 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "history-scene",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Watch Ollama work with no internet!",
-          "scene": {
-            "id": "ollama"
-          }
+          "prompt": "🦙 Ollama runs on YOUR computer — no internet! Tap the laptop.",
+          "choices": [
+            {
+              "glyph": "💻",
+              "right": true
+            },
+            {
+              "glyph": "🌍",
+              "right": false
+            },
+            {
+              "glyph": "🛰️",
+              "right": false
+            },
+            {
+              "glyph": "📡",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
         {
-          "prompt": "What is Ollama on your computer?",
+          "prompt": "🎮 Quick — show me what you know about Ollama: A Robot On YOUR Computer!",
           "options": [
             {
               "text": "Ollama only works if your computer is happy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c171061d04.ogg"
             },
             {
               "text": "Ollama copies your words to the moon for safekeeping.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/22cbe88da5.ogg"
             },
             {
               "text": "Ollama eats your homework if you frown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1035599a9.ogg"
             },
             {
               "text": "Ollama lets a helper live on your own laptop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e34c88f2c4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_16_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about Ollama on your computer?",
           "options": [
             {
               "text": "Local helpers only run when online and yelling.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37d6906eab.ogg"
             },
             {
               "text": "Local helpers do not need the internet.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d2c13bc007.ogg"
             },
             {
               "text": "Ollama only loads if you sing 'Happy Birthday'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c6058e22e6.ogg"
             },
             {
               "text": "Ollama recharges by spinning in circles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34a917d1bd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_16_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about Ollama on your computer.",
           "options": [
             {
               "text": "Ollama lets a helper live on your own laptop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e34c88f2c4.ogg"
             },
             {
               "text": "We can pick which helper to load.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7dc68b64f.ogg"
             },
             {
               "text": "Local helpers only run when online and yelling.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/37d6906eab.ogg"
             },
             {
               "text": "Different models are good at different jobs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/657f793bb2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_16_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about Ollama on your computer. What should he say?",
           "options": [
             {
               "text": "Ollama recharges by spinning in circles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34a917d1bd.ogg"
             },
             {
               "text": "Ollama eats your homework if you frown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1035599a9.ogg"
             },
             {
               "text": "We can pick which helper to load.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b7dc68b64f.ogg"
             },
             {
               "text": "Ollama needs a magic stone the size of a fist.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed14e158df.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_16_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about Ollama on your computer is a GOOD rule?",
           "options": [
             {
               "text": "Ollama only works if your computer is happy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c171061d04.ogg"
             },
             {
               "text": "Local helpers only run when online and yelling.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37d6906eab.ogg"
             },
             {
               "text": "Local helpers feel fast for small tasks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/498df84f08.ogg"
             },
             {
               "text": "Ollama eats your homework if you frown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1035599a9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_16_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about Ollama on your computer, ___",
           "options": [
             {
               "text": "Ollama charges $5 per question in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b56b6ad588.ogg"
             },
             {
               "text": "Ollama works even with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b398e5e0b7.ogg"
             },
             {
               "text": "Ollama is a real llama you keep in your closet.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8de5fd49f6.ogg"
             },
             {
               "text": "Ollama always uses the slowest helper on purpose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5bb5f55a38.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_16_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about Ollama on your computer. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "We can pick which helper to load.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7dc68b64f.ogg"
             },
             {
               "text": "Local helpers feel fast for small tasks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/498df84f08.ogg"
             },
             {
               "text": "Ollama only loads if you sing 'Happy Birthday'.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c6058e22e6.ogg"
             },
             {
               "text": "Ollama works even with no wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b398e5e0b7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_16_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with Ollama on your computer?",
           "options": [
             {
               "text": "Ollama needs a magic stone the size of a fist.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed14e158df.ogg"
             },
             {
               "text": "Ollama is a llama wearing tiny glasses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7e99ee360.ogg"
             },
             {
               "text": "Different models are good at different jobs.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/657f793bb2.ogg"
             },
             {
               "text": "Ollama eats your homework if you frown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1035599a9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_16_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about Ollama on your computer is silly. Pick the silly one!",
           "options": [
             {
               "text": "Ollama runs an AI right on your own computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/868048222e.ogg"
             },
             {
               "text": "We can pick which helper to load.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7dc68b64f.ogg"
             },
             {
               "text": "Ollama works even with no wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b398e5e0b7.ogg"
             },
             {
               "text": "Ollama is a real llama you keep in your closet.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8de5fd49f6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_16_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about Ollama on your computer. Which fact would help him?",
           "options": [
             {
               "text": "Ollama works even with no internet -- no WiFi needed.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/01bf9e7978.ogg"
             },
             {
               "text": "Ollama is a llama wearing tiny glasses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7e99ee360.ogg"
             },
             {
               "text": "Ollama only loads if you sing 'Happy Birthday'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c6058e22e6.ogg"
             },
             {
               "text": "Local helpers only run when online and yelling.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37d6906eab.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_16_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Ollama runs on your computer — no internet. Order:",
+          "steps": [
+            "Download the model once",
+            "Ask a question",
+            "It answers without wifi"
+          ]
         }
       },
       "variations": [
@@ -292,220 +347,260 @@
           "options": [
             {
               "text": "A local Ollama model can still chat with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b72f5c1341.ogg"
             },
             {
               "text": "You must mail your question to Claude.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/783fabcbfa.ogg"
             },
             {
               "text": "You say 'wifi please' three times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09e3fe7681.ogg"
             },
             {
               "text": "You give up and eat a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5090925242.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_16_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Mom turns off the wifi but you still want to chat with a helper. What now?",
           "options": [
             {
               "text": "A local Ollama model can still chat with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b72f5c1341.ogg"
             },
             {
               "text": "You say 'wifi please' three times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09e3fe7681.ogg"
             },
             {
               "text": "You give up and eat a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5090925242.ogg"
             },
             {
               "text": "You must mail your question to Claude.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/783fabcbfa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_16_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Mom turns off the wifi but you still want to chat with a helper. What now?",
           "options": [
             {
               "text": "A local Ollama model can still chat with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b72f5c1341.ogg"
             },
             {
               "text": "You must mail your question to Claude.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/783fabcbfa.ogg"
             },
             {
               "text": "You say 'wifi please' three times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09e3fe7681.ogg"
             },
             {
               "text": "You give up and eat a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5090925242.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_16_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Mom turns off the wifi but you still want to chat with a helper. What now?",
           "options": [
             {
               "text": "You say 'wifi please' three times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09e3fe7681.ogg"
             },
             {
               "text": "You give up and eat a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5090925242.ogg"
             },
             {
               "text": "You must mail your question to Claude.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/783fabcbfa.ogg"
             },
             {
               "text": "A local Ollama model can still chat with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b72f5c1341.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_16_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Mom turns off the wifi but you still want to chat with a helper. What now?",
           "options": [
             {
               "text": "You say 'wifi please' three times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09e3fe7681.ogg"
             },
             {
               "text": "You must mail your question to Claude.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/783fabcbfa.ogg"
             },
             {
               "text": "You give up and eat a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5090925242.ogg"
             },
             {
               "text": "A local Ollama model can still chat with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b72f5c1341.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_16_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Mom turns off the wifi but you still want to chat with a helper. What now?",
           "options": [
             {
               "text": "A local Ollama model can still chat with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b72f5c1341.ogg"
             },
             {
               "text": "You say 'wifi please' three times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09e3fe7681.ogg"
             },
             {
               "text": "You must mail your question to Claude.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/783fabcbfa.ogg"
             },
             {
               "text": "You give up and eat a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5090925242.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_16_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Mom turns off the wifi but you still want to chat with a helper. What now?",
           "options": [
             {
               "text": "You say 'wifi please' three times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09e3fe7681.ogg"
             },
             {
               "text": "A local Ollama model can still chat with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b72f5c1341.ogg"
             },
             {
               "text": "You give up and eat a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5090925242.ogg"
             },
             {
               "text": "You must mail your question to Claude.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/783fabcbfa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_16_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Mom turns off the wifi but you still want to chat with a helper. What now?",
           "options": [
             {
               "text": "You must mail your question to Claude.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/783fabcbfa.ogg"
             },
             {
               "text": "You give up and eat a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5090925242.ogg"
             },
             {
               "text": "A local Ollama model can still chat with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b72f5c1341.ogg"
             },
             {
               "text": "You say 'wifi please' three times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09e3fe7681.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_16_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Mom turns off the wifi but you still want to chat with a helper. What now?",
           "options": [
             {
               "text": "You say 'wifi please' three times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09e3fe7681.ogg"
             },
             {
               "text": "You give up and eat a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5090925242.ogg"
             },
             {
               "text": "You must mail your question to Claude.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/783fabcbfa.ogg"
             },
             {
               "text": "A local Ollama model can still chat with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b72f5c1341.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_16_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Mom turns off the wifi but you still want to chat with a helper. What now?",
           "options": [
             {
               "text": "You must mail your question to Claude.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/783fabcbfa.ogg"
             },
             {
               "text": "You say 'wifi please' three times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/09e3fe7681.ogg"
             },
             {
               "text": "You give up and eat a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5090925242.ogg"
             },
             {
               "text": "A local Ollama model can still chat with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b72f5c1341.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_16_q2_v9.ogg"
         }
       ]
     },
@@ -514,12 +609,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
+          "prompt": "Type GOOP and press Send to keep going!",
+          "target_display": "GOOP",
           "targets": [
-            "fun"
+            "goop"
           ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "hint_wrong": "Type the word GOOP (any case is fine)."
         }
       },
       "variations": [
@@ -528,234 +623,270 @@
           "options": [
             {
               "text": "Privacy — your words stay on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcf509bccd.ogg"
             },
             {
               "text": "Local models can fly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f647df51e3.ogg"
             },
             {
               "text": "Local models smell better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02378b5257.ogg"
             },
             {
               "text": "Local models love being chosen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29b7d184db.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_16_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Why might you pick a local model over a cloud one?",
           "options": [
             {
               "text": "Privacy — your words stay on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcf509bccd.ogg"
             },
             {
               "text": "Local models love being chosen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29b7d184db.ogg"
             },
             {
               "text": "Local models smell better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02378b5257.ogg"
             },
             {
               "text": "Local models can fly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f647df51e3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_16_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why might you pick a local model over a cloud one?",
           "options": [
             {
               "text": "Local models love being chosen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29b7d184db.ogg"
             },
             {
               "text": "Local models smell better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02378b5257.ogg"
             },
             {
               "text": "Local models can fly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f647df51e3.ogg"
             },
             {
               "text": "Privacy — your words stay on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcf509bccd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_16_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why might you pick a local model over a cloud one?",
           "options": [
             {
               "text": "Privacy — your words stay on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcf509bccd.ogg"
             },
             {
               "text": "Local models smell better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02378b5257.ogg"
             },
             {
               "text": "Local models love being chosen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29b7d184db.ogg"
             },
             {
               "text": "Local models can fly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f647df51e3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_16_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Why might you pick a local model over a cloud one?",
           "options": [
             {
               "text": "Local models can fly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f647df51e3.ogg"
             },
             {
               "text": "Privacy — your words stay on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcf509bccd.ogg"
             },
             {
               "text": "Local models love being chosen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29b7d184db.ogg"
             },
             {
               "text": "Local models smell better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02378b5257.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_16_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why might you pick a local model over a cloud one?",
           "options": [
             {
               "text": "Local models smell better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02378b5257.ogg"
             },
             {
               "text": "Local models love being chosen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29b7d184db.ogg"
             },
             {
               "text": "Local models can fly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f647df51e3.ogg"
             },
             {
               "text": "Privacy — your words stay on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcf509bccd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_16_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why might you pick a local model over a cloud one?",
           "options": [
             {
               "text": "Local models smell better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02378b5257.ogg"
             },
             {
               "text": "Local models love being chosen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29b7d184db.ogg"
             },
             {
               "text": "Local models can fly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f647df51e3.ogg"
             },
             {
               "text": "Privacy — your words stay on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcf509bccd.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_16_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Why might you pick a local model over a cloud one?",
           "options": [
             {
               "text": "Local models smell better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02378b5257.ogg"
             },
             {
               "text": "Privacy — your words stay on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcf509bccd.ogg"
             },
             {
               "text": "Local models love being chosen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29b7d184db.ogg"
             },
             {
               "text": "Local models can fly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f647df51e3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_16_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Why might you pick a local model over a cloud one?",
           "options": [
             {
               "text": "Local models love being chosen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29b7d184db.ogg"
             },
             {
               "text": "Privacy — your words stay on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcf509bccd.ogg"
             },
             {
               "text": "Local models smell better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02378b5257.ogg"
             },
             {
               "text": "Local models can fly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f647df51e3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_16_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why might you pick a local model over a cloud one?",
           "options": [
             {
               "text": "Local models smell better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/02378b5257.ogg"
             },
             {
               "text": "Local models love being chosen.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/29b7d184db.ogg"
             },
             {
               "text": "Privacy — your words stay on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fcf509bccd.ogg"
             },
             {
               "text": "Local models can fly.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f647df51e3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_16_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "🎮"
         }
       },
       "variations": [
@@ -764,234 +895,287 @@
           "options": [
             {
               "text": "Ollama lets a helper live on your own laptop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e34c88f2c4.ogg"
             },
             {
               "text": "What you ask Ollama stays on your computer, totally private.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/48fec94f1e.ogg"
             },
             {
               "text": "Ollama only works if your computer is happy.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c171061d04.ogg"
             },
             {
               "text": "Ollama keeps your words on your machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/96aa5592cf.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_16_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about Ollama on your computer.",
           "options": [
             {
               "text": "Ollama runs an AI right on your own computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/868048222e.ogg"
             },
             {
               "text": "Ollama recharges by spinning in circles.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/34a917d1bd.ogg"
             },
             {
               "text": "Ollama lets a helper live on your own laptop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e34c88f2c4.ogg"
             },
             {
               "text": "Ollama is slower than cloud helpers but doesn't need a server.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb115ade74.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_16_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about Ollama on your computer.",
           "options": [
             {
               "text": "Ollama keeps your words on your machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/96aa5592cf.ogg"
             },
             {
               "text": "What you ask Ollama stays on your computer, totally private.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/48fec94f1e.ogg"
             },
             {
               "text": "Ollama types using its tail.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6d8b592961.ogg"
             },
             {
               "text": "Ollama lets a helper live on your own laptop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e34c88f2c4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_16_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about Ollama on your computer.",
           "options": [
             {
               "text": "Ollama is private — no one else sees your chat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e85e8271f.ogg"
             },
             {
               "text": "Ollama runs an AI right on your own computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/868048222e.ogg"
             },
             {
               "text": "Ollama needs a magic stone the size of a fist.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ed14e158df.ogg"
             },
             {
               "text": "Local helpers feel fast for small tasks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/498df84f08.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_16_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about Ollama on your computer.",
           "options": [
             {
               "text": "Different models are good at different jobs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/657f793bb2.ogg"
             },
             {
               "text": "We can pick which helper to load.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7dc68b64f.ogg"
             },
             {
               "text": "What you ask Ollama stays on your computer, totally private.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/48fec94f1e.ogg"
             },
             {
               "text": "Ollama copies your words to the moon for safekeeping.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/22cbe88da5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_16_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about Ollama on your computer.",
           "options": [
             {
               "text": "Ollama is slower than cloud helpers but doesn't need a server.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb115ade74.ogg"
             },
             {
               "text": "Local helpers only run when online and yelling.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/37d6906eab.ogg"
             },
             {
               "text": "Ollama works even with no internet -- no WiFi needed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/01bf9e7978.ogg"
             },
             {
               "text": "Ollama is private — no one else sees your chat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e85e8271f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_16_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about Ollama on your computer.",
           "options": [
             {
               "text": "Ollama runs an AI right on your own computer.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/868048222e.ogg"
             },
             {
               "text": "We can pick which helper to load.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b7dc68b64f.ogg"
             },
             {
               "text": "Ollama always uses the slowest helper on purpose.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5bb5f55a38.ogg"
             },
             {
               "text": "Ollama keeps your words on your machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/96aa5592cf.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_16_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about Ollama on your computer.",
           "options": [
             {
               "text": "Ollama lets a helper live on your own laptop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e34c88f2c4.ogg"
             },
             {
               "text": "Different models are good at different jobs.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/657f793bb2.ogg"
             },
             {
               "text": "Ollama is slower than cloud helpers but doesn't need a server.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/cb115ade74.ogg"
             },
             {
               "text": "Ollama eats your homework if you frown.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e1035599a9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_16_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about Ollama on your computer.",
           "options": [
             {
               "text": "Ollama is a llama wearing tiny glasses.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b7e99ee360.ogg"
             },
             {
               "text": "Ollama keeps your words on your machine.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/96aa5592cf.ogg"
             },
             {
               "text": "Ollama works even with no wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b398e5e0b7.ogg"
             },
             {
               "text": "Local helpers do not need the internet.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d2c13bc007.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_16_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about Ollama on your computer.",
           "options": [
             {
               "text": "Ollama works even with no internet -- no WiFi needed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/01bf9e7978.ogg"
             },
             {
               "text": "Ollama only loads if you sing 'Happy Birthday'.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c6058e22e6.ogg"
             },
             {
               "text": "Local helpers feel fast for small tasks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/498df84f08.ogg"
             },
             {
               "text": "What you ask Ollama stays on your computer, totally private.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/48fec94f1e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_16_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🚀",
+              "right": true
+            },
+            {
+              "glyph": "🥬",
+              "right": false
+            },
+            {
+              "glyph": "🧅",
+              "right": false
+            },
+            {
+              "glyph": "🪣",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -1000,220 +1184,260 @@
           "options": [
             {
               "text": "Local helpers only run when online and yelling.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37d6906eab.ogg"
             },
             {
               "text": "Ollama recharges by spinning in circles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34a917d1bd.ogg"
             },
             {
               "text": "Ollama needs a magic stone the size of a fist.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed14e158df.ogg"
             },
             {
               "text": "Ollama lets a helper live on your own laptop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e34c88f2c4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_16_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about Ollama on your computer?",
           "options": [
             {
               "text": "Ollama needs a magic stone the size of a fist.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed14e158df.ogg"
             },
             {
               "text": "Ollama charges $5 per question in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b56b6ad588.ogg"
             },
             {
               "text": "Local helpers do not need the internet.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d2c13bc007.ogg"
             },
             {
               "text": "Ollama is a real llama you keep in your closet.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8de5fd49f6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_16_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about Ollama on your computer?",
           "options": [
             {
               "text": "Ollama keeps your words on your machine.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/96aa5592cf.ogg"
             },
             {
               "text": "Ollama eats your homework if you frown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1035599a9.ogg"
             },
             {
               "text": "Ollama charges $5 per question in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b56b6ad588.ogg"
             },
             {
               "text": "Ollama copies your words to the moon for safekeeping.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/22cbe88da5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_16_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about Ollama on your computer?",
           "options": [
             {
               "text": "Ollama only works if your computer is happy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c171061d04.ogg"
             },
             {
               "text": "We can pick which helper to load.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b7dc68b64f.ogg"
             },
             {
               "text": "Ollama is a real llama you keep in your closet.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8de5fd49f6.ogg"
             },
             {
               "text": "Ollama charges $5 per question in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b56b6ad588.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_16_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about Ollama on your computer?",
           "options": [
             {
               "text": "Local helpers feel fast for small tasks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/498df84f08.ogg"
             },
             {
               "text": "Ollama only loads if you sing 'Happy Birthday'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c6058e22e6.ogg"
             },
             {
               "text": "Ollama eats your homework if you frown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1035599a9.ogg"
             },
             {
               "text": "Ollama types using its tail.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8b592961.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_16_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about Ollama on your computer?",
           "options": [
             {
               "text": "Ollama works even with no wifi.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b398e5e0b7.ogg"
             },
             {
               "text": "Ollama only loads if you sing 'Happy Birthday'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c6058e22e6.ogg"
             },
             {
               "text": "Ollama needs a magic stone the size of a fist.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed14e158df.ogg"
             },
             {
               "text": "Ollama copies your words to the moon for safekeeping.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/22cbe88da5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_16_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about Ollama on your computer?",
           "options": [
             {
               "text": "Ollama always uses the slowest helper on purpose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5bb5f55a38.ogg"
             },
             {
               "text": "Ollama needs a magic stone the size of a fist.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed14e158df.ogg"
             },
             {
               "text": "Ollama is private — no one else sees your chat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6e85e8271f.ogg"
             },
             {
               "text": "Local helpers only run when online and yelling.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/37d6906eab.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_16_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about Ollama on your computer?",
           "options": [
             {
               "text": "Ollama needs a magic stone the size of a fist.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ed14e158df.ogg"
             },
             {
               "text": "Ollama only loads if you sing 'Happy Birthday'.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c6058e22e6.ogg"
             },
             {
               "text": "Ollama eats your homework if you frown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1035599a9.ogg"
             },
             {
               "text": "Different models are good at different jobs.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/657f793bb2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_16_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about Ollama on your computer?",
           "options": [
             {
               "text": "Ollama types using its tail.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6d8b592961.ogg"
             },
             {
               "text": "Ollama always uses the slowest helper on purpose.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5bb5f55a38.ogg"
             },
             {
               "text": "Ollama eats your homework if you frown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e1035599a9.ogg"
             },
             {
               "text": "Ollama runs an AI right on your own computer.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/868048222e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_16_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about Ollama on your computer?",
           "options": [
             {
               "text": "Ollama only works if your computer is happy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c171061d04.ogg"
             },
             {
               "text": "Ollama recharges by spinning in circles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/34a917d1bd.ogg"
             },
             {
               "text": "Ollama copies your words to the moon for safekeeping.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/22cbe88da5.ogg"
             },
             {
               "text": "Ollama works even with no internet -- no WiFi needed.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/01bf9e7978.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_16_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_16_q5_v9.ogg"
         }
       ]
     }

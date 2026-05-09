@@ -49,249 +49,276 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Which part of this error names the problem?\n\"NameError: 'kitten' is not defined on line 3\"",
-          "choices": [
-            {
-              "label": "line 3",
-              "right": false
-            },
-            {
-              "label": "NameError",
-              "right": true
-            },
-            {
-              "label": "kitten",
-              "right": false
-            },
-            {
-              "label": "is not defined",
-              "right": false
-            }
-          ]
+          "prompt": "Type STINK and press Send to keep going!",
+          "target_display": "STINK",
+          "targets": [
+            "stink"
+          ],
+          "hint_wrong": "Type the word STINK (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "What is reading the error?",
+          "prompt": "🔥 Round one, FIGHT! Tap the best fact about Read the Red Words.",
           "options": [
             {
               "text": "Ignore errors -- they go away after 5 minutes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4202e4b086.ogg"
             },
             {
               "text": "Skip the last line — it is hiding from you.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec2d855f2d.ogg"
             },
             {
               "text": "Hide errors from the helper — it can't handle them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9436b3205.ogg"
             },
             {
               "text": "Errors tell you where to look.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ffe2266e66.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_29_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about reading the error?",
           "options": [
             {
               "text": "Errors are always huge problems and the end of days.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e037e7acee.ogg"
             },
             {
               "text": "Read the last line of an error first.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c4adf1f3c.ogg"
             },
             {
               "text": "Errors taste like burnt toast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa6f99b9c.ogg"
             },
             {
               "text": "Errors are written in invisible ink most of the time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b39c0b239.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_29_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about reading the error.",
           "options": [
             {
               "text": "Errors tell you where to look.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ffe2266e66.ogg"
             },
             {
               "text": "Errors are not scary, they are clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/495c35264b.ogg"
             },
             {
               "text": "Errors are always huge problems and the end of days.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e037e7acee.ogg"
             },
             {
               "text": "Errors are easier to fix when you read them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4a116bb62f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_29_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about reading the error. What should he say?",
           "options": [
             {
               "text": "Errors are written in invisible ink most of the time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b39c0b239.ogg"
             },
             {
               "text": "Hide errors from the helper — it can't handle them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9436b3205.ogg"
             },
             {
               "text": "Errors are not scary, they are clues.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/495c35264b.ogg"
             },
             {
               "text": "Errors are mean and useless and always lying.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/115e7e8e9b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_29_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about reading the error is a GOOD rule?",
           "options": [
             {
               "text": "Ignore errors -- they go away after 5 minutes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4202e4b086.ogg"
             },
             {
               "text": "Errors are always huge problems and the end of days.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e037e7acee.ogg"
             },
             {
               "text": "Sharing the error helps the helper help you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/441e2f3bb9.ogg"
             },
             {
               "text": "Hide errors from the helper — it can't handle them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9436b3205.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_29_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about reading the error, ___",
           "options": [
             {
               "text": "Errors disappear if you smile politely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c1e301e9cc.ogg"
             },
             {
               "text": "Line numbers in errors are gold.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ea8ed4530.ogg"
             },
             {
               "text": "Errors are punishment for asking too many questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1be0ef2b2.ogg"
             },
             {
               "text": "Errors come from ghosts inside the cable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ed1439b5e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_29_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about reading the error. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Errors are not scary, they are clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/495c35264b.ogg"
             },
             {
               "text": "Sharing the error helps the helper help you.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/441e2f3bb9.ogg"
             },
             {
               "text": "Errors taste like burnt toast.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6aa6f99b9c.ogg"
             },
             {
               "text": "Line numbers in errors are gold.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1ea8ed4530.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_29_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with reading the error?",
           "options": [
             {
               "text": "Errors are mean and useless and always lying.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/115e7e8e9b.ogg"
             },
             {
               "text": "Errors must be sung to a slow waltz.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b86285c8ba.ogg"
             },
             {
               "text": "Errors are easier to fix when you read them.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4a116bb62f.ogg"
             },
             {
               "text": "Hide errors from the helper — it can't handle them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9436b3205.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_29_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about reading the error is silly. Pick the silly one!",
           "options": [
             {
               "text": "An error message is the computer telling you what went wrong.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e206399cf2.ogg"
             },
             {
               "text": "Errors are not scary, they are clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/495c35264b.ogg"
             },
             {
               "text": "Line numbers in errors are gold.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1ea8ed4530.ogg"
             },
             {
               "text": "Errors are punishment for asking too many questions.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1be0ef2b2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_29_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about reading the error. Which fact would help him?",
           "options": [
             {
               "text": "Reading the error word-by-word usually points right at the problem.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f7c0ee00d2.ogg"
             },
             {
               "text": "Errors must be sung to a slow waltz.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b86285c8ba.ogg"
             },
             {
               "text": "Errors taste like burnt toast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa6f99b9c.ogg"
             },
             {
               "text": "Errors are always huge problems and the end of days.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e037e7acee.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_29_q1_v9.ogg"
         }
       ]
     },
@@ -300,12 +327,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
+          "prompt": "Type MINECRAFT and press Send to keep going!",
+          "target_display": "MINECRAFT",
           "targets": [
-            "yes"
+            "minecraft"
           ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "hint_wrong": "Type the word MINECRAFT (any case is fine)."
         }
       },
       "variations": [
@@ -314,234 +341,270 @@
           "options": [
             {
               "text": "Your computer needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ab1095ba90.ogg"
             },
             {
               "text": "You used `x` without making it first (a typo or missing variable).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82befbc09e.ogg"
             },
             {
               "text": "'x' has run away to a quiet farm.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e565c00a4.ogg"
             },
             {
               "text": "There is a real ghost in the wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/162016e1fc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_29_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Your error says 'NameError: name x is not defined'. What does that hint at?",
           "options": [
             {
               "text": "You used `x` without making it first (a typo or missing variable).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82befbc09e.ogg"
             },
             {
               "text": "Your computer needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ab1095ba90.ogg"
             },
             {
               "text": "There is a real ghost in the wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/162016e1fc.ogg"
             },
             {
               "text": "'x' has run away to a quiet farm.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e565c00a4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_29_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Your error says 'NameError: name x is not defined'. What does that hint at?",
           "options": [
             {
               "text": "There is a real ghost in the wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/162016e1fc.ogg"
             },
             {
               "text": "'x' has run away to a quiet farm.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e565c00a4.ogg"
             },
             {
               "text": "You used `x` without making it first (a typo or missing variable).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82befbc09e.ogg"
             },
             {
               "text": "Your computer needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ab1095ba90.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_29_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Your error says 'NameError: name x is not defined'. What does that hint at?",
           "options": [
             {
               "text": "You used `x` without making it first (a typo or missing variable).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82befbc09e.ogg"
             },
             {
               "text": "Your computer needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ab1095ba90.ogg"
             },
             {
               "text": "There is a real ghost in the wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/162016e1fc.ogg"
             },
             {
               "text": "'x' has run away to a quiet farm.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e565c00a4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_29_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Your error says 'NameError: name x is not defined'. What does that hint at?",
           "options": [
             {
               "text": "There is a real ghost in the wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/162016e1fc.ogg"
             },
             {
               "text": "Your computer needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ab1095ba90.ogg"
             },
             {
               "text": "'x' has run away to a quiet farm.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e565c00a4.ogg"
             },
             {
               "text": "You used `x` without making it first (a typo or missing variable).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82befbc09e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_29_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Your error says 'NameError: name x is not defined'. What does that hint at?",
           "options": [
             {
               "text": "You used `x` without making it first (a typo or missing variable).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82befbc09e.ogg"
             },
             {
               "text": "'x' has run away to a quiet farm.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e565c00a4.ogg"
             },
             {
               "text": "Your computer needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ab1095ba90.ogg"
             },
             {
               "text": "There is a real ghost in the wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/162016e1fc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_29_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Your error says 'NameError: name x is not defined'. What does that hint at?",
           "options": [
             {
               "text": "Your computer needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ab1095ba90.ogg"
             },
             {
               "text": "'x' has run away to a quiet farm.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e565c00a4.ogg"
             },
             {
               "text": "There is a real ghost in the wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/162016e1fc.ogg"
             },
             {
               "text": "You used `x` without making it first (a typo or missing variable).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82befbc09e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_29_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Your error says 'NameError: name x is not defined'. What does that hint at?",
           "options": [
             {
               "text": "There is a real ghost in the wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/162016e1fc.ogg"
             },
             {
               "text": "You used `x` without making it first (a typo or missing variable).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82befbc09e.ogg"
             },
             {
               "text": "Your computer needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ab1095ba90.ogg"
             },
             {
               "text": "'x' has run away to a quiet farm.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e565c00a4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_29_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Your error says 'NameError: name x is not defined'. What does that hint at?",
           "options": [
             {
               "text": "You used `x` without making it first (a typo or missing variable).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82befbc09e.ogg"
             },
             {
               "text": "'x' has run away to a quiet farm.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e565c00a4.ogg"
             },
             {
               "text": "There is a real ghost in the wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/162016e1fc.ogg"
             },
             {
               "text": "Your computer needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ab1095ba90.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_29_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Your error says 'NameError: name x is not defined'. What does that hint at?",
           "options": [
             {
               "text": "'x' has run away to a quiet farm.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e565c00a4.ogg"
             },
             {
               "text": "You used `x` without making it first (a typo or missing variable).",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/82befbc09e.ogg"
             },
             {
               "text": "There is a real ghost in the wifi.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/162016e1fc.ogg"
             },
             {
               "text": "Your computer needs a nap.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ab1095ba90.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_29_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "⚡"
         }
       },
       "variations": [
@@ -550,234 +613,287 @@
           "options": [
             {
               "text": "In the very middle, written sideways.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a34265271.ogg"
             },
             {
               "text": "Near the end — the last line + line number.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6ea9e35a86.ogg"
             },
             {
               "text": "On the back of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0673a142aa.ogg"
             },
             {
               "text": "Inside the punctuation marks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6859849db3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_29_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Where do you usually find the most useful info in an error?",
           "options": [
             {
               "text": "Near the end — the last line + line number.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6ea9e35a86.ogg"
             },
             {
               "text": "On the back of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0673a142aa.ogg"
             },
             {
               "text": "In the very middle, written sideways.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a34265271.ogg"
             },
             {
               "text": "Inside the punctuation marks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6859849db3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_29_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Where do you usually find the most useful info in an error?",
           "options": [
             {
               "text": "Near the end — the last line + line number.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6ea9e35a86.ogg"
             },
             {
               "text": "In the very middle, written sideways.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a34265271.ogg"
             },
             {
               "text": "Inside the punctuation marks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6859849db3.ogg"
             },
             {
               "text": "On the back of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0673a142aa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_29_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Where do you usually find the most useful info in an error?",
           "options": [
             {
               "text": "In the very middle, written sideways.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a34265271.ogg"
             },
             {
               "text": "On the back of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0673a142aa.ogg"
             },
             {
               "text": "Inside the punctuation marks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6859849db3.ogg"
             },
             {
               "text": "Near the end — the last line + line number.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6ea9e35a86.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_29_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Where do you usually find the most useful info in an error?",
           "options": [
             {
               "text": "Inside the punctuation marks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6859849db3.ogg"
             },
             {
               "text": "In the very middle, written sideways.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a34265271.ogg"
             },
             {
               "text": "Near the end — the last line + line number.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6ea9e35a86.ogg"
             },
             {
               "text": "On the back of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0673a142aa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_29_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Where do you usually find the most useful info in an error?",
           "options": [
             {
               "text": "Near the end — the last line + line number.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6ea9e35a86.ogg"
             },
             {
               "text": "Inside the punctuation marks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6859849db3.ogg"
             },
             {
               "text": "In the very middle, written sideways.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a34265271.ogg"
             },
             {
               "text": "On the back of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0673a142aa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_29_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Where do you usually find the most useful info in an error?",
           "options": [
             {
               "text": "Near the end — the last line + line number.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6ea9e35a86.ogg"
             },
             {
               "text": "Inside the punctuation marks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6859849db3.ogg"
             },
             {
               "text": "In the very middle, written sideways.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a34265271.ogg"
             },
             {
               "text": "On the back of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0673a142aa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_29_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Where do you usually find the most useful info in an error?",
           "options": [
             {
               "text": "In the very middle, written sideways.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a34265271.ogg"
             },
             {
               "text": "On the back of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0673a142aa.ogg"
             },
             {
               "text": "Inside the punctuation marks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6859849db3.ogg"
             },
             {
               "text": "Near the end — the last line + line number.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6ea9e35a86.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_29_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Where do you usually find the most useful info in an error?",
           "options": [
             {
               "text": "In the very middle, written sideways.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a34265271.ogg"
             },
             {
               "text": "Near the end — the last line + line number.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6ea9e35a86.ogg"
             },
             {
               "text": "On the back of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0673a142aa.ogg"
             },
             {
               "text": "Inside the punctuation marks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6859849db3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_29_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Where do you usually find the most useful info in an error?",
           "options": [
             {
               "text": "Near the end — the last line + line number.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6ea9e35a86.ogg"
             },
             {
               "text": "In the very middle, written sideways.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a34265271.ogg"
             },
             {
               "text": "Inside the punctuation marks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6859849db3.ogg"
             },
             {
               "text": "On the back of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0673a142aa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_29_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🎮",
+              "right": true
+            },
+            {
+              "glyph": "🥦",
+              "right": false
+            },
+            {
+              "glyph": "📚",
+              "right": false
+            },
+            {
+              "glyph": "🧦",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -786,234 +902,270 @@
           "options": [
             {
               "text": "Errors tell you where to look.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ffe2266e66.ogg"
             },
             {
               "text": "Errors aren't bad -- they're clues to fix the bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/04611dd25d.ogg"
             },
             {
               "text": "Ignore errors -- they go away after 5 minutes.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4202e4b086.ogg"
             },
             {
               "text": "Many errors are small typos.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3cda1f9a1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_29_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about reading the error.",
           "options": [
             {
               "text": "An error message is the computer telling you what went wrong.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e206399cf2.ogg"
             },
             {
               "text": "Errors are written in invisible ink most of the time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6b39c0b239.ogg"
             },
             {
               "text": "Errors tell you where to look.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ffe2266e66.ogg"
             },
             {
               "text": "The line number in an error tells you where to look.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0509e220d9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_29_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about reading the error.",
           "options": [
             {
               "text": "Many errors are small typos.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3cda1f9a1.ogg"
             },
             {
               "text": "Errors aren't bad -- they're clues to fix the bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/04611dd25d.ogg"
             },
             {
               "text": "Each error means you owe the computer a cookie.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4117324ed9.ogg"
             },
             {
               "text": "Errors tell you where to look.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ffe2266e66.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_29_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about reading the error.",
           "options": [
             {
               "text": "An error message names the kind of problem.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f44b9e9f73.ogg"
             },
             {
               "text": "An error message is the computer telling you what went wrong.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e206399cf2.ogg"
             },
             {
               "text": "Errors are mean and useless and always lying.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/115e7e8e9b.ogg"
             },
             {
               "text": "Sharing the error helps the helper help you.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/441e2f3bb9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_29_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about reading the error.",
           "options": [
             {
               "text": "Errors are easier to fix when you read them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4a116bb62f.ogg"
             },
             {
               "text": "Errors are not scary, they are clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/495c35264b.ogg"
             },
             {
               "text": "Errors aren't bad -- they're clues to fix the bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/04611dd25d.ogg"
             },
             {
               "text": "Skip the last line — it is hiding from you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ec2d855f2d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_29_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about reading the error.",
           "options": [
             {
               "text": "The line number in an error tells you where to look.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0509e220d9.ogg"
             },
             {
               "text": "Errors are always huge problems and the end of days.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e037e7acee.ogg"
             },
             {
               "text": "Reading the error word-by-word usually points right at the problem.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f7c0ee00d2.ogg"
             },
             {
               "text": "An error message names the kind of problem.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f44b9e9f73.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_29_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about reading the error.",
           "options": [
             {
               "text": "An error message is the computer telling you what went wrong.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e206399cf2.ogg"
             },
             {
               "text": "Errors are not scary, they are clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/495c35264b.ogg"
             },
             {
               "text": "Errors come from ghosts inside the cable.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5ed1439b5e.ogg"
             },
             {
               "text": "Many errors are small typos.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3cda1f9a1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_29_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about reading the error.",
           "options": [
             {
               "text": "Errors tell you where to look.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ffe2266e66.ogg"
             },
             {
               "text": "Errors are easier to fix when you read them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4a116bb62f.ogg"
             },
             {
               "text": "The line number in an error tells you where to look.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0509e220d9.ogg"
             },
             {
               "text": "Hide errors from the helper — it can't handle them.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d9436b3205.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_29_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about reading the error.",
           "options": [
             {
               "text": "Errors must be sung to a slow waltz.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b86285c8ba.ogg"
             },
             {
               "text": "Many errors are small typos.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3cda1f9a1.ogg"
             },
             {
               "text": "Line numbers in errors are gold.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1ea8ed4530.ogg"
             },
             {
               "text": "Read the last line of an error first.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c4adf1f3c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_29_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about reading the error.",
           "options": [
             {
               "text": "Reading the error word-by-word usually points right at the problem.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f7c0ee00d2.ogg"
             },
             {
               "text": "Errors taste like burnt toast.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6aa6f99b9c.ogg"
             },
             {
               "text": "Sharing the error helps the helper help you.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/441e2f3bb9.ogg"
             },
             {
               "text": "Errors aren't bad -- they're clues to fix the bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/04611dd25d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_29_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🦖"
         }
       },
       "variations": [
@@ -1022,234 +1174,274 @@
           "options": [
             {
               "text": "Errors are always huge problems and the end of days.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e037e7acee.ogg"
             },
             {
               "text": "Errors are written in invisible ink most of the time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b39c0b239.ogg"
             },
             {
               "text": "Errors are mean and useless and always lying.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/115e7e8e9b.ogg"
             },
             {
               "text": "Errors tell you where to look.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/ffe2266e66.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_29_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about reading the error?",
           "options": [
             {
               "text": "Errors are mean and useless and always lying.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/115e7e8e9b.ogg"
             },
             {
               "text": "Errors disappear if you smile politely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c1e301e9cc.ogg"
             },
             {
               "text": "Read the last line of an error first.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c4adf1f3c.ogg"
             },
             {
               "text": "Errors are punishment for asking too many questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1be0ef2b2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_29_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about reading the error?",
           "options": [
             {
               "text": "Many errors are small typos.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e3cda1f9a1.ogg"
             },
             {
               "text": "Hide errors from the helper — it can't handle them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9436b3205.ogg"
             },
             {
               "text": "Errors disappear if you smile politely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c1e301e9cc.ogg"
             },
             {
               "text": "Skip the last line — it is hiding from you.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec2d855f2d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_29_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about reading the error?",
           "options": [
             {
               "text": "Ignore errors -- they go away after 5 minutes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4202e4b086.ogg"
             },
             {
               "text": "Errors are not scary, they are clues.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/495c35264b.ogg"
             },
             {
               "text": "Errors are punishment for asking too many questions.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1be0ef2b2.ogg"
             },
             {
               "text": "Errors disappear if you smile politely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c1e301e9cc.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_29_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about reading the error?",
           "options": [
             {
               "text": "Sharing the error helps the helper help you.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/441e2f3bb9.ogg"
             },
             {
               "text": "Errors taste like burnt toast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa6f99b9c.ogg"
             },
             {
               "text": "Hide errors from the helper — it can't handle them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9436b3205.ogg"
             },
             {
               "text": "Each error means you owe the computer a cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4117324ed9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_29_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about reading the error?",
           "options": [
             {
               "text": "Line numbers in errors are gold.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1ea8ed4530.ogg"
             },
             {
               "text": "Errors taste like burnt toast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa6f99b9c.ogg"
             },
             {
               "text": "Errors are mean and useless and always lying.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/115e7e8e9b.ogg"
             },
             {
               "text": "Skip the last line — it is hiding from you.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec2d855f2d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_29_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about reading the error?",
           "options": [
             {
               "text": "Errors come from ghosts inside the cable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ed1439b5e.ogg"
             },
             {
               "text": "Errors are mean and useless and always lying.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/115e7e8e9b.ogg"
             },
             {
               "text": "An error message names the kind of problem.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f44b9e9f73.ogg"
             },
             {
               "text": "Errors are always huge problems and the end of days.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e037e7acee.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_29_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about reading the error?",
           "options": [
             {
               "text": "Errors are mean and useless and always lying.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/115e7e8e9b.ogg"
             },
             {
               "text": "Errors taste like burnt toast.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6aa6f99b9c.ogg"
             },
             {
               "text": "Hide errors from the helper — it can't handle them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9436b3205.ogg"
             },
             {
               "text": "Errors are easier to fix when you read them.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4a116bb62f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_29_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about reading the error?",
           "options": [
             {
               "text": "Each error means you owe the computer a cookie.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4117324ed9.ogg"
             },
             {
               "text": "Errors come from ghosts inside the cable.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/5ed1439b5e.ogg"
             },
             {
               "text": "Hide errors from the helper — it can't handle them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d9436b3205.ogg"
             },
             {
               "text": "An error message is the computer telling you what went wrong.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e206399cf2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_29_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about reading the error?",
           "options": [
             {
               "text": "Ignore errors -- they go away after 5 minutes.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4202e4b086.ogg"
             },
             {
               "text": "Errors are written in invisible ink most of the time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6b39c0b239.ogg"
             },
             {
               "text": "Skip the last line — it is hiding from you.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/ec2d855f2d.ogg"
             },
             {
               "text": "Reading the error word-by-word usually points right at the problem.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f7c0ee00d2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_29_q5_v9.ogg"
         }
       ]
     },
     {
       "id": "q6",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
-          "targets": [
-            "win"
-          ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "prompt": "Put the steps in order:",
+          "steps": [
+            "First",
+            "Next",
+            "Last"
+          ]
         }
       },
       "variations": [
@@ -1258,220 +1450,260 @@
           "options": [
             {
               "text": "Look at line 5 and add the missing parenthesis.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/36e0cd26a7.ogg"
             },
             {
               "text": "Cry softly into the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c8b3c4655.ogg"
             },
             {
               "text": "Ignore it and run again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1b58af8ba1.ogg"
             },
             {
               "text": "Delete line 5 forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/803165eee7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_29_q6_v0.ogg"
         },
         {
           "prompt": "Quick! Your code says: 'SyntaxError: missing parenthesis on line 5'. What do you do?",
           "options": [
             {
               "text": "Delete line 5 forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/803165eee7.ogg"
             },
             {
               "text": "Cry softly into the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c8b3c4655.ogg"
             },
             {
               "text": "Look at line 5 and add the missing parenthesis.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/36e0cd26a7.ogg"
             },
             {
               "text": "Ignore it and run again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1b58af8ba1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_29_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — Your code says: 'SyntaxError: missing parenthesis on line 5'. What do you do?",
           "options": [
             {
               "text": "Delete line 5 forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/803165eee7.ogg"
             },
             {
               "text": "Look at line 5 and add the missing parenthesis.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/36e0cd26a7.ogg"
             },
             {
               "text": "Ignore it and run again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1b58af8ba1.ogg"
             },
             {
               "text": "Cry softly into the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c8b3c4655.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_29_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Your code says: 'SyntaxError: missing parenthesis on line 5'. What do you do?",
           "options": [
             {
               "text": "Look at line 5 and add the missing parenthesis.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/36e0cd26a7.ogg"
             },
             {
               "text": "Cry softly into the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c8b3c4655.ogg"
             },
             {
               "text": "Delete line 5 forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/803165eee7.ogg"
             },
             {
               "text": "Ignore it and run again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1b58af8ba1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_29_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — Your code says: 'SyntaxError: missing parenthesis on line 5'. What do you do?",
           "options": [
             {
               "text": "Delete line 5 forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/803165eee7.ogg"
             },
             {
               "text": "Ignore it and run again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1b58af8ba1.ogg"
             },
             {
               "text": "Look at line 5 and add the missing parenthesis.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/36e0cd26a7.ogg"
             },
             {
               "text": "Cry softly into the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c8b3c4655.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_29_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Your code says: 'SyntaxError: missing parenthesis on line 5'. What do you do?",
           "options": [
             {
               "text": "Cry softly into the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c8b3c4655.ogg"
             },
             {
               "text": "Delete line 5 forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/803165eee7.ogg"
             },
             {
               "text": "Look at line 5 and add the missing parenthesis.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/36e0cd26a7.ogg"
             },
             {
               "text": "Ignore it and run again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1b58af8ba1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_29_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Your code says: 'SyntaxError: missing parenthesis on line 5'. What do you do?",
           "options": [
             {
               "text": "Ignore it and run again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1b58af8ba1.ogg"
             },
             {
               "text": "Cry softly into the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c8b3c4655.ogg"
             },
             {
               "text": "Delete line 5 forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/803165eee7.ogg"
             },
             {
               "text": "Look at line 5 and add the missing parenthesis.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/36e0cd26a7.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_29_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — Your code says: 'SyntaxError: missing parenthesis on line 5'. What do you do?",
           "options": [
             {
               "text": "Look at line 5 and add the missing parenthesis.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/36e0cd26a7.ogg"
             },
             {
               "text": "Ignore it and run again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1b58af8ba1.ogg"
             },
             {
               "text": "Delete line 5 forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/803165eee7.ogg"
             },
             {
               "text": "Cry softly into the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c8b3c4655.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_29_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: Your code says: 'SyntaxError: missing parenthesis on line 5'. What do you do?",
           "options": [
             {
               "text": "Look at line 5 and add the missing parenthesis.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/36e0cd26a7.ogg"
             },
             {
               "text": "Delete line 5 forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/803165eee7.ogg"
             },
             {
               "text": "Cry softly into the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c8b3c4655.ogg"
             },
             {
               "text": "Ignore it and run again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1b58af8ba1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_29_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Your code says: 'SyntaxError: missing parenthesis on line 5'. What do you do?",
           "options": [
             {
               "text": "Cry softly into the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c8b3c4655.ogg"
             },
             {
               "text": "Delete line 5 forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/803165eee7.ogg"
             },
             {
               "text": "Look at line 5 and add the missing parenthesis.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/36e0cd26a7.ogg"
             },
             {
               "text": "Ignore it and run again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1b58af8ba1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_29_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_29_q6_v9.ogg"
         }
       ]
     }

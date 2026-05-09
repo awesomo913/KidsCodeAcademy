@@ -49,263 +49,303 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "click-the-thing",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "First way did not work. What do you say next?",
-          "choices": [
-            {
-              "label": "I quit!",
-              "right": false
-            },
-            {
-              "label": "Let's try a different way.",
-              "right": true
-            },
-            {
-              "label": "Same thing again, please.",
-              "right": false
-            },
-            {
-              "label": "...",
-              "right": false
-            }
-          ]
+          "prompt": "Type CREEPER and press Send to keep going!",
+          "target_display": "CREEPER",
+          "targets": [
+            "creeper"
+          ],
+          "hint_wrong": "Type the word CREEPER (any case is fine)."
         }
       },
       "variations": [
         {
-          "prompt": "What is trying a different way?",
+          "prompt": "🧠 Power up your brain! Which one is right about Try a Different Way?",
           "options": [
             {
               "text": "Trying again means you failed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             },
             {
               "text": "Trying again is for quitters with hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/18b6300ec6.ogg"
             },
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             },
             {
               "text": "If one path is stuck, try another.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_31_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about trying a different way?",
           "options": [
             {
               "text": "New angles never help and bend the spoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9f53811ed1.ogg"
             },
             {
               "text": "There is more than one way to solve a problem.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b2807248e6.ogg"
             },
             {
               "text": "New angles must be drawn with a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd8bb0b7bb.ogg"
             },
             {
               "text": "After 2 tries, you must give up forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d8fa872050.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_31_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
               "text": "If one path is stuck, try another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             },
             {
               "text": "A new angle finds new clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c7c7d6484.ogg"
             },
             {
               "text": "New angles never help and bend the spoon.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9f53811ed1.ogg"
             },
             {
               "text": "Switch tools when one isn't working.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6bb7902061.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_31_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about trying a different way. What should he say?",
           "options": [
             {
               "text": "After 2 tries, you must give up forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d8fa872050.ogg"
             },
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             },
             {
               "text": "A new angle finds new clues.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c7c7d6484.ogg"
             },
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_31_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
               "text": "Trying again means you failed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             },
             {
               "text": "New angles never help and bend the spoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9f53811ed1.ogg"
             },
             {
               "text": "Helpers can suggest other paths.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b1cc0d6d70.ogg"
             },
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_31_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about trying a different way, ___",
           "options": [
             {
               "text": "Trying twice attracts wasps.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e22aa940.ogg"
             },
             {
               "text": "Step away for a bit and come back fresh.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/75affc35ec.ogg"
             },
             {
               "text": "There is only one right way to fix every bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1208951c5e.ogg"
             },
             {
               "text": "Helpers only know one path and it leads to a barn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0c5219fb8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_31_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "A new angle finds new clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c7c7d6484.ogg"
             },
             {
               "text": "Helpers can suggest other paths.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b1cc0d6d70.ogg"
             },
             {
               "text": "New angles must be drawn with a banana.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/bd8bb0b7bb.ogg"
             },
             {
               "text": "Step away for a bit and come back fresh.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/75affc35ec.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_31_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with trying a different way?",
           "options": [
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             },
             {
               "text": "Each new way costs three teeth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12e020c9e3.ogg"
             },
             {
               "text": "Switch tools when one isn't working.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6bb7902061.ogg"
             },
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_31_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about trying a different way is silly. Pick the silly one!",
           "options": [
             {
               "text": "If one way doesn't work, try a different angle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234446c377.ogg"
             },
             {
               "text": "A new angle finds new clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c7c7d6484.ogg"
             },
             {
               "text": "Step away for a bit and come back fresh.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/75affc35ec.ogg"
             },
             {
               "text": "There is only one right way to fix every bug.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1208951c5e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_31_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about trying a different way. Which fact would help him?",
           "options": [
             {
               "text": "Stuck on a problem? Take a break and come back fresh.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/dc3dfb9874.ogg"
             },
             {
               "text": "Each new way costs three teeth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12e020c9e3.ogg"
             },
             {
               "text": "New angles must be drawn with a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd8bb0b7bb.ogg"
             },
             {
               "text": "New angles never help and bend the spoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9f53811ed1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_31_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🍕",
+              "right": true
+            },
+            {
+              "glyph": "🥦",
+              "right": false
+            },
+            {
+              "glyph": "🪨",
+              "right": false
+            },
+            {
+              "glyph": "🧂",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -314,234 +354,270 @@
           "options": [
             {
               "text": "Pour milk on the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6443425c5e.ogg"
             },
             {
               "text": "Try the SAME thing 100 more times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b8b1567966.ogg"
             },
             {
               "text": "Ask the loop politely to stop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9905ea418e.ogg"
             },
             {
               "text": "Try a totally different approach — maybe a different kind of loop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c43e08ca8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_31_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Bytey's loop won't end. He's tried fixing it three times. What now?",
           "options": [
             {
               "text": "Ask the loop politely to stop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9905ea418e.ogg"
             },
             {
               "text": "Try a totally different approach — maybe a different kind of loop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c43e08ca8.ogg"
             },
             {
               "text": "Try the SAME thing 100 more times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b8b1567966.ogg"
             },
             {
               "text": "Pour milk on the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6443425c5e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_31_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Bytey's loop won't end. He's tried fixing it three times. What now?",
           "options": [
             {
               "text": "Pour milk on the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6443425c5e.ogg"
             },
             {
               "text": "Ask the loop politely to stop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9905ea418e.ogg"
             },
             {
               "text": "Try the SAME thing 100 more times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b8b1567966.ogg"
             },
             {
               "text": "Try a totally different approach — maybe a different kind of loop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c43e08ca8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_31_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey's loop won't end. He's tried fixing it three times. What now?",
           "options": [
             {
               "text": "Ask the loop politely to stop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9905ea418e.ogg"
             },
             {
               "text": "Try a totally different approach — maybe a different kind of loop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c43e08ca8.ogg"
             },
             {
               "text": "Pour milk on the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6443425c5e.ogg"
             },
             {
               "text": "Try the SAME thing 100 more times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b8b1567966.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_31_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Bytey's loop won't end. He's tried fixing it three times. What now?",
           "options": [
             {
               "text": "Try the SAME thing 100 more times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b8b1567966.ogg"
             },
             {
               "text": "Pour milk on the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6443425c5e.ogg"
             },
             {
               "text": "Try a totally different approach — maybe a different kind of loop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c43e08ca8.ogg"
             },
             {
               "text": "Ask the loop politely to stop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9905ea418e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_31_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Bytey's loop won't end. He's tried fixing it three times. What now?",
           "options": [
             {
               "text": "Pour milk on the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6443425c5e.ogg"
             },
             {
               "text": "Try a totally different approach — maybe a different kind of loop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c43e08ca8.ogg"
             },
             {
               "text": "Try the SAME thing 100 more times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b8b1567966.ogg"
             },
             {
               "text": "Ask the loop politely to stop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9905ea418e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_31_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey's loop won't end. He's tried fixing it three times. What now?",
           "options": [
             {
               "text": "Try a totally different approach — maybe a different kind of loop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c43e08ca8.ogg"
             },
             {
               "text": "Pour milk on the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6443425c5e.ogg"
             },
             {
               "text": "Try the SAME thing 100 more times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b8b1567966.ogg"
             },
             {
               "text": "Ask the loop politely to stop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9905ea418e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_31_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Bytey's loop won't end. He's tried fixing it three times. What now?",
           "options": [
             {
               "text": "Pour milk on the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6443425c5e.ogg"
             },
             {
               "text": "Try a totally different approach — maybe a different kind of loop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c43e08ca8.ogg"
             },
             {
               "text": "Ask the loop politely to stop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9905ea418e.ogg"
             },
             {
               "text": "Try the SAME thing 100 more times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b8b1567966.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_31_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Bytey's loop won't end. He's tried fixing it three times. What now?",
           "options": [
             {
               "text": "Pour milk on the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6443425c5e.ogg"
             },
             {
               "text": "Try a totally different approach — maybe a different kind of loop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c43e08ca8.ogg"
             },
             {
               "text": "Ask the loop politely to stop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9905ea418e.ogg"
             },
             {
               "text": "Try the SAME thing 100 more times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b8b1567966.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_31_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey's loop won't end. He's tried fixing it three times. What now?",
           "options": [
             {
               "text": "Pour milk on the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6443425c5e.ogg"
             },
             {
               "text": "Try a totally different approach — maybe a different kind of loop.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c43e08ca8.ogg"
             },
             {
               "text": "Ask the loop politely to stop.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9905ea418e.ogg"
             },
             {
               "text": "Try the SAME thing 100 more times.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b8b1567966.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_31_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🦖"
         }
       },
       "variations": [
@@ -550,234 +626,274 @@
           "options": [
             {
               "text": "New angles cost less in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/277ab91540.ogg"
             },
             {
               "text": "New angles taste different.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f76694782e.ogg"
             },
             {
               "text": "New angles often reveal what the old angle hid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/689e60e05d.ogg"
             },
             {
               "text": "New angles attract bonus stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/320eeaf012.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_31_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Why try a fresh angle when stuck?",
           "options": [
             {
               "text": "New angles cost less in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/277ab91540.ogg"
             },
             {
               "text": "New angles often reveal what the old angle hid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/689e60e05d.ogg"
             },
             {
               "text": "New angles attract bonus stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/320eeaf012.ogg"
             },
             {
               "text": "New angles taste different.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f76694782e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_31_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why try a fresh angle when stuck?",
           "options": [
             {
               "text": "New angles often reveal what the old angle hid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/689e60e05d.ogg"
             },
             {
               "text": "New angles taste different.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f76694782e.ogg"
             },
             {
               "text": "New angles cost less in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/277ab91540.ogg"
             },
             {
               "text": "New angles attract bonus stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/320eeaf012.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_31_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why try a fresh angle when stuck?",
           "options": [
             {
               "text": "New angles cost less in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/277ab91540.ogg"
             },
             {
               "text": "New angles attract bonus stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/320eeaf012.ogg"
             },
             {
               "text": "New angles often reveal what the old angle hid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/689e60e05d.ogg"
             },
             {
               "text": "New angles taste different.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f76694782e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_31_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Why try a fresh angle when stuck?",
           "options": [
             {
               "text": "New angles taste different.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f76694782e.ogg"
             },
             {
               "text": "New angles cost less in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/277ab91540.ogg"
             },
             {
               "text": "New angles often reveal what the old angle hid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/689e60e05d.ogg"
             },
             {
               "text": "New angles attract bonus stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/320eeaf012.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_31_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why try a fresh angle when stuck?",
           "options": [
             {
               "text": "New angles attract bonus stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/320eeaf012.ogg"
             },
             {
               "text": "New angles taste different.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f76694782e.ogg"
             },
             {
               "text": "New angles cost less in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/277ab91540.ogg"
             },
             {
               "text": "New angles often reveal what the old angle hid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/689e60e05d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_31_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why try a fresh angle when stuck?",
           "options": [
             {
               "text": "New angles often reveal what the old angle hid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/689e60e05d.ogg"
             },
             {
               "text": "New angles attract bonus stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/320eeaf012.ogg"
             },
             {
               "text": "New angles cost less in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/277ab91540.ogg"
             },
             {
               "text": "New angles taste different.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f76694782e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_31_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Why try a fresh angle when stuck?",
           "options": [
             {
               "text": "New angles often reveal what the old angle hid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/689e60e05d.ogg"
             },
             {
               "text": "New angles cost less in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/277ab91540.ogg"
             },
             {
               "text": "New angles taste different.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f76694782e.ogg"
             },
             {
               "text": "New angles attract bonus stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/320eeaf012.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_31_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Why try a fresh angle when stuck?",
           "options": [
             {
               "text": "New angles taste different.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f76694782e.ogg"
             },
             {
               "text": "New angles cost less in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/277ab91540.ogg"
             },
             {
               "text": "New angles often reveal what the old angle hid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/689e60e05d.ogg"
             },
             {
               "text": "New angles attract bonus stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/320eeaf012.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_31_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why try a fresh angle when stuck?",
           "options": [
             {
               "text": "New angles taste different.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f76694782e.ogg"
             },
             {
               "text": "New angles cost less in pebbles.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/277ab91540.ogg"
             },
             {
               "text": "New angles often reveal what the old angle hid.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/689e60e05d.ogg"
             },
             {
               "text": "New angles attract bonus stars.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/320eeaf012.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_31_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Put the steps in order:",
+          "steps": [
+            "First",
+            "Next",
+            "Last"
+          ]
         }
       },
       "variations": [
@@ -786,234 +902,283 @@
           "options": [
             {
               "text": "If one path is stuck, try another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             },
             {
               "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8e5cae3d9a.ogg"
             },
             {
               "text": "Trying again means you failed.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             },
             {
               "text": "Trying again is brave.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9302e2df5a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_31_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
               "text": "If one way doesn't work, try a different angle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234446c377.ogg"
             },
             {
               "text": "After 2 tries, you must give up forever.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d8fa872050.ogg"
             },
             {
               "text": "If one path is stuck, try another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             },
             {
               "text": "Asking 'what else could I try?' unlocks new ideas.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c1e43a05d2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_31_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
               "text": "Trying again is brave.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9302e2df5a.ogg"
             },
             {
               "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8e5cae3d9a.ogg"
             },
             {
               "text": "Real coders fix everything on the first try.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7006ac75bb.ogg"
             },
             {
               "text": "If one path is stuck, try another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_31_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
               "text": "Sometimes the third try is the magic try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8aa53812d8.ogg"
             },
             {
               "text": "If one way doesn't work, try a different angle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234446c377.ogg"
             },
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             },
             {
               "text": "Helpers can suggest other paths.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b1cc0d6d70.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_31_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
               "text": "Switch tools when one isn't working.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6bb7902061.ogg"
             },
             {
               "text": "A new angle finds new clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c7c7d6484.ogg"
             },
             {
               "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8e5cae3d9a.ogg"
             },
             {
               "text": "Trying again is for quitters with hats.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/18b6300ec6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_31_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
               "text": "Asking 'what else could I try?' unlocks new ideas.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c1e43a05d2.ogg"
             },
             {
               "text": "New angles never help and bend the spoon.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9f53811ed1.ogg"
             },
             {
               "text": "Stuck on a problem? Take a break and come back fresh.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dc3dfb9874.ogg"
             },
             {
               "text": "Sometimes the third try is the magic try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8aa53812d8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_31_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
               "text": "If one way doesn't work, try a different angle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234446c377.ogg"
             },
             {
               "text": "A new angle finds new clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c7c7d6484.ogg"
             },
             {
               "text": "Helpers only know one path and it leads to a barn.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f0c5219fb8.ogg"
             },
             {
               "text": "Trying again is brave.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9302e2df5a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_31_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
               "text": "If one path is stuck, try another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             },
             {
               "text": "Switch tools when one isn't working.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6bb7902061.ogg"
             },
             {
               "text": "Asking 'what else could I try?' unlocks new ideas.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c1e43a05d2.ogg"
             },
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_31_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
               "text": "Each new way costs three teeth.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/12e020c9e3.ogg"
             },
             {
               "text": "Trying again is brave.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9302e2df5a.ogg"
             },
             {
               "text": "Step away for a bit and come back fresh.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/75affc35ec.ogg"
             },
             {
               "text": "There is more than one way to solve a problem.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b2807248e6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_31_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about trying a different way.",
           "options": [
             {
               "text": "Stuck on a problem? Take a break and come back fresh.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dc3dfb9874.ogg"
             },
             {
               "text": "New angles must be drawn with a banana.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/bd8bb0b7bb.ogg"
             },
             {
               "text": "Helpers can suggest other paths.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b1cc0d6d70.ogg"
             },
             {
               "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8e5cae3d9a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_31_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Save",
+              "right": "💾"
+            },
+            {
+              "left": "Share",
+              "right": "📤"
+            },
+            {
+              "left": "Build",
+              "right": "🔨"
+            }
+          ]
         }
       },
       "variations": [
@@ -1022,220 +1187,260 @@
           "options": [
             {
               "text": "New angles never help and bend the spoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9f53811ed1.ogg"
             },
             {
               "text": "After 2 tries, you must give up forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d8fa872050.ogg"
             },
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             },
             {
               "text": "If one path is stuck, try another.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_31_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about trying a different way?",
           "options": [
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             },
             {
               "text": "Trying twice attracts wasps.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e22aa940.ogg"
             },
             {
               "text": "There is more than one way to solve a problem.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b2807248e6.ogg"
             },
             {
               "text": "There is only one right way to fix every bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1208951c5e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_31_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about trying a different way?",
           "options": [
             {
               "text": "Trying again is brave.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9302e2df5a.ogg"
             },
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             },
             {
               "text": "Trying twice attracts wasps.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e22aa940.ogg"
             },
             {
               "text": "Trying again is for quitters with hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/18b6300ec6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_31_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about trying a different way?",
           "options": [
             {
               "text": "Trying again means you failed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             },
             {
               "text": "A new angle finds new clues.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c7c7d6484.ogg"
             },
             {
               "text": "There is only one right way to fix every bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1208951c5e.ogg"
             },
             {
               "text": "Trying twice attracts wasps.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/67e22aa940.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_31_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about trying a different way?",
           "options": [
             {
               "text": "Helpers can suggest other paths.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b1cc0d6d70.ogg"
             },
             {
               "text": "New angles must be drawn with a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd8bb0b7bb.ogg"
             },
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             },
             {
               "text": "Real coders fix everything on the first try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7006ac75bb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_31_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about trying a different way?",
           "options": [
             {
               "text": "Step away for a bit and come back fresh.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/75affc35ec.ogg"
             },
             {
               "text": "New angles must be drawn with a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd8bb0b7bb.ogg"
             },
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             },
             {
               "text": "Trying again is for quitters with hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/18b6300ec6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_31_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about trying a different way?",
           "options": [
             {
               "text": "Helpers only know one path and it leads to a barn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0c5219fb8.ogg"
             },
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             },
             {
               "text": "Sometimes the third try is the magic try.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8aa53812d8.ogg"
             },
             {
               "text": "New angles never help and bend the spoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9f53811ed1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_31_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about trying a different way?",
           "options": [
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             },
             {
               "text": "New angles must be drawn with a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd8bb0b7bb.ogg"
             },
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             },
             {
               "text": "Switch tools when one isn't working.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6bb7902061.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_31_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about trying a different way?",
           "options": [
             {
               "text": "Real coders fix everything on the first try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7006ac75bb.ogg"
             },
             {
               "text": "Helpers only know one path and it leads to a barn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0c5219fb8.ogg"
             },
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             },
             {
               "text": "If one way doesn't work, try a different angle.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/234446c377.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_31_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about trying a different way?",
           "options": [
             {
               "text": "Trying again means you failed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             },
             {
               "text": "After 2 tries, you must give up forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d8fa872050.ogg"
             },
             {
               "text": "Trying again is for quitters with hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/18b6300ec6.ogg"
             },
             {
               "text": "Stuck on a problem? Take a break and come back fresh.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/dc3dfb9874.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_31_q5_v9.ogg"
         }
       ]
     },
@@ -1244,12 +1449,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
+          "prompt": "Type FLAG and press Send to keep going!",
+          "target_display": "FLAG",
           "targets": [
-            "win"
+            "flag"
           ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "hint_wrong": "Type the word FLAG (any case is fine)."
         }
       },
       "variations": [
@@ -1258,234 +1463,270 @@
           "options": [
             {
               "text": "Quit coding forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234144f9a9.ogg"
             },
             {
               "text": "Pretend you wanted no jump.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853f35bf29.ogg"
             },
             {
               "text": "Step away, then come back and try a totally different approach.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/cb40b86f54.ogg"
             },
             {
               "text": "Hide the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/254c623937.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_31_q6_v0.ogg"
         },
         {
           "prompt": "Quick! You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
               "text": "Step away, then come back and try a totally different approach.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/cb40b86f54.ogg"
             },
             {
               "text": "Hide the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/254c623937.ogg"
             },
             {
               "text": "Pretend you wanted no jump.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853f35bf29.ogg"
             },
             {
               "text": "Quit coding forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234144f9a9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_31_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
               "text": "Quit coding forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234144f9a9.ogg"
             },
             {
               "text": "Step away, then come back and try a totally different approach.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/cb40b86f54.ogg"
             },
             {
               "text": "Pretend you wanted no jump.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853f35bf29.ogg"
             },
             {
               "text": "Hide the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/254c623937.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_31_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
               "text": "Pretend you wanted no jump.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853f35bf29.ogg"
             },
             {
               "text": "Step away, then come back and try a totally different approach.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/cb40b86f54.ogg"
             },
             {
               "text": "Quit coding forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234144f9a9.ogg"
             },
             {
               "text": "Hide the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/254c623937.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_31_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
               "text": "Quit coding forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234144f9a9.ogg"
             },
             {
               "text": "Hide the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/254c623937.ogg"
             },
             {
               "text": "Step away, then come back and try a totally different approach.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/cb40b86f54.ogg"
             },
             {
               "text": "Pretend you wanted no jump.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853f35bf29.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_31_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
               "text": "Hide the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/254c623937.ogg"
             },
             {
               "text": "Quit coding forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234144f9a9.ogg"
             },
             {
               "text": "Pretend you wanted no jump.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853f35bf29.ogg"
             },
             {
               "text": "Step away, then come back and try a totally different approach.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/cb40b86f54.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_31_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
               "text": "Pretend you wanted no jump.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853f35bf29.ogg"
             },
             {
               "text": "Hide the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/254c623937.ogg"
             },
             {
               "text": "Quit coding forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234144f9a9.ogg"
             },
             {
               "text": "Step away, then come back and try a totally different approach.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/cb40b86f54.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_31_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
               "text": "Step away, then come back and try a totally different approach.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/cb40b86f54.ogg"
             },
             {
               "text": "Hide the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/254c623937.ogg"
             },
             {
               "text": "Quit coding forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234144f9a9.ogg"
             },
             {
               "text": "Pretend you wanted no jump.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853f35bf29.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_31_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
               "text": "Step away, then come back and try a totally different approach.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/cb40b86f54.ogg"
             },
             {
               "text": "Pretend you wanted no jump.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853f35bf29.ogg"
             },
             {
               "text": "Hide the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/254c623937.ogg"
             },
             {
               "text": "Quit coding forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234144f9a9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_31_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: You tried 3 ways to make the hero jump and none work. What now?",
           "options": [
             {
               "text": "Step away, then come back and try a totally different approach.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/cb40b86f54.ogg"
             },
             {
               "text": "Pretend you wanted no jump.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853f35bf29.ogg"
             },
             {
               "text": "Quit coding forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234144f9a9.ogg"
             },
             {
               "text": "Hide the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/254c623937.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_31_q6_v9.ogg"
         }
       ]
     },
     {
       "id": "q7",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type PLAY and press Send to keep going!",
-          "target_display": "PLAY",
-          "targets": [
-            "play"
-          ],
-          "hint_wrong": "Type the word PLAY (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "🌈"
         }
       },
       "variations": [
@@ -1494,234 +1735,287 @@
           "options": [
             {
               "text": "New angles must be drawn with a banana.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/bd8bb0b7bb.ogg"
             },
             {
               "text": "There is more than one way to solve a problem.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b2807248e6.ogg"
             },
             {
               "text": "If one way doesn't work, try a different angle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234446c377.ogg"
             },
             {
               "text": "Asking 'what else could I try?' unlocks new ideas.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c1e43a05d2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q7_v0.wav"
+          "_audio": "assets/audio/q/lesson_31_q7_v0.ogg"
         },
         {
           "prompt": "Listen up — Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "If one path is stuck, try another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             },
             {
               "text": "A new angle finds new clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c7c7d6484.ogg"
             },
             {
               "text": "Trying again is brave.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9302e2df5a.ogg"
             },
             {
               "text": "Trying twice attracts wasps.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/67e22aa940.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q7_v1.wav"
+          "_audio": "assets/audio/q/lesson_31_q7_v1.ogg"
         },
         {
           "prompt": "Think about this: Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Sometimes the third try is the magic try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8aa53812d8.ogg"
             },
             {
               "text": "Asking 'what else could I try?' unlocks new ideas.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c1e43a05d2.ogg"
             },
             {
               "text": "Stuck on a problem? Take a break and come back fresh.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/dc3dfb9874.ogg"
             },
             {
               "text": "There is only one right way to fix every bug.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1208951c5e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q7_v2.wav"
+          "_audio": "assets/audio/q/lesson_31_q7_v2.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "There is more than one way to solve a problem.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b2807248e6.ogg"
             },
             {
               "text": "Trying again means you failed.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             },
             {
               "text": "Sometimes the third try is the magic try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8aa53812d8.ogg"
             },
             {
               "text": "Helpers can suggest other paths.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b1cc0d6d70.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q7_v3.wav"
+          "_audio": "assets/audio/q/lesson_31_q7_v3.ogg"
         },
         {
           "prompt": "Brain time: Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8e5cae3d9a.ogg"
             },
             {
               "text": "After 2 tries, you must give up forever.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d8fa872050.ogg"
             },
             {
               "text": "If one path is stuck, try another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             },
             {
               "text": "If one way doesn't work, try a different angle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234446c377.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q7_v4.wav"
+          "_audio": "assets/audio/q/lesson_31_q7_v4.ogg"
         },
         {
           "prompt": "Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Step away for a bit and come back fresh.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/75affc35ec.ogg"
             },
             {
               "text": "Real coders fix everything on the first try.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7006ac75bb.ogg"
             },
             {
               "text": "If one way doesn't work, try a different angle.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/234446c377.ogg"
             },
             {
               "text": "Switch tools when one isn't working.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6bb7902061.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q7_v5.wav"
+          "_audio": "assets/audio/q/lesson_31_q7_v5.ogg"
         },
         {
           "prompt": "Quick! Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Trying again is brave.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9302e2df5a.ogg"
             },
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             },
             {
               "text": "Sometimes the third try is the magic try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8aa53812d8.ogg"
             },
             {
               "text": "There is more than one way to solve a problem.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b2807248e6.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q7_v6.wav"
+          "_audio": "assets/audio/q/lesson_31_q7_v6.ogg"
         },
         {
           "prompt": "Hey friend — Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Sometimes the third try is the magic try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8aa53812d8.ogg"
             },
             {
               "text": "There is more than one way to solve a problem.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b2807248e6.ogg"
             },
             {
               "text": "Trying again is for quitters with hats.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/18b6300ec6.ogg"
             },
             {
               "text": "A new angle finds new clues.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7c7c7d6484.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q7_v7.wav"
+          "_audio": "assets/audio/q/lesson_31_q7_v7.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "New angles never help and bend the spoon.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9f53811ed1.ogg"
             },
             {
               "text": "If one path is stuck, try another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             },
             {
               "text": "Asking 'what else could I try?' unlocks new ideas.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c1e43a05d2.ogg"
             },
             {
               "text": "Sometimes the third try is the magic try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8aa53812d8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q7_v8.wav"
+          "_audio": "assets/audio/q/lesson_31_q7_v8.ogg"
         },
         {
           "prompt": "Tell me — Bytey claims something about trying a different way. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Trying again is brave.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9302e2df5a.ogg"
             },
             {
               "text": "Step away for a bit and come back fresh.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/75affc35ec.ogg"
             },
             {
               "text": "Helpers only know one path and it leads to a barn.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f0c5219fb8.ogg"
             },
             {
               "text": "Sometimes the third try is the magic try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8aa53812d8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q7_v9.wav"
+          "_audio": "assets/audio/q/lesson_31_q7_v9.ogg"
         }
       ]
     },
     {
       "id": "q8",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type CODE and press Send to keep going!",
-          "target_display": "CODE",
-          "targets": [
-            "code"
-          ],
-          "hint_wrong": "Type the word CODE (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🎮",
+              "right": true
+            },
+            {
+              "glyph": "🥦",
+              "right": false
+            },
+            {
+              "glyph": "📚",
+              "right": false
+            },
+            {
+              "glyph": "🧦",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -1730,220 +2024,260 @@
           "options": [
             {
               "text": "New angles must be drawn with a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd8bb0b7bb.ogg"
             },
             {
               "text": "Trying again is for quitters with hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/18b6300ec6.ogg"
             },
             {
               "text": "Stuck on a problem? Take a break and come back fresh.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/dc3dfb9874.ogg"
             },
             {
               "text": "Each new way costs three teeth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12e020c9e3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q8_v0.wav"
+          "_audio": "assets/audio/q/lesson_31_q8_v0.ogg"
         },
         {
           "prompt": "Think about this: Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
               "text": "Trying again means you failed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             },
             {
               "text": "There is only one right way to fix every bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1208951c5e.ogg"
             },
             {
               "text": "Most bugs are fixed by the 3rd or 4th approach, not the 1st.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8e5cae3d9a.ogg"
             },
             {
               "text": "New angles never help and bend the spoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9f53811ed1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q8_v1.wav"
+          "_audio": "assets/audio/q/lesson_31_q8_v1.ogg"
         },
         {
           "prompt": "Got a quick one: Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             },
             {
               "text": "Helpers only know one path and it leads to a barn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0c5219fb8.ogg"
             },
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             },
             {
               "text": "Asking 'what else could I try?' unlocks new ideas.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c1e43a05d2.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q8_v2.wav"
+          "_audio": "assets/audio/q/lesson_31_q8_v2.ogg"
         },
         {
           "prompt": "Brain time: Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
               "text": "Trying again means you failed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             },
             {
               "text": "If one path is stuck, try another.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/900bf77cba.ogg"
             },
             {
               "text": "After 2 tries, you must give up forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d8fa872050.ogg"
             },
             {
               "text": "Helpers only know one path and it leads to a barn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0c5219fb8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q8_v3.wav"
+          "_audio": "assets/audio/q/lesson_31_q8_v3.ogg"
         },
         {
           "prompt": "Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
               "text": "There is more than one way to solve a problem.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b2807248e6.ogg"
             },
             {
               "text": "Stuck means done forever — sit in a corner.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7a69292fa9.ogg"
             },
             {
               "text": "Helpers only know one path and it leads to a barn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0c5219fb8.ogg"
             },
             {
               "text": "New angles never help and bend the spoon.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9f53811ed1.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q8_v4.wav"
+          "_audio": "assets/audio/q/lesson_31_q8_v4.ogg"
         },
         {
           "prompt": "Quick! Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
               "text": "Trying again is brave.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/9302e2df5a.ogg"
             },
             {
               "text": "Real coders fix everything on the first try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7006ac75bb.ogg"
             },
             {
               "text": "Trying again means you failed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             },
             {
               "text": "Each new way costs three teeth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12e020c9e3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q8_v5.wav"
+          "_audio": "assets/audio/q/lesson_31_q8_v5.ogg"
         },
         {
           "prompt": "Hey friend — Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
               "text": "Real coders fix everything on the first try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7006ac75bb.ogg"
             },
             {
               "text": "After 2 tries, you must give up forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d8fa872050.ogg"
             },
             {
               "text": "A new angle finds new clues.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7c7c7d6484.ogg"
             },
             {
               "text": "New angles must be drawn with a banana.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd8bb0b7bb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q8_v6.wav"
+          "_audio": "assets/audio/q/lesson_31_q8_v6.ogg"
         },
         {
           "prompt": "Bytey wonders: Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
               "text": "Helpers can suggest other paths.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b1cc0d6d70.ogg"
             },
             {
               "text": "Real coders fix everything on the first try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7006ac75bb.ogg"
             },
             {
               "text": "There is only one right way to fix every bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1208951c5e.ogg"
             },
             {
               "text": "Trying again means you failed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q8_v7.wav"
+          "_audio": "assets/audio/q/lesson_31_q8_v7.ogg"
         },
         {
           "prompt": "Tell me — Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
               "text": "Step away for a bit and come back fresh.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/75affc35ec.ogg"
             },
             {
               "text": "Only one way ever works — and it is illegal.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a64a02950b.ogg"
             },
             {
               "text": "Trying again means you failed.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/9adfb9cea5.ogg"
             },
             {
               "text": "Real coders fix everything on the first try.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7006ac75bb.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q8_v8.wav"
+          "_audio": "assets/audio/q/lesson_31_q8_v8.ogg"
         },
         {
           "prompt": "Wait wait wait — Which rule about trying a different way is a GOOD rule?",
           "options": [
             {
               "text": "There is only one right way to fix every bug.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1208951c5e.ogg"
             },
             {
               "text": "After 2 tries, you must give up forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d8fa872050.ogg"
             },
             {
               "text": "Each new way costs three teeth.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/12e020c9e3.ogg"
             },
             {
               "text": "Sometimes the third try is the magic try.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/8aa53812d8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_31_q8_v9.wav"
+          "_audio": "assets/audio/q/lesson_31_q8_v9.ogg"
         }
       ]
     }

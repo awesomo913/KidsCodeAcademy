@@ -1,10 +1,15 @@
 # Build artifacts
 build/
+build_pkg/
 dist/
 *.spec
 __pycache__/
 *.pyc
 *.pyo
+
+# Phase 4: WAV originals stay local (re-bake source). Repo + exe ship .ogg only.
+assets/audio/**/*.wav
+assets/audio/*.wav
 
 # Virtualenvs
 .venv/

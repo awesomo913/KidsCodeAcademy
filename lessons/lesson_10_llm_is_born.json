@@ -55,269 +55,290 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "history-scene",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Watch the scene, then answer the question!",
-          "scene": {
-            "id": "llm",
-            "check": {
-              "prompt": "What happened to the words during the scene?",
-              "choices": [
-                {
-                  "label": "They drifted into a big brain",
-                  "right": true
-                },
-                {
-                  "label": "They disappeared off-screen",
-                  "right": false
-                },
-                {
-                  "label": "They turned into numbers",
-                  "right": false
-                },
-                {
-                  "label": "They got bigger and bigger",
-                  "right": false
-                }
-              ]
-            }
-          }
+          "prompt": "📚 How was the L L M born? Order the steps!",
+          "steps": [
+            "Read tons of books",
+            "Learn word patterns",
+            "Answer new questions"
+          ]
         }
       },
       "variations": [
         {
-          "prompt": "What is how an LLM is born?",
+          "prompt": "⭐ Lightning round! What do you remember about And Then Came Big Language Models?",
           "options": [
             {
               "text": "An LLM hatches from a giant glowing egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a67b40addb.ogg"
             },
             {
               "text": "Models train for one second and are done forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/530ce97013.ogg"
             },
             {
               "text": "Models train on Mars while wearing space hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1b9279103.ogg"
             },
             {
               "text": "An LLM reads tons and tons of books and pages.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f9fca4ecf0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_10_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about how an LLM is born?",
           "options": [
             {
               "text": "Models read just one tiny book about ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1667561fa5.ogg"
             },
             {
               "text": "It learns to guess the next word.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/638a3c1e12.ogg"
             },
             {
               "text": "An LLM remembers every book by name and shoe size.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2bb0421afa.ogg"
             },
             {
               "text": "LLMs grow on tall metal trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/73544fe4b9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_10_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about how an LLM is born.",
           "options": [
             {
               "text": "An LLM reads tons and tons of books and pages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9fca4ecf0.ogg"
             },
             {
               "text": "The model gets better with more practice.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7573bd5b2a.ogg"
             },
             {
               "text": "Models read just one tiny book about ducks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1667561fa5.ogg"
             },
             {
               "text": "Models do not remember any one book — just the patterns.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/091cedb649.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_10_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about how an LLM is born. What should he say?",
           "options": [
             {
               "text": "LLMs grow on tall metal trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/73544fe4b9.ogg"
             },
             {
               "text": "Models train on Mars while wearing space hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1b9279103.ogg"
             },
             {
               "text": "The model gets better with more practice.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7573bd5b2a.ogg"
             },
             {
               "text": "An LLM is hatched from a real chicken egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c3fed5986e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_10_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about how an LLM is born is a GOOD rule?",
           "options": [
             {
               "text": "An LLM hatches from a giant glowing egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a67b40addb.ogg"
             },
             {
               "text": "Models read just one tiny book about ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1667561fa5.ogg"
             },
             {
               "text": "After training, the model can chat with us.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3cdd83fddf.ogg"
             },
             {
               "text": "Models train on Mars while wearing space hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1b9279103.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_10_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about how an LLM is born, ___",
           "options": [
             {
               "text": "Models learn by inhaling crayons.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4e4a12ee3.ogg"
             },
             {
               "text": "An LLM does not know things — it predicts words.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b27f56fe74.ogg"
             },
             {
               "text": "An LLM is born when two computers do a special handshake.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3819ae798.ogg"
             },
             {
               "text": "An LLM is grown in a lemon garden.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c1dd0d825.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_10_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about how an LLM is born. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "The model gets better with more practice.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7573bd5b2a.ogg"
             },
             {
               "text": "After training, the model can chat with us.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3cdd83fddf.ogg"
             },
             {
               "text": "An LLM remembers every book by name and shoe size.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2bb0421afa.ogg"
             },
             {
               "text": "An LLM does not know things — it predicts words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b27f56fe74.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_10_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with how an LLM is born?",
           "options": [
             {
               "text": "An LLM is hatched from a real chicken egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c3fed5986e.ogg"
             },
             {
               "text": "LLMs are built by tiny mice with calculators.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3d993e4dd7.ogg"
             },
             {
               "text": "Models do not remember any one book — just the patterns.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/091cedb649.ogg"
             },
             {
               "text": "Models train on Mars while wearing space hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1b9279103.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_10_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about how an LLM is born is silly. Pick the silly one!",
           "options": [
             {
               "text": "An LLM is born by reading huge piles of text -- books, websites, everything.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/faf71ea05d.ogg"
             },
             {
               "text": "The model gets better with more practice.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7573bd5b2a.ogg"
             },
             {
               "text": "An LLM does not know things — it predicts words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b27f56fe74.ogg"
             },
             {
               "text": "An LLM is born when two computers do a special handshake.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e3819ae798.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_10_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about how an LLM is born. Which fact would help him?",
           "options": [
             {
               "text": "It learns patterns of which word usually follows another.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b810b15f61.ogg"
             },
             {
               "text": "LLMs are built by tiny mice with calculators.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3d993e4dd7.ogg"
             },
             {
               "text": "An LLM remembers every book by name and shoe size.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2bb0421afa.ogg"
             },
             {
               "text": "Models read just one tiny book about ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1667561fa5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_10_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "How was an LLM born? Put it in order:",
+          "steps": [
+            "Read tons of books",
+            "Learn word patterns",
+            "Answer new questions"
+          ]
         }
       },
       "variations": [
@@ -326,220 +347,260 @@
           "options": [
             {
               "text": "Because more is just funnier.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6891371527.ogg"
             },
             {
               "text": "To learn enough patterns to guess words well.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e137d77283.ogg"
             },
             {
               "text": "So the disk drive doesn't get lonely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0850eae61.ogg"
             },
             {
               "text": "To impress other LLMs at parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fd1b934a7b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_10_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Why do LLMs need so many examples to train?",
           "options": [
             {
               "text": "To impress other LLMs at parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fd1b934a7b.ogg"
             },
             {
               "text": "So the disk drive doesn't get lonely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0850eae61.ogg"
             },
             {
               "text": "Because more is just funnier.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6891371527.ogg"
             },
             {
               "text": "To learn enough patterns to guess words well.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e137d77283.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_10_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why do LLMs need so many examples to train?",
           "options": [
             {
               "text": "To learn enough patterns to guess words well.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e137d77283.ogg"
             },
             {
               "text": "So the disk drive doesn't get lonely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0850eae61.ogg"
             },
             {
               "text": "Because more is just funnier.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6891371527.ogg"
             },
             {
               "text": "To impress other LLMs at parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fd1b934a7b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_10_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why do LLMs need so many examples to train?",
           "options": [
             {
               "text": "Because more is just funnier.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6891371527.ogg"
             },
             {
               "text": "To learn enough patterns to guess words well.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e137d77283.ogg"
             },
             {
               "text": "To impress other LLMs at parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fd1b934a7b.ogg"
             },
             {
               "text": "So the disk drive doesn't get lonely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0850eae61.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_10_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Why do LLMs need so many examples to train?",
           "options": [
             {
               "text": "So the disk drive doesn't get lonely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0850eae61.ogg"
             },
             {
               "text": "To impress other LLMs at parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fd1b934a7b.ogg"
             },
             {
               "text": "Because more is just funnier.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6891371527.ogg"
             },
             {
               "text": "To learn enough patterns to guess words well.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e137d77283.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_10_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why do LLMs need so many examples to train?",
           "options": [
             {
               "text": "Because more is just funnier.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6891371527.ogg"
             },
             {
               "text": "So the disk drive doesn't get lonely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0850eae61.ogg"
             },
             {
               "text": "To learn enough patterns to guess words well.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e137d77283.ogg"
             },
             {
               "text": "To impress other LLMs at parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fd1b934a7b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_10_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why do LLMs need so many examples to train?",
           "options": [
             {
               "text": "Because more is just funnier.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6891371527.ogg"
             },
             {
               "text": "To impress other LLMs at parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fd1b934a7b.ogg"
             },
             {
               "text": "To learn enough patterns to guess words well.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e137d77283.ogg"
             },
             {
               "text": "So the disk drive doesn't get lonely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0850eae61.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_10_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Why do LLMs need so many examples to train?",
           "options": [
             {
               "text": "So the disk drive doesn't get lonely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0850eae61.ogg"
             },
             {
               "text": "To learn enough patterns to guess words well.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e137d77283.ogg"
             },
             {
               "text": "To impress other LLMs at parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fd1b934a7b.ogg"
             },
             {
               "text": "Because more is just funnier.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6891371527.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_10_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Why do LLMs need so many examples to train?",
           "options": [
             {
               "text": "To learn enough patterns to guess words well.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e137d77283.ogg"
             },
             {
               "text": "To impress other LLMs at parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fd1b934a7b.ogg"
             },
             {
               "text": "So the disk drive doesn't get lonely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0850eae61.ogg"
             },
             {
               "text": "Because more is just funnier.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6891371527.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_10_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why do LLMs need so many examples to train?",
           "options": [
             {
               "text": "So the disk drive doesn't get lonely.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f0850eae61.ogg"
             },
             {
               "text": "To impress other LLMs at parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fd1b934a7b.ogg"
             },
             {
               "text": "Because more is just funnier.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6891371527.ogg"
             },
             {
               "text": "To learn enough patterns to guess words well.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e137d77283.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_10_q2_v9.ogg"
         }
       ]
     },
@@ -548,12 +609,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
+          "prompt": "Type TAILS and press Send to keep going!",
+          "target_display": "TAILS",
           "targets": [
-            "fun"
+            "tails"
           ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "hint_wrong": "Type the word TAILS (any case is fine)."
         }
       },
       "variations": [
@@ -562,234 +623,270 @@
           "options": [
             {
               "text": "It writes future books before they're written.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0ba5b619ab.ogg"
             },
             {
               "text": "It guesses what word should come after the words it has.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1a0d1073f0.ogg"
             },
             {
               "text": "It sneezes letters until one fits.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853fb85291.ogg"
             },
             {
               "text": "It throws darts at a dictionary.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/224ef177f4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_10_q3_v0.ogg"
         },
         {
           "prompt": "Quick! An LLM 'predicts the next word'. What does that mean?",
           "options": [
             {
               "text": "It throws darts at a dictionary.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/224ef177f4.ogg"
             },
             {
               "text": "It guesses what word should come after the words it has.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1a0d1073f0.ogg"
             },
             {
               "text": "It sneezes letters until one fits.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853fb85291.ogg"
             },
             {
               "text": "It writes future books before they're written.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0ba5b619ab.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_10_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — An LLM 'predicts the next word'. What does that mean?",
           "options": [
             {
               "text": "It throws darts at a dictionary.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/224ef177f4.ogg"
             },
             {
               "text": "It sneezes letters until one fits.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853fb85291.ogg"
             },
             {
               "text": "It guesses what word should come after the words it has.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1a0d1073f0.ogg"
             },
             {
               "text": "It writes future books before they're written.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0ba5b619ab.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_10_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: An LLM 'predicts the next word'. What does that mean?",
           "options": [
             {
               "text": "It writes future books before they're written.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0ba5b619ab.ogg"
             },
             {
               "text": "It throws darts at a dictionary.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/224ef177f4.ogg"
             },
             {
               "text": "It sneezes letters until one fits.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853fb85291.ogg"
             },
             {
               "text": "It guesses what word should come after the words it has.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1a0d1073f0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_10_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — An LLM 'predicts the next word'. What does that mean?",
           "options": [
             {
               "text": "It throws darts at a dictionary.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/224ef177f4.ogg"
             },
             {
               "text": "It guesses what word should come after the words it has.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1a0d1073f0.ogg"
             },
             {
               "text": "It writes future books before they're written.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0ba5b619ab.ogg"
             },
             {
               "text": "It sneezes letters until one fits.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853fb85291.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_10_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — An LLM 'predicts the next word'. What does that mean?",
           "options": [
             {
               "text": "It throws darts at a dictionary.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/224ef177f4.ogg"
             },
             {
               "text": "It sneezes letters until one fits.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853fb85291.ogg"
             },
             {
               "text": "It writes future books before they're written.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0ba5b619ab.ogg"
             },
             {
               "text": "It guesses what word should come after the words it has.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1a0d1073f0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_10_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! An LLM 'predicts the next word'. What does that mean?",
           "options": [
             {
               "text": "It throws darts at a dictionary.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/224ef177f4.ogg"
             },
             {
               "text": "It writes future books before they're written.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0ba5b619ab.ogg"
             },
             {
               "text": "It sneezes letters until one fits.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853fb85291.ogg"
             },
             {
               "text": "It guesses what word should come after the words it has.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1a0d1073f0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_10_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — An LLM 'predicts the next word'. What does that mean?",
           "options": [
             {
               "text": "It writes future books before they're written.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0ba5b619ab.ogg"
             },
             {
               "text": "It guesses what word should come after the words it has.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1a0d1073f0.ogg"
             },
             {
               "text": "It throws darts at a dictionary.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/224ef177f4.ogg"
             },
             {
               "text": "It sneezes letters until one fits.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853fb85291.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_10_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: An LLM 'predicts the next word'. What does that mean?",
           "options": [
             {
               "text": "It sneezes letters until one fits.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853fb85291.ogg"
             },
             {
               "text": "It throws darts at a dictionary.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/224ef177f4.ogg"
             },
             {
               "text": "It guesses what word should come after the words it has.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1a0d1073f0.ogg"
             },
             {
               "text": "It writes future books before they're written.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0ba5b619ab.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_10_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: An LLM 'predicts the next word'. What does that mean?",
           "options": [
             {
               "text": "It throws darts at a dictionary.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/224ef177f4.ogg"
             },
             {
               "text": "It writes future books before they're written.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0ba5b619ab.ogg"
             },
             {
               "text": "It sneezes letters until one fits.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/853fb85291.ogg"
             },
             {
               "text": "It guesses what word should come after the words it has.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1a0d1073f0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_10_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "tap-the-glow",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Tap the glowing thing!",
+          "glyph": "🌈"
         }
       },
       "variations": [
@@ -798,234 +895,287 @@
           "options": [
             {
               "text": "An LLM reads tons and tons of books and pages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9fca4ecf0.ogg"
             },
             {
               "text": "Training takes weeks of hard work for the computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804dc8c294.ogg"
             },
             {
               "text": "An LLM hatches from a giant glowing egg.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a67b40addb.ogg"
             },
             {
               "text": "Training takes lots of computers and time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80b2461d08.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_10_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about how an LLM is born.",
           "options": [
             {
               "text": "An LLM is born by reading huge piles of text -- books, websites, everything.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/faf71ea05d.ogg"
             },
             {
               "text": "LLMs grow on tall metal trees.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/73544fe4b9.ogg"
             },
             {
               "text": "An LLM reads tons and tons of books and pages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9fca4ecf0.ogg"
             },
             {
               "text": "After training, the LLM is the same brain everyone uses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb55e3e5ea.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_10_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about how an LLM is born.",
           "options": [
             {
               "text": "Training takes lots of computers and time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80b2461d08.ogg"
             },
             {
               "text": "Training takes weeks of hard work for the computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804dc8c294.ogg"
             },
             {
               "text": "LLMs only train at night because of magic.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6935a7ce9f.ogg"
             },
             {
               "text": "An LLM reads tons and tons of books and pages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9fca4ecf0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_10_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about how an LLM is born.",
           "options": [
             {
               "text": "The bigger the training, the smoother the chat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7768bdc2ea.ogg"
             },
             {
               "text": "An LLM is born by reading huge piles of text -- books, websites, everything.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/faf71ea05d.ogg"
             },
             {
               "text": "An LLM is hatched from a real chicken egg.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c3fed5986e.ogg"
             },
             {
               "text": "After training, the model can chat with us.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3cdd83fddf.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_10_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about how an LLM is born.",
           "options": [
             {
               "text": "Models do not remember any one book — just the patterns.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/091cedb649.ogg"
             },
             {
               "text": "The model gets better with more practice.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7573bd5b2a.ogg"
             },
             {
               "text": "Training takes weeks of hard work for the computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804dc8c294.ogg"
             },
             {
               "text": "Models train for one second and are done forever.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/530ce97013.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_10_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about how an LLM is born.",
           "options": [
             {
               "text": "After training, the LLM is the same brain everyone uses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb55e3e5ea.ogg"
             },
             {
               "text": "Models read just one tiny book about ducks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1667561fa5.ogg"
             },
             {
               "text": "It learns patterns of which word usually follows another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b810b15f61.ogg"
             },
             {
               "text": "The bigger the training, the smoother the chat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7768bdc2ea.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_10_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about how an LLM is born.",
           "options": [
             {
               "text": "An LLM is born by reading huge piles of text -- books, websites, everything.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/faf71ea05d.ogg"
             },
             {
               "text": "The model gets better with more practice.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7573bd5b2a.ogg"
             },
             {
               "text": "An LLM is grown in a lemon garden.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c1dd0d825.ogg"
             },
             {
               "text": "Training takes lots of computers and time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80b2461d08.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_10_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about how an LLM is born.",
           "options": [
             {
               "text": "An LLM reads tons and tons of books and pages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9fca4ecf0.ogg"
             },
             {
               "text": "Models do not remember any one book — just the patterns.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/091cedb649.ogg"
             },
             {
               "text": "After training, the LLM is the same brain everyone uses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb55e3e5ea.ogg"
             },
             {
               "text": "Models train on Mars while wearing space hats.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f1b9279103.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_10_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about how an LLM is born.",
           "options": [
             {
               "text": "LLMs are built by tiny mice with calculators.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3d993e4dd7.ogg"
             },
             {
               "text": "Training takes lots of computers and time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80b2461d08.ogg"
             },
             {
               "text": "An LLM does not know things — it predicts words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b27f56fe74.ogg"
             },
             {
               "text": "It learns to guess the next word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/638a3c1e12.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_10_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about how an LLM is born.",
           "options": [
             {
               "text": "It learns patterns of which word usually follows another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b810b15f61.ogg"
             },
             {
               "text": "An LLM remembers every book by name and shoe size.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2bb0421afa.ogg"
             },
             {
               "text": "After training, the model can chat with us.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3cdd83fddf.ogg"
             },
             {
               "text": "Training takes weeks of hard work for the computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804dc8c294.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_10_q4_v9.ogg"
         }
       ]
     },
     {
       "id": "q5",
       "interaction": {
-        "type": "type-this-word",
+        "type": "pick-the-pic",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
-          "targets": [
-            "next"
-          ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "prompt": "Tap the right picture!",
+          "choices": [
+            {
+              "glyph": "🍕",
+              "right": true
+            },
+            {
+              "glyph": "🥦",
+              "right": false
+            },
+            {
+              "glyph": "🪨",
+              "right": false
+            },
+            {
+              "glyph": "🧂",
+              "right": false
+            }
+          ]
         }
       },
       "variations": [
@@ -1034,234 +1184,270 @@
           "options": [
             {
               "text": "Models read just one tiny book about ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1667561fa5.ogg"
             },
             {
               "text": "LLMs grow on tall metal trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/73544fe4b9.ogg"
             },
             {
               "text": "An LLM is hatched from a real chicken egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c3fed5986e.ogg"
             },
             {
               "text": "An LLM reads tons and tons of books and pages.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f9fca4ecf0.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_10_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about how an LLM is born?",
           "options": [
             {
               "text": "An LLM is hatched from a real chicken egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c3fed5986e.ogg"
             },
             {
               "text": "Models learn by inhaling crayons.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4e4a12ee3.ogg"
             },
             {
               "text": "It learns to guess the next word.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/638a3c1e12.ogg"
             },
             {
               "text": "An LLM is born when two computers do a special handshake.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3819ae798.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_10_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about how an LLM is born?",
           "options": [
             {
               "text": "Training takes lots of computers and time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/80b2461d08.ogg"
             },
             {
               "text": "Models train on Mars while wearing space hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1b9279103.ogg"
             },
             {
               "text": "Models learn by inhaling crayons.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4e4a12ee3.ogg"
             },
             {
               "text": "Models train for one second and are done forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/530ce97013.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_10_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about how an LLM is born?",
           "options": [
             {
               "text": "An LLM hatches from a giant glowing egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a67b40addb.ogg"
             },
             {
               "text": "The model gets better with more practice.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7573bd5b2a.ogg"
             },
             {
               "text": "An LLM is born when two computers do a special handshake.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3819ae798.ogg"
             },
             {
               "text": "Models learn by inhaling crayons.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f4e4a12ee3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_10_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about how an LLM is born?",
           "options": [
             {
               "text": "After training, the model can chat with us.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/3cdd83fddf.ogg"
             },
             {
               "text": "An LLM remembers every book by name and shoe size.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2bb0421afa.ogg"
             },
             {
               "text": "Models train on Mars while wearing space hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1b9279103.ogg"
             },
             {
               "text": "LLMs only train at night because of magic.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6935a7ce9f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_10_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about how an LLM is born?",
           "options": [
             {
               "text": "An LLM does not know things — it predicts words.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b27f56fe74.ogg"
             },
             {
               "text": "An LLM remembers every book by name and shoe size.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2bb0421afa.ogg"
             },
             {
               "text": "An LLM is hatched from a real chicken egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c3fed5986e.ogg"
             },
             {
               "text": "Models train for one second and are done forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/530ce97013.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_10_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about how an LLM is born?",
           "options": [
             {
               "text": "An LLM is grown in a lemon garden.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c1dd0d825.ogg"
             },
             {
               "text": "An LLM is hatched from a real chicken egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c3fed5986e.ogg"
             },
             {
               "text": "The bigger the training, the smoother the chat.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/7768bdc2ea.ogg"
             },
             {
               "text": "Models read just one tiny book about ducks.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1667561fa5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_10_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about how an LLM is born?",
           "options": [
             {
               "text": "An LLM is hatched from a real chicken egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c3fed5986e.ogg"
             },
             {
               "text": "An LLM remembers every book by name and shoe size.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/2bb0421afa.ogg"
             },
             {
               "text": "Models train on Mars while wearing space hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1b9279103.ogg"
             },
             {
               "text": "Models do not remember any one book — just the patterns.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/091cedb649.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_10_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about how an LLM is born?",
           "options": [
             {
               "text": "LLMs only train at night because of magic.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6935a7ce9f.ogg"
             },
             {
               "text": "An LLM is grown in a lemon garden.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6c1dd0d825.ogg"
             },
             {
               "text": "Models train on Mars while wearing space hats.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f1b9279103.ogg"
             },
             {
               "text": "An LLM is born by reading huge piles of text -- books, websites, everything.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/faf71ea05d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_10_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about how an LLM is born?",
           "options": [
             {
               "text": "An LLM hatches from a giant glowing egg.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a67b40addb.ogg"
             },
             {
               "text": "LLMs grow on tall metal trees.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/73544fe4b9.ogg"
             },
             {
               "text": "Models train for one second and are done forever.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/530ce97013.ogg"
             },
             {
               "text": "It learns patterns of which word usually follows another.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b810b15f61.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_10_q5_v9.ogg"
         }
       ]
     },
     {
       "id": "q6",
       "interaction": {
-        "type": "type-this-word",
+        "type": "sprite-poke",
         "payload": {
-          "prompt": "Type WIN and press Send to keep going!",
-          "target_display": "WIN",
-          "targets": [
-            "win"
-          ],
-          "hint_wrong": "Type the word WIN (any case is fine)."
+          "prompt": "Tap the running hero!",
+          "glyph": "🐶"
         }
       },
       "variations": [
@@ -1270,234 +1456,274 @@
           "options": [
             {
               "text": "Reads tons of words and learns which words go together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c5138e96a.ogg"
             },
             {
               "text": "Counts to a billion.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d55136d66e.ogg"
             },
             {
               "text": "Has small computer parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a5a5e026f.ogg"
             },
             {
               "text": "Sleeps and dreams about answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bcea600d1b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q6_v0.wav"
+          "_audio": "assets/audio/q/lesson_10_q6_v0.ogg"
         },
         {
           "prompt": "Quick! What does an LLM mostly DO during training?",
           "options": [
             {
               "text": "Has small computer parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a5a5e026f.ogg"
             },
             {
               "text": "Reads tons of words and learns which words go together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c5138e96a.ogg"
             },
             {
               "text": "Sleeps and dreams about answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bcea600d1b.ogg"
             },
             {
               "text": "Counts to a billion.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d55136d66e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q6_v1.wav"
+          "_audio": "assets/audio/q/lesson_10_q6_v1.ogg"
         },
         {
           "prompt": "Hey friend — What does an LLM mostly DO during training?",
           "options": [
             {
               "text": "Counts to a billion.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d55136d66e.ogg"
             },
             {
               "text": "Reads tons of words and learns which words go together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c5138e96a.ogg"
             },
             {
               "text": "Has small computer parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a5a5e026f.ogg"
             },
             {
               "text": "Sleeps and dreams about answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bcea600d1b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q6_v2.wav"
+          "_audio": "assets/audio/q/lesson_10_q6_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: What does an LLM mostly DO during training?",
           "options": [
             {
               "text": "Has small computer parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a5a5e026f.ogg"
             },
             {
               "text": "Sleeps and dreams about answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bcea600d1b.ogg"
             },
             {
               "text": "Reads tons of words and learns which words go together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c5138e96a.ogg"
             },
             {
               "text": "Counts to a billion.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d55136d66e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q6_v3.wav"
+          "_audio": "assets/audio/q/lesson_10_q6_v3.ogg"
         },
         {
           "prompt": "Tell me — What does an LLM mostly DO during training?",
           "options": [
             {
               "text": "Reads tons of words and learns which words go together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c5138e96a.ogg"
             },
             {
               "text": "Has small computer parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a5a5e026f.ogg"
             },
             {
               "text": "Counts to a billion.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d55136d66e.ogg"
             },
             {
               "text": "Sleeps and dreams about answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bcea600d1b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q6_v4.wav"
+          "_audio": "assets/audio/q/lesson_10_q6_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — What does an LLM mostly DO during training?",
           "options": [
             {
               "text": "Sleeps and dreams about answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bcea600d1b.ogg"
             },
             {
               "text": "Counts to a billion.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d55136d66e.ogg"
             },
             {
               "text": "Reads tons of words and learns which words go together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c5138e96a.ogg"
             },
             {
               "text": "Has small computer parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a5a5e026f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q6_v5.wav"
+          "_audio": "assets/audio/q/lesson_10_q6_v5.ogg"
         },
         {
           "prompt": "Pop quiz! What does an LLM mostly DO during training?",
           "options": [
             {
               "text": "Counts to a billion.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d55136d66e.ogg"
             },
             {
               "text": "Reads tons of words and learns which words go together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c5138e96a.ogg"
             },
             {
               "text": "Sleeps and dreams about answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bcea600d1b.ogg"
             },
             {
               "text": "Has small computer parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a5a5e026f.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q6_v6.wav"
+          "_audio": "assets/audio/q/lesson_10_q6_v6.ogg"
         },
         {
           "prompt": "Listen up — What does an LLM mostly DO during training?",
           "options": [
             {
               "text": "Has small computer parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a5a5e026f.ogg"
             },
             {
               "text": "Counts to a billion.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d55136d66e.ogg"
             },
             {
               "text": "Reads tons of words and learns which words go together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c5138e96a.ogg"
             },
             {
               "text": "Sleeps and dreams about answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bcea600d1b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q6_v7.wav"
+          "_audio": "assets/audio/q/lesson_10_q6_v7.ogg"
         },
         {
           "prompt": "Think about this: What does an LLM mostly DO during training?",
           "options": [
             {
               "text": "Reads tons of words and learns which words go together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c5138e96a.ogg"
             },
             {
               "text": "Sleeps and dreams about answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bcea600d1b.ogg"
             },
             {
               "text": "Has small computer parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a5a5e026f.ogg"
             },
             {
               "text": "Counts to a billion.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d55136d66e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q6_v8.wav"
+          "_audio": "assets/audio/q/lesson_10_q6_v8.ogg"
         },
         {
           "prompt": "Got a quick one: What does an LLM mostly DO during training?",
           "options": [
             {
               "text": "Counts to a billion.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d55136d66e.ogg"
             },
             {
               "text": "Sleeps and dreams about answers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bcea600d1b.ogg"
             },
             {
               "text": "Has small computer parties.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/8a5a5e026f.ogg"
             },
             {
               "text": "Reads tons of words and learns which words go together.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c5138e96a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q6_v9.wav"
+          "_audio": "assets/audio/q/lesson_10_q6_v9.ogg"
         }
       ]
     },
     {
       "id": "q7",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type PLAY and press Send to keep going!",
-          "target_display": "PLAY",
-          "targets": [
-            "play"
-          ],
-          "hint_wrong": "Type the word PLAY (any case is fine)."
+          "prompt": "How was an LLM born? Put it in order:",
+          "steps": [
+            "Read tons of books",
+            "Learn word patterns",
+            "Answer new questions"
+          ]
         }
       },
       "variations": [
@@ -1506,220 +1732,260 @@
           "options": [
             {
               "text": "An LLM remembers every book by name and shoe size.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/2bb0421afa.ogg"
             },
             {
               "text": "It learns to guess the next word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/638a3c1e12.ogg"
             },
             {
               "text": "An LLM is born by reading huge piles of text -- books, websites, everything.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/faf71ea05d.ogg"
             },
             {
               "text": "After training, the LLM is the same brain everyone uses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb55e3e5ea.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q7_v0.wav"
+          "_audio": "assets/audio/q/lesson_10_q7_v0.ogg"
         },
         {
           "prompt": "Listen up — Bytey claims something about how an LLM is born. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "An LLM reads tons and tons of books and pages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9fca4ecf0.ogg"
             },
             {
               "text": "The model gets better with more practice.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7573bd5b2a.ogg"
             },
             {
               "text": "Training takes lots of computers and time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80b2461d08.ogg"
             },
             {
               "text": "Models learn by inhaling crayons.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f4e4a12ee3.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q7_v1.wav"
+          "_audio": "assets/audio/q/lesson_10_q7_v1.ogg"
         },
         {
           "prompt": "Think about this: Bytey claims something about how an LLM is born. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "The bigger the training, the smoother the chat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7768bdc2ea.ogg"
             },
             {
               "text": "After training, the LLM is the same brain everyone uses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb55e3e5ea.ogg"
             },
             {
               "text": "It learns patterns of which word usually follows another.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b810b15f61.ogg"
             },
             {
               "text": "An LLM is born when two computers do a special handshake.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e3819ae798.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q7_v2.wav"
+          "_audio": "assets/audio/q/lesson_10_q7_v2.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey claims something about how an LLM is born. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "It learns to guess the next word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/638a3c1e12.ogg"
             },
             {
               "text": "An LLM hatches from a giant glowing egg.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a67b40addb.ogg"
             },
             {
               "text": "The bigger the training, the smoother the chat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7768bdc2ea.ogg"
             },
             {
               "text": "After training, the model can chat with us.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/3cdd83fddf.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q7_v3.wav"
+          "_audio": "assets/audio/q/lesson_10_q7_v3.ogg"
         },
         {
           "prompt": "Brain time: Bytey claims something about how an LLM is born. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Training takes weeks of hard work for the computers.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/804dc8c294.ogg"
             },
             {
               "text": "LLMs grow on tall metal trees.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/73544fe4b9.ogg"
             },
             {
               "text": "An LLM reads tons and tons of books and pages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9fca4ecf0.ogg"
             },
             {
               "text": "An LLM is born by reading huge piles of text -- books, websites, everything.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/faf71ea05d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q7_v4.wav"
+          "_audio": "assets/audio/q/lesson_10_q7_v4.ogg"
         },
         {
           "prompt": "Bytey claims something about how an LLM is born. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "An LLM does not know things — it predicts words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b27f56fe74.ogg"
             },
             {
               "text": "LLMs only train at night because of magic.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6935a7ce9f.ogg"
             },
             {
               "text": "An LLM is born by reading huge piles of text -- books, websites, everything.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/faf71ea05d.ogg"
             },
             {
               "text": "Models do not remember any one book — just the patterns.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/091cedb649.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q7_v5.wav"
+          "_audio": "assets/audio/q/lesson_10_q7_v5.ogg"
         },
         {
           "prompt": "Quick! Bytey claims something about how an LLM is born. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Training takes lots of computers and time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80b2461d08.ogg"
             },
             {
               "text": "An LLM is hatched from a real chicken egg.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c3fed5986e.ogg"
             },
             {
               "text": "The bigger the training, the smoother the chat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7768bdc2ea.ogg"
             },
             {
               "text": "It learns to guess the next word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/638a3c1e12.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q7_v6.wav"
+          "_audio": "assets/audio/q/lesson_10_q7_v6.ogg"
         },
         {
           "prompt": "Hey friend — Bytey claims something about how an LLM is born. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "The bigger the training, the smoother the chat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7768bdc2ea.ogg"
             },
             {
               "text": "It learns to guess the next word.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/638a3c1e12.ogg"
             },
             {
               "text": "Models train for one second and are done forever.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/530ce97013.ogg"
             },
             {
               "text": "The model gets better with more practice.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7573bd5b2a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q7_v7.wav"
+          "_audio": "assets/audio/q/lesson_10_q7_v7.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey claims something about how an LLM is born. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Models read just one tiny book about ducks.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1667561fa5.ogg"
             },
             {
               "text": "An LLM reads tons and tons of books and pages.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9fca4ecf0.ogg"
             },
             {
               "text": "After training, the LLM is the same brain everyone uses.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eb55e3e5ea.ogg"
             },
             {
               "text": "The bigger the training, the smoother the chat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7768bdc2ea.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q7_v8.wav"
+          "_audio": "assets/audio/q/lesson_10_q7_v8.ogg"
         },
         {
           "prompt": "Tell me — Bytey claims something about how an LLM is born. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Training takes lots of computers and time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/80b2461d08.ogg"
             },
             {
               "text": "An LLM does not know things — it predicts words.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b27f56fe74.ogg"
             },
             {
               "text": "An LLM is grown in a lemon garden.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/6c1dd0d825.ogg"
             },
             {
               "text": "The bigger the training, the smoother the chat.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/7768bdc2ea.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_10_q7_v9.wav"
+          "_audio": "assets/audio/q/lesson_10_q7_v9.ogg"
         }
       ]
     }

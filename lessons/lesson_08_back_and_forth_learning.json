@@ -55,269 +55,290 @@
     {
       "id": "q1",
       "interaction": {
-        "type": "history-scene",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Watch the scene, then answer the question!",
-          "scene": {
-            "id": "training",
-            "check": {
-              "prompt": "Where did the guess move toward?",
-              "choices": [
-                {
-                  "label": "The green target",
-                  "right": true
-                },
-                {
-                  "label": "The clouds",
-                  "right": false
-                },
-                {
-                  "label": "Off the screen",
-                  "right": false
-                },
-                {
-                  "label": "The ground",
-                  "right": false
-                }
-              ]
-            }
-          }
+          "prompt": "🔁 Back-and-forth learning — what comes first?",
+          "steps": [
+            "You ask a question",
+            "A I answers",
+            "You correct it"
+          ]
         }
       },
       "variations": [
         {
-          "prompt": "What is back-and-forth learning?",
+          "prompt": "🎮 Quick — show me what you know about Back-and-Forth Learning!",
           "options": [
             {
               "text": "AI gets smarter by drinking ten glasses of water.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/830f91a06c.ogg"
             },
             {
               "text": "Helpers learn nothing from feedback because they are stones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd37286c8a.ogg"
             },
             {
               "text": "Asking questions is rude and breaks the chair.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0d8b41894.ogg"
             },
             {
               "text": "We learn by trying, missing, and trying again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a93495f7aa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q1_v0.wav"
+          "_audio": "assets/audio/q/lesson_08_q1_v0.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about back-and-forth learning?",
           "options": [
             {
               "text": "Mistakes mean you are bad and the floor is mad.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/356d77d204.ogg"
             },
             {
               "text": "Helpers learn from feedback we give them.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4354e9266e.ogg"
             },
             {
               "text": "Feedback is a kind of soup nobody wanted.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e2f2b6fe6.ogg"
             },
             {
               "text": "AI only learns when nobody is watching.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e600a71327.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q1_v1.wav"
+          "_audio": "assets/audio/q/lesson_08_q1_v1.ogg"
         },
         {
           "prompt": "Hey friend — One of these is silly! Pick the WRONG one about back-and-forth learning.",
           "options": [
             {
               "text": "We learn by trying, missing, and trying again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a93495f7aa.ogg"
             },
             {
               "text": "Practice makes patterns easy to see.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f231b2dcfd.ogg"
             },
             {
               "text": "Mistakes mean you are bad and the floor is mad.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/356d77d204.ogg"
             },
             {
               "text": "Saying what didn't work helps a lot.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c22033858c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q1_v2.wav"
+          "_audio": "assets/audio/q/lesson_08_q1_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Bytey wants to teach a friend about back-and-forth learning. What should he say?",
           "options": [
             {
               "text": "AI only learns when nobody is watching.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e600a71327.ogg"
             },
             {
               "text": "Asking questions is rude and breaks the chair.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0d8b41894.ogg"
             },
             {
               "text": "Practice makes patterns easy to see.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f231b2dcfd.ogg"
             },
             {
               "text": "If you fail once you should stop forever and weep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/60894129c5.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q1_v3.wav"
+          "_audio": "assets/audio/q/lesson_08_q1_v3.ogg"
         },
         {
           "prompt": "Tell me — Which rule about back-and-forth learning is a GOOD rule?",
           "options": [
             {
               "text": "AI gets smarter by drinking ten glasses of water.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/830f91a06c.ogg"
             },
             {
               "text": "Mistakes mean you are bad and the floor is mad.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/356d77d204.ogg"
             },
             {
               "text": "Asking is a strong way to learn.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d10915ce0a.ogg"
             },
             {
               "text": "Asking questions is rude and breaks the chair.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0d8b41894.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q1_v4.wav"
+          "_audio": "assets/audio/q/lesson_08_q1_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Fill in the blank: when we talk about back-and-forth learning, ___",
           "options": [
             {
               "text": "Mistakes summon a tiny worried clown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9f9bac4ac.ogg"
             },
             {
               "text": "It is fine to be wrong on the way to right.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eafdb435a9.ogg"
             },
             {
               "text": "AI learns by listening to soft jazz.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1cf72e589b.ogg"
             },
             {
               "text": "Practice makes things harder and gives you a beard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4afde6d1a4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q1_v5.wav"
+          "_audio": "assets/audio/q/lesson_08_q1_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Bytey claims something about back-and-forth learning. Pick the SILLIEST claim.",
           "options": [
             {
               "text": "Practice makes patterns easy to see.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f231b2dcfd.ogg"
             },
             {
               "text": "Asking is a strong way to learn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d10915ce0a.ogg"
             },
             {
               "text": "Feedback is a kind of soup nobody wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1e2f2b6fe6.ogg"
             },
             {
               "text": "It is fine to be wrong on the way to right.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eafdb435a9.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q1_v6.wav"
+          "_audio": "assets/audio/q/lesson_08_q1_v6.ogg"
         },
         {
           "prompt": "Listen up — What WOULD really happen with back-and-forth learning?",
           "options": [
             {
               "text": "If you fail once you should stop forever and weep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/60894129c5.ogg"
             },
             {
               "text": "Trying twice makes the helper sleepy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e7d9d381ea.ogg"
             },
             {
               "text": "Saying what didn't work helps a lot.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c22033858c.ogg"
             },
             {
               "text": "Asking questions is rude and breaks the chair.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0d8b41894.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q1_v7.wav"
+          "_audio": "assets/audio/q/lesson_08_q1_v7.ogg"
         },
         {
           "prompt": "Think about this: One of these about back-and-forth learning is silly. Pick the silly one!",
           "options": [
             {
               "text": "AI learns by trying, getting it wrong, and trying again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c523636267.ogg"
             },
             {
               "text": "Practice makes patterns easy to see.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f231b2dcfd.ogg"
             },
             {
               "text": "It is fine to be wrong on the way to right.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eafdb435a9.ogg"
             },
             {
               "text": "AI learns by listening to soft jazz.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1cf72e589b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q1_v8.wav"
+          "_audio": "assets/audio/q/lesson_08_q1_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Bytey is confused about back-and-forth learning. Which fact would help him?",
           "options": [
             {
               "text": "Each mistake helps the AI get a tiny bit better.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/752d81b512.ogg"
             },
             {
               "text": "Trying twice makes the helper sleepy.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e7d9d381ea.ogg"
             },
             {
               "text": "Feedback is a kind of soup nobody wanted.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e2f2b6fe6.ogg"
             },
             {
               "text": "Mistakes mean you are bad and the floor is mad.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/356d77d204.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q1_v9.wav"
+          "_audio": "assets/audio/q/lesson_08_q1_v9.ogg"
         }
       ]
     },
     {
       "id": "q2",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type YES and press Send to keep going!",
-          "target_display": "YES",
-          "targets": [
-            "yes"
-          ],
-          "hint_wrong": "Type the word YES (any case is fine)."
+          "prompt": "Back-and-forth learning order:",
+          "steps": [
+            "You ask a question",
+            "AI answers",
+            "You correct it if it's wrong"
+          ]
         }
       },
       "variations": [
@@ -326,234 +347,274 @@
           "options": [
             {
               "text": "Buy a new computer immediately.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66d389e87a.ogg"
             },
             {
               "text": "Tell Claude what went wrong and try again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dc64e7009.ogg"
             },
             {
               "text": "Cry into a sock.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0023669a70.ogg"
             },
             {
               "text": "Bury the code in the yard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/00d2297220.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q2_v0.wav"
+          "_audio": "assets/audio/q/lesson_08_q2_v0.ogg"
         },
         {
           "prompt": "Quick! Claude wrote you code that didn't work. What's the best move?",
           "options": [
             {
               "text": "Bury the code in the yard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/00d2297220.ogg"
             },
             {
               "text": "Buy a new computer immediately.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66d389e87a.ogg"
             },
             {
               "text": "Tell Claude what went wrong and try again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dc64e7009.ogg"
             },
             {
               "text": "Cry into a sock.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0023669a70.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q2_v1.wav"
+          "_audio": "assets/audio/q/lesson_08_q2_v1.ogg"
         },
         {
           "prompt": "Hey friend — Claude wrote you code that didn't work. What's the best move?",
           "options": [
             {
               "text": "Buy a new computer immediately.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66d389e87a.ogg"
             },
             {
               "text": "Bury the code in the yard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/00d2297220.ogg"
             },
             {
               "text": "Tell Claude what went wrong and try again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dc64e7009.ogg"
             },
             {
               "text": "Cry into a sock.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0023669a70.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q2_v2.wav"
+          "_audio": "assets/audio/q/lesson_08_q2_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Claude wrote you code that didn't work. What's the best move?",
           "options": [
             {
               "text": "Cry into a sock.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0023669a70.ogg"
             },
             {
               "text": "Buy a new computer immediately.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66d389e87a.ogg"
             },
             {
               "text": "Bury the code in the yard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/00d2297220.ogg"
             },
             {
               "text": "Tell Claude what went wrong and try again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dc64e7009.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q2_v3.wav"
+          "_audio": "assets/audio/q/lesson_08_q2_v3.ogg"
         },
         {
           "prompt": "Tell me — Claude wrote you code that didn't work. What's the best move?",
           "options": [
             {
               "text": "Cry into a sock.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0023669a70.ogg"
             },
             {
               "text": "Bury the code in the yard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/00d2297220.ogg"
             },
             {
               "text": "Tell Claude what went wrong and try again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dc64e7009.ogg"
             },
             {
               "text": "Buy a new computer immediately.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66d389e87a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q2_v4.wav"
+          "_audio": "assets/audio/q/lesson_08_q2_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Claude wrote you code that didn't work. What's the best move?",
           "options": [
             {
               "text": "Tell Claude what went wrong and try again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dc64e7009.ogg"
             },
             {
               "text": "Cry into a sock.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0023669a70.ogg"
             },
             {
               "text": "Bury the code in the yard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/00d2297220.ogg"
             },
             {
               "text": "Buy a new computer immediately.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66d389e87a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q2_v5.wav"
+          "_audio": "assets/audio/q/lesson_08_q2_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Claude wrote you code that didn't work. What's the best move?",
           "options": [
             {
               "text": "Cry into a sock.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0023669a70.ogg"
             },
             {
               "text": "Buy a new computer immediately.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66d389e87a.ogg"
             },
             {
               "text": "Tell Claude what went wrong and try again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dc64e7009.ogg"
             },
             {
               "text": "Bury the code in the yard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/00d2297220.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q2_v6.wav"
+          "_audio": "assets/audio/q/lesson_08_q2_v6.ogg"
         },
         {
           "prompt": "Listen up — Claude wrote you code that didn't work. What's the best move?",
           "options": [
             {
               "text": "Buy a new computer immediately.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66d389e87a.ogg"
             },
             {
               "text": "Cry into a sock.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0023669a70.ogg"
             },
             {
               "text": "Tell Claude what went wrong and try again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dc64e7009.ogg"
             },
             {
               "text": "Bury the code in the yard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/00d2297220.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q2_v7.wav"
+          "_audio": "assets/audio/q/lesson_08_q2_v7.ogg"
         },
         {
           "prompt": "Think about this: Claude wrote you code that didn't work. What's the best move?",
           "options": [
             {
               "text": "Tell Claude what went wrong and try again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dc64e7009.ogg"
             },
             {
               "text": "Buy a new computer immediately.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66d389e87a.ogg"
             },
             {
               "text": "Cry into a sock.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0023669a70.ogg"
             },
             {
               "text": "Bury the code in the yard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/00d2297220.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q2_v8.wav"
+          "_audio": "assets/audio/q/lesson_08_q2_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Claude wrote you code that didn't work. What's the best move?",
           "options": [
             {
               "text": "Cry into a sock.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/0023669a70.ogg"
             },
             {
               "text": "Tell Claude what went wrong and try again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/5dc64e7009.ogg"
             },
             {
               "text": "Bury the code in the yard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/00d2297220.ogg"
             },
             {
               "text": "Buy a new computer immediately.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/66d389e87a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q2_v9.wav"
+          "_audio": "assets/audio/q/lesson_08_q2_v9.ogg"
         }
       ]
     },
     {
       "id": "q3",
       "interaction": {
-        "type": "type-this-word",
+        "type": "timeline-order",
         "payload": {
-          "prompt": "Type FUN and press Send to keep going!",
-          "target_display": "FUN",
-          "targets": [
-            "fun"
-          ],
-          "hint_wrong": "Type the word FUN (any case is fine)."
+          "prompt": "Back-and-forth learning order:",
+          "steps": [
+            "You ask a question",
+            "AI answers",
+            "You correct it if it's wrong"
+          ]
         }
       },
       "variations": [
@@ -562,234 +623,283 @@
           "options": [
             {
               "text": "They make our hair grow faster.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3050d611d.ogg"
             },
             {
               "text": "They earn us tiny gold coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e9c10b9c4.ogg"
             },
             {
               "text": "They scare bugs out of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/30a71d4c91.ogg"
             },
             {
               "text": "They show us where to look next time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52fc06e500.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q3_v0.wav"
+          "_audio": "assets/audio/q/lesson_08_q3_v0.ogg"
         },
         {
           "prompt": "Quick! Why do mistakes help us learn?",
           "options": [
             {
               "text": "They earn us tiny gold coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e9c10b9c4.ogg"
             },
             {
               "text": "They show us where to look next time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52fc06e500.ogg"
             },
             {
               "text": "They make our hair grow faster.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3050d611d.ogg"
             },
             {
               "text": "They scare bugs out of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/30a71d4c91.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q3_v1.wav"
+          "_audio": "assets/audio/q/lesson_08_q3_v1.ogg"
         },
         {
           "prompt": "Hey friend — Why do mistakes help us learn?",
           "options": [
             {
               "text": "They scare bugs out of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/30a71d4c91.ogg"
             },
             {
               "text": "They show us where to look next time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52fc06e500.ogg"
             },
             {
               "text": "They make our hair grow faster.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3050d611d.ogg"
             },
             {
               "text": "They earn us tiny gold coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e9c10b9c4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q3_v2.wav"
+          "_audio": "assets/audio/q/lesson_08_q3_v2.ogg"
         },
         {
           "prompt": "Bytey wonders: Why do mistakes help us learn?",
           "options": [
             {
               "text": "They scare bugs out of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/30a71d4c91.ogg"
             },
             {
               "text": "They make our hair grow faster.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3050d611d.ogg"
             },
             {
               "text": "They earn us tiny gold coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e9c10b9c4.ogg"
             },
             {
               "text": "They show us where to look next time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52fc06e500.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q3_v3.wav"
+          "_audio": "assets/audio/q/lesson_08_q3_v3.ogg"
         },
         {
           "prompt": "Tell me — Why do mistakes help us learn?",
           "options": [
             {
               "text": "They show us where to look next time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52fc06e500.ogg"
             },
             {
               "text": "They earn us tiny gold coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e9c10b9c4.ogg"
             },
             {
               "text": "They make our hair grow faster.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3050d611d.ogg"
             },
             {
               "text": "They scare bugs out of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/30a71d4c91.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q3_v4.wav"
+          "_audio": "assets/audio/q/lesson_08_q3_v4.ogg"
         },
         {
           "prompt": "Wait wait wait — Why do mistakes help us learn?",
           "options": [
             {
               "text": "They make our hair grow faster.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3050d611d.ogg"
             },
             {
               "text": "They scare bugs out of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/30a71d4c91.ogg"
             },
             {
               "text": "They earn us tiny gold coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e9c10b9c4.ogg"
             },
             {
               "text": "They show us where to look next time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52fc06e500.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q3_v5.wav"
+          "_audio": "assets/audio/q/lesson_08_q3_v5.ogg"
         },
         {
           "prompt": "Pop quiz! Why do mistakes help us learn?",
           "options": [
             {
               "text": "They earn us tiny gold coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e9c10b9c4.ogg"
             },
             {
               "text": "They make our hair grow faster.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3050d611d.ogg"
             },
             {
               "text": "They scare bugs out of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/30a71d4c91.ogg"
             },
             {
               "text": "They show us where to look next time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52fc06e500.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q3_v6.wav"
+          "_audio": "assets/audio/q/lesson_08_q3_v6.ogg"
         },
         {
           "prompt": "Listen up — Why do mistakes help us learn?",
           "options": [
             {
               "text": "They make our hair grow faster.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3050d611d.ogg"
             },
             {
               "text": "They show us where to look next time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52fc06e500.ogg"
             },
             {
               "text": "They scare bugs out of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/30a71d4c91.ogg"
             },
             {
               "text": "They earn us tiny gold coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e9c10b9c4.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q3_v7.wav"
+          "_audio": "assets/audio/q/lesson_08_q3_v7.ogg"
         },
         {
           "prompt": "Think about this: Why do mistakes help us learn?",
           "options": [
             {
               "text": "They scare bugs out of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/30a71d4c91.ogg"
             },
             {
               "text": "They make our hair grow faster.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3050d611d.ogg"
             },
             {
               "text": "They earn us tiny gold coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e9c10b9c4.ogg"
             },
             {
               "text": "They show us where to look next time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52fc06e500.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q3_v8.wav"
+          "_audio": "assets/audio/q/lesson_08_q3_v8.ogg"
         },
         {
           "prompt": "Got a quick one: Why do mistakes help us learn?",
           "options": [
             {
               "text": "They scare bugs out of the keyboard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/30a71d4c91.ogg"
             },
             {
               "text": "They show us where to look next time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/52fc06e500.ogg"
             },
             {
               "text": "They earn us tiny gold coins.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/6e9c10b9c4.ogg"
             },
             {
               "text": "They make our hair grow faster.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e3050d611d.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q3_v9.wav"
+          "_audio": "assets/audio/q/lesson_08_q3_v9.ogg"
         }
       ]
     },
     {
       "id": "q4",
       "interaction": {
-        "type": "type-this-word",
+        "type": "drag-to-match",
         "payload": {
-          "prompt": "Type COOL and press Send to keep going!",
-          "target_display": "COOL",
-          "targets": [
-            "cool"
-          ],
-          "hint_wrong": "Type the word COOL (any case is fine)."
+          "prompt": "Drag each one to its match!",
+          "pairs": [
+            {
+              "left": "Save",
+              "right": "💾"
+            },
+            {
+              "left": "Share",
+              "right": "📤"
+            },
+            {
+              "left": "Build",
+              "right": "🔨"
+            }
+          ]
         }
       },
       "variations": [
@@ -798,220 +908,260 @@
           "options": [
             {
               "text": "We learn by trying, missing, and trying again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a93495f7aa.ogg"
             },
             {
               "text": "Without practice, an AI can't learn anything new.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4aa7456d7e.ogg"
             },
             {
               "text": "AI gets smarter by drinking ten glasses of water.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/830f91a06c.ogg"
             },
             {
               "text": "Mistakes are clues that help us improve.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fa6ee8596a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q4_v0.wav"
+          "_audio": "assets/audio/q/lesson_08_q4_v0.ogg"
         },
         {
           "prompt": "Tell me — One of these is silly! Pick the WRONG one about back-and-forth learning.",
           "options": [
             {
               "text": "AI learns by trying, getting it wrong, and trying again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c523636267.ogg"
             },
             {
               "text": "AI only learns when nobody is watching.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e600a71327.ogg"
             },
             {
               "text": "We learn by trying, missing, and trying again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a93495f7aa.ogg"
             },
             {
               "text": "Back-and-forth learning is just like how YOU learn to ride a bike.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c6d2c2735e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q4_v1.wav"
+          "_audio": "assets/audio/q/lesson_08_q4_v1.ogg"
         },
         {
           "prompt": "Wait wait wait — One of these is silly! Pick the WRONG one about back-and-forth learning.",
           "options": [
             {
               "text": "Mistakes are clues that help us improve.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fa6ee8596a.ogg"
             },
             {
               "text": "Without practice, an AI can't learn anything new.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4aa7456d7e.ogg"
             },
             {
               "text": "AI learns by reading dictionaries in its sleep.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/b1833edfd8.ogg"
             },
             {
               "text": "We learn by trying, missing, and trying again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a93495f7aa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q4_v2.wav"
+          "_audio": "assets/audio/q/lesson_08_q4_v2.ogg"
         },
         {
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about back-and-forth learning.",
           "options": [
             {
               "text": "Two tries beat one most of the time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/27a8909488.ogg"
             },
             {
               "text": "AI learns by trying, getting it wrong, and trying again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c523636267.ogg"
             },
             {
               "text": "If you fail once you should stop forever and weep.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/60894129c5.ogg"
             },
             {
               "text": "Asking is a strong way to learn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d10915ce0a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q4_v3.wav"
+          "_audio": "assets/audio/q/lesson_08_q4_v3.ogg"
         },
         {
           "prompt": "Listen up — One of these is silly! Pick the WRONG one about back-and-forth learning.",
           "options": [
             {
               "text": "Saying what didn't work helps a lot.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c22033858c.ogg"
             },
             {
               "text": "Practice makes patterns easy to see.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f231b2dcfd.ogg"
             },
             {
               "text": "Without practice, an AI can't learn anything new.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4aa7456d7e.ogg"
             },
             {
               "text": "Helpers learn nothing from feedback because they are stones.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/bd37286c8a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q4_v4.wav"
+          "_audio": "assets/audio/q/lesson_08_q4_v4.ogg"
         },
         {
           "prompt": "Think about this: One of these is silly! Pick the WRONG one about back-and-forth learning.",
           "options": [
             {
               "text": "Back-and-forth learning is just like how YOU learn to ride a bike.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c6d2c2735e.ogg"
             },
             {
               "text": "Mistakes mean you are bad and the floor is mad.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/356d77d204.ogg"
             },
             {
               "text": "Each mistake helps the AI get a tiny bit better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/752d81b512.ogg"
             },
             {
               "text": "Two tries beat one most of the time.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/27a8909488.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q4_v5.wav"
+          "_audio": "assets/audio/q/lesson_08_q4_v5.ogg"
         },
         {
           "prompt": "Got a quick one: One of these is silly! Pick the WRONG one about back-and-forth learning.",
           "options": [
             {
               "text": "AI learns by trying, getting it wrong, and trying again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c523636267.ogg"
             },
             {
               "text": "Practice makes patterns easy to see.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f231b2dcfd.ogg"
             },
             {
               "text": "Practice makes things harder and gives you a beard.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4afde6d1a4.ogg"
             },
             {
               "text": "Mistakes are clues that help us improve.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fa6ee8596a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q4_v6.wav"
+          "_audio": "assets/audio/q/lesson_08_q4_v6.ogg"
         },
         {
           "prompt": "Brain time: One of these is silly! Pick the WRONG one about back-and-forth learning.",
           "options": [
             {
               "text": "We learn by trying, missing, and trying again.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/a93495f7aa.ogg"
             },
             {
               "text": "Saying what didn't work helps a lot.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c22033858c.ogg"
             },
             {
               "text": "Back-and-forth learning is just like how YOU learn to ride a bike.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c6d2c2735e.ogg"
             },
             {
               "text": "Asking questions is rude and breaks the chair.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c0d8b41894.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q4_v7.wav"
+          "_audio": "assets/audio/q/lesson_08_q4_v7.ogg"
         },
         {
           "prompt": "One of these is silly! Pick the WRONG one about back-and-forth learning.",
           "options": [
             {
               "text": "Trying twice makes the helper sleepy.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/e7d9d381ea.ogg"
             },
             {
               "text": "Mistakes are clues that help us improve.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/fa6ee8596a.ogg"
             },
             {
               "text": "It is fine to be wrong on the way to right.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/eafdb435a9.ogg"
             },
             {
               "text": "Helpers learn from feedback we give them.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4354e9266e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q4_v8.wav"
+          "_audio": "assets/audio/q/lesson_08_q4_v8.ogg"
         },
         {
           "prompt": "Quick! One of these is silly! Pick the WRONG one about back-and-forth learning.",
           "options": [
             {
               "text": "Each mistake helps the AI get a tiny bit better.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/752d81b512.ogg"
             },
             {
               "text": "Feedback is a kind of soup nobody wanted.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/1e2f2b6fe6.ogg"
             },
             {
               "text": "Asking is a strong way to learn.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/d10915ce0a.ogg"
             },
             {
               "text": "Without practice, an AI can't learn anything new.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4aa7456d7e.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q4_v9.wav"
+          "_audio": "assets/audio/q/lesson_08_q4_v9.ogg"
         }
       ]
     },
@@ -1020,12 +1170,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type NEXT and press Send to keep going!",
-          "target_display": "NEXT",
+          "prompt": "Type MOVE and press Send to keep going!",
+          "target_display": "MOVE",
           "targets": [
-            "next"
+            "move"
           ],
-          "hint_wrong": "Type the word NEXT (any case is fine)."
+          "hint_wrong": "Type the word MOVE (any case is fine)."
         }
       },
       "variations": [
@@ -1034,220 +1184,260 @@
           "options": [
             {
               "text": "Mistakes mean you are bad and the floor is mad.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/356d77d204.ogg"
             },
             {
               "text": "AI only learns when nobody is watching.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e600a71327.ogg"
             },
             {
               "text": "If you fail once you should stop forever and weep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/60894129c5.ogg"
             },
             {
               "text": "We learn by trying, missing, and trying again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/a93495f7aa.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q5_v0.wav"
+          "_audio": "assets/audio/q/lesson_08_q5_v0.ogg"
         },
         {
           "prompt": "Wait wait wait — Which one is TRUE about back-and-forth learning?",
           "options": [
             {
               "text": "If you fail once you should stop forever and weep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/60894129c5.ogg"
             },
             {
               "text": "Mistakes summon a tiny worried clown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9f9bac4ac.ogg"
             },
             {
               "text": "Helpers learn from feedback we give them.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/4354e9266e.ogg"
             },
             {
               "text": "AI learns by listening to soft jazz.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1cf72e589b.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q5_v1.wav"
+          "_audio": "assets/audio/q/lesson_08_q5_v1.ogg"
         },
         {
           "prompt": "Pop quiz! Which one is TRUE about back-and-forth learning?",
           "options": [
             {
               "text": "Mistakes are clues that help us improve.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/fa6ee8596a.ogg"
             },
             {
               "text": "Asking questions is rude and breaks the chair.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0d8b41894.ogg"
             },
             {
               "text": "Mistakes summon a tiny worried clown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9f9bac4ac.ogg"
             },
             {
               "text": "Helpers learn nothing from feedback because they are stones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd37286c8a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q5_v2.wav"
+          "_audio": "assets/audio/q/lesson_08_q5_v2.ogg"
         },
         {
           "prompt": "Listen up — Which one is TRUE about back-and-forth learning?",
           "options": [
             {
               "text": "AI gets smarter by drinking ten glasses of water.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/830f91a06c.ogg"
             },
             {
               "text": "Practice makes patterns easy to see.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/f231b2dcfd.ogg"
             },
             {
               "text": "AI learns by listening to soft jazz.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1cf72e589b.ogg"
             },
             {
               "text": "Mistakes summon a tiny worried clown.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/f9f9bac4ac.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q5_v3.wav"
+          "_audio": "assets/audio/q/lesson_08_q5_v3.ogg"
         },
         {
           "prompt": "Think about this: Which one is TRUE about back-and-forth learning?",
           "options": [
             {
               "text": "Asking is a strong way to learn.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/d10915ce0a.ogg"
             },
             {
               "text": "Feedback is a kind of soup nobody wanted.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e2f2b6fe6.ogg"
             },
             {
               "text": "Asking questions is rude and breaks the chair.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0d8b41894.ogg"
             },
             {
               "text": "AI learns by reading dictionaries in its sleep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b1833edfd8.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q5_v4.wav"
+          "_audio": "assets/audio/q/lesson_08_q5_v4.ogg"
         },
         {
           "prompt": "Got a quick one: Which one is TRUE about back-and-forth learning?",
           "options": [
             {
               "text": "It is fine to be wrong on the way to right.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/eafdb435a9.ogg"
             },
             {
               "text": "Feedback is a kind of soup nobody wanted.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e2f2b6fe6.ogg"
             },
             {
               "text": "If you fail once you should stop forever and weep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/60894129c5.ogg"
             },
             {
               "text": "Helpers learn nothing from feedback because they are stones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd37286c8a.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q5_v5.wav"
+          "_audio": "assets/audio/q/lesson_08_q5_v5.ogg"
         },
         {
           "prompt": "Brain time: Which one is TRUE about back-and-forth learning?",
           "options": [
             {
               "text": "Practice makes things harder and gives you a beard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4afde6d1a4.ogg"
             },
             {
               "text": "If you fail once you should stop forever and weep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/60894129c5.ogg"
             },
             {
               "text": "Two tries beat one most of the time.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/27a8909488.ogg"
             },
             {
               "text": "Mistakes mean you are bad and the floor is mad.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/356d77d204.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q5_v6.wav"
+          "_audio": "assets/audio/q/lesson_08_q5_v6.ogg"
         },
         {
           "prompt": "Which one is TRUE about back-and-forth learning?",
           "options": [
             {
               "text": "If you fail once you should stop forever and weep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/60894129c5.ogg"
             },
             {
               "text": "Feedback is a kind of soup nobody wanted.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/1e2f2b6fe6.ogg"
             },
             {
               "text": "Asking questions is rude and breaks the chair.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0d8b41894.ogg"
             },
             {
               "text": "Saying what didn't work helps a lot.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c22033858c.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q5_v7.wav"
+          "_audio": "assets/audio/q/lesson_08_q5_v7.ogg"
         },
         {
           "prompt": "Quick! Which one is TRUE about back-and-forth learning?",
           "options": [
             {
               "text": "AI learns by reading dictionaries in its sleep.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/b1833edfd8.ogg"
             },
             {
               "text": "Practice makes things harder and gives you a beard.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/4afde6d1a4.ogg"
             },
             {
               "text": "Asking questions is rude and breaks the chair.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/c0d8b41894.ogg"
             },
             {
               "text": "AI learns by trying, getting it wrong, and trying again.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/c523636267.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q5_v8.wav"
+          "_audio": "assets/audio/q/lesson_08_q5_v8.ogg"
         },
         {
           "prompt": "Hey friend — Which one is TRUE about back-and-forth learning?",
           "options": [
             {
               "text": "AI gets smarter by drinking ten glasses of water.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/830f91a06c.ogg"
             },
             {
               "text": "AI only learns when nobody is watching.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/e600a71327.ogg"
             },
             {
               "text": "Helpers learn nothing from feedback because they are stones.",
-              "correct": false
+              "correct": false,
+              "_audio": "assets/audio/o/bd37286c8a.ogg"
             },
             {
               "text": "Each mistake helps the AI get a tiny bit better.",
-              "correct": true
+              "correct": true,
+              "_audio": "assets/audio/o/752d81b512.ogg"
             }
           ],
-          "_audio": "assets/audio/q/lesson_08_q5_v9.wav"
+          "_audio": "assets/audio/q/lesson_08_q5_v9.ogg"
         }
       ]
     }

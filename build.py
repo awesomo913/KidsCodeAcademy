@@ -76,11 +76,59 @@ def step_audio() -> None:
         run([sys.executable, "scripts/bake_question_prompts.py"])
     except subprocess.CalledProcessError as exc:
         log.warning("bake_question_prompts failed (%s) — questions will fall back to Web Speech", exc)
+    # v0.7.5: bake answer-option audio for hover-to-speak (deduped by text hash).
+    log.info("=== step 2c: pre-baking answer-option audio ===")
+    try:
+        run([sys.executable, "scripts/bake_option_audio.py"])
+    except subprocess.CalledProcessError as exc:
+        log.warning("bake_option_audio failed (%s) — hover audio will fall back to Web Speech", exc)
+    # v0.7.6 Phase 5: re-bake any wav whose source text contains an acronym
+    # (LLM/MCQ/AI/etc) using a spelled-out variant so Piper says "L L M".
+    log.info("=== step 2d: acronym preprocessing ===")
+    try:
+        run([sys.executable, "scripts/preprocess_acronyms.py"])
+    except subprocess.CalledProcessError as exc:
+        log.warning("preprocess_acronyms failed (%s) — acronyms will sound mushed", exc)
+    # v0.7.6 Phase 4: compress every wav to .ogg/Opus and rewrite lesson JSON
+    # _audio paths. Drops bundled audio from ~1.2 GB to ~80 MB.
+    log.info("=== step 2e: compress audio to OGG/Opus ===")
+    try:
+        run([sys.executable, "scripts/compress_audio_ogg.py"])
+    except subprocess.CalledProcessError as exc:
+        log.warning("compress_audio_ogg failed (%s) — wavs will ship instead", exc)
+
+
+def _build_audio_pkg() -> Path | None:
+    """Phase 4: build a temp copy of `assets/` that EXCLUDES *.wav so PyInstaller
+    only bundles the smaller .ogg copies. Returns the temp pkg path or None on
+    failure. Caller is responsible for cleanup via shutil.rmtree.
+    """
+    src = ROOT / "assets"
+    if not src.is_dir():
+        return None
+    pkg_root = ROOT / "build_pkg"
+    pkg = pkg_root / "assets"
+    if pkg_root.exists():
+        shutil.rmtree(pkg_root, ignore_errors=True)
+    def _copy_no_wav(s, names):
+        # Filter exposed to copytree to skip wavs — keeps the .ogg twins.
+        return [n for n in names if n.lower().endswith(".wav")]
+    try:
+        shutil.copytree(src, pkg, ignore=_copy_no_wav)
+    except OSError as exc:
+        log.warning("could not stage audio pkg: %s", exc)
+        return None
+    return pkg_root
 
 
 def step_package() -> None:
     log.info("=== step 3: pyinstaller (target=%s) ===", "win" if _is_windows() else sys.platform)
     sep = ";" if _is_windows() else ":"
+    # Stage audio assets w/o .wav to keep the exe small (Phase 4). Falls back to
+    # the original assets/ folder if staging fails so a bad copytree doesn't
+    # block the build.
+    pkg_root = _build_audio_pkg()
+    assets_arg = f"{(pkg_root / 'assets')}" if pkg_root else "assets"
     cmd = [
         sys.executable, "-m", "PyInstaller",
         "--noconfirm", "--onefile",
@@ -88,7 +136,7 @@ def step_package() -> None:
         "--add-data", f"index.html{sep}.",
         "--add-data", f"lessons{sep}lessons",
         "--add-data", f"sandbox_ai{sep}sandbox_ai",
-        "--add-data", f"assets{sep}assets",
+        "--add-data", f"{assets_arg}{sep}assets",
         "--add-data", f"icons{sep}icons",
         "--add-data", f"parent{sep}parent",
         "--add-data", f"vendor{sep}vendor",
@@ -152,7 +200,7 @@ def step_publish() -> None:
 
 def step_clean() -> None:
     log.info("=== step 5: cleaning build artifacts ===")
-    for d in ("dist", "build"):
+    for d in ("dist", "build", "build_pkg"):
         p = ROOT / d
         if p.exists():
             shutil.rmtree(p, ignore_errors=True)
