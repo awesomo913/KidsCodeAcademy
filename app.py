@@ -201,7 +201,13 @@ def _start_local_http_server(serve_dir: Path) -> int:
             # logs the page URL on load.
             pass
 
-    server = socketserver.TCPServer(("127.0.0.1", 0), _Handler)
+    # Subclass so we can flip allow_reuse_address — without this, a rapid
+    # close-then-reopen of the exe can hit "address in use" if the OS picks
+    # the same random port both times before TIME_WAIT clears.
+    class _ReuseTCPServer(socketserver.TCPServer):
+        allow_reuse_address = True
+
+    server = _ReuseTCPServer(("127.0.0.1", 0), _Handler)
     port = server.server_address[1]
     thread = threading.Thread(
         target=server.serve_forever,

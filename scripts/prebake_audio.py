@@ -38,21 +38,10 @@ LPF_CUTOFF_HZ = 4800.0
 POST_GAIN = 1.10
 
 
-def _load_engine():
-    try:
-        import pyttsx3
-    except ImportError as exc:
-        raise SystemExit("pyttsx3 not installed. Run: uv pip install -r requirements.txt") from exc
-
-    engine = pyttsx3.init()
-    engine.setProperty("rate", RATE_WPM)
-    voices = engine.getProperty("voices") or []
-    for v in voices:
-        name = (getattr(v, "name", "") or "").lower()
-        if "zira" in name or "female" in name:
-            engine.setProperty("voice", v.id)
-            break
-    return engine
+# pyttsx3 SAPI fallback removed in v0.7.7 — Piper is the only supported voice.
+# If voices/en_US-amy-medium.onnx is missing, the bake fails LOUD instead of
+# silently degrading to SAPI Zira (which produced colder voice + had a known
+# Windows-only hang risk in `runAndWait()` w/ no timeout).
 
 
 def _piper_synth_all(jobs: list[tuple[Path, str]]) -> int:
@@ -149,23 +138,23 @@ def main() -> None:
     if not lesson_files:
         raise SystemExit(f"No lessons found at {LESSONS_DIR}")
 
-    # v0.7: prefer Piper TTS if voice file is present. Falls back to pyttsx3
-    # SAPI5 for dev boxes without piper installed.
+    # v0.7.7: Piper-only. SAPI fallback removed; bake fails LOUD if voice missing.
     import sys as _sys
     _sys.path.insert(0, str(Path(__file__).resolve().parent))
     try:
         from piper_bake import is_available as _piper_available  # type: ignore
-        use_piper = _piper_available()
     except Exception as _piper_exc:
-        log.warning("piper_bake import/check failed: %s", _piper_exc)
-        use_piper = False
-
-    if use_piper:
-        log.info("v0.7: using Piper TTS (en_US-amy-medium)")
-        engine = None
-    else:
-        log.info("Piper not available; falling back to pyttsx3 SAPI5")
-        engine = _load_engine()
+        raise SystemExit(
+            f"FATAL: piper_bake import failed ({_piper_exc}). "
+            "Run: uv pip install piper-tts"
+        ) from _piper_exc
+    if not _piper_available():
+        raise SystemExit(
+            "FATAL: Piper voice file missing. "
+            "Run: python -m piper.download_voices en_US-amy-medium --download-dir voices"
+        )
+    log.info("v0.7.7: using Piper TTS (en_US-amy-medium)")
+    engine = None  # legacy var kept for downstream `if engine is not None:` checks
 
     # Pass 1: collect (raw_path, text) pairs + (raw_path, final_path) for post-process.
     # For pyttsx3, also queue save_to_file calls; piper is invoked synchronously after.
@@ -204,14 +193,9 @@ def main() -> None:
                 engine.save_to_file(hint_text, str(raw_path))
             log.info("queued hint: %s", raw_name)
 
-    if use_piper:
-        log.info("synthesizing %d clips via Piper...", len(text_jobs))
-        ok = _piper_synth_all(text_jobs)
-        log.info("piper synthesized %d/%d clips", ok, len(text_jobs))
-    else:
-        log.info("flushing engine for %d clips...", len(queued))
-        engine.runAndWait()
-        engine.stop()
+    log.info("synthesizing %d clips via Piper...", len(text_jobs))
+    ok = _piper_synth_all(text_jobs)
+    log.info("piper synthesized %d/%d clips", ok, len(text_jobs))
     log.info("synthesis complete; post-processing...")
 
     # Pass 2: post-process every raw wav

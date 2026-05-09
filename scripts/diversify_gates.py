@@ -121,11 +121,12 @@ def _make_payload(gate_type: str, lesson_id: int, q_idx: int, word_counter: int)
     """Build a fresh interaction payload for `gate_type`. Returns None if the
     gate type doesn't need rebuilding (e.g. when keeping existing type-this-word)."""
     if gate_type == "type-this-word":
-        # Defer to swap_click_to_type's payload builder so the vocabulary stays
-        # in sync with the curated WORDS pool there.
+        # Defer to swap_click_to_type's payload builder + use its per-lesson pool
+        # so L01-04 stay clean (no GOOFY) and everyone else gets the full mix.
         sys.path.insert(0, str(Path(__file__).resolve().parent))
-        from swap_click_to_type import WORDS, make_type_payload  # type: ignore
-        return make_type_payload(WORDS[word_counter % len(WORDS)])
+        from swap_click_to_type import _pool_for, make_type_payload  # type: ignore
+        pool = _pool_for(lesson_id)
+        return make_type_payload(pool[word_counter % len(pool)])
 
     if gate_type == "tap-the-glow":
         return {

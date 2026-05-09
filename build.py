@@ -64,6 +64,14 @@ def step_sandbox_lint() -> None:
     run([sys.executable, "scripts/sandbox_lint.py", "--quiet"])
 
 
+def step_distractor_lint() -> None:
+    """Block ship if any wrong-answer text repeats > 3 times in one question.
+    Defeats the kid's pattern-matching memorization. dedupe_distractors.py
+    auto-fixes locally; this lint enforces the cap at build time."""
+    log.info("=== step 1c: distractor dedupe check ===")
+    run([sys.executable, "scripts/check_distractor_dupes.py", "--quiet"])
+
+
 def step_audio() -> None:
     log.info("=== step 2: pre-baking lesson narration ===")
     try:
@@ -236,6 +244,7 @@ def main() -> None:
 
     step_assets()
     step_sandbox_lint()
+    step_distractor_lint()
 
     # Audio: skip on non-Windows by default (pyttsx3 + SAPI Zira is Windows-only;
     # the wavs in assets/audio/ are already pre-baked and committed to the repo).

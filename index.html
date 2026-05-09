@@ -152,6 +152,37 @@ button { font-family: inherit; cursor: pointer; }
 
 .stage { display: grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: start; }
 @media (max-width: 720px) { .stage { grid-template-columns: 1fr; } }
+
+/* Compact layout — opt-in via Parent Corner toggle. Enables responsive ladder
+ * for sub-720px windows (half-screen side-by-side, future APK/Pi small displays).
+ * Off by default so the desktop layout never auto-shrinks unexpectedly.
+ * Selector pattern: html[data-layout="compact"] inside the @media block so
+ * rules only fire when (a) screen is narrow AND (b) compact mode is on. */
+@media (max-width: 480px) {
+  html[data-layout="compact"] .mascot { width: 120px; height: 120px; }
+  html[data-layout="compact"] .bubble { font-size: 18px; padding: 12px 14px; }
+  html[data-layout="compact"] .main,
+  html[data-layout="compact"] #lessonView { padding: 14px; }
+  html[data-layout="compact"] .topbar h1 { font-size: 18px; }
+}
+@media (max-width: 360px) {
+  html[data-layout="compact"] .mascot { width: 90px; height: 90px; }
+  html[data-layout="compact"] .bubble { font-size: 16px; padding: 10px 12px; }
+  html[data-layout="compact"] h2 { font-size: 22px; }
+  html[data-layout="compact"] .choice { font-size: 17px; padding: 10px; }
+  html[data-layout="compact"] .pic-tile { font-size: 40px; padding: 10px; }
+  html[data-layout="compact"] .topbar { padding: 6px 10px; }
+  html[data-layout="compact"] .topbar h1 { font-size: 16px; }
+  html[data-layout="compact"] .combo-chip { padding: 2px 6px; font-size: 12px; margin-left: 4px; }
+  html[data-layout="compact"] .parent-chess-row { grid-template-columns: 60px 1fr 60px 50px; gap: 4px; font-size: 12px; }
+}
+@media (max-width: 320px) {
+  html[data-layout="compact"] .mascot { width: 70px; height: 70px; }
+  html[data-layout="compact"] .bubble { font-size: 14px; padding: 8px 10px; }
+  html[data-layout="compact"] h2 { font-size: 18px; }
+  html[data-layout="compact"] .choice { font-size: 15px; padding: 8px; }
+  html[data-layout="compact"] .btn-big { font-size: 16px; padding: 8px 14px; }
+}
 .mascot {
   width: 200px; height: 200px;
   background-image: url("assets/mascot/idle_01.png");
@@ -502,6 +533,71 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   font-weight: 600;
 }
 .chess-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+/* Chess timer + hint row — under the status line, above the action buttons. */
+.chess-meta {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; margin: 6px 0 2px;
+}
+.chess-timer {
+  display: inline-block;
+  padding: 4px 12px;
+  background: linear-gradient(90deg, #6ee0a8, #5acf95);
+  color: #1a2a1a;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  border: 2px solid #2a4a30;
+  min-width: 70px; text-align: center;
+}
+.chess-timer.low { background: linear-gradient(90deg, #ffd76b, #ff9d4d); color: #2a1a0a; animation: combo-pop 0.5s; }
+.chess-timer.ext { background: linear-gradient(90deg, #ff5a78, #a067ff); color: #fff; animation: combo-pop 0.6s; }
+.chess-hint-btn {
+  padding: 6px 14px;
+  background: var(--accent-2);
+  color: #fff;
+  border: 2px solid #2c2c5a;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 36px;
+}
+.chess-hint-btn:hover { transform: translateY(-2px); }
+.chess-hint-box {
+  margin: 4px auto 0; max-width: 460px;
+  padding: 10px 14px;
+  background: var(--panel-2);
+  border: 2px dashed var(--accent-3);
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--ink);
+  text-align: center;
+  opacity: 0;
+  transition: opacity var(--dur);
+  pointer-events: none;
+  min-height: 0;
+}
+.chess-hint-box.show { opacity: 1; }
+/* Extension banner — slides in from top when 1-min extension fires. */
+.chess-ext-banner {
+  position: fixed;
+  top: 70px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 5500;
+  background: linear-gradient(90deg, #ff5a78, #a067ff);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  animation: chess-ext-pop 0.4s ease-out;
+}
+@keyframes chess-ext-pop {
+  0%   { transform: translate(-50%, -40px); opacity: 0; }
+  100% { transform: translate(-50%, 0);     opacity: 1; }
+}
 /* Grade card shown after a chess game ends. */
 .chess-grade-card {
   background: var(--panel-2);
@@ -1467,6 +1563,15 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
           </p>
           <div class="row">
             <button id="autoplayToggle" class="btn-big alt">Auto-play: ON</button>
+          </div>
+        </div>
+        <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
+          <strong style="font-size:17px;">📐 Compact layout (small windows)</strong>
+          <p class="muted" style="font-size:14px;margin:6px 0 10px;">
+            Off by default. Turn on if the kid uses a small window (half-screen, Pi display, or future phone build) — mascot + text shrink to fit narrow screens.
+          </p>
+          <div class="row">
+            <button id="compactToggle" class="btn-big alt">Compact: OFF</button>
           </div>
         </div>
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
@@ -4731,7 +4836,12 @@ const Chess = {
       botCaptured: 0,         // pieces Bytey took from kid
       botCapturedValue: 0,
       startedAt: Date.now(),
-      result: null,           // "win" | "loss" | "abandoned"
+      result: null,           // "win" | "loss" | "abandoned" | "time-pieces"
+      // timer state — 15-min limit + one 1-min extension fallback
+      deadlineAt: Date.now() + 15 * 60 * 1000,
+      extensionUsed: false,
+      timerInterval: 0,       // setInterval handle
+      hintsUsed: 0,
     };
   },
 
@@ -4756,6 +4866,17 @@ const Chess = {
     const status = el("div", { class: "chess-status", id: "chessStatus" }, "Your move (white).");
     card.appendChild(status);
 
+    // Timer + hint row — kid sees countdown + can ask for a strategy hint.
+    const meta = el("div", { class: "chess-meta" });
+    const timerChip = el("span", { class: "chess-timer", id: "chessTimer" }, "15:00");
+    const hintBtn = el("button", { class: "chess-hint-btn", id: "chessHintBtn" }, "💡 Hint");
+    hintBtn.addEventListener("click", () => this._giveHint());
+    meta.appendChild(timerChip);
+    meta.appendChild(hintBtn);
+    card.appendChild(meta);
+    const hintBox = el("div", { class: "chess-hint-box", id: "chessHintBox" });
+    card.appendChild(hintBox);
+
     const actions = el("div", { class: "chess-actions" });
     card.appendChild(actions);
     actions.appendChild(el("button", {
@@ -4766,16 +4887,176 @@ const Chess = {
           this.state.result = "abandoned";
           ChessHistory.add(this._gradeRecord());
         }
+        this._stopTimer();
         this._close(onDone);
       },
     }, "Done playing — back to lessons"));
     actions.appendChild(el("button", {
       class: "btn-big",
-      onclick: () => { this.state = this._initialState(); this._renderBoard(board, onDone); this._setStatus("New game! Your move."); },
+      onclick: () => {
+        this._stopTimer();
+        this.state = this._initialState();
+        this._renderBoard(board, onDone);
+        this._setStatus("New game! Your move.");
+        this._startTimer(boardEl => this._renderBoard(board, onDone));
+      },
     }, "Start over"));
 
     speakText("Chess break! Catch the black king.");
     this._renderBoard(board, onDone);
+    this._startTimer(() => this._renderBoard(board, onDone));
+  },
+
+  /* Strategic hints — never names a square or the move to play. Detects board
+   * patterns and nudges the kid toward thinking ("look for a capture", "your
+   * king is exposed", "watch your queen"). */
+  _giveHint() {
+    if (this.state.gameOver) return;
+    // Compute FIRST, then increment — so the generic-hint cycle starts at index 0
+    // on the first call and threat-path early returns don't burn an increment.
+    const hint = this._computeHint();
+    this.state.hintsUsed += 1;
+    const box = document.getElementById("chessHintBox");
+    if (!box) return;
+    clearNode(box);
+    box.appendChild(document.createTextNode("💡 " + hint));
+    box.classList.add("show");
+    try { Audio_.sfx("Star"); } catch (_) {}
+    try { speakText(hint); } catch (_) {}
+    setTimeout(() => box.classList.remove("show"), 5500);
+  },
+
+  _computeHint() {
+    const board = this.state.board;
+    const VALUE = { P: 1, N: 3, B: 3, R: 5, Q: 9, K: 100 };
+    // 1. Any of YOUR pieces that the bot threatens to capture next turn?
+    let myMostValuableThreatened = 0;
+    for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) {
+      const p = board[r][c];
+      if (!this._isWhite(p)) continue;
+      // Check every black piece's legal moves
+      for (let br = 0; br < 8; br++) for (let bc = 0; bc < 8; bc++) {
+        if (!this._isBlack(board[br][bc])) continue;
+        const moves = this._legalMovesFor(br, bc);
+        if (moves.some(m => m.r === r && m.c === c)) {
+          const v = VALUE[p] || 0;
+          if (v > myMostValuableThreatened) myMostValuableThreatened = v;
+          if (p === "Q") return "Watch out — your QUEEN is in danger! Move it or block the attacker!";
+          if (p === "K") return "Your KING is exposed! Move it to safety FAST!";
+        }
+      }
+    }
+    if (myMostValuableThreatened >= 5) {
+      return "One of your big pieces is in danger! Look around carefully before you move.";
+    }
+    // 2. Can YOU capture something this turn?
+    let bestCap = 0;
+    for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) {
+      const p = board[r][c];
+      if (!this._isWhite(p)) continue;
+      const moves = this._legalMovesFor(r, c);
+      for (const m of moves) {
+        const t = board[m.r][m.c];
+        if (t && t !== "." && this._isBlack(t)) {
+          const v = VALUE[t.toUpperCase()] || 0;
+          if (v > bestCap) bestCap = v;
+        }
+      }
+    }
+    if (bestCap >= 9) return "Look for a HUGE capture — Bytey left something BIG out in the open!";
+    if (bestCap >= 5) return "There's a strong capture waiting for you — scan the board!";
+    if (bestCap >= 3) return "You can grab a piece this turn! See if you can find it!";
+    if (bestCap >= 1) return "There's a small capture available — pawn grab?";
+    // 3. Generic strategy nudges — pick by hint count so kid hears variety
+    const generic = [
+      "Move pieces toward the middle — they control more squares from there!",
+      "Knights jump — try a knight move to surprise Bytey!",
+      "Don't move the same piece twice in a row early on. Develop more pieces!",
+      "Keep your king safe behind some pawns!",
+      "Look for two of YOUR pieces protecting each other!",
+    ];
+    return generic[this.state.hintsUsed % generic.length];
+  },
+
+  /* Timer — 15 min hard limit + one 1-min extension if kid hasn't finished.
+   * After extension expires, count piece values; whoever has more wins. */
+  _startTimer(rerenderBoard) {
+    this._stopTimer();
+    this.state.timerInterval = setInterval(() => {
+      if (this.state.gameOver) { this._stopTimer(); return; }
+      const remain = this.state.deadlineAt - Date.now();
+      if (remain <= 0) {
+        if (!this.state.extensionUsed) {
+          this.state.extensionUsed = true;
+          this.state.deadlineAt = Date.now() + 60 * 1000;
+          this._showExtensionBanner();
+        } else {
+          this._stopTimer();
+          this._endByTime(rerenderBoard);
+        }
+        return;
+      }
+      this._renderTimer(remain);
+    }, 1000);
+    this._renderTimer(this.state.deadlineAt - Date.now());
+  },
+  _stopTimer() {
+    if (this.state.timerInterval) {
+      clearInterval(this.state.timerInterval);
+      this.state.timerInterval = 0;
+    }
+  },
+  _renderTimer(remainMs) {
+    const chip = document.getElementById("chessTimer");
+    if (!chip) return;
+    const s = Math.max(0, Math.floor(remainMs / 1000));
+    const mm = Math.floor(s / 60);
+    const ss = s % 60;
+    chip.textContent = (this.state.extensionUsed ? "+" : "") +
+                       String(mm) + ":" + String(ss).padStart(2, "0");
+    chip.classList.toggle("low",   remainMs < 60 * 1000 && !this.state.extensionUsed);
+    chip.classList.toggle("ext",   this.state.extensionUsed);
+  },
+  _showExtensionBanner() {
+    const ban = el("div", { class: "chess-ext-banner" }, "⏰ Time's up — but you get ONE more minute! Finish strong!");
+    document.body.appendChild(ban);
+    try { speakText("One more minute! Finish strong!"); } catch (_) {}
+    try { Audio_.sfx("Tada"); } catch (_) {}
+    setTimeout(() => { if (ban.parentNode) ban.parentNode.removeChild(ban); }, 4500);
+  },
+  _endByTime(rerenderBoard) {
+    if (this.state.gameOver) return;
+    this.state.gameOver = true;
+    // Count remaining piece value per side; higher wins
+    const VALUE = { P: 1, N: 3, B: 3, R: 5, Q: 9, K: 100 };
+    let kidPts = 0, botPts = 0;
+    for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) {
+      const p = this.state.board[r][c];
+      if (!p || p === ".") continue;
+      const v = VALUE[p.toUpperCase()] || 0;
+      if (this._isWhite(p)) kidPts += v;
+      else botPts += v;
+    }
+    if (kidPts > botPts) this.state.result = "win";
+    else if (botPts > kidPts) this.state.result = "loss";
+    else this.state.result = "abandoned";  // tie -> treated like a draw
+    const rec = this._gradeRecord();
+    rec.endedByTime = true;
+    rec.kidPiecePoints = kidPts;
+    rec.botPiecePoints = botPts;
+    ChessHistory.add(rec);
+    const verdict = kidPts > botPts
+      ? "Time's up — YOU win on pieces! " + kidPts + " to " + botPts + "."
+      : botPts > kidPts
+        ? "Time's up — Bytey wins on pieces. " + botPts + " to " + kidPts + ". Try again!"
+        : "Time's up — TIE! " + kidPts + " each. So close!";
+    this._setStatus(verdict);
+    try { speakText(verdict); } catch (_) {}
+    try { Audio_.sfx(this.state.result === "win" ? "Tada" : "Oops"); } catch (_) {}
+    if (typeof rerenderBoard === "function") rerenderBoard();
+    // Show grade card on whichever board we have a ref to
+    const boardEl = document.querySelector(".chess-board");
+    if (boardEl) this._showGradeCard(boardEl, rec);
   },
 
   _renderBoard(boardEl, onDone) {
@@ -4949,8 +5230,13 @@ const Chess = {
   },
 
   _botMove(boardEl, onDone) {
+    // Race guard — timer or earlier turn may have already ended the game while
+    // this 700ms-delayed _botMove was queued. Without this, the bot moves on a
+    // post-end state + writes a stale ChessHistory record.
+    if (this.state.gameOver) return;
     const moves = this._allBlackMoves();
     if (moves.length === 0) {
+      this._stopTimer();
       this.state.gameOver = true;
       this._setStatus("Bytey has no moves — you win by default! 🎉");
       return;
@@ -5006,6 +5292,7 @@ const Chess = {
       }
     }
     if (!whiteKing) {
+      this._stopTimer();  // halt countdown before gameOver flag flips
       this.state.gameOver = true;
       this.state.result = "loss";
       const rec = this._gradeRecord();
@@ -5016,6 +5303,7 @@ const Chess = {
       return true;
     }
     if (!blackKing) {
+      this._stopTimer();
       this.state.gameOver = true;
       this.state.result = "win";
       const rec = this._gradeRecord();
@@ -5109,6 +5397,7 @@ const Chess = {
   },
 
   _close(onDone) {
+    this._stopTimer();
     const overlay = document.getElementById("chessOverlay");
     if (overlay) overlay.remove();
     if (typeof onDone === "function") onDone();
@@ -5191,6 +5480,10 @@ const ChessBreak = {
   },
 
   _showBanner() {
+    // Suppress while a chess game is already open — banner crops the top of
+    // the chess card and confuses the kid. consumeIfDue still fires next time
+    // the kid finishes a lesson; only the visible nudge is skipped here.
+    if (document.getElementById("chessOverlay")) return;
     this.bannerShown = true;
     const banner = el("div", { class: "chess-banner", id: "chessBanner" });
     banner.appendChild(document.createTextNode("🐎 Chess break after this lesson! Finish what you're on first."));
@@ -7764,6 +8057,11 @@ async function main() {
   document.body.dataset.theme = theme;
   document.querySelector("#themeBtn .text-only").textContent = theme === "day" ? "Night" : "Day";
 
+  // Boot-time compact-layout hydrate (off by default — sets data-layout=normal
+  // unless parent toggled it on). Done here so CSS resolves before first paint.
+  const compactOn = Store.load("kca.layout.compact.v1", false) === true;
+  document.documentElement.setAttribute("data-layout", compactOn ? "compact" : "normal");
+
   document.getElementById("themeBtn").addEventListener("click", () => {
     const t = document.body.dataset.theme === "day" ? "night" : "day";
     document.body.dataset.theme = t;
@@ -7802,6 +8100,25 @@ async function main() {
     AutoPlay.setEnabled(!AutoPlay.isEnabled());
     refreshAutoplayBtn();
   });
+
+  // Compact layout toggle — sets html[data-layout="compact"] for narrow-window
+  // CSS to take effect. Persisted; off by default.
+  const compactBtn = document.getElementById("compactToggle");
+  if (compactBtn) {
+    const refreshCompactBtn = () => {
+      const on = Store.load("kca.layout.compact.v1", false) === true;
+      compactBtn.textContent = on ? "Compact: ON" : "Compact: OFF";
+      compactBtn.classList.toggle("go", on);
+      compactBtn.classList.toggle("alt", !on);
+      document.documentElement.setAttribute("data-layout", on ? "compact" : "normal");
+    };
+    refreshCompactBtn();
+    compactBtn.addEventListener("click", () => {
+      const on = Store.load("kca.layout.compact.v1", false) === true;
+      Store.save("kca.layout.compact.v1", !on);
+      refreshCompactBtn();
+    });
+  }
 
   // Parent Preview Mode (v0.3.2)
   const previewToggle = document.getElementById("previewToggle");

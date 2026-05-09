@@ -68,14 +68,32 @@ def make_type_payload(word: str) -> dict:
     }
 
 
+# Clean pool for first-impression lessons (L01-L04). No GOOFY (FART, POOP, etc.)
+# so a parent / teacher / friend trying the app for the first time doesn't
+# immediately see fart-jokes. Only GAMES + AI_DEV bands.
+WORDS_CLEAN: list[str] = []
+_max_clean = max(len(GAMES), len(AI_DEV))
+for i in range(_max_clean):
+    if i < len(GAMES):  WORDS_CLEAN.append(GAMES[i])
+    if i < len(AI_DEV): WORDS_CLEAN.append(AI_DEV[i])
+
+
+def _pool_for(lesson_id: int) -> list[str]:
+    """L01-L04 use the clean pool; everyone else gets the full WORDS pool."""
+    return WORDS_CLEAN if lesson_id <= 4 else WORDS
+
+
 def swap_lesson(path: Path, counter: list[int]) -> int:
     """Walk a lesson's questions[] and:
       (a) convert any leftover `click-the-thing` gate → `type-this-word`, AND
-      (b) refresh every existing `type-this-word` payload w/ a new word from WORDS.
+      (b) refresh every existing `type-this-word` payload w/ a new word from
+          the lesson's pool (clean pool for L01-04, full pool elsewhere).
     Both produce a deterministic walk: re-runs are idempotent (same input → same output).
     Returns count of payloads written.
     """
     data = json.loads(path.read_text(encoding="utf-8"))
+    lesson_id = int(path.stem.split("_")[1])
+    pool = _pool_for(lesson_id)
     questions = data.get("questions") or []
     swaps = 0
     for q in questions:
@@ -83,7 +101,7 @@ def swap_lesson(path: Path, counter: list[int]) -> int:
         kind = interaction.get("type")
         if kind not in ("click-the-thing", "type-this-word"):
             continue
-        word = WORDS[counter[0] % len(WORDS)]
+        word = pool[counter[0] % len(pool)]
         counter[0] += 1
         q["interaction"] = {
             "type": "type-this-word",
