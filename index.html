@@ -37,6 +37,23 @@
   --ink-soft: #b9bee0;
   --locked: #4a4c70;
   --shadow: 0 6px 0 rgba(0,0,0,0.4);
+  /* Dark-theme accents — rebalanced cooler so they don't clash w/ navy panels */
+  --accent:   #ff7a96;
+  --accent-2: #6f8aff;
+  --accent-3: #f0b853;
+  --accent-4: #6ee0a8;
+}
+/* Reduced-motion respect — kid w/ sensory issues / vestibular sensitivity. */
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .mascot.bob, .glow-orb, .glint, .action-word, .term-cursor,
+  .thinking-dots span, .combo-chip, .pretend-chip {
+    animation: none !important;
+  }
 }
 * { box-sizing: border-box; }
 html, body {
@@ -201,20 +218,22 @@ button { font-family: inherit; cursor: pointer; }
 .choice { position: relative; }
 .choice:hover { transform: translateY(-3px); background: var(--bg-1); }
 .choice.right { background: var(--accent-4); color: white; border-color: var(--accent-4); }
-.choice.wrong { background: #ffd6d6; border-color: var(--accent); }
+.choice.wrong { background: rgba(255, 90, 120, 0.22); border-color: var(--accent); }
 .choice:disabled { opacity: 0.6; cursor: default; transform: none; }
 /* Speaker affordance — top-right corner, tap-to-hear without committing the answer.
  * Sized for small fingers; pulses softly to invite the kid to try it. */
 .choice-speaker {
   position: absolute;
   top: 4px; right: 6px;
-  font-size: 18px; line-height: 1;
-  padding: 4px 6px;
+  font-size: 22px; line-height: 1;
+  /* 44x44 minimum per Apple HIG — kid finger taps are imprecise */
+  min-width: 44px; min-height: 44px;
+  display: inline-flex; align-items: center; justify-content: center;
   border-radius: 999px;
   background: rgba(255,255,255,0.55);
   cursor: pointer;
   user-select: none;
-  opacity: 0.65;
+  opacity: 0.7;
   transition: opacity var(--dur), transform var(--dur);
 }
 .choice:hover .choice-speaker { opacity: 1; transform: scale(1.08); }
@@ -451,6 +470,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   margin: 14px 0 8px;
 }
 .chess-sq {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -464,9 +484,14 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 .chess-sq.piece-white { color: #ffffff; text-shadow: 0 1px 2px #555, 0 0 1px #000; }
 .chess-sq.piece-black { color: #1a1a1a; }
 .chess-sq.selected { outline: 4px solid #ffd700; outline-offset: -4px; }
+/* Legal-move marker — visible green dot in center of an empty target square. */
 .chess-sq.legal::after {
   content: "";
   position: absolute;
+  width: 28%; height: 28%;
+  border-radius: 50%;
+  background: rgba(46, 184, 96, 0.85);
+  pointer-events: none;
 }
 .chess-sq.legal { box-shadow: inset 0 0 0 5px rgba(46, 184, 96, 0.65); }
 .chess-sq:hover { filter: brightness(1.1); }
@@ -801,12 +826,15 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   box-shadow: var(--shadow);
 }
 .grade-badge .letter { font-size: 32px; color: var(--accent); }
-.grade-badge.grade-A { border-color: var(--accent-4); background: #e6fbef; }
+.grade-badge.grade-A { border-color: var(--accent-4); background: var(--panel-2); }
 .grade-badge.grade-A .letter { color: var(--accent-4); }
-.grade-badge.grade-B { border-color: var(--accent-3); background: #fff5e0; }
+.grade-badge.grade-B { border-color: var(--accent-3); background: var(--panel-2); }
 .grade-badge.grade-B .letter { color: var(--accent-3); }
-.grade-badge.grade-C { border-color: var(--accent-2); background: #e6ecff; }
+.grade-badge.grade-C { border-color: var(--accent-2); background: var(--panel-2); }
 .grade-badge.grade-C .letter { color: var(--accent-2); }
+[data-theme="day"] .grade-badge.grade-A { background: #e6fbef; }
+[data-theme="day"] .grade-badge.grade-B { background: #fff5e0; }
+[data-theme="day"] .grade-badge.grade-C { background: #e6ecff; }
 
 .overlay {
   position: fixed; inset: 0;
@@ -947,7 +975,10 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
  * Kid finds + taps for bonus points. */
 .glint {
   position: absolute;
-  font-size: 22px; line-height: 1;
+  font-size: 28px; line-height: 1;
+  /* 44x44 minimum tap area for kid fingers */
+  min-width: 44px; min-height: 44px;
+  display: inline-flex; align-items: center; justify-content: center;
   cursor: pointer;
   user-select: none;
   z-index: 2;  /* above lesson content but BELOW help-fab + game UI */
@@ -1533,10 +1564,16 @@ const Store = {
   K_IDEAS: "kca.ideas.v1",
   load(k, fb) {
     try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; }
-    catch { return fb; }
+    catch (e) { console.warn("[Store.load]", k, e); return fb; }
   },
   save(k, v) {
-    try { localStorage.setItem(k, JSON.stringify(v)); } catch {}
+    try {
+      localStorage.setItem(k, JSON.stringify(v));
+    } catch (e) {
+      // QuotaExceededError / serialization fail — logged so silent data-loss
+      // is at least visible in console + caught by Persistence flush as backup.
+      console.warn("[Store.save]", k, e && e.name, e && e.message);
+    }
     // v0.3.4: every save also schedules a debounced flush to AppData state.json
     // via JSBridge. This is the durability fallback if WebView2 storage gets
     // wiped (PyInstaller's _MEI temp churn used to invalidate localStorage).
@@ -1615,7 +1652,8 @@ const Persistence = {
     for (const k in parsed) {
       if (!k.startsWith("kca.")) continue;
       if (localStorage.getItem(k) != null) continue;  // localStorage wins
-      try { localStorage.setItem(k, parsed[k]); restored += 1; } catch {}
+      try { localStorage.setItem(k, parsed[k]); restored += 1; }
+      catch (e) { console.warn("[Persistence.hydrate] setItem", k, e && e.name); }
     }
     if (restored > 0) console.info(`[Persistence] restored ${restored} key(s) from state.json`);
   },
@@ -1771,10 +1809,13 @@ const Glints = {
       g.setAttribute("role", "button");
       let top, left, tries = 0;
       do {
-        top  = 30 + Math.floor(Math.random() * 60);
-        left = 10 + Math.floor(Math.random() * 80);
+        // Constrain to upper decoration band (5-25%) so glints don't overlap
+        // game/answer buttons in the lower half. Audit: at 30-90% they sat
+        // directly on top of .choice tiles + intercepted taps.
+        top  = 5 + Math.floor(Math.random() * 20);
+        left = 8 + Math.floor(Math.random() * 84);
         tries += 1;
-      } while (tries < 8 && usedPos.some(p => Math.abs(p.top - top) < 12 && Math.abs(p.left - left) < 12));
+      } while (tries < 8 && usedPos.some(p => Math.abs(p.top - top) < 8 && Math.abs(p.left - left) < 12));
       usedPos.push({ top, left });
       g.style.top  = top  + "%";
       g.style.left = left + "%";
@@ -2000,6 +2041,9 @@ function startHoverAudio(btn, text, bakedPath) {
         }
         _kcaHoverAudio.pause();
         _kcaHoverAudio.src = String(bakedPath) + "?_=" + Date.now();
+        // .load() forces WebKitGTK (Pi) to flush stale network state on src
+        // reassign — without it, play() silently fails on rapid hover-mash.
+        try { _kcaHoverAudio.load(); } catch (_) {}
         _kcaHoverAudio.currentTime = 0;
         _kcaHoverAudio.play().catch(() => {
           // Only fall back if the kid is STILL hovering this same button.
@@ -2021,6 +2065,9 @@ function speakHoverFallback(text) {
   if (!text) return;
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   try {
+    // Yield narration + question audio before speaking — without this the kid
+    // hears two voices stacked when hover fires mid-narration.
+    _silenceVoiceChannels("hover");
     if (!_kcaVoiceReady) _kcaInitVoice();
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(String(text));
@@ -3990,6 +4037,9 @@ const KidGame = {
       const arrows = { ArrowLeft: "←", ArrowRight: "→", ArrowUp: "↑", ArrowDown: "↓" };
       const onKey = (e) => {
         if (!arrows[e.key]) return;
+        // Self-detach if host abandoned (kid navigated away mid-lesson). Without
+        // this, arrow keys on later lessons fire into stale closure + detached DOM.
+        if (!host.isConnected) { window.removeEventListener("keydown", onKey); return; }
         e.preventDefault();
         press(arrows[e.key]);
       };
@@ -4031,6 +4081,9 @@ const KidGame = {
         stage.appendChild(svg);
       };
       const tick = (ts) => {
+        // Self-cancel if lesson abandoned (host detached) — prevents rAF leak
+        // burning CPU forever against orphan DOM.
+        if (!stage.isConnected) { cancelAnimationFrame(raf); return; }
         if (!lastTs) lastTs = ts;
         if (ts - lastTs >= 1000 / fps) { frame += 1; drawFrame(); lastTs = ts; }
         raf = requestAnimationFrame(tick);
@@ -6436,8 +6489,11 @@ const LevelPainter = {
       const list = Store.load(this.K_LEVELS, []);
       list.push({ name, ...payload });
       Store.save(this.K_LEVELS, list.slice(-50));
-      // AppData via JSBridge
-      await saveKidProject(name, JSON.stringify(payload, null, 2));
+      // AppData via JSBridge — log if it fails so silent loss is at least visible.
+      try {
+        const wrote = await saveKidProject(name, JSON.stringify(payload, null, 2));
+        if (!wrote) console.warn("[LevelPainter] saveKidProject returned false (no JSBridge?)");
+      } catch (e) { console.error("[LevelPainter] saveKidProject failed", e); }
       Audio_.sfx("Star");
       const ok = el("p", { class: "success", style: { marginTop: "8px" } }, `Saved as ${name}!`);
       dom.appendChild(ok);
@@ -6696,7 +6752,8 @@ const IdeaSpark = {
       // undefined and saveKidProject returns false — we still complete the
       // lesson so dev preview is testable.
       let savedToDisk = false;
-      try { savedToDisk = await saveKidProject(name, data); } catch {}
+      try { savedToDisk = await saveKidProject(name, data); }
+      catch (e) { console.error("[IdeaSpark] saveKidProject failed", e); }
 
       saved = true;
       saveBtn.disabled = true;
@@ -7359,7 +7416,13 @@ const Parent = {
     document.getElementById("parentOverlay").classList.add("show");
     setTimeout(() => document.getElementById("pinInput").focus(), 50);
   },
-  close() { document.getElementById("parentOverlay").classList.remove("show"); },
+  close() {
+    // Cancel any in-flight hover-audio from the option-preview panel — without
+    // this, _kcaHoverActiveBtn stays pinned to the now-removed parent button
+    // and silently locks future answer-button hovers in the lesson view.
+    try { cancelHoverAudio(); } catch (_) {}
+    document.getElementById("parentOverlay").classList.remove("show");
+  },
   unlock() {
     const stored = Store.load(Store.K_PIN, "1234");
     const v = document.getElementById("pinInput").value;

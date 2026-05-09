@@ -126,8 +126,17 @@ def step_package() -> None:
     sep = ";" if _is_windows() else ":"
     # Stage audio assets w/o .wav to keep the exe small (Phase 4). Falls back to
     # the original assets/ folder if staging fails so a bad copytree doesn't
-    # block the build.
+    # block the build. Wrapped in try/finally so the staged folder is always
+    # cleaned even if PyInstaller crashes mid-build.
     pkg_root = _build_audio_pkg()
+    try:
+        _step_package_inner(pkg_root, sep)
+    finally:
+        if pkg_root and pkg_root.exists():
+            shutil.rmtree(pkg_root, ignore_errors=True)
+
+
+def _step_package_inner(pkg_root: Path | None, sep: str) -> None:
     assets_arg = f"{(pkg_root / 'assets')}" if pkg_root else "assets"
     cmd = [
         sys.executable, "-m", "PyInstaller",

@@ -156,7 +156,8 @@ def main() -> None:
     try:
         from piper_bake import is_available as _piper_available  # type: ignore
         use_piper = _piper_available()
-    except Exception:
+    except Exception as _piper_exc:
+        log.warning("piper_bake import/check failed: %s", _piper_exc)
         use_piper = False
 
     if use_piper:
@@ -171,8 +172,13 @@ def main() -> None:
     text_jobs: list[tuple[Path, str]] = []
     queued: list[tuple[Path, Path]] = []
     for lf in lesson_files:
-        data = json.loads(lf.read_text(encoding="utf-8"))
-        num = lf.stem.split("_")[1]
+        try:
+            data = json.loads(lf.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            log.error("bad JSON in %s: %s -- skipping", lf.name, exc)
+            continue
+        parts = lf.stem.split("_")
+        num = parts[1] if len(parts) > 1 else "??"
 
         # Lesson narration
         lines = data.get("mascot_lines") or []

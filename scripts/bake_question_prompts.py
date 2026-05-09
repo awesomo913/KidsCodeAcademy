@@ -99,7 +99,13 @@ def main() -> int:
                     changed = True
                     total_baked += 1
         if changed:
-            lf.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+            # Trailing newline keeps lesson JSONs in sync w/ diversify_gates.py +
+            # bake_option_audio.py + swap_click_to_type.py — without it those
+            # scripts mutually re-invalidate every run.
+            lf.write_text(
+                json.dumps(data, indent=2, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
             log.info("patched %s with %d audio paths", lf.name, sum(len(q.get("variations") or []) for q in questions))
 
     log.info("DONE -- baked=%d skipped=%d errors=%d", total_baked, total_skipped, total_errors)
