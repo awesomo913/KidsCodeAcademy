@@ -31,6 +31,23 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 
 ## 4. History
 
+### 2026-05-09 (later) — v0.7.8: parent PIN wizard + audio QA tool + L21 multi-turn Claude
+
+Three independent shipments in one session, sequenced as C → D → A from the v0.7.8 grill menu (E and F deferred — see "Open questions" below).
+
+- **C (commit `3e88d69e`) — audio QA report tool.** New `scripts/audio_qa_report.py` walks all 60 lessons, extracts every narration / question prompt / answer option that has a baked audio path, and renders a single-file HTML report where the parent listens through a weighted random sample (acronym-heavy lessons get 2× weight, since Piper most often mispronounces "LLM"/"MCQ"/etc.). UI is 100% client-side: localStorage tracks Good/Bad ratings, "Export findings" writes a downloadable JSON the parent can share back. Acronym list synced with `preprocess_acronyms.py`. Sample default 50; configurable via `--n`, `--kind narration|prompt|option`, `--lesson NN`, `--seed`. Output to `audio_qa/` (gitignored).
+- **D (commit `65e6d679`) — first-launch parent PIN wizard.** Closes the v0.1.0 default-PIN-1234 hole. `Parent.open()` checks `_isFirstSetup()` (`Store.load(K_PIN, null) === null`) and shows a setup wizard instead of the lock screen. Two-input confirm, must be 4 digits, must match, must NOT be in `WEAK_PINS` (20 patterns: 0000-9999 repeats, 1234/4321/0123/9876/1212/2121, cultural refs 0420/0666/1337/1701/2580/8675). New "Forgot PIN?" button on lock screen calls `Store.save(K_PIN, null)` (NOT `localStorage.removeItem`) so the Persistence layer's state.json mirror also drops the PIN — direct removeItem would let next-boot rehydrate the old PIN. `_saving` busy flag prevents the kid-mash-tap race that recurred yesterday. Verify-after-write everywhere.
+  - Silent-failure-hunter raised 4 findings; 3 actioned (Persistence-aware reset, console.warn on catch, busy-flag race), 1 deferred to next grill (see Open questions).
+- **A (commit `a4cb6bdc`) — Claude multi-turn FSM for L21 "One Step at a Time".** First lesson in the prompt-engineering arc to gain a sandbox chat. New `sandbox_ai/claude/lesson_21.json`: 29-node FSM with branching `t1` (pick a job: sandwich / flower / room / blocks) → 4 parallel sub-trees (`t2_sandwich`, `t2_flower`, `t2_room`, `t2_blocks`) → "what comes first?" / "what's next?" / "last step?" prompts → retry nodes when kid picks wrong order → convergent `t_win`. Free-text matches[] for "help"/"plan"/"hi"/"hello"/"why" outside the guided turn flow. Lesson JSON declares `sandbox.helpers=['claude']`, `complete_after=1`, `auto_complete=true`. Sandbox lint clean (8/8).
+  - Scope cut: A as originally pitched was "L18-25 multi-turn expansion." Reality: those lessons had `sandbox: None` — no chat at all. Adding sandbox to all 8 was too big for one session. Shipped L21 only. L17-20, L22-25 remain quiz-only; tracked in v0.7.9 menu.
+
+**Open questions for next session:**
+1. **F (Bytey art via nano-banana)** — needs `GEMINI_API_KEY` env var. User to set OR explicitly defer indefinitely. Path described in `~/.claude/scripts/nano_banana_mockup.py`. Free tier at https://aistudio.google.com/apikey.
+2. **PIN wizard kid-bypass on lock screen.** The "Forgot PIN?" button is visible to anyone who reaches the lock screen. A curious kid clicks it, hits OK on the confirm dialog, gets a fresh wizard, and sets their own PIN — locking the parent out. Mitigations to grill: (a) math gate ("12 × 9 = ?") on Forgot path, (b) force a single-strike rate-limit ("wait 60s after a Forgot click"), (c) hide Forgot behind a "tap mascot 5x" gesture, (d) accept the risk (parents reset by clearing kca.pin.v1 in DevTools).
+3. **B (tool-history scenes L18-25)** — needs 8 SVG scene metaphors. Shape: each lesson's Q1 history-anim slot. Schema same as L11-16 patterns in HISTORY_OVERRIDES (`scripts/expand_lessons_v3.py`).
+4. **A continuation (L17-20, L22-25 multi-turn FSMs)** — pattern shipped in L21 is repeatable. Likely 30-60 turn nodes per lesson × 8 lessons = ~300 turn nodes of authoring. Could be batch-generated via a templated approach.
+5. **Existing-user weak-PIN nudge.** v0.7.8 wizard fires only on FRESH installs (PIN unset). Existing users with literal PIN "1234" don't see the wizard. Next session: post-unlock check — if `unlock` succeeds with a PIN in WEAK_PINS, force the change-PIN flow before showing the dashboard.
+
 ### 2026-05-09 — v0.7.7: 8 grill resolutions + chess timer + hint button + fail-loud Piper
 
 **Closing the v0.7.6 grill-me Q&A (skipped/deferred items resolved).** Run order in commit `6024a0e3`:
@@ -96,12 +113,13 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 - Re-baked all 60 lesson narration wavs + ~120 hint wavs via Piper.
 - exe: 445 MB.
 
-### 🔖 PICK UP HERE NEXT SESSION (v0.7.8 candidate work)
+### 🔖 PICK UP HERE NEXT SESSION (v0.7.9 candidate work)
 
 **Fresh-context me: this is your starting orientation.** Read this whole HANDOFF top-to-bottom before touching code. Most-recent state is at the TOP of the History section.
 
-**Current state (head: `6024a0e3` on `main`, 2026-05-09):**
-- v0.7.7 shipped. Fresh exe at `C:/Users/computer/Desktop/AI/KidsCodeAcademy.exe` (134.6 MB — Phase 4 OGG worked as forecast).
+**Current state (head: `a4cb6bdc` on `main`, 2026-05-09 evening):**
+- v0.7.8 shipped: parent PIN wizard + audio QA tool + L21 multi-turn Claude. Exe NOT rebuilt this session (engine + content changes only — next builder should run `python build.py` to ship a fresh exe).
+- v0.7.7 was the prior baseline (134.6 MB exe).
 - Lessons 1-60 all on v2 schema. ~3900 question prompt variations (10 vars × ~6 questions × 60 lessons), all baked via Piper to `.ogg`.
 - Hover audio on every answer option (250ms debounce, single voice channel mutex, baked OGG-per-unique-string).
 - Gate diversifier: 6 game types rotate across Q2..Qn (was 100% type-this-word repetition).
@@ -114,12 +132,13 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 - v0.7.7 made bake fail-LOUD if voice missing. SAPI fallback removed.
 
 **Likely next asks (in priority order):**
-1. **More multi-turn sandbox flows.** FSM machinery exists; only 7 conversations use it. Lessons 18-25 (prompt-engineering arc + memory arc) are still single-turn keyword matches. Authoring 2-3 multi-turn flows per remaining lesson would deepen the "talk to a real helper" feel without engine changes.
-2. **Tool-history scenes for prompt-engineering arc (L18-23) + memory arc (L24-25).** Engine + generator support exists (HISTORY_OVERRIDES in `scripts/expand_lessons_v3.py`). Just need 8 new SVG scenes. Format follows L11-16 pattern: streaming-bubble / panel-merge / treasure-chest etc.
-3. **Pi runner enrollment.** Code shipped; user paused on `setup_remote.sh` because Pi sudo password kept rejecting. Pick up by debugging sudo first (`whoami`, `sudo -v`, `localectl status`, `passwd` rotation), then re-run the bootstrap one-liner.
-4. **Per-question prompt audio QA.** ~3900 baked wavs/oggs. Acronym preprocessing (Phase 5) handles AI/LLM/MCQ etc., but spot-check sample needed. Build `scripts/audio_qa_report.py` that picks 50 random prompts and lists their input strings + paths for a parent to listen through and flag bad ones.
-5. **First-launch parent-setup wizard.** Force a non-default PIN. Currently parent corner ships with default PIN `1234` per source — bad if kid is technically curious.
-6. **Real Bytey art swap.** Procedural Pillow mascot is ugly placeholder. Folder-drop swap in `assets/mascot/` w/ no code changes.
+1. **F (Bytey art) — set GEMINI_API_KEY then run nano-banana.** Free tier at https://aistudio.google.com/apikey. Once set, prompt the workspace nano-banana script to generate a 4-state character sheet (idle/wave/cheer/think) with consistent character; extract per-state frames; replace `assets/mascot/<state>_NN.png`. Animation contract: idle 8 frames / wave 6 / cheer 6 / think 4 — preserve exact filenames + counts or `MascotPlayer` breaks.
+2. **A continuation — multi-turn FSM for L17, L19, L20, L22, L23, L24, L25.** Pattern shipped in L21 (`sandbox_ai/claude/lesson_21.json`) is repeatable. Each lesson needs ~30 turn nodes. Could batch via template — write a `scripts/scaffold_sandbox_l*.py` that takes a lesson concept seed and emits a default 4-job × 3-step branching tree.
+3. **B — tool-history scenes for L18-25.** Engine + generator support exists (HISTORY_OVERRIDES in `scripts/expand_lessons_v3.py`). Just need 8 new SVG scenes. Format follows L11-16 pattern: streaming-bubble / panel-merge / treasure-chest etc.
+4. **PIN wizard kid-bypass mitigation.** "Forgot PIN?" button on lock screen lets a curious kid bypass parent gate by clicking it. Options to grill: math gate, rate-limit, gesture-hidden, accept risk. (See History entry for v0.7.8 D Open Questions.)
+5. **Existing-user weak-PIN nudge.** v0.7.8 wizard fires only on fresh installs. Existing users with PIN "1234" don't see it. Add post-unlock check: if `unlock` succeeds with a `WEAK_PINS` PIN, force change-PIN flow before showing dashboard.
+6. **Pi runner enrollment.** Code shipped; user paused on `setup_remote.sh` because Pi sudo password kept rejecting. Pick up by debugging sudo first (`whoami`, `sudo -v`, `localectl status`, `passwd` rotation), then re-run the bootstrap one-liner. Needs physical Pi access.
+7. **Per-question prompt audio QA — actually USE the v0.7.8 C tool.** Run `python scripts/audio_qa_report.py --n 50`, open the HTML, listen through, export findings. Bad-rated rows feed back into either acronym list expansion (`preprocess_acronyms.py`) or content rewrites.
 
 **Key files to read first:**
 - `index.html` (~5400 lines, single source of truth for all engine code)
