@@ -31,6 +31,29 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 
 ## 4. History
 
+### 2026-05-09 — v0.7.7: 8 grill resolutions + chess timer + hint button + fail-loud Piper
+
+**Closing the v0.7.6 grill-me Q&A (skipped/deferred items resolved).** Run order in commit `6024a0e3`:
+
+- **L01-04 vocab cleaned.** Type-this-word at lessons 1-4 now uses CLEAN pool only (no `FART/POOP/BUTT/BURP` for first impressions). Goofy band still rotates from L05 onwards.
+- **Distractor de-duplication.** New `scripts/check_distractor_dupes.py` + `dedupe_distractors.py` wired as build-lint at step 1c. Caught 946 over-repeated wrong-answer strings (>3 appearances per question) and auto-rotated them. Build now aborts on dedupe regression.
+- **Compact-layout opt-in.** `html[data-layout="compact"]` breakpoints defined; new Parent Corner toggle drops it on (off by default — desktop feel preserved). For laptops + smaller screens.
+- **TCPServer port-reuse fix.** `app.py` sets `allow_reuse_address=True` so the loopback server never hangs on rapid relaunch (rare bug; only mattered when kid mash-launched the .exe).
+- **Chess banner respect.** Banner suppress while `#chessOverlay` is open — no more notification-on-active-board.
+- **Chess: hint + timer + extension.** New strategic `Hint` button (never names a square — "Look for a piece you can take"). 15-min timer chip in chess header. At expiry: 1-min extension banner + most-pieces-wins fallback (so a stalemate doesn't end inconclusively for a 7-year-old).
+- **Piper-only audio (`v0.7.7` marker in `prebake_audio.py`).** Stripped pyttsx3 SAPI fallback. Bake now fails LOUD if `voices/en_US-amy-medium.onnx` missing — prevents accidental SAPI-ZIRA shipping when a contributor forgets to download the voice. Re-download: `python -m piper.download_voices en_US-amy-medium --download-dir voices`.
+- **4 silent-failure fixes in chess.** `_stopTimer` now called on stalemate + king-capture branches (was leaking a setInterval). `gameOver` guard at top of `_botMove` (bot was making one extra move after kid won). Hint-counter increment ordering fixed (hint count now shows BEFORE display, not after).
+
+**Plus the 16 fixes from 4-agent code review** (commit `8e658dc3`, prior).
+
+**Plus pre-commit guard** (commit `9e4e6eaf`): `.git/hooks/pre-commit` aborts if `assets/audio/**/*.wav` get re-tracked or any 50MB+ file enters staging. Prevents the WAV-bloat regression that motivated Phase 4.
+
+**exe size:** 134.6 MB at `C:/Users/computer/Desktop/AI/KidsCodeAcademy.exe` (post-OGG, very close to the v0.7.6 forecast of ~120 MB).
+
+### 2026-05-08 — v0.7.6 ship: hover audio + gate diversifier + chess grading + parent game-launcher + OGG shrink + acronym preprocess
+
+(Detail captured in commit `10d5428a`. Not re-summarized here — see entry below for the v0.7.6 candidate-work breakdown that became this ship.)
+
 ### 2026-05-01 — Initial design + ship
 - User's vision: "fun and understandable guiding tutorial app for my 7 year old to practice and learn using to code like i do."
 - User's key decisions:
@@ -73,24 +96,30 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 - Re-baked all 60 lesson narration wavs + ~120 hint wavs via Piper.
 - exe: 445 MB.
 
-### 🔖 PICK UP HERE NEXT SESSION (v0.7.3 candidate work)
+### 🔖 PICK UP HERE NEXT SESSION (v0.7.8 candidate work)
 
 **Fresh-context me: this is your starting orientation.** Read this whole HANDOFF top-to-bottom before touching code. Most-recent state is at the TOP of the History section.
 
-**Current state (head: `d08b62c` on `main`):**
-- v0.7.2 shipped. Fresh exe at `C:/Users/computer/Desktop/AI/KidsCodeAcademy.exe` (445 MB).
-- Lessons 1-60 all using v2 schema (questions[] with 5-8 questions × 5 variations each).
-- Lessons 11-16 have `ToolSimulator` overlay + sandbox JSONs (claude/cursor/gemini/codex/opencode/ollama).
-- Lessons 32, 33, 34, 38, 41, 45, 47, 48 use new game-dev handlers. Lesson 60 is the `game-capstone` 4-stage builder.
-- All audio is Piper (`en_US-amy-medium`) — narration + 1950 question prompts in `assets/audio/q/`.
-- Voice file `voices/en_US-amy-medium.onnx` is gitignored. Re-download with `python -m piper.download_voices en_US-amy-medium --download-dir voices`.
+**Current state (head: `6024a0e3` on `main`, 2026-05-09):**
+- v0.7.7 shipped. Fresh exe at `C:/Users/computer/Desktop/AI/KidsCodeAcademy.exe` (134.6 MB — Phase 4 OGG worked as forecast).
+- Lessons 1-60 all on v2 schema. ~3900 question prompt variations (10 vars × ~6 questions × 60 lessons), all baked via Piper to `.ogg`.
+- Hover audio on every answer option (250ms debounce, single voice channel mutex, baked OGG-per-unique-string).
+- Gate diversifier: 6 game types rotate across Q2..Qn (was 100% type-this-word repetition).
+- Tool sims: lessons 11-16 (claude/cursor/gemini/codex/opencode/ollama) with full ToolSimulator overlays. Multi-turn FSM (`match_when` w/ per-session state) wired into 7 sandbox conversations.
+- Chess: full board + bot, grading + history + Parent Corner Chess tab, 15-min timer + 1-min extension, strategic hint button.
+- Parent Corner: Chess tab + Games tab (game launcher + per-lesson option preview w/ baked audio).
+- Pre-commit guard: rejects `assets/audio/**/*.wav` re-tracks + any 50MB+ file.
+- Build lints: sandbox lint (step 1b), distractor dedupe (step 1c).
+- All audio is Piper (`en_US-amy-medium`). Voice file `voices/en_US-amy-medium.onnx` is gitignored.
+- v0.7.7 made bake fail-LOUD if voice missing. SAPI fallback removed.
 
 **Likely next asks (in priority order):**
-1. **exe size** — 445 MB is big. Plausible v0.7.3: convert wavs to OGG/Opus (~10× compression → ~50 MB total) or downsample to 16 kHz (~25% smaller). Both are post-bake transforms; engine `<audio>` tag handles OGG natively in WebView2 Chromium.
-2. **More tool-history scenes** — currently scenes exist for lessons 5-10 (math/turing/perceptron/training/attention/llm) and 11-16 (claude/cursor/gemini/codex/opencode/ollama). Could add scenes for the prompt-engineering arc (lessons 18-23) or memory arc (24-25).
-3. **Multi-turn FSM** in sandbox chat — `match_when` is partly there (per-session state slot), unused so far. Lessons 11-16 chats are still single-turn. Consider authoring multi-turn flows (e.g. Claude "plan a story" → asks follow-up "who's the hero?" before proceeding).
-4. **Pi runner enrollment** still deferred from v0.4.0. `scripts/setup_remote.sh` ready to run once kid's Pi sudo is sorted.
-5. **Per-question prompt audio QA** — spot-check a sample of the 1950 baked wavs by ear; some prompts may have weird Piper pronunciations on technical terms ("LLM", "MCQ", emoji).
+1. **More multi-turn sandbox flows.** FSM machinery exists; only 7 conversations use it. Lessons 18-25 (prompt-engineering arc + memory arc) are still single-turn keyword matches. Authoring 2-3 multi-turn flows per remaining lesson would deepen the "talk to a real helper" feel without engine changes.
+2. **Tool-history scenes for prompt-engineering arc (L18-23) + memory arc (L24-25).** Engine + generator support exists (HISTORY_OVERRIDES in `scripts/expand_lessons_v3.py`). Just need 8 new SVG scenes. Format follows L11-16 pattern: streaming-bubble / panel-merge / treasure-chest etc.
+3. **Pi runner enrollment.** Code shipped; user paused on `setup_remote.sh` because Pi sudo password kept rejecting. Pick up by debugging sudo first (`whoami`, `sudo -v`, `localectl status`, `passwd` rotation), then re-run the bootstrap one-liner.
+4. **Per-question prompt audio QA.** ~3900 baked wavs/oggs. Acronym preprocessing (Phase 5) handles AI/LLM/MCQ etc., but spot-check sample needed. Build `scripts/audio_qa_report.py` that picks 50 random prompts and lists their input strings + paths for a parent to listen through and flag bad ones.
+5. **First-launch parent-setup wizard.** Force a non-default PIN. Currently parent corner ships with default PIN `1234` per source — bad if kid is technically curious.
+6. **Real Bytey art swap.** Procedural Pillow mascot is ugly placeholder. Folder-drop swap in `assets/mascot/` w/ no code changes.
 
 **Key files to read first:**
 - `index.html` (~5400 lines, single source of truth for all engine code)

@@ -79,3 +79,20 @@ KidsCodeAcademy/
 - Verified exe launches, loads `index.html` from PyInstaller `_MEIPASS`.
 - Skipped/deferred for v2: real Bytey art, ElevenLabs voice quality, PWA + APK builds, full Sprite Editor / Bubby's Game snapshots in `vendor/`, locale-swap support.
 - Known issues: only Lesson 2 + Lesson 8 ship sandbox AI scripts in v1; other lessons can have their `sandbox` block added without code change.
+
+### 2026-05-03 → 2026-05-09 — Catch-up entry (v0.2.0 → v0.7.7)
+
+The architecture sketched above is mostly stable, but the project has grown ~13× by file count + 3× by lesson count. Authoritative session-by-session diffs live in `HANDOFF.md` (top-of-file). High-level deltas vs. the v0.1.0 sketch:
+
+- **Lessons:** 16 → 60. New chapters: AI history (math/Turing/perceptron/training/attention/LLM), helper deep-dives (claude/cursor/gemini/codex/opencode/ollama), prompt-engineering arc, memory arc, game-dev iteration arc, idea-to-game capstone (L60).
+- **Schema:** every lesson upgraded to v2 — `questions[] × variations[]` with 4-7 questions per lesson and 5-10 paraphrased variations per question. Total: ~3,900 question prompts. Defeats memorization.
+- **Audio:** pyttsx3 SAPI → Piper (`en_US-amy-medium`). All narration + every question prompt + every answer option are pre-baked. Acronym preprocessing (Phase 5) so "LLM" → "L L M". OGG/Opus compression (Phase 4) shrunk audio bundle from 1.2 GB to ~120 MB. v0.7.7 stripped the SAPI fallback — bake fails LOUD if voice missing.
+- **Engine additions:** `ToolSimulator` overlay (per-helper themed UI for L11-16), `KidGame` handlers expanded from 6 to 14+ types (game-capstone, world-layers, input-trace, costume-swapper, live-hud, polish-row, cursor-mini, playtest-preview, share-card, tap-the-glow, pick-the-pic, sprite-poke, timeline-order, prompt-grader), `QuestionFlow` controller (gate-then-answer pattern), hover audio on every option, voice mutex (single channel speaks at a time).
+- **Chess break:** new module — full board, weak-on-purpose bot, grading w/ stars + letter grade + score, history tracking, 15-min timer + extension, strategic hint button.
+- **Parent Corner:** transcripts + Chess tab + Games tab (game launcher + per-lesson option preview).
+- **Pi build:** `scripts/build_pi.sh` + `KCA_BAKE_AUDIO` opt-in + `.github/workflows/pi-build.yml` self-hosted runner workflow.
+- **Build pipeline:** sandbox lint (step 1b), distractor dedupe lint (step 1c), question prompt bake (step 2c), acronym preprocess (step 2d), OGG compress (step 2e), staged `build_pkg/assets/` (excludes WAVs, ships only OGGs).
+- **Pre-commit guard:** rejects WAV re-tracking + 50MB+ files.
+- **exe size trajectory:** 48 MB → 81 MB → 89 MB → 165 MB → 445 MB → **134 MB** (post-OGG, current).
+
+For session-grain detail, read `HANDOFF.md` History section.
