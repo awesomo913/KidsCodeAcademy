@@ -1,0 +1,234 @@
+{
+  "helper": "claude",
+  "lesson_id": 21,
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Try 'help' or pick a job from the buttons — we'll break it into tiny steps!",
+  "matches": [
+    { "keywords": ["help", "plan"], "typing_delay_ms": 700, "reply_lines": ["Pick a job from the buttons and we'll chop it into tiny pieces!"], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I'm Claude. Tiny steps make BIG jobs easy. Pick a job above!"], "side_effect": null },
+    { "keywords": ["why"], "typing_delay_ms": 800, "reply_lines": ["Because tiny steps each finish fast!", "When ONE step works, we add the next. Way less scary than doing everything at once."], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["I'm Claude. Big jobs feel scary — but TINY steps don't.", "Pick a big job and we'll chop it into tiny pieces!"],
+      "options": ["Make a sandwich", "Plant a flower", "Tidy my room", "Build with blocks"],
+      "branches": {
+        "Make a sandwich": "t2_sandwich",
+        "Plant a flower": "t2_flower",
+        "Tidy my room": "t2_room",
+        "Build with blocks": "t2_blocks"
+      },
+      "fallback_turn": "t1"
+    },
+    "t2_sandwich": {
+      "bot_lines": ["A sandwich! Here are four mixed-up steps.", "Which one comes FIRST?"],
+      "options": ["Cut it in half", "Get out the bread", "Spread the butter", "Take a big bite"],
+      "branches": {
+        "Get out the bread": "t3_sandwich_ok",
+        "Cut it in half": "t2_sandwich_retry",
+        "Spread the butter": "t2_sandwich_retry",
+        "Take a big bite": "t2_sandwich_retry"
+      },
+      "fallback_turn": "t2_sandwich"
+    },
+    "t2_sandwich_retry": {
+      "bot_lines": ["Hmm — that one happens later!", "You can't spread without bread on the table. What's first?"],
+      "options": ["Cut it in half", "Get out the bread", "Spread the butter"],
+      "branches": {
+        "Get out the bread": "t3_sandwich_ok",
+        "Cut it in half": "t2_sandwich_retry",
+        "Spread the butter": "t2_sandwich_retry"
+      },
+      "fallback_turn": "t2_sandwich_retry"
+    },
+    "t3_sandwich_ok": {
+      "bot_lines": ["Yes! Bread first.", "Now we have bread out. What's the NEXT tiny step?"],
+      "options": ["Cut it in half", "Spread the butter", "Eat it"],
+      "branches": {
+        "Spread the butter": "t4_sandwich_ok",
+        "Cut it in half": "t3_sandwich_retry",
+        "Eat it": "t3_sandwich_retry"
+      },
+      "fallback_turn": "t3_sandwich_ok"
+    },
+    "t3_sandwich_retry": {
+      "bot_lines": ["Almost! After bread, we need to put something ON it.", "Try again."],
+      "options": ["Spread the butter", "Cut it in half", "Eat it"],
+      "branches": {
+        "Spread the butter": "t4_sandwich_ok",
+        "Cut it in half": "t3_sandwich_retry",
+        "Eat it": "t3_sandwich_retry"
+      },
+      "fallback_turn": "t3_sandwich_retry"
+    },
+    "t4_sandwich_ok": {
+      "bot_lines": ["Three steps done!", "Step 1: Bread. Step 2: Butter.", "Step 3 is the last one. What is it?"],
+      "options": ["Cut it in half", "Eat it"],
+      "branches": {
+        "Cut it in half": "t_win",
+        "Eat it": "t4_sandwich_retry"
+      },
+      "fallback_turn": "t4_sandwich_ok"
+    },
+    "t4_sandwich_retry": {
+      "bot_lines": ["Whoa — eating is super last!", "First we cut so it's easier to share."],
+      "options": ["Cut it in half"],
+      "branches": { "Cut it in half": "t_win" }
+    },
+    "t2_flower": {
+      "bot_lines": ["Planting a flower! Four mixed-up steps.", "Which is FIRST?"],
+      "options": ["Water the seed", "Dig a hole", "Watch it grow", "Cover with dirt"],
+      "branches": {
+        "Dig a hole": "t3_flower_ok",
+        "Water the seed": "t2_flower_retry",
+        "Watch it grow": "t2_flower_retry",
+        "Cover with dirt": "t2_flower_retry"
+      },
+      "fallback_turn": "t2_flower"
+    },
+    "t2_flower_retry": {
+      "bot_lines": ["You need a place for the seed FIRST!", "Pick the digging step."],
+      "options": ["Dig a hole", "Water the seed", "Cover with dirt"],
+      "branches": {
+        "Dig a hole": "t3_flower_ok",
+        "Water the seed": "t2_flower_retry",
+        "Cover with dirt": "t2_flower_retry"
+      },
+      "fallback_turn": "t2_flower_retry"
+    },
+    "t3_flower_ok": {
+      "bot_lines": ["Hole dug! Seed goes in.", "What's NEXT?"],
+      "options": ["Cover with dirt", "Water the seed", "Watch it grow"],
+      "branches": {
+        "Cover with dirt": "t4_flower_ok",
+        "Water the seed": "t3_flower_retry",
+        "Watch it grow": "t3_flower_retry"
+      },
+      "fallback_turn": "t3_flower_ok"
+    },
+    "t3_flower_retry": {
+      "bot_lines": ["Seed needs to be tucked in first!", "Cover with dirt before water."],
+      "options": ["Cover with dirt"],
+      "branches": { "Cover with dirt": "t4_flower_ok" }
+    },
+    "t4_flower_ok": {
+      "bot_lines": ["Tucked in! Two more steps.", "Pick the next tiny step."],
+      "options": ["Water the seed", "Watch it grow"],
+      "branches": {
+        "Water the seed": "t_win",
+        "Watch it grow": "t4_flower_retry"
+      },
+      "fallback_turn": "t4_flower_ok"
+    },
+    "t4_flower_retry": {
+      "bot_lines": ["Watching is for after! The seed needs water first."],
+      "options": ["Water the seed"],
+      "branches": { "Water the seed": "t_win" }
+    },
+    "t2_room": {
+      "bot_lines": ["Tidying! Four steps mixed up.", "Which is FIRST?"],
+      "options": ["Vacuum the floor", "Pick up toys", "Make the bed", "Open a window"],
+      "branches": {
+        "Open a window": "t3_room_ok",
+        "Pick up toys": "t2_room_retry",
+        "Vacuum the floor": "t2_room_retry",
+        "Make the bed": "t2_room_retry"
+      },
+      "fallback_turn": "t2_room"
+    },
+    "t2_room_retry": {
+      "bot_lines": ["You need fresh air FIRST!", "Open the window before anything else."],
+      "options": ["Open a window"],
+      "branches": { "Open a window": "t3_room_ok" }
+    },
+    "t3_room_ok": {
+      "bot_lines": ["Window open!", "Now what?"],
+      "options": ["Pick up toys", "Vacuum the floor", "Make the bed"],
+      "branches": {
+        "Pick up toys": "t4_room_ok",
+        "Vacuum the floor": "t3_room_retry",
+        "Make the bed": "t3_room_retry"
+      },
+      "fallback_turn": "t3_room_ok"
+    },
+    "t3_room_retry": {
+      "bot_lines": ["Toys first — you can't vacuum or make the bed with stuff in the way!"],
+      "options": ["Pick up toys"],
+      "branches": { "Pick up toys": "t4_room_ok" }
+    },
+    "t4_room_ok": {
+      "bot_lines": ["Toys are away.", "Two steps left. Which next?"],
+      "options": ["Vacuum the floor", "Make the bed"],
+      "branches": {
+        "Vacuum the floor": "t_win",
+        "Make the bed": "t4_room_retry"
+      },
+      "fallback_turn": "t4_room_ok"
+    },
+    "t4_room_retry": {
+      "bot_lines": ["Vacuum first — dust flies up.", "We make the bed LAST so it stays clean."],
+      "options": ["Vacuum the floor"],
+      "branches": { "Vacuum the floor": "t_win" }
+    },
+    "t2_blocks": {
+      "bot_lines": ["Blocks! Four steps. Which is FIRST?"],
+      "options": ["Stack them tall", "Sort by color", "Pick a flat space", "Knock them over"],
+      "branches": {
+        "Pick a flat space": "t3_blocks_ok",
+        "Stack them tall": "t2_blocks_retry",
+        "Sort by color": "t2_blocks_retry",
+        "Knock them over": "t2_blocks_retry"
+      },
+      "fallback_turn": "t2_blocks"
+    },
+    "t2_blocks_retry": {
+      "bot_lines": ["You need a flat spot first or your tower will fall!"],
+      "options": ["Pick a flat space"],
+      "branches": { "Pick a flat space": "t3_blocks_ok" }
+    },
+    "t3_blocks_ok": {
+      "bot_lines": ["Flat space found.", "What's next?"],
+      "options": ["Sort by color", "Stack them tall", "Knock them over"],
+      "branches": {
+        "Sort by color": "t4_blocks_ok",
+        "Stack them tall": "t3_blocks_retry",
+        "Knock them over": "t3_blocks_retry"
+      },
+      "fallback_turn": "t3_blocks_ok"
+    },
+    "t3_blocks_retry": {
+      "bot_lines": ["Sort first so you can find the right blocks fast."],
+      "options": ["Sort by color"],
+      "branches": { "Sort by color": "t4_blocks_ok" }
+    },
+    "t4_blocks_ok": {
+      "bot_lines": ["Sorted!", "Now stack tall. Then ONE last fun step."],
+      "options": ["Stack them tall"],
+      "branches": { "Stack them tall": "t4b_blocks" }
+    },
+    "t4b_blocks": {
+      "bot_lines": ["Tall tower! Last step?"],
+      "options": ["Knock them over", "Sort again"],
+      "branches": {
+        "Knock them over": "t_win",
+        "Sort again": "t4b_blocks_retry"
+      },
+      "fallback_turn": "t4b_blocks"
+    },
+    "t4b_blocks_retry": {
+      "bot_lines": ["Sorting is done — final step is the FUN one."],
+      "options": ["Knock them over"],
+      "branches": { "Knock them over": "t_win" }
+    },
+    "t_win": {
+      "bot_lines": [
+        "You did it!",
+        "See? Big jobs become easy when you break them into tiny steps.",
+        "Every coder uses this trick. One step at a time."
+      ],
+      "side_effect": { "action": "show_thinking", "steps": ["Big job", "Tiny step 1", "Tiny step 2", "Win!"], "duration_ms": 2000 }
+    }
+  }
+}
