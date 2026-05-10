@@ -1505,11 +1505,38 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   <div class="overlay-card">
     <h2>Parent Corner</h2>
     <div id="parentLocked">
-      <p>Enter your 4-digit PIN. (Default: <span class="kbd">1234</span> &mdash; change it on the inside.)</p>
+      <p>Enter your 4-digit PIN.</p>
       <input id="pinInput" type="password" inputmode="numeric" maxlength="4"
              style="font-size:24px;padding:10px;border-radius:10px;border:3px solid var(--accent-2);width:140px;letter-spacing:8px;" />
       <button id="pinSubmit" class="btn-big">Unlock</button>
       <p id="pinError" class="muted"></p>
+      <p class="muted" style="font-size:13px;margin-top:14px;">
+        Forgot your PIN? <button id="pinForgot" class="btn-big alt"
+          style="font-size:13px;padding:4px 10px;">Reset</button>
+      </p>
+    </div>
+    <div id="parentSetup" style="display:none;">
+      <h3 style="margin-top:0;">Set up your parent PIN</h3>
+      <p>Pick a 4-digit number you'll remember. Your kid should NOT see you type this.</p>
+      <p class="muted" style="font-size:13px;">
+        This PIN unlocks the parent dashboard — progress tracking, transcripts, settings.
+        It is stored only on this computer. There is no recovery if you forget; you can reset
+        from the lock screen, but that clears the PIN (not your kid's progress).
+      </p>
+      <div style="margin:14px 0;">
+        <label style="display:block;margin-bottom:8px;">
+          New PIN:
+          <input id="setupPin1" type="password" inputmode="numeric" maxlength="4"
+                 style="font-size:24px;padding:10px;border-radius:10px;border:3px solid var(--accent-2);width:140px;letter-spacing:8px;" />
+        </label>
+        <label style="display:block;margin-bottom:8px;">
+          Confirm PIN:
+          <input id="setupPin2" type="password" inputmode="numeric" maxlength="4"
+                 style="font-size:24px;padding:10px;border-radius:10px;border:3px solid var(--accent-2);width:140px;letter-spacing:8px;" />
+        </label>
+      </div>
+      <p id="setupError" class="muted" style="color:#c62828;min-height:18px;"></p>
+      <button id="setupSave" class="btn-big">Save PIN &amp; continue</button>
     </div>
     <div id="parentUnlocked" style="display:none;">
       <div class="parent-tabs" role="tablist">
@@ -7700,14 +7727,79 @@ const UI = {
 /* ============================================================
  *  Parent Corner — tabbed: Progress | Activity | Grade | Transcripts | Settings
  * ============================================================ */
+// PIN values that are too easy for a 7-year-old to crack by mashing buttons.
+// Block these from setup so the parent corner is meaningfully gated.
+const WEAK_PINS = new Set([
+  "0000", "1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999",
+  "1234", "4321", "1212", "2121", "0123", "9876",
+  "0007", "0420", "0666", "1337", "1701", "2580", "8675",
+]);
+
 const Parent = {
+  _isFirstSetup() {
+    // PIN unset (null) OR still default-fallback value → force setup wizard.
+    return Store.load(Store.K_PIN, null) === null;
+  },
   open() {
-    document.getElementById("parentLocked").style.display = "";
+    const setup = this._isFirstSetup();
+    document.getElementById("parentLocked").style.display = setup ? "none" : "";
+    document.getElementById("parentSetup").style.display = setup ? "" : "none";
     document.getElementById("parentUnlocked").style.display = "none";
     document.getElementById("pinInput").value = "";
     document.getElementById("pinError").textContent = "";
+    document.getElementById("setupPin1").value = "";
+    document.getElementById("setupPin2").value = "";
+    document.getElementById("setupError").textContent = "";
     document.getElementById("parentOverlay").classList.add("show");
-    setTimeout(() => document.getElementById("pinInput").focus(), 50);
+    setTimeout(() => {
+      const target = setup ? "setupPin1" : "pinInput";
+      document.getElementById(target).focus();
+    }, 50);
+  },
+  setupPin() {
+    // Mash-tap guard: rapid double-click + double Enter both fire this. Without
+    // a busy flag we'd race two save+verify cycles. Cleared only on error paths;
+    // success path navigates away so the flag is irrelevant after that.
+    if (this._saving) return;
+    this._saving = true;
+    const a = (document.getElementById("setupPin1").value || "").trim();
+    const b = (document.getElementById("setupPin2").value || "").trim();
+    const errEl = document.getElementById("setupError");
+    if (!/^\d{4}$/.test(a)) { errEl.textContent = "PIN must be 4 digits."; this._saving = false; return; }
+    if (a !== b) { errEl.textContent = "Both PINs must match."; this._saving = false; return; }
+    if (WEAK_PINS.has(a)) { errEl.textContent = "That PIN is too easy. Pick something less obvious."; this._saving = false; return; }
+    Store.save(Store.K_PIN, a);
+    // Verify-after-write: Store.save can fail silently if localStorage is
+    // disabled (private mode) or full. Without this guard the wizard would
+    // appear to succeed and then re-prompt forever on next open.
+    if (Store.load(Store.K_PIN, null) !== a) {
+      errEl.textContent = "PIN didn't save. Your browser may have storage disabled.";
+      this._saving = false;
+      return;
+    }
+    // After setup, drop straight into the unlocked panel — no second login needed.
+    document.getElementById("parentSetup").style.display = "none";
+    document.getElementById("parentUnlocked").style.display = "";
+    this._fill();
+  },
+  forgotPin() {
+    if (this._saving) return;
+    if (!confirm("Reset your parent PIN?\n\nThis CLEARS the PIN. Your kid's progress, transcripts, and chess history stay safe. You'll set a new PIN the next time you open Parent Corner.")) return;
+    this._saving = true;
+    // Clear via Store.save(null) so the Persistence layer (state.json mirror)
+    // also drops the PIN — otherwise next boot rehydrates the old PIN from
+    // AppData and the user is locked out for real.
+    Store.save(Store.K_PIN, null);
+    if (Store.load(Store.K_PIN, null) !== null) {
+      // Verify-after-write: write didn't take. Surface to user.
+      console.warn("[Parent.forgotPin] PIN clear didn't persist");
+      alert("Couldn't clear the PIN. Your browser may have storage disabled.");
+      this._saving = false;
+      return;
+    }
+    this._saving = false;
+    alert("PIN cleared. Re-open Parent Corner to set a new one.");
+    this.close();
   },
   close() {
     // Cancel any in-flight hover-audio from the option-preview panel — without
@@ -8021,7 +8113,13 @@ const Parent = {
   changePin() {
     const v = (document.getElementById("pinNew").value || "").trim();
     if (!/^\d{4}$/.test(v)) { alert("PIN must be 4 digits."); return; }
+    if (WEAK_PINS.has(v)) { alert("That PIN is too easy. Pick something less obvious."); return; }
     Store.save(Store.K_PIN, v);
+    // Verify-after-write: Store.save can fail silently (storage quota / disabled).
+    if (Store.load(Store.K_PIN, null) !== v) {
+      alert("PIN didn't save. Your browser may have storage disabled.");
+      return;
+    }
     document.getElementById("pinNew").value = "";
     alert("PIN updated.");
   },
@@ -8086,6 +8184,14 @@ async function main() {
   document.getElementById("pinInput").addEventListener("keydown", e => { if (e.key === "Enter") Parent.unlock(); });
   document.getElementById("closeParent").addEventListener("click", () => Parent.close());
   document.getElementById("pinChange").addEventListener("click", () => Parent.changePin());
+  document.getElementById("setupSave").addEventListener("click", () => Parent.setupPin());
+  document.getElementById("pinForgot").addEventListener("click", () => Parent.forgotPin());
+  // Enter on either setup field triggers save (kid-mash-tap guard handled in setupPin).
+  ["setupPin1", "setupPin2"].forEach(id => {
+    document.getElementById(id).addEventListener("keydown", e => {
+      if (e.key === "Enter") Parent.setupPin();
+    });
+  });
 
   // Auto-play narration toggle (v0.3.3)
   const autoplayBtn = document.getElementById("autoplayToggle");
