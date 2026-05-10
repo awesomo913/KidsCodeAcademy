@@ -1,0 +1,199 @@
+{
+  "helper": "claude",
+  "lesson_id": 22,
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Try 'help' or pick a thing for Claude to make — then tell Claude what to fix!",
+  "matches": [
+    { "keywords": ["help"], "typing_delay_ms": 700, "reply_lines": ["Pick a thing for me to make. When my first try is wrong, you'll tell me WHAT to change!"], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I'm Claude. I'll try things, you tell me what to fix. Pick a button!"], "side_effect": null },
+    { "keywords": ["why"], "typing_delay_ms": 800, "reply_lines": ["Because saying 'no' tells me nothing!", "Saying 'make it bigger' or 'change the color' tells me EXACTLY what to do."], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["I'm Claude. My first try is rarely perfect — that's NORMAL.", "The trick: tell me WHAT to fix. Pick a thing for me to make!"],
+      "options": ["Draw a robot", "Pick a name for my pet", "Write a tiny poem", "Make a snack"],
+      "branches": {
+        "Draw a robot": "t2_robot",
+        "Pick a name for my pet": "t2_name",
+        "Write a tiny poem": "t2_poem",
+        "Make a snack": "t2_snack"
+      },
+      "fallback_turn": "t1"
+    },
+    "t2_robot": {
+      "bot_lines": ["Here is my robot: 🤖 (tiny, gray, square).", "Now tell me ONE thing to change. Which feedback works BEST?"],
+      "options": [
+        "No, redo it",
+        "Make the robot BIGGER",
+        "I don't like it",
+        "Give the robot wings"
+      ],
+      "branches": {
+        "No, redo it": "t2_robot_retry",
+        "Make the robot BIGGER": "t3_robot_big",
+        "I don't like it": "t2_robot_retry",
+        "Give the robot wings": "t3_robot_wings"
+      },
+      "fallback_turn": "t2_robot"
+    },
+    "t2_robot_retry": {
+      "bot_lines": ["Hmm — that doesn't tell me HOW to fix it.", "Try a feedback that says WHAT to change."],
+      "options": ["Make the robot BIGGER", "Give the robot wings"],
+      "branches": {
+        "Make the robot BIGGER": "t3_robot_big",
+        "Give the robot wings": "t3_robot_wings"
+      }
+    },
+    "t3_robot_big": {
+      "bot_lines": ["BIGGER robot coming up: 🤖🤖🤖!", "See? You said WHAT — 'bigger' — and I knew exactly what to do."],
+      "options": ["One more change!", "I'm done"],
+      "branches": { "One more change!": "t4_robot_again", "I'm done": "t_win" },
+      "fallback_turn": "t3_robot_big"
+    },
+    "t3_robot_wings": {
+      "bot_lines": ["Robot with wings: 🤖✈️!", "Specific words = great results. 'Add wings' = wings."],
+      "options": ["One more change!", "I'm done"],
+      "branches": { "One more change!": "t4_robot_again", "I'm done": "t_win" },
+      "fallback_turn": "t3_robot_wings"
+    },
+    "t4_robot_again": {
+      "bot_lines": ["Pick another change to ask for. Pick the SPECIFIC one!"],
+      "options": ["Make it nicer", "Give it big eyes", "Better!", "Color it red"],
+      "branches": {
+        "Make it nicer": "t4_robot_retry",
+        "Give it big eyes": "t_win",
+        "Better!": "t4_robot_retry",
+        "Color it red": "t_win"
+      },
+      "fallback_turn": "t4_robot_again"
+    },
+    "t4_robot_retry": {
+      "bot_lines": ["'Nicer' and 'better' — too vague!", "Pick one that says EXACTLY what to do."],
+      "options": ["Give it big eyes", "Color it red"],
+      "branches": {
+        "Give it big eyes": "t_win",
+        "Color it red": "t_win"
+      }
+    },
+    "t2_name": {
+      "bot_lines": ["I'll name your pet: 'Bob'.", "Don't love it? Pick the BEST way to tell me to try again:"],
+      "options": [
+        "That's bad",
+        "Pick a name with TWO syllables",
+        "Try harder",
+        "Pick a name that starts with M"
+      ],
+      "branches": {
+        "That's bad": "t2_name_retry",
+        "Pick a name with TWO syllables": "t3_name_2syl",
+        "Try harder": "t2_name_retry",
+        "Pick a name that starts with M": "t3_name_m"
+      },
+      "fallback_turn": "t2_name"
+    },
+    "t2_name_retry": {
+      "bot_lines": ["'Bad' and 'try harder' tell me NOTHING.", "Tell me WHAT kind of name you want."],
+      "options": ["Pick a name with TWO syllables", "Pick a name that starts with M"],
+      "branches": {
+        "Pick a name with TWO syllables": "t3_name_2syl",
+        "Pick a name that starts with M": "t3_name_m"
+      }
+    },
+    "t3_name_2syl": {
+      "bot_lines": ["Two-syllable name: 'Pip-py'!", "You told me the SHAPE of the answer — and I matched it."],
+      "options": ["I'm done"],
+      "branches": { "I'm done": "t_win" }
+    },
+    "t3_name_m": {
+      "bot_lines": ["Starts with M: 'Mango'!", "You gave me a RULE — first letter — and I followed it."],
+      "options": ["I'm done"],
+      "branches": { "I'm done": "t_win" }
+    },
+    "t2_poem": {
+      "bot_lines": ["Here's a poem: 'Cats are nice.'", "Pretty short! What feedback fixes this BEST?"],
+      "options": [
+        "It's bad",
+        "Make it 4 lines and rhyme",
+        "Boring",
+        "Add a dragon to the poem"
+      ],
+      "branches": {
+        "It's bad": "t2_poem_retry",
+        "Make it 4 lines and rhyme": "t3_poem_4lines",
+        "Boring": "t2_poem_retry",
+        "Add a dragon to the poem": "t3_poem_dragon"
+      },
+      "fallback_turn": "t2_poem"
+    },
+    "t2_poem_retry": {
+      "bot_lines": ["'Bad' and 'boring' don't help me fix it.", "Tell me WHAT to add or change."],
+      "options": ["Make it 4 lines and rhyme", "Add a dragon to the poem"],
+      "branches": {
+        "Make it 4 lines and rhyme": "t3_poem_4lines",
+        "Add a dragon to the poem": "t3_poem_dragon"
+      }
+    },
+    "t3_poem_4lines": {
+      "bot_lines": [
+        "4 lines that rhyme:",
+        "'Cats are nice / Sleeping on rice / Eyes that gleam / Like a dream.'",
+        "You gave me a SHAPE (4 lines + rhyme) and I built to it."
+      ],
+      "options": ["I'm done"],
+      "branches": { "I'm done": "t_win" }
+    },
+    "t3_poem_dragon": {
+      "bot_lines": [
+        "With a dragon:",
+        "'Cats are nice — but watch the sky! / A purple dragon zooming by.'",
+        "Adding ONE specific thing = much better poem."
+      ],
+      "options": ["I'm done"],
+      "branches": { "I'm done": "t_win" }
+    },
+    "t2_snack": {
+      "bot_lines": ["Pretend snack: a plain cracker. 🍘", "Boring? Pick the feedback that helps me fix it!"],
+      "options": [
+        "Make it tastier",
+        "Add peanut butter and a banana slice",
+        "It's gross",
+        "Add cheese on top"
+      ],
+      "branches": {
+        "Make it tastier": "t2_snack_retry",
+        "Add peanut butter and a banana slice": "t3_snack_pb",
+        "It's gross": "t2_snack_retry",
+        "Add cheese on top": "t3_snack_cheese"
+      },
+      "fallback_turn": "t2_snack"
+    },
+    "t2_snack_retry": {
+      "bot_lines": ["'Tastier' and 'gross' aren't INSTRUCTIONS — they're feelings!", "Tell me WHAT to add."],
+      "options": ["Add peanut butter and a banana slice", "Add cheese on top"],
+      "branches": {
+        "Add peanut butter and a banana slice": "t3_snack_pb",
+        "Add cheese on top": "t3_snack_cheese"
+      }
+    },
+    "t3_snack_pb": {
+      "bot_lines": ["Cracker + peanut butter + banana = real snack!", "You gave me TWO specific things. I added them both."],
+      "options": ["I'm done"],
+      "branches": { "I'm done": "t_win" }
+    },
+    "t3_snack_cheese": {
+      "bot_lines": ["Cracker + cheese on top!", "Specific instructions = a snack you actually want."],
+      "options": ["I'm done"],
+      "branches": { "I'm done": "t_win" }
+    },
+    "t_win": {
+      "bot_lines": [
+        "You got the trick!",
+        "When the first try is wrong, say WHAT to change — not just 'no'.",
+        "Two tries with good feedback beat one try every time."
+      ],
+      "side_effect": { "action": "show_thinking", "steps": ["First try", "Specific fix", "Better try!"], "duration_ms": 1800 }
+    }
+  }
+}
