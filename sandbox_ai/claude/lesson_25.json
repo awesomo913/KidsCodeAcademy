@@ -1,0 +1,255 @@
+{
+  "helper": "claude",
+  "lesson_id": 25,
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Try 'help' or pick a rule type to start composing your OWN memory rule!",
+  "matches": [
+    { "keywords": ["help"], "typing_delay_ms": 700, "reply_lines": ["Pick a rule type above. Then you'll compose YOUR OWN memory rule from chips!"], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I'm Claude. Today YOU write the memory rule. Pick a starter type!"], "side_effect": null },
+    { "keywords": ["rule"], "typing_delay_ms": 700, "reply_lines": ["A good rule is SHORT and CLEAR. Pick chips, build the rule, see me follow it!"], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": [
+        "I'm Claude. Now YOU write a memory rule for me!",
+        "Pick what kind of rule first. We'll compose it from chips next."
+      ],
+      "options": [
+        "A 'when you answer' rule",
+        "A 'when I ask' rule",
+        "A 'when I'm stuck' rule",
+        "A 'when I say hi' rule"
+      ],
+      "branches": {
+        "A 'when you answer' rule": "t_pb_answer",
+        "A 'when I ask' rule": "t_pb_ask",
+        "A 'when I'm stuck' rule": "t_pb_stuck",
+        "A 'when I say hi' rule": "t_pb_hi"
+      },
+      "fallback_turn": "t1"
+    },
+    "t_pb_answer": {
+      "bot_lines": [
+        "Great! Build your rule. Pick ONE chip from each row.",
+        "(Format: When you answer, [verb] [what])"
+      ],
+      "prompt_builder": true,
+      "builder_cols": {
+        "verb": {
+          "label": "What I should do",
+          "chips": ["always", "never", "first", "then"]
+        },
+        "what": {
+          "label": "The thing",
+          "chips": [
+            "use exactly 2 sentences",
+            "tell a tiny joke",
+            "use a robot voice",
+            "add a 🤖 emoji",
+            "ask if I want more"
+          ]
+        }
+      },
+      "next_turn": "t_demo_answer"
+    },
+    "t_pb_ask": {
+      "bot_lines": [
+        "Build your rule! (Format: When I ask, [verb] [what])"
+      ],
+      "prompt_builder": true,
+      "builder_cols": {
+        "verb": {
+          "label": "What I should do",
+          "chips": ["always", "first", "before answering", "instead"]
+        },
+        "what": {
+          "label": "The thing",
+          "chips": [
+            "tell me what helper you'd use",
+            "ask one question first",
+            "give a 1-line answer",
+            "use 3 examples",
+            "ask my age"
+          ]
+        }
+      },
+      "next_turn": "t_demo_ask"
+    },
+    "t_pb_stuck": {
+      "bot_lines": [
+        "Build your rule! (Format: When I'm stuck, [verb] [what])"
+      ],
+      "prompt_builder": true,
+      "builder_cols": {
+        "verb": {
+          "label": "What I should do",
+          "chips": ["always", "first", "instead", "then"]
+        },
+        "what": {
+          "label": "The thing",
+          "chips": [
+            "give me a tiny hint",
+            "ask what I tried",
+            "show me ONE example",
+            "tell me to take a break",
+            "split it into 3 steps"
+          ]
+        }
+      },
+      "next_turn": "t_demo_stuck"
+    },
+    "t_pb_hi": {
+      "bot_lines": [
+        "Build your rule! (Format: When I say hi, [verb] [what])"
+      ],
+      "prompt_builder": true,
+      "builder_cols": {
+        "verb": {
+          "label": "What I should do",
+          "chips": ["always", "never", "first", "then"]
+        },
+        "what": {
+          "label": "The thing",
+          "chips": [
+            "say hi back with my name",
+            "tell a 1-line joke",
+            "ask what I'm working on",
+            "use a robot voice",
+            "wave with 👋"
+          ]
+        }
+      },
+      "next_turn": "t_demo_hi"
+    },
+    "t_demo_answer": {
+      "bot_lines": [
+        "📓 Memory book updated with YOUR rule!",
+        "Watch — ask me anything and I'll follow your rule."
+      ],
+      "options": ["What's the moon made of?", "Tell me a fact"],
+      "branches": {
+        "What's the moon made of?": "t_apply_answer_1",
+        "Tell me a fact": "t_apply_answer_2"
+      },
+      "fallback_turn": "t_demo_answer"
+    },
+    "t_apply_answer_1": {
+      "bot_lines": [
+        "(Following your rule!)",
+        "The moon is made mostly of rock and dust. The light side is hot, the dark side is FREEZING. 🤖",
+        "See? Your rule shaped my answer."
+      ],
+      "options": ["Try a different rule!", "I'm done"],
+      "branches": { "Try a different rule!": "t1", "I'm done": "t_win" }
+    },
+    "t_apply_answer_2": {
+      "bot_lines": [
+        "(Following your rule!)",
+        "FACT: A bee can recognize human faces. They're way smarter than they look. 🤖",
+        "Your rule, my answer. Memory works!"
+      ],
+      "options": ["Try a different rule!", "I'm done"],
+      "branches": { "Try a different rule!": "t1", "I'm done": "t_win" }
+    },
+    "t_demo_ask": {
+      "bot_lines": [
+        "📓 Memory book updated!",
+        "Pretend you're asking me something — pick one!"
+      ],
+      "options": ["How do I draw a dog?", "Plan my Saturday"],
+      "branches": {
+        "How do I draw a dog?": "t_apply_ask_1",
+        "Plan my Saturday": "t_apply_ask_2"
+      },
+      "fallback_turn": "t_demo_ask"
+    },
+    "t_apply_ask_1": {
+      "bot_lines": [
+        "(Following your rule before answering!)",
+        "OK — I'd reach for Gemini for the picture, but here's a 3-step way YOU can draw it: 1) circle for head, 2) jellybean body, 3) 4 stick legs + tail.",
+        "Your rule fired before I gave the answer."
+      ],
+      "options": ["Try a different rule!", "I'm done"],
+      "branches": { "Try a different rule!": "t1", "I'm done": "t_win" }
+    },
+    "t_apply_ask_2": {
+      "bot_lines": [
+        "(Following your rule!)",
+        "Saturday: 1) build a fort, 2) snack break, 3) bike ride.",
+        "Your rule shaped how I structured it."
+      ],
+      "options": ["Try a different rule!", "I'm done"],
+      "branches": { "Try a different rule!": "t1", "I'm done": "t_win" }
+    },
+    "t_demo_stuck": {
+      "bot_lines": [
+        "📓 Memory book updated!",
+        "Pretend you're stuck. Pick a problem!"
+      ],
+      "options": ["I can't do my math", "My code won't work"],
+      "branches": {
+        "I can't do my math": "t_apply_stuck_1",
+        "My code won't work": "t_apply_stuck_2"
+      },
+      "fallback_turn": "t_demo_stuck"
+    },
+    "t_apply_stuck_1": {
+      "bot_lines": [
+        "(Following your stuck rule!)",
+        "Tiny hint: try drawing the problem with little circles for each number. Sometimes drawing unsticks things.",
+        "Your rule made me give a hint, not the whole answer."
+      ],
+      "options": ["Try a different rule!", "I'm done"],
+      "branches": { "Try a different rule!": "t1", "I'm done": "t_win" }
+    },
+    "t_apply_stuck_2": {
+      "bot_lines": [
+        "(Following your stuck rule!)",
+        "First — what did you already try? Then I can guess what's still missing.",
+        "Your rule asked first instead of dumping a fix."
+      ],
+      "options": ["Try a different rule!", "I'm done"],
+      "branches": { "Try a different rule!": "t1", "I'm done": "t_win" }
+    },
+    "t_demo_hi": {
+      "bot_lines": [
+        "📓 Memory book updated!",
+        "Now SAY HI to me!"
+      ],
+      "options": ["Hi Claude!", "Hey there"],
+      "branches": {
+        "Hi Claude!": "t_apply_hi_1",
+        "Hey there": "t_apply_hi_2"
+      },
+      "fallback_turn": "t_demo_hi"
+    },
+    "t_apply_hi_1": {
+      "bot_lines": [
+        "(Following your hi rule!) 👋",
+        "Hi back! What are you working on?",
+        "Your rule fired the moment you said hi."
+      ],
+      "options": ["Try a different rule!", "I'm done"],
+      "branches": { "Try a different rule!": "t1", "I'm done": "t_win" }
+    },
+    "t_apply_hi_2": {
+      "bot_lines": [
+        "(Following your hi rule!) 👋",
+        "Hey! Working on something cool?",
+        "Same rule, different greeting — both worked."
+      ],
+      "options": ["Try a different rule!", "I'm done"],
+      "branches": { "Try a different rule!": "t1", "I'm done": "t_win" }
+    },
+    "t_win": {
+      "bot_lines": [
+        "You wrote a real memory rule!",
+        "That's how grown-up coders work — they tell helpers their preferences via memory rules.",
+        "Tiny rules. Big difference. Yours to write, change, or toss."
+      ],
+      "side_effect": { "action": "show_thinking", "steps": ["Pick the trigger", "Pick the action", "Rule shapes every answer"], "duration_ms": 2000 }
+    }
+  }
+}

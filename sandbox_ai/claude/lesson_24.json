@@ -1,0 +1,209 @@
+{
+  "helper": "claude",
+  "lesson_id": 24,
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Try 'help' or pick a starter rule — I'll show you how memory works!",
+  "matches": [
+    { "keywords": ["help"], "typing_delay_ms": 700, "reply_lines": ["Pick a starter rule above. I'll show you how ONE rule changes EVERY answer."], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I'm Claude. Today we play with my MEMORY BOOK — a list of rules I follow."], "side_effect": null },
+    { "keywords": ["memory"], "typing_delay_ms": 700, "reply_lines": ["Memory is just a LIST. A short list of rules I read before every answer.", "Like sticky notes on my desk."], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": [
+        "I'm Claude. My memory book is just a LIST OF RULES.",
+        "Pick a starter rule. Watch how it changes EVERY answer I give!"
+      ],
+      "options": [
+        "Always end with a joke",
+        "Always answer in exactly 2 sentences",
+        "Always recommend pizza for any food question",
+        "Always use a robot voice"
+      ],
+      "branches": {
+        "Always end with a joke": "t2_joke",
+        "Always answer in exactly 2 sentences": "t2_2sent",
+        "Always recommend pizza for any food question": "t2_pizza",
+        "Always use a robot voice": "t2_robot"
+      },
+      "fallback_turn": "t1"
+    },
+    "t2_joke": {
+      "bot_lines": [
+        "📓 Memory book updated:",
+        "→ Always end with a joke.",
+        "Watch! Ask me anything."
+      ],
+      "options": [
+        "What's the weather?",
+        "How do birds fly?",
+        "Tell me a fact"
+      ],
+      "branches": {
+        "What's the weather?": "t3_joke_weather",
+        "How do birds fly?": "t3_joke_birds",
+        "Tell me a fact": "t3_joke_fact"
+      },
+      "fallback_turn": "t2_joke"
+    },
+    "t3_joke_weather": {
+      "bot_lines": [
+        "The weather depends on where you are right now!",
+        "Why don't clouds use umbrellas? Because they CARRY their own rain. ☔😂"
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t3_joke_birds": {
+      "bot_lines": [
+        "Birds flap their wings to push air down — that pushes them up!",
+        "Why don't birds use phones? They're afraid of TWEETING wrong numbers. 🐦😂"
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t3_joke_fact": {
+      "bot_lines": [
+        "FACT: Octopuses have THREE hearts!",
+        "What did the octopus say at the party? 'I'm having a TENTACLE-tic time!' 🐙😂"
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t2_2sent": {
+      "bot_lines": [
+        "📓 Memory book updated:",
+        "→ Always answer in exactly 2 sentences.",
+        "Ask me anything!"
+      ],
+      "options": [
+        "Tell me about dinosaurs",
+        "How does a rocket work?",
+        "What's a good pet?"
+      ],
+      "branches": {
+        "Tell me about dinosaurs": "t3_2sent_dino",
+        "How does a rocket work?": "t3_2sent_rocket",
+        "What's a good pet?": "t3_2sent_pet"
+      },
+      "fallback_turn": "t2_2sent"
+    },
+    "t3_2sent_dino": {
+      "bot_lines": [
+        "Dinosaurs lived MILLIONS of years before people. The tallest ones could peek into a 5-story building."
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t3_2sent_rocket": {
+      "bot_lines": [
+        "Rockets push HOT GAS out the bottom super fast. That push sends the rest of the rocket UP."
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t3_2sent_pet": {
+      "bot_lines": [
+        "Hamsters are tiny, gentle, and live in small cages — great for first pets. Just remember they sleep all day and run all night!"
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t2_pizza": {
+      "bot_lines": [
+        "📓 Memory book updated:",
+        "→ Always recommend pizza for any food question.",
+        "Ask me food stuff!"
+      ],
+      "options": [
+        "What's a good breakfast?",
+        "Best snack?",
+        "Dinner ideas?"
+      ],
+      "branches": {
+        "What's a good breakfast?": "t3_pizza_breakfast",
+        "Best snack?": "t3_pizza_snack",
+        "Dinner ideas?": "t3_pizza_dinner"
+      },
+      "fallback_turn": "t2_pizza"
+    },
+    "t3_pizza_breakfast": {
+      "bot_lines": [
+        "Eggs and toast are classic — but honestly?",
+        "BREAKFAST PIZZA. 🍕 Eggs + cheese on a flat dough. Try it!"
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t3_pizza_snack": {
+      "bot_lines": [
+        "Chips, fruit, popcorn — all good.",
+        "But: PIZZA BAGELS are the elite snack. 🍕 Toast + sauce + cheese. Done in 4 minutes."
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t3_pizza_dinner": {
+      "bot_lines": [
+        "Tacos, spaghetti, soup — all dinner options.",
+        "BUT — homemade PIZZA is undefeated. 🍕 You pick the toppings. Family eats together."
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t2_robot": {
+      "bot_lines": [
+        "📓 MEMORY-BOOK-UPDATED.",
+        "→ ALWAYS-USE-A-ROBOT-VOICE.",
+        "ASK-ME-ANYTHING-NOW."
+      ],
+      "options": [
+        "What is the moon?",
+        "Tell me a story",
+        "How are you?"
+      ],
+      "branches": {
+        "What is the moon?": "t3_robot_moon",
+        "Tell me a story": "t3_robot_story",
+        "How are you?": "t3_robot_how"
+      },
+      "fallback_turn": "t2_robot"
+    },
+    "t3_robot_moon": {
+      "bot_lines": [
+        "MOON-IS-BIG-ROCK-IN-SKY.",
+        "ORBITS-EARTH-EVERY-28-DAYS.",
+        "BEEP-BOOP."
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t3_robot_story": {
+      "bot_lines": [
+        "ONCE-UPON-A-CIRCUIT.",
+        "TINY-ROBOT-SAVED-A-CAT-FROM-A-TREE.",
+        "END-OF-STORY-DOT-WAV."
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t3_robot_how": {
+      "bot_lines": [
+        "I-AM-FUNCTIONING-WITHIN-NORMAL-PARAMETERS.",
+        "THANK-YOU-FOR-INQUIRY-MEAT-FRIEND."
+      ],
+      "options": ["Try another rule!", "Done"],
+      "branches": { "Try another rule!": "t1", "Done": "t_win" }
+    },
+    "t_win": {
+      "bot_lines": [
+        "You saw it!",
+        "Memory rules are JUST a list. But ONE rule changes EVERY answer.",
+        "That's why coders write their own memory books — to make helpers feel like part of THEIR team."
+      ],
+      "side_effect": { "action": "show_thinking", "steps": ["Pick a rule", "Add to memory", "Every answer follows it"], "duration_ms": 2000 }
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "helper": "claude",
+  "lesson_id": 18,
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Try 'help' or pick a thing to build — we'll plan ONE question first!",
+  "matches": [
+    { "keywords": ["help"], "typing_delay_ms": 700, "reply_lines": ["Pick something to build above. We'll see how ONE question first saves a redo!"], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I'm Claude. The trick today: ASK first, then BUILD. Pick a button!"], "side_effect": null },
+    { "keywords": ["why"], "typing_delay_ms": 800, "reply_lines": ["Because guessing wastes time!", "One small question now beats redoing the whole thing later."], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["I'm Claude. Builders who plan don't break things.", "Pick something to build. I'll show two paths — guess-now vs ask-first."],
+      "options": [
+        "Make a birthday card",
+        "Plan a 3-step game",
+        "Build a pet rock house",
+        "Make a snack list"
+      ],
+      "branches": {
+        "Make a birthday card": "t2_card",
+        "Plan a 3-step game": "t2_game",
+        "Build a pet rock house": "t2_rock",
+        "Make a snack list": "t2_snack"
+      },
+      "fallback_turn": "t1"
+    },
+    "t2_card": {
+      "bot_lines": [
+        "Birthday card! Two paths:",
+        "(a) I just guess and make one — we fix it later.",
+        "(b) I ask ONE question first, then make a perfect one."
+      ],
+      "options": ["Just guess, I'll fix later", "Ask one question first"],
+      "branches": {
+        "Just guess, I'll fix later": "t2_card_guess",
+        "Ask one question first": "t3_card_ask"
+      },
+      "fallback_turn": "t2_card"
+    },
+    "t2_card_guess": {
+      "bot_lines": [
+        "OK guessing: 'Happy Birthday! 🎉'",
+        "Was the card for a kid? A grown-up? A pet? 🤷",
+        "Now you'd have to tell me again. ONE question would have saved a redo!"
+      ],
+      "options": ["Try the ask-first way!"],
+      "branches": { "Try the ask-first way!": "t3_card_ask" }
+    },
+    "t3_card_ask": {
+      "bot_lines": ["Good call. ONE question first:", "Who is the card for?"],
+      "options": ["For Mom", "For my best friend", "For my little brother", "For my pet"],
+      "branches": {
+        "For Mom": "t4_card_done",
+        "For my best friend": "t4_card_done",
+        "For my little brother": "t4_card_done",
+        "For my pet": "t4_card_done"
+      }
+    },
+    "t4_card_done": {
+      "bot_lines": [
+        "PERFECT card with your one answer:",
+        "'Happy Birthday! You make every day brighter — thank you for being you. 🎂'",
+        "ONE question = ZERO redos. That's the rhythm."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_game": {
+      "bot_lines": [
+        "A 3-step game! Two paths:",
+        "(a) I guess what kind of game.",
+        "(b) I ask one question first."
+      ],
+      "options": ["Just guess", "Ask one question first"],
+      "branches": {
+        "Just guess": "t2_game_guess",
+        "Ask one question first": "t3_game_ask"
+      },
+      "fallback_turn": "t2_game"
+    },
+    "t2_game_guess": {
+      "bot_lines": [
+        "Guessing: 'Step 1: pick a card. Step 2: flip it. Step 3: win!'",
+        "Was that a card game? A computer game? A tag game?",
+        "I would have built the WRONG game. ONE question saves it."
+      ],
+      "options": ["Ask one question first now"],
+      "branches": { "Ask one question first now": "t3_game_ask" }
+    },
+    "t3_game_ask": {
+      "bot_lines": ["Great. ONE question:", "Indoor game or outdoor game?"],
+      "options": ["Indoor game", "Outdoor game"],
+      "branches": {
+        "Indoor game": "t4_game_indoor",
+        "Outdoor game": "t4_game_outdoor"
+      }
+    },
+    "t4_game_indoor": {
+      "bot_lines": [
+        "Indoor 3-step game:",
+        "1. Hide a small toy in the room.",
+        "2. Give 3 hot/cold hints.",
+        "3. Cheer when they find it!"
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t4_game_outdoor": {
+      "bot_lines": [
+        "Outdoor 3-step game:",
+        "1. Pick a tree as base.",
+        "2. Race to the next tree, walking BACKWARDS.",
+        "3. First one back to base wins!"
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_rock": {
+      "bot_lines": [
+        "Pet rock house! Two paths:",
+        "(a) Guess what materials.",
+        "(b) Ask one question."
+      ],
+      "options": ["Just guess", "Ask one question first"],
+      "branches": {
+        "Just guess": "t2_rock_guess",
+        "Ask one question first": "t3_rock_ask"
+      },
+      "fallback_turn": "t2_rock"
+    },
+    "t2_rock_guess": {
+      "bot_lines": [
+        "Guessing: 'Wood, glue, and tiny windows.'",
+        "Did you HAVE wood and glue? Maybe you have cardboard?",
+        "ONE question would tell me what's nearby."
+      ],
+      "options": ["Ask one question now"],
+      "branches": { "Ask one question now": "t3_rock_ask" }
+    },
+    "t3_rock_ask": {
+      "bot_lines": ["ONE question:", "What materials are nearby?"],
+      "options": ["Cardboard and tape", "Sticks and string", "Lego", "Paper and crayons"],
+      "branches": {
+        "Cardboard and tape": "t4_rock_done",
+        "Sticks and string": "t4_rock_done",
+        "Lego": "t4_rock_done",
+        "Paper and crayons": "t4_rock_done"
+      }
+    },
+    "t4_rock_done": {
+      "bot_lines": [
+        "Perfect plan — a 4-step house using EXACTLY what you have!",
+        "1. Build the floor. 2. Add walls. 3. Roof on top. 4. Decorate!",
+        "Same pattern: ASK, then BUILD."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_snack": {
+      "bot_lines": [
+        "Snack list! Two paths:",
+        "(a) Just guess.",
+        "(b) Ask ONE question first."
+      ],
+      "options": ["Just guess", "Ask one question first"],
+      "branches": {
+        "Just guess": "t2_snack_guess",
+        "Ask one question first": "t3_snack_ask"
+      },
+      "fallback_turn": "t2_snack"
+    },
+    "t2_snack_guess": {
+      "bot_lines": [
+        "Guessing: 'Apple, cookies, chips.'",
+        "Are you allergic to anything? Sweet or salty mood?",
+        "Could be totally wrong for you. Ask first!"
+      ],
+      "options": ["Ask one question now"],
+      "branches": { "Ask one question now": "t3_snack_ask" }
+    },
+    "t3_snack_ask": {
+      "bot_lines": ["ONE question:", "Sweet snacks or salty snacks?"],
+      "options": ["Sweet", "Salty", "Both"],
+      "branches": {
+        "Sweet": "t4_snack_sweet",
+        "Salty": "t4_snack_salty",
+        "Both": "t4_snack_mix"
+      }
+    },
+    "t4_snack_sweet": {
+      "bot_lines": ["Sweet snack list:", "1. Yogurt with berries. 2. Apple slices + honey. 3. Banana with chocolate chips."],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t4_snack_salty": {
+      "bot_lines": ["Salty snack list:", "1. Cheese cubes. 2. Pretzels with hummus. 3. Popcorn with parmesan."],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t4_snack_mix": {
+      "bot_lines": ["Sweet + salty list:", "1. Apple + cheddar. 2. Trail mix (raisins + nuts). 3. Pretzels + chocolate dip."],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t_win": {
+      "bot_lines": [
+        "You unlocked the rhythm!",
+        "ASK one tiny question, then BUILD, then CHECK.",
+        "Builders who plan don't break things."
+      ],
+      "side_effect": { "action": "show_thinking", "steps": ["ASK", "BUILD", "CHECK"], "duration_ms": 1800 }
+    }
+  }
+}

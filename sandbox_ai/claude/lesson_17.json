@@ -1,0 +1,175 @@
+{
+  "helper": "claude",
+  "lesson_id": 17,
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Try 'help' or pick a job — guess which helper fits!",
+  "matches": [
+    { "keywords": ["help"], "typing_delay_ms": 700, "reply_lines": ["Pick a job above. Different jobs use different helpers — like different tools!"], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I'm Claude. I'm ONE of four helpers. Today you'll pick the RIGHT one for each job."], "side_effect": null },
+    { "keywords": ["who"], "typing_delay_ms": 800, "reply_lines": ["Four helpers in our toolbox:", "Claude (me — planning + words)", "Cursor (the code editor — fixing + writing code)", "Gemini (pictures + image stuff)", "Codex (tiny code snippets — autocomplete)."], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["I'm Claude — but I'm only ONE of four helpers!", "Pick a job. You guess which helper fits best."],
+      "options": [
+        "Draw a picture of a dragon",
+        "Plan a 5-step birthday party",
+        "Auto-complete the next line of my code",
+        "Find what's wrong with my code"
+      ],
+      "branches": {
+        "Draw a picture of a dragon": "t2_picture",
+        "Plan a 5-step birthday party": "t2_plan",
+        "Auto-complete the next line of my code": "t2_complete",
+        "Find what's wrong with my code": "t2_debug"
+      },
+      "fallback_turn": "t1"
+    },
+    "t2_picture": {
+      "bot_lines": ["DRAGON picture! Who's the right helper?"],
+      "options": [
+        "Claude (planning + words)",
+        "Cursor (code editor)",
+        "Gemini (pictures!)",
+        "Codex (code snippets)"
+      ],
+      "branches": {
+        "Claude (planning + words)": "t2_picture_retry",
+        "Cursor (code editor)": "t2_picture_retry",
+        "Gemini (pictures!)": "t3_picture_ok",
+        "Codex (code snippets)": "t2_picture_retry"
+      },
+      "fallback_turn": "t2_picture"
+    },
+    "t2_picture_retry": {
+      "bot_lines": ["Hmm — me, Cursor, and Codex don't make pictures!", "Try the picture helper."],
+      "options": ["Gemini (pictures!)"],
+      "branches": { "Gemini (pictures!)": "t3_picture_ok" }
+    },
+    "t3_picture_ok": {
+      "bot_lines": [
+        "Right! Gemini draws.",
+        "Gemini gets your dragon: 🐉 (purple, three heads, sparkly).",
+        "Different helper, different superpower."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_plan": {
+      "bot_lines": ["Birthday party PLAN — 5 steps. Who's the right helper?"],
+      "options": [
+        "Claude (planning + words)",
+        "Cursor (code editor)",
+        "Gemini (pictures)",
+        "Codex (code snippets)"
+      ],
+      "branches": {
+        "Claude (planning + words)": "t3_plan_ok",
+        "Cursor (code editor)": "t2_plan_retry",
+        "Gemini (pictures)": "t2_plan_retry",
+        "Codex (code snippets)": "t2_plan_retry"
+      },
+      "fallback_turn": "t2_plan"
+    },
+    "t2_plan_retry": {
+      "bot_lines": ["Cursor, Gemini, and Codex don't plan parties!", "Try the planning helper."],
+      "options": ["Claude (planning + words)"],
+      "branches": { "Claude (planning + words)": "t3_plan_ok" }
+    },
+    "t3_plan_ok": {
+      "bot_lines": [
+        "Yes! That's me. Planning is my thing.",
+        "5-step party: 1) Pick theme. 2) Make invites. 3) Get snacks. 4) Set up games. 5) Cake time!",
+        "Right tool for the job."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_complete": {
+      "bot_lines": ["AUTO-COMPLETE the next code line — quick suggestion. Who?"],
+      "options": [
+        "Claude (planning + words)",
+        "Cursor (code editor)",
+        "Gemini (pictures)",
+        "Codex (code snippets)"
+      ],
+      "branches": {
+        "Claude (planning + words)": "t2_complete_retry",
+        "Cursor (code editor)": "t2_complete_retry_close",
+        "Gemini (pictures)": "t2_complete_retry",
+        "Codex (code snippets)": "t3_complete_ok"
+      },
+      "fallback_turn": "t2_complete"
+    },
+    "t2_complete_retry": {
+      "bot_lines": ["Not quite — I plan, Gemini draws.", "For TINY code snippets, try the snippet helper."],
+      "options": ["Codex (code snippets)"],
+      "branches": { "Codex (code snippets)": "t3_complete_ok" }
+    },
+    "t2_complete_retry_close": {
+      "bot_lines": [
+        "Cursor IS for code — but Cursor is more for EDITING and FIXING.",
+        "For super-fast snippet auto-complete, the specialist is Codex."
+      ],
+      "options": ["Codex (code snippets)"],
+      "branches": { "Codex (code snippets)": "t3_complete_ok" }
+    },
+    "t3_complete_ok": {
+      "bot_lines": [
+        "Right! Codex is the snippet specialist.",
+        "Codex completes: kid types `def hi(` → Codex finishes `name): print('hi', name)`.",
+        "Tiny + fast = Codex's lane."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_debug": {
+      "bot_lines": ["Code is BROKEN. Find the bug + fix it. Who?"],
+      "options": [
+        "Claude (planning + words)",
+        "Cursor (code editor)",
+        "Gemini (pictures)",
+        "Codex (code snippets)"
+      ],
+      "branches": {
+        "Claude (planning + words)": "t2_debug_retry_close",
+        "Cursor (code editor)": "t3_debug_ok",
+        "Gemini (pictures)": "t2_debug_retry",
+        "Codex (code snippets)": "t2_debug_retry_close"
+      },
+      "fallback_turn": "t2_debug"
+    },
+    "t2_debug_retry": {
+      "bot_lines": ["Gemini makes pictures — not what we need!", "For real code DEBUGGING, the right helper is Cursor."],
+      "options": ["Cursor (code editor)"],
+      "branches": { "Cursor (code editor)": "t3_debug_ok" }
+    },
+    "t2_debug_retry_close": {
+      "bot_lines": [
+        "Close! I help PLAN, Codex helps with quick snippets.",
+        "But for FINDING bugs in real code files, Cursor is the right helper."
+      ],
+      "options": ["Cursor (code editor)"],
+      "branches": { "Cursor (code editor)": "t3_debug_ok" }
+    },
+    "t3_debug_ok": {
+      "bot_lines": [
+        "Right! Cursor lives inside your code file.",
+        "Cursor reads the whole project + spots the typo + suggests a one-line fix.",
+        "Specialized helpers = better answers."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t_win": {
+      "bot_lines": [
+        "You picked the right tools!",
+        "Pictures → Gemini. Plans → Claude. Snippets → Codex. Bugs → Cursor.",
+        "Like picking a hammer vs a screwdriver — right tool, easy job."
+      ],
+      "side_effect": { "action": "show_thinking", "steps": ["Pictures = Gemini", "Plans = Claude", "Snippets = Codex", "Bugs = Cursor"], "duration_ms": 2200 }
+    }
+  }
+}
