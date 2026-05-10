@@ -1,0 +1,220 @@
+{
+  "helper": "claude",
+  "lesson_id": 19,
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Try 'help' or pick a fuzzy question — we'll make it SPECIFIC together!",
+  "matches": [
+    { "keywords": ["help"], "typing_delay_ms": 700, "reply_lines": ["Pick a fuzzy question above. We'll fix it by adding NUMBERS, NAMES, and CLEAR WORDS!"], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I'm Claude. Fuzzy questions = fuzzy answers. Pick one and we'll sharpen it!"], "side_effect": null },
+    { "keywords": ["why"], "typing_delay_ms": 800, "reply_lines": ["Because words like 'nice' or 'good' don't tell me anything!", "But 'big and blue' or '4 sentences' or 'starts with M' tell me EXACTLY what to do."], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["I'm Claude. Fuzzy questions get FUZZY answers.", "Pick a fuzzy question and let's sharpen it together!"],
+      "options": ["Make me a story", "Pick a name", "Tell me a fact", "Make a joke"],
+      "branches": {
+        "Make me a story": "t2_story",
+        "Pick a name": "t2_name",
+        "Tell me a fact": "t2_fact",
+        "Make a joke": "t2_joke"
+      },
+      "fallback_turn": "t1"
+    },
+    "t2_story": {
+      "bot_lines": [
+        "Fuzzy ask: 'Make me a story' — I'd give you: 'A boy walked.' 😐",
+        "Pick which fix is BEST:"
+      ],
+      "options": [
+        "Make a long story",
+        "Make a 4-sentence story about a dragon and a kid",
+        "Make a really good story",
+        "Tell a 3-line story with a happy ending about a robot dog"
+      ],
+      "branches": {
+        "Make a long story": "t2_story_retry",
+        "Make a 4-sentence story about a dragon and a kid": "t3_story_dragon",
+        "Make a really good story": "t2_story_retry",
+        "Tell a 3-line story with a happy ending about a robot dog": "t3_story_robot"
+      },
+      "fallback_turn": "t2_story"
+    },
+    "t2_story_retry": {
+      "bot_lines": ["'Long' and 'good' — still fuzzy!", "I need a TOPIC, a SHAPE, or a NUMBER. Pick a sharper one."],
+      "options": [
+        "Make a 4-sentence story about a dragon and a kid",
+        "Tell a 3-line story with a happy ending about a robot dog"
+      ],
+      "branches": {
+        "Make a 4-sentence story about a dragon and a kid": "t3_story_dragon",
+        "Tell a 3-line story with a happy ending about a robot dog": "t3_story_robot"
+      }
+    },
+    "t3_story_dragon": {
+      "bot_lines": [
+        "With YOUR specific words:",
+        "'A small dragon met a kid named Mia. They became friends. The dragon taught her to fly. They flew home for dinner.'",
+        "See? '4 sentences' + 'dragon and a kid' = a real story."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t3_story_robot": {
+      "bot_lines": [
+        "With YOUR specific words:",
+        "'A robot dog sniffed his first flower. He buzzed with joy. The kids cheered for him.'",
+        "'3 lines' + 'happy ending' + 'robot dog' = exactly what you asked for."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_name": {
+      "bot_lines": [
+        "Fuzzy ask: 'Pick a name' — I'd give you 'Bob'. 😐",
+        "Which fix is BEST?"
+      ],
+      "options": [
+        "A cool name",
+        "A name with three syllables that starts with B",
+        "A great name",
+        "A girl's name from a fairy tale"
+      ],
+      "branches": {
+        "A cool name": "t2_name_retry",
+        "A name with three syllables that starts with B": "t3_name_3syl",
+        "A great name": "t2_name_retry",
+        "A girl's name from a fairy tale": "t3_name_fairy"
+      },
+      "fallback_turn": "t2_name"
+    },
+    "t2_name_retry": {
+      "bot_lines": ["'Cool' and 'great' — fuzzy!", "Tell me a SHAPE or a SOURCE."],
+      "options": [
+        "A name with three syllables that starts with B",
+        "A girl's name from a fairy tale"
+      ],
+      "branches": {
+        "A name with three syllables that starts with B": "t3_name_3syl",
+        "A girl's name from a fairy tale": "t3_name_fairy"
+      }
+    },
+    "t3_name_3syl": {
+      "bot_lines": [
+        "With YOUR rules: 'Bel-la-mae'!",
+        "Three syllables, starts with B — exactly. Specific RULE = specific answer."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t3_name_fairy": {
+      "bot_lines": [
+        "Fairy-tale girl name: 'Aurora'!",
+        "You gave me a SOURCE — fairy tales — so I picked from there."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_fact": {
+      "bot_lines": [
+        "Fuzzy ask: 'Tell me a fact' — I'd give you 'Water is wet.' 😐",
+        "Pick the SHARPEST version:"
+      ],
+      "options": [
+        "Tell me a cool fact",
+        "Tell me one fact about how dolphins sleep",
+        "Give me an interesting fact",
+        "One fact about dinosaurs that ate plants"
+      ],
+      "branches": {
+        "Tell me a cool fact": "t2_fact_retry",
+        "Tell me one fact about how dolphins sleep": "t3_fact_dolphin",
+        "Give me an interesting fact": "t2_fact_retry",
+        "One fact about dinosaurs that ate plants": "t3_fact_dino"
+      },
+      "fallback_turn": "t2_fact"
+    },
+    "t2_fact_retry": {
+      "bot_lines": ["'Cool' and 'interesting' — what TOPIC?", "Pick a sharper question that names a thing."],
+      "options": [
+        "Tell me one fact about how dolphins sleep",
+        "One fact about dinosaurs that ate plants"
+      ],
+      "branches": {
+        "Tell me one fact about how dolphins sleep": "t3_fact_dolphin",
+        "One fact about dinosaurs that ate plants": "t3_fact_dino"
+      }
+    },
+    "t3_fact_dolphin": {
+      "bot_lines": [
+        "Dolphins sleep with HALF their brain at a time, so the other half can keep them breathing!",
+        "You named the topic — 'dolphins' — so I knew where to look."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t3_fact_dino": {
+      "bot_lines": [
+        "Plant-eating dinosaurs (like Brachiosaurus) had FLAT teeth for grinding leaves — sharp teeth would have broken!",
+        "Specific topic ('plant-eating dinosaurs') = sharp answer."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_joke": {
+      "bot_lines": [
+        "Fuzzy ask: 'Make a joke' — I'd give you 'Knock knock.' (no punchline). 😐",
+        "Which version helps me MOST?"
+      ],
+      "options": [
+        "Make a funny joke",
+        "Tell me a knock-knock joke about a banana",
+        "Be hilarious",
+        "Tell me a 2-line joke about cats"
+      ],
+      "branches": {
+        "Make a funny joke": "t2_joke_retry",
+        "Tell me a knock-knock joke about a banana": "t3_joke_banana",
+        "Be hilarious": "t2_joke_retry",
+        "Tell me a 2-line joke about cats": "t3_joke_cats"
+      },
+      "fallback_turn": "t2_joke"
+    },
+    "t2_joke_retry": {
+      "bot_lines": ["'Funny' and 'hilarious' — still fuzzy!", "Pick a TYPE or TOPIC."],
+      "options": [
+        "Tell me a knock-knock joke about a banana",
+        "Tell me a 2-line joke about cats"
+      ],
+      "branches": {
+        "Tell me a knock-knock joke about a banana": "t3_joke_banana",
+        "Tell me a 2-line joke about cats": "t3_joke_cats"
+      }
+    },
+    "t3_joke_banana": {
+      "bot_lines": [
+        "Knock knock! Who's there? Banana! Banana who? Banana you glad I didn't say BANANA again? 🍌",
+        "TYPE = knock-knock. TOPIC = banana. Specific words = specific joke."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t3_joke_cats": {
+      "bot_lines": [
+        "Why don't cats use computers? They get caught up in the MOUSE.",
+        "2 lines, cats topic — exactly the SHAPE you wanted."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t_win": {
+      "bot_lines": [
+        "You got it!",
+        "Specific words = NUMBERS, NAMES, SHAPES, TOPICS, RULES.",
+        "When you give me one of those, I know exactly what to make."
+      ],
+      "side_effect": { "action": "show_thinking", "steps": ["Fuzzy ask", "Add specifics", "Sharp answer!"], "duration_ms": 1800 }
+    }
+  }
+}
