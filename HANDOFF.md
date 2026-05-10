@@ -31,7 +31,25 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 
 ## 4. History
 
-### 2026-05-09 (latest) — v0.7.9: PIN tightening + 3 more multi-turn lessons (L19, L20, L22)
+### 2026-05-09 (latest) — v0.7.10: prompt-engineering arc complete (L17, L18, L23, L24, L25)
+
+Five more sandbox FSMs in one batch. Closes the prompt-engineering arc — L17-L25 now ALL have multi-turn Claude chats. Coverage: 11 of the originally-quiz-only lessons in this arc.
+
+- **Commit `e59ada09`** — five-lesson batch. All follow the established pattern (4 starter scenarios + branching tree + retry nodes + Try-another loopback) but each adapts the shape to the lesson's concept:
+  - **L17 "Pick the Right Helper"** — multi-helper picker via single Claude FSM (no engine extension). 4 jobs (picture, plan, autocomplete, debug) × 4-helper guess. Wrong picks get coaching; right picks get a demo of that helper's specialty.
+  - **L18 "Ask Then Build"** — clarifying-question-first vs guess-and-redo. 4 build scenarios (birthday card / 3-step game / pet rock house / snack list) each with a "just guess" path that shows the redo-cost.
+  - **L23 "Don't Trust Sneaky Notes"** — prompt-injection safety. Conservative content. 4 scenarios (recipe / game manual / news article / book chapter) each ending with a sneaky instruction. Kid picks "follow" (retry coaching) vs "sneaky note" / "ask grown-up" (success). t_win names the signals: change identity, ask for secrets, send somewhere weird.
+  - **L24 "Robot's Memory Book"** — single-rule effect demo. Kid picks a starter rule, Claude shows it applied across 3 follow-up questions. Voice/format visibly differs (joke-ending vs robot-voice vs always-pizza vs 2-sentence) so the kid SEES memory shaping output.
+  - **L25 "Write My Own Memory Rules"** — prompt_builder chip composer pattern (same as L11's t_pb). 4 rule-types (when-you-answer / when-I-ask / when-stuck / when-hi), each with verb × what chip rows. After kid composes, t_demo_x turns let them ask Claude something and watch the rule fire.
+- **Sandbox lint: 16/16 clean.**
+- **Build:** fresh exe rebuilt this session with `python build.py`. First exe to ship v0.7.8 + v0.7.9 + v0.7.10 changes — kid had been on v0.7.7 baseline until now.
+
+**Open call-outs for next grill:**
+- L23 sneaky-note content was authored conservatively — no actually-scary scenarios. The prompt-injection examples are silly (lottery claim, pirate persona) rather than scary (financial fraud, predatory). User should review for tone before assuming the safety message lands as intended.
+- L25 rule-composer FSM doesn't actually USE the kid's chip selections in the demo response — the demo is generic ("(Following your rule!)" + a stock answer). To make demo responses dynamic, engine would need to render chip selections into the bot_lines templates. Deferred to v0.7.11.
+- The chess-banner "queued" check + ChessHistory localStorage limit (200 entries) are still v0.7.7 era — no behavior change this session, but worth a refresh next time chess gets touched.
+
+### 2026-05-09 (later) — v0.7.9: PIN tightening + 3 more multi-turn lessons (L19, L20, L22)
 
 Two strands shipped: (1) closed gaps left in v0.7.8 D, (2) extended L21's multi-turn FSM pattern across the prompt-engineering arc.
 
@@ -133,14 +151,15 @@ Three independent shipments in one session, sequenced as C → D → A from the 
 - Re-baked all 60 lesson narration wavs + ~120 hint wavs via Piper.
 - exe: 445 MB.
 
-### 🔖 PICK UP HERE NEXT SESSION (v0.7.10 candidate work)
+### 🔖 PICK UP HERE NEXT SESSION (v0.7.11 candidate work)
 
 **Fresh-context me: this is your starting orientation.** Read this whole HANDOFF top-to-bottom before touching code. Most-recent state is at the TOP of the History section.
 
-**Current state (head: `ad69aa25` on `main`, 2026-05-09 late):**
-- v0.7.9 shipped: PIN tightening (math gate + weak-PIN nudge + corrupt-pin detect) + L19/L20/L22 multi-turn FSMs.
-- v0.7.8 baseline before that: parent PIN wizard + audio QA tool + L21 multi-turn Claude.
-- Exe NOT rebuilt since v0.7.7 (134.6 MB). Next builder should run `python build.py` to ship a fresh exe — engine + content changes from v0.7.8 + v0.7.9 are unbundled until then.
+**Current state (head: `e59ada09` on `main`, 2026-05-09 late-night):**
+- v0.7.10 shipped: 5 more sandbox FSMs (L17/L18/L23/L24/L25) — prompt-engineering arc COMPLETE. Coverage: 11 lessons (L02 + L11 + L17-25).
+- v0.7.9 baseline before that: PIN tightening + L19/L20/L22 sandbox.
+- v0.7.8 before that: PIN wizard + audio QA tool + L21 sandbox.
+- Fresh exe BUILT this session with `python build.py` — first exe to carry v0.7.8 + v0.7.9 + v0.7.10 changes.
 - Lessons 1-60 all on v2 schema. ~3900 question prompt variations (10 vars × ~6 questions × 60 lessons), all baked via Piper to `.ogg`.
 - Hover audio on every answer option (250ms debounce, single voice channel mutex, baked OGG-per-unique-string).
 - Gate diversifier: 6 game types rotate across Q2..Qn (was 100% type-this-word repetition).
@@ -153,19 +172,23 @@ Three independent shipments in one session, sequenced as C → D → A from the 
 - v0.7.7 made bake fail-LOUD if voice missing. SAPI fallback removed.
 
 **Likely next asks (in priority order):**
-1. **F (Bytey art) — set GEMINI_API_KEY then run nano-banana.** Free tier at https://aistudio.google.com/apikey. Once set, prompt the workspace nano-banana script to generate a 4-state character sheet (idle/wave/cheer/think) with consistent character; extract per-state frames; replace `assets/mascot/<state>_NN.png`. Animation contract: idle 8 frames / wave 6 / cheer 6 / think 4 — preserve exact filenames + counts or `MascotPlayer` breaks.
-2. **A continuation — multi-turn FSM for L17, L23, L24, L25** (the harder ones; safety + UX content):
-   - **L17 "Pick the Right Helper"** — needs MULTI-helper sandbox (kid sees same prompt go to claude/cursor/gemini/codex and compares). Different shape than the L19/L21 single-helper pattern. May need engine extension to render a 2x2 grid of helper responses.
-   - **L23 "Don't Trust Sneaky Notes"** — prompt-injection / untrusted-content lesson. Mirror of the workspace's Untrusted Content Rule. SAFETY content — needs grill-me before authoring (what specific attack patterns? how scary is too scary for a 7yo?).
-   - **L24 "The Robot's Memory Book"** — Claude with persistent memory across the chat. Needs engine support for cross-turn state slots that stick.
-   - **L25 "Write My Own Memory Rules"** — kid composes their OWN sticky-note rules and Claude follows them. Deep UX (how does the kid input rules? text? chips?) — needs grill-me before authoring.
-3. **A continuation — easier ones** (autopilot-friendly):
-   - **L18 "Ask Then Build"** — Claude asks clarifying questions first. Single-helper, similar shape to L19.
-   - **L21 already shipped.**
-4. **B — tool-history scenes for L18-25.** Engine + generator support exists (HISTORY_OVERRIDES in `scripts/expand_lessons_v3.py`). Need 8 new SVG scenes. L19 "fuzzy→sharp photo," L20 "chef showing recipe vs explaining," L23 "wolf in sheep mask," L24 "sticky-note wall robot," etc.
+1. **F (Bytey art) — set GEMINI_API_KEY then run nano-banana.** Free tier at https://aistudio.google.com/apikey. Animation contract: idle 8 frames / wave 6 / cheer 6 / think 4 — preserve exact filenames + counts or `MascotPlayer` breaks.
+2. **B — tool-history scenes for L18-25.** Engine + generator support exists (HISTORY_OVERRIDES in `scripts/expand_lessons_v3.py`). Need 8 new SVG scenes. Suggested metaphors:
+   - L17 "right helper" → 4 toolbox slots, hand reaching for the right one
+   - L18 "ask then build" → carpenter measuring twice before sawing
+   - L19 "specific" → fuzzy photo → sharp photo (zoom-in animation)
+   - L20 "show don't tell" → chef showing recipe card vs reading paragraph
+   - L21 "step at a time" → staircase rising one tile at a time
+   - L22 "ask again" → broken vase → glued vase via "what to fix"
+   - L23 "sneaky notes" → page with one suspicious red-highlighted line
+   - L24 "memory book" → sticky-note wall robot
+   - L25 "write your rules" → kid pinning rule chips to a board
+3. **L25 dynamic chip rendering.** Currently t_demo_x bot_lines say "(Following your rule!)" generically — engine doesn't substitute the kid's chip selections into the response. Lift: check QuestionFlow / Sandbox engine for prompt_builder template substitution; add a `{{rule}}` placeholder pattern.
+4. **L23 safety content review.** I authored conservatively (lottery claim, pirate persona, fake cheat URL, password ask). User should review with the actual kid in mind — does the tone land? Should examples be more or less scary? Real-world prompt-injection is often more subtle.
 5. **Pi runner enrollment.** Code shipped; user paused on `setup_remote.sh` because Pi sudo password kept rejecting. Pick up by debugging sudo first (`whoami`, `sudo -v`, `localectl status`, `passwd` rotation), then re-run the bootstrap one-liner. Needs physical Pi access.
 6. **Actually USE the v0.7.8 C audio QA tool.** Run `python scripts/audio_qa_report.py --n 50`, open the HTML, listen through, export findings. Bad-rated rows feed back into either acronym list expansion (`preprocess_acronyms.py`) or content rewrites.
-7. **Build a fresh exe.** `python build.py` — pulls in all v0.7.8 + v0.7.9 changes. Last shipped exe is v0.7.7 baseline (134.6 MB). Engine changes from v0.7.8 D + v0.7.9 #4-5 + 4 new sandbox FSMs all need a build to reach the kid's actual machine.
+7. **Multi-turn FSM for OTHER helpers.** Coverage is currently Claude-heavy (L17-25 all use Claude). Lessons 12-16 (Cursor/Gemini/Codex/OpenCode/Ollama deep-dives) have FSMs but each is single-helper-themed. Could extend the L17 pattern of "pick a helper" into a curriculum where kids practice with each helper's specialty.
+8. **Footgun to remember.** workspace `security_reminder_hook.py` substring-blocks the literal word "p1ckle" (replace 1 with i) on Write tool. Avoid in lesson content. Documented in L20 commit message.
 
 **Key files to read first:**
 - `index.html` (~5400 lines, single source of truth for all engine code)
