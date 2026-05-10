@@ -1,0 +1,256 @@
+{
+  "helper": "claude",
+  "lesson_id": 20,
+  "mode": "turns",
+  "start_turn": "t1",
+  "auto_complete": true,
+  "fallback": "Try 'help' or pick a topic — we'll practice SHOWING with examples!",
+  "matches": [
+    { "keywords": ["help"], "typing_delay_ms": 700, "reply_lines": ["Pick a topic above. We'll see how ONE example beats a paragraph of words!"], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I'm Claude. Show me ONE example and I'll copy the shape. Pick a topic!"], "side_effect": null },
+    { "keywords": ["why"], "typing_delay_ms": 800, "reply_lines": ["Because it's MUCH faster to show me one tiny example", "than to explain the rules in a long paragraph."], "side_effect": null },
+    { "keywords": ["example"], "typing_delay_ms": 600, "reply_lines": ["Yes! Examples are the magic trick. Pick a topic and I'll show you."], "side_effect": null }
+  ],
+  "turns": {
+    "t1": {
+      "bot_lines": ["I'm Claude. Showing me ONE example beats explaining in a paragraph.", "Pick a list to make and I'll show you the trick!"],
+      "options": [
+        "List 4 fruits",
+        "Name 4 monsters",
+        "List 4 robot moves",
+        "List 4 silly snacks"
+      ],
+      "branches": {
+        "List 4 fruits": "t2_fruits",
+        "Name 4 monsters": "t2_monsters",
+        "List 4 robot moves": "t2_moves",
+        "List 4 silly snacks": "t2_snacks"
+      },
+      "fallback_turn": "t1"
+    },
+    "t2_fruits": {
+      "bot_lines": [
+        "Plain ask: 'List 4 fruits' → I'd write 'Apple. Banana. Pear. Grape.'",
+        "Pick the BETTER way to ask:"
+      ],
+      "options": [
+        "Make it look nice",
+        "Use this shape: Apple — red, sweet",
+        "Make it more interesting",
+        "Use this shape: 1) Apple [red]"
+      ],
+      "branches": {
+        "Make it look nice": "t2_fruits_retry",
+        "Use this shape: Apple — red, sweet": "t3_fruits_dash",
+        "Make it more interesting": "t2_fruits_retry",
+        "Use this shape: 1) Apple [red]": "t3_fruits_brackets"
+      },
+      "fallback_turn": "t2_fruits"
+    },
+    "t2_fruits_retry": {
+      "bot_lines": ["'Nice' and 'interesting' don't show me a SHAPE.", "Pick one that gives me an example to copy."],
+      "options": [
+        "Use this shape: Apple — red, sweet",
+        "Use this shape: 1) Apple [red]"
+      ],
+      "branches": {
+        "Use this shape: Apple — red, sweet": "t3_fruits_dash",
+        "Use this shape: 1) Apple [red]": "t3_fruits_brackets"
+      }
+    },
+    "t3_fruits_dash": {
+      "bot_lines": [
+        "Got it — your shape is dash + words.",
+        "Apple — red, sweet",
+        "Banana — yellow, soft",
+        "Lemon — yellow, sour",
+        "Grape — purple, juicy",
+        "ONE example told me the SHAPE. Way faster than rules."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t3_fruits_brackets": {
+      "bot_lines": [
+        "Got it — numbered with brackets.",
+        "1) Apple [red]",
+        "2) Banana [yellow]",
+        "3) Plum [purple]",
+        "4) Kiwi [green]",
+        "Your shape, copied exactly!"
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_monsters": {
+      "bot_lines": [
+        "Plain ask: 'Name 4 monsters' → I'd write 'Bob, Joe, Sam, Tim.' (boring!)",
+        "Which fix shows me the SHAPE you want?"
+      ],
+      "options": [
+        "Be more creative",
+        "Like this: Glorf the Squishy",
+        "Make them scary",
+        "Like this: Fang McSpike, slime monster"
+      ],
+      "branches": {
+        "Be more creative": "t2_monsters_retry",
+        "Like this: Glorf the Squishy": "t3_monsters_glorf",
+        "Make them scary": "t2_monsters_retry",
+        "Like this: Fang McSpike, slime monster": "t3_monsters_fang"
+      },
+      "fallback_turn": "t2_monsters"
+    },
+    "t2_monsters_retry": {
+      "bot_lines": ["'Creative' and 'scary' don't show me HOW.", "Give me one example to copy."],
+      "options": [
+        "Like this: Glorf the Squishy",
+        "Like this: Fang McSpike, slime monster"
+      ],
+      "branches": {
+        "Like this: Glorf the Squishy": "t3_monsters_glorf",
+        "Like this: Fang McSpike, slime monster": "t3_monsters_fang"
+      }
+    },
+    "t3_monsters_glorf": {
+      "bot_lines": [
+        "Shape: '<funny name> the <one trait>'.",
+        "Glorf the Squishy",
+        "Bork the Loud",
+        "Vex the Bouncy",
+        "Mez the Glittery",
+        "ONE example = perfect monster names."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t3_monsters_fang": {
+      "bot_lines": [
+        "Shape: '<name>, <type> monster'.",
+        "Fang McSpike, slime monster",
+        "Crunch O'Bones, ghost monster",
+        "Drizzle Dingleboot, fog monster",
+        "Wobble Spaghetto, jelly monster",
+        "Your example built the WHOLE pattern."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_moves": {
+      "bot_lines": [
+        "Plain ask: 'List 4 robot moves' → I'd write 'Walk, run, jump, sit.' 😐",
+        "Pick the SHAPE-showing fix:"
+      ],
+      "options": [
+        "Make them cool moves",
+        "Like this: ⚡ Zap-dash (fast slide)",
+        "Make them way better",
+        "Like this: BOOST → forward 3 squares"
+      ],
+      "branches": {
+        "Make them cool moves": "t2_moves_retry",
+        "Like this: ⚡ Zap-dash (fast slide)": "t3_moves_emoji",
+        "Make them way better": "t2_moves_retry",
+        "Like this: BOOST → forward 3 squares": "t3_moves_arrow"
+      },
+      "fallback_turn": "t2_moves"
+    },
+    "t2_moves_retry": {
+      "bot_lines": ["'Cool' and 'better' tell me NOTHING about format.", "Show me one move in YOUR shape."],
+      "options": [
+        "Like this: ⚡ Zap-dash (fast slide)",
+        "Like this: BOOST → forward 3 squares"
+      ],
+      "branches": {
+        "Like this: ⚡ Zap-dash (fast slide)": "t3_moves_emoji",
+        "Like this: BOOST → forward 3 squares": "t3_moves_arrow"
+      }
+    },
+    "t3_moves_emoji": {
+      "bot_lines": [
+        "Shape: 'emoji name (description)'.",
+        "⚡ Zap-dash (fast slide)",
+        "🛡️ Iron-guard (block)",
+        "🚀 Rocket-leap (high jump)",
+        "🌀 Spin-burst (twirl attack)",
+        "Pattern locked from one example."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t3_moves_arrow": {
+      "bot_lines": [
+        "Shape: 'NAME → effect'.",
+        "BOOST → forward 3 squares",
+        "BLINK → swap with closest hero",
+        "ZAP → stun all enemies 1 turn",
+        "SHIELD → block next 2 hits",
+        "Format perfectly copied."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t2_snacks": {
+      "bot_lines": [
+        "Plain ask: 'List 4 silly snacks' → I'd write 'Cookie, chip, cake, pie.' 😐",
+        "Pick the example-shape fix:"
+      ],
+      "options": [
+        "Make them silly",
+        "Like this: Pepper-cocoa muffins",
+        "Way more fun please",
+        "Like this: Snack #1 — Spaghetti popsicle"
+      ],
+      "branches": {
+        "Make them silly": "t2_snacks_retry",
+        "Like this: Pepper-cocoa muffins": "t3_snacks_pepper",
+        "Way more fun please": "t2_snacks_retry",
+        "Like this: Snack #1 — Spaghetti popsicle": "t3_snacks_numbered"
+      },
+      "fallback_turn": "t2_snacks"
+    },
+    "t2_snacks_retry": {
+      "bot_lines": ["'Silly' and 'fun' don't show me the FORMAT.", "Pick one with an example to copy."],
+      "options": [
+        "Like this: Pepper-cocoa muffins",
+        "Like this: Snack #1 — Spaghetti popsicle"
+      ],
+      "branches": {
+        "Like this: Pepper-cocoa muffins": "t3_snacks_pepper",
+        "Like this: Snack #1 — Spaghetti popsicle": "t3_snacks_numbered"
+      }
+    },
+    "t3_snacks_pepper": {
+      "bot_lines": [
+        "Shape: '<weird-thing>-<other-thing> <food>'.",
+        "Pepper-cocoa muffins",
+        "Mustard-marshmallow pancakes",
+        "Ketchup-banana toast",
+        "Yogurt-popcorn balls",
+        "ONE example, instant pattern."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t3_snacks_numbered": {
+      "bot_lines": [
+        "Shape: 'Snack #N — <weird food>'.",
+        "Snack #1 — Spaghetti popsicle",
+        "Snack #2 — Cheese cupcake",
+        "Snack #3 — Bubblegum pizza",
+        "Snack #4 — Lemon brownies",
+        "Numbered, dashed, weird — your call, my copy."
+      ],
+      "options": ["Try another!", "I'm done"],
+      "branches": { "Try another!": "t1", "I'm done": "t_win" }
+    },
+    "t_win": {
+      "bot_lines": [
+        "You unlocked the trick!",
+        "ONE example shows me the shape FASTER than a whole paragraph of rules.",
+        "Show, don't tell — every coder uses this with helpers like me."
+      ],
+      "side_effect": { "action": "show_thinking", "steps": ["Plain ask = boring", "Add ONE example", "Pattern matches!"], "duration_ms": 1800 }
+    }
+  }
+}
