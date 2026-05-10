@@ -31,6 +31,26 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 
 ## 4. History
 
+### 2026-05-09 (latest) — v0.7.9: PIN tightening + 3 more multi-turn lessons (L19, L20, L22)
+
+Two strands shipped: (1) closed gaps left in v0.7.8 D, (2) extended L21's multi-turn FSM pattern across the prompt-engineering arc.
+
+- **Commit `e7b8bf7a` — PIN tightening (#4 + #5).**
+  - **#4 Forgot-PIN math gate.** 8-problem `MATH_GATES` pool (12×9, 15×7, 11×11, 13×8, 9×14, 7×13, 8×16, 6×17). Random pick per call so a kid can't memorize. Wrong → alert + abort. Cancel → silent abort. A 2nd-grader can't do 2-digit × 1-digit in their head; a kid with a calculator can — accept residual risk.
+  - **#5 Existing-user weak-PIN nudge.** After successful `unlock()`, if stored PIN is in WEAK_PINS, route to `_showSetup` with "Your PIN is too easy" banner BEFORE granting dashboard access. Catches v0.6.x → v0.7.9 upgraders carrying PIN "1234" forward. Also added `_showLock` + `_showSetup` helpers extracted from `open()` for reuse, plus `#setupReason` banner element for context-aware wizard headers.
+  - **Silent-failure-hunter pass: 5 findings, 3 actioned.**
+    - HIGH: `_saving` flag never cleared on `setupPin` success → would lock out Save button on second wizard entry. Fixed: reset on success path + reset at top of `_showSetup`.
+    - MEDIUM: stale `pinError` carried into setup wizard. Fixed: clear in `_showSetup`.
+    - MEDIUM: corrupted-PIN data (`Store.load` swallows JSON parse errors → null fallback) silently looked like a first-time setup. Fixed: `_isFirstSetup` distinguishes "absent" (raw === null) from "parse error" (catch sets `_corruptedPin` flag); `open()` reads the flag and shows a specific banner.
+    - MEDIUM (deferred): `confirm()`/`prompt()` suppression on mobile WebViews — pywebview ships Chromium-class WebView2 + WebKitGTK; both honor dialogs. Real concern only on a future native-mobile build.
+    - LOW (no action): math gate calculator bypass — accepted residual risk, documented in MATH_GATES comment.
+- **Commits `c8a77aeb` (L22), `08d8e79e` (L19), `ad69aa25` (L20).** Three more sandbox FSMs in the prompt-engineering arc, all following the L21 pattern: 4 starter scenarios + vague/specific fork + retry node + meta-callout on win + Try-another loopback.
+  - **L22 "Ask Again When It's Wrong"** — Claude shows a vague first attempt (tiny gray robot, plain name "Bob", short poem "Cats are nice", plain cracker), kid picks BETWEEN vague feedback ("redo it", "boring", "try harder") and specific feedback ("make it BIGGER", "starts with M", "add a dragon", "add peanut butter and a banana"). Vague picks → retry coaching. Specific picks → t3 with improved output + meta-skill name (SHAPE constraint, RULE, count, addition).
+  - **L19 "Be Super Specific"** — Claude shows the FUZZY default ('A boy walked.' for "make a story", 'Bob' for "pick a name", 'Water is wet' for "tell me a fact", 'Knock knock' (no punchline) for "make a joke"). Kid picks between "be cool"/"be interesting"-style words and specific shapes ("4-sentence story about a dragon", "name with 3 syllables starting with B"). Each scenario teaches a different specificity dimension: SOURCE, SHAPE, RULE, NUMBERS, NAMES, TOPIC, TYPE.
+  - **L20 "Show, Don't Just Tell"** — example-driven. Kid picks between adjective-feedback ("be more creative", "make them silly") and example-format-feedback ("Use this shape: Apple — red, sweet"). Specific picks → Claude generates 4 more items in EXACTLY the same format. Two formats per scenario (dashed, numbered, emoji-prefixed, arrow-notation) so kids see the same trick works with multiple shapes.
+  - **Sandbox lint clean: 11/11 files validated.** Total Claude FSM coverage: L02 + L11 + L19 + L20 + L21 + L22 = 6 of 25 prompt-engineering-relevant lessons.
+  - **One footgun discovered:** workspace `security_reminder_hook.py` substring-matches the literal word "p1ckle" (replace 1 with i) and blocks Write tool. Original L20 draft had "Pickle-cocoa muffins" → blocked → renamed to "Pepper-cocoa muffins". Future content authors: avoid that one word in lesson JSON. Documented in L20 commit message.
+
 ### 2026-05-09 (later) — v0.7.8: parent PIN wizard + audio QA tool + L21 multi-turn Claude
 
 Three independent shipments in one session, sequenced as C → D → A from the v0.7.8 grill menu (E and F deferred — see "Open questions" below).
@@ -113,13 +133,14 @@ Three independent shipments in one session, sequenced as C → D → A from the 
 - Re-baked all 60 lesson narration wavs + ~120 hint wavs via Piper.
 - exe: 445 MB.
 
-### 🔖 PICK UP HERE NEXT SESSION (v0.7.9 candidate work)
+### 🔖 PICK UP HERE NEXT SESSION (v0.7.10 candidate work)
 
 **Fresh-context me: this is your starting orientation.** Read this whole HANDOFF top-to-bottom before touching code. Most-recent state is at the TOP of the History section.
 
-**Current state (head: `a4cb6bdc` on `main`, 2026-05-09 evening):**
-- v0.7.8 shipped: parent PIN wizard + audio QA tool + L21 multi-turn Claude. Exe NOT rebuilt this session (engine + content changes only — next builder should run `python build.py` to ship a fresh exe).
-- v0.7.7 was the prior baseline (134.6 MB exe).
+**Current state (head: `ad69aa25` on `main`, 2026-05-09 late):**
+- v0.7.9 shipped: PIN tightening (math gate + weak-PIN nudge + corrupt-pin detect) + L19/L20/L22 multi-turn FSMs.
+- v0.7.8 baseline before that: parent PIN wizard + audio QA tool + L21 multi-turn Claude.
+- Exe NOT rebuilt since v0.7.7 (134.6 MB). Next builder should run `python build.py` to ship a fresh exe — engine + content changes from v0.7.8 + v0.7.9 are unbundled until then.
 - Lessons 1-60 all on v2 schema. ~3900 question prompt variations (10 vars × ~6 questions × 60 lessons), all baked via Piper to `.ogg`.
 - Hover audio on every answer option (250ms debounce, single voice channel mutex, baked OGG-per-unique-string).
 - Gate diversifier: 6 game types rotate across Q2..Qn (was 100% type-this-word repetition).
@@ -133,12 +154,18 @@ Three independent shipments in one session, sequenced as C → D → A from the 
 
 **Likely next asks (in priority order):**
 1. **F (Bytey art) — set GEMINI_API_KEY then run nano-banana.** Free tier at https://aistudio.google.com/apikey. Once set, prompt the workspace nano-banana script to generate a 4-state character sheet (idle/wave/cheer/think) with consistent character; extract per-state frames; replace `assets/mascot/<state>_NN.png`. Animation contract: idle 8 frames / wave 6 / cheer 6 / think 4 — preserve exact filenames + counts or `MascotPlayer` breaks.
-2. **A continuation — multi-turn FSM for L17, L19, L20, L22, L23, L24, L25.** Pattern shipped in L21 (`sandbox_ai/claude/lesson_21.json`) is repeatable. Each lesson needs ~30 turn nodes. Could batch via template — write a `scripts/scaffold_sandbox_l*.py` that takes a lesson concept seed and emits a default 4-job × 3-step branching tree.
-3. **B — tool-history scenes for L18-25.** Engine + generator support exists (HISTORY_OVERRIDES in `scripts/expand_lessons_v3.py`). Just need 8 new SVG scenes. Format follows L11-16 pattern: streaming-bubble / panel-merge / treasure-chest etc.
-4. **PIN wizard kid-bypass mitigation.** "Forgot PIN?" button on lock screen lets a curious kid bypass parent gate by clicking it. Options to grill: math gate, rate-limit, gesture-hidden, accept risk. (See History entry for v0.7.8 D Open Questions.)
-5. **Existing-user weak-PIN nudge.** v0.7.8 wizard fires only on fresh installs. Existing users with PIN "1234" don't see it. Add post-unlock check: if `unlock` succeeds with a `WEAK_PINS` PIN, force change-PIN flow before showing dashboard.
-6. **Pi runner enrollment.** Code shipped; user paused on `setup_remote.sh` because Pi sudo password kept rejecting. Pick up by debugging sudo first (`whoami`, `sudo -v`, `localectl status`, `passwd` rotation), then re-run the bootstrap one-liner. Needs physical Pi access.
-7. **Per-question prompt audio QA — actually USE the v0.7.8 C tool.** Run `python scripts/audio_qa_report.py --n 50`, open the HTML, listen through, export findings. Bad-rated rows feed back into either acronym list expansion (`preprocess_acronyms.py`) or content rewrites.
+2. **A continuation — multi-turn FSM for L17, L23, L24, L25** (the harder ones; safety + UX content):
+   - **L17 "Pick the Right Helper"** — needs MULTI-helper sandbox (kid sees same prompt go to claude/cursor/gemini/codex and compares). Different shape than the L19/L21 single-helper pattern. May need engine extension to render a 2x2 grid of helper responses.
+   - **L23 "Don't Trust Sneaky Notes"** — prompt-injection / untrusted-content lesson. Mirror of the workspace's Untrusted Content Rule. SAFETY content — needs grill-me before authoring (what specific attack patterns? how scary is too scary for a 7yo?).
+   - **L24 "The Robot's Memory Book"** — Claude with persistent memory across the chat. Needs engine support for cross-turn state slots that stick.
+   - **L25 "Write My Own Memory Rules"** — kid composes their OWN sticky-note rules and Claude follows them. Deep UX (how does the kid input rules? text? chips?) — needs grill-me before authoring.
+3. **A continuation — easier ones** (autopilot-friendly):
+   - **L18 "Ask Then Build"** — Claude asks clarifying questions first. Single-helper, similar shape to L19.
+   - **L21 already shipped.**
+4. **B — tool-history scenes for L18-25.** Engine + generator support exists (HISTORY_OVERRIDES in `scripts/expand_lessons_v3.py`). Need 8 new SVG scenes. L19 "fuzzy→sharp photo," L20 "chef showing recipe vs explaining," L23 "wolf in sheep mask," L24 "sticky-note wall robot," etc.
+5. **Pi runner enrollment.** Code shipped; user paused on `setup_remote.sh` because Pi sudo password kept rejecting. Pick up by debugging sudo first (`whoami`, `sudo -v`, `localectl status`, `passwd` rotation), then re-run the bootstrap one-liner. Needs physical Pi access.
+6. **Actually USE the v0.7.8 C audio QA tool.** Run `python scripts/audio_qa_report.py --n 50`, open the HTML, listen through, export findings. Bad-rated rows feed back into either acronym list expansion (`preprocess_acronyms.py`) or content rewrites.
+7. **Build a fresh exe.** `python build.py` — pulls in all v0.7.8 + v0.7.9 changes. Last shipped exe is v0.7.7 baseline (134.6 MB). Engine changes from v0.7.8 D + v0.7.9 #4-5 + 4 new sandbox FSMs all need a build to reach the kid's actual machine.
 
 **Key files to read first:**
 - `index.html` (~5400 lines, single source of truth for all engine code)
