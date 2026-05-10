@@ -1516,6 +1516,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
       </p>
     </div>
     <div id="parentSetup" style="display:none;">
+      <p id="setupReason" class="muted" style="color:#c62828;font-weight:600;min-height:18px;margin:0 0 6px;"></p>
       <h3 style="margin-top:0;">Set up your parent PIN</h3>
       <p>Pick a 4-digit number you'll remember. Your kid should NOT see you type this.</p>
       <p class="muted" style="font-size:13px;">
@@ -7735,26 +7736,75 @@ const WEAK_PINS = new Set([
   "0007", "0420", "0666", "1337", "1701", "2580", "8675",
 ]);
 
+// Math problems used to gate the "Forgot PIN" reset path so a curious kid
+// can't trivially click through. Two-digit × one/two-digit multiplications
+// are well outside a 2nd-grade math curriculum. Rotated each call so a
+// kid can't memorize one answer. Not unbreakable — a kid with a calculator
+// or smart-speaker can solve them. Raising the bar, not building a vault.
+const MATH_GATES = [
+  { q: "12 × 9 = ?",  a: "108" },
+  { q: "15 × 7 = ?",  a: "105" },
+  { q: "11 × 11 = ?", a: "121" },
+  { q: "13 × 8 = ?",  a: "104" },
+  { q: "9 × 14 = ?",  a: "126" },
+  { q: "7 × 13 = ?",  a: "91"  },
+  { q: "8 × 16 = ?",  a: "128" },
+  { q: "6 × 17 = ?",  a: "102" },
+];
+
 const Parent = {
   _isFirstSetup() {
-    // PIN unset (null) OR still default-fallback value → force setup wizard.
-    return Store.load(Store.K_PIN, null) === null;
+    // PIN unset (null) → force setup wizard.
+    // Distinguish "absent" from "corrupted parse" — Store.load swallows JSON
+    // parse errors and falls back to null. Without this disambiguation a
+    // corrupted PIN entry would silently look like a first-time setup, locking
+    // the parent out of their existing PIN with no explanation.
+    let raw = null;
+    try { raw = localStorage.getItem(Store.K_PIN); }
+    catch (e) { console.warn("[Parent._isFirstSetup] localStorage read failed:", e); return true; }
+    if (raw === null) return true;
+    try { JSON.parse(raw); }
+    catch (e) {
+      console.warn("[Parent._isFirstSetup] PIN data corrupted, forcing reset:", e);
+      this._corruptedPin = true;
+      return true;
+    }
+    return false;
   },
-  open() {
-    const setup = this._isFirstSetup();
-    document.getElementById("parentLocked").style.display = setup ? "none" : "";
-    document.getElementById("parentSetup").style.display = setup ? "" : "none";
+  _showLock() {
+    document.getElementById("parentLocked").style.display = "";
+    document.getElementById("parentSetup").style.display = "none";
     document.getElementById("parentUnlocked").style.display = "none";
     document.getElementById("pinInput").value = "";
     document.getElementById("pinError").textContent = "";
+    setTimeout(() => document.getElementById("pinInput").focus(), 50);
+  },
+  _showSetup(reason) {
+    document.getElementById("parentLocked").style.display = "none";
+    document.getElementById("parentSetup").style.display = "";
+    document.getElementById("parentUnlocked").style.display = "none";
     document.getElementById("setupPin1").value = "";
     document.getElementById("setupPin2").value = "";
     document.getElementById("setupError").textContent = "";
+    document.getElementById("setupReason").textContent = reason || "";
+    document.getElementById("pinError").textContent = "";
+    // _showSetup is now reachable mid-session (weak-PIN nudge from unlock).
+    // Clear the busy flag so a prior successful setup doesn't dead-lock the
+    // Save button on this second pass.
+    this._saving = false;
+    setTimeout(() => document.getElementById("setupPin1").focus(), 50);
+  },
+  open() {
     document.getElementById("parentOverlay").classList.add("show");
-    setTimeout(() => {
-      const target = setup ? "setupPin1" : "pinInput";
-      document.getElementById(target).focus();
-    }, 50);
+    if (this._isFirstSetup()) {
+      const reason = this._corruptedPin
+        ? "Your saved PIN data was unreadable. Pick a new one to continue."
+        : "";
+      this._corruptedPin = false;
+      this._showSetup(reason);
+    } else {
+      this._showLock();
+    }
   },
   setupPin() {
     // Mash-tap guard: rapid double-click + double Enter both fire this. Without
@@ -7778,6 +7828,9 @@ const Parent = {
       return;
     }
     // After setup, drop straight into the unlocked panel — no second login needed.
+    // Clear the busy flag on success so a later _showSetup (e.g. weak-PIN
+    // nudge after unlock + change-PIN flow) doesn't find a stuck flag.
+    this._saving = false;
     document.getElementById("parentSetup").style.display = "none";
     document.getElementById("parentUnlocked").style.display = "";
     this._fill();
@@ -7785,6 +7838,17 @@ const Parent = {
   forgotPin() {
     if (this._saving) return;
     if (!confirm("Reset your parent PIN?\n\nThis CLEARS the PIN. Your kid's progress, transcripts, and chess history stay safe. You'll set a new PIN the next time you open Parent Corner.")) return;
+    // v0.7.9 #4: math gate to keep curious kids from trivially clicking
+    // Forgot → OK → wizard → "I set my own PIN now lol". A 2nd-grader can't
+    // do 12 × 9 in their head. A kid with a calculator can — accept the
+    // residual risk; this raises the bar without locking out a real parent.
+    const gate = MATH_GATES[Math.floor(Math.random() * MATH_GATES.length)];
+    const ans = window.prompt("Quick check (so we know you're a grown-up):\n\n" + gate.q);
+    if (ans === null) return; // user cancelled the prompt
+    if (String(ans).trim() !== gate.a) {
+      alert("That's not quite right. Ask a grown-up to help with the reset.");
+      return;
+    }
     this._saving = true;
     // Clear via Store.save(null) so the Persistence layer (state.json mirror)
     // also drops the PIN — otherwise next boot rehydrates the old PIN from
@@ -7809,15 +7873,25 @@ const Parent = {
     document.getElementById("parentOverlay").classList.remove("show");
   },
   unlock() {
-    const stored = Store.load(Store.K_PIN, "1234");
+    const stored = Store.load(Store.K_PIN, null);
     const v = document.getElementById("pinInput").value;
-    if (v === stored) {
-      document.getElementById("parentLocked").style.display = "none";
-      document.getElementById("parentUnlocked").style.display = "";
-      this._fill();
-    } else {
+    // Defensive: if PIN got cleared (e.g. forgotPin succeeded mid-session),
+    // unlock can't proceed — bounce back to setup.
+    if (stored === null) { this._showSetup(""); return; }
+    if (v !== stored) {
       document.getElementById("pinError").textContent = "Wrong PIN. Try again.";
+      return;
     }
+    // v0.7.9: existing-user weak-PIN nudge. If they unlocked successfully but
+    // their PIN is in WEAK_PINS (e.g. legacy "1234" carried over from v0.6.x),
+    // force them to pick a stronger one before granting dashboard access.
+    if (WEAK_PINS.has(stored)) {
+      this._showSetup("Your PIN is too easy. Pick a stronger one to keep using Parent Corner.");
+      return;
+    }
+    document.getElementById("parentLocked").style.display = "none";
+    document.getElementById("parentUnlocked").style.display = "";
+    this._fill();
   },
   showTab(name) {
     document.querySelectorAll(".parent-tab").forEach(b => b.classList.toggle("active", b.dataset.tab === name));
