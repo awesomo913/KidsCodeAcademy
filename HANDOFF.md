@@ -31,6 +31,37 @@ The user already ships an adult tutorial called "Claude Code Mastery" (`cc-maste
 
 ## 4. History
 
+### 2026-05-14 — v0.7.11: 7 grade-drag fixes shipped in one commit (e7b…)
+
+After grading the v0.7.10 app **Fun B+ / Educate A-**, the user wanted every drag-issue addressed. 10 fixes were planned; 7 shipped tonight as v0.7.11. Deferred to later sessions: Fix 1 (Bytey art via Chrome MCP), Fix 4 (lesson-shape variety), Fix 5 (history-scene depth).
+
+**What landed:**
+- **Fix 6** — L25 chip composer is now dynamic. `Sandbox._lastRule` captures the kid's composition at prompt_builder submit; `{{user_rule}}` placeholders in `bot_lines` get substituted before `typewriteInto`. The 4 `t_demo_*` turns in `sandbox_ai/claude/lesson_25.json` now read "(Following your rule: <kid's actual rule>!)" instead of the generic string.
+- **Fix 2** — Helper voice in chat. Bot replies now SPEAK via `speakText(text)` after the typewriter starts. Uses the existing `"speech"` voice channel — no new mutex, narration auto-pauses while bot speaks.
+- **Fix 8** — Persistent cross-session memory rules. New `Store.K_RULES`, capped at 20 newest. Persistence layer auto-flushes to `state.json`. New Parent Corner **"Memory"** tab + `_fillMemory()` lists rules with identity-match Delete (race-safe; hunter caught the positional-index race).
+- **Fix 10** — L60 capstone produces a real portfolio piece. `share-card` handler upgraded: structured JSON (game_name, slug, level_grid, idea_summary, created_at, app_version) + a self-contained printable HTML card with inline-styled level grid. New JSBridge methods `list_kid_projects()` and `open_kid_project(filename)` with cross-platform open (`os.startfile` / `open` / `xdg-open`). New Parent Corner **"Projects"** tab.
+- **Fix 3** — Background music + parent toggle. New `Ambient` module: `<audio loop>` with file-missing graceful fallback (toggle ON without a file is a no-op, never crashes). New `Store.K_BGMUSIC`, default OFF. Ducks to ~30% volume during narration via `Audio_.playLesson` hooks. No music file ships — parent drops `.ogg` into `assets/bg_music/loop.ogg` when ready.
+- **Fix 7** — Spaced repetition every 5th lesson. `QuestionFlow.run` prepends ONE review question from a random earlier lesson when `lesson.id >= 5 && lesson.id % 5 === 0`. New `_isReview` flag + `.review-badge` CSS (purple-green gradient, distinct from gold rare-variation badge). Uses `tap-the-glow` gate so kid still engages.
+- **Fix 9** — Ready for Real Tools parent guide. New `parent/ready_for_real.html`: plain-language 7-step first-week plan for moving the kid from sandbox to real Claude/Cursor/Gemini. Opens in default browser via `window.open` from Parent Corner Settings.
+
+**Silent-failure-hunter pass: 4 findings, 3 actioned.**
+- HIGH: Memory delete used positional `cur.length - 1 - idx` arithmetic → race on rapid double-click corrupts list. Fixed: identity-match by `ts + "|" + phrase` composite.
+- MEDIUM: `Ambient.start` catch swallow → "Music: ON" could be silent across sessions with no log. Fixed: log non-`NotAllowedError` rejections.
+- MEDIUM: `share-card` `save_kid_project` return not checked → JSON-saved-but-HTML-failed leaves parent seeing raw JSON. Fixed: Promise-wrap both calls + `console.warn` on `!ok`.
+- LOW (deferred): `subprocess.Popen` on Linux/Mac doesn't check returncode — `open_kid_project` returns `ok=True` before `xdg-open` actually succeeds. Windows is unaffected (primary platform).
+
+**Decisions made during planning (open questions answered):**
+- F (Bytey art): Chrome MCP → gemini.google.com path (no API key), separate session.
+- Music: light ambient + parent toggle off-by-default. Decision stuck.
+- Spaced rep: every 5th lesson with Review chip. Decision stuck.
+
+**v0.7.12+ candidates (in priority order):**
+1. **Fix 1 (Bytey art)** — Chrome MCP path. User pivoted from API key. Will navigate `gemini.google.com` in the user's logged-in browser, generate 4 hero frames (one per state), then rewrite `gen_mascot.py` to procedurally tween each hero into the per-state animation frames (idle 8, wave 6, cheer 6, think 4). Animation contract preserved or `MascotPlayer` breaks.
+2. **Fix 5 (history-scene depth)** — beef up the 12 existing `HistoryScenes` (math/turing/perceptron/training/attention/llm + claude/cursor/gemini/codex/opencode/ollama). Each currently 5s; extend to 10-12s with multi-stage frames + Piper-baked narration tracks. Recommend splitting as 2-3 scenes per work block. Convert `_renderInitial` switch into a scene registry while we're in there.
+3. **Fix 4 (lesson-shape variety)** — author 3 new surprise lesson formats: brain-teaser interludes (between chapters), mascot-mood lessons (Bytey is sad/tired/scared, kid figures out why), show-your-work check-ins (every 10 lessons, kid screenshots progress). New `KidGame._handlers`: `riddle-room` / `mascot-mood` / `show-work`. Lesson count goes 60 → 63-65 — audit build pipeline for hardcoded 60 assumptions.
+4. **L25 demo rule narration audio** — bot replies now SPEAK the dynamic rule via Web Speech (Fix 2), but no Piper-baked clip exists for the composed phrases. Could add at-runtime synthesis vs leaving Web Speech as the fallback.
+5. **Ambient music sourcing** — Fix 3 wired the toggle but ships no audio file. Find/license/encode a 60-90s royalty-free loop. Drop into `assets/bg_music/loop.ogg`.
+
 ### 2026-05-09 (latest) — v0.7.10: prompt-engineering arc complete (L17, L18, L23, L24, L25)
 
 Five more sandbox FSMs in one batch. Closes the prompt-engineering arc — L17-L25 now ALL have multi-turn Claude chats. Coverage: 11 of the originally-quiz-only lessons in this arc.
@@ -151,12 +182,13 @@ Three independent shipments in one session, sequenced as C → D → A from the 
 - Re-baked all 60 lesson narration wavs + ~120 hint wavs via Piper.
 - exe: 445 MB.
 
-### 🔖 PICK UP HERE NEXT SESSION (v0.7.11 candidate work)
+### 🔖 PICK UP HERE NEXT SESSION (v0.7.12 candidate work)
 
 **Fresh-context me: this is your starting orientation.** Read this whole HANDOFF top-to-bottom before touching code. Most-recent state is at the TOP of the History section.
 
-**Current state (head: `e59ada09` on `main`, 2026-05-09 late-night):**
-- v0.7.10 shipped: 5 more sandbox FSMs (L17/L18/L23/L24/L25) — prompt-engineering arc COMPLETE. Coverage: 11 lessons (L02 + L11 + L17-25).
+**Current state (head: TBD on `main`, 2026-05-14):**
+- v0.7.11 shipped: 7 grade-drag fixes (chip dynamic, chat voice, persistent rules, capstone JSON, music, spaced rep, real-tools bridge). Exe rebuilt this session.
+- v0.7.10 baseline: 5 more sandbox FSMs (L17/L18/L23/L24/L25) — prompt-engineering arc COMPLETE. Coverage: 11 lessons (L02 + L11 + L17-25).
 - v0.7.9 baseline before that: PIN tightening + L19/L20/L22 sandbox.
 - v0.7.8 before that: PIN wizard + audio QA tool + L21 sandbox.
 - Fresh exe BUILT this session with `python build.py` — first exe to carry v0.7.8 + v0.7.9 + v0.7.10 changes.
