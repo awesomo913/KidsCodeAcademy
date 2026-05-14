@@ -770,6 +770,13 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   box-shadow: 0 3px 10px rgba(255,90,120,0.3);
 }
 .rare-badge.visible { opacity: 1; transform: translateY(0); }
+/* v0.7.11 Fix 7: review badge — distinct from rare-badge (gold) so kid knows
+ * this is a spaced-repetition callback, not a deep-cut variation. */
+.review-badge {
+  background: linear-gradient(90deg, #6c5ce7, #00b894) !important;
+  color: #fff !important;
+  box-shadow: 0 3px 10px rgba(108,92,231,0.35) !important;
+}
 /* Per-helper chip skins (each tool feels distinct) */
 .tool-claude   .fsm-chip { background: #a067ff; box-shadow: 0 4px 0 #6e3fbb; }
 .tool-claude   .fsm-chip:hover { background: #b58aff; }
@@ -1546,6 +1553,8 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
         <button class="parent-tab" data-tab="grade">Grade</button>
         <button class="parent-tab" data-tab="chess">Chess</button>
         <button class="parent-tab" data-tab="games">Games</button>
+        <button class="parent-tab" data-tab="memory">Memory</button>
+        <button class="parent-tab" data-tab="projects">Projects</button>
         <button class="parent-tab" data-tab="transcripts">Transcripts</button>
         <button class="parent-tab" data-tab="settings">Settings</button>
       </div>
@@ -1578,6 +1587,16 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
         <div id="parentGameLauncher"></div>
       </div>
 
+      <div class="parent-pane" data-pane="memory">
+        <p class="muted">📓 Memory rules your kid composed in lesson 25. Capped at 20 newest.</p>
+        <div id="parentMemoryList"><em class="muted">No rules saved yet.</em></div>
+      </div>
+
+      <div class="parent-pane" data-pane="projects">
+        <p class="muted">🎮 Games + projects your kid finished (saved to AppData).</p>
+        <div id="parentProjectsList"><em class="muted">No projects saved yet. Lesson 60 capstone creates the first one.</em></div>
+      </div>
+
       <div class="parent-pane" data-pane="transcripts">
         <p class="muted">What your kid typed to the AI helpers.</p>
         <div id="parentTranscripts" class="transcript-box muted"><em>No conversations yet.</em></div>
@@ -1600,6 +1619,25 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
           </p>
           <div class="row">
             <button id="compactToggle" class="btn-big alt">Compact: OFF</button>
+          </div>
+        </div>
+        <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
+          <strong style="font-size:17px;">🎵 Background music</strong>
+          <p class="muted" style="font-size:14px;margin:6px 0 10px;">
+            Soft ambient loop between lessons. Off by default. Ducks automatically when narration plays.
+            Drop your own <code>.ogg</code> into <code>assets/bg_music/</code> if no file ships.
+          </p>
+          <div class="row">
+            <button id="bgmusicToggle" class="btn-big alt">Music: OFF</button>
+          </div>
+        </div>
+        <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
+          <strong style="font-size:17px;">🎓 Ready for real tools</strong>
+          <p class="muted" style="font-size:14px;margin:6px 0 10px;">
+            Your kid finished the sandbox? Open the parent guide for setting them up with the REAL Claude / Cursor safely.
+          </p>
+          <div class="row">
+            <button id="readyForRealBtn" class="btn-big alt">Open the guide</button>
           </div>
         </div>
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
@@ -1695,6 +1733,8 @@ const Store = {
   K_THEME: "kca.theme.v1",
   K_SESSIONS: "kca.sessions.v1",
   K_IDEAS: "kca.ideas.v1",
+  K_RULES: "kca.rules.v1",       // v0.7.11 Fix 8: kid's L25-composed memory rules (capped at 20)
+  K_BGMUSIC: "kca.bgmusic.v1",   // v0.7.11 Fix 3: background music toggle (default off)
   load(k, fb) {
     try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; }
     catch (e) { console.warn("[Store.load]", k, e); return fb; }
@@ -2233,7 +2273,9 @@ const Audio_ = {
     const a = document.getElementById("lessonAudio");
     if (!a) return;
     _silenceVoiceChannels("lesson");  // kill any speech/question prompt before narration starts
-    a.onended = onEnd || null;
+    Ambient.duck(true);  // v0.7.11 Fix 3: lower bg music while narration plays
+    a.onended = () => { Ambient.duck(false); if (typeof onEnd === "function") onEnd(); };
+    a.onpause = () => Ambient.duck(false);
     a.src = src + "?_=" + Date.now();
     a.play().catch(e => console.warn("playLesson", src, e));
   },
@@ -2243,6 +2285,73 @@ const Audio_ = {
     const a = document.getElementById("lessonAudio");
     if (!a) return;
     a.currentTime = 0;
+    Ambient.duck(false);
+  },
+};
+
+/* v0.7.11 Fix 3 — Ambient background music module.
+ *
+ * Plays an off-by-default low-volume loop between lessons. Ducks to ~30%
+ * volume while narration plays (via Audio_.playLesson hooks) so it never
+ * fights the warm Piper voice that's the project's audio identity.
+ *
+ * Music file is OPTIONAL: ships as a fallback no-op when no file exists at
+ * assets/bg_music/loop.ogg. Parent can drop their own ogg into that folder.
+ * Toggle persists in Store.K_BGMUSIC; default OFF so the program ships quiet.
+ */
+const Ambient = {
+  _audio: null,
+  _vol: 0.12,          // base volume when narration is silent
+  _duckedVol: 0.04,    // narration-active volume
+  _ducked: false,
+  _enabled: false,
+  _hasFile: false,
+  init() {
+    try {
+      this._audio = document.createElement("audio");
+      this._audio.loop = true;
+      this._audio.preload = "auto";
+      this._audio.volume = this._vol;
+      // Use a `?probe=1` cache buster so File-Not-Found is fast + cached.
+      this._audio.src = "assets/bg_music/loop.ogg";
+      this._audio.addEventListener("canplaythrough", () => { this._hasFile = true; }, { once: true });
+      this._audio.addEventListener("error", () => {
+        // File missing or unsupported — silent no-op. Toggle remains valid for
+        // when the parent drops a file in later.
+        this._hasFile = false;
+      }, { once: true });
+      document.body.appendChild(this._audio);
+      this._enabled = Store.load(Store.K_BGMUSIC, false) === true;
+      if (this._enabled) this.start();
+    } catch (e) { console.warn("[Ambient.init]", e); }
+  },
+  isEnabled() { return this._enabled; },
+  setEnabled(on) {
+    this._enabled = !!on;
+    Store.save(Store.K_BGMUSIC, this._enabled);
+    if (this._enabled) this.start(); else this.stop();
+  },
+  start() {
+    if (!this._audio) return;
+    try {
+      this._audio.volume = this._ducked ? this._duckedVol : this._vol;
+      const p = this._audio.play();
+      if (p && p.catch) p.catch(e => {
+        // NotAllowedError = autoplay policy blocked us until user gesture; ignore.
+        // Anything else (codec error, decode fail, bad audio state) → log so the
+        // "Music: ON but silent" state doesn't go invisible across sessions.
+        if (e && e.name !== "NotAllowedError") console.warn("[Ambient.start]", e);
+      });
+    } catch (e) { console.warn("[Ambient.start]", e); }
+  },
+  stop() {
+    if (!this._audio) return;
+    try { this._audio.pause(); } catch (_) {}
+  },
+  duck(on) {
+    this._ducked = !!on;
+    if (!this._audio || !this._enabled) return;
+    try { this._audio.volume = this._ducked ? this._duckedVol : this._vol; } catch (_) {}
   },
 };
 
@@ -4383,12 +4492,74 @@ const KidGame = {
         card.appendChild(link);
         out.appendChild(card);
         Audio_.sfx("Star"); spawnConfetti(card);
-        // Try to persist via JSBridge if available — best-effort
+        // v0.7.11 Fix 10: structured JSON + printable HTML persistence so kid has
+        // a real portfolio piece (vs the old 2-line TXT). Parent Corner Projects
+        // tab lists these; clicking "Open" opens the HTML in the default browser.
         try {
           if (window.pywebview && window.pywebview.api && window.pywebview.api.save_kid_project) {
-            window.pywebview.api.save_kid_project("share_" + slug + ".txt", "Game: " + raw + "\nLink: kidcode://share/" + slug);
+            const api = window.pywebview.api;
+            const created = new Date().toISOString();
+            // Pull latest painted level from localStorage (Stage 2 of the
+            // capstone saves there). Older share-card uses without a level
+            // get an empty grid — still valid project, just no level preview.
+            const levels = Store.load("kca.kid_levels.v1", []);
+            const levelGrid = (Array.isArray(levels) && levels.length) ? (levels[levels.length - 1].grid || null) : null;
+            // Idea transcript: the IdeaSpark saved a separate file already
+            // (capstone_idea_*.txt). Include the latest idea via the recent
+            // transcripts log so the project is self-contained.
+            const ideaSummary = (function() {
+              try {
+                const t = Store.load("kca.transcripts.v1", []);
+                if (Array.isArray(t) && t.length) {
+                  const recent = t.slice(-8).map(x => x.you).filter(Boolean);
+                  return recent.join(" · ").slice(0, 400);
+                }
+              } catch (_) {}
+              return "";
+            })();
+            const project = {
+              kind: "capstone",
+              game_name: raw,
+              slug: slug,
+              link: "kidcode://share/" + slug,
+              level_grid: levelGrid,
+              idea_summary: ideaSummary,
+              created_at: created,
+              kid_age_target: 7,
+              app_version: "v0.7.11",
+            };
+            // Verify-after-write: both calls return {ok, error}. Warn on either
+            // failure so a half-saved project doesn't silently leave the parent
+            // wondering why "Open" shows raw JSON instead of the printable card.
+            const r1 = api.save_kid_project(slug + ".json", JSON.stringify(project, null, 2));
+            Promise.resolve(r1).then(rr => {
+              if (!rr || rr.ok === false) console.warn("[share-card] JSON save failed:", rr);
+            }).catch(e => console.warn("[share-card] JSON save threw:", e));
+            // Build a self-contained printable HTML card the parent can print
+            // or share. Inline styles + level grid rendered as a colored table.
+            const gridHtml = levelGrid && Array.isArray(levelGrid)
+              ? "<table style='border-collapse:collapse;margin:12px auto;'>" +
+                levelGrid.map(row => "<tr>" + (Array.isArray(row) ? row : []).map(cell => {
+                  const t = String(cell || "");
+                  const color = t === "#" ? "#666" : t === "." ? "#fff" : t === "*" ? "#ffd95e" : t === "F" ? "#4caf50" : t === "@" ? "#6c5ce7" : "#eee";
+                  return "<td style='width:22px;height:22px;background:" + color + ";border:1px solid #ccc;'></td>";
+                }).join("") + "</tr>").join("") +
+                "</table>"
+              : "<p style='color:#888;font-style:italic;'>(no level painted)</p>";
+            const html = "<!doctype html><html><head><meta charset='utf-8'><title>" + raw + "</title>" +
+              "<style>body{font-family:'Segoe UI',sans-serif;background:#faf7f2;color:#2a2a2a;padding:24px;max-width:680px;margin:0 auto;}h1{color:#6c5ce7;margin:0 0 4px;}h2{font-size:14px;color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-top:24px;}p.idea{font-size:15px;line-height:1.5;background:#fff;padding:12px;border-radius:8px;border:1px solid #ddd;}@media print{body{background:#fff;}}</style></head><body>" +
+              "<h1>" + raw + "</h1><div style='color:#999;'>by your kid 🎮 — created " + created.slice(0, 10) + "</div>" +
+              "<h2>The idea</h2><p class='idea'>" + (ideaSummary || "(no idea recorded)") + "</p>" +
+              "<h2>The level</h2>" + gridHtml +
+              "<h2>Share link</h2><code style='background:#f0f0f4;padding:6px 10px;border-radius:6px;font-family:monospace;'>kidcode://share/" + slug + "</code>" +
+              "<p style='margin-top:24px;color:#999;font-size:12px;'>Made with Kids Code Academy " + project.app_version + ". Save or print this page!</p>" +
+              "</body></html>";
+            const r2 = api.save_kid_project(slug + ".html", html);
+            Promise.resolve(r2).then(rr => {
+              if (!rr || rr.ok === false) console.warn("[share-card] HTML save failed:", rr);
+            }).catch(e => console.warn("[share-card] HTML save threw:", e));
           }
-        } catch (_) {}
+        } catch (e) { console.warn("[share-card persist] failed:", e); }
         setTimeout(() => done(true), 1400);
       });
       inp.addEventListener("keydown", e => { if (e.key === "Enter") btn.click(); });
@@ -4666,9 +4837,41 @@ const QuestionFlow = {
     }
     clearNode(qfRoot);
 
-    const questions = (Array.isArray(lesson.questions) && lesson.questions.length > 0)
-      ? lesson.questions
+    let questions = (Array.isArray(lesson.questions) && lesson.questions.length > 0)
+      ? lesson.questions.slice()
       : [this._legacyShim(lesson)];
+
+    // v0.7.11 Fix 7 — Spaced repetition. Every 5th lesson, prepend ONE review
+    // question from an earlier completed lesson. Marked _isReview so the answer
+    // renderer shows a "Review!" chip. Skips if no earlier lessons exist or the
+    // earlier lesson isn't loaded yet.
+    try {
+      const lessonId = Number(lesson.id);
+      if (Number.isFinite(lessonId) && lessonId >= 5 && lessonId % 5 === 0 && Array.isArray(LessonStore.index)) {
+        const earlier = LessonStore.index.filter(L => {
+          const lid = Number(L && L.id);
+          return Number.isFinite(lid) && lid < lessonId && Array.isArray(L.questions) && L.questions.length > 0;
+        });
+        if (earlier.length) {
+          const pick = earlier[Math.floor(Math.random() * earlier.length)];
+          const pq = pick.questions[Math.floor(Math.random() * pick.questions.length)];
+          if (pq && Array.isArray(pq.variations) && pq.variations.length) {
+            const reviewVar = pq.variations[Math.floor(Math.random() * pq.variations.length)];
+            // Use a tap-the-glow gate (fast + no domain assumptions) wrapped
+            // around the original variation so the kid still has to engage.
+            const reviewQ = {
+              id: "review_" + (pick.id || "?") + "_" + (pq.id || "?"),
+              _isReview: true,
+              _reviewFromLesson: pick.id,
+              _reviewFromTitle: pick.title || "",
+              interaction: { type: "tap-the-glow", payload: {} },
+              variations: [reviewVar],
+            };
+            questions = [reviewQ].concat(questions);
+          }
+        }
+      }
+    } catch (e) { console.warn("[QuestionFlow] spaced-rep injection failed:", e); }
 
     let qIdx = 0;
 
@@ -4722,10 +4925,21 @@ const QuestionFlow = {
     }
     const vIdx = (question.variations || []).indexOf(v);
 
+    // v0.7.11 Fix 7 — Review-chip badge for spaced-repetition questions.
+    // The injected review question carries _isReview=true; show kid that
+    // this is a callback to an earlier lesson (not a new concept).
+    if (question._isReview) {
+      const fromTitle = String(question._reviewFromTitle || "");
+      const fromLabel = fromTitle ? ` from "${fromTitle.slice(0, 40)}"` : "";
+      const badge = el("div", { class: "rare-badge review-badge" }, "🔁 Review" + fromLabel);
+      host.appendChild(badge);
+      requestAnimationFrame(() => badge.classList.add("visible"));
+    }
+
     // Rare-variation badge: when kid lands on v7-v9 (deep cuts), show a
     // "Fresh question!" badge so they know the system is varied. Visible
     // signal that there are deeper variations to discover.
-    if (vIdx >= 7) {
+    if (vIdx >= 7 && !question._isReview) {
       const badge = el("div", { class: "rare-badge" }, "⭐ Fresh question!");
       host.appendChild(badge);
       requestAnimationFrame(() => badge.classList.add("visible"));
@@ -7425,6 +7639,15 @@ const UI = {
         if (submit.disabled) return;
         submit.disabled = true;  // prevent double-click race during advanceFsm async
         const phrase = colKeys.map(k => picks[k]).join(" ").slice(0, 80);
+        // v0.7.11 Fix 6: capture for {{user_rule}} substitution in bot_lines.
+        // v0.7.11 Fix 8: persist to memory book (capped at 20 most-recent rules).
+        Sandbox._lastRule = phrase;
+        try {
+          const existing = Store.load(Store.K_RULES, []);
+          const safe = Array.isArray(existing) ? existing : [];
+          const rule = { lesson: lesson.id, helper, phrase, ts: new Date().toISOString() };
+          Store.save(Store.K_RULES, safe.concat([rule]).slice(-20));
+        } catch (e) { console.warn("[memory book] save failed:", e); }
         advanceFsm(phrase);
       });
       wrap.appendChild(submit);
@@ -7499,8 +7722,18 @@ const UI = {
         if (nextTurn) {
           const bot = el("div", { class: "chat-msg bot" }, "");
           log.appendChild(bot);
-          const text = (nextTurn.bot_lines || []).map(String).join(" ");
+          let text = (nextTurn.bot_lines || []).map(String).join(" ");
+          // v0.7.11 Fix 6: substitute kid's composed rule into demo replies.
+          // {{user_rule}} placeholder appears in L25 t_demo_* turns; Sandbox._lastRule
+          // was captured the moment the kid hit Submit in the chip composer.
+          if (text.indexOf("{{user_rule}}") !== -1) {
+            text = text.replace(/\{\{user_rule\}\}/g, String(Sandbox._lastRule || "your rule"));
+          }
           typewriteInto(bot, text);
+          // v0.7.11 Fix 2: speak the bot reply aloud (Web Speech on "speech" channel,
+          // auto-cancels narration). Helpers no longer feel mute. Voice leads the
+          // typewriter slightly, giving kid the "spoken first, text follows" pacing.
+          try { speakText(text); } catch (_) { /* TTS best-effort */ }
           // Side effect appears ~70% through typewriter — lands as text finishes (more natural reveal)
           if (nextTurn.side_effect) {
             const fxDelay = Math.max(300, Math.round(text.length * (pers.typing_ms_per_char || 25) * 0.7));
@@ -7903,7 +8136,82 @@ const Parent = {
     this._fillGrade();
     this._fillChess();
     this._fillGames();
+    this._fillMemory();    // v0.7.11 Fix 8
+    this._fillProjects();  // v0.7.11 Fix 10
     this._fillTranscripts();
+  },
+  _fillMemory() {
+    const host = document.getElementById("parentMemoryList");
+    if (!host) return;
+    clearNode(host);
+    const rules = Store.load(Store.K_RULES, []);
+    if (!Array.isArray(rules) || rules.length === 0) {
+      host.appendChild(el("em", { class: "muted" }, "No rules saved yet. Lesson 25 lets the kid compose them."));
+      return;
+    }
+    const list = el("div", { style: { display: "flex", flexDirection: "column", gap: "8px" } });
+    // Newest first so kid + parent see the latest rule on top.
+    [...rules].reverse().forEach((r, idx) => {
+      const card = el("div", { style: { padding: "10px 12px", background: "var(--panel-2)", borderRadius: "10px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "10px" } });
+      const left = el("div");
+      left.appendChild(el("strong", null, String(r.phrase || "(empty rule)")));
+      const meta = `L${String(r.lesson || "?").padStart(2, "0")} · ${(r.ts || "").slice(0, 10)} · ${r.helper || ""}`;
+      left.appendChild(el("div", { class: "muted", style: { fontSize: "12px", marginTop: "4px" } }, meta));
+      const del = el("button", { class: "btn-big alt", style: { padding: "4px 10px", fontSize: "13px" } }, "Delete");
+      // Identity-match (not positional) so a double-click or stale list state
+      // doesn't delete the wrong rule. Race-safe.
+      const ruleKey = String(r.ts || "") + "|" + String(r.phrase || "");
+      del.addEventListener("click", () => {
+        const cur = Store.load(Store.K_RULES, []);
+        if (!Array.isArray(cur)) return;
+        const filtered = cur.filter(x => {
+          const k = String((x && x.ts) || "") + "|" + String((x && x.phrase) || "");
+          return k !== ruleKey;
+        });
+        Store.save(Store.K_RULES, filtered);
+        Parent._fillMemory();
+      });
+      card.appendChild(left); card.appendChild(del);
+      list.appendChild(card);
+    });
+    host.appendChild(list);
+  },
+  _fillProjects() {
+    const host = document.getElementById("parentProjectsList");
+    if (!host) return;
+    clearNode(host);
+    // Projects live in %APPDATA%/KidsCodeAcademy/kid_projects/ — fetched via JSBridge.
+    // Fall back to a "no JSBridge" message if running outside pywebview (dev mode).
+    const renderEmpty = (msg) => { clearNode(host); host.appendChild(el("em", { class: "muted" }, msg)); };
+    const api = (window.pywebview && window.pywebview.api) || null;
+    if (!api || typeof api.list_kid_projects !== "function") {
+      renderEmpty("Run the app via the .exe to see saved projects (browser dev mode can't read AppData).");
+      return;
+    }
+    Promise.resolve(api.list_kid_projects()).then(items => {
+      clearNode(host);
+      if (!items || !items.length) {
+        host.appendChild(el("em", { class: "muted" }, "No projects saved yet. Lesson 60 capstone creates the first one."));
+        return;
+      }
+      const list = el("div", { style: { display: "flex", flexDirection: "column", gap: "8px" } });
+      items.forEach(it => {
+        const card = el("div", { style: { padding: "10px 12px", background: "var(--panel-2)", borderRadius: "10px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "10px" } });
+        const left = el("div");
+        left.appendChild(el("strong", null, String(it.name || it.filename || "Unnamed")));
+        left.appendChild(el("div", { class: "muted", style: { fontSize: "12px", marginTop: "4px" } }, String(it.created || "")));
+        const open = el("button", { class: "btn-big alt", style: { padding: "4px 10px", fontSize: "13px" } }, "Open");
+        open.addEventListener("click", () => {
+          try { api.open_kid_project(it.filename); } catch (e) { console.warn("[projects] open failed:", e); }
+        });
+        card.appendChild(left); card.appendChild(open);
+        list.appendChild(card);
+      });
+      host.appendChild(list);
+    }).catch(e => {
+      console.warn("[projects] list failed:", e);
+      renderEmpty("Couldn't list projects (JSBridge error).");
+    });
   },
   _fillProgress() {
     const total = LessonStore.index.length;
@@ -8225,6 +8533,9 @@ async function main() {
   Sessions.list = Store.load(Store.K_SESSIONS, []);
   Transcripts.list = Store.load(Store.K_TRANS, []);
 
+  // v0.7.11 Fix 3: bg music init (no-op if file missing or toggle off).
+  Ambient.init();
+
   const theme = Store.load(Store.K_THEME, "day");
   document.body.dataset.theme = theme;
   document.querySelector("#themeBtn .text-only").textContent = theme === "day" ? "Night" : "Day";
@@ -8280,6 +8591,34 @@ async function main() {
     AutoPlay.setEnabled(!AutoPlay.isEnabled());
     refreshAutoplayBtn();
   });
+
+  // v0.7.11 Fix 3 — Background music toggle.
+  const bgmusicBtn = document.getElementById("bgmusicToggle");
+  if (bgmusicBtn) {
+    const refreshBgMusicBtn = () => {
+      const on = Ambient.isEnabled();
+      bgmusicBtn.textContent = on ? "Music: ON" : "Music: OFF";
+      bgmusicBtn.classList.toggle("go", on);
+      bgmusicBtn.classList.toggle("alt", !on);
+    };
+    refreshBgMusicBtn();
+    bgmusicBtn.addEventListener("click", () => {
+      Ambient.setEnabled(!Ambient.isEnabled());
+      refreshBgMusicBtn();
+    });
+  }
+
+  // v0.7.11 Fix 9 — Open "Ready for Real Tools" parent guide in default browser.
+  const readyBtn = document.getElementById("readyForRealBtn");
+  if (readyBtn) {
+    readyBtn.addEventListener("click", () => {
+      try {
+        // Open the parent doc as a same-origin page so the http server serves it.
+        // window.open from inside pywebview opens in the system default browser.
+        window.open("parent/ready_for_real.html", "_blank", "noopener");
+      } catch (e) { console.warn("[ready_for_real] open failed:", e); }
+    });
+  }
 
   // Compact layout toggle — sets html[data-layout="compact"] for narrow-window
   // CSS to take effect. Persisted; off by default.

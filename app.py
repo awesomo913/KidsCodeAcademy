@@ -174,6 +174,69 @@ class JSBridge:
             return {"ok": False, "error": str(exc)}
         return {"ok": True}
 
+    def list_kid_projects(self) -> list[dict]:
+        """v0.7.11 Fix 10: enumerate saved capstone JSON projects.
+
+        Walks kid_projects/ looking for *.json files saved by the share-card
+        handler in lesson 60. Returns one entry per project with name, filename,
+        and ISO created date. Used by Parent Corner 'Projects' tab.
+
+        Best-effort: any unreadable / non-JSON file is skipped silently
+        (kid scribbles or older TXT shares would otherwise crash the list).
+        """
+        import json
+        user_dir = get_user_data_dir()
+        items: list[dict] = []
+        try:
+            for fp in sorted(user_dir.glob("*.json")):
+                try:
+                    raw = fp.read_text(encoding="utf-8")
+                    obj = json.loads(raw)
+                except (OSError, json.JSONDecodeError):
+                    continue
+                items.append({
+                    "filename": fp.name,
+                    "name": str(obj.get("game_name") or fp.stem),
+                    "created": str(obj.get("created_at") or ""),
+                    "kind": str(obj.get("kind") or "capstone"),
+                })
+        except OSError as exc:
+            log.warning("list_kid_projects failed: %s", exc)
+            _log_event("boundary", "list_kid_projects", {"target": str(user_dir), "ok": False, "err": str(exc)})
+            return []
+        _log_event("boundary", "list_kid_projects", {"target": str(user_dir), "ok": True, "count": len(items)})
+        return items
+
+    def open_kid_project(self, filename: str) -> dict:
+        """v0.7.11 Fix 10: open a saved project's printable HTML card in the
+        default browser. Falls back to opening the JSON if no HTML sibling
+        exists. Path-safe: only files within get_user_data_dir() are openable.
+        """
+        import subprocess
+        safe_name = "".join(c for c in filename if c.isalnum() or c in ("_", "-", "."))
+        if not safe_name:
+            return {"ok": False, "error": "invalid filename"}
+        user_dir = get_user_data_dir()
+        target = user_dir / safe_name
+        # Prefer the HTML sibling for a richer view; fall back to the JSON itself.
+        html_sibling = target.with_suffix(".html")
+        chosen = html_sibling if html_sibling.is_file() else target
+        if not chosen.is_file():
+            return {"ok": False, "error": "file not found"}
+        try:
+            if os.name == "nt":  # Windows
+                os.startfile(str(chosen))  # type: ignore[attr-defined]
+            elif sys.platform == "darwin":
+                subprocess.Popen(["open", str(chosen)])
+            else:
+                subprocess.Popen(["xdg-open", str(chosen)])
+        except OSError as exc:
+            log.warning("open_kid_project failed: %s", exc)
+            _log_event("boundary", "open_kid_project", {"target": str(chosen), "ok": False, "err": str(exc)})
+            return {"ok": False, "error": str(exc)}
+        _log_event("boundary", "open_kid_project", {"target": str(chosen), "ok": True})
+        return {"ok": True, "path": str(chosen)}
+
 
 def _start_local_http_server(serve_dir: Path) -> int:
     """Spin up a tiny loopback HTTP server pointed at serve_dir; return the
