@@ -1,0 +1,12 @@
+{
+  "helper": "gemini",
+  "lesson_id": 6,
+  "fallback": "Try asking about 'Turing', 'machine', or 'tape'!",
+  "matches": [
+    { "keywords": ["turing", "alan"], "typing_delay_ms": 900, "reply_lines": ["Did you know? Alan Turing imagined a thinking machine way back in 1936!", "He drew it all on paper before any real computer existed."], "side_effect": null },
+    { "keywords": ["machine", "tape", "symbol"], "typing_delay_ms": 850, "reply_lines": ["Turing's imaginary machine read symbols on a long paper tape, one at a time.", "That simple idea became the blueprint for every computer today!"], "side_effect": { "action": "show_text", "text": "READ → WRITE → MOVE", "color": "#6b8cff" } },
+    { "keywords": ["think", "smart", "brain"], "typing_delay_ms": 900, "reply_lines": ["Did you know? Turing asked 'can a machine think?' in 1950.", "We still ask the same question about helpers like me today!"], "side_effect": null },
+    { "keywords": ["computer", "today", "modern"], "typing_delay_ms": 850, "reply_lines": ["Almost every modern computer follows the same idea Turing sketched.", "One big dream turned into billions of real machines!"], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 700, "reply_lines": ["Hi! I am Gemini. I know lots of facts about Turing!", "Ask me about 'machine' or 'tape' to find out something cool."], "side_effect": null }
+  ]
+}

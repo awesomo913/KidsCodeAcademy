@@ -1,0 +1,12 @@
+{
+  "helper": "claude",
+  "lesson_id": 3,
+  "fallback": "Try saying 'box', 'name', or 'variable'!",
+  "matches": [
+    { "keywords": ["box", "variable"], "typing_delay_ms": 800, "reply_lines": ["A variable is like a labeled box. You put one thing inside and give it a name!", "What would you put in your box?"], "side_effect": { "action": "draw_svg", "shape": "square", "color": "#6b8cff" } },
+    { "keywords": ["name", "label"], "typing_delay_ms": 700, "reply_lines": ["Great thinking! A good name tells you what is in the box.", "Like 'score' or 'pet' — pick a name you will remember."], "side_effect": { "action": "show_text", "text": "score = 10", "color": "#5acf95" } },
+    { "keywords": ["number", "word", "store", "put", "inside"], "typing_delay_ms": 750, "reply_lines": ["Boxes can hold a number like 7, or a word like 'dog'.", "That is the whole point — let the box remember it for you!"], "side_effect": null },
+    { "keywords": ["change", "new", "update"], "typing_delay_ms": 700, "reply_lines": ["You can swap what is inside a box any time you want!", "The new thing replaces the old one."], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I am Claude. Let us plan our magic boxes together.", "Try asking me about 'box' or 'variable'!"], "side_effect": null }
+  ]
+}
