@@ -1,0 +1,12 @@
+{
+  "helper": "gemini",
+  "lesson_id": 5,
+  "fallback": "Try 'math', 'add', or 'computer' to learn a cool fact!",
+  "matches": [
+    { "keywords": ["math", "number", "count"], "typing_delay_ms": 900, "reply_lines": ["Did you know? Computers do about a billion math steps every second!", "That is way faster than any person could ever count."], "side_effect": null },
+    { "keywords": ["add", "plus", "multiply", "times"], "typing_delay_ms": 850, "reply_lines": ["Did you know adding is the most basic thing a computer does?", "Even big AI helpers are just doing math super fast!"], "side_effect": { "action": "show_text", "text": "2 + 3 = 5", "color": "#ff5a78" } },
+    { "keywords": ["rule", "always", "same"], "typing_delay_ms": 800, "reply_lines": ["Math rules never change — 2 + 2 is always 4.", "Computers love that! No surprises, just rules."], "side_effect": null },
+    { "keywords": ["brain", "think", "robot"], "typing_delay_ms": 900, "reply_lines": ["Did you know? The first robot brains were just math steps on paper!", "Real thinkers turned those paper steps into modern computers."], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 700, "reply_lines": ["Hi! I am Gemini. I love sharing cool math facts!", "Ask me about 'add' or 'computer' to learn something neat."], "side_effect": null }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "helper": "claude",
+  "lesson_id": 10,
+  "fallback": "Try saying 'big', 'guess', 'word', or 'book'!",
+  "matches": [
+    { "keywords": ["llm", "big", "language", "model"], "typing_delay_ms": 900, "reply_lines": ["An LLM is a giant word-guesser that read millions of books to learn!", "Let us plan what makes a language model 'big'."], "side_effect": null },
+    { "keywords": ["guess", "next", "predict"], "typing_delay_ms": 800, "reply_lines": ["I learned by guessing what word comes next — over and over, billions of times.", "Each wrong guess made me a tiny bit smarter!"], "side_effect": { "action": "show_text", "text": "The cat sat on the ___", "color": "#6b8cff" } },
+    { "keywords": ["book", "read", "train", "learn"], "typing_delay_ms": 850, "reply_lines": ["I trained on tons of text — books, stories, facts.", "The more I read, the better my guesses got."], "side_effect": null },
+    { "keywords": ["think", "know", "smart"], "typing_delay_ms": 800, "reply_lines": ["I am not really thinking — I am just really good at guessing words!", "But my guesses are so good they feel like real answers."], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I am Claude. I started as a word-guesser and kept getting better!", "Ask me about 'guess' or 'big' to learn how LLMs are born."], "side_effect": null }
+  ]
+}

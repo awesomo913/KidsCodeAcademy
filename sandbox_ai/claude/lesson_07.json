@@ -1,0 +1,12 @@
+{
+  "helper": "claude",
+  "lesson_id": 7,
+  "fallback": "Try saying 'brain', 'yes', 'train', or 'example'!",
+  "matches": [
+    { "keywords": ["brain", "perceptron", "cell"], "typing_delay_ms": 800, "reply_lines": ["A perceptron is one tiny brain cell that says yes or no.", "Stack many together and you get a real thinking helper — like me!"], "side_effect": { "action": "draw_svg", "shape": "circle", "color": "#ff5a78" } },
+    { "keywords": ["yes", "no", "answer"], "typing_delay_ms": 750, "reply_lines": ["Every perceptron looks at what it sees and picks yes or no.", "That simple choice, done millions of times, adds up to smart!"], "side_effect": null },
+    { "keywords": ["train", "learn", "teach"], "typing_delay_ms": 800, "reply_lines": ["Training means showing the perceptron lots of examples.", "Each example helps it learn a little bit more. Let us plan a training round!"], "side_effect": null },
+    { "keywords": ["example", "picture", "cat", "dog"], "typing_delay_ms": 750, "reply_lines": ["Show it 100 cat pictures and 100 dog pictures.", "After a while it can tell the difference all by itself!"], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I am Claude. Perceptrons are how I learned to talk!", "Ask me about 'train' or 'brain' to find out how."], "side_effect": null }
+  ]
+}

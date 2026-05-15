@@ -1,0 +1,12 @@
+{
+  "helper": "claude",
+  "lesson_id": 4,
+  "fallback": "Try asking about 'sticky note', 'remember', or 'rule'!",
+  "matches": [
+    { "keywords": ["sticky", "note"], "typing_delay_ms": 800, "reply_lines": ["A sticky note tells me your rules at the start of every chat!", "It saves you from saying the same thing over and over."], "side_effect": { "action": "show_text", "text": "Use short words.", "color": "#ffb84d" } },
+    { "keywords": ["remember", "forget", "memory"], "typing_delay_ms": 750, "reply_lines": ["When you close the chat, I forget. That is just how I work!", "A sticky note fixes that — it reminds me every single time."], "side_effect": null },
+    { "keywords": ["rule", "always", "never", "tell"], "typing_delay_ms": 800, "reply_lines": ["Good sticky notes say things like 'always be kind' or 'use small words'.", "Short and clear is best — let us plan your note!"], "side_effect": null },
+    { "keywords": ["start", "beginning", "first"], "typing_delay_ms": 700, "reply_lines": ["Put the sticky note at the very start of your chat.", "Then I read it before I do anything else!"], "side_effect": null },
+    { "keywords": ["hi", "hello"], "typing_delay_ms": 600, "reply_lines": ["Hi! I am Claude. Let us plan a sticky note together!", "What rule would you want me to follow?"], "side_effect": null }
+  ]
+}
