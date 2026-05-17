@@ -312,27 +312,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🚀",
-              "right": true
-            },
-            {
-              "glyph": "🥬",
-              "right": false
-            },
-            {
-              "glyph": "🧅",
-              "right": false
-            },
-            {
-              "glyph": "🪣",
-              "right": false
-            }
-          ]
+          "prompt": "Type RUN and press Send to keep going!",
+          "target_display": "RUN",
+          "targets": [
+            "run"
+          ],
+          "hint_wrong": "Type the word RUN (any case is fine)."
         }
       },
       "variations": [
@@ -601,10 +588,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🚀"
+          "prompt": "Type POOP and press Send to keep going!",
+          "target_display": "POOP",
+          "targets": [
+            "poop"
+          ],
+          "hint_wrong": "Type the word POOP (any case is fine)."
         }
       },
       "variations": [
@@ -873,14 +864,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type LUIGI and press Send to keep going!",
+          "target_display": "LUIGI",
+          "targets": [
+            "luigi"
+          ],
+          "hint_wrong": "Type the word LUIGI (any case is fine)."
         }
       },
       "variations": [
@@ -1149,23 +1140,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type JUMP and press Send to keep going!",
+          "target_display": "JUMP",
+          "targets": [
+            "jump"
+          ],
+          "hint_wrong": "Type the word JUMP (any case is fine)."
         }
       },
       "variations": [
@@ -1436,12 +1418,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SNOT and press Send to keep going!",
-          "target_display": "SNOT",
+          "prompt": "Type DIRT and press Send to keep going!",
+          "target_display": "DIRT",
           "targets": [
-            "snot"
+            "dirt"
           ],
-          "hint_wrong": "Type the word SNOT (any case is fine)."
+          "hint_wrong": "Type the word DIRT (any case is fine)."
         }
       },
       "variations": [

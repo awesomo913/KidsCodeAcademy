@@ -319,23 +319,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type TOAD and press Send to keep going!",
+          "target_display": "TOAD",
+          "targets": [
+            "toad"
+          ],
+          "hint_wrong": "Type the word TOAD (any case is fine)."
         }
       },
       "variations": [
@@ -606,12 +597,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type WORLD and press Send to keep going!",
-          "target_display": "WORLD",
+          "prompt": "Type LEVEL and press Send to keep going!",
+          "target_display": "LEVEL",
           "targets": [
-            "world"
+            "level"
           ],
-          "hint_wrong": "Type the word WORLD (any case is fine)."
+          "hint_wrong": "Type the word LEVEL (any case is fine)."
         }
       },
       "variations": [
@@ -880,10 +871,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "💎"
+          "prompt": "Type EEVEE and press Send to keep going!",
+          "target_display": "EEVEE",
+          "targets": [
+            "eevee"
+          ],
+          "hint_wrong": "Type the word EEVEE (any case is fine)."
         }
       },
       "variations": [
@@ -1152,27 +1147,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🚀",
-              "right": true
-            },
-            {
-              "glyph": "🥬",
-              "right": false
-            },
-            {
-              "glyph": "🧅",
-              "right": false
-            },
-            {
-              "glyph": "🪣",
-              "right": false
-            }
-          ]
+          "prompt": "Type WORLD and press Send to keep going!",
+          "target_display": "WORLD",
+          "targets": [
+            "world"
+          ],
+          "hint_wrong": "Type the word WORLD (any case is fine)."
         }
       },
       "variations": [
@@ -1441,10 +1423,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🐢"
+          "prompt": "Type MEWTWO and press Send to keep going!",
+          "target_display": "MEWTWO",
+          "targets": [
+            "mewtwo"
+          ],
+          "hint_wrong": "Type the word MEWTWO (any case is fine)."
         }
       },
       "variations": [
@@ -1713,14 +1699,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type SCENE and press Send to keep going!",
+          "target_display": "SCENE",
+          "targets": [
+            "scene"
+          ],
+          "hint_wrong": "Type the word SCENE (any case is fine)."
         }
       },
       "variations": [

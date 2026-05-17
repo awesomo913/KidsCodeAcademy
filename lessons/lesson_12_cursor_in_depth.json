@@ -306,14 +306,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Cursor helps you code — order it:",
-          "steps": [
-            "You start typing",
-            "Cursor sees your code",
-            "Cursor suggests the rest"
-          ]
+          "prompt": "Type CODE and press Send to keep going!",
+          "target_display": "CODE",
+          "targets": [
+            "code"
+          ],
+          "hint_wrong": "Type the word CODE (any case is fine)."
         }
       },
       "variations": [
@@ -582,27 +582,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "⭐",
-              "right": true
-            },
-            {
-              "glyph": "🌧️",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪵",
-              "right": false
-            }
-          ]
+          "prompt": "Type ROBLOX and press Send to keep going!",
+          "target_display": "ROBLOX",
+          "targets": [
+            "roblox"
+          ],
+          "hint_wrong": "Type the word ROBLOX (any case is fine)."
         }
       },
       "variations": [
@@ -871,10 +858,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🐶"
+          "prompt": "Type BOT and press Send to keep going!",
+          "target_display": "BOT",
+          "targets": [
+            "bot"
+          ],
+          "hint_wrong": "Type the word BOT (any case is fine)."
         }
       },
       "variations": [
@@ -1143,14 +1134,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Cursor helps you code — order it:",
-          "steps": [
-            "You start typing",
-            "Cursor sees your code",
-            "Cursor suggests the rest"
-          ]
+          "prompt": "Type AMONG and press Send to keep going!",
+          "target_display": "AMONG",
+          "targets": [
+            "among"
+          ],
+          "hint_wrong": "Type the word AMONG (any case is fine)."
         }
       },
       "variations": [

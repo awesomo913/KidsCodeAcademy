@@ -34,16 +34,14 @@ log = logging.getLogger("diversify-gates")
 ROOT = Path(__file__).resolve().parent.parent
 LESSONS_DIR = ROOT / "lessons"
 
-# Gate-type rotation pool. Order matters: the stride below picks index N
-# from this list. type-this-word stays in the rotation so typing practice
-# continues — just no longer 100% of every gate.
+# v0.7.13 — typing-only rotation per user direction. Multi-type rotation
+# (tap-the-glow / pick-the-pic / sprite-poke / timeline-order / drag-to-match)
+# was distracting + losing the typing practice the kid actually needs. The
+# pools below are preserved for fast revert.
+#
+# To re-enable rotation: restore the multi-type list and re-run this script.
 GATE_TYPES: list[str] = [
     "type-this-word",
-    "tap-the-glow",
-    "pick-the-pic",
-    "sprite-poke",
-    "timeline-order",
-    "drag-to-match",
 ]
 
 # Sprite glyphs for sprite-poke — rotate so different lessons feel different
@@ -181,10 +179,11 @@ def diversify_lesson(path: Path, word_counter: list[int], dry: bool,
         # gates within a lesson differ).
         gate_idx = (lesson_id * 7 + q_idx) % len(GATE_TYPES)
         gate_type = GATE_TYPES[gate_idx]
-        # Special-case: history-scene lessons (5-16) get timeline-order at Q2
-        # so the previously passive lesson gains an authentic ordering puzzle.
-        if 5 <= lesson_id <= 16 and q_idx == 1:
-            gate_type = "timeline-order"
+        # v0.7.13 — history-scene timeline-order override disabled per user
+        # direction (typing-only across the curriculum). Restore by un-commenting
+        # if multi-type rotation returns.
+        # if 5 <= lesson_id <= 16 and q_idx == 1:
+        #     gate_type = "timeline-order"
         payload = _make_payload(gate_type, lesson_id, q_idx, word_counter[0])
         if gate_type == "type-this-word":
             word_counter[0] += 1

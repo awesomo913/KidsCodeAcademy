@@ -313,27 +313,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🤖",
-              "right": true
-            },
-            {
-              "glyph": "🐌",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            }
-          ]
+          "prompt": "Type CREEPER and press Send to keep going!",
+          "target_display": "CREEPER",
+          "targets": [
+            "creeper"
+          ],
+          "hint_wrong": "Type the word CREEPER (any case is fine)."
         }
       },
       "variations": [
@@ -602,10 +589,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🤖"
+          "prompt": "Type FLAG and press Send to keep going!",
+          "target_display": "FLAG",
+          "targets": [
+            "flag"
+          ],
+          "hint_wrong": "Type the word FLAG (any case is fine)."
         }
       },
       "variations": [
@@ -874,14 +865,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type GROSS and press Send to keep going!",
+          "target_display": "GROSS",
+          "targets": [
+            "gross"
+          ],
+          "hint_wrong": "Type the word GROSS (any case is fine)."
         }
       },
       "variations": [
@@ -1150,23 +1141,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type STEVE and press Send to keep going!",
+          "target_display": "STEVE",
+          "targets": [
+            "steve"
+          ],
+          "hint_wrong": "Type the word STEVE (any case is fine)."
         }
       },
       "variations": [
@@ -1437,12 +1419,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BOSS and press Send to keep going!",
-          "target_display": "BOSS",
+          "prompt": "Type DOOR and press Send to keep going!",
+          "target_display": "DOOR",
           "targets": [
-            "boss"
+            "door"
           ],
-          "hint_wrong": "Type the word BOSS (any case is fine)."
+          "hint_wrong": "Type the word DOOR (any case is fine)."
         }
       },
       "variations": [

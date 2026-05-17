@@ -318,23 +318,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type LINK and press Send to keep going!",
+          "target_display": "LINK",
+          "targets": [
+            "link"
+          ],
+          "hint_wrong": "Type the word LINK (any case is fine)."
         }
       },
       "variations": [
@@ -605,12 +596,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type PROMPT and press Send to keep going!",
-          "target_display": "PROMPT",
+          "prompt": "Type LOOP and press Send to keep going!",
+          "target_display": "LOOP",
           "targets": [
-            "prompt"
+            "loop"
           ],
-          "hint_wrong": "Type the word PROMPT (any case is fine)."
+          "hint_wrong": "Type the word LOOP (any case is fine)."
         }
       },
       "variations": [
@@ -879,10 +870,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🌈"
+          "prompt": "Type BURP and press Send to keep going!",
+          "target_display": "BURP",
+          "targets": [
+            "burp"
+          ],
+          "hint_wrong": "Type the word BURP (any case is fine)."
         }
       },
       "variations": [
@@ -1151,27 +1146,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "⭐",
-              "right": true
-            },
-            {
-              "glyph": "🌧️",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪵",
-              "right": false
-            }
-          ]
+          "prompt": "Type PIKACHU and press Send to keep going!",
+          "target_display": "PIKACHU",
+          "targets": [
+            "pikachu"
+          ],
+          "hint_wrong": "Type the word PIKACHU (any case is fine)."
         }
       },
       "variations": [
@@ -1440,10 +1422,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🦖"
+          "prompt": "Type HERO and press Send to keep going!",
+          "target_display": "HERO",
+          "targets": [
+            "hero"
+          ],
+          "hint_wrong": "Type the word HERO (any case is fine)."
         }
       },
       "variations": [
@@ -1712,14 +1698,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type TOOT and press Send to keep going!",
+          "target_display": "TOOT",
+          "targets": [
+            "toot"
+          ],
+          "hint_wrong": "Type the word TOOT (any case is fine)."
         }
       },
       "variations": [

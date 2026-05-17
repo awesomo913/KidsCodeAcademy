@@ -319,10 +319,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🦖"
+          "prompt": "Type MOVE and press Send to keep going!",
+          "target_display": "MOVE",
+          "targets": [
+            "move"
+          ],
+          "hint_wrong": "Type the word MOVE (any case is fine)."
         }
       },
       "variations": [
@@ -591,14 +595,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type TAILS and press Send to keep going!",
+          "target_display": "TAILS",
+          "targets": [
+            "tails"
+          ],
+          "hint_wrong": "Type the word TAILS (any case is fine)."
         }
       },
       "variations": [
@@ -867,23 +871,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type FIRE and press Send to keep going!",
+          "target_display": "FIRE",
+          "targets": [
+            "fire"
+          ],
+          "hint_wrong": "Type the word FIRE (any case is fine)."
         }
       },
       "variations": [
@@ -1154,12 +1149,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type JUMP and press Send to keep going!",
-          "target_display": "JUMP",
+          "prompt": "Type KIRBY and press Send to keep going!",
+          "target_display": "KIRBY",
           "targets": [
-            "jump"
+            "kirby"
           ],
-          "hint_wrong": "Type the word JUMP (any case is fine)."
+          "hint_wrong": "Type the word KIRBY (any case is fine)."
         }
       },
       "variations": [
@@ -1428,10 +1423,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "⚡"
+          "prompt": "Type STOP and press Send to keep going!",
+          "target_display": "STOP",
+          "targets": [
+            "stop"
+          ],
+          "hint_wrong": "Type the word STOP (any case is fine)."
         }
       },
       "variations": [
@@ -1700,27 +1699,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🚀",
-              "right": true
-            },
-            {
-              "glyph": "🥬",
-              "right": false
-            },
-            {
-              "glyph": "🧅",
-              "right": false
-            },
-            {
-              "glyph": "🪣",
-              "right": false
-            }
-          ]
+          "prompt": "Type ZELDA and press Send to keep going!",
+          "target_display": "ZELDA",
+          "targets": [
+            "zelda"
+          ],
+          "hint_wrong": "Type the word ZELDA (any case is fine)."
         }
       },
       "variations": [

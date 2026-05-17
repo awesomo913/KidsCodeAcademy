@@ -322,10 +322,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "💎"
+          "prompt": "Type STINK and press Send to keep going!",
+          "target_display": "STINK",
+          "targets": [
+            "stink"
+          ],
+          "hint_wrong": "Type the word STINK (any case is fine)."
         }
       },
       "variations": [
@@ -594,27 +598,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🍕",
-              "right": true
-            },
-            {
-              "glyph": "🥦",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            },
-            {
-              "glyph": "🧂",
-              "right": false
-            }
-          ]
+          "prompt": "Type MINECRAFT and press Send to keep going!",
+          "target_display": "MINECRAFT",
+          "targets": [
+            "minecraft"
+          ],
+          "hint_wrong": "Type the word MINECRAFT (any case is fine)."
         }
       },
       "variations": [
@@ -883,10 +874,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🤖"
+          "prompt": "Type STAR and press Send to keep going!",
+          "target_display": "STAR",
+          "targets": [
+            "star"
+          ],
+          "hint_wrong": "Type the word STAR (any case is fine)."
         }
       },
       "variations": [
@@ -1155,14 +1150,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type BARF and press Send to keep going!",
+          "target_display": "BARF",
+          "targets": [
+            "barf"
+          ],
+          "hint_wrong": "Type the word BARF (any case is fine)."
         }
       },
       "variations": [

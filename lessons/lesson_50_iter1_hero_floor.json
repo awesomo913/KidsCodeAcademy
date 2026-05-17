@@ -327,10 +327,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🐢"
+          "prompt": "Type FIX and press Send to keep going!",
+          "target_display": "FIX",
+          "targets": [
+            "fix"
+          ],
+          "hint_wrong": "Type the word FIX (any case is fine)."
         }
       },
       "variations": [
@@ -599,14 +603,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type SAVE and press Send to keep going!",
+          "target_display": "SAVE",
+          "targets": [
+            "save"
+          ],
+          "hint_wrong": "Type the word SAVE (any case is fine)."
         }
       },
       "variations": [
@@ -875,23 +879,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type SHARE and press Send to keep going!",
+          "target_display": "SHARE",
+          "targets": [
+            "share"
+          ],
+          "hint_wrong": "Type the word SHARE (any case is fine)."
         }
       },
       "variations": [
@@ -1162,12 +1157,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type BULBASAUR and press Send to keep going!",
-          "target_display": "BULBASAUR",
+          "prompt": "Type PIXEL and press Send to keep going!",
+          "target_display": "PIXEL",
           "targets": [
-            "bulbasaur"
+            "pixel"
           ],
-          "hint_wrong": "Type the word BULBASAUR (any case is fine)."
+          "hint_wrong": "Type the word PIXEL (any case is fine)."
         }
       },
       "variations": [
@@ -1436,10 +1431,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "⚡"
+          "prompt": "Type FRAME and press Send to keep going!",
+          "target_display": "FRAME",
+          "targets": [
+            "frame"
+          ],
+          "hint_wrong": "Type the word FRAME (any case is fine)."
         }
       },
       "variations": [
@@ -1708,27 +1707,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🤖",
-              "right": true
-            },
-            {
-              "glyph": "🐌",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            }
-          ]
+          "prompt": "Type SPRITE and press Send to keep going!",
+          "target_display": "SPRITE",
+          "targets": [
+            "sprite"
+          ],
+          "hint_wrong": "Type the word SPRITE (any case is fine)."
         }
       },
       "variations": [

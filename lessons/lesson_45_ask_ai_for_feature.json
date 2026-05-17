@@ -331,14 +331,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type GOOMBA and press Send to keep going!",
+          "target_display": "GOOMBA",
+          "targets": [
+            "goomba"
+          ],
+          "hint_wrong": "Type the word GOOMBA (any case is fine)."
         }
       },
       "variations": [
@@ -607,23 +607,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type SCORE and press Send to keep going!",
+          "target_display": "SCORE",
+          "targets": [
+            "score"
+          ],
+          "hint_wrong": "Type the word SCORE (any case is fine)."
         }
       },
       "variations": [
@@ -894,12 +885,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type EEVEE and press Send to keep going!",
-          "target_display": "EEVEE",
+          "prompt": "Type OOZE and press Send to keep going!",
+          "target_display": "OOZE",
           "targets": [
-            "eevee"
+            "ooze"
           ],
-          "hint_wrong": "Type the word EEVEE (any case is fine)."
+          "hint_wrong": "Type the word OOZE (any case is fine)."
         }
       },
       "variations": [
@@ -1168,10 +1159,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "💎"
+          "prompt": "Type PEACH and press Send to keep going!",
+          "target_display": "PEACH",
+          "targets": [
+            "peach"
+          ],
+          "hint_wrong": "Type the word PEACH (any case is fine)."
         }
       },
       "variations": [
@@ -1440,27 +1435,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🎮",
-              "right": true
-            },
-            {
-              "glyph": "🥦",
-              "right": false
-            },
-            {
-              "glyph": "📚",
-              "right": false
-            },
-            {
-              "glyph": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type TIMER and press Send to keep going!",
+          "target_display": "TIMER",
+          "targets": [
+            "timer"
+          ],
+          "hint_wrong": "Type the word TIMER (any case is fine)."
         }
       },
       "variations": [

@@ -323,14 +323,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Gemini handles pictures + words. Order:",
-          "steps": [
-            "Send a picture",
-            "Ask a question about it",
-            "Gemini answers"
-          ]
+          "prompt": "Type AGENT and press Send to keep going!",
+          "target_display": "AGENT",
+          "targets": [
+            "agent"
+          ],
+          "hint_wrong": "Type the word AGENT (any case is fine)."
         }
       },
       "variations": [
@@ -599,10 +599,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🐶"
+          "prompt": "Type GOOGLE and press Send to keep going!",
+          "target_display": "GOOGLE",
+          "targets": [
+            "google"
+          ],
+          "hint_wrong": "Type the word GOOGLE (any case is fine)."
         }
       },
       "variations": [
@@ -871,14 +875,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Gemini handles pictures + words. Order:",
-          "steps": [
-            "Send a picture",
-            "Ask a question about it",
-            "Gemini answers"
-          ]
+          "prompt": "Type PROMPT and press Send to keep going!",
+          "target_display": "PROMPT",
+          "targets": [
+            "prompt"
+          ],
+          "hint_wrong": "Type the word PROMPT (any case is fine)."
         }
       },
       "variations": [
@@ -1147,23 +1151,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type PLAN and press Send to keep going!",
+          "target_display": "PLAN",
+          "targets": [
+            "plan"
+          ],
+          "hint_wrong": "Type the word PLAN (any case is fine)."
         }
       },
       "variations": [
@@ -1434,12 +1429,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GUNK and press Send to keep going!",
-          "target_display": "GUNK",
+          "prompt": "Type BUILD and press Send to keep going!",
+          "target_display": "BUILD",
           "targets": [
-            "gunk"
+            "build"
           ],
-          "hint_wrong": "Type the word GUNK (any case is fine)."
+          "hint_wrong": "Type the word BUILD (any case is fine)."
         }
       },
       "variations": [

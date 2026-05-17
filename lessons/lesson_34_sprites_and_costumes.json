@@ -338,23 +338,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type IDEA and press Send to keep going!",
+          "target_display": "IDEA",
+          "targets": [
+            "idea"
+          ],
+          "hint_wrong": "Type the word IDEA (any case is fine)."
         }
       },
       "variations": [
@@ -625,12 +616,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type YUCK and press Send to keep going!",
-          "target_display": "YUCK",
+          "prompt": "Type GAME and press Send to keep going!",
+          "target_display": "GAME",
           "targets": [
-            "yuck"
+            "game"
           ],
-          "hint_wrong": "Type the word YUCK (any case is fine)."
+          "hint_wrong": "Type the word GAME (any case is fine)."
         }
       },
       "variations": [
@@ -899,10 +890,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🌈"
+          "prompt": "Type MAKE and press Send to keep going!",
+          "target_display": "MAKE",
+          "targets": [
+            "make"
+          ],
+          "hint_wrong": "Type the word MAKE (any case is fine)."
         }
       },
       "variations": [
@@ -1171,27 +1166,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🤖",
-              "right": true
-            },
-            {
-              "glyph": "🐌",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            }
-          ]
+          "prompt": "Type MAGIC and press Send to keep going!",
+          "target_display": "MAGIC",
+          "targets": [
+            "magic"
+          ],
+          "hint_wrong": "Type the word MAGIC (any case is fine)."
         }
       },
       "variations": [
@@ -1460,10 +1442,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🚀"
+          "prompt": "Type SMART and press Send to keep going!",
+          "target_display": "SMART",
+          "targets": [
+            "smart"
+          ],
+          "hint_wrong": "Type the word SMART (any case is fine)."
         }
       },
       "variations": [
@@ -1732,14 +1718,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type ROBOT and press Send to keep going!",
+          "target_display": "ROBOT",
+          "targets": [
+            "robot"
+          ],
+          "hint_wrong": "Type the word ROBOT (any case is fine)."
         }
       },
       "variations": [

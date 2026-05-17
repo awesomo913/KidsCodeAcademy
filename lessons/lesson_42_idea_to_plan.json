@@ -316,10 +316,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🎮"
+          "prompt": "Type COIN and press Send to keep going!",
+          "target_display": "COIN",
+          "targets": [
+            "coin"
+          ],
+          "hint_wrong": "Type the word COIN (any case is fine)."
         }
       },
       "variations": [
@@ -588,27 +592,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "⭐",
-              "right": true
-            },
-            {
-              "glyph": "🌧️",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪵",
-              "right": false
-            }
-          ]
+          "prompt": "Type STINK and press Send to keep going!",
+          "target_display": "STINK",
+          "targets": [
+            "stink"
+          ],
+          "hint_wrong": "Type the word STINK (any case is fine)."
         }
       },
       "variations": [
@@ -877,10 +868,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🐶"
+          "prompt": "Type MINECRAFT and press Send to keep going!",
+          "target_display": "MINECRAFT",
+          "targets": [
+            "minecraft"
+          ],
+          "hint_wrong": "Type the word MINECRAFT (any case is fine)."
         }
       },
       "variations": [
@@ -1149,14 +1144,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type STAR and press Send to keep going!",
+          "target_display": "STAR",
+          "targets": [
+            "star"
+          ],
+          "hint_wrong": "Type the word STAR (any case is fine)."
         }
       },
       "variations": [
@@ -1425,23 +1420,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type BARF and press Send to keep going!",
+          "target_display": "BARF",
+          "targets": [
+            "barf"
+          ],
+          "hint_wrong": "Type the word BARF (any case is fine)."
         }
       },
       "variations": [
@@ -1712,12 +1698,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type OOZE and press Send to keep going!",
-          "target_display": "OOZE",
+          "prompt": "Type CREEPER and press Send to keep going!",
+          "target_display": "CREEPER",
           "targets": [
-            "ooze"
+            "creeper"
           ],
-          "hint_wrong": "Type the word OOZE (any case is fine)."
+          "hint_wrong": "Type the word CREEPER (any case is fine)."
         }
       },
       "variations": [

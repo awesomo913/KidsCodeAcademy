@@ -316,14 +316,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type GUNK and press Send to keep going!",
+          "target_display": "GUNK",
+          "targets": [
+            "gunk"
+          ],
+          "hint_wrong": "Type the word GUNK (any case is fine)."
         }
       },
       "variations": [
@@ -592,23 +592,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type KIRBY and press Send to keep going!",
+          "target_display": "KIRBY",
+          "targets": [
+            "kirby"
+          ],
+          "hint_wrong": "Type the word KIRBY (any case is fine)."
         }
       },
       "variations": [
@@ -879,12 +870,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type LOOP and press Send to keep going!",
-          "target_display": "LOOP",
+          "prompt": "Type STOP and press Send to keep going!",
+          "target_display": "STOP",
           "targets": [
-            "loop"
+            "stop"
           ],
-          "hint_wrong": "Type the word LOOP (any case is fine)."
+          "hint_wrong": "Type the word STOP (any case is fine)."
         }
       },
       "variations": [
@@ -1153,10 +1144,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "💎"
+          "prompt": "Type GOOP and press Send to keep going!",
+          "target_display": "GOOP",
+          "targets": [
+            "goop"
+          ],
+          "hint_wrong": "Type the word GOOP (any case is fine)."
         }
       },
       "variations": [
@@ -1425,27 +1420,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "⭐",
-              "right": true
-            },
-            {
-              "glyph": "🌧️",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪵",
-              "right": false
-            }
-          ]
+          "prompt": "Type ZELDA and press Send to keep going!",
+          "target_display": "ZELDA",
+          "targets": [
+            "zelda"
+          ],
+          "hint_wrong": "Type the word ZELDA (any case is fine)."
         }
       },
       "variations": [

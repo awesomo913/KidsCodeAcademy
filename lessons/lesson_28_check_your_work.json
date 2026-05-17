@@ -313,23 +313,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type LEVEL and press Send to keep going!",
+          "target_display": "LEVEL",
+          "targets": [
+            "level"
+          ],
+          "hint_wrong": "Type the word LEVEL (any case is fine)."
         }
       },
       "variations": [
@@ -600,12 +591,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type COIN and press Send to keep going!",
-          "target_display": "COIN",
+          "prompt": "Type EEVEE and press Send to keep going!",
+          "target_display": "EEVEE",
           "targets": [
-            "coin"
+            "eevee"
           ],
-          "hint_wrong": "Type the word COIN (any case is fine)."
+          "hint_wrong": "Type the word EEVEE (any case is fine)."
         }
       },
       "variations": [
@@ -874,10 +865,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "⚡"
+          "prompt": "Type WORLD and press Send to keep going!",
+          "target_display": "WORLD",
+          "targets": [
+            "world"
+          ],
+          "hint_wrong": "Type the word WORLD (any case is fine)."
         }
       },
       "variations": [
@@ -1146,27 +1141,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "⭐",
-              "right": true
-            },
-            {
-              "glyph": "🌧️",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪵",
-              "right": false
-            }
-          ]
+          "prompt": "Type MEWTWO and press Send to keep going!",
+          "target_display": "MEWTWO",
+          "targets": [
+            "mewtwo"
+          ],
+          "hint_wrong": "Type the word MEWTWO (any case is fine)."
         }
       },
       "variations": [

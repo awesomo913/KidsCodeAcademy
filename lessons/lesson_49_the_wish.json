@@ -314,27 +314,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "⭐",
-              "right": true
-            },
-            {
-              "glyph": "🌧️",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪵",
-              "right": false
-            }
-          ]
+          "prompt": "Type PROMPT and press Send to keep going!",
+          "target_display": "PROMPT",
+          "targets": [
+            "prompt"
+          ],
+          "hint_wrong": "Type the word PROMPT (any case is fine)."
         }
       },
       "variations": [
@@ -603,10 +590,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🐢"
+          "prompt": "Type PLAN and press Send to keep going!",
+          "target_display": "PLAN",
+          "targets": [
+            "plan"
+          ],
+          "hint_wrong": "Type the word PLAN (any case is fine)."
         }
       },
       "variations": [
@@ -875,14 +866,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type BUILD and press Send to keep going!",
+          "target_display": "BUILD",
+          "targets": [
+            "build"
+          ],
+          "hint_wrong": "Type the word BUILD (any case is fine)."
         }
       },
       "variations": [
@@ -1151,23 +1142,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type DEBUG and press Send to keep going!",
+          "target_display": "DEBUG",
+          "targets": [
+            "debug"
+          ],
+          "hint_wrong": "Type the word DEBUG (any case is fine)."
         }
       },
       "variations": [
@@ -1438,12 +1420,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type MUSIC and press Send to keep going!",
-          "target_display": "MUSIC",
+          "prompt": "Type TEST and press Send to keep going!",
+          "target_display": "TEST",
           "targets": [
-            "music"
+            "test"
           ],
-          "hint_wrong": "Type the word MUSIC (any case is fine)."
+          "hint_wrong": "Type the word TEST (any case is fine)."
         }
       },
       "variations": [

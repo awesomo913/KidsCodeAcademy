@@ -310,14 +310,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Codex auto-completes code. Order:",
-          "steps": [
-            "You start typing",
-            "Codex spots the pattern",
-            "It finishes the line"
-          ]
+          "prompt": "Type DEBUG and press Send to keep going!",
+          "target_display": "DEBUG",
+          "targets": [
+            "debug"
+          ],
+          "hint_wrong": "Type the word DEBUG (any case is fine)."
         }
       },
       "variations": [
@@ -586,14 +586,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Codex auto-completes code. Order:",
-          "steps": [
-            "You start typing",
-            "Codex spots the pattern",
-            "It finishes the line"
-          ]
+          "prompt": "Type TEST and press Send to keep going!",
+          "target_display": "TEST",
+          "targets": [
+            "test"
+          ],
+          "hint_wrong": "Type the word TEST (any case is fine)."
         }
       },
       "variations": [
@@ -862,23 +862,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type FIX and press Send to keep going!",
+          "target_display": "FIX",
+          "targets": [
+            "fix"
+          ],
+          "hint_wrong": "Type the word FIX (any case is fine)."
         }
       },
       "variations": [
@@ -1149,12 +1140,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type KIRBY and press Send to keep going!",
-          "target_display": "KIRBY",
+          "prompt": "Type SAVE and press Send to keep going!",
+          "target_display": "SAVE",
           "targets": [
-            "kirby"
+            "save"
           ],
-          "hint_wrong": "Type the word KIRBY (any case is fine)."
+          "hint_wrong": "Type the word SAVE (any case is fine)."
         }
       },
       "variations": [
@@ -1423,10 +1414,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🎮"
+          "prompt": "Type SHARE and press Send to keep going!",
+          "target_display": "SHARE",
+          "targets": [
+            "share"
+          ],
+          "hint_wrong": "Type the word SHARE (any case is fine)."
         }
       },
       "variations": [
@@ -1695,27 +1690,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "⭐",
-              "right": true
-            },
-            {
-              "glyph": "🌧️",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪵",
-              "right": false
-            }
-          ]
+          "prompt": "Type PIXEL and press Send to keep going!",
+          "target_display": "PIXEL",
+          "targets": [
+            "pixel"
+          ],
+          "hint_wrong": "Type the word PIXEL (any case is fine)."
         }
       },
       "variations": [

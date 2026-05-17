@@ -331,14 +331,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Ollama runs on your computer — no internet. Order:",
-          "steps": [
-            "Download the model once",
-            "Ask a question",
-            "It answers without wifi"
-          ]
+          "prompt": "Type GAME and press Send to keep going!",
+          "target_display": "GAME",
+          "targets": [
+            "game"
+          ],
+          "hint_wrong": "Type the word GAME (any case is fine)."
         }
       },
       "variations": [
@@ -609,12 +609,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type GOOP and press Send to keep going!",
-          "target_display": "GOOP",
+          "prompt": "Type MAKE and press Send to keep going!",
+          "target_display": "MAKE",
           "targets": [
-            "goop"
+            "make"
           ],
-          "hint_wrong": "Type the word GOOP (any case is fine)."
+          "hint_wrong": "Type the word MAKE (any case is fine)."
         }
       },
       "variations": [
@@ -883,10 +883,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🎮"
+          "prompt": "Type MAGIC and press Send to keep going!",
+          "target_display": "MAGIC",
+          "targets": [
+            "magic"
+          ],
+          "hint_wrong": "Type the word MAGIC (any case is fine)."
         }
       },
       "variations": [
@@ -1155,27 +1159,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🚀",
-              "right": true
-            },
-            {
-              "glyph": "🥬",
-              "right": false
-            },
-            {
-              "glyph": "🧅",
-              "right": false
-            },
-            {
-              "glyph": "🪣",
-              "right": false
-            }
-          ]
+          "prompt": "Type SMART and press Send to keep going!",
+          "target_display": "SMART",
+          "targets": [
+            "smart"
+          ],
+          "hint_wrong": "Type the word SMART (any case is fine)."
         }
       },
       "variations": [

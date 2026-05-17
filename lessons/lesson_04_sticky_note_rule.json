@@ -325,23 +325,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type FORTNITE and press Send to keep going!",
+          "target_display": "FORTNITE",
+          "targets": [
+            "fortnite"
+          ],
+          "hint_wrong": "Type the word FORTNITE (any case is fine)."
         }
       },
       "variations": [
@@ -612,12 +603,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type MOVE and press Send to keep going!",
-          "target_display": "MOVE",
+          "prompt": "Type COIN and press Send to keep going!",
+          "target_display": "COIN",
           "targets": [
-            "move"
+            "coin"
           ],
-          "hint_wrong": "Type the word MOVE (any case is fine)."
+          "hint_wrong": "Type the word COIN (any case is fine)."
         }
       },
       "variations": [
@@ -886,10 +877,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "⚡"
+          "prompt": "Type MINECRAFT and press Send to keep going!",
+          "target_display": "MINECRAFT",
+          "targets": [
+            "minecraft"
+          ],
+          "hint_wrong": "Type the word MINECRAFT (any case is fine)."
         }
       },
       "variations": [
@@ -1158,27 +1153,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🤖",
-              "right": true
-            },
-            {
-              "glyph": "🐌",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            }
-          ]
+          "prompt": "Type STAR and press Send to keep going!",
+          "target_display": "STAR",
+          "targets": [
+            "star"
+          ],
+          "hint_wrong": "Type the word STAR (any case is fine)."
         }
       },
       "variations": [

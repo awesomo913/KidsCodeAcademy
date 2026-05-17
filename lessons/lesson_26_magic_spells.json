@@ -338,10 +338,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🤖"
+          "prompt": "Type YUCK and press Send to keep going!",
+          "target_display": "YUCK",
+          "targets": [
+            "yuck"
+          ],
+          "hint_wrong": "Type the word YUCK (any case is fine)."
         }
       },
       "variations": [
@@ -610,14 +614,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type BOWSER and press Send to keep going!",
+          "target_display": "BOWSER",
+          "targets": [
+            "bowser"
+          ],
+          "hint_wrong": "Type the word BOWSER (any case is fine)."
         }
       },
       "variations": [
@@ -886,23 +890,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type KEY and press Send to keep going!",
+          "target_display": "KEY",
+          "targets": [
+            "key"
+          ],
+          "hint_wrong": "Type the word KEY (any case is fine)."
         }
       },
       "variations": [
@@ -1173,12 +1168,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SLIME and press Send to keep going!",
-          "target_display": "SLIME",
+          "prompt": "Type SNOT and press Send to keep going!",
+          "target_display": "SNOT",
           "targets": [
-            "slime"
+            "snot"
           ],
-          "hint_wrong": "Type the word SLIME (any case is fine)."
+          "hint_wrong": "Type the word SNOT (any case is fine)."
         }
       },
       "variations": [
@@ -1447,10 +1442,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "⚡"
+          "prompt": "Type YOSHI and press Send to keep going!",
+          "target_display": "YOSHI",
+          "targets": [
+            "yoshi"
+          ],
+          "hint_wrong": "Type the word YOSHI (any case is fine)."
         }
       },
       "variations": [
@@ -1719,27 +1718,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🍕",
-              "right": true
-            },
-            {
-              "glyph": "🥦",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            },
-            {
-              "glyph": "🧂",
-              "right": false
-            }
-          ]
+          "prompt": "Type LIFE and press Send to keep going!",
+          "target_display": "LIFE",
+          "targets": [
+            "life"
+          ],
+          "hint_wrong": "Type the word LIFE (any case is fine)."
         }
       },
       "variations": [

@@ -340,14 +340,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "How did Turing dream up smart machines? Order it:",
-          "steps": [
-            "Notice a hard puzzle",
-            "Imagine a machine that solves it",
-            "Test the idea"
-          ]
+          "prompt": "Type SLIME and press Send to keep going!",
+          "target_display": "SLIME",
+          "targets": [
+            "slime"
+          ],
+          "hint_wrong": "Type the word SLIME (any case is fine)."
         }
       },
       "variations": [
@@ -616,27 +616,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🎮",
-              "right": true
-            },
-            {
-              "glyph": "🥦",
-              "right": false
-            },
-            {
-              "glyph": "📚",
-              "right": false
-            },
-            {
-              "glyph": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type FORTNITE and press Send to keep going!",
+          "target_display": "FORTNITE",
+          "targets": [
+            "fortnite"
+          ],
+          "hint_wrong": "Type the word FORTNITE (any case is fine)."
         }
       },
       "variations": [
@@ -905,10 +892,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🚀"
+          "prompt": "Type COIN and press Send to keep going!",
+          "target_display": "COIN",
+          "targets": [
+            "coin"
+          ],
+          "hint_wrong": "Type the word COIN (any case is fine)."
         }
       },
       "variations": [
@@ -1177,14 +1168,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "How did Turing dream up smart machines? Order it:",
-          "steps": [
-            "Notice a hard puzzle",
-            "Imagine a machine that solves it",
-            "Test the idea"
-          ]
+          "prompt": "Type STINK and press Send to keep going!",
+          "target_display": "STINK",
+          "targets": [
+            "stink"
+          ],
+          "hint_wrong": "Type the word STINK (any case is fine)."
         }
       },
       "variations": [
@@ -1453,23 +1444,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type MINECRAFT and press Send to keep going!",
+          "target_display": "MINECRAFT",
+          "targets": [
+            "minecraft"
+          ],
+          "hint_wrong": "Type the word MINECRAFT (any case is fine)."
         }
       },
       "variations": [
@@ -1740,12 +1722,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type DIRT and press Send to keep going!",
-          "target_display": "DIRT",
+          "prompt": "Type STAR and press Send to keep going!",
+          "target_display": "STAR",
           "targets": [
-            "dirt"
+            "star"
           ],
-          "hint_wrong": "Type the word DIRT (any case is fine)."
+          "hint_wrong": "Type the word STAR (any case is fine)."
         }
       },
       "variations": [

@@ -325,27 +325,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🍕",
-              "right": true
-            },
-            {
-              "glyph": "🥦",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            },
-            {
-              "glyph": "🧂",
-              "right": false
-            }
-          ]
+          "prompt": "Type GOOGLE and press Send to keep going!",
+          "target_display": "GOOGLE",
+          "targets": [
+            "google"
+          ],
+          "hint_wrong": "Type the word GOOGLE (any case is fine)."
         }
       },
       "variations": [
@@ -614,10 +601,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🦖"
+          "prompt": "Type PROMPT and press Send to keep going!",
+          "target_display": "PROMPT",
+          "targets": [
+            "prompt"
+          ],
+          "hint_wrong": "Type the word PROMPT (any case is fine)."
         }
       },
       "variations": [
@@ -886,14 +877,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type PLAN and press Send to keep going!",
+          "target_display": "PLAN",
+          "targets": [
+            "plan"
+          ],
+          "hint_wrong": "Type the word PLAN (any case is fine)."
         }
       },
       "variations": [
@@ -1162,23 +1153,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type BUILD and press Send to keep going!",
+          "target_display": "BUILD",
+          "targets": [
+            "build"
+          ],
+          "hint_wrong": "Type the word BUILD (any case is fine)."
         }
       },
       "variations": [
@@ -1449,12 +1431,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type FLAG and press Send to keep going!",
-          "target_display": "FLAG",
+          "prompt": "Type DEBUG and press Send to keep going!",
+          "target_display": "DEBUG",
           "targets": [
-            "flag"
+            "debug"
           ],
-          "hint_wrong": "Type the word FLAG (any case is fine)."
+          "hint_wrong": "Type the word DEBUG (any case is fine)."
         }
       },
       "variations": [
@@ -1723,10 +1705,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🌈"
+          "prompt": "Type TEST and press Send to keep going!",
+          "target_display": "TEST",
+          "targets": [
+            "test"
+          ],
+          "hint_wrong": "Type the word TEST (any case is fine)."
         }
       },
       "variations": [
@@ -1995,27 +1981,14 @@
     {
       "id": "q8",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🎮",
-              "right": true
-            },
-            {
-              "glyph": "🥦",
-              "right": false
-            },
-            {
-              "glyph": "📚",
-              "right": false
-            },
-            {
-              "glyph": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type FIX and press Send to keep going!",
+          "target_display": "FIX",
+          "targets": [
+            "fix"
+          ],
+          "hint_wrong": "Type the word FIX (any case is fine)."
         }
       },
       "variations": [

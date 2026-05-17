@@ -319,14 +319,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "OpenCode is open for everyone. Order:",
-          "steps": [
-            "Open the chest",
-            "Share with friends",
-            "They can learn too"
-          ]
+          "prompt": "Type FRAME and press Send to keep going!",
+          "target_display": "FRAME",
+          "targets": [
+            "frame"
+          ],
+          "hint_wrong": "Type the word FRAME (any case is fine)."
         }
       },
       "variations": [
@@ -595,23 +595,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type SPRITE and press Send to keep going!",
+          "target_display": "SPRITE",
+          "targets": [
+            "sprite"
+          ],
+          "hint_wrong": "Type the word SPRITE (any case is fine)."
         }
       },
       "variations": [
@@ -882,12 +873,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type STOP and press Send to keep going!",
-          "target_display": "STOP",
+          "prompt": "Type INPUT and press Send to keep going!",
+          "target_display": "INPUT",
           "targets": [
-            "stop"
+            "input"
           ],
-          "hint_wrong": "Type the word STOP (any case is fine)."
+          "hint_wrong": "Type the word INPUT (any case is fine)."
         }
       },
       "variations": [
@@ -1156,10 +1147,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🎮"
+          "prompt": "Type EVENT and press Send to keep going!",
+          "target_display": "EVENT",
+          "targets": [
+            "event"
+          ],
+          "hint_wrong": "Type the word EVENT (any case is fine)."
         }
       },
       "variations": [
@@ -1428,27 +1423,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🎮",
-              "right": true
-            },
-            {
-              "glyph": "🥦",
-              "right": false
-            },
-            {
-              "glyph": "📚",
-              "right": false
-            },
-            {
-              "glyph": "🧦",
-              "right": false
-            }
-          ]
+          "prompt": "Type PLAYER and press Send to keep going!",
+          "target_display": "PLAYER",
+          "targets": [
+            "player"
+          ],
+          "hint_wrong": "Type the word PLAYER (any case is fine)."
         }
       },
       "variations": [
@@ -1717,10 +1699,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🐢"
+          "prompt": "Type ASSET and press Send to keep going!",
+          "target_display": "ASSET",
+          "targets": [
+            "asset"
+          ],
+          "hint_wrong": "Type the word ASSET (any case is fine)."
         }
       },
       "variations": [
@@ -1989,14 +1975,14 @@
     {
       "id": "q8",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "OpenCode is open for everyone. Order:",
-          "steps": [
-            "Open the chest",
-            "Share with friends",
-            "They can learn too"
-          ]
+          "prompt": "Type IDEA and press Send to keep going!",
+          "target_display": "IDEA",
+          "targets": [
+            "idea"
+          ],
+          "hint_wrong": "Type the word IDEA (any case is fine)."
         }
       },
       "variations": [

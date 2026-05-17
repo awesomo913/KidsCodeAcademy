@@ -314,14 +314,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type SPRITE and press Send to keep going!",
+          "target_display": "SPRITE",
+          "targets": [
+            "sprite"
+          ],
+          "hint_wrong": "Type the word SPRITE (any case is fine)."
         }
       },
       "variations": [
@@ -590,23 +590,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type INPUT and press Send to keep going!",
+          "target_display": "INPUT",
+          "targets": [
+            "input"
+          ],
+          "hint_wrong": "Type the word INPUT (any case is fine)."
         }
       },
       "variations": [
@@ -877,12 +868,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type DOOR and press Send to keep going!",
-          "target_display": "DOOR",
+          "prompt": "Type EVENT and press Send to keep going!",
+          "target_display": "EVENT",
           "targets": [
-            "door"
+            "event"
           ],
-          "hint_wrong": "Type the word DOOR (any case is fine)."
+          "hint_wrong": "Type the word EVENT (any case is fine)."
         }
       },
       "variations": [
@@ -1151,10 +1142,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🌈"
+          "prompt": "Type PLAYER and press Send to keep going!",
+          "target_display": "PLAYER",
+          "targets": [
+            "player"
+          ],
+          "hint_wrong": "Type the word PLAYER (any case is fine)."
         }
       },
       "variations": [
@@ -1423,27 +1418,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🍕",
-              "right": true
-            },
-            {
-              "glyph": "🥦",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            },
-            {
-              "glyph": "🧂",
-              "right": false
-            }
-          ]
+          "prompt": "Type ASSET and press Send to keep going!",
+          "target_display": "ASSET",
+          "targets": [
+            "asset"
+          ],
+          "hint_wrong": "Type the word ASSET (any case is fine)."
         }
       },
       "variations": [

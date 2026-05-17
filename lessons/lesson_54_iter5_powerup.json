@@ -327,10 +327,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "⚡"
+          "prompt": "Type CURSOR and press Send to keep going!",
+          "target_display": "CURSOR",
+          "targets": [
+            "cursor"
+          ],
+          "hint_wrong": "Type the word CURSOR (any case is fine)."
         }
       },
       "variations": [
@@ -599,27 +603,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🍕",
-              "right": true
-            },
-            {
-              "glyph": "🥦",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            },
-            {
-              "glyph": "🧂",
-              "right": false
-            }
-          ]
+          "prompt": "Type PYTHON and press Send to keep going!",
+          "target_display": "PYTHON",
+          "targets": [
+            "python"
+          ],
+          "hint_wrong": "Type the word PYTHON (any case is fine)."
         }
       },
       "variations": [
@@ -888,10 +879,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🤖"
+          "prompt": "Type JAVASCRIPT and press Send to keep going!",
+          "target_display": "JAVASCRIPT",
+          "targets": [
+            "javascript"
+          ],
+          "hint_wrong": "Type the word JAVASCRIPT (any case is fine)."
         }
       },
       "variations": [
@@ -1160,14 +1155,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type FART and press Send to keep going!",
+          "target_display": "FART",
+          "targets": [
+            "fart"
+          ],
+          "hint_wrong": "Type the word FART (any case is fine)."
         }
       },
       "variations": [
@@ -1436,23 +1431,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type MARIO and press Send to keep going!",
+          "target_display": "MARIO",
+          "targets": [
+            "mario"
+          ],
+          "hint_wrong": "Type the word MARIO (any case is fine)."
         }
       },
       "variations": [
@@ -1723,12 +1709,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type ROBLOX and press Send to keep going!",
-          "target_display": "ROBLOX",
+          "prompt": "Type RUN and press Send to keep going!",
+          "target_display": "RUN",
           "targets": [
-            "roblox"
+            "run"
           ],
-          "hint_wrong": "Type the word ROBLOX (any case is fine)."
+          "hint_wrong": "Type the word RUN (any case is fine)."
         }
       },
       "variations": [

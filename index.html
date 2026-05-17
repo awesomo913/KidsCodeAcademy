@@ -370,6 +370,19 @@ button { font-family: inherit; cursor: pointer; }
 }
 .qans { transition: opacity var(--dur); }
 .qans.hidden { display: none; }
+/* v0.7.13 — reading-lock visual: dim + block pointer events on answer
+ * choices while narration / prompt is still being read aloud. CSS-only;
+ * JS toggles the class via _kcaReadingApplyVisuals(). */
+.qans.reading-lock { pointer-events: none; opacity: 0.55; filter: grayscale(20%); }
+.qans.reading-lock::after {
+  content: "🔊 listening…";
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #6c5ce7;
+  margin-top: 6px;
+  font-weight: 600;
+}
 .qprompt {
   margin: 6px 0 14px;
   font-size: 22px;
@@ -2143,6 +2156,51 @@ let _kcaHoverAudio = null;
 let _kcaHoverTimer = null;
 let _kcaHoverActiveBtn = null;
 
+/* v0.7.13 — Reading-lock + post-audio cooldown.
+ *
+ * Two cooperative pieces:
+ *   1. ReadingLock — a refcount tracking "is the program currently reading
+ *      something out loud?" While > 0, answer-button clicks are blocked
+ *      (visually dimmed via .reading-lock CSS class on .qans) and hover
+ *      audio refuses to fire. Refcount because lesson narration + question
+ *      prompt + hover audio + speakText can theoretically overlap during
+ *      transitions; pure boolean would underflow.
+ *   2. _kcaHoverLockUntil — millisecond timestamp marking "earliest moment
+ *      a NEW hover audio is allowed to start." Pushed forward to (now + 3000)
+ *      whenever ANY reading audio ends. Result: kid can't rapid-scrub across
+ *      options and trigger 4 voices back-to-back.
+ *
+ * The 250ms enter debounce remains for first hover; subsequent hovers
+ * post-audio wait the full 3s cooldown.
+ */
+let _kcaReadingActive = 0;
+let _kcaHoverLockUntil = 0;
+const _KCA_POST_AUDIO_COOLDOWN_MS = 3000;
+function _kcaReadingBegin() {
+  _kcaReadingActive += 1;
+  _kcaReadingApplyVisuals();
+}
+function _kcaReadingEnd() {
+  _kcaReadingActive = Math.max(0, _kcaReadingActive - 1);
+  _kcaReadingApplyVisuals();
+  // Push the no-hover window forward — even if active count just hit 0,
+  // we give the kid 3 seconds of quiet before the next voice can start.
+  _kcaHoverLockUntil = Date.now() + _KCA_POST_AUDIO_COOLDOWN_MS;
+}
+function _kcaReadingActiveNow() { return _kcaReadingActive > 0; }
+function _kcaReadingApplyVisuals() {
+  // .reading-lock toggles CSS pointer-events:none on the choice grid so the
+  // kid can't tap an answer while the program is still reading it out.
+  try {
+    document.querySelectorAll(".qans").forEach(n => {
+      n.classList.toggle("reading-lock", _kcaReadingActive > 0);
+    });
+  } catch (e) {
+    // Don't swallow silently — a stuck reading-lock with no log is invisible.
+    console.warn("[KCA] reading-lock visual update failed:", e);
+  }
+}
+
 /* Voice mutex — only ONE voice channel speaks at a time.
  * Four channels: lessonAudio (long narration), _kcaQAudio (question prompts),
  * speechSynthesis (Web Speech fallback + chess voice + ToolSimulator intro),
@@ -2190,15 +2248,25 @@ function _silenceVoiceChannels(except) {
  */
 function startHoverAudio(btn, text, bakedPath) {
   if (!btn || _kcaHoverActiveBtn === btn) return;
+  // v0.7.13 Fix C: if narration / prompt / chat speech is reading right
+  // now, never start a hover audio — kid hears one voice at a time.
+  if (_kcaReadingActiveNow()) return;
   cancelHoverAudio();
   // Capture the target btn in closure so async play()/error callbacks can verify
-  // the kid is still on this button before falling back. Without the capture,
-  // a slow play() rejection could speak the WRONG option's text after the kid
-  // has already moved to a different button.
+  // the kid is still on this button before falling back.
   const targetBtn = btn;
   const targetText = text;
+  // v0.7.13 Fix D: post-audio cooldown. Delay = max(250ms debounce, time until
+  // _kcaHoverLockUntil expires). First hover = 250ms. Hover during/just-after
+  // any reading audio = up to 3s wait so voices don't pile on each other.
+  const now = Date.now();
+  const baseDelay = 250;
+  const cooldownDelay = Math.max(0, _kcaHoverLockUntil - now);
+  const delay = Math.max(baseDelay, cooldownDelay);
   _kcaHoverTimer = setTimeout(() => {
     _kcaHoverTimer = null;
+    // Re-check at fire time — narration may have STARTED during the wait.
+    if (_kcaReadingActiveNow()) return;
     _kcaHoverActiveBtn = targetBtn;
     _silenceVoiceChannels("hover");
     if (bakedPath) {
@@ -2207,19 +2275,21 @@ function startHoverAudio(btn, text, bakedPath) {
           _kcaHoverAudio = document.createElement("audio");
           _kcaHoverAudio.preload = "auto";
           document.body.appendChild(_kcaHoverAudio);
-          // Clear the active-btn lock when audio finishes naturally so a
-          // stays-hovered kid can re-trigger by leaving + re-entering.
-          _kcaHoverAudio.addEventListener("ended", () => { _kcaHoverActiveBtn = null; });
-          _kcaHoverAudio.addEventListener("error", () => { _kcaHoverActiveBtn = null; });
+          // v0.7.13 Fix C + D: hover audio is itself "reading" — locks answer
+          // clicks while playing, AND pushes the post-audio cooldown forward.
+          let __hReading = false;
+          const __hBegin = () => { if (!__hReading) { __hReading = true; _kcaReadingBegin(); } };
+          const __hEnd   = () => { if (__hReading)  { __hReading = false; _kcaReadingEnd(); } _kcaHoverActiveBtn = null; };
+          _kcaHoverAudio.addEventListener("play",  __hBegin);
+          _kcaHoverAudio.addEventListener("ended", __hEnd);
+          _kcaHoverAudio.addEventListener("pause", __hEnd);
+          _kcaHoverAudio.addEventListener("error", __hEnd);
         }
         _kcaHoverAudio.pause();
         _kcaHoverAudio.src = String(bakedPath) + "?_=" + Date.now();
-        // .load() forces WebKitGTK (Pi) to flush stale network state on src
-        // reassign — without it, play() silently fails on rapid hover-mash.
         try { _kcaHoverAudio.load(); } catch (_) {}
         _kcaHoverAudio.currentTime = 0;
         _kcaHoverAudio.play().catch(() => {
-          // Only fall back if the kid is STILL hovering this same button.
           if (_kcaHoverActiveBtn !== targetBtn) return;
           _kcaHoverActiveBtn = null;
           speakHoverFallback(targetText);
@@ -2248,6 +2318,23 @@ function speakHoverFallback(text) {
     u.rate = 0.95;
     u.pitch = 1.1;
     u.volume = 1.0;
+    // v0.7.13 Fix C: hover-fallback Web Speech also participates in the
+    // reading-lock so answer clicks are still blocked while it speaks.
+    // Same 15s watchdog as speakText — WebKitGTK can drop onend silently.
+    let __hsActive = false;
+    let __hsGuard = null;
+    const __hsBegin = () => {
+      if (!__hsActive) { __hsActive = true; _kcaReadingBegin(); }
+      if (__hsGuard) clearTimeout(__hsGuard);
+      __hsGuard = setTimeout(() => { try { __hsEnd(); } catch (_) {} }, 15000);
+    };
+    const __hsEnd = () => {
+      if (__hsGuard) { clearTimeout(__hsGuard); __hsGuard = null; }
+      if (__hsActive) { __hsActive = false; _kcaReadingEnd(); }
+    };
+    u.onstart = __hsBegin;
+    u.onend = __hsEnd;
+    u.onerror = __hsEnd;
     window.speechSynthesis.speak(u);
   } catch (_) {}
 }
@@ -2274,10 +2361,21 @@ const Audio_ = {
     if (!a) return;
     _silenceVoiceChannels("lesson");  // kill any speech/question prompt before narration starts
     Ambient.duck(true);  // v0.7.11 Fix 3: lower bg music while narration plays
-    a.onended = () => { Ambient.duck(false); if (typeof onEnd === "function") onEnd(); };
-    a.onpause = () => Ambient.duck(false);
+    // v0.7.13 Fix C: reading-lock — block answer clicks + hover while narration plays.
+    // Pair every begin() with exactly one end() across all terminal events.
+    _kcaReadingBegin();
+    let __ended = false;
+    const __end = () => {
+      if (__ended) return;
+      __ended = true;
+      Ambient.duck(false);
+      _kcaReadingEnd();
+    };
+    a.onended = () => { __end(); if (typeof onEnd === "function") onEnd(); };
+    a.onpause = __end;
+    a.onerror = __end;
     a.src = src + "?_=" + Date.now();
-    a.play().catch(e => console.warn("playLesson", src, e));
+    a.play().catch(e => { console.warn("playLesson", src, e); __end(); });
   },
   stop() {
     // Stop button = kid wants silence everywhere
@@ -2286,6 +2384,12 @@ const Audio_ = {
     if (!a) return;
     a.currentTime = 0;
     Ambient.duck(false);
+    // Force-clear reading-lock on hard stop (refcount could be 1 if narration
+    // was active and its onpause hadn't fired yet). Also reset the hover
+    // cooldown — kid pressed stop, they shouldn't wait 3s to interact again.
+    _kcaReadingActive = 0;
+    _kcaHoverLockUntil = 0;
+    _kcaReadingApplyVisuals();
   },
 };
 
@@ -3198,6 +3302,24 @@ function speakText(t) {
     u.rate = 0.95;
     u.pitch = 1.1;
     u.volume = 1.0;
+    // v0.7.13 Fix C: lock answer clicks while speech is reading. Browsers fire
+    // 'end' on natural completion and on cancel(); 'error' covers blocked TTS.
+    // Watchdog: WebKitGTK (Pi) can silently drop onend on cancel(), pinning
+    // the lock. Force-end after 15s if utterance never reports completion.
+    let __sActive = false;
+    let __sGuard = null;
+    const __sBegin = () => {
+      if (!__sActive) { __sActive = true; _kcaReadingBegin(); }
+      if (__sGuard) clearTimeout(__sGuard);
+      __sGuard = setTimeout(() => { try { __sEnd(); } catch (_) {} }, 15000);
+    };
+    const __sEnd = () => {
+      if (__sGuard) { clearTimeout(__sGuard); __sGuard = null; }
+      if (__sActive) { __sActive = false; _kcaReadingEnd(); }
+    };
+    u.onstart = __sBegin;
+    u.onend = __sEnd;
+    u.onerror = __sEnd;
     window.speechSynthesis.speak(u);
   } catch (_) { /* TTS is best-effort */ }
 }
@@ -3216,6 +3338,15 @@ function playBakedAudio(path) {
     _kcaQAudio = document.createElement("audio");
     _kcaQAudio.preload = "auto";
     document.body.appendChild(_kcaQAudio);
+    // v0.7.13 Fix C: lock answer clicks while the question prompt is reading.
+    // Attached once at element creation — applies to every subsequent play.
+    let __qReading = false;
+    const __qBegin = () => { if (!__qReading) { __qReading = true; _kcaReadingBegin(); } };
+    const __qEnd   = () => { if (__qReading)  { __qReading = false; _kcaReadingEnd(); } };
+    _kcaQAudio.addEventListener("play",   __qBegin);
+    _kcaQAudio.addEventListener("ended",  __qEnd);
+    _kcaQAudio.addEventListener("pause",  __qEnd);
+    _kcaQAudio.addEventListener("error",  __qEnd);
   }
   try {
     _kcaQAudio.pause();
@@ -7402,8 +7533,10 @@ const UI = {
     view.appendChild(el("h2", null, String(lesson.title || "")));
     view.appendChild(el("p", { class: "goal" }, String(lesson.goal || "")));
 
-    // Spawn 3 collectibles per lesson (Combo + Glints lift retention).
-    try { Glints.spawn(view, 3); } catch (_) {}
+    // v0.7.13 — Glints (bonus stars) disabled per user direction; were
+    // distracting from the lesson + kid was conflating them with question
+    // gates. Code retained behind comment for fast re-enable.
+    // try { Glints.spawn(view, 3); } catch (_) {}
 
     const stage = el("div", { class: "stage" });
     view.appendChild(stage);
@@ -7476,16 +7609,18 @@ const UI = {
       QuestionFlow.run(lesson, ok => ok && this.completeLesson(id));
     }
 
-    // Help button — added AFTER game renders (KidGame.run clears the host first).
-    // Renders only when the lesson authored hints.
-    if (lesson.hints && (lesson.hints.tier1 || lesson.hints.tier2 || lesson.hints.tier3)) {
-      const help = el("button", {
-        class: "help-fab",
-        title: "Need a hint?",
-        onclick: (e) => { e.stopPropagation(); Tracker.click(); Hints.open(lesson); },
-      }, "🤔");
-      game.appendChild(help);
-    }
+    // v0.7.13 — help-fab disabled per user direction (the floating 🤔 button
+    // was reading as a "bonus sticker" hovering on the question card). Hints
+    // are still authored on lessons; re-enable here when we have a better
+    // UI placement (e.g. tab in Parent Corner, or inline below the question).
+    // if (lesson.hints && (lesson.hints.tier1 || lesson.hints.tier2 || lesson.hints.tier3)) {
+    //   const help = el("button", {
+    //     class: "help-fab",
+    //     title: "Need a hint?",
+    //     onclick: (e) => { e.stopPropagation(); Tracker.click(); Hints.open(lesson); },
+    //   }, "🤔");
+    //   game.appendChild(help);
+    // }
 
     this.renderSidebar();
     Audio_.sfx("Page");

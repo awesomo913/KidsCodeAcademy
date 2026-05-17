@@ -327,14 +327,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type INPUT and press Send to keep going!",
+          "target_display": "INPUT",
+          "targets": [
+            "input"
+          ],
+          "hint_wrong": "Type the word INPUT (any case is fine)."
         }
       },
       "variations": [
@@ -603,23 +603,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type EVENT and press Send to keep going!",
+          "target_display": "EVENT",
+          "targets": [
+            "event"
+          ],
+          "hint_wrong": "Type the word EVENT (any case is fine)."
         }
       },
       "variations": [
@@ -890,12 +881,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type SOUND and press Send to keep going!",
-          "target_display": "SOUND",
+          "prompt": "Type PLAYER and press Send to keep going!",
+          "target_display": "PLAYER",
           "targets": [
-            "sound"
+            "player"
           ],
-          "hint_wrong": "Type the word SOUND (any case is fine)."
+          "hint_wrong": "Type the word PLAYER (any case is fine)."
         }
       },
       "variations": [
@@ -1164,10 +1155,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "⚡"
+          "prompt": "Type ASSET and press Send to keep going!",
+          "target_display": "ASSET",
+          "targets": [
+            "asset"
+          ],
+          "hint_wrong": "Type the word ASSET (any case is fine)."
         }
       },
       "variations": [
@@ -1436,27 +1431,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "⭐",
-              "right": true
-            },
-            {
-              "glyph": "🌧️",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪵",
-              "right": false
-            }
-          ]
+          "prompt": "Type IDEA and press Send to keep going!",
+          "target_display": "IDEA",
+          "targets": [
+            "idea"
+          ],
+          "hint_wrong": "Type the word IDEA (any case is fine)."
         }
       },
       "variations": [
@@ -1725,10 +1707,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🤖"
+          "prompt": "Type GAME and press Send to keep going!",
+          "target_display": "GAME",
+          "targets": [
+            "game"
+          ],
+          "hint_wrong": "Type the word GAME (any case is fine)."
         }
       },
       "variations": [
@@ -1997,14 +1983,14 @@
     {
       "id": "q8",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type MAKE and press Send to keep going!",
+          "target_display": "MAKE",
+          "targets": [
+            "make"
+          ],
+          "hint_wrong": "Type the word MAKE (any case is fine)."
         }
       },
       "variations": [

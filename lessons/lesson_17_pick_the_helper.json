@@ -349,12 +349,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type ZELDA and press Send to keep going!",
-          "target_display": "ZELDA",
+          "prompt": "Type ROBOT and press Send to keep going!",
+          "target_display": "ROBOT",
           "targets": [
-            "zelda"
+            "robot"
           ],
-          "hint_wrong": "Type the word ZELDA (any case is fine)."
+          "hint_wrong": "Type the word ROBOT (any case is fine)."
         }
       },
       "variations": [
@@ -623,10 +623,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🎮"
+          "prompt": "Type BRAIN and press Send to keep going!",
+          "target_display": "BRAIN",
+          "targets": [
+            "brain"
+          ],
+          "hint_wrong": "Type the word BRAIN (any case is fine)."
         }
       },
       "variations": [
@@ -895,27 +899,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🍕",
-              "right": true
-            },
-            {
-              "glyph": "🥦",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            },
-            {
-              "glyph": "🧂",
-              "right": false
-            }
-          ]
+          "prompt": "Type POWER and press Send to keep going!",
+          "target_display": "POWER",
+          "targets": [
+            "power"
+          ],
+          "hint_wrong": "Type the word POWER (any case is fine)."
         }
       },
       "variations": [
@@ -1184,10 +1175,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🐢"
+          "prompt": "Type READY and press Send to keep going!",
+          "target_display": "READY",
+          "targets": [
+            "ready"
+          ],
+          "hint_wrong": "Type the word READY (any case is fine)."
         }
       },
       "variations": [
@@ -1456,14 +1451,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Put the steps in order:",
-          "steps": [
-            "First",
-            "Next",
-            "Last"
-          ]
+          "prompt": "Type START and press Send to keep going!",
+          "target_display": "START",
+          "targets": [
+            "start"
+          ],
+          "hint_wrong": "Type the word START (any case is fine)."
         }
       },
       "variations": [

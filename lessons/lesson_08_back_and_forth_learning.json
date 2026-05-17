@@ -331,14 +331,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Back-and-forth learning order:",
-          "steps": [
-            "You ask a question",
-            "AI answers",
-            "You correct it if it's wrong"
-          ]
+          "prompt": "Type BOWSER and press Send to keep going!",
+          "target_display": "BOWSER",
+          "targets": [
+            "bowser"
+          ],
+          "hint_wrong": "Type the word BOWSER (any case is fine)."
         }
       },
       "variations": [
@@ -607,14 +607,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Back-and-forth learning order:",
-          "steps": [
-            "You ask a question",
-            "AI answers",
-            "You correct it if it's wrong"
-          ]
+          "prompt": "Type KEY and press Send to keep going!",
+          "target_display": "KEY",
+          "targets": [
+            "key"
+          ],
+          "hint_wrong": "Type the word KEY (any case is fine)."
         }
       },
       "variations": [
@@ -883,23 +883,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type SNOT and press Send to keep going!",
+          "target_display": "SNOT",
+          "targets": [
+            "snot"
+          ],
+          "hint_wrong": "Type the word SNOT (any case is fine)."
         }
       },
       "variations": [
@@ -1170,12 +1161,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type MOVE and press Send to keep going!",
-          "target_display": "MOVE",
+          "prompt": "Type YOSHI and press Send to keep going!",
+          "target_display": "YOSHI",
           "targets": [
-            "move"
+            "yoshi"
           ],
-          "hint_wrong": "Type the word MOVE (any case is fine)."
+          "hint_wrong": "Type the word YOSHI (any case is fine)."
         }
       },
       "variations": [

@@ -327,14 +327,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "How does AI pay attention to words?",
-          "steps": [
-            "See all the words",
-            "Decide which ones matter",
-            "Use those to answer"
-          ]
+          "prompt": "Type LIFE and press Send to keep going!",
+          "target_display": "LIFE",
+          "targets": [
+            "life"
+          ],
+          "hint_wrong": "Type the word LIFE (any case is fine)."
         }
       },
       "variations": [
@@ -603,23 +603,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Save",
-              "right": "💾"
-            },
-            {
-              "left": "Share",
-              "right": "📤"
-            },
-            {
-              "left": "Build",
-              "right": "🔨"
-            }
-          ]
+          "prompt": "Type WART and press Send to keep going!",
+          "target_display": "WART",
+          "targets": [
+            "wart"
+          ],
+          "hint_wrong": "Type the word WART (any case is fine)."
         }
       },
       "variations": [
@@ -890,12 +881,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type MUD and press Send to keep going!",
-          "target_display": "MUD",
+          "prompt": "Type GOOMBA and press Send to keep going!",
+          "target_display": "GOOMBA",
           "targets": [
-            "mud"
+            "goomba"
           ],
-          "hint_wrong": "Type the word MUD (any case is fine)."
+          "hint_wrong": "Type the word GOOMBA (any case is fine)."
         }
       },
       "variations": [
@@ -1164,10 +1155,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🌈"
+          "prompt": "Type SCORE and press Send to keep going!",
+          "target_display": "SCORE",
+          "targets": [
+            "score"
+          ],
+          "hint_wrong": "Type the word SCORE (any case is fine)."
         }
       },
       "variations": [
@@ -1436,27 +1431,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🚀",
-              "right": true
-            },
-            {
-              "glyph": "🥬",
-              "right": false
-            },
-            {
-              "glyph": "🧅",
-              "right": false
-            },
-            {
-              "glyph": "🪣",
-              "right": false
-            }
-          ]
+          "prompt": "Type OOZE and press Send to keep going!",
+          "target_display": "OOZE",
+          "targets": [
+            "ooze"
+          ],
+          "hint_wrong": "Type the word OOZE (any case is fine)."
         }
       },
       "variations": [

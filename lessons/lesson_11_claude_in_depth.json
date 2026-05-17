@@ -327,14 +327,14 @@
     {
       "id": "q2",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "What does Claude do first?",
-          "steps": [
-            "You type a question",
-            "Claude thinks",
-            "Claude writes back"
-          ]
+          "prompt": "Type MEWTWO and press Send to keep going!",
+          "target_display": "MEWTWO",
+          "targets": [
+            "mewtwo"
+          ],
+          "hint_wrong": "Type the word MEWTWO (any case is fine)."
         }
       },
       "variations": [
@@ -603,10 +603,14 @@
     {
       "id": "q3",
       "interaction": {
-        "type": "tap-the-glow",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the glowing thing!",
-          "glyph": "🌈"
+          "prompt": "Type SCENE and press Send to keep going!",
+          "target_display": "SCENE",
+          "targets": [
+            "scene"
+          ],
+          "hint_wrong": "Type the word SCENE (any case is fine)."
         }
       },
       "variations": [
@@ -875,27 +879,14 @@
     {
       "id": "q4",
       "interaction": {
-        "type": "pick-the-pic",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the right picture!",
-          "choices": [
-            {
-              "glyph": "🤖",
-              "right": true
-            },
-            {
-              "glyph": "🐌",
-              "right": false
-            },
-            {
-              "glyph": "🥒",
-              "right": false
-            },
-            {
-              "glyph": "🪨",
-              "right": false
-            }
-          ]
+          "prompt": "Type CHARMANDER and press Send to keep going!",
+          "target_display": "CHARMANDER",
+          "targets": [
+            "charmander"
+          ],
+          "hint_wrong": "Type the word CHARMANDER (any case is fine)."
         }
       },
       "variations": [
@@ -1164,10 +1155,14 @@
     {
       "id": "q5",
       "interaction": {
-        "type": "sprite-poke",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Tap the running hero!",
-          "glyph": "🐶"
+          "prompt": "Type MUSIC and press Send to keep going!",
+          "target_display": "MUSIC",
+          "targets": [
+            "music"
+          ],
+          "hint_wrong": "Type the word MUSIC (any case is fine)."
         }
       },
       "variations": [
@@ -1436,14 +1431,14 @@
     {
       "id": "q6",
       "interaction": {
-        "type": "timeline-order",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "What does Claude do first?",
-          "steps": [
-            "You type a question",
-            "Claude thinks",
-            "Claude writes back"
-          ]
+          "prompt": "Type BULBASAUR and press Send to keep going!",
+          "target_display": "BULBASAUR",
+          "targets": [
+            "bulbasaur"
+          ],
+          "hint_wrong": "Type the word BULBASAUR (any case is fine)."
         }
       },
       "variations": [
@@ -1712,23 +1707,14 @@
     {
       "id": "q7",
       "interaction": {
-        "type": "drag-to-match",
+        "type": "type-this-word",
         "payload": {
-          "prompt": "Drag each one to its match!",
-          "pairs": [
-            {
-              "left": "Hero",
-              "right": "🦸"
-            },
-            {
-              "left": "Code",
-              "right": "💻"
-            },
-            {
-              "left": "Game",
-              "right": "🎮"
-            }
-          ]
+          "prompt": "Type SOUND and press Send to keep going!",
+          "target_display": "SOUND",
+          "targets": [
+            "sound"
+          ],
+          "hint_wrong": "Type the word SOUND (any case is fine)."
         }
       },
       "variations": [
@@ -1999,12 +1985,12 @@
       "interaction": {
         "type": "type-this-word",
         "payload": {
-          "prompt": "Type FIRE and press Send to keep going!",
-          "target_display": "FIRE",
+          "prompt": "Type SQUIRTLE and press Send to keep going!",
+          "target_display": "SQUIRTLE",
           "targets": [
-            "fire"
+            "squirtle"
           ],
-          "hint_wrong": "Type the word FIRE (any case is fine)."
+          "hint_wrong": "Type the word SQUIRTLE (any case is fine)."
         }
       },
       "variations": [
