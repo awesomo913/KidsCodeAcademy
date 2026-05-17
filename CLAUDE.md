@@ -24,3 +24,70 @@ Project-local rules that override the parent `CLAUDE.md` for files inside
 - Final exe lives at `C:/Users/computer/Desktop/AI/KidsCodeAcademy.exe`. Don't rename.
 - Use `uv pip` per global rules. Never `pip`.
 - Run `bash ~/.claude/scripts/check-gui-integrity.sh "C:/Users/computer/Desktop/AI/KidsCodeAcademy"` before pushing.
+
+<!-- claude-backend:generated:start -->
+# KidsCodeAcademy
+
+## Overview
+
+- **Files**: 113 (.json (78), .py (27), .md (8))
+- **Entry points**: `app.py`, `build.py`, `gen_icons.py`, `gen_mascot.py`, `scripts/audio_qa_report.py`
+- **Dependencies**: pywebview, pyinstaller, pillow, pyttsx3
+- **Key files**: `README.md`, `CLAUDE.md`, `requirements.txt`, `.gitignore`
+
+## Structure
+
+```
+lessons/  (60 files)
+sandbox_ai/  (16 files)
+  claude/  (11 files)
+  codex/  (1 files)
+  cursor/  (1 files)
+  gemini/  (1 files)
+  ollama/  (1 files)
+  opencode/  (1 files)
+scripts/  (23 files)
+vendor/  (2 files)
+  snapshot_bubbys_game/  (1 files)
+  snapshot_sprite_editor/  (1 files)
+voices/  (1 files)
+```
+
+## Conventions
+
+- Use `pathlib.Path` for all path operations
+- Type hints are used extensively -- maintain them
+- Use specific exception types in except clauses
+- Absolute imports preferred
+
+## Modules
+
+- `app.py` -- Kids Code Academy — sandboxed coding tutorial for ages 7+ [entry]
+- `build.py` -- Build pipeline for Kids Code Academy [entry]
+- `gen_icons.py` -- Generate app icons for Kids Code Academy [entry]
+- `gen_mascot.py` -- Generate procedural mascot frames for Bytey [entry]
+- `scripts/audio_qa_report.py` -- Generate an HTML audio QA report for parent spot-checking [entry]
+- `scripts/author_lessons.py` -- Author all v0.3.0 net-new lesson JSONs in one shot
+- `scripts/bake_option_audio.py` -- Bake one Piper TTS wav per UNIQUE answer-option text [entry]
+- `scripts/bake_question_prompts.py` -- Bake one Piper TTS wav per question variation prompt [entry]
+- `scripts/check_distractor_dupes.py` -- Audit lesson questions for over-repeated wrong-answer (distractor) text [entry]
+- `scripts/compress_audio_ogg.py` -- Compress every WAV in assets/audio/ to OGG/Opus, then rewrite lesson JSON [entry]
+- `scripts/dedupe_distractors.py` -- Auto-fix over-repeated wrong-answer distractors across all lesson questions [entry]
+- `scripts/diversify_gates.py` -- Diversify Q2+ gate interactions across all 60 lessons [entry]
+- `scripts/expand_lessons_v2.py` -- Expand every lesson_NN_*.json into the v2 (questions[] + variations[]) schema [entry]
+- `scripts/expand_lessons_v3.py` -- v0.6 lesson expander — much richer + more comedic content per lesson [entry]
+- `scripts/fix_question_quality.py` -- Replace low-quality / age-inappropriate distractor strings across all lessons [entry]
+- `scripts/gen_sfx.py` -- Generate warm, kid-friendly SFX wav files using only stdlib [entry]
+- `scripts/lift_q1_games.py` -- Lift Q1 interactions for under-engaging arcs to themed mini-games [entry]
+- `scripts/piper_bake.py` -- Piper TTS bake helper
+- `scripts/prebake_audio.py` -- Pre-render lesson narration to wav files using pyttsx3 (Windows SAPI) [entry]
+- `scripts/preprocess_acronyms.py` -- Re-bake any wav whose source text contains a tech acronym Piper mispronounces [entry]
+- `scripts/rewrite_mascot_lines.py` -- Rewrite every lesson's mascot_lines into flowing, natural narration [entry]
+- `scripts/rewrite_q_openers.py` -- Replace the flat 'What is <title>?' Q1-v0 prompt across all 60 lessons [entry]
+- `scripts/sandbox_lint.py` -- Sandbox JSON validator — runs at build time before PyInstaller [entry]
+- `scripts/seed_enrichments_v4.py` -- Per-lesson content enrichments for the 5->10 variation expansion
+- `scripts/swap_click_to_type.py` -- Swap every `click-the-thing` gate interaction to `type-this-word` [entry]
+- `scripts/verify_persistence.py` -- Persistence verification harness [entry]
+- `scripts/wire_engines.py` -- Wire v0.3.1 mini-game engines into the relevant lesson JSONs
+
+<!-- claude-backend:generated:end -->
