@@ -1462,7 +1462,9 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 
 <header class="topbar">
   <h1>Kids Code Academy</h1>
-  <span class="tag" id="streakTag">0 stickers</span>
+  <!-- v0.7.14 — stickers counter hidden per user direction. State (Progress.state.stickers)
+       still increments on each lesson complete so re-enabling is a one-line revert. -->
+  <span class="tag" id="streakTag" style="display:none;">0 stickers</span>
   <span class="combo-chip" id="comboChip" style="display:none;" title="Right answers in a row">
     <span class="combo-flames" id="comboFlames">🔥</span>
     <span class="combo-num" id="comboNum">0</span>
@@ -1643,6 +1645,17 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
           <div class="row">
             <button id="bgmusicToggle" class="btn-big alt">Music: OFF</button>
           </div>
+        </div>
+        <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
+          <strong style="font-size:17px;">📍 Set my kid's progress</strong>
+          <p class="muted" style="font-size:14px;margin:6px 0 10px;">
+            Lost progress after an update? Pick where your kid was — every lesson up to and including that one is marked complete. Doesn't affect chess history or memory rules.
+          </p>
+          <div class="row" style="gap:8px;align-items:center;flex-wrap:wrap;">
+            <select id="setProgressSelect" style="font-size:15px;padding:6px 10px;border-radius:8px;border:2px solid var(--accent-2);max-width:340px;"></select>
+            <button id="setProgressBtn" class="btn-big alt">Set as complete →</button>
+          </div>
+          <p id="setProgressStatus" class="muted" style="font-size:13px;margin-top:8px;min-height:18px;"></p>
         </div>
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
           <strong style="font-size:17px;">🎓 Ready for real tools</strong>
@@ -8752,6 +8765,87 @@ async function main() {
         // window.open from inside pywebview opens in the system default browser.
         window.open("parent/ready_for_real.html", "_blank", "noopener");
       } catch (e) { console.warn("[ready_for_real] open failed:", e); }
+    });
+  }
+
+  // v0.7.14 — Parent Corner "Set my kid's progress" tool.
+  // Use case: progress gets lost (state.json wipe / WebView2 storage reset on
+  // exe rebuild) and parent wants to skip the kid back to where they were.
+  // Marks every lesson up to + including the chosen one as complete; bumps the
+  // sticker counter to match (keeps overall-grade math consistent). Persistence
+  // module auto-flushes the new Progress.state to state.json via Store.save.
+  const setProgSelect = document.getElementById("setProgressSelect");
+  const setProgBtn    = document.getElementById("setProgressBtn");
+  const setProgStatus = document.getElementById("setProgressStatus");
+  const _setProgRefreshOptions = () => {
+    if (!setProgSelect) return;
+    clearNode(setProgSelect);
+    // Default placeholder option so the parent has to make an active choice.
+    const ph = el("option", { value: "" }, "— pick the last completed lesson —");
+    setProgSelect.appendChild(ph);
+    const list = (LessonStore.index || []).slice().sort((a, b) => Number(a.id) - Number(b.id));
+    list.forEach(L => {
+      const lid = Number(L.id);
+      if (!Number.isFinite(lid)) return;
+      const done = Progress.isCompleted(L.id) ? " ✓" : "";
+      const opt = el("option", { value: String(lid) },
+        `L${String(lid).padStart(2, "0")} — ${String(L.title || "").slice(0, 50)}${done}`);
+      setProgSelect.appendChild(opt);
+    });
+  };
+  if (setProgSelect && setProgBtn && setProgStatus) {
+    _setProgRefreshOptions();
+    // Refresh whenever the parent re-opens the Settings tab (lesson index may
+    // have re-hydrated). Reuse the existing parent-tab click bus.
+    document.querySelectorAll(".parent-tab[data-tab='settings']").forEach(t => {
+      t.addEventListener("click", () => setTimeout(_setProgRefreshOptions, 50));
+    });
+    setProgBtn.addEventListener("click", () => {
+      const v = (setProgSelect.value || "").trim();
+      if (!v) {
+        setProgStatus.textContent = "Pick a lesson first.";
+        setProgStatus.style.color = "#c62828";
+        return;
+      }
+      const targetId = Number(v);
+      if (!Number.isFinite(targetId)) {
+        setProgStatus.textContent = "Bad lesson id.";
+        setProgStatus.style.color = "#c62828";
+        return;
+      }
+      const list = (LessonStore.index || []).slice().sort((a, b) => Number(a.id) - Number(b.id));
+      const nowIso = new Date().toISOString();
+      let added = 0;
+      list.forEach(L => {
+        const lid = Number(L.id);
+        if (!Number.isFinite(lid) || lid > targetId) return;
+        if (!Progress.state.completed[L.id]) {
+          Progress.state.completed[L.id] = nowIso;
+          added += 1;
+        }
+      });
+      // Keep the sticker counter consistent with completed count so the
+      // overall-grade weights stay sane. Don't reduce it (parent could be
+      // re-applying after manual completion of an extra lesson).
+      const completedCount = Object.keys(Progress.state.completed).length;
+      if ((Progress.state.stickers || 0) < completedCount) {
+        Progress.state.stickers = completedCount;
+      }
+      Progress.state.last = String(targetId);
+      try {
+        Store.save(Store.K_PROG, Progress.state);
+      } catch (e) {
+        console.warn("[setProgress] save failed:", e);
+        setProgStatus.textContent = "Save failed — storage may be disabled.";
+        setProgStatus.style.color = "#c62828";
+        return;
+      }
+      // Refresh sidebar so unlocked chapters / completed badges update live.
+      try { UI.renderSidebar(); } catch (_) {}
+      _setProgRefreshOptions();
+      setProgStatus.textContent =
+        `Marked ${added} new lesson${added === 1 ? "" : "s"} complete (through L${String(targetId).padStart(2, "0")}). Total: ${completedCount}.`;
+      setProgStatus.style.color = "#2e7d32";
     });
   }
 
