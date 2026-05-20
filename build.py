@@ -200,19 +200,32 @@ def step_publish() -> None:
         return
 
     if _is_windows():
-        # Lands next to ClaudeCodeMastery.exe on the dev machine
-        target = ROOT.parent / binary
+        # v0.7.14: copy to BOTH the canonical project path (Desktop/AI/) AND the
+        # Desktop root. The user double-clicks the Desktop-root icon; before this
+        # fix that copy went stale every build (orphan from an old run) and they
+        # kept launching ancient behavior. Now every build refreshes both so the
+        # icon never rots. ROOT = Desktop/AI/KidsCodeAcademy → .parent = Desktop/AI,
+        # .parent.parent = Desktop.
+        targets = [ROOT.parent / binary, ROOT.parent.parent / binary]
     else:
         # Pi/Linux: drop on the user's Desktop if it exists, else home dir.
         desktop = Path.home() / "Desktop"
         target_dir = desktop if desktop.is_dir() else Path.home()
-        target = target_dir / binary
+        targets = [target_dir / binary]
 
-    shutil.copy2(src, target)
-    if not _is_windows():
-        # Make it executable for double-click on Pi/Linux file managers
-        target.chmod(0o755)
-    log.info("copied -> %s", target)
+    for target in targets:
+        try:
+            shutil.copy2(src, target)
+        except OSError as exc:
+            # Don't abort the whole publish if one location is locked (e.g. the
+            # exe is currently running). Surface it loudly so the stale-copy
+            # trap can't silently return.
+            log.error("copy to %s FAILED (locked/running?): %s", target, exc)
+            continue
+        if not _is_windows():
+            # Make it executable for double-click on Pi/Linux file managers
+            target.chmod(0o755)
+        log.info("copied -> %s", target)
 
 
 def step_clean() -> None:
