@@ -370,19 +370,13 @@ button { font-family: inherit; cursor: pointer; }
 }
 .qans { transition: opacity var(--dur); }
 .qans.hidden { display: none; }
-/* v0.7.13 — reading-lock visual: dim + block pointer events on answer
- * choices while narration / prompt is still being read aloud. CSS-only;
- * JS toggles the class via _kcaReadingApplyVisuals(). */
-.qans.reading-lock { pointer-events: none; opacity: 0.55; filter: grayscale(20%); }
-.qans.reading-lock::after {
-  content: "🔊 listening…";
-  display: block;
-  text-align: center;
-  font-size: 13px;
-  color: #6c5ce7;
-  margin-top: 6px;
-  font-weight: 600;
-}
+/* v0.7.16 — reading-lock: gently dim the answer choices while a voice plays so
+ * the kid doesn't blind-pick before hearing the question. The 🔊 speaker icons
+ * stay fully tappable and INTERRUPT playback (see speakOptionNow) — a tap always
+ * reads that card. The old "🔊 listening…" label is gone: it blinked on/off as
+ * narration → prompt → hover cycled, which read as a glitch. The dim is enough. */
+.qans.reading-lock .choice { pointer-events: none; opacity: 0.7; filter: grayscale(15%); }
+.qans.reading-lock .choice-speaker { pointer-events: auto; opacity: 1; filter: none; }
 .qprompt {
   margin: 6px 0 14px;
   font-size: 22px;
@@ -2262,6 +2256,59 @@ function _silenceVoiceChannels(except) {
  *     so the kid hears ONE voice at a time.
  *   - bakedPath preferred (warm Piper voice, matches narration); Web Speech fallback.
  */
+/* Lazily build the shared hover/option <audio> element and wire its play/end
+ * events into the reading-lock refcount. Used by both startHoverAudio (gentle
+ * hover preview) and speakOptionNow (explicit tap). One element, so a new read
+ * naturally cuts off the previous one. */
+function _kcaEnsureHoverAudio() {
+  if (_kcaHoverAudio) return;
+  _kcaHoverAudio = document.createElement("audio");
+  _kcaHoverAudio.preload = "auto";
+  document.body.appendChild(_kcaHoverAudio);
+  let __hReading = false;
+  const __hBegin = () => { if (!__hReading) { __hReading = true; _kcaReadingBegin(); } };
+  const __hEnd   = () => { if (__hReading)  { __hReading = false; _kcaReadingEnd(); } _kcaHoverActiveBtn = null; };
+  _kcaHoverAudio.addEventListener("play",  __hBegin);
+  _kcaHoverAudio.addEventListener("ended", __hEnd);
+  _kcaHoverAudio.addEventListener("pause", __hEnd);
+  _kcaHoverAudio.addEventListener("error", __hEnd);
+}
+
+/* v0.7.16 — explicit speaker-icon TAP. Unlike hover, a deliberate tap ALWAYS
+ * reads the card: it interrupts whatever else is talking (narration, prompt,
+ * another option) and ignores the hover debounce + 3s cooldown. This is the
+ * fix for "tapping 🔊 does nothing while the question is still reading" — the
+ * old path routed taps through startHoverAudio, which bailed out whenever any
+ * voice was active. A tap is intent; honor it immediately. */
+function speakOptionNow(btn, text, bakedPath) {
+  if (!btn) return;
+  if (_kcaHoverTimer) { clearTimeout(_kcaHoverTimer); _kcaHoverTimer = null; }
+  // Interrupt every other channel (narration / prompt / speech). Spare "hover"
+  // because that's the element we're about to (re)play on.
+  _silenceVoiceChannels("hover");
+  _kcaHoverActiveBtn = btn;
+  if (bakedPath) {
+    try {
+      _kcaEnsureHoverAudio();
+      _kcaHoverAudio.pause();
+      _kcaHoverAudio.src = String(bakedPath) + "?_=" + Date.now();
+      try { _kcaHoverAudio.load(); } catch (_) {}
+      _kcaHoverAudio.currentTime = 0;
+      _kcaHoverAudio.play().catch(() => {
+        if (_kcaHoverActiveBtn !== btn) return;
+        _kcaHoverActiveBtn = null;
+        speakHoverFallback(text);
+      });
+      return;
+    } catch (e) {
+      // Don't fail silently — a dead speaker icon with no log is invisible.
+      console.warn("[KCA] speakOptionNow baked-audio path failed, falling back to speech:", e);
+      _kcaHoverActiveBtn = null;
+    }
+  }
+  speakHoverFallback(text);
+}
+
 function startHoverAudio(btn, text, bakedPath) {
   if (!btn || _kcaHoverActiveBtn === btn) return;
   // v0.7.13 Fix C: if narration / prompt / chat speech is reading right
@@ -2287,20 +2334,7 @@ function startHoverAudio(btn, text, bakedPath) {
     _silenceVoiceChannels("hover");
     if (bakedPath) {
       try {
-        if (!_kcaHoverAudio) {
-          _kcaHoverAudio = document.createElement("audio");
-          _kcaHoverAudio.preload = "auto";
-          document.body.appendChild(_kcaHoverAudio);
-          // v0.7.13 Fix C + D: hover audio is itself "reading" — locks answer
-          // clicks while playing, AND pushes the post-audio cooldown forward.
-          let __hReading = false;
-          const __hBegin = () => { if (!__hReading) { __hReading = true; _kcaReadingBegin(); } };
-          const __hEnd   = () => { if (__hReading)  { __hReading = false; _kcaReadingEnd(); } _kcaHoverActiveBtn = null; };
-          _kcaHoverAudio.addEventListener("play",  __hBegin);
-          _kcaHoverAudio.addEventListener("ended", __hEnd);
-          _kcaHoverAudio.addEventListener("pause", __hEnd);
-          _kcaHoverAudio.addEventListener("error", __hEnd);
-        }
+        _kcaEnsureHoverAudio();
         _kcaHoverAudio.pause();
         _kcaHoverAudio.src = String(bakedPath) + "?_=" + Date.now();
         try { _kcaHoverAudio.load(); } catch (_) {}
@@ -5208,11 +5242,11 @@ const QuestionFlow = {
         onclick: (e) => {
           if (e && e.stopPropagation) e.stopPropagation();
           if (e && e.preventDefault) e.preventDefault();
-          startHoverAudio(btn, optText, optAudio);
+          speakOptionNow(btn, optText, optAudio);
         },
         ontouchstart: (e) => {
           if (e && e.stopPropagation) e.stopPropagation();
-          startHoverAudio(btn, optText, optAudio);
+          speakOptionNow(btn, optText, optAudio);
         },
       }, "🔊");
       btn.appendChild(speaker);

@@ -31,6 +31,7 @@ type: reference
 - `scripts/piper_bake.py`: Piper TTS bake helper. | exports: log, ROOT, VOICES_DIR, DEFAULT_VOICE, is_available, synth
 - `scripts/prebake_audio.py`: Pre-render lesson narration to wav files using pyttsx3 (Windows SAPI). | exports: log, ROOT, LESSONS_DIR, OUT_DIR, RAW_DIR, RATE_WPM, LEADING_SILENCE_MS, LPF_CUTOFF_HZ
 - `scripts/preprocess_acronyms.py`: Re-bake any wav whose source text contains a tech acronym Piper mispronounces. | exports: log, ROOT, LESSONS_DIR, OPT_DIR, Q_DIR, ACRONYM_RE, main
+- `scripts/purge_filler_gates.py`: Purge filler MCQ gates → type-this-word everywhere they appear. | exports: log, ROOT, LESSONS_DIR, process_lesson, main
 - `scripts/rewrite_mascot_lines.py`: Rewrite every lesson's mascot_lines into flowing, natural narration. | exports: log, ROOT, LESSONS_DIR, main
 - `scripts/rewrite_q_openers.py`: Replace the flat 'What is <title>?' Q1-v0 prompt across all 60 lessons. | exports: log, ROOT, LESSONS_DIR, main
 - `scripts/sandbox_lint.py`: Sandbox JSON validator — runs at build time before PyInstaller. | exports: ROOT, SANDBOX_DIR, HELPER_RE, ALLOWED_ACTIONS, ALLOWED_PICTURE_IDS, LintError, lint_file, main

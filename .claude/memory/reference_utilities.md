@@ -145,6 +145,11 @@ type: reference
 | `Q_DIR` | `scripts/preprocess_acronyms.py` | -- |
 | `ACRONYM_RE` | `scripts/preprocess_acronyms.py` | -- |
 | `main` | `scripts/preprocess_acronyms.py` | -- |
+| `log` | `scripts/purge_filler_gates.py` | -- |
+| `ROOT` | `scripts/purge_filler_gates.py` | -- |
+| `LESSONS_DIR` | `scripts/purge_filler_gates.py` | -- |
+| `process_lesson` | `scripts/purge_filler_gates.py` | Return per-lesson stats: { q_swaps, game_swap, lesson_id }. |
+| `main` | `scripts/purge_filler_gates.py` | -- |
 | `log` | `scripts/rewrite_mascot_lines.py` | -- |
 | `ROOT` | `scripts/rewrite_mascot_lines.py` | -- |
 | `LESSONS_DIR` | `scripts/rewrite_mascot_lines.py` | -- |

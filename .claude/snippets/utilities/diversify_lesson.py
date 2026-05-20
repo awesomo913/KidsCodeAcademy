@@ -1,4 +1,4 @@
-# From: scripts/diversify_gates.py:168
+# From: scripts/diversify_gates.py:166
 # Rewrite Q2..Qn interactions for one lesson. Q1 untouched.
 
 def diversify_lesson(path: Path, word_counter: list[int], dry: bool,
@@ -17,10 +17,11 @@ def diversify_lesson(path: Path, word_counter: list[int], dry: bool,
         # gates within a lesson differ).
         gate_idx = (lesson_id * 7 + q_idx) % len(GATE_TYPES)
         gate_type = GATE_TYPES[gate_idx]
-        # Special-case: history-scene lessons (5-16) get timeline-order at Q2
-        # so the previously passive lesson gains an authentic ordering puzzle.
-        if 5 <= lesson_id <= 16 and q_idx == 1:
-            gate_type = "timeline-order"
+        # v0.7.13 — history-scene timeline-order override disabled per user
+        # direction (typing-only across the curriculum). Restore by un-commenting
+        # if multi-type rotation returns.
+        # if 5 <= lesson_id <= 16 and q_idx == 1:
+        #     gate_type = "timeline-order"
         payload = _make_payload(gate_type, lesson_id, q_idx, word_counter[0])
         if gate_type == "type-this-word":
             word_counter[0] += 1

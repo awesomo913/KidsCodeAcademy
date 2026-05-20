@@ -30,7 +30,7 @@ Project-local rules that override the parent `CLAUDE.md` for files inside
 
 ## Overview
 
-- **Files**: 113 (.json (78), .py (27), .md (8))
+- **Files**: 114 (.json (78), .py (28), .md (8))
 - **Entry points**: `app.py`, `build.py`, `gen_icons.py`, `gen_mascot.py`, `scripts/audio_qa_report.py`
 - **Dependencies**: pywebview, pyinstaller, pillow, pyttsx3
 - **Key files**: `README.md`, `CLAUDE.md`, `requirements.txt`, `.gitignore`
@@ -46,7 +46,7 @@ sandbox_ai/  (16 files)
   gemini/  (1 files)
   ollama/  (1 files)
   opencode/  (1 files)
-scripts/  (23 files)
+scripts/  (24 files)
 vendor/  (2 files)
   snapshot_bubbys_game/  (1 files)
   snapshot_sprite_editor/  (1 files)
@@ -82,6 +82,7 @@ voices/  (1 files)
 - `scripts/piper_bake.py` -- Piper TTS bake helper
 - `scripts/prebake_audio.py` -- Pre-render lesson narration to wav files using pyttsx3 (Windows SAPI) [entry]
 - `scripts/preprocess_acronyms.py` -- Re-bake any wav whose source text contains a tech acronym Piper mispronounces [entry]
+- `scripts/purge_filler_gates.py` -- Purge filler MCQ gates → type-this-word everywhere they appear [entry]
 - `scripts/rewrite_mascot_lines.py` -- Rewrite every lesson's mascot_lines into flowing, natural narration [entry]
 - `scripts/rewrite_q_openers.py` -- Replace the flat 'What is <title>?' Q1-v0 prompt across all 60 lessons [entry]
 - `scripts/sandbox_lint.py` -- Sandbox JSON validator — runs at build time before PyInstaller [entry]
@@ -89,5 +90,9 @@ voices/  (1 files)
 - `scripts/swap_click_to_type.py` -- Swap every `click-the-thing` gate interaction to `type-this-word` [entry]
 - `scripts/verify_persistence.py` -- Persistence verification harness [entry]
 - `scripts/wire_engines.py` -- Wire v0.3.1 mini-game engines into the relevant lesson JSONs
+
+## Snippets
+
+See `.claude/snippets/INDEX.md` for reusable code blocks.
 
 <!-- claude-backend:generated:end -->

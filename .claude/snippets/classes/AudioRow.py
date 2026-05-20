@@ -1,4 +1,5 @@
 # From: scripts/audio_qa_report.py:64
+# A single auditable audio entry.
 
 @dataclass(frozen=True)
 class AudioRow:
