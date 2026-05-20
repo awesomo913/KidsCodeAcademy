@@ -1639,12 +1639,15 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
           <strong style="font-size:17px;">🎵 Background music</strong>
           <p class="muted" style="font-size:14px;margin:6px 0 10px;">
-            Soft ambient loop between lessons. Off by default. Ducks automatically when narration plays.
-            Drop your own <code>.ogg</code> into <code>assets/bg_music/</code> if no file ships.
+            Soft loop between lessons. Off by default. Ducks automatically when narration plays.
+            Use <b>Load my own music</b> to pick any song from your computer.
           </p>
-          <div class="row">
+          <div class="row" style="gap:8px;flex-wrap:wrap;">
             <button id="bgmusicToggle" class="btn-big alt">Music: OFF</button>
+            <button id="bgmusicPreview" class="btn-big alt">▶ Preview</button>
+            <button id="bgmusicLoad" class="btn-big alt">📂 Load my own music</button>
           </div>
+          <p id="bgmusicStatus" class="muted" style="font-size:13px;margin-top:8px;min-height:18px;"></p>
         </div>
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
           <strong style="font-size:17px;">📍 Set my kid's progress</strong>
@@ -2422,25 +2425,41 @@ const Ambient = {
   _duckedVol: 0.04,    // narration-active volume
   _ducked: false,
   _enabled: false,
-  _hasFile: false,
+  _hasFile: false,     // true once SOME playable source loaded (bundled or user)
+  _previewTimer: null,
   init() {
     try {
       this._audio = document.createElement("audio");
       this._audio.loop = true;
       this._audio.preload = "auto";
       this._audio.volume = this._vol;
-      // Use a `?probe=1` cache buster so File-Not-Found is fast + cached.
-      this._audio.src = "assets/bg_music/loop.ogg";
       this._audio.addEventListener("canplaythrough", () => { this._hasFile = true; }, { once: true });
-      this._audio.addEventListener("error", () => {
-        // File missing or unsupported — silent no-op. Toggle remains valid for
-        // when the parent drops a file in later.
-        this._hasFile = false;
-      }, { once: true });
       document.body.appendChild(this._audio);
       this._enabled = Store.load(Store.K_BGMUSIC, false) === true;
-      if (this._enabled) this.start();
+      // v0.7.15: prefer the parent's own track (AppData) over the bundled loop.
+      // get_user_music returns a base64 data URL, or "" if none — kept out of
+      // localStorage so state.json never balloons with audio bytes.
+      this._loadBestSource().then(() => {
+        if (this._enabled) this.start();
+      });
     } catch (e) { console.warn("[Ambient.init]", e); }
+  },
+  async _loadBestSource() {
+    // Returns a promise that resolves once src is set (user track if present,
+    // else bundled loop, else leaves src empty → toggle is a graceful no-op).
+    try {
+      const api = (window.pywebview && window.pywebview.api) || null;
+      if (api && typeof api.get_user_music === "function") {
+        const dataUrl = await Promise.resolve(api.get_user_music());
+        if (dataUrl && typeof dataUrl === "string" && dataUrl.startsWith("data:")) {
+          this._audio.src = dataUrl;
+          this._hasFile = true;
+          return;
+        }
+      }
+    } catch (e) { console.warn("[Ambient] user-music load failed:", e); }
+    // Fall back to bundled loop (may 404 → _hasFile stays false, no-op).
+    try { this._audio.src = "assets/bg_music/loop.ogg"; } catch (_) {}
   },
   isEnabled() { return this._enabled; },
   setEnabled(on) {
@@ -2451,12 +2470,10 @@ const Ambient = {
   start() {
     if (!this._audio) return;
     try {
+      this._audio.loop = true;
       this._audio.volume = this._ducked ? this._duckedVol : this._vol;
       const p = this._audio.play();
       if (p && p.catch) p.catch(e => {
-        // NotAllowedError = autoplay policy blocked us until user gesture; ignore.
-        // Anything else (codec error, decode fail, bad audio state) → log so the
-        // "Music: ON but silent" state doesn't go invisible across sessions.
         if (e && e.name !== "NotAllowedError") console.warn("[Ambient.start]", e);
       });
     } catch (e) { console.warn("[Ambient.start]", e); }
@@ -2469,6 +2486,52 @@ const Ambient = {
     this._ducked = !!on;
     if (!this._audio || !this._enabled) return;
     try { this._audio.volume = this._ducked ? this._duckedVol : this._vol; } catch (_) {}
+  },
+  /* v0.7.15 — play ~8s at full volume regardless of the on/off toggle, then
+   * restore prior state. Lets a parent hear the track before committing. */
+  preview() {
+    if (!this._audio) return { ok: false, reason: "no audio element" };
+    if (!this._hasFile) return { ok: false, reason: "no music loaded" };
+    if (this._previewTimer) { clearTimeout(this._previewTimer); this._previewTimer = null; }
+    // Snapshot the element so the timeout acts on THIS element even if a
+    // concurrent loadUserMusicFromDisk swaps src mid-preview.
+    const el = this._audio;
+    try {
+      el.loop = false;
+      el.currentTime = 0;
+      el.volume = 0.5;  // louder than ambient so the parent clearly hears it
+      const p = el.play();
+      if (p && p.catch) p.catch(e => console.warn("[Ambient.preview]", e));
+      this._previewTimer = setTimeout(() => {
+        this._previewTimer = null;
+        try { el.pause(); el.currentTime = 0; } catch (_) {}
+        try { el.loop = true; el.volume = this._vol; } catch (_) {}
+        // Resume ambient loop only if music is enabled AND nothing else
+        // restarted it (loadUserMusicFromDisk → setEnabled already calls start).
+        if (this._enabled) this.start();
+      }, 8000);
+      return { ok: true };
+    } catch (e) { console.warn("[Ambient.preview]", e); return { ok: false, reason: String(e) }; }
+  },
+  /* v0.7.15 — open native file picker (via JSBridge), copy chosen track into
+   * AppData, then load it as the active source + turn music ON. */
+  async loadUserMusicFromDisk() {
+    // Cancel any in-flight preview so its 8s timer can't fight the new track.
+    if (this._previewTimer) { clearTimeout(this._previewTimer); this._previewTimer = null; }
+    const api = (window.pywebview && window.pywebview.api) || null;
+    if (!api || typeof api.pick_music_file !== "function") {
+      return { ok: false, reason: "Run the .exe to load music (browser dev mode can't)." };
+    }
+    let pick;
+    try { pick = await Promise.resolve(api.pick_music_file()); }
+    catch (e) { return { ok: false, reason: "Picker failed: " + e }; }
+    if (!pick || pick.ok === false) {
+      return { ok: false, reason: (pick && pick.error) || "cancelled" };
+    }
+    // Re-load the freshly-saved track into the player.
+    await this._loadBestSource();
+    this.setEnabled(true);
+    return { ok: true, name: pick.name };
   },
 };
 
@@ -7893,7 +7956,12 @@ const UI = {
               // FSM terminal turn = lesson complete (no auto_complete check needed —
               // the kid drove the conversation to its end node)
               setTimeout(() => {
-                if (!Progress.isCompleted(lesson.id)) this.completeLesson(lesson.id);
+                // v0.7.15 fix: completeLesson + sidebar key progress by STRING
+                // id (LessonStore.byId). lesson.id is the NUMERIC field — using
+                // it stored a stray numeric key the sidebar never reads, so a
+                // finished sandbox lesson stayed "locked". Convert to string id.
+                const sid = LessonStore.idForNum(lesson.id) || String(lesson.id);
+                if (!Progress.isCompleted(sid)) this.completeLesson(sid);
               }, 1000);
             } else {
               renderTurnUI(nextTurn);
@@ -7954,8 +8022,10 @@ const UI = {
           attempts += 1;
           if (lesson.sandbox.complete_after && attempts >= lesson.sandbox.complete_after) {
             setTimeout(() => {
-              if (!Progress.isCompleted(lesson.id) && lesson.sandbox.auto_complete) {
-                this.completeLesson(lesson.id);
+              // v0.7.15 fix: string id, not numeric lesson.id (see note above).
+              const sid = LessonStore.idForNum(lesson.id) || String(lesson.id);
+              if (!Progress.isCompleted(sid) && lesson.sandbox.auto_complete) {
+                this.completeLesson(sid);
               }
             }, 1200);
           }
@@ -8756,6 +8826,40 @@ async function main() {
     });
   }
 
+  // v0.7.15 — Preview + Load-my-own-music buttons.
+  const bgmusicStatus = document.getElementById("bgmusicStatus");
+  const _bgStatus = (msg, ok) => {
+    if (!bgmusicStatus) return;
+    bgmusicStatus.textContent = msg;
+    bgmusicStatus.style.color = ok ? "#2e7d32" : "#c62828";
+  };
+  const bgPreviewBtn = document.getElementById("bgmusicPreview");
+  if (bgPreviewBtn) {
+    bgPreviewBtn.addEventListener("click", () => {
+      const r = Ambient.preview();
+      if (r && r.ok) _bgStatus("Playing an 8-second preview…", true);
+      else _bgStatus(r && r.reason === "no music loaded"
+        ? "No music yet — hit “Load my own music” first."
+        : "Couldn't preview.", false);
+    });
+  }
+  const bgLoadBtn = document.getElementById("bgmusicLoad");
+  if (bgLoadBtn) {
+    bgLoadBtn.addEventListener("click", async () => {
+      _bgStatus("Opening file picker…", true);
+      const r = await Ambient.loadUserMusicFromDisk();
+      if (r && r.ok) {
+        _bgStatus(`Loaded “${r.name}” — music is ON. Hit Preview to hear it.`, true);
+        if (bgmusicBtn) {  // reflect the auto-enable in the toggle label
+          bgmusicBtn.textContent = "Music: ON";
+          bgmusicBtn.classList.add("go"); bgmusicBtn.classList.remove("alt");
+        }
+      } else {
+        _bgStatus(r && r.reason === "cancelled" ? "No file picked." : (`Couldn't load: ${r && r.reason}`), false);
+      }
+    });
+  }
+
   // v0.7.11 Fix 9 — Open "Ready for Real Tools" parent guide in default browser.
   const readyBtn = document.getElementById("readyForRealBtn");
   if (readyBtn) {
@@ -8777,61 +8881,72 @@ async function main() {
   const setProgSelect = document.getElementById("setProgressSelect");
   const setProgBtn    = document.getElementById("setProgressBtn");
   const setProgStatus = document.getElementById("setProgressStatus");
+  // v0.7.15 fix: LessonStore.index is an array of id-STRINGS (e.g.
+  // "lesson_07_first_robot_brain_cell"); the lesson objects live in
+  // LessonStore.byId[idStr]. The earlier code read L.id / L.title off the
+  // string (always undefined) so the dropdown only ever showed the placeholder.
+  // Progress.state.completed is keyed by id-STRING, so we mark + check by idStr.
+  const _setProgList = () => {
+    // Returns sorted [{ idStr, num, title }] for every authored lesson.
+    const rows = [];
+    (LessonStore.index || []).forEach(idStr => {
+      const m = String(idStr).match(/^lesson_(\d+)/);
+      if (!m) return;
+      const num = parseInt(m[1], 10);
+      const obj = LessonStore.byId[idStr] || {};
+      rows.push({ idStr, num, title: String(obj.title || idStr) });
+    });
+    rows.sort((a, b) => a.num - b.num);
+    return rows;
+  };
   const _setProgRefreshOptions = () => {
     if (!setProgSelect) return;
     clearNode(setProgSelect);
-    // Default placeholder option so the parent has to make an active choice.
-    const ph = el("option", { value: "" }, "— pick the last completed lesson —");
-    setProgSelect.appendChild(ph);
-    const list = (LessonStore.index || []).slice().sort((a, b) => Number(a.id) - Number(b.id));
-    list.forEach(L => {
-      const lid = Number(L.id);
-      if (!Number.isFinite(lid)) return;
-      const done = Progress.isCompleted(L.id) ? " ✓" : "";
-      const opt = el("option", { value: String(lid) },
-        `L${String(lid).padStart(2, "0")} — ${String(L.title || "").slice(0, 50)}${done}`);
+    setProgSelect.appendChild(el("option", { value: "" }, "— pick a lesson —"));
+    _setProgList().forEach(r => {
+      const done = Progress.isCompleted(r.idStr) ? " ✓" : "";
+      const opt = el("option", { value: r.idStr },
+        `L${String(r.num).padStart(2, "0")} — ${r.title.slice(0, 48)}${done}`);
       setProgSelect.appendChild(opt);
     });
   };
   if (setProgSelect && setProgBtn && setProgStatus) {
     _setProgRefreshOptions();
-    // Refresh whenever the parent re-opens the Settings tab (lesson index may
-    // have re-hydrated). Reuse the existing parent-tab click bus.
+    // Re-populate when the parent opens the Settings tab — lessons may not have
+    // finished loading at first wiring (LessonStore.load is async).
     document.querySelectorAll(".parent-tab[data-tab='settings']").forEach(t => {
       t.addEventListener("click", () => setTimeout(_setProgRefreshOptions, 50));
     });
     setProgBtn.addEventListener("click", () => {
-      const v = (setProgSelect.value || "").trim();
-      if (!v) {
+      const targetIdStr = (setProgSelect.value || "").trim();
+      if (!targetIdStr) {
         setProgStatus.textContent = "Pick a lesson first.";
         setProgStatus.style.color = "#c62828";
         return;
       }
-      const targetId = Number(v);
-      if (!Number.isFinite(targetId)) {
-        setProgStatus.textContent = "Bad lesson id.";
+      const rows = _setProgList();
+      const target = rows.find(r => r.idStr === targetIdStr);
+      if (!target) {
+        setProgStatus.textContent = "That lesson isn't loaded yet — reopen Settings and try again.";
         setProgStatus.style.color = "#c62828";
         return;
       }
-      const list = (LessonStore.index || []).slice().sort((a, b) => Number(a.id) - Number(b.id));
       const nowIso = new Date().toISOString();
       let added = 0;
-      list.forEach(L => {
-        const lid = Number(L.id);
-        if (!Number.isFinite(lid) || lid > targetId) return;
-        if (!Progress.state.completed[L.id]) {
-          Progress.state.completed[L.id] = nowIso;
+      rows.forEach(r => {
+        if (r.num > target.num) return;  // mark this lesson + everything before it
+        if (!Progress.state.completed[r.idStr]) {
+          Progress.state.completed[r.idStr] = nowIso;
           added += 1;
         }
       });
-      // Keep the sticker counter consistent with completed count so the
-      // overall-grade weights stay sane. Don't reduce it (parent could be
-      // re-applying after manual completion of an extra lesson).
+      // Keep sticker count >= completed count so overall-grade weights stay
+      // sane. Only bump up — never wipe stickers the kid already earned.
       const completedCount = Object.keys(Progress.state.completed).length;
       if ((Progress.state.stickers || 0) < completedCount) {
         Progress.state.stickers = completedCount;
       }
-      Progress.state.last = String(targetId);
+      Progress.state.last = target.idStr;
       try {
         Store.save(Store.K_PROG, Progress.state);
       } catch (e) {
@@ -8840,11 +8955,11 @@ async function main() {
         setProgStatus.style.color = "#c62828";
         return;
       }
-      // Refresh sidebar so unlocked chapters / completed badges update live.
+      // Refresh sidebar so unlocked chapters + completed badges update live.
       try { UI.renderSidebar(); } catch (_) {}
       _setProgRefreshOptions();
       setProgStatus.textContent =
-        `Marked ${added} new lesson${added === 1 ? "" : "s"} complete (through L${String(targetId).padStart(2, "0")}). Total: ${completedCount}.`;
+        `✓ Marked ${added} new lesson${added === 1 ? "" : "s"} complete (through L${String(target.num).padStart(2, "0")}). Total done: ${completedCount}.`;
       setProgStatus.style.color = "#2e7d32";
     });
   }

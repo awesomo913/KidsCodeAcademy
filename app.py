@@ -96,6 +96,74 @@ def get_webview_storage_path() -> Path:
     return p
 
 
+def _render_project_view(obj: object, stem: str) -> str:
+    """Build a standalone viewer HTML for a saved kid project that has no
+    pre-rendered HTML twin (v0.7.15). Two shapes handled:
+
+      - level save: {"grid": ["#..#", "..@.", ...], "savedAt": "..."} →
+        render the painted grid as a colored table.
+      - anything else → pretty-print the JSON fields.
+
+    Always returns valid HTML so the Parent Corner 'Open' button shows
+    something instead of silently launching an unassociated .json.
+    """
+    import html as _html
+    import json as _json
+
+    title = _html.escape(stem.replace("kid_level_", "My Level "))
+    cell_colors = {
+        "#": "#666", ".": "#fff", "*": "#ffd95e",
+        "F": "#4caf50", "@": "#6c5ce7", " ": "#fff",
+    }
+    body = ""
+
+    grid = obj.get("grid") if isinstance(obj, dict) else None
+    if isinstance(grid, list) and grid:
+        rows_html = []
+        for row in grid:
+            cells = "".join(
+                f"<td style='width:24px;height:24px;background:{cell_colors.get(ch, '#eee')};"
+                f"border:1px solid #ddd;'></td>"
+                for ch in str(row)
+            )
+            rows_html.append(f"<tr>{cells}</tr>")
+        legend = (
+            "<p style='color:#666;font-size:13px;'>"
+            "<b style='color:#6c5ce7;'>■</b> hero &nbsp; "
+            "<b style='color:#4caf50;'>■</b> flag &nbsp; "
+            "<b style='color:#ffd95e;'>■</b> coin &nbsp; "
+            "<b style='color:#666;'>■</b> wall</p>"
+        )
+        saved = ""
+        if isinstance(obj, dict) and obj.get("savedAt"):
+            saved = f"<p style='color:#999;'>Saved {_html.escape(str(obj['savedAt'])[:10])}</p>"
+        body = (
+            f"<h1>{title}</h1>{saved}"
+            f"<table style='border-collapse:collapse;margin:16px 0;'>{''.join(rows_html)}</table>"
+            f"{legend}"
+        )
+    else:
+        try:
+            pretty = _json.dumps(obj, indent=2, ensure_ascii=False)
+        except (TypeError, ValueError):
+            pretty = str(obj)
+        body = (
+            f"<h1>{title}</h1>"
+            f"<pre style='background:#f0f0f4;padding:14px;border-radius:8px;"
+            f"overflow:auto;font-size:13px;'>{_html.escape(pretty)}</pre>"
+        )
+
+    return (
+        "<!doctype html><html><head><meta charset='utf-8'>"
+        f"<title>{title}</title>"
+        "<style>body{font-family:'Segoe UI',system-ui,sans-serif;background:#faf7f2;"
+        "color:#2a2a2a;max-width:680px;margin:0 auto;padding:28px;}"
+        "h1{color:#6c5ce7;}@media print{body{background:#fff;}}</style></head>"
+        f"<body>{body}<p style='margin-top:28px;color:#999;font-size:12px;'>"
+        "Made in Kids Code Academy. Save or print this page!</p></body></html>"
+    )
+
+
 class JSBridge:
     """JS-callable bridge.
 
@@ -104,6 +172,7 @@ class JSBridge:
       - save_state(json_blob)          — mirror localStorage to state.json
       - load_state() -> str            — read state.json (empty if missing)
       - clear_state()                  — wipe state.json (Reset all progress)
+      - list_kid_projects() / open_kid_project(name) — Parent Corner Projects tab
     """
 
     def get_user_dir(self) -> str:
@@ -174,6 +243,87 @@ class JSBridge:
             return {"ok": False, "error": str(exc)}
         return {"ok": True}
 
+    # ── v0.7.15: parent-supplied background music ──────────────────────────
+    # The bundled assets/bg_music/ is read-only (PyInstaller _MEIPASS), so a
+    # parent's own track is copied into AppData and served to the player as a
+    # base64 data URL on demand (kept OUT of localStorage so state.json never
+    # bloats with megabytes of audio).
+
+    def pick_music_file(self) -> dict:
+        """Open a native file picker; copy the chosen audio into AppData as
+        user_bg_music<ext>. Returns {ok, name, ext} or {ok:False,...}.
+        """
+        import shutil
+        try:
+            import webview  # local import keeps module import-safe in dev
+            windows = getattr(webview, "windows", None) or []
+            if not windows:
+                return {"ok": False, "error": "no window"}
+            win = windows[0]
+            file_types = ("Audio files (*.ogg;*.mp3;*.wav;*.m4a)", "All files (*.*)")
+            result = win.create_file_dialog(webview.OPEN_DIALOG, allow_multiple=False, file_types=file_types)
+        except Exception as exc:  # pywebview dialog can raise on some backends
+            log.warning("pick_music_file dialog failed: %s", exc)
+            _log_event("boundary", "pick_music_file", {"ok": False, "err": str(exc)})
+            return {"ok": False, "error": str(exc)}
+        if not result:
+            return {"ok": False, "error": "cancelled"}
+        chosen = Path(result[0] if isinstance(result, (list, tuple)) else result)
+        ext = chosen.suffix.lower() or ".ogg"
+        if ext not in (".ogg", ".mp3", ".wav", ".m4a"):
+            return {"ok": False, "error": "unsupported file type"}
+        # Cap at 12 MB — a between-lessons loop should be tiny; refuse a full album.
+        try:
+            if chosen.stat().st_size > 12 * 1024 * 1024:
+                return {"ok": False, "error": "file too big (max 12 MB)"}
+        except OSError as exc:
+            return {"ok": False, "error": str(exc)}
+        # Clear any prior user track (different ext) so only one exists.
+        for old in _appdata_root().glob("user_bg_music.*"):
+            try:
+                old.unlink()
+            except OSError as exc:
+                # Locked file (being read?) would leave two tracks; glob order
+                # could then play the wrong one. Surface it loudly.
+                log.warning("pick_music_file: could not remove old track %s: %s", old, exc)
+        dest = _appdata_root() / f"user_bg_music{ext}"
+        try:
+            shutil.copy2(chosen, dest)
+        except OSError as exc:
+            log.warning("pick_music_file copy failed: %s", exc)
+            _log_event("boundary", "pick_music_file", {"ok": False, "err": str(exc)})
+            return {"ok": False, "error": str(exc)}
+        _log_event("boundary", "pick_music_file", {"ok": True, "name": chosen.name, "ext": ext})
+        return {"ok": True, "name": chosen.name, "ext": ext}
+
+    def get_user_music(self) -> str:
+        """Return the parent's saved track as a base64 data URL, or '' if none.
+        Read on demand by the Ambient player so the bytes never touch
+        localStorage / state.json.
+        """
+        import base64
+        for fp in _appdata_root().glob("user_bg_music.*"):
+            try:
+                # Guard the read path too (not just pick): a 12 MB file becomes
+                # ~16 MB base64 over the pywebview bridge. Refuse oversize so the
+                # bridge doesn't silently drop/truncate an enormous response.
+                if fp.stat().st_size > 12 * 1024 * 1024:
+                    log.warning("get_user_music: %s too big (%d bytes), skipping", fp, fp.stat().st_size)
+                    return ""
+                data = fp.read_bytes()
+            except OSError as exc:
+                log.warning("get_user_music read failed: %s", exc)
+                return ""
+            ext = fp.suffix.lower().lstrip(".")
+            mime = {"ogg": "audio/ogg", "mp3": "audio/mpeg",
+                    "wav": "audio/wav", "m4a": "audio/mp4"}.get(ext, "audio/ogg")
+            b64 = base64.b64encode(data).decode("ascii")
+            return f"data:{mime};base64,{b64}"
+        return ""
+
+    def has_user_music(self) -> bool:
+        return any(_appdata_root().glob("user_bg_music.*"))
+
     def list_kid_projects(self) -> list[dict]:
         """v0.7.11 Fix 10: enumerate saved capstone JSON projects.
 
@@ -194,11 +344,20 @@ class JSBridge:
                     obj = json.loads(raw)
                 except (OSError, json.JSONDecodeError):
                     continue
+                # Friendly name: capstone uses game_name; level saves get a
+                # readable "My Level" + date instead of the raw kid_level_<ts>.
+                stem = fp.stem
+                if obj.get("game_name"):
+                    nice = str(obj["game_name"])
+                elif stem.startswith("kid_level_"):
+                    nice = "My Level"
+                else:
+                    nice = stem
                 items.append({
                     "filename": fp.name,
-                    "name": str(obj.get("game_name") or fp.stem),
-                    "created": str(obj.get("created_at") or ""),
-                    "kind": str(obj.get("kind") or "capstone"),
+                    "name": nice,
+                    "created": str(obj.get("created_at") or obj.get("savedAt") or ""),
+                    "kind": str(obj.get("kind") or ("level" if "grid" in obj else "project")),
                 })
         except OSError as exc:
             log.warning("list_kid_projects failed: %s", exc)
@@ -208,21 +367,48 @@ class JSBridge:
         return items
 
     def open_kid_project(self, filename: str) -> dict:
-        """v0.7.11 Fix 10: open a saved project's printable HTML card in the
-        default browser. Falls back to opening the JSON if no HTML sibling
-        exists. Path-safe: only files within get_user_data_dir() are openable.
+        """Open a saved project in the default browser.
+
+        v0.7.15 fix: the original code fell back to launching the raw .json when
+        no HTML sibling existed. On Windows .json usually has no GUI association,
+        so 'Open' silently did nothing for the kid_level_*.json saves (which have
+        no HTML twin). Now we GENERATE a viewer HTML on the fly for any project
+        that lacks one — rendering the painted grid for level saves, or a
+        pretty field view otherwise — and open that. HTML always has a browser
+        association, so Open always shows something.
+
+        Path-safe: only files within get_user_data_dir() are touched.
         """
+        import json
         import subprocess
         safe_name = "".join(c for c in filename if c.isalnum() or c in ("_", "-", "."))
         if not safe_name:
             return {"ok": False, "error": "invalid filename"}
         user_dir = get_user_data_dir()
         target = user_dir / safe_name
-        # Prefer the HTML sibling for a richer view; fall back to the JSON itself.
         html_sibling = target.with_suffix(".html")
-        chosen = html_sibling if html_sibling.is_file() else target
-        if not chosen.is_file():
+
+        chosen = None
+        if html_sibling.is_file():
+            chosen = html_sibling
+        elif target.is_file():
+            # No HTML twin — generate a viewer from the JSON.
+            try:
+                obj = json.loads(target.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as exc:
+                log.warning("open_kid_project parse failed: %s", exc)
+                obj = None
+            view = user_dir / (target.stem + "_view.html")
+            try:
+                view.write_text(_render_project_view(obj, target.stem), encoding="utf-8")
+                chosen = view
+            except OSError as exc:
+                log.warning("open_kid_project view-write failed: %s", exc)
+                _log_event("boundary", "open_kid_project", {"target": str(view), "ok": False, "err": str(exc)})
+                return {"ok": False, "error": str(exc)}
+        else:
             return {"ok": False, "error": "file not found"}
+
         try:
             if os.name == "nt":  # Windows
                 os.startfile(str(chosen))  # type: ignore[attr-defined]
