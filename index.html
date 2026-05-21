@@ -2265,13 +2265,16 @@ function _kcaEnsureHoverAudio() {
   _kcaHoverAudio = document.createElement("audio");
   _kcaHoverAudio.preload = "auto";
   document.body.appendChild(_kcaHoverAudio);
-  let __hReading = false;
-  const __hBegin = () => { if (!__hReading) { __hReading = true; _kcaReadingBegin(); } };
-  const __hEnd   = () => { if (__hReading)  { __hReading = false; _kcaReadingEnd(); } _kcaHoverActiveBtn = null; };
-  _kcaHoverAudio.addEventListener("play",  __hBegin);
-  _kcaHoverAudio.addEventListener("ended", __hEnd);
-  _kcaHoverAudio.addEventListener("pause", __hEnd);
-  _kcaHoverAudio.addEventListener("error", __hEnd);
+  // v0.7.16 — hover/option playback does NOT drive the reading-lock. It's the
+  // kid actively listening to a choice, not a forced read. Locking here dimmed
+  // the WHOLE card grid every time hover audio fired, so sweeping the mouse
+  // across options strobed the panel on/off (the reported flicker). Only lesson
+  // narration + the question prompt hold the lock now. We still clear the active
+  // button on each terminal event so re-hover works.
+  const __clear = () => { _kcaHoverActiveBtn = null; };
+  _kcaHoverAudio.addEventListener("ended", __clear);
+  _kcaHoverAudio.addEventListener("pause", __clear);
+  _kcaHoverAudio.addEventListener("error", __clear);
 }
 
 /* v0.7.16 — explicit speaker-icon TAP. Unlike hover, a deliberate tap ALWAYS
@@ -2368,23 +2371,8 @@ function speakHoverFallback(text) {
     u.rate = 0.95;
     u.pitch = 1.1;
     u.volume = 1.0;
-    // v0.7.13 Fix C: hover-fallback Web Speech also participates in the
-    // reading-lock so answer clicks are still blocked while it speaks.
-    // Same 15s watchdog as speakText — WebKitGTK can drop onend silently.
-    let __hsActive = false;
-    let __hsGuard = null;
-    const __hsBegin = () => {
-      if (!__hsActive) { __hsActive = true; _kcaReadingBegin(); }
-      if (__hsGuard) clearTimeout(__hsGuard);
-      __hsGuard = setTimeout(() => { try { __hsEnd(); } catch (_) {} }, 15000);
-    };
-    const __hsEnd = () => {
-      if (__hsGuard) { clearTimeout(__hsGuard); __hsGuard = null; }
-      if (__hsActive) { __hsActive = false; _kcaReadingEnd(); }
-    };
-    u.onstart = __hsBegin;
-    u.onend = __hsEnd;
-    u.onerror = __hsEnd;
+    // v0.7.16 — hover-fallback speech does NOT drive the reading-lock (see
+    // _kcaEnsureHoverAudio). It just speaks the option the kid is hovering.
     window.speechSynthesis.speak(u);
   } catch (_) {}
 }
