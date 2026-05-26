@@ -1,6 +1,6 @@
 # Hot Files — frequently referenced across recent sessions
 
-Generated: 2026-05-20T15:41:42
+Generated: 2026-05-26T18:04:55
 Decay: weight = 0.5 ^ (age_days / 7). Cutoff: 30 days.
 Source: all JSONLs under ~/.claude/projects/
 
@@ -10,18 +10,18 @@ consider preloading the top few into memory files for faster access.
 
 | Rank | Weight | File |
 |------|--------|------|
-| 1 | 180.56 | `C:\Quasar\tools\gui\panels.py` |
-| 2 | 148.80 | `C:\Users\computer\Desktop\AI\KidsCodeAcademy\index.html` |
-| 3 | 120.54 | `C:\Users\computer\Desktop\AI\sprite_editor\app.py` |
-| 4 | 97.87 | `C:\Quasar\tools\gui\app.py` |
-| 5 | 88.29 | `C:\Quasar\tools\orchestrator\agent_loop.py` |
-| 6 | 72.24 | `C:\Users\computer\Desktop\AI\gemini_coder_web\broadcast.py` |
-| 7 | 71.71 | `C:\Users\computer\Desktop\AI\adhd_free\daemons\briefer.py` |
-| 8 | 57.90 | `C:\StolenEmerald\STATE.md` |
-| 9 | 45.12 | `C:\Users\computer\Desktop\AI\claude interaction tool\claude_backend\gui.py` |
-| 10 | 38.60 | `C:\StolenEmerald\source\src\field_specials.c` |
-| 11 | 36.38 | `C:\Users\computer\Desktop\AI\adhd_free\gui\sticky.py` |
-| 12 | 36.28 | `C:\Users\computer\Desktop\AI\agentzero\.openclaw\external-channel-bridge\index.ts` |
-| 13 | 35.88 | `C:\Users\computer\Desktop\AI\adhd_free\gui\screens\dashboard.py` |
-| 14 | 32.83 | `C:\Users\computer\Desktop\AI\adhd_free\lib\auto_fix_interactive.py` |
-| 15 | 31.22 | `C:\StolenEmerald\host\StolenEmeraldHost\EmulatorWindow.cs` |
+| 1 | 98.70 | `C:\Quasar\tools\gui\panels.py` |
+| 2 | 81.34 | `C:\Users\computer\Desktop\AI\KidsCodeAcademy\index.html` |
+| 3 | 69.19 | `C:\Users\computer\Desktop\AI\sprite_editor\app.py` |
+| 4 | 62.19 | `C:\Quasar\tools\gui\app.py` |
+| 5 | 61.17 | `C:\Users\computer\Desktop\AI\adhd_free\daemons\briefer.py` |
+| 6 | 51.83 | `C:\Quasar\tools\orchestrator\agent_loop.py` |
+| 7 | 44.45 | `C:\StolenEmerald\STATE.md` |
+| 8 | 39.49 | `C:\Users\computer\Desktop\AI\gemini_coder_web\broadcast.py` |
+| 9 | 34.11 | `C:\Users\computer\Desktop\AI\tools\uncensored_ai_launcher\Launch-UncensoredCoder.ps1` |
+| 10 | 31.77 | `C:/Quasar/tools/orchestrator/agent_loop.py` |
+| 11 | 29.49 | `C:\Users\computer\Desktop\AI\card-collection-anime\backend\test_api.py` |
+| 12 | 28.93 | `C:\Users\computer\Desktop\AI\adhd_free\lib\auto_fix.py` |
+| 13 | 25.05 | `C:\StolenEmerald\source\src\field_specials.c` |
+| 14 | 24.80 | `C:\Users\computer\Desktop\AI\adhd_free\gui\screens\autofix.py` |
+| 15 | 24.66 | `C:\Users\computer\Desktop\AI\claude interaction tool\claude_backend\gui.py` |

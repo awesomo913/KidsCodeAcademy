@@ -22,6 +22,7 @@
 - [`_emit_option_rows`](utilities/_emit_option_rows.py) (from `scripts/audio_qa_report.py:127`) -- Dedup options by audio path — same audio file may back many lessons.
 - [`weighted_sample`](utilities/weighted_sample.py) (from `scripts/audio_qa_report.py:183`) -- Acronym-heavy rows get 2x weight, others 1x.
 - [`_hash_text`](utilities/_hash_text.py) (from `scripts/bake_option_audio.py:38`) -- Stable short hash for a text string. 10 hex chars = 1.1T distinct
+- [`bake_one`](utilities/bake_one.py) (from `scripts/bake_q7_audio.py:35`) -- Bake `text` to ROOT/ogg_rel. Returns 'baked' | 'skip' | 'fail'.
 - [`_audio_relpath`](utilities/_audio_relpath.py) (from `scripts/bake_question_prompts.py:34`) -- Stable relative path used by both bake + runtime.
 - [`convert_wav_to_ogg`](utilities/convert_wav_to_ogg.py) (from `scripts/compress_audio_ogg.py:56`) -- Encode `src` (wav) → `dst` (ogg/opus). Returns True on success.
 - [`_unique_distractors_in_question`](utilities/_unique_distractors_in_question.py) (from `scripts/dedupe_distractors.py:30`) -- All unique non-empty wrong-answer strings across this question's variations.
@@ -36,6 +37,7 @@
 - [`_scenario_to_variations`](utilities/_scenario_to_variations.py) (from `scripts/expand_lessons_v3.py:2243`) -- Convert ONE hand-written scenario into VARIATIONS_PER_QUESTION variations.
 - [`_gate`](utilities/_gate.py) (from `scripts/expand_lessons_v3.py:2264`) -- Type-this-word gate template — every gate teaches typing across the curriculum.
 - [`_question_count`](utilities/_question_count.py) (from `scripts/expand_lessons_v3.py:2285`) -- 5-8 questions per lesson, deterministic from id.
+- [`wrong_pool`](utilities/wrong_pool.py) (from `scripts/fix_duplicate_options.py:24`) -- All distinct wrong-option dicts used anywhere in this question.
 - [`fix_file`](utilities/fix_file.py) (from `scripts/fix_question_quality.py:103`) -- Replace problematic strings (raw text, not json-escaped — the file stores
 - [`_adsr`](utilities/_adsr.py) (from `scripts/gen_sfx.py:38`) -- Smooth ADSR. Linear attack, exponential release. Sustain at 1.0.
 - [`_harmonic_voice`](utilities/_harmonic_voice.py) (from `scripts/gen_sfx.py:52`) -- Fundamental + lower 2nd partial + tiny 4th partial.
@@ -70,6 +72,7 @@
 
 - [`save_kid_project`](patterns/save_kid_project.py) (from `app.py:181`)
 - [`_load_font`](patterns/_load_font.py) (from `gen_icons.py:27`)
+- [`build_variations`](patterns/build_variations.py) (from `scripts/author_scenario_q7.py:204`)
 - [`_build_questions`](patterns/_build_questions.py) (from `scripts/expand_lessons_v2.py:1221`)
 - [`_build_variation`](patterns/_build_variation.py) (from `scripts/expand_lessons_v3.py:2200`)
 - [`_save`](patterns/_save.py) (from `scripts/gen_sfx.py:119`)

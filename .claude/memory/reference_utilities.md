@@ -57,15 +57,36 @@ type: reference
 | `collect_rows` | `scripts/audio_qa_report.py` | -- |
 | `weighted_sample` | `scripts/audio_qa_report.py` | Acronym-heavy rows get 2x weight, others 1x. |
 | `render_html` | `scripts/audio_qa_report.py` | -- |
+| `ROOT` | `scripts/audit_question_quality.py` | -- |
+| `LESSONS_DIR` | `scripts/audit_question_quality.py` | -- |
+| `REPORT` | `scripts/audit_question_quality.py` | -- |
+| `PROMPT_MAX` | `scripts/audit_question_quality.py` | -- |
+| `HARD_WORD_MIN` | `scripts/audit_question_quality.py` | -- |
+| `JARGON` | `scripts/audit_question_quality.py` | -- |
+| `SILLY` | `scripts/audit_question_quality.py` | -- |
+| `TEMPLATE_OPENERS` | `scripts/audit_question_quality.py` | -- |
+| `words` | `scripts/audit_question_quality.py` | -- |
+| `audit` | `scripts/audit_question_quality.py` | -- |
 | `log` | `scripts/author_lessons.py` | -- |
 | `ROOT` | `scripts/author_lessons.py` | -- |
 | `LESSONS` | `scripts/author_lessons.py` | -- |
 | `write` | `scripts/author_lessons.py` | -- |
+| `log` | `scripts/author_scenario_q7.py` | -- |
+| `ROOT` | `scripts/author_scenario_q7.py` | -- |
+| `LESSONS_DIR` | `scripts/author_scenario_q7.py` | -- |
+| `OPENERS` | `scripts/author_scenario_q7.py` | -- |
+| `build_variations` | `scripts/author_scenario_q7.py` | -- |
+| `main` | `scripts/author_scenario_q7.py` | -- |
 | `log` | `scripts/bake_option_audio.py` | -- |
 | `ROOT` | `scripts/bake_option_audio.py` | -- |
 | `LESSONS_DIR` | `scripts/bake_option_audio.py` | -- |
 | `OUT_DIR` | `scripts/bake_option_audio.py` | -- |
 | `main` | `scripts/bake_option_audio.py` | -- |
+| `log` | `scripts/bake_q7_audio.py` | -- |
+| `ROOT` | `scripts/bake_q7_audio.py` | -- |
+| `LESSONS_DIR` | `scripts/bake_q7_audio.py` | -- |
+| `bake_one` | `scripts/bake_q7_audio.py` | Bake `text` to ROOT/ogg_rel. Returns 'baked' | 'skip' | 'fail'. |
+| `main` | `scripts/bake_q7_audio.py` | -- |
 | `log` | `scripts/bake_question_prompts.py` | -- |
 | `ROOT` | `scripts/bake_question_prompts.py` | -- |
 | `LESSONS_DIR` | `scripts/bake_question_prompts.py` | -- |
@@ -103,6 +124,12 @@ type: reference
 | `VARIATIONS_PER_QUESTION` | `scripts/expand_lessons_v3.py` | -- |
 | `expand_lesson` | `scripts/expand_lessons_v3.py` | -- |
 | `main` | `scripts/expand_lessons_v3.py` | -- |
+| `log` | `scripts/fix_duplicate_options.py` | -- |
+| `ROOT` | `scripts/fix_duplicate_options.py` | -- |
+| `LESSONS_DIR` | `scripts/fix_duplicate_options.py` | -- |
+| `wrong_pool` | `scripts/fix_duplicate_options.py` | All distinct wrong-option dicts used anywhere in this question. |
+| `fix_variation` | `scripts/fix_duplicate_options.py` | -- |
+| `main` | `scripts/fix_duplicate_options.py` | -- |
 | `ROOT` | `scripts/fix_question_quality.py` | -- |
 | `LESSONS_DIR` | `scripts/fix_question_quality.py` | -- |
 | `REPLACEMENTS` | `scripts/fix_question_quality.py` | -- |
@@ -150,6 +177,14 @@ type: reference
 | `LESSONS_DIR` | `scripts/purge_filler_gates.py` | -- |
 | `process_lesson` | `scripts/purge_filler_gates.py` | Return per-lesson stats: { q_swaps, game_swap, lesson_id }. |
 | `main` | `scripts/purge_filler_gates.py` | -- |
+| `log` | `scripts/rebalance_distractors.py` | -- |
+| `ROOT` | `scripts/rebalance_distractors.py` | -- |
+| `LESSONS_DIR` | `scripts/rebalance_distractors.py` | -- |
+| `MAX_REPEATS` | `scripts/rebalance_distractors.py` | -- |
+| `wrong_pool` | `scripts/rebalance_distractors.py` | -- |
+| `counts` | `scripts/rebalance_distractors.py` | -- |
+| `rebalance_question` | `scripts/rebalance_distractors.py` | -- |
+| `main` | `scripts/rebalance_distractors.py` | -- |
 | `log` | `scripts/rewrite_mascot_lines.py` | -- |
 | `ROOT` | `scripts/rewrite_mascot_lines.py` | -- |
 | `LESSONS_DIR` | `scripts/rewrite_mascot_lines.py` | -- |

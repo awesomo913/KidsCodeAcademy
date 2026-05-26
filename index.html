@@ -5120,6 +5120,26 @@ const QuestionFlow = {
       qfRoot.appendChild(gateHost);
       qfRoot.appendChild(ansHost);
 
+      const advance = () => {
+        qIdx += 1;
+        if (qIdx < questions.length) {
+          // Brief pause so the kid sees the right state before the next question
+          setTimeout(renderCurrent, 700);
+        } else {
+          onLessonComplete(true);
+        }
+      };
+
+      // v0.7.16 — `skipGate` questions (e.g. Math Minute) have no warm-up gate:
+      // render the read-aloud multiple-choice directly. Everything else keeps
+      // the gate → reveal-answer flow.
+      if (q.skipGate) {
+        gateHost.remove();
+        ansHost.classList.remove("hidden");
+        this._renderAnswer(q, ansHost, advance);
+        return;
+      }
+
       // Stage 1 — render the gate interaction. KidGame.run accepts a host
       // override (third arg). When the gate's onComplete fires, we lock
       // the gate visuals and reveal the answer panel.
@@ -5127,16 +5147,7 @@ const QuestionFlow = {
         if (!ok) return;
         gateHost.classList.add("locked");
         ansHost.classList.remove("hidden");
-        this._renderAnswer(q, ansHost, () => {
-          // MCQ correct → advance
-          qIdx += 1;
-          if (qIdx < questions.length) {
-            // Brief pause so the kid sees the right state before the next gate
-            setTimeout(renderCurrent, 700);
-          } else {
-            onLessonComplete(true);
-          }
-        });
+        this._renderAnswer(q, ansHost, advance);
       }, gateHost);
     };
 
