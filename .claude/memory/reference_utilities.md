@@ -47,6 +47,16 @@ type: reference
 | `ANTENNA_TIP` | `gen_mascot.py` | -- |
 | `SHADOW` | `gen_mascot.py` | -- |
 | `BUBBLE` | `gen_mascot.py` | -- |
+| `ROOT` | `scripts/add_math_minute.py` | -- |
+| `LESSONS_DIR` | `scripts/add_math_minute.py` | -- |
+| `num_distractors` | `scripts/add_math_minute.py` | Plausible near-miss wrong answers for a numeric problem. |
+| `g_add` | `scripts/add_math_minute.py` | -- |
+| `g_sub` | `scripts/add_math_minute.py` | -- |
+| `g_doubles` | `scripts/add_math_minute.py` | -- |
+| `g_counton` | `scripts/add_math_minute.py` | -- |
+| `g_missing` | `scripts/add_math_minute.py` | -- |
+| `g_compare` | `scripts/add_math_minute.py` | -- |
+| `g_compare_small` | `scripts/add_math_minute.py` | -- |
 | `log` | `scripts/audio_qa_report.py` | -- |
 | `ROOT` | `scripts/audio_qa_report.py` | -- |
 | `LESSONS_DIR` | `scripts/audio_qa_report.py` | -- |
@@ -77,6 +87,11 @@ type: reference
 | `OPENERS` | `scripts/author_scenario_q7.py` | -- |
 | `build_variations` | `scripts/author_scenario_q7.py` | -- |
 | `main` | `scripts/author_scenario_q7.py` | -- |
+| `log` | `scripts/bake_math_audio.py` | -- |
+| `ROOT` | `scripts/bake_math_audio.py` | -- |
+| `LESSONS_DIR` | `scripts/bake_math_audio.py` | -- |
+| `bake_one` | `scripts/bake_math_audio.py` | -- |
+| `main` | `scripts/bake_math_audio.py` | -- |
 | `log` | `scripts/bake_option_audio.py` | -- |
 | `ROOT` | `scripts/bake_option_audio.py` | -- |
 | `LESSONS_DIR` | `scripts/bake_option_audio.py` | -- |

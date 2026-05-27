@@ -30,8 +30,8 @@ Project-local rules that override the parent `CLAUDE.md` for files inside
 
 ## Overview
 
-- **Files**: 120 (.json (78), .py (33), .md (9))
-- **Entry points**: `app.py`, `build.py`, `gen_icons.py`, `gen_mascot.py`, `scripts/audio_qa_report.py`
+- **Files**: 122 (.json (78), .py (35), .md (9))
+- **Entry points**: `app.py`, `build.py`, `gen_icons.py`, `gen_mascot.py`, `scripts/add_math_minute.py`
 - **Dependencies**: pywebview, pyinstaller, pillow, pyttsx3
 - **Key files**: `README.md`, `CLAUDE.md`, `requirements.txt`, `.gitignore`
 
@@ -47,7 +47,7 @@ sandbox_ai/  (16 files)
   gemini/  (1 files)
   ollama/  (1 files)
   opencode/  (1 files)
-scripts/  (29 files)
+scripts/  (31 files)
 vendor/  (2 files)
   snapshot_bubbys_game/  (1 files)
   snapshot_sprite_editor/  (1 files)
@@ -67,10 +67,12 @@ voices/  (1 files)
 - `build.py` -- Build pipeline for Kids Code Academy [entry]
 - `gen_icons.py` -- Generate app icons for Kids Code Academy [entry]
 - `gen_mascot.py` -- Generate procedural mascot frames for Bytey [entry]
+- `scripts/add_math_minute.py` -- Append a 3-problem 'Math Minute' to the end of every lesson [entry]
 - `scripts/audio_qa_report.py` -- Generate an HTML audio QA report for parent spot-checking [entry]
 - `scripts/audit_question_quality.py` -- Audit every question/variation across all lessons for 7-year-old quality [entry]
 - `scripts/author_lessons.py` -- Author all v0.3.0 net-new lesson JSONs in one shot
 - `scripts/author_scenario_q7.py` -- Rewrite q7 in the 30 lessons that have it from a 2nd "pick the silly one" [entry]
+- `scripts/bake_math_audio.py` -- Bake Piper audio for the Math Minute questions (id math*) only [entry]
 - `scripts/bake_option_audio.py` -- Bake one Piper TTS wav per UNIQUE answer-option text [entry]
 - `scripts/bake_q7_audio.py` -- Bake audio for the rewritten q7 scenario questions only [entry]
 - `scripts/bake_question_prompts.py` -- Bake one Piper TTS wav per question variation prompt [entry]

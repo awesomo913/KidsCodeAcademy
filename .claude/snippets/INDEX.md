@@ -19,6 +19,7 @@
 - [`step_sandbox_lint`](utilities/step_sandbox_lint.py) (from `build.py:57`) -- v0.7: validate sandbox JSONs before bundling — abort build on any malformed file.
 - [`step_distractor_lint`](utilities/step_distractor_lint.py) (from `build.py:67`) -- Block ship if any wrong-answer text repeats > 3 times in one question.
 - [`_build_audio_pkg`](utilities/_build_audio_pkg.py) (from `build.py:109`) -- Phase 4: build a temp copy of `assets/` that EXCLUDES *.wav so PyInstaller
+- [`num_distractors`](utilities/num_distractors.py) (from `scripts/add_math_minute.py:37`) -- Plausible near-miss wrong answers for a numeric problem.
 - [`_emit_option_rows`](utilities/_emit_option_rows.py) (from `scripts/audio_qa_report.py:127`) -- Dedup options by audio path — same audio file may back many lessons.
 - [`weighted_sample`](utilities/weighted_sample.py) (from `scripts/audio_qa_report.py:183`) -- Acronym-heavy rows get 2x weight, others 1x.
 - [`_hash_text`](utilities/_hash_text.py) (from `scripts/bake_option_audio.py:38`) -- Stable short hash for a text string. 10 hex chars = 1.1T distinct
@@ -72,6 +73,7 @@
 
 - [`save_kid_project`](patterns/save_kid_project.py) (from `app.py:181`)
 - [`_load_font`](patterns/_load_font.py) (from `gen_icons.py:27`)
+- [`build_math_questions`](patterns/build_math_questions.py) (from `scripts/add_math_minute.py:155`)
 - [`build_variations`](patterns/build_variations.py) (from `scripts/author_scenario_q7.py:204`)
 - [`_build_questions`](patterns/_build_questions.py) (from `scripts/expand_lessons_v2.py:1221`)
 - [`_build_variation`](patterns/_build_variation.py) (from `scripts/expand_lessons_v3.py:2200`)

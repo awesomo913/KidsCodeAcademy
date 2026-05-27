@@ -15,10 +15,12 @@ type: reference
 
 ## scripts/
 
+- `scripts/add_math_minute.py`: Append a 3-problem 'Math Minute' to the end of every lesson. | exports: ROOT, LESSONS_DIR, num_distractors, g_add, g_sub, g_doubles, g_counton, g_missing
 - `scripts/audio_qa_report.py`: Generate an HTML audio QA report for parent spot-checking. | exports: log, ROOT, LESSONS_DIR, ASSETS_AUDIO, QA_DIR, ACRONYM_RE, AudioRow, collect_rows
 - `scripts/audit_question_quality.py`: Audit every question/variation across all lessons for 7-year-old quality. | exports: ROOT, LESSONS_DIR, REPORT, PROMPT_MAX, HARD_WORD_MIN, JARGON, SILLY, TEMPLATE_OPENERS
 - `scripts/author_lessons.py`: Author all v0.3.0 net-new lesson JSONs in one shot. | exports: log, ROOT, LESSONS, write
 - `scripts/author_scenario_q7.py`: Rewrite q7 in the 30 lessons that have it from a 2nd "pick the silly one" | exports: log, ROOT, LESSONS_DIR, OPENERS, build_variations, main
+- `scripts/bake_math_audio.py`: Bake Piper audio for the Math Minute questions (id math*) only. | exports: log, ROOT, LESSONS_DIR, bake_one, main
 - `scripts/bake_option_audio.py`: Bake one Piper TTS wav per UNIQUE answer-option text. | exports: log, ROOT, LESSONS_DIR, OUT_DIR, main
 - `scripts/bake_q7_audio.py`: Bake audio for the rewritten q7 scenario questions only. | exports: log, ROOT, LESSONS_DIR, bake_one, main
 - `scripts/bake_question_prompts.py`: Bake one Piper TTS wav per question variation prompt. | exports: log, ROOT, LESSONS_DIR, OUT_DIR, main
