@@ -6,6 +6,7 @@ data-driven instead of eyeballed. Categories:
   prompt_too_long      prompt is hard to read aloud (long for a 7yo)
   hard_word            a word too advanced / jargon without a gloss
   bare_option          an answer choice is too short/abstract to mean anything
+                       (numeric Math Minute choices are intentionally short)
   all_silly_wrong      every wrong answer is absurd -> kid wins by elimination,
                        learns nothing (good quizzes need ONE plausible-but-wrong)
   template_opener      prompt uses a worn-out template phrase
@@ -64,6 +65,8 @@ def audit() -> dict:
         "template_opener": [],
     }
     distractor_counts: Counter = Counter()
+    math_prompt_counts: Counter = Counter()
+    math_skills: Counter = Counter()
     totals = {"lessons": 0, "questions": 0, "variations": 0}
 
     for f in sorted(LESSONS_DIR.glob("lesson_*.json")):
@@ -73,11 +76,16 @@ def audit() -> dict:
         for q in data.get("questions", []):
             totals["questions"] += 1
             qid = q.get("id", "?")
+            is_math = str(qid).startswith("math")
+            if is_math:
+                math_skills[str(q.get("math_skill") or "MISSING")] += 1
             for vi, v in enumerate(q.get("variations", [])):
                 totals["variations"] += 1
                 where = f"{lid} {qid} v{vi}"
                 prompt = str(v.get("prompt") or "")
                 opts = v.get("options") or []
+                if is_math:
+                    math_prompt_counts[prompt] += 1
 
                 if len(prompt) > PROMPT_MAX:
                     findings["prompt_too_long"].append((where, len(prompt), prompt))
@@ -90,19 +98,23 @@ def audit() -> dict:
 
                 wrong = [str(o.get("text") or "") for o in opts if not o.get("correct")]
                 for ot in wrong:
-                    if len(words(ot)) <= 2:
+                    if not is_math and len(words(ot)) <= 2:
                         findings["bare_option"].append((where, ot))
-                    distractor_counts[ot] += 1
+                    if not is_math:
+                        distractor_counts[ot] += 1
                 if wrong and all(SILLY.search(ot) for ot in wrong):
                     findings["all_silly_wrong"].append((where, prompt[:50], wrong))
 
-                for rx in TEMPLATE_OPENERS:
-                    if rx.search(prompt):
-                        findings["template_opener"].append((where, prompt[:70]))
-                        break
+                if not is_math:
+                    for rx in TEMPLATE_OPENERS:
+                        if rx.search(prompt):
+                            findings["template_opener"].append((where, prompt[:70]))
+                            break
 
     dupes = [(t, c) for t, c in distractor_counts.most_common(40) if c >= 8]
-    return {"findings": findings, "dupes": dupes, "totals": totals}
+    math_dupes = [(t, c) for t, c in math_prompt_counts.most_common() if c > 1]
+    return {"findings": findings, "dupes": dupes, "totals": totals,
+            "math_dupes": math_dupes, "math_skills": math_skills}
 
 
 def main() -> None:
@@ -122,6 +134,14 @@ def main() -> None:
     lines.append(f"## dupe_distractor — {len(res['dupes'])} strings reused >=8x")
     for text, c in res["dupes"]:
         lines.append(f"- {c}x — {text!r}")
+    lines.append("")
+    lines.append(f"## math_duplicate_prompt — {len(res['math_dupes'])} exact repeats")
+    for text, c in res["math_dupes"]:
+        lines.append(f"- {c}x — {text!r}")
+    lines.append("")
+    lines.append("## math_skill_coverage")
+    for skill, count in sorted(res["math_skills"].items()):
+        lines.append(f"- {skill}: {count}")
     REPORT.write_text("\n".join(lines), encoding="utf-8")
 
     print("=== AUDIT SUMMARY ===")
@@ -129,6 +149,8 @@ def main() -> None:
     for cat, items in res["findings"].items():
         print(f"  {cat:20s} {len(items)}")
     print(f"  {'dupe_distractor':20s} {len(res['dupes'])} strings reused >=8x")
+    print(f"  {'math_duplicate_prompt':20s} {len(res['math_dupes'])}")
+    print(f"  {'math_skill_categories':20s} {len(res['math_skills'])}")
     print(f"report -> {REPORT}")
 
 

@@ -438,8 +438,11 @@ def _start_local_http_server(serve_dir: Path) -> int:
     import http.server
     import socketserver
     import threading
+    import zipfile
+    from urllib.parse import unquote, urlsplit
 
     serve_dir_str = str(serve_dir)
+    audio_bundle = serve_dir / "assets" / "audio_bundle.zip"
 
     class _Handler(http.server.SimpleHTTPRequestHandler):
         def __init__(self, *a: object, **kw: object) -> None:
@@ -449,6 +452,67 @@ def _start_local_http_server(serve_dir: Path) -> int:
             # Silence the per-request stderr spam — pywebview's window already
             # logs the page URL on load.
             pass
+
+        def _serve_bundled_audio(self, *, head_only: bool = False) -> bool:
+            """Serve ``assets/audio/...`` from the build-time ZIP when frozen.
+
+            Development runs keep normal loose files, so this path activates
+            only when ``audio_bundle.zip`` exists. Basic byte-range support
+            keeps HTML audio seeking and WebView2 media loading reliable.
+            """
+            request_path = unquote(urlsplit(self.path).path).lstrip("/")
+            prefix = "assets/audio/"
+            if not audio_bundle.is_file() or not request_path.startswith(prefix):
+                return False
+            if ".." in Path(request_path).parts:
+                self.send_error(400, "invalid audio path")
+                return True
+            member = request_path.removeprefix("assets/")
+            try:
+                with zipfile.ZipFile(audio_bundle, "r") as zf:
+                    payload = zf.read(member)
+            except KeyError:
+                self.send_error(404, "audio not found")
+                return True
+            except (OSError, zipfile.BadZipFile) as exc:
+                log.warning("audio bundle read failed for %s: %s", member, exc)
+                self.send_error(500, "audio bundle unavailable")
+                return True
+
+            total = len(payload)
+            start, end = 0, max(0, total - 1)
+            status = 200
+            range_header = self.headers.get("Range", "")
+            if range_header.startswith("bytes=") and total:
+                try:
+                    raw_start, raw_end = range_header[6:].split("-", 1)
+                    start = int(raw_start) if raw_start else 0
+                    end = int(raw_end) if raw_end else total - 1
+                    start = max(0, min(start, total - 1))
+                    end = max(start, min(end, total - 1))
+                    status = 206
+                except (TypeError, ValueError):
+                    start, end, status = 0, total - 1, 200
+            body = payload[start:end + 1]
+            self.send_response(status)
+            self.send_header("Content-Type", "audio/ogg")
+            self.send_header("Accept-Ranges", "bytes")
+            self.send_header("Cache-Control", "public, max-age=31536000, immutable")
+            self.send_header("Content-Length", str(len(body)))
+            if status == 206:
+                self.send_header("Content-Range", f"bytes {start}-{end}/{total}")
+            self.end_headers()
+            if not head_only:
+                self.wfile.write(body)
+            return True
+
+        def do_GET(self) -> None:  # noqa: N802 - stdlib handler API
+            if not self._serve_bundled_audio():
+                super().do_GET()
+
+        def do_HEAD(self) -> None:  # noqa: N802 - stdlib handler API
+            if not self._serve_bundled_audio(head_only=True):
+                super().do_HEAD()
 
     # Subclass so we can flip allow_reuse_address — without this, a rapid
     # close-then-reopen of the exe can hit "address in use" if the OS picks

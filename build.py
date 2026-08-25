@@ -24,6 +24,7 @@ import logging
 import shutil
 import subprocess
 import sys
+import zipfile
 from pathlib import Path
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -107,9 +108,13 @@ def step_audio() -> None:
 
 
 def _build_audio_pkg() -> Path | None:
-    """Phase 4: build a temp copy of `assets/` that EXCLUDES *.wav so PyInstaller
-    only bundles the smaller .ogg copies. Returns the temp pkg path or None on
-    failure. Caller is responsible for cleanup via shutil.rmtree.
+    """Build a compact temporary ``assets/`` tree for PyInstaller.
+
+    OGG files are already compressed, but bundling ~7,500 of them separately in
+    ``--onefile`` made every launch spend about a minute creating tiny files in
+    PyInstaller's temporary directory. Store them inside one uncompressed ZIP;
+    app.py serves members directly over the loopback HTTP server. This preserves
+    the single-EXE install while reducing extraction to one audio file.
     """
     src = ROOT / "assets"
     if not src.is_dir():
@@ -118,13 +123,29 @@ def _build_audio_pkg() -> Path | None:
     pkg = pkg_root / "assets"
     if pkg_root.exists():
         shutil.rmtree(pkg_root, ignore_errors=True)
-    def _copy_no_wav(s, names):
-        # Filter exposed to copytree to skip wavs — keeps the .ogg twins.
-        return [n for n in names if n.lower().endswith(".wav")]
+    def _copy_compact(s, names):
+        # Lesson audio is replaced by the ZIP below. Keep WAV files elsewhere:
+        # assets/sfx contains the UI feedback sounds used by the packaged app.
+        excluded = []
+        if Path(s).resolve() == src.resolve() and "audio" in names:
+            excluded.append("audio")
+        return excluded
     try:
-        shutil.copytree(src, pkg, ignore=_copy_no_wav)
+        shutil.copytree(src, pkg, ignore=_copy_compact)
+        audio_src = src / "audio"
+        ogg_files = sorted(audio_src.rglob("*.ogg"))
+        if not ogg_files:
+            raise OSError(f"no OGG audio found at {audio_src}")
+        bundle = pkg / "audio_bundle.zip"
+        with zipfile.ZipFile(bundle, "w", compression=zipfile.ZIP_STORED) as zf:
+            for audio_file in ogg_files:
+                arcname = (Path("audio") / audio_file.relative_to(audio_src)).as_posix()
+                zf.write(audio_file, arcname)
+        log.info("staged audio bundle: %d files -> %s (%.1f MB)",
+                 len(ogg_files), bundle, bundle.stat().st_size / (1024 * 1024))
     except OSError as exc:
         log.warning("could not stage audio pkg: %s", exc)
+        shutil.rmtree(pkg_root, ignore_errors=True)
         return None
     return pkg_root
 
@@ -132,10 +153,10 @@ def _build_audio_pkg() -> Path | None:
 def step_package() -> None:
     log.info("=== step 3: pyinstaller (target=%s) ===", "win" if _is_windows() else sys.platform)
     sep = ";" if _is_windows() else ":"
-    # Stage audio assets w/o .wav to keep the exe small (Phase 4). Falls back to
-    # the original assets/ folder if staging fails so a bad copytree doesn't
-    # block the build. Wrapped in try/finally so the staged folder is always
-    # cleaned even if PyInstaller crashes mid-build.
+    # Stage assets with lesson audio stored in one ZIP to speed up one-file
+    # startup. Falls back to the original assets/ folder if staging fails so a
+    # bad copytree doesn't block the build. Wrapped in try/finally so the staged
+    # folder is always cleaned even if PyInstaller crashes mid-build.
     pkg_root = _build_audio_pkg()
     try:
         _step_package_inner(pkg_root, sep)

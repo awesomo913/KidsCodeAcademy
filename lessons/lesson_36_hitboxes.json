@@ -1416,11 +1416,17 @@
     {
       "id": "math1",
       "skipGate": true,
+      "math_skill": "place-value",
       "variations": [
         {
-          "prompt": "3 plus what makes 6?",
+          "prompt": "In the number 34, how many tens are there?",
           "_audio": "assets/audio/q/lesson_36_math1_v0.ogg",
           "options": [
+            {
+              "text": "2",
+              "correct": false,
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
+            },
             {
               "text": "3",
               "correct": true,
@@ -1432,14 +1438,9 @@
               "_audio": "assets/audio/o/ac3478d69a.ogg"
             },
             {
-              "text": "0",
+              "text": "6",
               "correct": false,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
-            },
-            {
-              "text": "2",
-              "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/c1dfd96eea.ogg"
             }
           ]
         }
@@ -1448,30 +1449,31 @@
     {
       "id": "math2",
       "skipGate": true,
+      "math_skill": "build-a-number",
       "variations": [
         {
-          "prompt": "Count by 10s: 10, 20, 30. What comes next?",
+          "prompt": "What number has 1 tens and 2 ones?",
           "_audio": "assets/audio/q/lesson_36_math2_v0.ogg",
           "options": [
             {
-              "text": "41",
+              "text": "13",
               "correct": false,
-              "_audio": "assets/audio/o/761f22b2c1.ogg"
+              "_audio": "assets/audio/o/bd307a3ec3.ogg"
             },
             {
-              "text": "39",
+              "text": "15",
               "correct": false,
-              "_audio": "assets/audio/o/ca3512f4df.ogg"
+              "_audio": "assets/audio/o/f1abd67035.ogg"
             },
             {
-              "text": "40",
+              "text": "12",
               "correct": true,
-              "_audio": "assets/audio/o/af3e133428.ogg"
+              "_audio": "assets/audio/o/7b52009b64.ogg"
             },
             {
-              "text": "45",
+              "text": "17",
               "correct": false,
-              "_audio": "assets/audio/o/fb64435156.ogg"
+              "_audio": "assets/audio/o/0716d9708d.ogg"
             }
           ]
         }
@@ -1480,30 +1482,31 @@
     {
       "id": "math3",
       "skipGate": true,
+      "math_skill": "time",
       "variations": [
         {
-          "prompt": "Count by 2s: 0, 2, 4. What comes next?",
+          "prompt": "The clock says 3:30. Which answer tells the time?",
           "_audio": "assets/audio/q/lesson_36_math3_v0.ogg",
           "options": [
             {
-              "text": "4",
+              "text": "3 o'clock",
               "correct": false,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "_audio": "assets/audio/o/8802ac0d35.ogg"
             },
             {
-              "text": "3",
-              "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
-            },
-            {
-              "text": "9",
-              "correct": false,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
-            },
-            {
-              "text": "6",
+              "text": "half past 3",
               "correct": true,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/b55e77ce99.ogg"
+            },
+            {
+              "text": "half past 4",
+              "correct": false,
+              "_audio": "assets/audio/o/051156f55c.ogg"
+            },
+            {
+              "text": "4 o'clock",
+              "correct": false,
+              "_audio": "assets/audio/o/e1449136f4.ogg"
             }
           ]
         }

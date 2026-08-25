@@ -40,6 +40,7 @@ logging.basicConfig(
     format="%(asctime)s %(levelname)s %(message)s",
 )
 log = logging.getLogger("verify-persistence")
+ROOT = Path(__file__).resolve().parent.parent
 
 
 def _appdata_root() -> Path:
@@ -58,7 +59,10 @@ def _appdata_root() -> Path:
 def _default_exe_path() -> Path:
     """Where build.py's publish step puts the binary, per platform."""
     if os.name == "nt":
-        return Path(r"C:/Users/computer/Desktop/AI/KidsCodeAcademy.exe")
+        # build.py publishes beside the repository directory. Deriving this
+        # path keeps the verifier portable across usernames and Desktop/AI vs
+        # Desktop/AI2 checkouts.
+        return ROOT.parent / "KidsCodeAcademy.exe"
     # Linux/macOS: build.py publishes to ~/Desktop or ~/ if no Desktop
     desktop = Path.home() / "Desktop"
     target_dir = desktop if desktop.is_dir() else Path.home()
@@ -204,11 +208,17 @@ def _check_state(state: dict[str, str], cycle: int) -> tuple[bool, str]:
 
 
 def main() -> int:
+    global EXE_PATH, EXE_NAME
     parser = argparse.ArgumentParser()
     parser.add_argument("--cycles", type=int, default=50)
     parser.add_argument("--boot-wait", type=float, default=BOOT_WAIT_SECS,
                         help="Seconds to let the EXE boot + flush state on each cycle")
+    parser.add_argument("--exe", type=Path, default=EXE_PATH,
+                        help=f"EXE to verify (default: {EXE_PATH})")
     args = parser.parse_args()
+
+    EXE_PATH = args.exe.expanduser().resolve()
+    EXE_NAME = EXE_PATH.name
 
     if not EXE_PATH.is_file():
         log.error("EXE not found at %s", EXE_PATH)

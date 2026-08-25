@@ -1418,6 +1418,7 @@
     {
       "id": "math1",
       "skipGate": true,
+      "math_skill": "missing-addend",
       "variations": [
         {
           "prompt": "2 plus what makes 4?",
@@ -1450,6 +1451,7 @@
     {
       "id": "math2",
       "skipGate": true,
+      "math_skill": "subtraction-to-20",
       "variations": [
         {
           "prompt": "What is 15 minus 0?",
@@ -1482,30 +1484,31 @@
     {
       "id": "math3",
       "skipGate": true,
+      "math_skill": "place-value",
       "variations": [
         {
-          "prompt": "What is 2 plus 2?",
+          "prompt": "In the number 18, how many tens are there?",
           "_audio": "assets/audio/q/lesson_16_math3_v0.ogg",
           "options": [
             {
-              "text": "2",
+              "text": "0",
               "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
-            },
-            {
-              "text": "6",
-              "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/b6589fc6ab.ogg"
             },
             {
               "text": "4",
-              "correct": true,
+              "correct": false,
               "_audio": "assets/audio/o/1b64538924.ogg"
             },
             {
-              "text": "5",
+              "text": "1",
+              "correct": true,
+              "_audio": "assets/audio/o/356a192b79.ogg"
+            },
+            {
+              "text": "3",
               "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
             }
           ]
         }

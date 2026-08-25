@@ -1613,6 +1613,12 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 
       <div class="parent-pane" data-pane="settings">
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
+          <strong style="font-size:17px;">ℹ️ App version</strong>
+          <p class="muted" style="font-size:14px;margin:6px 0 0;">
+            <b>v0.8.0</b> — 60 lessons, Math Minute curriculum, chess, durable progress, and exact parent progress placement.
+          </p>
+        </div>
+        <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
           <strong style="font-size:17px;">🔊 Auto-play narration</strong>
           <p class="muted" style="font-size:14px;margin:6px 0 10px;">
             Bytey starts reading each lesson out loud about 1.5 seconds after it appears. Turn off to require a manual ▶ Play tap.
@@ -1646,11 +1652,13 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
           <strong style="font-size:17px;">📍 Set my kid's progress</strong>
           <p class="muted" style="font-size:14px;margin:6px 0 10px;">
-            Lost progress after an update? Pick where your kid was — every lesson up to and including that one is marked complete. Doesn't affect chess history or memory rules.
+            Lost progress after an update? Pick the exact lesson your kid should do next, or mark a lesson and everything before it complete. Chess history, projects, and memory rules stay unchanged.
           </p>
           <div class="row" style="gap:8px;align-items:center;flex-wrap:wrap;">
-            <select id="setProgressSelect" style="font-size:15px;padding:6px 10px;border-radius:8px;border:2px solid var(--accent-2);max-width:340px;"></select>
-            <button id="setProgressBtn" class="btn-big alt">Set as complete →</button>
+            <label for="setProgressSelect" class="muted" style="font-size:13px;width:100%;">Choose a lesson</label>
+            <select id="setProgressSelect" aria-label="Choose the lesson for progress" style="font-size:15px;padding:6px 10px;border-radius:8px;border:2px solid var(--accent-2);max-width:340px;"></select>
+            <button id="setProgressBtn" class="btn-big alt">Continue at this lesson</button>
+            <button id="setProgressThroughBtn" class="btn-big alt">Mark through complete</button>
           </div>
           <p id="setProgressStatus" class="muted" style="font-size:13px;margin-top:8px;min-height:18px;"></p>
         </div>
@@ -1710,6 +1718,8 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 
 <script>
 "use strict";
+
+const APP_VERSION = "v0.8.0";
 
 /* ============================================================
  *  DOM helpers — never use innerHTML on caller-supplied strings.
@@ -4755,7 +4765,7 @@ const KidGame = {
               idea_summary: ideaSummary,
               created_at: created,
               kid_age_target: 7,
-              app_version: "v0.7.11",
+              app_version: APP_VERSION,
             };
             // Verify-after-write: both calls return {ok, error}. Warn on either
             // failure so a half-saved project doesn't silently leave the parent
@@ -8905,14 +8915,16 @@ async function main() {
     });
   }
 
-  // v0.7.14 — Parent Corner "Set my kid's progress" tool.
-  // Use case: progress gets lost (state.json wipe / WebView2 storage reset on
-  // exe rebuild) and parent wants to skip the kid back to where they were.
-  // Marks every lesson up to + including the chosen one as complete; bumps the
-  // sticker counter to match (keeps overall-grade math consistent). Persistence
-  // module auto-flushes the new Progress.state to state.json via Store.save.
+  // Parent Corner "Set my kid's progress" tool.
+  // Two explicit operations avoid the old off-by-one ambiguity:
+  //   - Continue at this lesson: lessons BEFORE the target are complete; the
+  //     target + later lessons are incomplete, and the target becomes resume.
+  //   - Mark through complete: target + earlier lessons are complete; any later
+  //     completions are preserved.
+  // Persistence auto-flushes Progress.state to state.json via Store.save.
   const setProgSelect = document.getElementById("setProgressSelect");
   const setProgBtn    = document.getElementById("setProgressBtn");
+  const setProgThroughBtn = document.getElementById("setProgressThroughBtn");
   const setProgStatus = document.getElementById("setProgressStatus");
   // v0.7.15 fix: LessonStore.index is an array of id-STRINGS (e.g.
   // "lesson_07_first_robot_brain_cell"); the lesson objects live in
@@ -8943,57 +8955,85 @@ async function main() {
       setProgSelect.appendChild(opt);
     });
   };
-  if (setProgSelect && setProgBtn && setProgStatus) {
+  if (setProgSelect && setProgBtn && setProgThroughBtn && setProgStatus) {
     _setProgRefreshOptions();
     // Re-populate when the parent opens the Settings tab — lessons may not have
     // finished loading at first wiring (LessonStore.load is async).
     document.querySelectorAll(".parent-tab[data-tab='settings']").forEach(t => {
       t.addEventListener("click", () => setTimeout(_setProgRefreshOptions, 50));
     });
-    setProgBtn.addEventListener("click", () => {
+    const _selectedProgressTarget = () => {
       const targetIdStr = (setProgSelect.value || "").trim();
       if (!targetIdStr) {
         setProgStatus.textContent = "Pick a lesson first.";
         setProgStatus.style.color = "#c62828";
-        return;
+        return null;
       }
       const rows = _setProgList();
       const target = rows.find(r => r.idStr === targetIdStr);
       if (!target) {
         setProgStatus.textContent = "That lesson isn't loaded yet — reopen Settings and try again.";
         setProgStatus.style.color = "#c62828";
-        return;
+        return null;
       }
-      const nowIso = new Date().toISOString();
-      let added = 0;
-      rows.forEach(r => {
-        if (r.num > target.num) return;  // mark this lesson + everything before it
-        if (!Progress.state.completed[r.idStr]) {
-          Progress.state.completed[r.idStr] = nowIso;
-          added += 1;
-        }
-      });
-      // Keep sticker count >= completed count so overall-grade weights stay
-      // sane. Only bump up — never wipe stickers the kid already earned.
+      return { rows, target };
+    };
+    const _saveAdjustedProgress = (statusText) => {
       const completedCount = Object.keys(Progress.state.completed).length;
+      // Restoring progress should never take away earned stickers. If progress
+      // was lost, raise the count just enough to match restored completions.
       if ((Progress.state.stickers || 0) < completedCount) {
         Progress.state.stickers = completedCount;
       }
-      Progress.state.last = target.idStr;
       try {
         Store.save(Store.K_PROG, Progress.state);
       } catch (e) {
         console.warn("[setProgress] save failed:", e);
         setProgStatus.textContent = "Save failed — storage may be disabled.";
         setProgStatus.style.color = "#c62828";
-        return;
+        return false;
       }
-      // Refresh sidebar so unlocked chapters + completed badges update live.
       try { UI.renderSidebar(); } catch (_) {}
       _setProgRefreshOptions();
-      setProgStatus.textContent =
-        `✓ Marked ${added} new lesson${added === 1 ? "" : "s"} complete (through L${String(target.num).padStart(2, "0")}). Total done: ${completedCount}.`;
+      setProgStatus.textContent = statusText(completedCount);
       setProgStatus.style.color = "#2e7d32";
+      return true;
+    };
+    setProgBtn.addEventListener("click", () => {
+      const chosen = _selectedProgressTarget();
+      if (!chosen) return;
+      const { rows, target } = chosen;
+      const laterDone = rows.filter(r => r.num >= target.num && Progress.state.completed[r.idStr]).length;
+      if (laterDone > 0 && !confirm(
+        `Continue at Lesson ${target.num}?\n\nThis will mark that lesson and all later lessons incomplete. Earlier lessons stay complete.`
+      )) return;
+      const nowIso = new Date().toISOString();
+      rows.forEach(r => {
+        if (r.num < target.num) Progress.state.completed[r.idStr] = Progress.state.completed[r.idStr] || nowIso;
+        else delete Progress.state.completed[r.idStr];
+      });
+      Progress.state.last = target.idStr;
+      _saveAdjustedProgress(completedCount =>
+        `✓ Lesson ${String(target.num).padStart(2, "0")} is now the next lesson. ${completedCount} earlier lesson${completedCount === 1 ? " is" : "s are"} complete.`
+      );
+    });
+    setProgThroughBtn.addEventListener("click", () => {
+      const chosen = _selectedProgressTarget();
+      if (!chosen) return;
+      const { rows, target } = chosen;
+      const nowIso = new Date().toISOString();
+      let added = 0;
+      rows.forEach(r => {
+        if (r.num > target.num) return;
+        if (!Progress.state.completed[r.idStr]) {
+          Progress.state.completed[r.idStr] = nowIso;
+          added += 1;
+        }
+      });
+      Progress.state.last = target.idStr;
+      _saveAdjustedProgress(completedCount =>
+        `✓ Marked ${added} new lesson${added === 1 ? "" : "s"} complete through L${String(target.num).padStart(2, "0")}. Total done: ${completedCount}.`
+      );
     });
   }
 

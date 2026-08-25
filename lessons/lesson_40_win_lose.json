@@ -1434,6 +1434,7 @@
     {
       "id": "math1",
       "skipGate": true,
+      "math_skill": "two-digit-plus-one",
       "variations": [
         {
           "prompt": "What is 12 plus 1?",
@@ -1466,20 +1467,31 @@
     {
       "id": "math2",
       "skipGate": true,
+      "math_skill": "fractions",
       "variations": [
         {
-          "prompt": "Which number is bigger: 14 or 10?",
+          "prompt": "A chocolate bar is split into 4 equal parts. What is one part called?",
           "_audio": "assets/audio/q/lesson_40_math2_v0.ogg",
           "options": [
             {
-              "text": "14",
+              "text": "one fourth",
               "correct": true,
-              "_audio": "assets/audio/o/fa35e19212.ogg"
+              "_audio": "assets/audio/o/fd031c00c3.ogg"
             },
             {
-              "text": "10",
+              "text": "one third",
               "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "_audio": "assets/audio/o/fbac955eac.ogg"
+            },
+            {
+              "text": "one whole",
+              "correct": false,
+              "_audio": "assets/audio/o/f0e421bd49.ogg"
+            },
+            {
+              "text": "one half",
+              "correct": false,
+              "_audio": "assets/audio/o/2b526d5876.ogg"
             }
           ]
         }
@@ -1488,30 +1500,31 @@
     {
       "id": "math3",
       "skipGate": true,
+      "math_skill": "subtraction-word-problem",
       "variations": [
         {
-          "prompt": "Count by 5s: 5, 10, 15. What comes next?",
+          "prompt": "There are 3 birds. 3 fly away. How many are left?",
           "_audio": "assets/audio/q/lesson_40_math3_v0.ogg",
           "options": [
             {
-              "text": "20",
+              "text": "0",
               "correct": true,
-              "_audio": "assets/audio/o/91032ad7bb.ogg"
+              "_audio": "assets/audio/o/b6589fc6ab.ogg"
             },
             {
-              "text": "21",
+              "text": "3",
               "correct": false,
-              "_audio": "assets/audio/o/472b07b9fc.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
             },
             {
-              "text": "25",
+              "text": "1",
               "correct": false,
-              "_audio": "assets/audio/o/f6e1126ced.ogg"
+              "_audio": "assets/audio/o/356a192b79.ogg"
             },
             {
-              "text": "19",
+              "text": "5",
               "correct": false,
-              "_audio": "assets/audio/o/b3f0c7f6bb.ogg"
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
             }
           ]
         }

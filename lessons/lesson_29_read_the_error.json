@@ -1705,30 +1705,31 @@
     {
       "id": "math1",
       "skipGate": true,
+      "math_skill": "place-value",
       "variations": [
         {
-          "prompt": "Count by 5s: 5, 10, 15. What comes next?",
+          "prompt": "In the number 33, how many tens are there?",
           "_audio": "assets/audio/q/lesson_29_math1_v0.ogg",
           "options": [
             {
-              "text": "19",
+              "text": "6",
               "correct": false,
-              "_audio": "assets/audio/o/b3f0c7f6bb.ogg"
+              "_audio": "assets/audio/o/c1dfd96eea.ogg"
             },
             {
-              "text": "17",
+              "text": "1",
               "correct": false,
-              "_audio": "assets/audio/o/0716d9708d.ogg"
+              "_audio": "assets/audio/o/356a192b79.ogg"
             },
             {
-              "text": "20",
+              "text": "0",
+              "correct": false,
+              "_audio": "assets/audio/o/b6589fc6ab.ogg"
+            },
+            {
+              "text": "3",
               "correct": true,
-              "_audio": "assets/audio/o/91032ad7bb.ogg"
-            },
-            {
-              "text": "25",
-              "correct": false,
-              "_audio": "assets/audio/o/f6e1126ced.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
             }
           ]
         }
@@ -1737,42 +1738,11 @@
     {
       "id": "math2",
       "skipGate": true,
-      "variations": [
-        {
-          "prompt": "How many tens are in 50?",
-          "_audio": "assets/audio/q/lesson_29_math2_v0.ogg",
-          "options": [
-            {
-              "text": "10",
-              "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
-            },
-            {
-              "text": "3",
-              "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
-            },
-            {
-              "text": "2",
-              "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
-            },
-            {
-              "text": "5",
-              "correct": true,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "math3",
-      "skipGate": true,
+      "math_skill": "skip-count-by-2",
       "variations": [
         {
           "prompt": "Count by 2s: 4, 6, 8. What comes next?",
-          "_audio": "assets/audio/q/lesson_29_math3_v0.ogg",
+          "_audio": "assets/audio/q/lesson_29_math2_v0.ogg",
           "options": [
             {
               "text": "10",
@@ -1793,6 +1763,39 @@
               "text": "8",
               "correct": false,
               "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math3",
+      "skipGate": true,
+      "math_skill": "skip-count-by-10",
+      "variations": [
+        {
+          "prompt": "Count by 10s: 20, 30, 40. What comes next?",
+          "_audio": "assets/audio/q/lesson_29_math3_v0.ogg",
+          "options": [
+            {
+              "text": "53",
+              "correct": false,
+              "_audio": "assets/audio/o/c5b76da3e6.ogg"
+            },
+            {
+              "text": "48",
+              "correct": false,
+              "_audio": "assets/audio/o/64e095fe76.ogg"
+            },
+            {
+              "text": "50",
+              "correct": true,
+              "_audio": "assets/audio/o/e1822db470.ogg"
+            },
+            {
+              "text": "47",
+              "correct": false,
+              "_audio": "assets/audio/o/827bfc4587.ogg"
             }
           ]
         }

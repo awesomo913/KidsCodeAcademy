@@ -20,6 +20,7 @@ log = logging.getLogger("rebalance")
 ROOT = Path(__file__).resolve().parent.parent
 LESSONS_DIR = ROOT / "lessons"
 MAX_REPEATS = 3
+MAX_LESSON_REPEATS = 6
 
 
 def wrong_pool(question: dict) -> list[dict]:
@@ -86,6 +87,91 @@ def rebalance_question(q: dict) -> bool:
     return changed
 
 
+def lesson_wrong_counts(data: dict) -> Counter:
+    """Count non-math distractors across a whole lesson.
+
+    Math answer choices are intentionally reused small numbers, so they are
+    excluded from this prose-quality pass.
+    """
+    c: Counter = Counter()
+    for q in data.get("questions") or []:
+        if str(q.get("id") or "").startswith("math"):
+            continue
+        for v in q.get("variations") or []:
+            for o in v.get("options") or []:
+                if not o.get("correct"):
+                    text = str(o.get("text") or "")
+                    if text:
+                        c[text] += 1
+    return c
+
+
+def rebalance_lesson(data: dict) -> bool:
+    """Cap repeated prose distractors across all questions in one lesson.
+
+    Replacement text is borrowed only from that lesson and is rejected if it
+    is ever a correct answer there. This keeps swaps on-topic while avoiding
+    the memorization pattern of seeing the same silly wrong line 8-9 times.
+    """
+    correct_texts = {
+        str(o.get("text") or "")
+        for q in data.get("questions") or []
+        for v in q.get("variations") or []
+        for o in v.get("options") or []
+        if o.get("correct")
+    }
+    pool_by_text: dict[str, dict] = {}
+    for q in data.get("questions") or []:
+        if str(q.get("id") or "").startswith("math"):
+            continue
+        for v in q.get("variations") or []:
+            for o in v.get("options") or []:
+                text = str(o.get("text") or "")
+                if not o.get("correct") and text and text not in correct_texts:
+                    pool_by_text.setdefault(text, o)
+
+    changed = False
+    for _ in range(600):
+        cur = lesson_wrong_counts(data)
+        over = [(text, n) for text, n in cur.items() if n > MAX_LESSON_REPEATS]
+        if not over:
+            break
+        text, _n = max(over, key=lambda item: item[1])
+        swapped = False
+        for q in data.get("questions") or []:
+            if str(q.get("id") or "").startswith("math"):
+                continue
+            for v in q.get("variations") or []:
+                opts = v.get("options") or []
+                present = {str(o.get("text") or "") for o in opts}
+                if text not in present:
+                    continue
+                candidates = sorted(
+                    (o for t, o in pool_by_text.items()
+                     if t not in present and cur[t] < MAX_LESSON_REPEATS),
+                    key=lambda o: cur[str(o.get("text") or "")],
+                )
+                if not candidates:
+                    continue
+                replacement = candidates[0]
+                for i, o in enumerate(opts):
+                    if not o.get("correct") and str(o.get("text") or "") == text:
+                        new_opt = {"text": replacement["text"], "correct": False}
+                        if replacement.get("_audio"):
+                            new_opt["_audio"] = replacement["_audio"]
+                        opts[i] = new_opt
+                        changed = swapped = True
+                        break
+                if swapped:
+                    break
+            if swapped:
+                break
+        if not swapped:
+            log.warning("could not lesson-rebalance %r (pool exhausted)", text[:40])
+            break
+    return changed
+
+
 def main() -> None:
     files_changed = 0
     for f in sorted(LESSONS_DIR.glob("lesson_*.json")):
@@ -96,6 +182,8 @@ def main() -> None:
         for q in data.get("questions") or []:
             if rebalance_question(q):
                 changed = True
+        if rebalance_lesson(data):
+            changed = True
         if changed:
             text = json.dumps(data, indent=2, ensure_ascii=False) + "\n"
             with open(f, "w", encoding="utf-8", newline="") as fh:

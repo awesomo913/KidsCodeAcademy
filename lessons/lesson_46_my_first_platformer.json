@@ -1793,6 +1793,7 @@
     {
       "id": "math1",
       "skipGate": true,
+      "math_skill": "addition-word-problem",
       "variations": [
         {
           "prompt": "You have 13 toy cars. You get 2 more. How many now?",
@@ -1825,30 +1826,31 @@
     {
       "id": "math2",
       "skipGate": true,
+      "math_skill": "money",
       "variations": [
         {
-          "prompt": "Count by 5s: 0, 5, 10. What comes next?",
+          "prompt": "You have 1 penny. How many cents is that?",
           "_audio": "assets/audio/q/lesson_46_math2_v0.ogg",
           "options": [
             {
-              "text": "20",
+              "text": "2 cents",
               "correct": false,
-              "_audio": "assets/audio/o/91032ad7bb.ogg"
+              "_audio": "assets/audio/o/ed8e9459a4.ogg"
             },
             {
-              "text": "18",
+              "text": "6 cents",
               "correct": false,
-              "_audio": "assets/audio/o/9e6a55b6b4.ogg"
+              "_audio": "assets/audio/o/6350113e6b.ogg"
             },
             {
-              "text": "14",
+              "text": "0 cents",
               "correct": false,
-              "_audio": "assets/audio/o/fa35e19212.ogg"
+              "_audio": "assets/audio/o/df6d4d0783.ogg"
             },
             {
-              "text": "15",
+              "text": "1 cents",
               "correct": true,
-              "_audio": "assets/audio/o/f1abd67035.ogg"
+              "_audio": "assets/audio/o/730b15769c.ogg"
             }
           ]
         }
@@ -1857,30 +1859,31 @@
     {
       "id": "math3",
       "skipGate": true,
+      "math_skill": "measurement",
       "variations": [
         {
-          "prompt": "There are 17 cookies. 11 are eaten. How many are left?",
+          "prompt": "A pencil is 4 inches long. Another is 8 inches. How many inches longer is the second one?",
           "_audio": "assets/audio/q/lesson_46_math3_v0.ogg",
           "options": [
-            {
-              "text": "8",
-              "correct": false,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
-            },
             {
               "text": "9",
               "correct": false,
               "_audio": "assets/audio/o/0ade7c2cf9.ogg"
             },
             {
-              "text": "6",
-              "correct": true,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "text": "5",
+              "correct": false,
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
             },
             {
-              "text": "7",
+              "text": "4",
+              "correct": true,
+              "_audio": "assets/audio/o/1b64538924.ogg"
+            },
+            {
+              "text": "6",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
+              "_audio": "assets/audio/o/c1dfd96eea.ogg"
             }
           ]
         }

@@ -64,6 +64,22 @@ def main() -> int:
             for text, n in wrong_counts.most_common():
                 if n > args.max_repeats:
                     flags.append(f"{lf.name} {qid}: '{text[:50]}' repeats {n}x (max {args.max_repeats})")
+        # Also catch lesson-wide memorization patterns. Repeating one silly line
+        # across several questions is just as recognizable as repeating it in
+        # one question. Numeric Math Minute choices are excluded on purpose.
+        lesson_counts: Counter[str] = Counter()
+        for q in data.get("questions") or []:
+            if str(q.get("id") or "").startswith("math"):
+                continue
+            for v in q.get("variations") or []:
+                for opt in v.get("options") or []:
+                    if not opt.get("correct"):
+                        text = (opt.get("text") or "").strip()
+                        if text:
+                            lesson_counts[text] += 1
+        for text, n in lesson_counts.most_common():
+            if n > 6:
+                flags.append(f"{lf.name}: '{text[:50]}' repeats {n}x across lesson (max 6)")
 
     if flags:
         if not args.quiet:

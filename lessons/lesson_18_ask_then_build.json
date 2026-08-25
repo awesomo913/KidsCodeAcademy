@@ -1787,6 +1787,7 @@
     {
       "id": "math1",
       "skipGate": true,
+      "math_skill": "addition-to-20",
       "variations": [
         {
           "prompt": "What is 14 plus 0?",
@@ -1819,6 +1820,7 @@
     {
       "id": "math2",
       "skipGate": true,
+      "math_skill": "subtraction-to-20",
       "variations": [
         {
           "prompt": "What is 10 minus 5?",
@@ -1851,30 +1853,21 @@
     {
       "id": "math3",
       "skipGate": true,
+      "math_skill": "even-and-odd",
       "variations": [
         {
-          "prompt": "What is 7 plus 7?",
+          "prompt": "Is 21 even or odd?",
           "_audio": "assets/audio/q/lesson_18_math3_v0.ogg",
           "options": [
             {
-              "text": "15",
-              "correct": false,
-              "_audio": "assets/audio/o/f1abd67035.ogg"
-            },
-            {
-              "text": "14",
+              "text": "odd",
               "correct": true,
-              "_audio": "assets/audio/o/fa35e19212.ogg"
+              "_audio": "assets/audio/o/60f7a51208.ogg"
             },
             {
-              "text": "17",
+              "text": "even",
               "correct": false,
-              "_audio": "assets/audio/o/0716d9708d.ogg"
-            },
-            {
-              "text": "13",
-              "correct": false,
-              "_audio": "assets/audio/o/bd307a3ec3.ogg"
+              "_audio": "assets/audio/o/04b8c80bb7.ogg"
             }
           ]
         }

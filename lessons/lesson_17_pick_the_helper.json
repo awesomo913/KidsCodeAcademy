@@ -1727,25 +1727,59 @@
     {
       "id": "math1",
       "skipGate": true,
+      "math_skill": "subtraction-to-20",
       "variations": [
         {
-          "prompt": "What is 8 minus 6?",
+          "prompt": "What is 13 minus 5?",
           "_audio": "assets/audio/q/lesson_17_math1_v0.ogg",
           "options": [
             {
-              "text": "2",
-              "correct": true,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "text": "13",
+              "correct": false,
+              "_audio": "assets/audio/o/bd307a3ec3.ogg"
             },
             {
-              "text": "4",
+              "text": "7",
               "correct": false,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "_audio": "assets/audio/o/902ba3cda1.ogg"
             },
+            {
+              "text": "8",
+              "correct": true,
+              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+            },
+            {
+              "text": "10",
+              "correct": false,
+              "_audio": "assets/audio/o/b1d5781111.ogg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math2",
+      "skipGate": true,
+      "math_skill": "missing-addend",
+      "variations": [
+        {
+          "prompt": "2 plus what makes 2?",
+          "_audio": "assets/audio/q/lesson_17_math2_v0.ogg",
+          "options": [
             {
               "text": "1",
               "correct": false,
               "_audio": "assets/audio/o/356a192b79.ogg"
+            },
+            {
+              "text": "2",
+              "correct": false,
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
+            },
+            {
+              "text": "0",
+              "correct": true,
+              "_audio": "assets/audio/o/b6589fc6ab.ogg"
             },
             {
               "text": "5",
@@ -1757,64 +1791,23 @@
       ]
     },
     {
-      "id": "math2",
-      "skipGate": true,
-      "variations": [
-        {
-          "prompt": "4 plus what makes 5?",
-          "_audio": "assets/audio/q/lesson_17_math2_v0.ogg",
-          "options": [
-            {
-              "text": "2",
-              "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
-            },
-            {
-              "text": "6",
-              "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
-            },
-            {
-              "text": "3",
-              "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
-            },
-            {
-              "text": "1",
-              "correct": true,
-              "_audio": "assets/audio/o/356a192b79.ogg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "math3",
       "skipGate": true,
+      "math_skill": "even-and-odd",
       "variations": [
         {
-          "prompt": "What is 1 plus 18?",
+          "prompt": "Is 17 even or odd?",
           "_audio": "assets/audio/q/lesson_17_math3_v0.ogg",
           "options": [
             {
-              "text": "17",
-              "correct": false,
-              "_audio": "assets/audio/o/0716d9708d.ogg"
-            },
-            {
-              "text": "16",
-              "correct": false,
-              "_audio": "assets/audio/o/1574bddb75.ogg"
-            },
-            {
-              "text": "18",
-              "correct": false,
-              "_audio": "assets/audio/o/9e6a55b6b4.ogg"
-            },
-            {
-              "text": "19",
+              "text": "odd",
               "correct": true,
-              "_audio": "assets/audio/o/b3f0c7f6bb.ogg"
+              "_audio": "assets/audio/o/60f7a51208.ogg"
+            },
+            {
+              "text": "even",
+              "correct": false,
+              "_audio": "assets/audio/o/04b8c80bb7.ogg"
             }
           ]
         }

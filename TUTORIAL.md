@@ -1,5 +1,5 @@
 # Kids Code Academy — Tutorial
-**Last updated:** 2026-05-01 (v0.1.0)
+**Last updated:** 2026-08-25 (v0.8.0)
 
 ---
 
@@ -7,7 +7,7 @@
 
 Get a 7-year-old learning to code in under 60 seconds.
 
-1. Double-click `C:\Users\computer\Desktop\AI\KidsCodeAcademy.exe`.
+1. Double-click `KidsCodeAcademy.exe` on the Desktop.
 2. The window opens. Bytey the robot waves. The first lesson is already on screen.
 3. Click **▶ Play**. Bytey reads the lesson out loud.
 4. Click the right answer in the mini-game. Earn a sticker. Move on to Lesson 2.
@@ -17,11 +17,11 @@ That's it — no install, no setup, no internet.
 ## 2. Feature Walkthrough
 
 ### Lessons
-- **What it does** — 16 short lessons that teach the dev workflow used with Claude, Cursor, Gemini.
+- **What it does** — 60 short lessons across 10 chapters, from computer basics and safe AI habits through prompts, game design, debugging, and a final project.
 - **When to use it** — every day, 5-10 minutes per session.
 - **How to do it** — click a lesson card on the left. Listen to the narration (▶ Play). Do the mini-game.
 - **Example** — Lesson 1 ("What Is a Computer?") asks "Which one is a computer?" with four choices. Click the laptop.
-- **Gotchas** — Lessons 2-7 unlock in order. Lessons 8-15 unlock as a group once Lesson 7 is done.
+- **Gotchas** — Lessons unlock in order. A parent can set the exact resume lesson or mark a block complete from Parent Corner → Settings.
 
 ### The mascot — "Bytey"
 - **What it does** — animates, waves, cheers, and thinks based on what's happening on screen.
@@ -31,16 +31,10 @@ That's it — no install, no setup, no internet.
 ### Read-aloud
 - **What it does** — every lesson has a pre-baked voice clip; click ▶ Play or the **Read aloud** button up top.
 - **When to use it** — for any kid who isn't reading fluently yet.
-- **Gotchas** — the voice is Windows SAPI Zira. If you'd prefer a different voice, regenerate `assets/audio/` with a different voice and re-run `python build.py --no-package`.
+- **Gotchas** — authored narration uses pre-baked Piper OGG clips. Missing clips fall back gracefully; regenerate them with the scripts in `scripts/` before rebuilding.
 
 ### Mini-games
-There are 6 game types woven through the lessons:
-- **Click the right one** (Lesson 1, 7, 9, 14)
-- **Drag to match** (Lesson 3, 8, 13)
-- **Type the word** (Lesson 2, 10)
-- **Place the blocks** (Lesson 4, 12)
-- **Order the steps** (Lesson 5, 6, 11)
-- **Read out loud** (Lesson 15)
+Lessons mix quizzes, matching, ordering, typing, block-building, simulated tool conversations, game-design activities, review questions, and a short math minute. Every lesson has three math questions covering 26 skills such as place value, time, money, fractions, graphs, measurement, repeated addition, and fair sharing.
 
 ### Pretend "Claude / Cursor / Gemini" chat
 - **What it does** — Lessons 2 and 8 give the kid a chat box that looks like a real AI helper.
@@ -48,15 +42,18 @@ There are 6 game types woven through the lessons:
 - **How to do it** — type up to 80 characters; press **Ask** or Enter.
 - **Gotchas** — replies are pre-scripted. The kid can't break it, but they also can't get a unique answer to a unique question. That's intentional.
 
-### Lesson 16 — First Real Project
-- **What it does** — kid picks a part of "Bubby's World" (Hero / Ground / Block) and a color, then saves the result.
-- **How to do it** — tap a part, tap a color swatch, tap **Save my world**.
-- **Result** — an SVG file lands at `C:\Users\<you>\AppData\Roaming\KidsCodeAcademy\kid_projects\bubbys_world_<timestamp>.svg`. Open it in any browser to admire.
+### Lesson 60 — Make Your Game
+- **What it does** — the kid brainstorms an idea, paints a level, names it, and creates a share card.
+- **Result** — project JSON and a printable HTML card land in `%APPDATA%\KidsCodeAcademy\kid_projects\` and appear in Parent Corner → Projects.
+
+### Chess break
+- **What it does** — offers a friendly 15-minute chess game after the current lesson. It includes a timer, hints, restart, and exit controls.
+- **Gotcha** — it is deliberately a beginner-friendly opponent, not a tournament chess engine.
 
 ### Parent Corner
-- **What it does** — PIN-gated dashboard for the parent.
-- **How to do it** — click **Parent Corner** in the top-right. Enter PIN (default `1234`). View progress, the kid's typed prompts, and reset progress if needed. Change the PIN inside.
-- **Gotcha** — the PIN is stored locally only. If you forget it, click **Reset all progress** from another device or wipe localStorage in the dev tools (right-click → Inspect inside the running app).
+- **What it does** — PIN-gated dashboard for progress, transcripts, saved projects, memory rules, accessibility, chess history, and settings.
+- **How to do it** — click **Parent Corner** in the top-right. First use asks the parent to create a PIN. In Settings, use **Continue at this lesson** to choose the next lesson without falsely completing it, or **Mark through complete** to award completion through a selected lesson.
+- **Gotcha** — the PIN and progress stay on this computer. The desktop app mirrors progress to `%APPDATA%\KidsCodeAcademy\state.json` so a restart does not lose it.
 
 ## 3. Common Workflows / Recipes
 
@@ -67,9 +64,9 @@ There are 6 game types woven through the lessons:
 4. Open Parent Corner once they've gone to bed; review what they did.
 
 ### Recipe: Add a new lesson without rebuilding
-1. Drop a new file at `lessons/lesson_17_<slug>.json` matching the schema in any existing lesson.
-2. Add `"lesson_17_<slug>"` to the `LESSON_IDS` array near the top of `index.html`.
-3. Write narration: add to `mascot_lines`. Then run `python scripts/prebake_audio.py` to generate the new `assets/audio/lesson_17.wav`.
+1. Drop a new numbered JSON file in `lessons/`, matching the schema in an existing lesson.
+2. Add its identifier to the `LESSON_IDS` array near the top of `index.html`.
+3. Write narration and questions, then run the audio scripts to generate the new OGG clips.
 4. `python build.py` to ship a new `.exe`, or just `python app.py` to test.
 
 ### Recipe: Change the PIN as a parent
@@ -83,10 +80,10 @@ There are 6 game types woven through the lessons:
 |---------|--------------|-----|
 | EXE opens then closes immediately | Antivirus quarantined PyInstaller bootloader | Restore from quarantine, or run `python app.py` directly |
 | Mascot is a blank rectangle | `assets/mascot/` not bundled | Re-run `python build.py` to regenerate + re-package |
-| No voice when clicking ▶ Play | `assets/audio/lesson_NN.wav` missing | `python scripts/prebake_audio.py` then `python build.py` |
+| No voice when clicking ▶ Play | A referenced OGG clip is missing | Run the audio-generation scripts, then `python build.py` |
 | "Couldn't load lessons" message | `lessons/` folder didn't ship | `python build.py` (PyInstaller `--add-data` re-bundles it) |
 | Kid wants to redo a lesson | Lessons re-playable but only sticker-counted once | Open Parent Corner → Reset all progress, or re-click the lesson card (it still plays narration + game) |
-| Lesson 16 "Save" doesn't seem to do anything | App running from source without pywebview JS bridge active | The save call falls back to "complete the lesson" silently in dev mode; the bundled .exe writes the file |
+| Lesson 60 "Save" doesn't seem to do anything | App running in a plain browser without the desktop bridge | Use the bundled EXE to write project files |
 
 ## 5. FAQ
 
@@ -97,6 +94,12 @@ There are 6 game types woven through the lessons:
 - **Q: Is this a real Claude?** A: No, and intentionally so. It's a sandbox that simulates the experience without internet access.
 
 ## 6. Changelog (user-facing)
+
+### 2026-08-25 — v0.8.0
+- Added: clear parent controls for choosing a resume lesson or marking progress through a lesson.
+- Expanded: 180 unique math-minute prompts across 26 skills, with matching read-aloud audio.
+- Improved: repeated distractor checks and substantially faster one-file EXE startup.
+- Verified: all 60 lessons, chess launch and controls, state persistence, and packaged Windows startup.
 
 ### 2026-05-01 — v0.1.0
 - Added: 16 lessons, mascot animation, read-aloud audio, 6 mini-game types, sandbox AI for Lessons 2 + 8, Parent Corner with PIN, Lesson 16 save-a-copy.

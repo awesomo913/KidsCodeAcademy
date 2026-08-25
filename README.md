@@ -47,12 +47,14 @@ python3 app.py
 
 ## What's inside
 
-- 16 lessons, ages 7+
+- 60 lessons across 10 chapters, ages 7+
 - Cartoon robot mascot ("Bytey") that animates, waves, cheers, thinks
-- 6 mini-game types (drag, click, type, place blocks, sequence, read-aloud)
+- 24 mini-game and creative interaction types
+- Three-question Math Minute in every lesson, progressing from counting and arithmetic into place value, time, money, shapes, measurement, fractions, graphs, repeated addition, and fair sharing
+- Full chess breaks with a kid-friendly bot, hints, timer, grading, and Parent Corner history
 - Offline "Claude / Cursor / Gemini" chat — runs on the kid's computer with **no internet, no API keys, no cost**
 - Sticker rewards + progress saved on the computer
-- Parent Corner — PIN-gated panel showing what your kid did and which words they typed
+- Parent Corner — PIN-gated progress placement, activity, grades, chess history, projects, transcripts, preview mode, and settings
 
 ## Safety
 
@@ -88,4 +90,3 @@ License: MIT (project), CC0 (procedurally-generated mascot art).
 Published by **Revolutionary Designs**.  
 GitHub: https://github.com/awesomo913  
 Contact: solidgoldbarsinmycloset@gmail.com  <!-- pii-ok: official brand contact -->
-

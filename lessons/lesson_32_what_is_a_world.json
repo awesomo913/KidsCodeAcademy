@@ -1438,30 +1438,31 @@
     {
       "id": "math1",
       "skipGate": true,
+      "math_skill": "money",
       "variations": [
         {
-          "prompt": "8 plus what makes 16?",
+          "prompt": "You have 2 dimes, 1 nickel, 8 pennies. How many cents is that?",
           "_audio": "assets/audio/q/lesson_32_math1_v0.ogg",
           "options": [
             {
-              "text": "13",
+              "text": "36 cents",
               "correct": false,
-              "_audio": "assets/audio/o/bd307a3ec3.ogg"
+              "_audio": "assets/audio/o/fa13414a5c.ogg"
             },
             {
-              "text": "10",
+              "text": "35 cents",
               "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "_audio": "assets/audio/o/303ef39526.ogg"
             },
             {
-              "text": "8",
+              "text": "34 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/2b84cff990.ogg"
+            },
+            {
+              "text": "33 cents",
               "correct": true,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
-            },
-            {
-              "text": "11",
-              "correct": false,
-              "_audio": "assets/audio/o/17ba079149.ogg"
+              "_audio": "assets/audio/o/eb5fbccd3f.ogg"
             }
           ]
         }
@@ -1470,9 +1471,10 @@
     {
       "id": "math2",
       "skipGate": true,
+      "math_skill": "place-value",
       "variations": [
         {
-          "prompt": "What is 2 minus 0?",
+          "prompt": "In the number 11, how many ones are there?",
           "_audio": "assets/audio/q/lesson_32_math2_v0.ogg",
           "options": [
             {
@@ -1481,19 +1483,19 @@
               "_audio": "assets/audio/o/1b64538924.ogg"
             },
             {
-              "text": "1",
+              "text": "3",
               "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
             },
             {
               "text": "2",
-              "correct": true,
+              "correct": false,
               "_audio": "assets/audio/o/da4b9237ba.ogg"
             },
             {
-              "text": "5",
-              "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "text": "1",
+              "correct": true,
+              "_audio": "assets/audio/o/356a192b79.ogg"
             }
           ]
         }
@@ -1502,30 +1504,31 @@
     {
       "id": "math3",
       "skipGate": true,
+      "math_skill": "build-a-number",
       "variations": [
         {
-          "prompt": "Count by 10s: 20, 30, 40. What comes next?",
+          "prompt": "What number has 2 tens and 5 ones?",
           "_audio": "assets/audio/q/lesson_32_math3_v0.ogg",
           "options": [
             {
-              "text": "50",
+              "text": "24",
+              "correct": false,
+              "_audio": "assets/audio/o/4d134bc072.ogg"
+            },
+            {
+              "text": "25",
               "correct": true,
-              "_audio": "assets/audio/o/e1822db470.ogg"
+              "_audio": "assets/audio/o/f6e1126ced.ogg"
             },
             {
-              "text": "48",
+              "text": "22",
               "correct": false,
-              "_audio": "assets/audio/o/64e095fe76.ogg"
+              "_audio": "assets/audio/o/12c6fc06c9.ogg"
             },
             {
-              "text": "51",
+              "text": "28",
               "correct": false,
-              "_audio": "assets/audio/o/b7eb6c689c.ogg"
-            },
-            {
-              "text": "55",
-              "correct": false,
-              "_audio": "assets/audio/o/8effee409c.ogg"
+              "_audio": "assets/audio/o/0a57cb53ba.ogg"
             }
           ]
         }

@@ -1704,20 +1704,21 @@
     {
       "id": "math1",
       "skipGate": true,
+      "math_skill": "subtraction-to-10",
       "variations": [
         {
-          "prompt": "What is 1 minus 0?",
+          "prompt": "What is 4 minus 3?",
           "_audio": "assets/audio/q/lesson_01_math1_v0.ogg",
           "options": [
             {
-              "text": "6",
+              "text": "4",
               "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/1b64538924.ogg"
             },
             {
-              "text": "1",
-              "correct": true,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "text": "2",
+              "correct": false,
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
             },
             {
               "text": "0",
@@ -1725,9 +1726,9 @@
               "_audio": "assets/audio/o/b6589fc6ab.ogg"
             },
             {
-              "text": "3",
-              "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "text": "1",
+              "correct": true,
+              "_audio": "assets/audio/o/356a192b79.ogg"
             }
           ]
         }
@@ -1736,20 +1737,31 @@
     {
       "id": "math2",
       "skipGate": true,
+      "math_skill": "doubles",
       "variations": [
         {
-          "prompt": "Which number is bigger: 7 or 1?",
+          "prompt": "What is 2 plus 2?",
           "_audio": "assets/audio/q/lesson_01_math2_v0.ogg",
           "options": [
             {
-              "text": "1",
+              "text": "9",
               "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+            },
+            {
+              "text": "3",
+              "correct": false,
+              "_audio": "assets/audio/o/77de68daec.ogg"
             },
             {
               "text": "7",
-              "correct": true,
+              "correct": false,
               "_audio": "assets/audio/o/902ba3cda1.ogg"
+            },
+            {
+              "text": "4",
+              "correct": true,
+              "_audio": "assets/audio/o/1b64538924.ogg"
             }
           ]
         }
@@ -1758,29 +1770,20 @@
     {
       "id": "math3",
       "skipGate": true,
+      "math_skill": "compare-numbers",
       "variations": [
         {
-          "prompt": "What is 1 plus 1?",
+          "prompt": "Which number is bigger: 2 or 3?",
           "_audio": "assets/audio/q/lesson_01_math3_v0.ogg",
           "options": [
             {
-              "text": "0",
-              "correct": false,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
-            },
-            {
-              "text": "1",
-              "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
-            },
-            {
-              "text": "5",
-              "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "text": "3",
+              "correct": true,
+              "_audio": "assets/audio/o/77de68daec.ogg"
             },
             {
               "text": "2",
-              "correct": true,
+              "correct": false,
               "_audio": "assets/audio/o/da4b9237ba.ogg"
             }
           ]

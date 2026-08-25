@@ -1707,30 +1707,31 @@
     {
       "id": "math1",
       "skipGate": true,
+      "math_skill": "shape-sides",
       "variations": [
         {
-          "prompt": "Start at 3 and count up 2. Where do you land?",
+          "prompt": "How many sides does a triangle have?",
           "_audio": "assets/audio/q/lesson_09_math1_v0.ogg",
           "options": [
+            {
+              "text": "2",
+              "correct": false,
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
+            },
+            {
+              "text": "5",
+              "correct": false,
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
+            },
             {
               "text": "4",
               "correct": false,
               "_audio": "assets/audio/o/1b64538924.ogg"
             },
             {
-              "text": "5",
+              "text": "3",
               "correct": true,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
-            },
-            {
-              "text": "7",
-              "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "6",
-              "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
             }
           ]
         }
@@ -1739,20 +1740,16 @@
     {
       "id": "math2",
       "skipGate": true,
+      "math_skill": "counting-on",
       "variations": [
         {
-          "prompt": "What is 2 plus 4?",
+          "prompt": "Start at 3 and count up 1. Where do you land?",
           "_audio": "assets/audio/q/lesson_09_math2_v0.ogg",
           "options": [
             {
-              "text": "11",
+              "text": "1",
               "correct": false,
-              "_audio": "assets/audio/o/17ba079149.ogg"
-            },
-            {
-              "text": "3",
-              "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "_audio": "assets/audio/o/356a192b79.ogg"
             },
             {
               "text": "7",
@@ -1760,9 +1757,14 @@
               "_audio": "assets/audio/o/902ba3cda1.ogg"
             },
             {
-              "text": "6",
+              "text": "9",
+              "correct": false,
+              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+            },
+            {
+              "text": "4",
               "correct": true,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/1b64538924.ogg"
             }
           ]
         }
@@ -1771,20 +1773,31 @@
     {
       "id": "math3",
       "skipGate": true,
+      "math_skill": "addition-to-10",
       "variations": [
         {
-          "prompt": "Which number is bigger: 1 or 9?",
+          "prompt": "What is 10 plus 0?",
           "_audio": "assets/audio/q/lesson_09_math3_v0.ogg",
           "options": [
             {
-              "text": "1",
+              "text": "8",
               "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
             },
             {
-              "text": "9",
+              "text": "10",
               "correct": true,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+              "_audio": "assets/audio/o/b1d5781111.ogg"
+            },
+            {
+              "text": "11",
+              "correct": false,
+              "_audio": "assets/audio/o/17ba079149.ogg"
+            },
+            {
+              "text": "12",
+              "correct": false,
+              "_audio": "assets/audio/o/7b52009b64.ogg"
             }
           ]
         }
