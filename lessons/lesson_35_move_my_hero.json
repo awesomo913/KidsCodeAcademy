@@ -1332,7 +1332,7 @@
           "_audio": "assets/audio/q/lesson_35_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about moving my hero?",
+          "prompt": "The hero reacts as soon as a key is pressed. What quality does that show?",
           "options": [
             {
               "text": "Heroes only move when no one is looking.",
@@ -2060,31 +2060,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "money",
+      "math_skill": "regrouping-addition",
+      "math_level": "Grade 2 practice",
+      "math_tip": "Add the ones first. Ten ones can be regrouped as one ten.",
+      "math_tip_audio": "assets/audio/o/35b57b54ac.ogg",
       "variations": [
         {
-          "prompt": "You have 1 dime, 2 nickels, 6 pennies. How many cents is that?",
+          "prompt": "What is 54 plus 29?",
           "_audio": "assets/audio/q/lesson_35_math1_v0.ogg",
           "options": [
             {
-              "text": "26 cents",
+              "text": "88",
+              "correct": false,
+              "_audio": "assets/audio/o/b37f6ddcef.ogg"
+            },
+            {
+              "text": "82",
+              "correct": false,
+              "_audio": "assets/audio/o/76546f9a64.ogg"
+            },
+            {
+              "text": "83",
               "correct": true,
-              "_audio": "assets/audio/o/e351540259.ogg"
+              "_audio": "assets/audio/o/7d7116e23e.ogg"
             },
             {
-              "text": "27 cents",
+              "text": "81",
               "correct": false,
-              "_audio": "assets/audio/o/1fcbe97475.ogg"
-            },
-            {
-              "text": "31 cents",
-              "correct": false,
-              "_audio": "assets/audio/o/7c997b755e.ogg"
-            },
-            {
-              "text": "24 cents",
-              "correct": false,
-              "_audio": "assets/audio/o/44409dbbf1.ogg"
+              "_audio": "assets/audio/o/1d513c0bcb.ogg"
             }
           ]
         }
@@ -2093,26 +2096,29 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "place-value",
+      "math_skill": "regrouping-subtraction",
+      "math_level": "Grade 2 practice",
+      "math_tip": "If there are not enough ones, trade one ten for ten ones.",
+      "math_tip_audio": "assets/audio/o/1996324046.ogg",
       "variations": [
         {
-          "prompt": "In the number 96, how many tens are there?",
+          "prompt": "What is 84 minus 75?",
           "_audio": "assets/audio/q/lesson_35_math2_v0.ogg",
           "options": [
+            {
+              "text": "7",
+              "correct": false,
+              "_audio": "assets/audio/o/902ba3cda1.ogg"
+            },
+            {
+              "text": "8",
+              "correct": false,
+              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+            },
             {
               "text": "11",
               "correct": false,
               "_audio": "assets/audio/o/17ba079149.ogg"
-            },
-            {
-              "text": "6",
-              "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
-            },
-            {
-              "text": "14",
-              "correct": false,
-              "_audio": "assets/audio/o/fa35e19212.ogg"
             },
             {
               "text": "9",
@@ -2126,31 +2132,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "build-a-number",
+      "math_skill": "place-value-3-digit",
+      "math_level": "Grade 2 practice",
+      "math_tip": "Read hundreds, tens, then ones. Each place is worth ten times the place to its right.",
+      "math_tip_audio": "assets/audio/o/c869a3d69c.ogg",
       "variations": [
         {
-          "prompt": "What number has 7 tens and 0 ones?",
+          "prompt": "In 626, which digit is in the ones place?",
           "_audio": "assets/audio/q/lesson_35_math3_v0.ogg",
           "options": [
             {
-              "text": "68",
+              "text": "7",
               "correct": false,
-              "_audio": "assets/audio/o/b4c96d8085.ogg"
+              "_audio": "assets/audio/o/902ba3cda1.ogg"
             },
             {
-              "text": "69",
-              "correct": false,
-              "_audio": "assets/audio/o/a72b20062e.ogg"
-            },
-            {
-              "text": "70",
+              "text": "6",
               "correct": true,
-              "_audio": "assets/audio/o/b7103ca278.ogg"
+              "_audio": "assets/audio/o/c1dfd96eea.ogg"
             },
             {
-              "text": "73",
+              "text": "11",
               "correct": false,
-              "_audio": "assets/audio/o/35e995c107.ogg"
+              "_audio": "assets/audio/o/17ba079149.ogg"
+            },
+            {
+              "text": "3",
+              "correct": false,
+              "_audio": "assets/audio/o/77de68daec.ogg"
             }
           ]
         }

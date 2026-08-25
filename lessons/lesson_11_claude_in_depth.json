@@ -201,9 +201,9 @@
               "_audio": "assets/audio/o/1fbf5d2419.ogg"
             },
             {
-              "text": "Claude reads instructions before guessing.",
+              "text": "Claude reads directions before guessing.",
               "correct": true,
-              "_audio": "assets/audio/o/70e8b5d51e.ogg"
+              "_audio": "assets/audio/o/c458eae4b4.ogg"
             },
             {
               "text": "Rules earn Claude a sticker.",
@@ -237,9 +237,9 @@
               "_audio": "assets/audio/o/f78e34006e.ogg"
             },
             {
-              "text": "Claude reads instructions before guessing.",
+              "text": "Claude reads directions before guessing.",
               "correct": false,
-              "_audio": "assets/audio/o/70e8b5d51e.ogg"
+              "_audio": "assets/audio/o/c458eae4b4.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_11_q1_v6.ogg"
@@ -284,9 +284,9 @@
               "_audio": "assets/audio/o/7100d711ee.ogg"
             },
             {
-              "text": "Claude reads instructions before guessing.",
+              "text": "Claude reads directions before guessing.",
               "correct": false,
-              "_audio": "assets/audio/o/70e8b5d51e.ogg"
+              "_audio": "assets/audio/o/c458eae4b4.ogg"
             },
             {
               "text": "Claude lives in a tiny house inside your keyboard.",
@@ -899,9 +899,9 @@
               "_audio": "assets/audio/o/40d51fe2a0.ogg"
             },
             {
-              "text": "Claude can write stories, plans, and explanations.",
+              "text": "Claude can write stories, plans, and clear reasons.",
               "correct": false,
-              "_audio": "assets/audio/o/c114b703a7.ogg"
+              "_audio": "assets/audio/o/4ddf0917a0.ogg"
             },
             {
               "text": "Claude has 7 cousins named Carl, Carla, and 5 more Claudes.",
@@ -951,9 +951,9 @@
               "_audio": "assets/audio/o/961c903d03.ogg"
             },
             {
-              "text": "Claude can write stories, plans, and explanations.",
+              "text": "Claude can write stories, plans, and clear reasons.",
               "correct": false,
-              "_audio": "assets/audio/o/c114b703a7.ogg"
+              "_audio": "assets/audio/o/4ddf0917a0.ogg"
             },
             {
               "text": "Claude only helps if you wear matching socks.",
@@ -1008,9 +1008,9 @@
               "_audio": "assets/audio/o/7100d711ee.ogg"
             },
             {
-              "text": "Claude can write stories, plans, and explanations.",
+              "text": "Claude can write stories, plans, and clear reasons.",
               "correct": false,
-              "_audio": "assets/audio/o/c114b703a7.ogg"
+              "_audio": "assets/audio/o/4ddf0917a0.ogg"
             },
             {
               "text": "Claude refuses to follow rules and laughs at them.",
@@ -1112,9 +1112,9 @@
               "_audio": "assets/audio/o/2ac7fd2e87.ogg"
             },
             {
-              "text": "Claude reads instructions before guessing.",
+              "text": "Claude reads directions before guessing.",
               "correct": false,
-              "_audio": "assets/audio/o/70e8b5d51e.ogg"
+              "_audio": "assets/audio/o/c458eae4b4.ogg"
             },
             {
               "text": "You can give Claude a sticky-note style of rules.",
@@ -1300,9 +1300,9 @@
           "prompt": "Got a quick one: Which one is TRUE about Claude in depth?",
           "options": [
             {
-              "text": "Claude reads instructions before guessing.",
+              "text": "Claude reads directions before guessing.",
               "correct": true,
-              "_audio": "assets/audio/o/70e8b5d51e.ogg"
+              "_audio": "assets/audio/o/c458eae4b4.ogg"
             },
             {
               "text": "Claude eats every third word for taste.",
@@ -1349,7 +1349,7 @@
           "_audio": "assets/audio/q/lesson_11_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about Claude in depth?",
+          "prompt": "Claude chatted with you but cannot see your files. Which fact fits?",
           "options": [
             {
               "text": "Claude answers faster if you spin in a circle.",
@@ -1852,9 +1852,9 @@
               "_audio": "assets/audio/o/7977bb09a8.ogg"
             },
             {
-              "text": "Claude can write stories, plans, and explanations.",
+              "text": "Claude can write stories, plans, and clear reasons.",
               "correct": true,
-              "_audio": "assets/audio/o/c114b703a7.ogg"
+              "_audio": "assets/audio/o/4ddf0917a0.ogg"
             },
             {
               "text": "Claude works only when it rains in three cities.",
@@ -2024,9 +2024,9 @@
           "prompt": "Tell me — Which rule about Claude in depth is a GOOD rule?",
           "options": [
             {
-              "text": "Claude reads instructions before guessing.",
+              "text": "Claude reads directions before guessing.",
               "correct": true,
-              "_audio": "assets/audio/o/70e8b5d51e.ogg"
+              "_audio": "assets/audio/o/c458eae4b4.ogg"
             },
             {
               "text": "Claude only speaks emoji and pretends to read.",
@@ -2077,31 +2077,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "subtraction-to-10",
+      "math_skill": "place-value-2-digit",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "The left digit tells the tens; the right digit tells the ones.",
+      "math_tip_audio": "assets/audio/o/2eff40e2d7.ogg",
       "variations": [
         {
-          "prompt": "What is 1 minus 0?",
+          "prompt": "In the number 95, how many ones are there?",
           "_audio": "assets/audio/q/lesson_11_math1_v0.ogg",
           "options": [
+            {
+              "text": "7",
+              "correct": false,
+              "_audio": "assets/audio/o/902ba3cda1.ogg"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "_audio": "assets/audio/o/1b64538924.ogg"
+            },
+            {
+              "text": "5",
+              "correct": true,
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
+            },
             {
               "text": "6",
               "correct": false,
               "_audio": "assets/audio/o/c1dfd96eea.ogg"
-            },
-            {
-              "text": "2",
-              "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
-            },
-            {
-              "text": "0",
-              "correct": false,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
-            },
-            {
-              "text": "1",
-              "correct": true,
-              "_audio": "assets/audio/o/356a192b79.ogg"
             }
           ]
         }
@@ -2110,31 +2113,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "addition-to-10",
+      "math_skill": "addition-within-20",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "Start with the bigger number and count on. You can also make a ten first.",
+      "math_tip_audio": "assets/audio/o/f0e8079aca.ogg",
       "variations": [
         {
-          "prompt": "What is 1 plus 4?",
+          "prompt": "What is 2 plus 9?",
           "_audio": "assets/audio/q/lesson_11_math2_v0.ogg",
           "options": [
             {
-              "text": "6",
+              "text": "12",
               "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/7b52009b64.ogg"
             },
             {
-              "text": "8",
+              "text": "14",
               "correct": false,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+              "_audio": "assets/audio/o/fa35e19212.ogg"
             },
             {
-              "text": "10",
+              "text": "16",
               "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "_audio": "assets/audio/o/1574bddb75.ogg"
             },
             {
-              "text": "5",
+              "text": "11",
               "correct": true,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/17ba079149.ogg"
             }
           ]
         }
@@ -2143,31 +2149,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "doubles",
+      "math_skill": "addition-within-20",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "Start with the bigger number and count on. You can also make a ten first.",
+      "math_tip_audio": "assets/audio/o/f0e8079aca.ogg",
       "variations": [
         {
-          "prompt": "What is 3 plus 3?",
+          "prompt": "What is 18 plus 0?",
           "_audio": "assets/audio/q/lesson_11_math3_v0.ogg",
           "options": [
             {
-              "text": "3",
-              "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
-            },
-            {
-              "text": "6",
+              "text": "18",
               "correct": true,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/9e6a55b6b4.ogg"
             },
             {
-              "text": "11",
+              "text": "15",
               "correct": false,
-              "_audio": "assets/audio/o/17ba079149.ogg"
+              "_audio": "assets/audio/o/f1abd67035.ogg"
             },
             {
-              "text": "5",
+              "text": "17",
               "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/0716d9708d.ogg"
+            },
+            {
+              "text": "23",
+              "correct": false,
+              "_audio": "assets/audio/o/d435a6cdd7.ogg"
             }
           ]
         }

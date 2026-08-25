@@ -9,8 +9,8 @@
 [CmdletBinding()]
 param(
     [string]$InstallDir = (Join-Path $env:USERPROFILE 'Desktop'),
-    [string]$Tag = 'latest',
-    [string]$ExpectedSha256 = 'b928523abcb921219e60a134df254e5c461e82a3f59cc34449fd6600be40374e',
+    [string]$Tag = 'v0.9.0',
+    [string]$ExpectedSha256 = '32c0f62b81f09126c4747208ea7541b241e960739278d9f0777c0d062bc157f7',
     [switch]$NoLaunch
 )
 
@@ -35,7 +35,7 @@ Write-Host "  to:   $dest"
 
 Invoke-WebRequest -Uri $url -OutFile $dest -UseBasicParsing
 
-if ($ExpectedSha256 -and $Tag -eq 'v0.1.0') {
+if ($ExpectedSha256) {
     Write-Host "[KidsCodeAcademy] verifying SHA-256 ..." -ForegroundColor Cyan
     $actual = (Get-FileHash -Path $dest -Algorithm SHA256).Hash.ToLower()
     if ($actual -ne $ExpectedSha256.ToLower()) {

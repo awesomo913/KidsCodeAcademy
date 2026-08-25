@@ -1328,7 +1328,7 @@
           "_audio": "assets/audio/q/lesson_13_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about Gemini in depth?",
+          "prompt": "A helper can study a picture and words together. Which fact fits Gemini?",
           "options": [
             {
               "text": "Gemini grew up in a treehouse.",
@@ -1430,9 +1430,9 @@
               "_audio": "assets/audio/o/e1184dba00.ogg"
             },
             {
-              "text": "A mirror.",
+              "text": "A mirror that only reflects the flower.",
               "correct": false,
-              "_audio": "assets/audio/o/abfec41f47.ogg"
+              "_audio": "assets/audio/o/ea3329a162.ogg"
             },
             {
               "text": "A toaster oven.",
@@ -1451,9 +1451,9 @@
           "prompt": "Quick! You take a photo of a flower and want to know its name. Which helper?",
           "options": [
             {
-              "text": "A mirror.",
+              "text": "A mirror that only reflects the flower.",
               "correct": false,
-              "_audio": "assets/audio/o/abfec41f47.ogg"
+              "_audio": "assets/audio/o/ea3329a162.ogg"
             },
             {
               "text": "A regular calculator.",
@@ -1492,9 +1492,9 @@
               "_audio": "assets/audio/o/bd608bb208.ogg"
             },
             {
-              "text": "A mirror.",
+              "text": "A mirror that only reflects the flower.",
               "correct": false,
-              "_audio": "assets/audio/o/abfec41f47.ogg"
+              "_audio": "assets/audio/o/ea3329a162.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_13_q6_v2.ogg"
@@ -1686,21 +1686,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "even-and-odd",
+      "math_skill": "addition-within-100",
+      "math_level": "Grade 2 core",
+      "math_tip": "Add tens to tens and ones to ones.",
+      "math_tip_audio": "assets/audio/o/cb97db9695.ogg",
       "variations": [
         {
-          "prompt": "Is 19 even or odd?",
+          "prompt": "What is 10 plus 22?",
           "_audio": "assets/audio/q/lesson_13_math1_v0.ogg",
           "options": [
             {
-              "text": "even",
+              "text": "33",
               "correct": false,
-              "_audio": "assets/audio/o/04b8c80bb7.ogg"
+              "_audio": "assets/audio/o/b6692ea5df.ogg"
             },
             {
-              "text": "odd",
+              "text": "34",
+              "correct": false,
+              "_audio": "assets/audio/o/f1f836cb4e.ogg"
+            },
+            {
+              "text": "32",
               "correct": true,
-              "_audio": "assets/audio/o/60f7a51208.ogg"
+              "_audio": "assets/audio/o/cb4e5208b4.ogg"
+            },
+            {
+              "text": "31",
+              "correct": false,
+              "_audio": "assets/audio/o/632667547e.ogg"
             }
           ]
         }
@@ -1709,31 +1722,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "missing-addend",
+      "math_skill": "subtraction-within-100",
+      "math_level": "Grade 2 core",
+      "math_tip": "Subtract tens from tens and ones from ones.",
+      "math_tip_audio": "assets/audio/o/4fd711d433.ogg",
       "variations": [
         {
-          "prompt": "1 plus what makes 10?",
+          "prompt": "What is 83 minus 32?",
           "_audio": "assets/audio/q/lesson_13_math2_v0.ogg",
           "options": [
             {
-              "text": "12",
-              "correct": false,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
-            },
-            {
-              "text": "9",
+              "text": "51",
               "correct": true,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+              "_audio": "assets/audio/o/b7eb6c689c.ogg"
             },
             {
-              "text": "7",
+              "text": "53",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
+              "_audio": "assets/audio/o/c5b76da3e6.ogg"
             },
             {
-              "text": "8",
+              "text": "48",
               "correct": false,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+              "_audio": "assets/audio/o/64e095fe76.ogg"
+            },
+            {
+              "text": "52",
+              "correct": false,
+              "_audio": "assets/audio/o/a9334987ec.ogg"
             }
           ]
         }
@@ -1742,31 +1758,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "place-value",
+      "math_skill": "place-value-2-digit",
+      "math_level": "Grade 2 core",
+      "math_tip": "The left digit tells the tens; the right digit tells the ones.",
+      "math_tip_audio": "assets/audio/o/2eff40e2d7.ogg",
       "variations": [
         {
-          "prompt": "In the number 54, how many tens are there?",
+          "prompt": "In the number 26, how many ones are there?",
           "_audio": "assets/audio/q/lesson_13_math3_v0.ogg",
           "options": [
+            {
+              "text": "6",
+              "correct": true,
+              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+            },
+            {
+              "text": "5",
+              "correct": false,
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
+            },
             {
               "text": "3",
               "correct": false,
               "_audio": "assets/audio/o/77de68daec.ogg"
             },
             {
-              "text": "10",
+              "text": "8",
               "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
-            },
-            {
-              "text": "4",
-              "correct": false,
-              "_audio": "assets/audio/o/1b64538924.ogg"
-            },
-            {
-              "text": "5",
-              "correct": true,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
             }
           ]
         }

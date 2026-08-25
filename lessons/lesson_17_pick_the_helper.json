@@ -1369,7 +1369,7 @@
           "_audio": "assets/audio/q/lesson_17_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about picking the helper?",
+          "prompt": "Two helpers can do the job. Which choice is usually smartest?",
           "options": [
             {
               "text": "Never use the same helper twice in one day.",
@@ -1471,9 +1471,9 @@
               "_audio": "assets/audio/o/17b75e2893.ogg"
             },
             {
-              "text": "A microwave.",
+              "text": "A microwave that only heats food.",
               "correct": false,
-              "_audio": "assets/audio/o/9011daaba5.ogg"
+              "_audio": "assets/audio/o/74333de050.ogg"
             },
             {
               "text": "Codex -- it turns words into code fast.",
@@ -1481,9 +1481,9 @@
               "_audio": "assets/audio/o/01df0d29a8.ogg"
             },
             {
-              "text": "A stopwatch.",
+              "text": "A stopwatch that only measures time.",
               "correct": false,
-              "_audio": "assets/audio/o/6ccc61f859.ogg"
+              "_audio": "assets/audio/o/2754e7657a.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q6_v0.ogg"
@@ -1492,9 +1492,9 @@
           "prompt": "Quick! You want code written quickly from a description. Which helper?",
           "options": [
             {
-              "text": "A microwave.",
+              "text": "A microwave that only heats food.",
               "correct": false,
-              "_audio": "assets/audio/o/9011daaba5.ogg"
+              "_audio": "assets/audio/o/74333de050.ogg"
             },
             {
               "text": "A magic 8-ball.",
@@ -1507,9 +1507,9 @@
               "_audio": "assets/audio/o/01df0d29a8.ogg"
             },
             {
-              "text": "A stopwatch.",
+              "text": "A stopwatch that only measures time.",
               "correct": false,
-              "_audio": "assets/audio/o/6ccc61f859.ogg"
+              "_audio": "assets/audio/o/2754e7657a.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_17_q6_v1.ogg"
@@ -1523,14 +1523,14 @@
               "_audio": "assets/audio/o/17b75e2893.ogg"
             },
             {
-              "text": "A microwave.",
+              "text": "A microwave that only heats food.",
               "correct": false,
-              "_audio": "assets/audio/o/9011daaba5.ogg"
+              "_audio": "assets/audio/o/74333de050.ogg"
             },
             {
-              "text": "A stopwatch.",
+              "text": "A stopwatch that only measures time.",
               "correct": false,
-              "_audio": "assets/audio/o/6ccc61f859.ogg"
+              "_audio": "assets/audio/o/2754e7657a.ogg"
             },
             {
               "text": "Codex -- it turns words into code fast.",
@@ -1727,31 +1727,24 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "subtraction-to-20",
+      "math_skill": "compare-within-100",
+      "math_level": "Grade 2 core",
+      "math_tip": "Compare tens first. If the tens match, compare the ones.",
+      "math_tip_audio": "assets/audio/o/827d4d0734.ogg",
       "variations": [
         {
-          "prompt": "What is 13 minus 5?",
+          "prompt": "Which number is bigger: 58 or 78?",
           "_audio": "assets/audio/q/lesson_17_math1_v0.ogg",
           "options": [
             {
-              "text": "13",
-              "correct": false,
-              "_audio": "assets/audio/o/bd307a3ec3.ogg"
-            },
-            {
-              "text": "7",
-              "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "8",
+              "text": "78",
               "correct": true,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+              "_audio": "assets/audio/o/eb4ac3033e.ogg"
             },
             {
-              "text": "10",
+              "text": "58",
               "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "_audio": "assets/audio/o/667be543b0.ogg"
             }
           ]
         }
@@ -1760,31 +1753,24 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "missing-addend",
+      "math_skill": "even-and-odd",
+      "math_level": "Grade 2 core",
+      "math_tip": "An even number can be split into pairs with none left over.",
+      "math_tip_audio": "assets/audio/o/11c656a2ed.ogg",
       "variations": [
         {
-          "prompt": "2 plus what makes 2?",
+          "prompt": "Is 3 even or odd?",
           "_audio": "assets/audio/q/lesson_17_math2_v0.ogg",
           "options": [
             {
-              "text": "1",
+              "text": "even",
               "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "_audio": "assets/audio/o/04b8c80bb7.ogg"
             },
             {
-              "text": "2",
-              "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
-            },
-            {
-              "text": "0",
+              "text": "odd",
               "correct": true,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
-            },
-            {
-              "text": "5",
-              "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/60f7a51208.ogg"
             }
           ]
         }
@@ -1793,21 +1779,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "even-and-odd",
+      "math_skill": "skip-count",
+      "math_level": "Grade 2 core",
+      "math_tip": "Look for the same amount being added each time.",
+      "math_tip_audio": "assets/audio/o/d202673254.ogg",
       "variations": [
         {
-          "prompt": "Is 17 even or odd?",
+          "prompt": "Count by 5s: 10, 15, 20. What comes next?",
           "_audio": "assets/audio/q/lesson_17_math3_v0.ogg",
           "options": [
             {
-              "text": "odd",
-              "correct": true,
-              "_audio": "assets/audio/o/60f7a51208.ogg"
+              "text": "22",
+              "correct": false,
+              "_audio": "assets/audio/o/12c6fc06c9.ogg"
             },
             {
-              "text": "even",
+              "text": "25",
+              "correct": true,
+              "_audio": "assets/audio/o/f6e1126ced.ogg"
+            },
+            {
+              "text": "28",
               "correct": false,
-              "_audio": "assets/audio/o/04b8c80bb7.ogg"
+              "_audio": "assets/audio/o/0a57cb53ba.ogg"
+            },
+            {
+              "text": "30",
+              "correct": false,
+              "_audio": "assets/audio/o/22d200f867.ogg"
             }
           ]
         }

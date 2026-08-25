@@ -211,6 +211,22 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .audio-row { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+.vocab-strip {
+  display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 14px;
+}
+.vocab-card {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: 14px; max-width: 560px;
+  background: linear-gradient(90deg, rgba(160,103,255,.13), rgba(88,166,255,.12));
+  border: 2px solid rgba(160,103,255,.35);
+}
+.vocab-mark { font-size: 22px; }
+.vocab-word { font-weight: 900; color: var(--accent-2); }
+.vocab-meaning { font-size: 14px; line-height: 1.35; }
+.vocab-speak {
+  min-width: 44px; min-height: 44px; border-radius: 999px; cursor: pointer;
+  border: 2px solid var(--accent-2); background: var(--panel); font-size: 20px;
+}
 .btn-big {
   font-size: 20px; padding: 14px 22px;
   border-radius: var(--r-md);
@@ -382,6 +398,31 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 22px;
   line-height: 1.35;
 }
+.math-head {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  margin: 0 0 8px;
+}
+.math-badge, .math-level {
+  display: inline-flex; align-items: center;
+  padding: 5px 11px; border-radius: 999px;
+  font-size: 13px; font-weight: 800;
+}
+.math-badge { background: linear-gradient(90deg, #1fbf9a, #58a6ff); color: #fff; }
+.math-level { background: rgba(88,166,255,.14); color: var(--ink); border: 1px solid rgba(88,166,255,.35); }
+.math-help-row { margin: -4px 0 14px; }
+.math-help-btn {
+  border: 2px solid #1f9d7a; background: var(--panel); color: var(--ink);
+  border-radius: 999px; padding: 9px 14px; font: inherit; font-weight: 800;
+  cursor: pointer; transition: transform var(--dur), background var(--dur);
+}
+.math-help-btn:hover { transform: translateY(-2px); background: rgba(31,191,154,.12); }
+.math-tip {
+  display: none; margin-top: 9px; padding: 12px 14px;
+  border-left: 5px solid #1fbf9a; border-radius: 10px;
+  background: rgba(31,191,154,.10); line-height: 1.45; font-weight: 650;
+}
+.math-tip.show { display: block; animation: math-tip-in .2s ease-out; }
+@keyframes math-tip-in { from { opacity: 0; transform: translateY(-4px); } }
 
 /* v0.6 — celebrate animations on right pick + confetti + input feedback */
 .kca-confetti {
@@ -486,6 +527,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   align-items: center;
   justify-content: center;
   padding: 16px;
+  overflow-y: auto;
 }
 .chess-card {
   background: var(--panel);
@@ -500,12 +542,12 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 .chess-board {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  width: 100%;
+  width: min(100%, 500px);
   aspect-ratio: 1 / 1;
   border: 4px solid #2c2510;
   border-radius: 8px;
   overflow: hidden;
-  margin: 14px 0 8px;
+  margin: 14px auto 8px;
 }
 .chess-sq {
   position: relative;
@@ -516,6 +558,9 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   cursor: pointer;
   user-select: none;
   transition: filter 80ms;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
 }
 .chess-sq.light { background: #f0d9b5; }
 .chess-sq.dark  { background: #b58863; }
@@ -533,6 +578,13 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 }
 .chess-sq.legal { box-shadow: inset 0 0 0 5px rgba(46, 184, 96, 0.65); }
 .chess-sq:hover { filter: brightness(1.1); }
+.chess-sq:focus-visible { outline: 4px solid #58a6ff; outline-offset: -4px; z-index: 2; }
+.chess-coord {
+  position: absolute; left: 3px; bottom: 1px;
+  font: 700 10px/1 system-ui, sans-serif;
+  color: rgba(30,25,15,.72); text-shadow: none;
+  pointer-events: none;
+}
 .chess-status {
   margin: 6px 0 4px;
   font-size: 17px;
@@ -543,7 +595,14 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 /* Chess timer + hint row — under the status line, above the action buttons. */
 .chess-meta {
   display: flex; align-items: center; justify-content: center;
-  gap: 12px; margin: 6px 0 2px;
+  gap: 12px; margin: 6px 0 2px; flex-wrap: wrap;
+}
+@media (max-height: 800px) {
+  .chess-overlay { align-items: flex-start; }
+  .chess-card { padding: 14px; margin: auto; max-width: 500px; }
+  .chess-board { width: min(100%, 45vh); margin-top: 8px; }
+  .chess-card h2 { margin: 0 0 4px; }
+  .chess-actions .btn-big { font-size: 16px; padding: 9px 14px; }
 }
 .chess-timer {
   display: inline-block;
@@ -1615,7 +1674,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
           <strong style="font-size:17px;">ℹ️ App version</strong>
           <p class="muted" style="font-size:14px;margin:6px 0 0;">
-            <b>v0.8.0</b> — 60 lessons, Math Minute curriculum, chess, durable progress, and exact parent progress placement.
+            <b>v0.9.0</b> — polished lessons, guided Grade 2 math, rules-correct coached chess, and complete read-aloud support.
           </p>
         </div>
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
@@ -1716,10 +1775,11 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 <audio id="lessonAudio"  preload="auto"></audio>
 <audio id="hintAudio"    preload="auto"></audio>
 
+<script src="vendor/chess-rules.min.js"></script>
 <script>
 "use strict";
 
-const APP_VERSION = "v0.8.0";
+const APP_VERSION = "v0.9.0";
 
 /* ============================================================
  *  DOM helpers — never use innerHTML on caller-supplied strings.
@@ -5195,6 +5255,18 @@ const QuestionFlow = {
       requestAnimationFrame(() => badge.classList.add("visible"));
     }
 
+    const isMath = !!question.math_skill;
+    let revealMathTip = null;
+    let wrongAttempts = 0;
+    if (isMath) {
+      const mathHead = el("div", { class: "math-head" });
+      mathHead.appendChild(el("span", { class: "math-badge" }, "➗ Math Minute"));
+      if (question.math_level) {
+        mathHead.appendChild(el("span", { class: "math-level" }, String(question.math_level)));
+      }
+      host.appendChild(mathHead);
+    }
+
     const promptText = String(v.prompt || "Pick the best answer:");
     host.appendChild(el("h3", { class: "qprompt" }, promptText));
     // v0.7.1: play baked Piper wav if generator emitted one (`_audio` field).
@@ -5203,6 +5275,36 @@ const QuestionFlow = {
       playBakedAudio(String(v._audio));
     } else {
       speakText(promptText);
+    }
+
+    if (isMath && question.math_tip) {
+      const helpRow = el("div", { class: "math-help-row" });
+      const tip = el("div", { class: "math-tip", role: "status" });
+      const helpBtn = el("button", { class: "math-help-btn", type: "button" }, "💡 Show me how");
+      let shown = false;
+      revealMathTip = (speakIt = true) => {
+        if (!shown) {
+          shown = true;
+          tip.textContent = "Strategy: " + String(question.math_tip);
+          tip.classList.add("show");
+          helpBtn.textContent = "🔊 Read the strategy";
+          if (Tracker.current) {
+            Tracker.current.hintsUsed = Math.max(Tracker.current.hintsUsed || 0, 1);
+            InFlight.touch();
+          }
+        }
+        if (speakIt) {
+          if (question.math_tip_audio) playBakedAudio(String(question.math_tip_audio));
+          else speakText(String(question.math_tip));
+        }
+      };
+      helpBtn.addEventListener("click", () => {
+        Tracker.click();
+        revealMathTip(true);
+      });
+      helpRow.appendChild(helpBtn);
+      helpRow.appendChild(tip);
+      host.appendChild(helpRow);
     }
 
     const grid = el("div", { class: "choice-grid" });
@@ -5231,8 +5333,10 @@ const QuestionFlow = {
           } else {
             try { Combo.miss(); } catch (_) {}
             Tracker.retry();
+            wrongAttempts += 1;
             btn.classList.add("wrong");
             Audio_.sfx("Oops");
+            if (revealMathTip && wrongAttempts >= 2) revealMathTip(true);
             setTimeout(() => btn.classList.remove("wrong"), 600);
           }
         },
@@ -5288,14 +5392,12 @@ const QuestionFlow = {
 };
 
 /* ============================================================
- *  v0.6 — Chess break minigame.
+ *  Chess break minigame.
  *
- *  Board: 8x8, pseudo-legal moves only (no check / checkmate detection,
- *  no castling, no en-passant; auto-queen on promotion). Kid plays
- *  white, bot plays black. Bot rolls a 1/10 chance to play a "best
- *  move" (highest-value capture, else random); the other 9/10 of the
- *  time it picks uniformly at random — keeps the bot weak so a 7yo
- *  wins regularly. Win condition: capture the enemy king.
+ *  chess.js is the authoritative offline rules engine: legal king safety,
+ *  check/checkmate, stalemate/draws, castling, en passant, and promotion.
+ *  This UI stays deliberately beginner-friendly; Bytey's move selection is
+ *  weak, while hints explain a useful legal move or a core principle.
  * ============================================================ */
 const Chess = {
   state: null,
@@ -5306,17 +5408,13 @@ const Chess = {
   },
 
   _initialState() {
+    if (!globalThis.ChessRules || !ChessRules.Chess) {
+      throw new Error("Chess rules engine did not load");
+    }
+    const engine = new ChessRules.Chess();
     return {
-      board: [
-        ["r","n","b","q","k","b","n","r"],
-        ["p","p","p","p","p","p","p","p"],
-        [".",".",".",".",".",".",".","."],
-        [".",".",".",".",".",".",".","."],
-        [".",".",".",".",".",".",".","."],
-        [".",".",".",".",".",".",".","."],
-        ["P","P","P","P","P","P","P","P"],
-        ["R","N","B","Q","K","B","N","R"],
-      ],
+      engine,
+      board: this._boardFromEngine(engine),
       turn: "w",
       selected: null,
       legalSquares: [],
@@ -5334,7 +5432,24 @@ const Chess = {
       extensionUsed: false,
       timerInterval: 0,       // setInterval handle
       hintsUsed: 0,
+      lessonTipIndex: 0,
     };
+  },
+
+  _coordToSquare(r, c) {
+    return "abcdefgh"[c] + String(8 - r);
+  },
+  _squareToCoord(square) {
+    return { c: "abcdefgh".indexOf(square[0]), r: 8 - Number(square[1]) };
+  },
+  _boardFromEngine(engine) {
+    return engine.board().map(row => row.map(piece => {
+      if (!piece) return ".";
+      return piece.color === "w" ? piece.type.toUpperCase() : piece.type;
+    }));
+  },
+  _syncBoard() {
+    this.state.board = this._boardFromEngine(this.state.engine);
   },
 
   _render(onDone) {
@@ -5350,7 +5465,7 @@ const Chess = {
 
     card.appendChild(el("h2", { style: { margin: "0 0 6px" } }, "🐎 Chess Break!"));
     card.appendChild(el("p", { class: "muted", style: { margin: "0 0 8px" } },
-      "Click your piece, then click a green square to move. Catch the black king to win!"));
+      "Move the white pieces. Green squares are legal moves. Checkmate Bytey's king to win!"));
 
     const board = el("div", { class: "chess-board" });
     card.appendChild(board);
@@ -5363,8 +5478,11 @@ const Chess = {
     const timerChip = el("span", { class: "chess-timer", id: "chessTimer" }, "15:00");
     const hintBtn = el("button", { class: "chess-hint-btn", id: "chessHintBtn" }, "💡 Hint");
     hintBtn.addEventListener("click", () => this._giveHint());
+    const learnBtn = el("button", { class: "chess-hint-btn", id: "chessLearnBtn" }, "♟ Learn a piece");
+    learnBtn.addEventListener("click", () => this._givePieceLesson());
     meta.appendChild(timerChip);
     meta.appendChild(hintBtn);
+    meta.appendChild(learnBtn);
     card.appendChild(meta);
     const hintBox = el("div", { class: "chess-hint-box", id: "chessHintBox" });
     card.appendChild(hintBox);
@@ -5394,7 +5512,7 @@ const Chess = {
       },
     }, "Start over"));
 
-    speakText("Chess break! Catch the black king.");
+    speakText("Chess break! Move the white pieces and checkmate Bytey's king.");
     this._renderBoard(board, onDone);
     this._startTimer(() => this._renderBoard(board, onDone));
   },
@@ -5419,55 +5537,49 @@ const Chess = {
   },
 
   _computeHint() {
-    const board = this.state.board;
-    const VALUE = { P: 1, N: 3, B: 3, R: 5, Q: 9, K: 100 };
-    // 1. Any of YOUR pieces that the bot threatens to capture next turn?
-    let myMostValuableThreatened = 0;
-    for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) {
-      const p = board[r][c];
-      if (!this._isWhite(p)) continue;
-      // Check every black piece's legal moves
-      for (let br = 0; br < 8; br++) for (let bc = 0; bc < 8; bc++) {
-        if (!this._isBlack(board[br][bc])) continue;
-        const moves = this._legalMovesFor(br, bc);
-        if (moves.some(m => m.r === r && m.c === c)) {
-          const v = VALUE[p] || 0;
-          if (v > myMostValuableThreatened) myMostValuableThreatened = v;
-          if (p === "Q") return "Watch out — your QUEEN is in danger! Move it or block the attacker!";
-          if (p === "K") return "Your KING is exposed! Move it to safety FAST!";
-        }
-      }
+    const engine = this.state.engine;
+    if (engine.inCheck()) {
+      return "Your king is in check. Pick a green move that moves the king, blocks the attack, or captures the attacker.";
     }
-    if (myMostValuableThreatened >= 5) {
-      return "One of your big pieces is in danger! Look around carefully before you move.";
+    const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 100 };
+    const legal = engine.moves({ verbose: true });
+    const captures = legal.filter(move => move.captured)
+      .sort((a, b) => (VALUE[b.captured] || 0) - (VALUE[a.captured] || 0));
+    if (captures.length) {
+      const move = captures[0];
+      return `Your ${this._pieceName(move.piece)} on ${move.from} can capture Bytey's ${this._pieceName(move.captured)} on ${move.to}.`;
     }
-    // 2. Can YOU capture something this turn?
-    let bestCap = 0;
-    for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) {
-      const p = board[r][c];
-      if (!this._isWhite(p)) continue;
-      const moves = this._legalMovesFor(r, c);
-      for (const m of moves) {
-        const t = board[m.r][m.c];
-        if (t && t !== "." && this._isBlack(t)) {
-          const v = VALUE[t.toUpperCase()] || 0;
-          if (v > bestCap) bestCap = v;
-        }
-      }
-    }
-    if (bestCap >= 9) return "Look for a HUGE capture — Bytey left something BIG out in the open!";
-    if (bestCap >= 5) return "There's a strong capture waiting for you — scan the board!";
-    if (bestCap >= 3) return "You can grab a piece this turn! See if you can find it!";
-    if (bestCap >= 1) return "There's a small capture available — pawn grab?";
-    // 3. Generic strategy nudges — pick by hint count so kid hears variety
+    const castle = legal.find(move => String(move.flags || "").includes("k") || String(move.flags || "").includes("q"));
+    if (castle) return "You can castle now. Castling moves your king to safety and brings a rook into the game.";
     const generic = [
-      "Move pieces toward the middle — they control more squares from there!",
-      "Knights jump — try a knight move to surprise Bytey!",
-      "Don't move the same piece twice in a row early on. Develop more pieces!",
-      "Keep your king safe behind some pawns!",
-      "Look for two of YOUR pieces protecting each other!",
+      "Move a center pawn so your bishop and queen have room to come out.",
+      "Bring out a knight or bishop. New pieces help more than moving one piece again.",
+      "Before moving, ask: is my king safe, can I capture, and what can Bytey capture next?",
+      "Keep your king protected and try to castle when the path is clear.",
+      "Look for pieces that protect each other. A team is harder for Bytey to attack.",
     ];
     return generic[this.state.hintsUsed % generic.length];
+  },
+
+  _givePieceLesson() {
+    if (this.state.gameOver) return;
+    const lessons = [
+      "Pawns move forward one square and capture one square diagonally. On their first move, they may move two.",
+      "Knights move in an L shape: two squares one way and one sideways. Knights can jump over pieces.",
+      "Bishops slide diagonally. A bishop stays on the same color squares for the whole game.",
+      "Rooks slide in straight lines: up, down, left, or right.",
+      "The queen slides in straight or diagonal lines, but she cannot jump over pieces.",
+      "The king moves one square at a time and may never move into check. Protect your king.",
+    ];
+    const text = lessons[this.state.lessonTipIndex % lessons.length];
+    this.state.lessonTipIndex += 1;
+    const box = document.getElementById("chessHintBox");
+    if (!box) return;
+    clearNode(box);
+    box.appendChild(document.createTextNode("♟ " + text));
+    box.classList.add("show");
+    try { speakText(text); } catch (_) {}
+    setTimeout(() => box.classList.remove("show"), 7500);
   },
 
   /* Timer — 15 min hard limit + one 1-min extension if kid hasn't finished.
@@ -5531,7 +5643,7 @@ const Chess = {
     }
     if (kidPts > botPts) this.state.result = "win";
     else if (botPts > kidPts) this.state.result = "loss";
-    else this.state.result = "abandoned";  // tie -> treated like a draw
+    else this.state.result = "draw";
     const rec = this._gradeRecord();
     rec.endedByTime = true;
     rec.kidPiecePoints = kidPts;
@@ -5552,6 +5664,7 @@ const Chess = {
   },
 
   _renderBoard(boardEl, onDone) {
+    this._syncBoard();
     clearNode(boardEl);
     const GLYPH = {
       "K": "♔", "Q": "♕", "R": "♖", "B": "♗", "N": "♘", "P": "♙",
@@ -5562,8 +5675,13 @@ const Chess = {
       for (let c = 0; c < 8; c += 1) {
         const piece = this.state.board[r][c];
         const isLight = (r + c) % 2 === 0;
-        const sq = el("div", {
+        const squareName = this._coordToSquare(r, c);
+        const pieceLabel = piece === "." ? "empty" :
+          (this._isWhite(piece) ? "white " : "black ") + this._pieceName(piece);
+        const sq = el("button", {
           class: "chess-sq " + (isLight ? "light" : "dark"),
+          type: "button",
+          "aria-label": `${squareName}, ${pieceLabel}`,
           dataset: { r: String(r), c: String(c) },
           onclick: () => this._onSquareClick(r, c, boardEl, onDone),
         });
@@ -5576,6 +5694,11 @@ const Chess = {
         }
         if (this.state.legalSquares.some(s => s.r === r && s.c === c)) {
           sq.classList.add("legal");
+        }
+        if (r === 7 || c === 0) {
+          const coord = r === 7 && c === 0 ? `${squareName[0]}${squareName[1]}` :
+                        r === 7 ? squareName[0] : squareName[1];
+          sq.appendChild(el("span", { class: "chess-coord", "aria-hidden": "true" }, coord));
         }
         boardEl.appendChild(sq);
       }
@@ -5593,21 +5716,21 @@ const Chess = {
 
     // Move into a legal target
     if (this.state.selected && this.state.legalSquares.some(s => s.r === r && s.c === c)) {
-      const captured = this.state.board[r][c];
-      this._doMove(this.state.selected, { r, c });
+      const madeMove = this._doMove(this.state.selected, { r, c });
+      if (!madeMove) return;
       this.state.selected = null;
       this.state.legalSquares = [];
       this._renderBoard(boardEl, onDone);
-      if (captured && captured !== "." && this._isBlack(captured)) {
+      if (madeMove.captured) {
         // Track kid's capture (count + value)
         const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 100 };
         this.state.kidCaptured += 1;
-        this.state.kidCapturedValue += VALUE[captured.toLowerCase()] || 0;
+        this.state.kidCapturedValue += VALUE[madeMove.captured] || 0;
         Audio_.sfx("Ding");
       }
       if (this._checkGameEnd(boardEl, onDone)) return;
       this.state.turn = "b";
-      this._setStatus("Bytey thinking…");
+      this._setStatus(this.state.engine.inCheck() ? "Check! Bytey is finding a safe move…" : "Bytey thinking…");
       setTimeout(() => this._botMove(boardEl, onDone), 700 + Math.floor(Math.random() * 600));
       return;
     }
@@ -5627,98 +5750,36 @@ const Chess = {
   },
 
   _doMove(from, to) {
-    let p = this.state.board[from.r][from.c];
-    // Auto-queen promotion
-    if (p === "P" && to.r === 0) p = "Q";
-    if (p === "p" && to.r === 7) p = "q";
-    this.state.board[to.r][to.c] = p;
-    this.state.board[from.r][from.c] = ".";
-    this.state.moves += 1;
+    try {
+      const move = this.state.engine.move({
+        from: this._coordToSquare(from.r, from.c),
+        to: this._coordToSquare(to.r, to.c),
+        promotion: "q",
+      });
+      if (!move) return null;
+      this.state.moves += 1;
+      this._syncBoard();
+      return move;
+    } catch (_) {
+      return null;
+    }
   },
 
   _isWhite(p) { return p && p !== "." && p === p.toUpperCase(); },
   _isBlack(p) { return p && p !== "." && p === p.toLowerCase(); },
 
   _legalMovesFor(r, c) {
-    const board = this.state.board;
-    const p = board[r][c];
-    if (!p || p === ".") return [];
-    const isW = this._isWhite(p);
-    const piece = p.toUpperCase();
-    const enemy = sq => sq && sq !== "." && (isW ? this._isBlack(sq) : this._isWhite(sq));
-    const empty = sq => sq === ".";
-    const moves = [];
-
-    const ray = (dr, dc) => {
-      let nr = r + dr; let nc = c + dc;
-      while (nr >= 0 && nr < 8 && nc >= 0 && nc < 8) {
-        const sq = board[nr][nc];
-        if (empty(sq)) {
-          moves.push({ r: nr, c: nc });
-        } else {
-          if (enemy(sq)) moves.push({ r: nr, c: nc });
-          break;
-        }
-        nr += dr; nc += dc;
-      }
-    };
-    const step = (dr, dc) => {
-      const nr = r + dr; const nc = c + dc;
-      if (nr < 0 || nr >= 8 || nc < 0 || nc >= 8) return;
-      const sq = board[nr][nc];
-      if (empty(sq) || enemy(sq)) moves.push({ r: nr, c: nc });
-    };
-
-    if (piece === "P") {
-      const dir = isW ? -1 : 1;
-      const startRank = isW ? 6 : 1;
-      const f1r = r + dir;
-      if (f1r >= 0 && f1r < 8 && empty(board[f1r][c])) {
-        moves.push({ r: f1r, c });
-        const f2r = r + 2 * dir;
-        if (r === startRank && f2r >= 0 && f2r < 8 && empty(board[f2r][c])) {
-          moves.push({ r: f2r, c });
-        }
-      }
-      for (const dc of [-1, 1]) {
-        const nc = c + dc; const nr = r + dir;
-        if (nr >= 0 && nr < 8 && nc >= 0 && nc < 8 && enemy(board[nr][nc])) {
-          moves.push({ r: nr, c: nc });
-        }
-      }
-    } else if (piece === "N") {
-      const off = [[-2,-1],[-2,1],[-1,-2],[-1,2],[1,-2],[1,2],[2,-1],[2,1]];
-      for (const [dr, dc] of off) step(dr, dc);
-    } else if (piece === "B") {
-      ray(-1,-1); ray(-1,1); ray(1,-1); ray(1,1);
-    } else if (piece === "R") {
-      ray(-1,0); ray(1,0); ray(0,-1); ray(0,1);
-    } else if (piece === "Q") {
-      ray(-1,-1); ray(-1,1); ray(1,-1); ray(1,1);
-      ray(-1,0); ray(1,0); ray(0,-1); ray(0,1);
-    } else if (piece === "K") {
-      for (let dr = -1; dr <= 1; dr += 1) {
-        for (let dc = -1; dc <= 1; dc += 1) {
-          if (dr === 0 && dc === 0) continue;
-          step(dr, dc);
-        }
-      }
-    }
-    return moves;
+    const square = this._coordToSquare(r, c);
+    return this.state.engine.moves({ square, verbose: true })
+      .map(move => this._squareToCoord(move.to));
   },
 
   _allBlackMoves() {
-    const out = [];
-    for (let r = 0; r < 8; r += 1) {
-      for (let c = 0; c < 8; c += 1) {
-        if (this._isBlack(this.state.board[r][c])) {
-          for (const m of this._legalMovesFor(r, c)) {
-            out.push({ from: { r, c }, to: m });
-          }
-        }
-      }
-    }
-    return out;
+    return this.state.engine.moves({ verbose: true }).map(move => ({
+      from: this._squareToCoord(move.from),
+      to: this._squareToCoord(move.to),
+      captured: move.captured || null,
+    }));
   },
 
   _botMove(boardEl, onDone) {
@@ -5728,9 +5789,7 @@ const Chess = {
     if (this.state.gameOver) return;
     const moves = this._allBlackMoves();
     if (moves.length === 0) {
-      this._stopTimer();
-      this.state.gameOver = true;
-      this._setStatus("Bytey has no moves — you win by default! 🎉");
+      this._checkGameEnd(boardEl, onDone);
       return;
     }
 
@@ -5741,8 +5800,7 @@ const Chess = {
       let best = -1;
       let bestMoves = [];
       for (const m of moves) {
-        const target = this.state.board[m.to.r][m.to.c];
-        const v = (target && target !== ".") ? (VALUE[target.toUpperCase()] || 0) : 0;
+        const v = m.captured ? (VALUE[m.captured.toUpperCase()] || 0) : 0;
         if (v > best) { best = v; bestMoves = [m]; }
         else if (v === best) bestMoves.push(m);
       }
@@ -5752,18 +5810,21 @@ const Chess = {
       pick = moves[Math.floor(Math.random() * moves.length)];
     }
 
-    const captured = this.state.board[pick.to.r][pick.to.c];
-    if (captured && captured !== "." && this._isWhite(captured)) {
+    const madeMove = this._doMove(pick.from, pick.to);
+    if (!madeMove) return;
+    if (madeMove.captured) {
       const VALUE = { P: 1, N: 3, B: 3, R: 5, Q: 9, K: 100 };
       this.state.botCaptured += 1;
-      this.state.botCapturedValue += VALUE[captured] || 0;
+      this.state.botCapturedValue += VALUE[madeMove.captured.toUpperCase()] || 0;
     }
-    this._doMove(pick.from, pick.to);
     this._renderBoard(boardEl, onDone);
     if (this._checkGameEnd(boardEl, onDone)) return;
     this.state.turn = "w";
-    if (captured && captured !== "." && this._isWhite(captured)) {
-      this._setStatus("Bytey grabbed your " + this._pieceName(captured) + "! Your turn.");
+    if (this.state.engine.inCheck()) {
+      this._setStatus("Your king is in check. Choose a green move to get safe.");
+      try { speakText("Your king is in check. Choose a green move to get safe."); } catch (_) {}
+    } else if (madeMove.captured) {
+      this._setStatus("Bytey grabbed your " + this._pieceName(madeMove.captured) + "! Your turn.");
     } else {
       this._setStatus("Your move (white).");
     }
@@ -5775,38 +5836,29 @@ const Chess = {
   },
 
   _checkGameEnd(boardEl, onDone) {
-    let whiteKing = false; let blackKing = false;
-    for (let r = 0; r < 8; r += 1) {
-      for (let c = 0; c < 8; c += 1) {
-        const p = this.state.board[r][c];
-        if (p === "K") whiteKing = true;
-        if (p === "k") blackKing = true;
-      }
+    const engine = this.state.engine;
+    if (!engine.isGameOver()) return false;
+    this._stopTimer();
+    this.state.gameOver = true;
+    let message = "Draw — both players built a strong position. 🤝";
+    if (engine.isCheckmate()) {
+      const kidWon = engine.turn() === "b";
+      this.state.result = kidWon ? "win" : "loss";
+      message = kidWon ? "CHECKMATE! You won! 🎉👑" : "Checkmate. Bytey wins this round. 🐎";
+    } else {
+      this.state.result = "draw";
+      if (engine.isStalemate()) message = "Stalemate — Bytey has no legal move, so it is a draw. 🤝";
+      else if (engine.isThreefoldRepetition()) message = "Draw — the same position happened three times. 🤝";
+      else if (engine.isInsufficientMaterial()) message = "Draw — there are not enough pieces left to checkmate. 🤝";
     }
-    if (!whiteKing) {
-      this._stopTimer();  // halt countdown before gameOver flag flips
-      this.state.gameOver = true;
-      this.state.result = "loss";
-      const rec = this._gradeRecord();
-      ChessHistory.add(rec);
-      this._setStatus("Bytey caught your king. Try again? 🐎");
-      Audio_.sfx("Oops");
-      this._showGradeCard(boardEl, rec);
-      return true;
-    }
-    if (!blackKing) {
-      this._stopTimer();
-      this.state.gameOver = true;
-      this.state.result = "win";
-      const rec = this._gradeRecord();
-      ChessHistory.add(rec);
-      this._setStatus("YOU GOT THE KING! 🎉👑");
-      Audio_.sfx("Tada");
-      try { spawnConfetti(boardEl); } catch (_) {}
-      this._showGradeCard(boardEl, rec);
-      return true;
-    }
-    return false;
+    const rec = this._gradeRecord();
+    ChessHistory.add(rec);
+    this._setStatus(message);
+    try { speakText(message); } catch (_) {}
+    Audio_.sfx(this.state.result === "win" ? "Tada" : this.state.result === "loss" ? "Oops" : "Ding");
+    if (this.state.result === "win") try { spawnConfetti(boardEl); } catch (_) {}
+    this._showGradeCard(boardEl, rec);
+    return true;
   },
 
   /* Grade rubric — 0..100 score → letter, plus 1-3 stars.
@@ -5817,6 +5869,7 @@ const Chess = {
     let score = 0;
     if (s.result === "win") score += 90;
     else if (s.result === "loss") score += 60;
+    else if (s.result === "draw") score += 70;
     else score += 35;  // abandoned
 
     const totalCapVal = s.kidCapturedValue + s.botCapturedValue;
@@ -5833,7 +5886,7 @@ const Chess = {
     // Per-result FLOOR — losing a chess game shouldn't earn a D. The kid is 7
     // and the bot wins ~half the time on purpose; "tried hard, lost" still gets
     // at least a B-. Abandoned games still get a passing C.
-    const floor = s.result === "win" ? 75 : s.result === "loss" ? 65 : 50;
+    const floor = s.result === "win" ? 75 : (s.result === "loss" || s.result === "draw") ? 65 : 50;
     score = Math.max(floor, score);
     score = Math.max(0, Math.min(100, score));
 
@@ -5873,7 +5926,7 @@ const Chess = {
     const grade = el("div", { class: "chess-grade-card" });
     const headLine = rec.result === "win" ? "🎉 You won!" :
                      rec.result === "loss" ? "🐎 Bytey wins this round." :
-                     "👋 Game ended early.";
+                     rec.result === "draw" ? "🤝 Draw — good game!" : "👋 Game ended early.";
     grade.appendChild(el("div", { class: "cgc-head" }, headLine));
     const stars = "⭐".repeat(rec.stars) + "✩".repeat(3 - rec.stars);
     grade.appendChild(el("div", { class: "cgc-stars" }, stars));
@@ -7651,6 +7704,28 @@ const UI = {
 
     view.appendChild(el("h2", null, String(lesson.title || "")));
     view.appendChild(el("p", { class: "goal" }, String(lesson.goal || "")));
+
+    if (Array.isArray(lesson.vocabulary) && lesson.vocabulary.length) {
+      const strip = el("div", { class: "vocab-strip", "aria-label": "Word Power" });
+      lesson.vocabulary.forEach(entry => {
+        const word = String(entry.word || "");
+        const meaning = String(entry.meaning || "");
+        const copy = el("div");
+        copy.appendChild(el("div", { class: "vocab-word" }, "Word Power: " + word));
+        copy.appendChild(el("div", { class: "vocab-meaning" }, meaning));
+        const speak = el("button", {
+          class: "vocab-speak", type: "button", "aria-label": `Read the meaning of ${word}`,
+          onclick: () => {
+            Tracker.click();
+            if (entry._audio) playBakedAudio(String(entry._audio));
+            else speakText(`${word}. ${meaning}`);
+          },
+        }, "🔊");
+        strip.appendChild(el("div", { class: "vocab-card" },
+          el("span", { class: "vocab-mark", "aria-hidden": "true" }, "🧠"), copy, speak));
+      });
+      view.appendChild(strip);
+    }
 
     // v0.7.13 — Glints (bonus stars) disabled per user direction; were
     // distracting from the lesson + kid was conflating them with question

@@ -1335,7 +1335,7 @@
           "_audio": "assets/audio/q/lesson_28_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about checking your work?",
+          "prompt": "A test fails after a code change. What should Bytey suspect?",
           "options": [
             {
               "text": "Verifying takes 100 hours so just skip it.",
@@ -1417,31 +1417,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "equalities",
+      "math_skill": "data",
+      "math_level": "Grade 2 practice",
+      "math_tip": "Read the labels, then add for a total or subtract to compare.",
+      "math_tip_audio": "assets/audio/o/ad4c1d6f14.ogg",
       "variations": [
         {
-          "prompt": "Make both sides equal: 2 plus 2 equals 1 plus what?",
+          "prompt": "A picture graph shows 7 red votes and 2 blue votes. How many more votes did the winner get?",
           "_audio": "assets/audio/q/lesson_28_math1_v0.ogg",
           "options": [
             {
-              "text": "0",
+              "text": "5",
+              "correct": true,
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
+            },
+            {
+              "text": "4",
               "correct": false,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
+              "_audio": "assets/audio/o/1b64538924.ogg"
+            },
+            {
+              "text": "10",
+              "correct": false,
+              "_audio": "assets/audio/o/b1d5781111.ogg"
             },
             {
               "text": "8",
               "correct": false,
               "_audio": "assets/audio/o/fe5dbbcea5.ogg"
-            },
-            {
-              "text": "3",
-              "correct": true,
-              "_audio": "assets/audio/o/77de68daec.ogg"
-            },
-            {
-              "text": "2",
-              "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
             }
           ]
         }
@@ -1450,31 +1453,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "money",
+      "math_skill": "regrouping-addition",
+      "math_level": "Grade 2 practice",
+      "math_tip": "Add the ones first. Ten ones can be regrouped as one ten.",
+      "math_tip_audio": "assets/audio/o/35b57b54ac.ogg",
       "variations": [
         {
-          "prompt": "You have 1 dime, 2 nickels, 5 pennies. How many cents is that?",
+          "prompt": "What is 17 plus 19?",
           "_audio": "assets/audio/q/lesson_28_math2_v0.ogg",
           "options": [
             {
-              "text": "23 cents",
+              "text": "37",
               "correct": false,
-              "_audio": "assets/audio/o/ef3582c7a4.ogg"
+              "_audio": "assets/audio/o/cb7a1d775e.ogg"
             },
             {
-              "text": "25 cents",
+              "text": "36",
               "correct": true,
-              "_audio": "assets/audio/o/4269daa3c3.ogg"
+              "_audio": "assets/audio/o/fc074d5013.ogg"
             },
             {
-              "text": "22 cents",
+              "text": "34",
               "correct": false,
-              "_audio": "assets/audio/o/90aaa2bce2.ogg"
+              "_audio": "assets/audio/o/f1f836cb4e.ogg"
             },
             {
-              "text": "26 cents",
+              "text": "38",
               "correct": false,
-              "_audio": "assets/audio/o/e351540259.ogg"
+              "_audio": "assets/audio/o/5b384ce32d.ogg"
             }
           ]
         }
@@ -1483,36 +1489,46 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "place-value",
+      "math_skill": "regrouping-subtraction",
+      "math_level": "Grade 2 practice",
+      "math_tip": "If there are not enough ones, trade one ten for ten ones.",
+      "math_tip_audio": "assets/audio/o/1996324046.ogg",
       "variations": [
         {
-          "prompt": "In the number 88, how many tens are there?",
+          "prompt": "What is 88 minus 19?",
           "_audio": "assets/audio/q/lesson_28_math3_v0.ogg",
           "options": [
             {
-              "text": "10",
+              "text": "67",
               "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "_audio": "assets/audio/o/4d89d294cd.ogg"
             },
             {
-              "text": "5",
+              "text": "72",
               "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/c097638f92.ogg"
             },
             {
-              "text": "9",
-              "correct": false,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
-            },
-            {
-              "text": "8",
+              "text": "69",
               "correct": true,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+              "_audio": "assets/audio/o/a72b20062e.ogg"
+            },
+            {
+              "text": "68",
+              "correct": false,
+              "_audio": "assets/audio/o/b4c96d8085.ogg"
             }
           ]
         }
       ]
     }
   ],
-  "schema": "v2"
+  "schema": "v2",
+  "vocabulary": [
+    {
+      "word": "function",
+      "meaning": "a named set of code steps that you can use again",
+      "_audio": "assets/audio/o/9c0d969cce.ogg"
+    }
+  ]
 }

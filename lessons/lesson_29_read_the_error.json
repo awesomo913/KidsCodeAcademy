@@ -1347,7 +1347,7 @@
           "_audio": "assets/audio/q/lesson_29_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about reading the error?",
+          "prompt": "Red error words appear. What makes the bug easier to fix?",
           "options": [
             {
               "text": "Errors are written in invisible ink most of the time.",
@@ -1705,31 +1705,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "place-value",
+      "math_skill": "place-value-3-digit",
+      "math_level": "Grade 2 practice",
+      "math_tip": "Read hundreds, tens, then ones. Each place is worth ten times the place to its right.",
+      "math_tip_audio": "assets/audio/o/c869a3d69c.ogg",
       "variations": [
         {
-          "prompt": "In the number 33, how many tens are there?",
+          "prompt": "In 689, which digit is in the tens place?",
           "_audio": "assets/audio/q/lesson_29_math1_v0.ogg",
           "options": [
             {
-              "text": "6",
+              "text": "5",
               "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
             },
             {
-              "text": "1",
-              "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
-            },
-            {
-              "text": "0",
-              "correct": false,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
-            },
-            {
-              "text": "3",
+              "text": "8",
               "correct": true,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+            },
+            {
+              "text": "9",
+              "correct": false,
+              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+            },
+            {
+              "text": "7",
+              "correct": false,
+              "_audio": "assets/audio/o/902ba3cda1.ogg"
             }
           ]
         }
@@ -1738,31 +1741,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "skip-count-by-2",
+      "math_skill": "time",
+      "math_level": "Grade 2 practice",
+      "math_tip": "Count minutes forward in jumps of five, then check the hour.",
+      "math_tip_audio": "assets/audio/o/afbdad225c.ogg",
       "variations": [
         {
-          "prompt": "Count by 2s: 4, 6, 8. What comes next?",
+          "prompt": "It is 3:15. What time will it be in 5 minutes?",
           "_audio": "assets/audio/q/lesson_29_math2_v0.ogg",
           "options": [
             {
-              "text": "10",
+              "text": "3:30",
+              "correct": false,
+              "_audio": "assets/audio/o/d86bf27345.ogg"
+            },
+            {
+              "text": "3:15",
+              "correct": false,
+              "_audio": "assets/audio/o/1c69b343c0.ogg"
+            },
+            {
+              "text": "3:20",
               "correct": true,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "_audio": "assets/audio/o/ee9ca10dab.ogg"
             },
             {
-              "text": "9",
+              "text": "3:25",
               "correct": false,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
-            },
-            {
-              "text": "12",
-              "correct": false,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
-            },
-            {
-              "text": "8",
-              "correct": false,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+              "_audio": "assets/audio/o/af14b37840.ogg"
             }
           ]
         }
@@ -1771,36 +1777,46 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "skip-count-by-10",
+      "math_skill": "money-change",
+      "math_level": "Grade 2 practice",
+      "math_tip": "Change is what is left: amount paid minus the price.",
+      "math_tip_audio": "assets/audio/o/0293eda8c0.ogg",
       "variations": [
         {
-          "prompt": "Count by 10s: 20, 30, 40. What comes next?",
+          "prompt": "A toy costs 35 cents. You pay 50 cents. How much change?",
           "_audio": "assets/audio/q/lesson_29_math3_v0.ogg",
           "options": [
             {
-              "text": "53",
-              "correct": false,
-              "_audio": "assets/audio/o/c5b76da3e6.ogg"
-            },
-            {
-              "text": "48",
-              "correct": false,
-              "_audio": "assets/audio/o/64e095fe76.ogg"
-            },
-            {
-              "text": "50",
+              "text": "15 cents",
               "correct": true,
-              "_audio": "assets/audio/o/e1822db470.ogg"
+              "_audio": "assets/audio/o/01feea5b45.ogg"
             },
             {
-              "text": "47",
+              "text": "17 cents",
               "correct": false,
-              "_audio": "assets/audio/o/827bfc4587.ogg"
+              "_audio": "assets/audio/o/a6e0740713.ogg"
+            },
+            {
+              "text": "18 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/39464c8318.ogg"
+            },
+            {
+              "text": "14 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/dd5884a9c8.ogg"
             }
           ]
         }
       ]
     }
   ],
-  "schema": "v2"
+  "schema": "v2",
+  "vocabulary": [
+    {
+      "word": "variable",
+      "meaning": "a named box in code that can hold a value",
+      "_audio": "assets/audio/o/2aceaeeb68.ogg"
+    }
+  ]
 }

@@ -297,9 +297,9 @@
           "prompt": "Got a quick one: Bytey is confused about show, don't tell. Which fact would help him?",
           "options": [
             {
-              "text": "An example is worth a thousand vague descriptions.",
+              "text": "An example is worth a thousand vague details.",
               "correct": true,
-              "_audio": "assets/audio/o/da67459005.ogg"
+              "_audio": "assets/audio/o/cafd9d7ccb.ogg"
             },
             {
               "text": "Pictures are for parties, not for code.",
@@ -1031,9 +1031,9 @@
               "_audio": "assets/audio/o/3e20e237fc.ogg"
             },
             {
-              "text": "An example is worth a thousand vague descriptions.",
+              "text": "An example is worth a thousand vague details.",
               "correct": false,
-              "_audio": "assets/audio/o/da67459005.ogg"
+              "_audio": "assets/audio/o/cafd9d7ccb.ogg"
             },
             {
               "text": "Examples are faster than describing.",
@@ -1125,9 +1125,9 @@
           "prompt": "Quick! One of these is silly! Pick the WRONG one about show, don't tell.",
           "options": [
             {
-              "text": "An example is worth a thousand vague descriptions.",
+              "text": "An example is worth a thousand vague details.",
               "correct": false,
-              "_audio": "assets/audio/o/da67459005.ogg"
+              "_audio": "assets/audio/o/cafd9d7ccb.ogg"
             },
             {
               "text": "Examples must be drawn in invisible ink.",
@@ -1346,7 +1346,7 @@
           "_audio": "assets/audio/q/lesson_20_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about show, don't tell?",
+          "prompt": "You need to explain a design. What makes the idea easier to understand?",
           "options": [
             {
               "text": "Examples only work in Spanish.",
@@ -1416,9 +1416,9 @@
               "_audio": "assets/audio/o/d82ee127ae.ogg"
             },
             {
-              "text": "An example is worth a thousand vague descriptions.",
+              "text": "An example is worth a thousand vague details.",
               "correct": true,
-              "_audio": "assets/audio/o/da67459005.ogg"
+              "_audio": "assets/audio/o/cafd9d7ccb.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_20_q5_v9.ogg"
@@ -1428,31 +1428,24 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "addition-to-20",
+      "math_skill": "compare-within-100",
+      "math_level": "Grade 2 core",
+      "math_tip": "Compare tens first. If the tens match, compare the ones.",
+      "math_tip_audio": "assets/audio/o/827d4d0734.ogg",
       "variations": [
         {
-          "prompt": "What is 7 plus 11?",
+          "prompt": "Which number is bigger: 44 or 76?",
           "_audio": "assets/audio/q/lesson_20_math1_v0.ogg",
           "options": [
             {
-              "text": "18",
+              "text": "76",
               "correct": true,
-              "_audio": "assets/audio/o/9e6a55b6b4.ogg"
+              "_audio": "assets/audio/o/d54ad009d1.ogg"
             },
             {
-              "text": "23",
+              "text": "44",
               "correct": false,
-              "_audio": "assets/audio/o/d435a6cdd7.ogg"
-            },
-            {
-              "text": "17",
-              "correct": false,
-              "_audio": "assets/audio/o/0716d9708d.ogg"
-            },
-            {
-              "text": "21",
-              "correct": false,
-              "_audio": "assets/audio/o/472b07b9fc.ogg"
+              "_audio": "assets/audio/o/98fbc42fae.ogg"
             }
           ]
         }
@@ -1461,21 +1454,24 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "compare-numbers",
+      "math_skill": "even-and-odd",
+      "math_level": "Grade 2 core",
+      "math_tip": "An even number can be split into pairs with none left over.",
+      "math_tip_audio": "assets/audio/o/11c656a2ed.ogg",
       "variations": [
         {
-          "prompt": "Which number is bigger: 17 or 2?",
+          "prompt": "Is 12 even or odd?",
           "_audio": "assets/audio/q/lesson_20_math2_v0.ogg",
           "options": [
             {
-              "text": "17",
+              "text": "even",
               "correct": true,
-              "_audio": "assets/audio/o/0716d9708d.ogg"
+              "_audio": "assets/audio/o/04b8c80bb7.ogg"
             },
             {
-              "text": "2",
+              "text": "odd",
               "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/60f7a51208.ogg"
             }
           ]
         }
@@ -1484,31 +1480,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "subtraction-to-20",
+      "math_skill": "skip-count",
+      "math_level": "Grade 2 core",
+      "math_tip": "Look for the same amount being added each time.",
+      "math_tip_audio": "assets/audio/o/d202673254.ogg",
       "variations": [
         {
-          "prompt": "What is 10 minus 3?",
+          "prompt": "Count by 5s: 5, 10, 15. What comes next?",
           "_audio": "assets/audio/q/lesson_20_math3_v0.ogg",
           "options": [
             {
-              "text": "7",
+              "text": "20",
               "correct": true,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
+              "_audio": "assets/audio/o/91032ad7bb.ogg"
             },
             {
-              "text": "5",
+              "text": "21",
               "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/472b07b9fc.ogg"
             },
             {
-              "text": "9",
+              "text": "25",
               "correct": false,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+              "_audio": "assets/audio/o/f6e1126ced.ogg"
             },
             {
-              "text": "6",
+              "text": "23",
               "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/d435a6cdd7.ogg"
             }
           ]
         }

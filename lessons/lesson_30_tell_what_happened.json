@@ -626,9 +626,9 @@
               "_audio": "assets/audio/o/b9da94a4d7.ogg"
             },
             {
-              "text": "'help'",
+              "text": "'Help me. Something went wrong.'",
               "correct": false,
-              "_audio": "assets/audio/o/782615cb77.ogg"
+              "_audio": "assets/audio/o/c1afed8a78.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
@@ -647,9 +647,9 @@
               "_audio": "assets/audio/o/c956384d92.ogg"
             },
             {
-              "text": "'help'",
+              "text": "'Help me. Something went wrong.'",
               "correct": false,
-              "_audio": "assets/audio/o/782615cb77.ogg"
+              "_audio": "assets/audio/o/c1afed8a78.ogg"
             },
             {
               "text": "'pls fix asap thx'",
@@ -673,9 +673,9 @@
               "_audio": "assets/audio/o/eb6e182056.ogg"
             },
             {
-              "text": "'help'",
+              "text": "'Help me. Something went wrong.'",
               "correct": false,
-              "_audio": "assets/audio/o/782615cb77.ogg"
+              "_audio": "assets/audio/o/c1afed8a78.ogg"
             },
             {
               "text": "'something something it is bad'",
@@ -709,9 +709,9 @@
               "_audio": "assets/audio/o/eb6e182056.ogg"
             },
             {
-              "text": "Maybe 'help'",
+              "text": "Maybe: 'Help me. Something went wrong.'",
               "correct": false,
-              "_audio": "assets/audio/o/a690124612.ogg"
+              "_audio": "assets/audio/o/5f5f7fee49.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_30_q3_v3.ogg"
@@ -772,9 +772,9 @@
           "prompt": "Pop quiz! Pick the better bug report:",
           "options": [
             {
-              "text": "Maybe 'help'",
+              "text": "Maybe: 'Help me. Something went wrong.'",
               "correct": false,
-              "_audio": "assets/audio/o/a690124612.ogg"
+              "_audio": "assets/audio/o/5f5f7fee49.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
@@ -829,9 +829,9 @@
               "_audio": "assets/audio/o/58f5a7cb31.ogg"
             },
             {
-              "text": "Maybe 'help'",
+              "text": "Maybe: 'Help me. Something went wrong.'",
               "correct": false,
-              "_audio": "assets/audio/o/a690124612.ogg"
+              "_audio": "assets/audio/o/5f5f7fee49.ogg"
             },
             {
               "text": "'I ran `python game.py`. Expected the hero to jump. He went sideways. Error: <text>'",
@@ -1347,7 +1347,7 @@
           "_audio": "assets/audio/q/lesson_30_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about telling what happened?",
+          "prompt": "A helper asks what failed. Which detail matters most?",
           "options": [
             {
               "text": "Real coders never explain bugs -- just complain.",
@@ -1454,9 +1454,9 @@
               "_audio": "assets/audio/o/2ed237858f.ogg"
             },
             {
-              "text": "'Game bad'",
+              "text": "'My game is bad. Please fix it.'",
               "correct": false,
-              "_audio": "assets/audio/o/72e3b42b69.ogg"
+              "_audio": "assets/audio/o/233846ac0c.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
@@ -1470,9 +1470,9 @@
           "prompt": "Quick! Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
-              "text": "'Game bad'",
+              "text": "'My game is bad. Please fix it.'",
               "correct": false,
-              "_audio": "assets/audio/o/72e3b42b69.ogg"
+              "_audio": "assets/audio/o/233846ac0c.ogg"
             },
             {
               "text": "'Hi how are you'",
@@ -1496,9 +1496,9 @@
           "prompt": "Hey friend — Your game won't start. What's the BEST thing to write to a helper?",
           "options": [
             {
-              "text": "'Game bad'",
+              "text": "'My game is bad. Please fix it.'",
               "correct": false,
-              "_audio": "assets/audio/o/72e3b42b69.ogg"
+              "_audio": "assets/audio/o/233846ac0c.ogg"
             },
             {
               "text": "'It is broken!! HELP'",
@@ -1721,9 +1721,9 @@
           "_audio": "assets/audio/q/lesson_30_q7_v0.ogg",
           "options": [
             {
-              "text": "Bananas everywhere!",
+              "text": "The screen suddenly showed dancing bananas.",
               "correct": false,
-              "_audio": "assets/audio/o/9351ad8b64.ogg"
+              "_audio": "assets/audio/o/9ad8139f67.ogg"
             },
             {
               "text": "The game is mad at me.",
@@ -1747,9 +1747,9 @@
           "_audio": "assets/audio/q/lesson_30_q7_v1.ogg",
           "options": [
             {
-              "text": "Bananas everywhere!",
+              "text": "The screen suddenly showed dancing bananas.",
               "correct": false,
-              "_audio": "assets/audio/o/9351ad8b64.ogg"
+              "_audio": "assets/audio/o/9ad8139f67.ogg"
             },
             {
               "text": "Just say 'it's bad.'",
@@ -1788,9 +1788,9 @@
               "_audio": "assets/audio/o/2d4741f55f.ogg"
             },
             {
-              "text": "Bananas everywhere!",
+              "text": "The screen suddenly showed dancing bananas.",
               "correct": false,
-              "_audio": "assets/audio/o/9351ad8b64.ogg"
+              "_audio": "assets/audio/o/9ad8139f67.ogg"
             }
           ]
         }
@@ -1799,31 +1799,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "build-a-number",
+      "math_skill": "word-problem",
+      "math_level": "Grade 2 practice",
+      "math_tip": "Tell the story with numbers: more means add; left or fewer usually means subtract.",
+      "math_tip_audio": "assets/audio/o/dc9a9ec321.ogg",
       "variations": [
         {
-          "prompt": "What number has 7 tens and 3 ones?",
+          "prompt": "You have 21 stickers. You get 57 more. How many now?",
           "_audio": "assets/audio/q/lesson_30_math1_v0.ogg",
           "options": [
             {
-              "text": "78",
+              "text": "81",
               "correct": false,
+              "_audio": "assets/audio/o/1d513c0bcb.ogg"
+            },
+            {
+              "text": "80",
+              "correct": false,
+              "_audio": "assets/audio/o/b888b29826.ogg"
+            },
+            {
+              "text": "78",
+              "correct": true,
               "_audio": "assets/audio/o/eb4ac3033e.ogg"
             },
             {
-              "text": "73",
-              "correct": true,
-              "_audio": "assets/audio/o/35e995c107.ogg"
-            },
-            {
-              "text": "76",
+              "text": "79",
               "correct": false,
-              "_audio": "assets/audio/o/d54ad009d1.ogg"
-            },
-            {
-              "text": "75",
-              "correct": false,
-              "_audio": "assets/audio/o/450ddec8dd.ogg"
+              "_audio": "assets/audio/o/b74f5ee946.ogg"
             }
           ]
         }
@@ -1832,31 +1835,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "equalities",
+      "math_skill": "word-problem",
+      "math_level": "Grade 2 practice",
+      "math_tip": "Tell the story with numbers: more means add; left or fewer usually means subtract.",
+      "math_tip_audio": "assets/audio/o/dc9a9ec321.ogg",
       "variations": [
         {
-          "prompt": "Make both sides equal: 5 plus 6 equals 9 plus what?",
+          "prompt": "There are 8 ducks. 5 swim off. How many are left?",
           "_audio": "assets/audio/q/lesson_30_math2_v0.ogg",
           "options": [
             {
-              "text": "2",
-              "correct": true,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
-            },
-            {
-              "text": "5",
-              "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
-            },
-            {
               "text": "3",
-              "correct": false,
+              "correct": true,
               "_audio": "assets/audio/o/77de68daec.ogg"
+            },
+            {
+              "text": "8",
+              "correct": false,
+              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
             },
             {
               "text": "1",
               "correct": false,
               "_audio": "assets/audio/o/356a192b79.ogg"
+            },
+            {
+              "text": "2",
+              "correct": false,
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
             }
           ]
         }
@@ -1865,31 +1871,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "money",
+      "math_skill": "measurement",
+      "math_level": "Grade 2 practice",
+      "math_tip": "To find how much longer, subtract the shorter length from the longer length.",
+      "math_tip_audio": "assets/audio/o/48c1edb920.ogg",
       "variations": [
         {
-          "prompt": "You have 2 dimes, 2 nickels, 3 pennies. How many cents is that?",
+          "prompt": "A ribbon is 2 inches long. Another is 5 inches. How many inches longer is the second one?",
           "_audio": "assets/audio/q/lesson_30_math3_v0.ogg",
           "options": [
             {
-              "text": "32 cents",
-              "correct": false,
-              "_audio": "assets/audio/o/5f29d5b2f2.ogg"
-            },
-            {
-              "text": "33 cents",
+              "text": "3",
               "correct": true,
-              "_audio": "assets/audio/o/eb5fbccd3f.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
             },
             {
-              "text": "31 cents",
+              "text": "6",
               "correct": false,
-              "_audio": "assets/audio/o/7c997b755e.ogg"
+              "_audio": "assets/audio/o/c1dfd96eea.ogg"
             },
             {
-              "text": "30 cents",
+              "text": "1",
               "correct": false,
-              "_audio": "assets/audio/o/9218b63ef9.ogg"
+              "_audio": "assets/audio/o/356a192b79.ogg"
+            },
+            {
+              "text": "2",
+              "correct": false,
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
             }
           ]
         }

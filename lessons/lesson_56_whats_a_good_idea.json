@@ -340,9 +340,9 @@
           "prompt": "Pick the better idea for a tiny app:",
           "options": [
             {
-              "text": "'A thing.'",
+              "text": "'An app that does something fun.'",
               "correct": false,
-              "_audio": "assets/audio/o/8c875a7f32.ogg"
+              "_audio": "assets/audio/o/a8799bd769.ogg"
             },
             {
               "text": "'A complete operating system that does everything.'",
@@ -381,9 +381,9 @@
               "_audio": "assets/audio/o/7065f9c296.ogg"
             },
             {
-              "text": "'A thing.'",
+              "text": "'An app that does something fun.'",
               "correct": false,
-              "_audio": "assets/audio/o/8c875a7f32.ogg"
+              "_audio": "assets/audio/o/a8799bd769.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_56_q2_v1.ogg"
@@ -392,9 +392,9 @@
           "prompt": "Hey friend — Pick the better idea for a tiny app:",
           "options": [
             {
-              "text": "'A thing.'",
+              "text": "'An app that does something fun.'",
               "correct": false,
-              "_audio": "assets/audio/o/8c875a7f32.ogg"
+              "_audio": "assets/audio/o/a8799bd769.ogg"
             },
             {
               "text": "'A complete operating system that does everything.'",
@@ -1347,7 +1347,7 @@
           "_audio": "assets/audio/q/lesson_56_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about what is a good idea?",
+          "prompt": "Where do many useful app ideas begin?",
           "options": [
             {
               "text": "Good ideas come only at midnight.",
@@ -1429,21 +1429,19 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "repeated-addition",
+      "math_skill": "three-digit-subtraction",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Line up each place, then subtract ones, tens, and hundreds.",
+      "math_tip_audio": "assets/audio/o/c4ff66ee25.ogg",
       "variations": [
         {
-          "prompt": "There are 5 bags with 4 blocks in each bag. How many blocks altogether?",
+          "prompt": "What is 941 minus 920?",
           "_audio": "assets/audio/q/lesson_56_math1_v0.ogg",
           "options": [
             {
-              "text": "20",
+              "text": "21",
               "correct": true,
-              "_audio": "assets/audio/o/91032ad7bb.ogg"
-            },
-            {
-              "text": "19",
-              "correct": false,
-              "_audio": "assets/audio/o/b3f0c7f6bb.ogg"
+              "_audio": "assets/audio/o/472b07b9fc.ogg"
             },
             {
               "text": "22",
@@ -1451,9 +1449,14 @@
               "_audio": "assets/audio/o/12c6fc06c9.ogg"
             },
             {
-              "text": "18",
+              "text": "23",
               "correct": false,
-              "_audio": "assets/audio/o/9e6a55b6b4.ogg"
+              "_audio": "assets/audio/o/d435a6cdd7.ogg"
+            },
+            {
+              "text": "20",
+              "correct": false,
+              "_audio": "assets/audio/o/91032ad7bb.ogg"
             }
           ]
         }
@@ -1462,21 +1465,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "compare-numbers",
+      "math_skill": "two-step-word-problem",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Do one action at a time. Keep the first answer for the second step.",
+      "math_tip_audio": "assets/audio/o/b16e3e3cb2.ogg",
       "variations": [
         {
-          "prompt": "Which number is smaller: 5 or 16?",
+          "prompt": "You have 30 blocks, get 7 more, then give away 5. How many are left?",
           "_audio": "assets/audio/q/lesson_56_math2_v0.ogg",
           "options": [
             {
-              "text": "5",
+              "text": "32",
               "correct": true,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/cb4e5208b4.ogg"
             },
             {
-              "text": "16",
+              "text": "29",
               "correct": false,
-              "_audio": "assets/audio/o/1574bddb75.ogg"
+              "_audio": "assets/audio/o/7719a1c782.ogg"
+            },
+            {
+              "text": "33",
+              "correct": false,
+              "_audio": "assets/audio/o/b6692ea5df.ogg"
+            },
+            {
+              "text": "30",
+              "correct": false,
+              "_audio": "assets/audio/o/22d200f867.ogg"
             }
           ]
         }
@@ -1485,31 +1501,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "subtraction-word-problem",
+      "math_skill": "money-change",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Change is what is left: amount paid minus the price.",
+      "math_tip_audio": "assets/audio/o/0293eda8c0.ogg",
       "variations": [
         {
-          "prompt": "There are 8 ducks. 6 swim off. How many are left?",
+          "prompt": "A toy costs 25 cents. You pay 50 cents. How much change?",
           "_audio": "assets/audio/q/lesson_56_math3_v0.ogg",
           "options": [
             {
-              "text": "7",
+              "text": "23 cents",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
+              "_audio": "assets/audio/o/ef3582c7a4.ogg"
             },
             {
-              "text": "2",
+              "text": "30 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/9218b63ef9.ogg"
+            },
+            {
+              "text": "25 cents",
               "correct": true,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/4269daa3c3.ogg"
             },
             {
-              "text": "3",
+              "text": "24 cents",
               "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
-            },
-            {
-              "text": "1",
-              "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "_audio": "assets/audio/o/44409dbbf1.ogg"
             }
           ]
         }

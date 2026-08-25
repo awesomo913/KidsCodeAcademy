@@ -1349,7 +1349,7 @@
           "_audio": "assets/audio/q/lesson_51_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about iter 2: jump?",
+          "prompt": "Why should Bytey test small changes to a jump?",
           "options": [
             {
               "text": "If the hero jumps too much, the screen breaks.",
@@ -1451,9 +1451,9 @@
               "_audio": "assets/audio/o/6201bb4e13.ogg"
             },
             {
-              "text": "More music.",
+              "text": "Louder music during the jump.",
               "correct": false,
-              "_audio": "assets/audio/o/f2803dc13d.ogg"
+              "_audio": "assets/audio/o/8cc9fd1a28.ogg"
             },
             {
               "text": "Gravity to pull the hero back down.",
@@ -1482,9 +1482,9 @@
               "_audio": "assets/audio/o/23b3f66964.ogg"
             },
             {
-              "text": "More music.",
+              "text": "Louder music during the jump.",
               "correct": false,
-              "_audio": "assets/audio/o/f2803dc13d.ogg"
+              "_audio": "assets/audio/o/8cc9fd1a28.ogg"
             },
             {
               "text": "Special jumping shoes.",
@@ -1498,9 +1498,9 @@
           "prompt": "Hey friend — You added jumping but the hero floats up forever. What's missing?",
           "options": [
             {
-              "text": "More music.",
+              "text": "Louder music during the jump.",
               "correct": false,
-              "_audio": "assets/audio/o/f2803dc13d.ogg"
+              "_audio": "assets/audio/o/8cc9fd1a28.ogg"
             },
             {
               "text": "A countdown timer.",
@@ -2077,21 +2077,29 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "compare-numbers",
+      "math_skill": "round-to-ten",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Look at the ones digit: 0–4 rounds down; 5–9 rounds up.",
+      "math_tip_audio": "assets/audio/o/e8c308377b.ogg",
       "variations": [
         {
-          "prompt": "Which number is smaller: 4 or 11?",
+          "prompt": "Round 47 to the nearest ten.",
           "_audio": "assets/audio/q/lesson_51_math1_v0.ogg",
           "options": [
             {
-              "text": "11",
-              "correct": false,
-              "_audio": "assets/audio/o/17ba079149.ogg"
+              "text": "50",
+              "correct": true,
+              "_audio": "assets/audio/o/e1822db470.ogg"
             },
             {
-              "text": "4",
-              "correct": true,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "text": "40",
+              "correct": false,
+              "_audio": "assets/audio/o/af3e133428.ogg"
+            },
+            {
+              "text": "60",
+              "correct": false,
+              "_audio": "assets/audio/o/e6c3dd6304.ogg"
             }
           ]
         }
@@ -2100,31 +2108,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "fractions",
+      "math_skill": "three-digit-addition",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Line up hundreds, tens, and ones. Add one place at a time.",
+      "math_tip_audio": "assets/audio/o/3cd2d741a5.ogg",
       "variations": [
         {
-          "prompt": "A paper circle is split into 2 equal parts. What is one part called?",
+          "prompt": "What is 181 plus 210?",
           "_audio": "assets/audio/q/lesson_51_math2_v0.ogg",
           "options": [
             {
-              "text": "one third",
+              "text": "394",
               "correct": false,
-              "_audio": "assets/audio/o/fbac955eac.ogg"
+              "_audio": "assets/audio/o/bc62305b6c.ogg"
             },
             {
-              "text": "one whole",
-              "correct": false,
-              "_audio": "assets/audio/o/f0e421bd49.ogg"
-            },
-            {
-              "text": "one fourth",
-              "correct": false,
-              "_audio": "assets/audio/o/fd031c00c3.ogg"
-            },
-            {
-              "text": "one half",
+              "text": "391",
               "correct": true,
-              "_audio": "assets/audio/o/2b526d5876.ogg"
+              "_audio": "assets/audio/o/4c629c4c34.ogg"
+            },
+            {
+              "text": "390",
+              "correct": false,
+              "_audio": "assets/audio/o/f369b411c5.ogg"
+            },
+            {
+              "text": "396",
+              "correct": false,
+              "_audio": "assets/audio/o/2bc4a9de21.ogg"
             }
           ]
         }
@@ -2133,36 +2144,46 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "subtraction-word-problem",
+      "math_skill": "three-digit-subtraction",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Line up each place, then subtract ones, tens, and hundreds.",
+      "math_tip_audio": "assets/audio/o/c4ff66ee25.ogg",
       "variations": [
         {
-          "prompt": "There are 5 ducks. 1 swim off. How many are left?",
+          "prompt": "What is 455 minus 405?",
           "_audio": "assets/audio/q/lesson_51_math3_v0.ogg",
           "options": [
             {
-              "text": "5",
+              "text": "52",
               "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/a9334987ec.ogg"
             },
             {
-              "text": "3",
+              "text": "55",
               "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "_audio": "assets/audio/o/8effee409c.ogg"
             },
             {
-              "text": "6",
+              "text": "49",
               "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/2e01e17467.ogg"
             },
             {
-              "text": "4",
+              "text": "50",
               "correct": true,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "_audio": "assets/audio/o/e1822db470.ogg"
             }
           ]
         }
       ]
     }
   ],
-  "schema": "v2"
+  "schema": "v2",
+  "vocabulary": [
+    {
+      "word": "iteration",
+      "meaning": "one round of building, testing, and improving",
+      "_audio": "assets/audio/o/a0e43cc55a.ogg"
+    }
+  ]
 }

@@ -1344,7 +1344,7 @@
           "_audio": "assets/audio/q/lesson_24_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about robot memory?",
+          "prompt": "Bytey saved a memory rule. What can that rule affect later?",
           "options": [
             {
               "text": "Computers store memory in their tiny hats.",
@@ -1426,21 +1426,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "compare-numbers",
+      "math_skill": "skip-count",
+      "math_level": "Grade 2 core",
+      "math_tip": "Look for the same amount being added each time.",
+      "math_tip_audio": "assets/audio/o/d202673254.ogg",
       "variations": [
         {
-          "prompt": "Which number is bigger: 14 or 5?",
+          "prompt": "Count by 10s: 0, 10, 20. What comes next?",
           "_audio": "assets/audio/q/lesson_24_math1_v0.ogg",
           "options": [
             {
-              "text": "14",
+              "text": "30",
               "correct": true,
-              "_audio": "assets/audio/o/fa35e19212.ogg"
+              "_audio": "assets/audio/o/22d200f867.ogg"
             },
             {
-              "text": "5",
+              "text": "32",
               "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/cb4e5208b4.ogg"
+            },
+            {
+              "text": "35",
+              "correct": false,
+              "_audio": "assets/audio/o/972a67c481.ogg"
+            },
+            {
+              "text": "28",
+              "correct": false,
+              "_audio": "assets/audio/o/0a57cb53ba.ogg"
             }
           ]
         }
@@ -1449,31 +1462,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "subtraction-to-20",
+      "math_skill": "time",
+      "math_level": "Grade 2 core",
+      "math_tip": "Count minutes forward in jumps of five, then check the hour.",
+      "math_tip_audio": "assets/audio/o/afbdad225c.ogg",
       "variations": [
         {
-          "prompt": "What is 5 minus 1?",
+          "prompt": "The clock says 3:30. Which answer tells the time?",
           "_audio": "assets/audio/q/lesson_24_math2_v0.ogg",
           "options": [
             {
-              "text": "3",
+              "text": "3 o'clock",
               "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "_audio": "assets/audio/o/8802ac0d35.ogg"
             },
             {
-              "text": "4",
+              "text": "4 o'clock",
+              "correct": false,
+              "_audio": "assets/audio/o/e1449136f4.ogg"
+            },
+            {
+              "text": "half past 4",
+              "correct": false,
+              "_audio": "assets/audio/o/051156f55c.ogg"
+            },
+            {
+              "text": "half past 3",
               "correct": true,
-              "_audio": "assets/audio/o/1b64538924.ogg"
-            },
-            {
-              "text": "1",
-              "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
-            },
-            {
-              "text": "5",
-              "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/b55e77ce99.ogg"
             }
           ]
         }
@@ -1482,31 +1498,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "place-value",
+      "math_skill": "money",
+      "math_level": "Grade 2 core",
+      "math_tip": "A dime is 10 cents, a nickel is 5, and a penny is 1. Add each value.",
+      "math_tip_audio": "assets/audio/o/a6320bb4b5.ogg",
       "variations": [
         {
-          "prompt": "In the number 39, how many ones are there?",
+          "prompt": "You have 3 dimes, 2 nickels, 8 pennies. How many cents is that?",
           "_audio": "assets/audio/q/lesson_24_math3_v0.ogg",
           "options": [
             {
-              "text": "14",
-              "correct": false,
-              "_audio": "assets/audio/o/fa35e19212.ogg"
-            },
-            {
-              "text": "7",
-              "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "6",
-              "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
-            },
-            {
-              "text": "9",
+              "text": "48 cents",
               "correct": true,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+              "_audio": "assets/audio/o/65f8fe6946.ogg"
+            },
+            {
+              "text": "45 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/22cd9b5ca1.ogg"
+            },
+            {
+              "text": "50 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/546793b809.ogg"
+            },
+            {
+              "text": "46 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/ca194e44bf.ogg"
             }
           ]
         }

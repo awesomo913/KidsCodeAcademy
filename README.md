@@ -50,8 +50,9 @@ python3 app.py
 - 60 lessons across 10 chapters, ages 7+
 - Cartoon robot mascot ("Bytey") that animates, waves, cheers, thinks
 - 24 mini-game and creative interaction types
-- Three-question Math Minute in every lesson, progressing from counting and arithmetic into place value, time, money, shapes, measurement, fractions, graphs, repeated addition, and fair sharing
-- Full chess breaks with a kid-friendly bot, hints, timer, grading, and Parent Corner history
+- Three-question Math Minute in every lesson: 34 skills progress from Grade 2 foundations to an early Grade 3 bridge, with a read-aloud strategy whenever help is needed
+- Rules-correct chess breaks with a kid-friendly bot, legal-move hints, piece lessons, timer, grading, and Parent Corner history
+- Read-aloud Word Power cards explain important coding terms in child-friendly language
 - Offline "Claude / Cursor / Gemini" chat — runs on the kid's computer with **no internet, no API keys, no cost**
 - Sticker rewards + progress saved on the computer
 - Parent Corner — PIN-gated progress placement, activity, grades, chess history, projects, transcripts, preview mode, and settings
@@ -60,8 +61,8 @@ python3 app.py
 
 - **Zero network**. The app never talks to the internet.
 - **No personal info collected**. Progress lives in the browser's localStorage inside the app.
-- **PIN-gated parent panel** (default `1234`, changeable inside).
-- Lesson 16 saves the kid's project to `%APPDATA%\KidsCodeAcademy\kid_projects\` — nowhere else.
+- **PIN-gated parent panel**. The parent creates a non-obvious four-digit PIN on first use.
+- Lesson 60 saves the kid's project to `%APPDATA%\KidsCodeAcademy\kid_projects\` — nowhere else.
 
 ## Develop
 

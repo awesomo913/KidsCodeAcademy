@@ -79,9 +79,9 @@
               "_audio": "assets/audio/o/6314569ad1.ogg"
             },
             {
-              "text": "Code? Maybe?",
+              "text": "Write some code for me, maybe.",
               "correct": false,
-              "_audio": "assets/audio/o/a5dfd28448.ogg"
+              "_audio": "assets/audio/o/f14456ac1f.ogg"
             },
             {
               "text": "Specific words give specific answers.",
@@ -350,9 +350,9 @@
               "_audio": "assets/audio/o/5ea1e8009e.ogg"
             },
             {
-              "text": "Code? Maybe?",
+              "text": "Write some code for me, maybe.",
               "correct": false,
-              "_audio": "assets/audio/o/a5dfd28448.ogg"
+              "_audio": "assets/audio/o/f14456ac1f.ogg"
             },
             {
               "text": "Make a thing that does the thing a bit.",
@@ -386,9 +386,9 @@
               "_audio": "assets/audio/o/5ea1e8009e.ogg"
             },
             {
-              "text": "Code? Maybe?",
+              "text": "Write some code for me, maybe.",
               "correct": false,
-              "_audio": "assets/audio/o/a5dfd28448.ogg"
+              "_audio": "assets/audio/o/f14456ac1f.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_19_q2_v1.ogg"
@@ -402,9 +402,9 @@
               "_audio": "assets/audio/o/b236f0e241.ogg"
             },
             {
-              "text": "Code? Maybe?",
+              "text": "Write some code for me, maybe.",
               "correct": false,
-              "_audio": "assets/audio/o/a5dfd28448.ogg"
+              "_audio": "assets/audio/o/f14456ac1f.ogg"
             },
             {
               "text": "Make a thing that does the thing a bit.",
@@ -1352,7 +1352,7 @@
           "_audio": "assets/audio/q/lesson_19_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about being specific?",
+          "prompt": "Your request is still vague. What can make it clearer?",
           "options": [
             {
               "text": "Specific words make the AI cry tears of joy.",
@@ -2080,31 +2080,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "place-value",
+      "math_skill": "addition-within-100",
+      "math_level": "Grade 2 core",
+      "math_tip": "Add tens to tens and ones to ones.",
+      "math_tip_audio": "assets/audio/o/cb97db9695.ogg",
       "variations": [
         {
-          "prompt": "In the number 36, how many tens are there?",
+          "prompt": "What is 20 plus 10?",
           "_audio": "assets/audio/q/lesson_19_math1_v0.ogg",
           "options": [
             {
-              "text": "3",
+              "text": "30",
               "correct": true,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "_audio": "assets/audio/o/22d200f867.ogg"
             },
             {
-              "text": "2",
+              "text": "29",
               "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/7719a1c782.ogg"
             },
             {
-              "text": "8",
+              "text": "33",
               "correct": false,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+              "_audio": "assets/audio/o/b6692ea5df.ogg"
             },
             {
-              "text": "1",
+              "text": "28",
               "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "_audio": "assets/audio/o/0a57cb53ba.ogg"
             }
           ]
         }
@@ -2113,31 +2116,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "missing-addend",
+      "math_skill": "subtraction-within-100",
+      "math_level": "Grade 2 core",
+      "math_tip": "Subtract tens from tens and ones from ones.",
+      "math_tip_audio": "assets/audio/o/4fd711d433.ogg",
       "variations": [
         {
-          "prompt": "4 plus what makes 10?",
+          "prompt": "What is 76 minus 44?",
           "_audio": "assets/audio/q/lesson_19_math2_v0.ogg",
           "options": [
             {
-              "text": "6",
+              "text": "33",
+              "correct": false,
+              "_audio": "assets/audio/o/b6692ea5df.ogg"
+            },
+            {
+              "text": "32",
               "correct": true,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/cb4e5208b4.ogg"
             },
             {
-              "text": "4",
+              "text": "34",
               "correct": false,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "_audio": "assets/audio/o/f1f836cb4e.ogg"
             },
             {
-              "text": "7",
+              "text": "30",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "9",
-              "correct": false,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+              "_audio": "assets/audio/o/22d200f867.ogg"
             }
           ]
         }
@@ -2146,31 +2152,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "doubles",
+      "math_skill": "place-value-2-digit",
+      "math_level": "Grade 2 core",
+      "math_tip": "The left digit tells the tens; the right digit tells the ones.",
+      "math_tip_audio": "assets/audio/o/2eff40e2d7.ogg",
       "variations": [
         {
-          "prompt": "What is 4 plus 4?",
+          "prompt": "In the number 87, how many ones are there?",
           "_audio": "assets/audio/q/lesson_19_math3_v0.ogg",
           "options": [
             {
-              "text": "8",
+              "text": "7",
               "correct": true,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+              "_audio": "assets/audio/o/902ba3cda1.ogg"
             },
             {
-              "text": "13",
+              "text": "4",
               "correct": false,
-              "_audio": "assets/audio/o/bd307a3ec3.ogg"
-            },
-            {
-              "text": "6",
-              "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/1b64538924.ogg"
             },
             {
               "text": "5",
               "correct": false,
               "_audio": "assets/audio/o/ac3478d69a.ogg"
+            },
+            {
+              "text": "10",
+              "correct": false,
+              "_audio": "assets/audio/o/b1d5781111.ogg"
             }
           ]
         }

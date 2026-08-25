@@ -1349,7 +1349,7 @@
           "_audio": "assets/audio/q/lesson_52_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about iter 3: coins and score?",
+          "prompt": "Coins react when collected. What feeling can that add?",
           "options": [
             {
               "text": "Each coin must be unique and have a name.",
@@ -1431,31 +1431,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "place-value",
+      "math_skill": "two-step-word-problem",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Do one action at a time. Keep the first answer for the second step.",
+      "math_tip_audio": "assets/audio/o/b16e3e3cb2.ogg",
       "variations": [
         {
-          "prompt": "In the number 98, how many ones are there?",
+          "prompt": "You have 30 blocks, get 6 more, then give away 2. How many are left?",
           "_audio": "assets/audio/q/lesson_52_math1_v0.ogg",
           "options": [
             {
-              "text": "5",
-              "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
-            },
-            {
-              "text": "11",
-              "correct": false,
-              "_audio": "assets/audio/o/17ba079149.ogg"
-            },
-            {
-              "text": "7",
-              "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "8",
+              "text": "34",
               "correct": true,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+              "_audio": "assets/audio/o/f1f836cb4e.ogg"
+            },
+            {
+              "text": "35",
+              "correct": false,
+              "_audio": "assets/audio/o/972a67c481.ogg"
+            },
+            {
+              "text": "37",
+              "correct": false,
+              "_audio": "assets/audio/o/cb7a1d775e.ogg"
+            },
+            {
+              "text": "36",
+              "correct": false,
+              "_audio": "assets/audio/o/fc074d5013.ogg"
             }
           ]
         }
@@ -1464,31 +1467,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "fractions",
+      "math_skill": "time",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Count minutes forward in jumps of five, then check the hour.",
+      "math_tip_audio": "assets/audio/o/afbdad225c.ogg",
       "variations": [
         {
-          "prompt": "A chocolate bar is split into 2 equal parts. What is one part called?",
+          "prompt": "It is 11:40. What time will it be in 5 minutes?",
           "_audio": "assets/audio/q/lesson_52_math2_v0.ogg",
           "options": [
             {
-              "text": "one half",
+              "text": "11:50",
+              "correct": false,
+              "_audio": "assets/audio/o/69e7e62f46.ogg"
+            },
+            {
+              "text": "11:45",
               "correct": true,
-              "_audio": "assets/audio/o/2b526d5876.ogg"
+              "_audio": "assets/audio/o/d1d95e7b34.ogg"
             },
             {
-              "text": "one third",
+              "text": "11:55",
               "correct": false,
-              "_audio": "assets/audio/o/fbac955eac.ogg"
+              "_audio": "assets/audio/o/fb0989aefc.ogg"
             },
             {
-              "text": "one whole",
+              "text": "11:40",
               "correct": false,
-              "_audio": "assets/audio/o/f0e421bd49.ogg"
-            },
-            {
-              "text": "one fourth",
-              "correct": false,
-              "_audio": "assets/audio/o/fd031c00c3.ogg"
+              "_audio": "assets/audio/o/781ba55856.ogg"
             }
           ]
         }
@@ -1497,36 +1503,46 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "picture-graph",
+      "math_skill": "time",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Count minutes forward in jumps of five, then check the hour.",
+      "math_tip_audio": "assets/audio/o/afbdad225c.ogg",
       "variations": [
         {
-          "prompt": "A picture graph shows 2 red votes and 5 blue votes. How many votes altogether?",
+          "prompt": "It is 7:25. What time will it be in 10 minutes?",
           "_audio": "assets/audio/q/lesson_52_math3_v0.ogg",
           "options": [
             {
-              "text": "7",
+              "text": "7:30",
+              "correct": false,
+              "_audio": "assets/audio/o/0889a95b6e.ogg"
+            },
+            {
+              "text": "7:40",
+              "correct": false,
+              "_audio": "assets/audio/o/7957a2c355.ogg"
+            },
+            {
+              "text": "7:45",
+              "correct": false,
+              "_audio": "assets/audio/o/c039a1919b.ogg"
+            },
+            {
+              "text": "7:35",
               "correct": true,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "12",
-              "correct": false,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
-            },
-            {
-              "text": "10",
-              "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
-            },
-            {
-              "text": "6",
-              "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/7d34b53319.ogg"
             }
           ]
         }
       ]
     }
   ],
-  "schema": "v2"
+  "schema": "v2",
+  "vocabulary": [
+    {
+      "word": "iteration",
+      "meaning": "one round of building, testing, and improving",
+      "_audio": "assets/audio/o/a0e43cc55a.ogg"
+    }
+  ]
 }

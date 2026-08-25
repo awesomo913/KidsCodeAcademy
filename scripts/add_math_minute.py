@@ -1,10 +1,8 @@
 """Append a 3-problem 'Math Minute' to the end of every lesson.
 
-For a 2nd-grade-entry kid who's behind (33rd %ile): start well below grade
-level and build, spiral the basics, then broaden into the full Grade 1/2 mix:
-place value, time, money, shapes, measurement, fractions, data, equalities,
-repeated addition, and fair sharing. Keep it read-aloud multiple-choice so the
-reading load doesn't get in the way of the math.
+For a second grader: begin with Grade 2 foundations, cover the full Grade 2
+year, then bridge gently into early Grade 3 ideas. Every problem carries a
+plain-language strategy tip that the interface can reveal and read aloud.
 
 Design:
   * 3 math questions appended to each lesson's questions[], ids math1..math3.
@@ -215,61 +213,247 @@ def g_data(rng):
     return f"A picture graph shows {red} red votes and {blue} blue votes. How many more votes did the winner get?", str(diff), num_distractors(diff, rng)
 
 
+def g_make_ten(rng):
+    a = rng.randint(1, 9)
+    ans = 10 - a
+    return f"{a} plus what makes 10?", str(ans), num_distractors(ans, rng)
+
+
+def g_add_100(rng, regroup=False):
+    if regroup:
+        while True:
+            a = rng.randint(16, 69); b = rng.randint(14, 29)
+            if a + b <= 99 and a % 10 + b % 10 >= 10:
+                break
+    else:
+        while True:
+            a = rng.randint(10, 69); b = rng.randint(10, 29)
+            if a + b <= 99 and a % 10 + b % 10 < 10:
+                break
+    return f"What is {a} plus {b}?", str(a + b), num_distractors(a + b, rng)
+
+
+def g_sub_100(rng, regroup=False):
+    if regroup:
+        while True:
+            a = rng.randint(31, 99); b = rng.randint(12, a - 1)
+            if a % 10 < b % 10:
+                break
+    else:
+        while True:
+            a = rng.randint(20, 99); b = rng.randint(10, a - 1)
+            if a % 10 >= b % 10:
+                break
+    return f"What is {a} minus {b}?", str(a - b), num_distractors(a - b, rng)
+
+
+def g_place_value_1000(rng):
+    hundreds = rng.randint(1, 9); tens = rng.randint(0, 9); ones = rng.randint(0, 9)
+    number = hundreds * 100 + tens * 10 + ones
+    place, answer = rng.choice([
+        ("hundreds", hundreds), ("tens", tens), ("ones", ones),
+    ])
+    return f"In {number}, which digit is in the {place} place?", str(answer), num_distractors(answer, rng)
+
+
+def g_time_five(rng):
+    hour = rng.randint(1, 11); minute = rng.choice(range(0, 50, 5)); add = rng.choice([5, 10])
+    finish = minute + add
+    shown = f"{hour}:{minute:02d}"
+    correct = f"{hour}:{finish:02d}"
+    wrong_minutes = sorted({max(0, finish - 5), min(55, finish + 5), min(55, finish + 10)} - {finish})
+    wrongs = [f"{hour}:{m:02d}" for m in wrong_minutes]
+    return f"It is {shown}. What time will it be in {add} minutes?", correct, wrongs
+
+
+def g_money_change(rng):
+    price = rng.choice(range(10, 50, 5)); change = 50 - price
+    wrongs = [f"{x} cents" for x in num_distractors(change, rng)]
+    return f"A toy costs {price} cents. You pay 50 cents. How much change?", f"{change} cents", wrongs
+
+
+def g_two_step(rng):
+    start = rng.randint(8, 30); added = rng.randint(3, 12); removed = rng.randint(2, min(10, start + added - 1))
+    ans = start + added - removed
+    return (f"You have {start} blocks, get {added} more, then give away {removed}. How many are left?",
+            str(ans), num_distractors(ans, rng))
+
+
+def g_array(rng):
+    rows = rng.randint(2, 5); each = rng.choice([2, 3, 4, 5, 10]); total = rows * each
+    return f"An array has {rows} rows of {each} dots. How many dots?", str(total), num_distractors(total, rng)
+
+
+def g_divide_groups(rng):
+    groups = rng.randint(2, 5); each = rng.randint(2, 5); total = groups * each
+    return f"Put {total} counters into groups of {each}. How many groups?", str(groups), num_distractors(groups, rng)
+
+
+def g_area(rng):
+    rows = rng.randint(2, 6); columns = rng.randint(2, 6); area = rows * columns
+    return (f"A rectangle has {rows} rows of {columns} square tiles. What is its area?",
+            f"{area} square units", [f"{x} square units" for x in num_distractors(area, rng)])
+
+
+def g_perimeter(rng):
+    length = rng.randint(3, 9); width = rng.randint(2, 7); perimeter = 2 * (length + width)
+    return (f"A rectangle is {length} units long and {width} units wide. What is its perimeter?",
+            f"{perimeter} units", [f"{x} units" for x in num_distractors(perimeter, rng)])
+
+
+def g_fraction_compare(rng):
+    denominator = rng.choice([3, 4, 6, 8]); a, b = rng.sample(range(1, denominator), 2)
+    bigger = max(a, b)
+    correct = f"{bigger}/{denominator}"
+    wrongs = [f"{min(a, b)}/{denominator}", "They are equal", f"1/{denominator}"]
+    wrongs = list(dict.fromkeys(x for x in wrongs if x != correct))
+    return f"Which fraction is greater: {a}/{denominator} or {b}/{denominator}?", correct, wrongs
+
+
+def g_unit_fraction(rng):
+    a, b = rng.sample([2, 3, 4, 6, 8], 2)
+    correct = f"1/{min(a, b)}"
+    wrong = f"1/{max(a, b)}"
+    return f"Which piece is larger: 1/{a} or 1/{b}?", correct, [wrong, "They are equal"]
+
+
+def g_round_ten(rng):
+    number = rng.randint(11, 89)
+    while number % 10 == 0:
+        number = rng.randint(11, 89)
+    answer = int((number + 5) // 10 * 10)
+    wrongs = [str(x) for x in {number // 10 * 10, (number // 10 + 1) * 10, answer + 10, max(0, answer - 10)} if x != answer]
+    return f"Round {number} to the nearest ten.", str(answer), wrongs[:3]
+
+
+def g_add_1000_no_regroup(rng):
+    while True:
+        a = rng.randint(120, 679); b = rng.randint(110, 289)
+        if a + b <= 999 and all(int(x) + int(y) < 10 for x, y in zip(f"{a:03d}", f"{b:03d}")):
+            break
+    return f"What is {a} plus {b}?", str(a + b), num_distractors(a + b, rng)
+
+
+def g_sub_1000_no_regroup(rng):
+    while True:
+        a = rng.randint(321, 999); b = rng.randint(110, a - 1)
+        if all(int(x) >= int(y) for x, y in zip(f"{a:03d}", f"{b:03d}")):
+            break
+    return f"What is {a} minus {b}?", str(a - b), num_distractors(a - b, rng)
+
+
+MATH_TIPS = {
+    "addition-within-20": "Start with the bigger number and count on. You can also make a ten first.",
+    "subtraction-within-20": "Think: what number plus the smaller number makes the larger number?",
+    "make-a-ten": "Ten is a friendly number. Count how many more are needed to reach 10.",
+    "doubles": "A double means two equal groups. Add the same number twice.",
+    "missing-addend": "Count up from the first number until you reach the total.",
+    "compare-within-100": "Compare tens first. If the tens match, compare the ones.",
+    "place-value-2-digit": "The left digit tells the tens; the right digit tells the ones.",
+    "shape-sides": "Trace the straight edges one at a time and count each edge once.",
+    "addition-within-100": "Add tens to tens and ones to ones.",
+    "subtraction-within-100": "Subtract tens from tens and ones from ones.",
+    "regrouping-addition": "Add the ones first. Ten ones can be regrouped as one ten.",
+    "regrouping-subtraction": "If there are not enough ones, trade one ten for ten ones.",
+    "even-and-odd": "An even number can be split into pairs with none left over.",
+    "skip-count": "Look for the same amount being added each time.",
+    "time": "Count minutes forward in jumps of five, then check the hour.",
+    "money": "A dime is 10 cents, a nickel is 5, and a penny is 1. Add each value.",
+    "money-change": "Change is what is left: amount paid minus the price.",
+    "place-value-3-digit": "Read hundreds, tens, then ones. Each place is worth ten times the place to its right.",
+    "word-problem": "Tell the story with numbers: more means add; left or fewer usually means subtract.",
+    "two-step-word-problem": "Do one action at a time. Keep the first answer for the second step.",
+    "measurement": "To find how much longer, subtract the shorter length from the longer length.",
+    "equalities": "The equal sign means both sides have the same value.",
+    "data": "Read the labels, then add for a total or subtract to compare.",
+    "fractions": "Equal parts must be the same size. The bottom number tells how many equal parts.",
+    "arrays": "Rows are equal groups. Add each row or multiply rows by dots in each row.",
+    "fair-sharing": "Deal one to each group again and again until none are left.",
+    "division-groups": "Repeatedly make equal groups of the given size, then count the groups.",
+    "area": "Area counts square tiles inside a shape: rows times columns.",
+    "perimeter": "Perimeter is the distance around. Add all four sides.",
+    "fraction-compare": "With the same bottom number, the fraction with more pieces is greater.",
+    "unit-fraction-compare": "When one whole is cut into more pieces, each piece is smaller.",
+    "round-to-ten": "Look at the ones digit: 0–4 rounds down; 5–9 rounds up.",
+    "three-digit-addition": "Line up hundreds, tens, and ones. Add one place at a time.",
+    "three-digit-subtraction": "Line up each place, then subtract ones, tens, and hundreds.",
+}
+
+
 # Tier skill pools. Each entry is (skill label, callable taking rng). The skill
 # label is stored in lesson JSON so audits can prove curriculum coverage instead
 # of guessing from prompt text.
 def tier_pool(t):
-    if t == 1:   # lessons 1-12 — well below grade level
-        return [("addition-to-10", lambda r: g_add(r, 10)),
-                ("subtraction-to-10", lambda r: g_sub(r, 10)),
+    if t == 1:   # lessons 1-12 — Grade 2 foundations
+        return [("addition-within-20", lambda r: g_add(r, 20)),
+                ("subtraction-within-20", lambda r: g_sub(r, 20)),
+                ("make-a-ten", g_make_ten),
                 ("doubles", lambda r: g_doubles(r, 5)),
-                ("counting-on", lambda r: g_counton(r, 10)),
-                ("compare-numbers", lambda r: g_compare(r, 10)),
+                ("missing-addend", lambda r: g_missing(r, 20)),
+                ("compare-within-100", lambda r: g_compare(r, 100)),
+                ("place-value-2-digit", lambda r: g_place_value(r, 9)),
                 ("shape-sides", g_shape_sides)]
-    if t == 2:   # 13-24
-        return [("addition-to-20", lambda r: g_add(r, 20)),
-                ("subtraction-to-20", lambda r: g_sub(r, 20)),
-                ("missing-addend", lambda r: g_missing(r, 10)),
-                ("compare-numbers", lambda r: g_compare(r, 20)),
-                ("doubles", lambda r: g_doubles(r, 8)),
+    if t == 2:   # 13-24 — Grade 2 core
+        return [("addition-within-100", lambda r: g_add_100(r, False)),
+                ("subtraction-within-100", lambda r: g_sub_100(r, False)),
+                ("place-value-2-digit", lambda r: g_place_value(r, 9)),
+                ("compare-within-100", lambda r: g_compare(r, 100)),
                 ("even-and-odd", g_even_odd),
-                ("place-value", lambda r: g_place_value(r, 5))]
-    if t == 3:   # 25-36
-        return [("skip-count-by-2", lambda r: g_skip(r, 2)),
-                ("skip-count-by-5", lambda r: g_skip(r, 5)),
-                ("skip-count-by-10", lambda r: g_skip(r, 10)),
-                ("place-value", lambda r: g_place_value(r, 9)),
-                ("build-a-number", g_make_tens_ones),
-                ("time", g_time),
-                ("money", g_money),
-                ("equalities", g_equal)]
-    if t == 4:   # 37-48
-        return [("addition-word-problem", lambda r: g_wordadd(r, 20)),
-                ("subtraction-word-problem", lambda r: g_wordsub(r, 20)),
-                ("two-digit-plus-one", g_2plus1),
-                ("measurement", g_measure),
-                ("fractions", g_fraction),
-                ("picture-graph", g_data),
+                ("skip-count", lambda r: g_skip(r, 5)),
+                ("skip-count", lambda r: g_skip(r, 10)),
                 ("time", g_time),
                 ("money", g_money)]
-    return [      # 49-60 — full mixed review, slightly harder
-        ("addition-word-problem", lambda r: g_wordadd(r, 20)),
-        ("subtraction-word-problem", lambda r: g_wordsub(r, 20)),
-        ("two-digit-plus-one", g_2plus1),
-        ("repeated-addition", g_groups),
-        ("fair-sharing", g_share),
+    if t == 3:   # 25-36 — complete Grade 2 practice
+        return [("regrouping-addition", lambda r: g_add_100(r, True)),
+                ("regrouping-subtraction", lambda r: g_sub_100(r, True)),
+                ("place-value-3-digit", g_place_value_1000),
+                ("time", g_time_five),
+                ("money-change", g_money_change),
+                ("word-problem", lambda r: g_wordadd(r, 100)),
+                ("word-problem", lambda r: g_wordsub(r, 100)),
+                ("measurement", g_measure),
+                ("equalities", g_equal),
+                ("data", g_data)]
+    if t == 4:   # 37-48 — Grade 2 mastery and concept models
+        return [("two-step-word-problem", g_two_step),
+                ("arrays", g_array),
+                ("fair-sharing", g_share),
+                ("fractions", g_fraction),
+                ("area", g_area),
+                ("perimeter", g_perimeter),
+                ("data", g_data),
+                ("place-value-3-digit", g_place_value_1000),
+                ("regrouping-addition", lambda r: g_add_100(r, True)),
+                ("regrouping-subtraction", lambda r: g_sub_100(r, True))]
+    return [      # 49-60 — early Grade 3 bridge, still concept-first
+        ("arrays", g_array),
+        ("division-groups", g_divide_groups),
+        ("area", g_area),
+        ("perimeter", g_perimeter),
+        ("fraction-compare", g_fraction_compare),
+        ("unit-fraction-compare", g_unit_fraction),
+        ("round-to-ten", g_round_ten),
+        ("three-digit-addition", g_add_1000_no_regroup),
+        ("three-digit-subtraction", g_sub_1000_no_regroup),
+        ("two-step-word-problem", g_two_step),
+        ("money-change", g_money_change),
+        ("time", g_time_five),
         ("fractions", g_fraction),
-        ("picture-graph", g_data),
-        ("time", g_time),
-        ("money", g_money),
-        ("place-value", lambda r: g_place_value(r, 9)),
-        ("compare-numbers", lambda r: g_compare_small(r, 20)),
-        ("equalities", g_equal),
     ]
 
 
 def tier_for(lesson_num: int) -> int:
     return min(5, (lesson_num - 1) // 12 + 1)
+
+
+def level_for(tier: int) -> str:
+    return {
+        1: "Grade 2 foundation",
+        2: "Grade 2 core",
+        3: "Grade 2 practice",
+        4: "Grade 2 mastery",
+        5: "Early Grade 3 bridge",
+    }[tier]
 
 
 def make_option(text: str, correct: bool) -> dict:
@@ -278,17 +462,18 @@ def make_option(text: str, correct: bool) -> dict:
 
 def build_math_questions(stem: str, lesson_num: int, global_prompts: set[str]) -> list[dict]:
     rng = random.Random(f"math-{lesson_num}")
-    pool = tier_pool(tier_for(lesson_num))
+    tier = tier_for(lesson_num)
+    pool = tier_pool(tier)
     qs = []
     used_prompts: set[str] = set()
-    gens = pool[:]
-    rng.shuffle(gens)
-    gi = 0
+    # Rotate deterministically through each tier so every important skill is
+    # guaranteed coverage rather than left to random chance.
+    offset = ((lesson_num - 1) % 12) * 3
     for k in range(1, 4):
         # pick a generator, retry for a fresh prompt + clean distractors
         prompt = correct = None; wrongs = []; skill = "mixed-review"
-        for _ in range(120):
-            skill, gen = gens[gi % len(gens)]; gi += 1
+        for attempt in range(120):
+            skill, gen = pool[(offset + k - 1 + attempt) % len(pool)]
             prompt, correct, wrongs = gen(rng)
             if (prompt not in used_prompts and prompt not in global_prompts
                     and len(wrongs) >= 1 and correct not in wrongs):
@@ -301,6 +486,9 @@ def build_math_questions(stem: str, lesson_num: int, global_prompts: set[str]) -
             "id": f"math{k}",
             "skipGate": True,
             "math_skill": skill,
+            "math_level": level_for(tier),
+            "math_tip": MATH_TIPS[skill],
+            "math_tip_audio": f"assets/audio/o/{_hash(MATH_TIPS[skill])}.ogg",
             "variations": [{
                 "prompt": prompt,
                 "_audio": f"assets/audio/q/{stem[:9]}_math{k}_v0.ogg",

@@ -5,7 +5,7 @@ public-visible: true
 # Kids Code Academy — Handoff
 **Last updated:** 2026-08-25
 **Current owner:** User (primary designer) + Codex (implementation)
-**Status:** v0.8.0 desktop build verified; 60-lesson curriculum complete
+**Status:** v0.9.0 desktop build verified; 60-lesson curriculum complete
 
 ---
 
@@ -30,6 +30,16 @@ public-visible: true
 The user already ships an adult tutorial called "Claude Code Mastery" (`cc-mastery-pwa/`, packaged as `ClaudeCodeMastery.exe`/`.apk`). The kid version forks that engine pattern, swaps the curriculum and theme to age 7, and replaces real-AI with a sandboxed "pretend AI" so a child can practice safely. The user picked the fork-and-reskin approach over a fresh build to inherit the existing PyInstaller + pywebview + single-HTML pipeline. The user picked sandbox-only AI (over guarded real-Claude) to remove every safety failure mode and every cost line item — this is for daily kid use, not occasional supervised demos.
 
 ## 4. History
+
+### 2026-08-25 — v0.9.0: editorial polish, guided math, and rules-correct chess
+
+- Rewrote the audited long prompts, repeated question templates, and fragment answer choices, then regenerated matching Piper narration.
+- Sequenced 180 unique Math Minute prompts across 34 skills: Grade 2 foundation, core, practice, and mastery through Lesson 48, followed by an early Grade 3 bridge through Lesson 60.
+- Added visible/read-aloud math strategies and Word Power explanations for core coding terms.
+- Replaced the pseudo-legal chess layer with a vendored offline chess.js rules engine, including king safety, checkmate, draws, castling, en passant, and promotion.
+- Added legal-move coaching, short piece lessons, accessible square labels, keyboard focus, and short-screen layout support.
+- Added deterministic editorial and rules-engine checks to keep these guarantees testable.
+- Verified 19,510 lesson audio references with no missing files, 180 structurally valid unique math prompts, 100 deterministic random chess games, packaged startup, and two packaged persistence cycles with the user's prior state restored byte-for-byte.
 
 ### 2026-08-25 — v0.8.0: progress controls, math depth, and faster packaging
 

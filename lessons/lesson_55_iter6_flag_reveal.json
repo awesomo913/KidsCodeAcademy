@@ -349,7 +349,7 @@
       },
       "variations": [
         {
-          "prompt": "Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "prompt": "Your win screen is plain gray. Which change would make it feel special?",
           "options": [
             {
               "text": "Make the player wait 5 minutes silently.",
@@ -375,7 +375,7 @@
           "_audio": "assets/audio/q/lesson_55_q2_v0.ogg"
         },
         {
-          "prompt": "Quick! Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "prompt": "Quick! Your win screen is plain gray. Which change would make it feel special?",
           "options": [
             {
               "text": "Make the player wait 5 minutes silently.",
@@ -401,7 +401,7 @@
           "_audio": "assets/audio/q/lesson_55_q2_v1.ogg"
         },
         {
-          "prompt": "Hey friend — Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "prompt": "Hey friend — Your win screen is plain gray. Which change would make it feel special?",
           "options": [
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
@@ -427,7 +427,7 @@
           "_audio": "assets/audio/q/lesson_55_q2_v2.ogg"
         },
         {
-          "prompt": "Bytey wonders: Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "prompt": "Bytey wonders: Your win screen is plain gray. Which change would make it feel special?",
           "options": [
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
@@ -453,7 +453,7 @@
           "_audio": "assets/audio/q/lesson_55_q2_v3.ogg"
         },
         {
-          "prompt": "Tell me — Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "prompt": "Tell me — Your win screen is plain gray. Which change would make it feel special?",
           "options": [
             {
               "text": "Make the player wait 5 minutes silently... right?",
@@ -479,7 +479,7 @@
           "_audio": "assets/audio/q/lesson_55_q2_v4.ogg"
         },
         {
-          "prompt": "Wait wait wait — Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "prompt": "Wait wait wait — Your win screen is plain gray. Which change would make it feel special?",
           "options": [
             {
               "text": "Rumor: make the player wait 5 minutes silently.",
@@ -505,7 +505,7 @@
           "_audio": "assets/audio/q/lesson_55_q2_v5.ogg"
         },
         {
-          "prompt": "Pop quiz! Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "prompt": "Pop quiz! Your win screen is plain gray. Which change would make it feel special?",
           "options": [
             {
               "text": "Maybe show only the bug king.",
@@ -531,7 +531,7 @@
           "_audio": "assets/audio/q/lesson_55_q2_v6.ogg"
         },
         {
-          "prompt": "Listen up — Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "prompt": "Listen up — Your win screen is plain gray. Which change would make it feel special?",
           "options": [
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
@@ -557,7 +557,7 @@
           "_audio": "assets/audio/q/lesson_55_q2_v7.ogg"
         },
         {
-          "prompt": "Think about this: Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "prompt": "Think about this: Your win screen is plain gray. Which change would make it feel special?",
           "options": [
             {
               "text": "Add a celebration: confetti, a sound, a fun message.",
@@ -583,7 +583,7 @@
           "_audio": "assets/audio/q/lesson_55_q2_v8.ogg"
         },
         {
-          "prompt": "Got a quick one: Your win screen says 'YOU WIN' on a gray background. How could it feel better?",
+          "prompt": "Got a quick one: Your win screen is plain gray. Which change would make it feel special?",
           "options": [
             {
               "text": "Word is, replace it with the loading screen.",
@@ -1359,7 +1359,7 @@
           "_audio": "assets/audio/q/lesson_55_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about iter 6: flag and reveal?",
+          "prompt": "The finish flag appears with animation. Why polish that moment?",
           "options": [
             {
               "text": "Flags walk away if the hero is too slow.",
@@ -2087,31 +2087,29 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "repeated-addition",
+      "math_skill": "unit-fraction-compare",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "When one whole is cut into more pieces, each piece is smaller.",
+      "math_tip_audio": "assets/audio/o/deed44c8b3.ogg",
       "variations": [
         {
-          "prompt": "There are 4 bags with 4 blocks in each bag. How many blocks altogether?",
+          "prompt": "Which piece is larger: 1/2 or 1/6?",
           "_audio": "assets/audio/q/lesson_55_math1_v0.ogg",
           "options": [
             {
-              "text": "15",
+              "text": "They are equal",
               "correct": false,
-              "_audio": "assets/audio/o/f1abd67035.ogg"
+              "_audio": "assets/audio/o/26134103da.ogg"
             },
             {
-              "text": "16",
+              "text": "1/6",
+              "correct": false,
+              "_audio": "assets/audio/o/42769c4cee.ogg"
+            },
+            {
+              "text": "1/2",
               "correct": true,
-              "_audio": "assets/audio/o/1574bddb75.ogg"
-            },
-            {
-              "text": "17",
-              "correct": false,
-              "_audio": "assets/audio/o/0716d9708d.ogg"
-            },
-            {
-              "text": "21",
-              "correct": false,
-              "_audio": "assets/audio/o/472b07b9fc.ogg"
+              "_audio": "assets/audio/o/ee2caa07b7.ogg"
             }
           ]
         }
@@ -2120,31 +2118,29 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "place-value",
+      "math_skill": "round-to-ten",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Look at the ones digit: 0–4 rounds down; 5–9 rounds up.",
+      "math_tip_audio": "assets/audio/o/e8c308377b.ogg",
       "variations": [
         {
-          "prompt": "In the number 39, how many tens are there?",
+          "prompt": "Round 36 to the nearest ten.",
           "_audio": "assets/audio/q/lesson_55_math2_v0.ogg",
           "options": [
             {
-              "text": "6",
-              "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
-            },
-            {
-              "text": "3",
+              "text": "40",
               "correct": true,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "_audio": "assets/audio/o/af3e133428.ogg"
             },
             {
-              "text": "5",
+              "text": "50",
               "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/e1822db470.ogg"
             },
             {
-              "text": "4",
+              "text": "30",
               "correct": false,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "_audio": "assets/audio/o/22d200f867.ogg"
             }
           ]
         }
@@ -2153,36 +2149,46 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "two-digit-plus-one",
+      "math_skill": "three-digit-addition",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Line up hundreds, tens, and ones. Add one place at a time.",
+      "math_tip_audio": "assets/audio/o/3cd2d741a5.ogg",
       "variations": [
         {
-          "prompt": "What is 42 plus 5?",
+          "prompt": "What is 434 plus 200?",
           "_audio": "assets/audio/q/lesson_55_math3_v0.ogg",
           "options": [
             {
-              "text": "48",
+              "text": "637",
               "correct": false,
-              "_audio": "assets/audio/o/64e095fe76.ogg"
+              "_audio": "assets/audio/o/88a9d5a83b.ogg"
             },
             {
-              "text": "49",
+              "text": "636",
               "correct": false,
-              "_audio": "assets/audio/o/2e01e17467.ogg"
+              "_audio": "assets/audio/o/bc60205da2.ogg"
             },
             {
-              "text": "47",
+              "text": "639",
+              "correct": false,
+              "_audio": "assets/audio/o/40e0ce8abc.ogg"
+            },
+            {
+              "text": "634",
               "correct": true,
-              "_audio": "assets/audio/o/827bfc4587.ogg"
-            },
-            {
-              "text": "46",
-              "correct": false,
-              "_audio": "assets/audio/o/fe2ef495a1.ogg"
+              "_audio": "assets/audio/o/08ec2efcf0.ogg"
             }
           ]
         }
       ]
     }
   ],
-  "schema": "v2"
+  "schema": "v2",
+  "vocabulary": [
+    {
+      "word": "iteration",
+      "meaning": "one round of building, testing, and improving",
+      "_audio": "assets/audio/o/a0e43cc55a.ogg"
+    }
+  ]
 }

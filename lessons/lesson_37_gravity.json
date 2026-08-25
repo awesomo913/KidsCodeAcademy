@@ -1334,7 +1334,7 @@
           "_audio": "assets/audio/q/lesson_37_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about gravity?",
+          "prompt": "Which simple picture helps explain gravity in a game?",
           "options": [
             {
               "text": "Gravity only works when the hero is hungry.",
@@ -1441,14 +1441,14 @@
               "_audio": "assets/audio/o/c1d43429aa.ogg"
             },
             {
-              "text": "A sticker.",
+              "text": "A shiny sticker on the hero.",
               "correct": false,
-              "_audio": "assets/audio/o/bff070ec9b.ogg"
+              "_audio": "assets/audio/o/831533b059.ogg"
             },
             {
-              "text": "Sad music.",
+              "text": "A sad song in the background.",
               "correct": false,
-              "_audio": "assets/audio/o/3968ec3f87.ogg"
+              "_audio": "assets/audio/o/c3d805252b.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q6_v0.ogg"
@@ -1467,14 +1467,14 @@
               "_audio": "assets/audio/o/4169da3485.ogg"
             },
             {
-              "text": "A sticker.",
+              "text": "A shiny sticker on the hero.",
               "correct": false,
-              "_audio": "assets/audio/o/bff070ec9b.ogg"
+              "_audio": "assets/audio/o/831533b059.ogg"
             },
             {
-              "text": "Sad music.",
+              "text": "A sad song in the background.",
               "correct": false,
-              "_audio": "assets/audio/o/3968ec3f87.ogg"
+              "_audio": "assets/audio/o/c3d805252b.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q6_v1.ogg"
@@ -1493,14 +1493,14 @@
               "_audio": "assets/audio/o/4169da3485.ogg"
             },
             {
-              "text": "Sad music.",
+              "text": "A sad song in the background.",
               "correct": false,
-              "_audio": "assets/audio/o/3968ec3f87.ogg"
+              "_audio": "assets/audio/o/c3d805252b.ogg"
             },
             {
-              "text": "A sticker.",
+              "text": "A shiny sticker on the hero.",
               "correct": false,
-              "_audio": "assets/audio/o/bff070ec9b.ogg"
+              "_audio": "assets/audio/o/831533b059.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_37_q6_v2.ogg"
@@ -1692,31 +1692,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "measurement",
+      "math_skill": "two-step-word-problem",
+      "math_level": "Grade 2 mastery",
+      "math_tip": "Do one action at a time. Keep the first answer for the second step.",
+      "math_tip_audio": "assets/audio/o/b16e3e3cb2.ogg",
       "variations": [
         {
-          "prompt": "A toy train is 11 inches long. Another is 15 inches. How many inches longer is the second one?",
+          "prompt": "You have 28 blocks, get 7 more, then give away 6. How many are left?",
           "_audio": "assets/audio/q/lesson_37_math1_v0.ogg",
           "options": [
             {
-              "text": "4",
+              "text": "29",
               "correct": true,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "_audio": "assets/audio/o/7719a1c782.ogg"
             },
             {
-              "text": "1",
+              "text": "30",
               "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "_audio": "assets/audio/o/22d200f867.ogg"
             },
             {
-              "text": "2",
+              "text": "31",
               "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/632667547e.ogg"
             },
             {
-              "text": "7",
+              "text": "32",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
+              "_audio": "assets/audio/o/cb4e5208b4.ogg"
             }
           ]
         }
@@ -1725,21 +1728,60 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "picture-graph",
+      "math_skill": "arrays",
+      "math_level": "Grade 2 mastery",
+      "math_tip": "Rows are equal groups. Add each row or multiply rows by dots in each row.",
+      "math_tip_audio": "assets/audio/o/498299c93e.ogg",
       "variations": [
         {
-          "prompt": "A picture graph shows 7 red votes and 2 blue votes. How many more votes did the winner get?",
+          "prompt": "An array has 3 rows of 5 dots. How many dots?",
           "_audio": "assets/audio/q/lesson_37_math2_v0.ogg",
           "options": [
+            {
+              "text": "12",
+              "correct": false,
+              "_audio": "assets/audio/o/7b52009b64.ogg"
+            },
+            {
+              "text": "15",
+              "correct": true,
+              "_audio": "assets/audio/o/f1abd67035.ogg"
+            },
+            {
+              "text": "16",
+              "correct": false,
+              "_audio": "assets/audio/o/1574bddb75.ogg"
+            },
+            {
+              "text": "17",
+              "correct": false,
+              "_audio": "assets/audio/o/0716d9708d.ogg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math3",
+      "skipGate": true,
+      "math_skill": "fair-sharing",
+      "math_level": "Grade 2 mastery",
+      "math_tip": "Deal one to each group again and again until none are left.",
+      "math_tip_audio": "assets/audio/o/aea4fef67a.ogg",
+      "variations": [
+        {
+          "prompt": "Share 20 stickers equally among 4 kids. How many stickers does each kid get?",
+          "_audio": "assets/audio/q/lesson_37_math3_v0.ogg",
+          "options": [
+            {
+              "text": "2",
+              "correct": false,
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
+            },
             {
               "text": "4",
               "correct": false,
               "_audio": "assets/audio/o/1b64538924.ogg"
-            },
-            {
-              "text": "6",
-              "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
             },
             {
               "text": "5",
@@ -1750,39 +1792,6 @@
               "text": "8",
               "correct": false,
               "_audio": "assets/audio/o/fe5dbbcea5.ogg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "math3",
-      "skipGate": true,
-      "math_skill": "time",
-      "variations": [
-        {
-          "prompt": "The clock says 7:00. Which answer tells the time?",
-          "_audio": "assets/audio/q/lesson_37_math3_v0.ogg",
-          "options": [
-            {
-              "text": "7 o'clock",
-              "correct": true,
-              "_audio": "assets/audio/o/30e3c0abaa.ogg"
-            },
-            {
-              "text": "half past 7",
-              "correct": false,
-              "_audio": "assets/audio/o/73e84092e4.ogg"
-            },
-            {
-              "text": "half past 8",
-              "correct": false,
-              "_audio": "assets/audio/o/61ec0368e5.ogg"
-            },
-            {
-              "text": "8 o'clock",
-              "correct": false,
-              "_audio": "assets/audio/o/df1d42f892.ogg"
             }
           ]
         }

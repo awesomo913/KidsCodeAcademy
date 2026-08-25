@@ -1336,7 +1336,7 @@
           "_audio": "assets/audio/q/lesson_16_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about Ollama on your computer?",
+          "prompt": "Bytey is choosing a local model. Which fact helps him choose?",
           "options": [
             {
               "text": "Ollama recharges by spinning in circles.",
@@ -1418,31 +1418,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "missing-addend",
+      "math_skill": "addition-within-100",
+      "math_level": "Grade 2 core",
+      "math_tip": "Add tens to tens and ones to ones.",
+      "math_tip_audio": "assets/audio/o/cb97db9695.ogg",
       "variations": [
         {
-          "prompt": "2 plus what makes 4?",
+          "prompt": "What is 12 plus 26?",
           "_audio": "assets/audio/q/lesson_16_math1_v0.ogg",
           "options": [
             {
-              "text": "7",
+              "text": "39",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
+              "_audio": "assets/audio/o/ca3512f4df.ogg"
             },
             {
-              "text": "3",
+              "text": "37",
               "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "_audio": "assets/audio/o/cb7a1d775e.ogg"
             },
             {
-              "text": "2",
+              "text": "38",
               "correct": true,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/5b384ce32d.ogg"
             },
             {
-              "text": "4",
+              "text": "43",
               "correct": false,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "_audio": "assets/audio/o/0286dd552c.ogg"
             }
           ]
         }
@@ -1451,31 +1454,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "subtraction-to-20",
+      "math_skill": "subtraction-within-100",
+      "math_level": "Grade 2 core",
+      "math_tip": "Subtract tens from tens and ones from ones.",
+      "math_tip_audio": "assets/audio/o/4fd711d433.ogg",
       "variations": [
         {
-          "prompt": "What is 15 minus 0?",
+          "prompt": "What is 44 minus 20?",
           "_audio": "assets/audio/q/lesson_16_math2_v0.ogg",
           "options": [
             {
-              "text": "12",
+              "text": "22",
               "correct": false,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
+              "_audio": "assets/audio/o/12c6fc06c9.ogg"
             },
             {
-              "text": "15",
+              "text": "24",
               "correct": true,
-              "_audio": "assets/audio/o/f1abd67035.ogg"
+              "_audio": "assets/audio/o/4d134bc072.ogg"
             },
             {
-              "text": "17",
+              "text": "25",
               "correct": false,
-              "_audio": "assets/audio/o/0716d9708d.ogg"
+              "_audio": "assets/audio/o/f6e1126ced.ogg"
             },
             {
-              "text": "20",
+              "text": "21",
               "correct": false,
-              "_audio": "assets/audio/o/91032ad7bb.ogg"
+              "_audio": "assets/audio/o/472b07b9fc.ogg"
             }
           ]
         }
@@ -1484,16 +1490,24 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "place-value",
+      "math_skill": "place-value-2-digit",
+      "math_level": "Grade 2 core",
+      "math_tip": "The left digit tells the tens; the right digit tells the ones.",
+      "math_tip_audio": "assets/audio/o/2eff40e2d7.ogg",
       "variations": [
         {
-          "prompt": "In the number 18, how many tens are there?",
+          "prompt": "In the number 41, how many ones are there?",
           "_audio": "assets/audio/q/lesson_16_math3_v0.ogg",
           "options": [
             {
-              "text": "0",
+              "text": "3",
               "correct": false,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
+            },
+            {
+              "text": "2",
+              "correct": false,
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
             },
             {
               "text": "4",
@@ -1504,11 +1518,6 @@
               "text": "1",
               "correct": true,
               "_audio": "assets/audio/o/356a192b79.ogg"
-            },
-            {
-              "text": "3",
-              "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
             }
           ]
         }

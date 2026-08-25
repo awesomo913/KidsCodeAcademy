@@ -1349,7 +1349,7 @@
           "_audio": "assets/audio/q/lesson_53_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about iter 4: the bad guy?",
+          "prompt": "What role should a small bad guy play in the game?",
           "options": [
             {
               "text": "Bad guys remove tension — they tell jokes.",
@@ -1707,31 +1707,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "repeated-addition",
+      "math_skill": "fractions",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Equal parts must be the same size. The bottom number tells how many equal parts.",
+      "math_tip_audio": "assets/audio/o/cab1a26ce8.ogg",
       "variations": [
         {
-          "prompt": "There are 2 bags with 5 blocks in each bag. How many blocks altogether?",
+          "prompt": "A chocolate bar is split into 4 equal parts. What is one part called?",
           "_audio": "assets/audio/q/lesson_53_math1_v0.ogg",
           "options": [
             {
-              "text": "8",
-              "correct": false,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
-            },
-            {
-              "text": "12",
-              "correct": false,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
-            },
-            {
-              "text": "10",
+              "text": "one fourth",
               "correct": true,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "_audio": "assets/audio/o/fd031c00c3.ogg"
             },
             {
-              "text": "11",
+              "text": "one third",
               "correct": false,
-              "_audio": "assets/audio/o/17ba079149.ogg"
+              "_audio": "assets/audio/o/fbac955eac.ogg"
+            },
+            {
+              "text": "one whole",
+              "correct": false,
+              "_audio": "assets/audio/o/f0e421bd49.ogg"
+            },
+            {
+              "text": "one half",
+              "correct": false,
+              "_audio": "assets/audio/o/2b526d5876.ogg"
             }
           ]
         }
@@ -1740,21 +1743,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "compare-numbers",
+      "math_skill": "arrays",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Rows are equal groups. Add each row or multiply rows by dots in each row.",
+      "math_tip_audio": "assets/audio/o/498299c93e.ogg",
       "variations": [
         {
-          "prompt": "Which number is smaller: 19 or 16?",
+          "prompt": "An array has 4 rows of 3 dots. How many dots?",
           "_audio": "assets/audio/q/lesson_53_math2_v0.ogg",
           "options": [
             {
-              "text": "19",
+              "text": "17",
               "correct": false,
-              "_audio": "assets/audio/o/b3f0c7f6bb.ogg"
+              "_audio": "assets/audio/o/0716d9708d.ogg"
             },
             {
-              "text": "16",
+              "text": "11",
+              "correct": false,
+              "_audio": "assets/audio/o/17ba079149.ogg"
+            },
+            {
+              "text": "12",
               "correct": true,
-              "_audio": "assets/audio/o/1574bddb75.ogg"
+              "_audio": "assets/audio/o/7b52009b64.ogg"
+            },
+            {
+              "text": "14",
+              "correct": false,
+              "_audio": "assets/audio/o/fa35e19212.ogg"
             }
           ]
         }
@@ -1763,36 +1779,46 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "equalities",
+      "math_skill": "division-groups",
+      "math_level": "Early Grade 3 bridge",
+      "math_tip": "Repeatedly make equal groups of the given size, then count the groups.",
+      "math_tip_audio": "assets/audio/o/f082ee1e32.ogg",
       "variations": [
         {
-          "prompt": "Make both sides equal: 6 plus 4 equals 7 plus what?",
+          "prompt": "Put 15 counters into groups of 3. How many groups?",
           "_audio": "assets/audio/q/lesson_53_math3_v0.ogg",
           "options": [
             {
               "text": "5",
-              "correct": false,
+              "correct": true,
               "_audio": "assets/audio/o/ac3478d69a.ogg"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "_audio": "assets/audio/o/1b64538924.ogg"
+            },
+            {
+              "text": "2",
+              "correct": false,
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
             },
             {
               "text": "6",
               "correct": false,
               "_audio": "assets/audio/o/c1dfd96eea.ogg"
-            },
-            {
-              "text": "1",
-              "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
-            },
-            {
-              "text": "3",
-              "correct": true,
-              "_audio": "assets/audio/o/77de68daec.ogg"
             }
           ]
         }
       ]
     }
   ],
-  "schema": "v2"
+  "schema": "v2",
+  "vocabulary": [
+    {
+      "word": "iteration",
+      "meaning": "one round of building, testing, and improving",
+      "_audio": "assets/audio/o/a0e43cc55a.ogg"
+    }
+  ]
 }

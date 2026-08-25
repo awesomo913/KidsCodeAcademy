@@ -1335,7 +1335,7 @@
           "_audio": "assets/audio/q/lesson_18_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about ask, then build?",
+          "prompt": "The plan is unclear before coding starts. What is likely to happen?",
           "options": [
             {
               "text": "Real coders never ask for help.",
@@ -1787,31 +1787,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "addition-to-20",
+      "math_skill": "skip-count",
+      "math_level": "Grade 2 core",
+      "math_tip": "Look for the same amount being added each time.",
+      "math_tip_audio": "assets/audio/o/d202673254.ogg",
       "variations": [
         {
-          "prompt": "What is 14 plus 0?",
+          "prompt": "Count by 10s: 20, 30, 40. What comes next?",
           "_audio": "assets/audio/q/lesson_18_math1_v0.ogg",
           "options": [
             {
-              "text": "17",
+              "text": "49",
               "correct": false,
-              "_audio": "assets/audio/o/0716d9708d.ogg"
+              "_audio": "assets/audio/o/2e01e17467.ogg"
             },
             {
-              "text": "11",
+              "text": "55",
               "correct": false,
-              "_audio": "assets/audio/o/17ba079149.ogg"
+              "_audio": "assets/audio/o/8effee409c.ogg"
             },
             {
-              "text": "12",
-              "correct": false,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
-            },
-            {
-              "text": "14",
+              "text": "50",
               "correct": true,
-              "_audio": "assets/audio/o/fa35e19212.ogg"
+              "_audio": "assets/audio/o/e1822db470.ogg"
+            },
+            {
+              "text": "48",
+              "correct": false,
+              "_audio": "assets/audio/o/64e095fe76.ogg"
             }
           ]
         }
@@ -1820,31 +1823,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "subtraction-to-20",
+      "math_skill": "time",
+      "math_level": "Grade 2 core",
+      "math_tip": "Count minutes forward in jumps of five, then check the hour.",
+      "math_tip_audio": "assets/audio/o/afbdad225c.ogg",
       "variations": [
         {
-          "prompt": "What is 10 minus 5?",
+          "prompt": "The clock says 5:00. Which answer tells the time?",
           "_audio": "assets/audio/q/lesson_18_math2_v0.ogg",
           "options": [
             {
-              "text": "4",
+              "text": "6 o'clock",
               "correct": false,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "_audio": "assets/audio/o/d0184894f1.ogg"
             },
             {
-              "text": "10",
+              "text": "half past 6",
               "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "_audio": "assets/audio/o/06439a73d4.ogg"
             },
             {
-              "text": "7",
+              "text": "half past 5",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
+              "_audio": "assets/audio/o/8eae4ae900.ogg"
             },
             {
-              "text": "5",
+              "text": "5 o'clock",
               "correct": true,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/4813ef46ae.ogg"
             }
           ]
         }
@@ -1853,21 +1859,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "even-and-odd",
+      "math_skill": "money",
+      "math_level": "Grade 2 core",
+      "math_tip": "A dime is 10 cents, a nickel is 5, and a penny is 1. Add each value.",
+      "math_tip_audio": "assets/audio/o/a6320bb4b5.ogg",
       "variations": [
         {
-          "prompt": "Is 21 even or odd?",
+          "prompt": "You have 2 dimes, 2 nickels, 5 pennies. How many cents is that?",
           "_audio": "assets/audio/q/lesson_18_math3_v0.ogg",
           "options": [
             {
-              "text": "odd",
+              "text": "35 cents",
               "correct": true,
-              "_audio": "assets/audio/o/60f7a51208.ogg"
+              "_audio": "assets/audio/o/303ef39526.ogg"
             },
             {
-              "text": "even",
+              "text": "32 cents",
               "correct": false,
-              "_audio": "assets/audio/o/04b8c80bb7.ogg"
+              "_audio": "assets/audio/o/5f29d5b2f2.ogg"
+            },
+            {
+              "text": "34 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/2b84cff990.ogg"
+            },
+            {
+              "text": "38 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/c2d2947a90.ogg"
             }
           ]
         }

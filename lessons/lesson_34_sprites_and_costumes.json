@@ -644,9 +644,9 @@
               "_audio": "assets/audio/o/55c522c4d6.ogg"
             },
             {
-              "text": "Its astrological sign.",
+              "text": "Its star sign.",
               "correct": false,
-              "_audio": "assets/audio/o/f5a108abca.ogg"
+              "_audio": "assets/audio/o/f709e78adc.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_34_q3_v0.ogg"
@@ -655,9 +655,9 @@
           "prompt": "Quick! What does each sprite need to know about itself?",
           "options": [
             {
-              "text": "Its astrological sign.",
+              "text": "Its star sign.",
               "correct": false,
-              "_audio": "assets/audio/o/f5a108abca.ogg"
+              "_audio": "assets/audio/o/f709e78adc.ogg"
             },
             {
               "text": "How many siblings it has.",
@@ -686,9 +686,9 @@
               "_audio": "assets/audio/o/96b1a9d68a.ogg"
             },
             {
-              "text": "Its astrological sign.",
+              "text": "Its star sign.",
               "correct": false,
-              "_audio": "assets/audio/o/f5a108abca.ogg"
+              "_audio": "assets/audio/o/f709e78adc.ogg"
             },
             {
               "text": "Its favorite vegetable.",
@@ -717,9 +717,9 @@
               "_audio": "assets/audio/o/89d30c8535.ogg"
             },
             {
-              "text": "Maybe its astrological sign.",
+              "text": "Maybe its star sign.",
               "correct": false,
-              "_audio": "assets/audio/o/869ef1dbfe.ogg"
+              "_audio": "assets/audio/o/5fe235635e.ogg"
             },
             {
               "text": "Where it is on screen + which costume to wear.",
@@ -743,9 +743,9 @@
               "_audio": "assets/audio/o/30f432ebe9.ogg"
             },
             {
-              "text": "Its astrological sign (no way)",
+              "text": "Its star sign (no way)",
               "correct": false,
-              "_audio": "assets/audio/o/82eb6a00a3.ogg"
+              "_audio": "assets/audio/o/618e0e1f29.ogg"
             },
             {
               "text": "Where it is on screen + which costume to wear.",
@@ -790,9 +790,9 @@
               "_audio": "assets/audio/o/96b1a9d68a.ogg"
             },
             {
-              "text": "Maybe its astrological sign.",
+              "text": "Maybe its star sign.",
               "correct": false,
-              "_audio": "assets/audio/o/869ef1dbfe.ogg"
+              "_audio": "assets/audio/o/5fe235635e.ogg"
             },
             {
               "text": "Its favorite vegetable... right?",
@@ -811,9 +811,9 @@
           "prompt": "Listen up — What does each sprite need to know about itself?",
           "options": [
             {
-              "text": "Its astrological sign (no way)",
+              "text": "Its star sign (no way)",
               "correct": false,
-              "_audio": "assets/audio/o/82eb6a00a3.ogg"
+              "_audio": "assets/audio/o/618e0e1f29.ogg"
             },
             {
               "text": "Rumor: its favorite vegetable.",
@@ -847,9 +847,9 @@
               "_audio": "assets/audio/o/89d30c8535.ogg"
             },
             {
-              "text": "Maybe its astrological sign.",
+              "text": "Maybe its star sign.",
               "correct": false,
-              "_audio": "assets/audio/o/869ef1dbfe.ogg"
+              "_audio": "assets/audio/o/5fe235635e.ogg"
             },
             {
               "text": "Its favorite vegetable... right?",
@@ -868,9 +868,9 @@
               "_audio": "assets/audio/o/30f432ebe9.ogg"
             },
             {
-              "text": "Its astrological sign (no way)",
+              "text": "Its star sign (no way)",
               "correct": false,
-              "_audio": "assets/audio/o/82eb6a00a3.ogg"
+              "_audio": "assets/audio/o/618e0e1f29.ogg"
             },
             {
               "text": "Rumor: its favorite vegetable.",
@@ -1360,7 +1360,7 @@
           "_audio": "assets/audio/q/lesson_34_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about sprites and costumes?",
+          "prompt": "Several sprites use one costume. Is that allowed?",
           "options": [
             {
               "text": "Each sprite has 1,000 costumes by default.",
@@ -1812,31 +1812,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "equalities",
+      "math_skill": "measurement",
+      "math_level": "Grade 2 practice",
+      "math_tip": "To find how much longer, subtract the shorter length from the longer length.",
+      "math_tip_audio": "assets/audio/o/48c1edb920.ogg",
       "variations": [
         {
-          "prompt": "Make both sides equal: 9 plus 3 equals 7 plus what?",
+          "prompt": "A toy train is 12 inches long. Another is 14 inches. How many inches longer is the second one?",
           "_audio": "assets/audio/q/lesson_34_math1_v0.ogg",
           "options": [
+            {
+              "text": "0",
+              "correct": false,
+              "_audio": "assets/audio/o/b6589fc6ab.ogg"
+            },
+            {
+              "text": "2",
+              "correct": true,
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
+            },
+            {
+              "text": "5",
+              "correct": false,
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
+            },
             {
               "text": "4",
               "correct": false,
               "_audio": "assets/audio/o/1b64538924.ogg"
-            },
-            {
-              "text": "7",
-              "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "5",
-              "correct": true,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
-            },
-            {
-              "text": "10",
-              "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
             }
           ]
         }
@@ -1845,31 +1848,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "skip-count-by-2",
+      "math_skill": "equalities",
+      "math_level": "Grade 2 practice",
+      "math_tip": "The equal sign means both sides have the same value.",
+      "math_tip_audio": "assets/audio/o/693bc48ad3.ogg",
       "variations": [
         {
-          "prompt": "Count by 2s: 0, 2, 4. What comes next?",
+          "prompt": "Make both sides equal: 9 plus 6 equals 9 plus what?",
           "_audio": "assets/audio/q/lesson_34_math2_v0.ogg",
           "options": [
-            {
-              "text": "5",
-              "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
-            },
-            {
-              "text": "6",
-              "correct": true,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
-            },
             {
               "text": "4",
               "correct": false,
               "_audio": "assets/audio/o/1b64538924.ogg"
             },
             {
-              "text": "7",
+              "text": "11",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
+              "_audio": "assets/audio/o/17ba079149.ogg"
+            },
+            {
+              "text": "8",
+              "correct": false,
+              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+            },
+            {
+              "text": "6",
+              "correct": true,
+              "_audio": "assets/audio/o/c1dfd96eea.ogg"
             }
           ]
         }
@@ -1878,31 +1884,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "build-a-number",
+      "math_skill": "data",
+      "math_level": "Grade 2 practice",
+      "math_tip": "Read the labels, then add for a total or subtract to compare.",
+      "math_tip_audio": "assets/audio/o/ad4c1d6f14.ogg",
       "variations": [
         {
-          "prompt": "What number has 2 tens and 9 ones?",
+          "prompt": "A picture graph shows 7 red votes and 4 blue votes. How many votes altogether?",
           "_audio": "assets/audio/q/lesson_34_math3_v0.ogg",
           "options": [
             {
-              "text": "28",
+              "text": "10",
               "correct": false,
-              "_audio": "assets/audio/o/0a57cb53ba.ogg"
+              "_audio": "assets/audio/o/b1d5781111.ogg"
             },
             {
-              "text": "29",
+              "text": "16",
+              "correct": false,
+              "_audio": "assets/audio/o/1574bddb75.ogg"
+            },
+            {
+              "text": "11",
               "correct": true,
-              "_audio": "assets/audio/o/7719a1c782.ogg"
+              "_audio": "assets/audio/o/17ba079149.ogg"
             },
             {
-              "text": "27",
+              "text": "13",
               "correct": false,
-              "_audio": "assets/audio/o/bc33ea4e26.ogg"
-            },
-            {
-              "text": "26",
-              "correct": false,
-              "_audio": "assets/audio/o/887309d048.ogg"
+              "_audio": "assets/audio/o/bd307a3ec3.ogg"
             }
           ]
         }

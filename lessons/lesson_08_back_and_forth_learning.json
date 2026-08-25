@@ -960,9 +960,9 @@
               "_audio": "assets/audio/o/4aa7456d7e.ogg"
             },
             {
-              "text": "AI learns by reading dictionaries in its sleep.",
+              "text": "AI learns by reading word books in its sleep.",
               "correct": true,
-              "_audio": "assets/audio/o/b1833edfd8.ogg"
+              "_audio": "assets/audio/o/927f59e5c5.ogg"
             },
             {
               "text": "We learn by trying, missing, and trying again.",
@@ -1293,9 +1293,9 @@
               "_audio": "assets/audio/o/c0d8b41894.ogg"
             },
             {
-              "text": "AI learns by reading dictionaries in its sleep.",
+              "text": "AI learns by reading word books in its sleep.",
               "correct": false,
-              "_audio": "assets/audio/o/b1833edfd8.ogg"
+              "_audio": "assets/audio/o/927f59e5c5.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_08_q5_v4.ogg"
@@ -1353,7 +1353,7 @@
           "_audio": "assets/audio/q/lesson_08_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about back-and-forth learning?",
+          "prompt": "The first try failed. Which feedback habit helps the next try?",
           "options": [
             {
               "text": "AI only learns when nobody is watching.",
@@ -1382,9 +1382,9 @@
           "prompt": "Quick! Which one is TRUE about back-and-forth learning?",
           "options": [
             {
-              "text": "AI learns by reading dictionaries in its sleep.",
+              "text": "AI learns by reading word books in its sleep.",
               "correct": false,
-              "_audio": "assets/audio/o/b1833edfd8.ogg"
+              "_audio": "assets/audio/o/927f59e5c5.ogg"
             },
             {
               "text": "Practice makes things harder and gives you a beard.",
@@ -1435,21 +1435,24 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "compare-numbers",
+      "math_skill": "compare-within-100",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "Compare tens first. If the tens match, compare the ones.",
+      "math_tip_audio": "assets/audio/o/827d4d0734.ogg",
       "variations": [
         {
-          "prompt": "Which number is bigger: 10 or 4?",
+          "prompt": "Which number is bigger: 32 or 94?",
           "_audio": "assets/audio/q/lesson_08_math1_v0.ogg",
           "options": [
             {
-              "text": "10",
-              "correct": true,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "text": "32",
+              "correct": false,
+              "_audio": "assets/audio/o/cb4e5208b4.ogg"
             },
             {
-              "text": "4",
-              "correct": false,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "text": "94",
+              "correct": true,
+              "_audio": "assets/audio/o/215bb47da8.ogg"
             }
           ]
         }
@@ -1458,31 +1461,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "addition-to-10",
+      "math_skill": "place-value-2-digit",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "The left digit tells the tens; the right digit tells the ones.",
+      "math_tip_audio": "assets/audio/o/2eff40e2d7.ogg",
       "variations": [
         {
-          "prompt": "What is 9 plus 0?",
+          "prompt": "In the number 59, how many tens are there?",
           "_audio": "assets/audio/q/lesson_08_math2_v0.ogg",
           "options": [
             {
-              "text": "8",
+              "text": "6",
               "correct": false,
-              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+              "_audio": "assets/audio/o/c1dfd96eea.ogg"
             },
             {
-              "text": "11",
+              "text": "3",
               "correct": false,
-              "_audio": "assets/audio/o/17ba079149.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
             },
             {
-              "text": "7",
-              "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "9",
+              "text": "5",
               "correct": true,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
+            },
+            {
+              "text": "10",
+              "correct": false,
+              "_audio": "assets/audio/o/b1d5781111.ogg"
             }
           ]
         }
@@ -1491,31 +1497,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "counting-on",
+      "math_skill": "shape-sides",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "Trace the straight edges one at a time and count each edge once.",
+      "math_tip_audio": "assets/audio/o/e788f96223.ogg",
       "variations": [
         {
-          "prompt": "Start at 7 and count up 2. Where do you land?",
+          "prompt": "How many sides does a triangle have?",
           "_audio": "assets/audio/q/lesson_08_math3_v0.ogg",
           "options": [
             {
-              "text": "9",
+              "text": "3",
               "correct": true,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
             },
             {
-              "text": "10",
+              "text": "4",
               "correct": false,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "_audio": "assets/audio/o/1b64538924.ogg"
             },
             {
-              "text": "12",
+              "text": "5",
               "correct": false,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
             },
             {
-              "text": "6",
+              "text": "2",
               "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
             }
           ]
         }

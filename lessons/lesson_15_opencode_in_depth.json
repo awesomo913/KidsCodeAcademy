@@ -964,9 +964,9 @@
           "prompt": "Pop quiz! One of these is silly! Pick the WRONG one about OpenCode in depth.",
           "options": [
             {
-              "text": "Anyone can suggest improvements.",
+              "text": "Anyone can suggest better changes.",
               "correct": false,
-              "_audio": "assets/audio/o/f358a16b53.ogg"
+              "_audio": "assets/audio/o/0b608401ee.ogg"
             },
             {
               "text": "Open source means anyone can read and use the code for free.",
@@ -1031,9 +1031,9 @@
               "_audio": "assets/audio/o/d6bb6678dc.ogg"
             },
             {
-              "text": "Anyone can suggest improvements.",
+              "text": "Anyone can suggest better changes.",
               "correct": false,
-              "_audio": "assets/audio/o/f358a16b53.ogg"
+              "_audio": "assets/audio/o/0b608401ee.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_15_q4_v5.ogg"
@@ -1078,9 +1078,9 @@
               "_audio": "assets/audio/o/532d28de87.ogg"
             },
             {
-              "text": "Anyone can suggest improvements.",
+              "text": "Anyone can suggest better changes.",
               "correct": false,
-              "_audio": "assets/audio/o/f358a16b53.ogg"
+              "_audio": "assets/audio/o/0b608401ee.ogg"
             },
             {
               "text": "Open tools turn off at sunset like fireflies.",
@@ -1328,9 +1328,9 @@
               "_audio": "assets/audio/o/5dcc9dc269.ogg"
             },
             {
-              "text": "Anyone can suggest improvements.",
+              "text": "Anyone can suggest better changes.",
               "correct": true,
-              "_audio": "assets/audio/o/f358a16b53.ogg"
+              "_audio": "assets/audio/o/0b608401ee.ogg"
             },
             {
               "text": "Open helpers wear bright open-toed shoes.",
@@ -1341,7 +1341,7 @@
           "_audio": "assets/audio/q/lesson_15_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about OpenCode in depth?",
+          "prompt": "Why can people inspect and improve an open tool?",
           "options": [
             {
               "text": "Open helpers wear bright open-toed shoes.",
@@ -2057,9 +2057,9 @@
               "_audio": "assets/audio/o/5dcc9dc269.ogg"
             },
             {
-              "text": "Anyone can suggest improvements.",
+              "text": "Anyone can suggest better changes.",
               "correct": true,
-              "_audio": "assets/audio/o/f358a16b53.ogg"
+              "_audio": "assets/audio/o/0b608401ee.ogg"
             }
           ],
           "_audio": "assets/audio/q/lesson_15_q8_v9.ogg"
@@ -2069,31 +2069,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "subtraction-to-20",
+      "math_skill": "skip-count",
+      "math_level": "Grade 2 core",
+      "math_tip": "Look for the same amount being added each time.",
+      "math_tip_audio": "assets/audio/o/d202673254.ogg",
       "variations": [
         {
-          "prompt": "What is 18 minus 6?",
+          "prompt": "Count by 10s: 10, 20, 30. What comes next?",
           "_audio": "assets/audio/q/lesson_15_math1_v0.ogg",
           "options": [
             {
-              "text": "17",
+              "text": "41",
               "correct": false,
-              "_audio": "assets/audio/o/0716d9708d.ogg"
+              "_audio": "assets/audio/o/761f22b2c1.ogg"
             },
             {
-              "text": "9",
+              "text": "39",
               "correct": false,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+              "_audio": "assets/audio/o/ca3512f4df.ogg"
             },
             {
-              "text": "11",
+              "text": "37",
               "correct": false,
-              "_audio": "assets/audio/o/17ba079149.ogg"
+              "_audio": "assets/audio/o/cb7a1d775e.ogg"
             },
             {
-              "text": "12",
+              "text": "40",
               "correct": true,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
+              "_audio": "assets/audio/o/af3e133428.ogg"
             }
           ]
         }
@@ -2102,31 +2105,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "doubles",
+      "math_skill": "time",
+      "math_level": "Grade 2 core",
+      "math_tip": "Count minutes forward in jumps of five, then check the hour.",
+      "math_tip_audio": "assets/audio/o/afbdad225c.ogg",
       "variations": [
         {
-          "prompt": "What is 5 plus 5?",
+          "prompt": "The clock says 5:30. Which answer tells the time?",
           "_audio": "assets/audio/q/lesson_15_math2_v0.ogg",
           "options": [
             {
-              "text": "13",
+              "text": "6 o'clock",
               "correct": false,
-              "_audio": "assets/audio/o/bd307a3ec3.ogg"
+              "_audio": "assets/audio/o/d0184894f1.ogg"
             },
             {
-              "text": "12",
+              "text": "5 o'clock",
               "correct": false,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
+              "_audio": "assets/audio/o/4813ef46ae.ogg"
             },
             {
-              "text": "7",
-              "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "10",
+              "text": "half past 5",
               "correct": true,
-              "_audio": "assets/audio/o/b1d5781111.ogg"
+              "_audio": "assets/audio/o/8eae4ae900.ogg"
+            },
+            {
+              "text": "half past 6",
+              "correct": false,
+              "_audio": "assets/audio/o/06439a73d4.ogg"
             }
           ]
         }
@@ -2135,31 +2141,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "missing-addend",
+      "math_skill": "money",
+      "math_level": "Grade 2 core",
+      "math_tip": "A dime is 10 cents, a nickel is 5, and a penny is 1. Add each value.",
+      "math_tip_audio": "assets/audio/o/a6320bb4b5.ogg",
       "variations": [
         {
-          "prompt": "8 plus what makes 10?",
+          "prompt": "You have 1 dime, 5 pennies. How many cents is that?",
           "_audio": "assets/audio/q/lesson_15_math3_v0.ogg",
           "options": [
             {
-              "text": "0",
+              "text": "17 cents",
               "correct": false,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
+              "_audio": "assets/audio/o/a6e0740713.ogg"
             },
             {
-              "text": "2",
+              "text": "15 cents",
               "correct": true,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/01feea5b45.ogg"
             },
             {
-              "text": "5",
+              "text": "12 cents",
               "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/2000c226bf.ogg"
             },
             {
-              "text": "7",
+              "text": "20 cents",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
+              "_audio": "assets/audio/o/a70b8edfd8.ogg"
             }
           ]
         }

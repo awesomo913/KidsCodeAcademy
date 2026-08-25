@@ -1338,7 +1338,7 @@
           "_audio": "assets/audio/q/lesson_21_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about one at a time?",
+          "prompt": "A big change feels risky. Why split it into tiny steps?",
           "options": [
             {
               "text": "The AI works faster if you write one giant sentence.",
@@ -1432,7 +1432,7 @@
       },
       "variations": [
         {
-          "prompt": "You want to: pick a hero, name them, and choose their power. What's the smart way?",
+          "prompt": "Pick a hero, name, and power. What is the smart way to work?",
           "options": [
             {
               "text": "Do them all at midnight.",
@@ -1458,7 +1458,7 @@
           "_audio": "assets/audio/q/lesson_21_q6_v0.ogg"
         },
         {
-          "prompt": "Quick! You want to: pick a hero, name them, and choose their power. What's the smart way?",
+          "prompt": "Quick! Pick a hero, name, and power. What is the smart way to work?",
           "options": [
             {
               "text": "Do them all at midnight.",
@@ -1484,7 +1484,7 @@
           "_audio": "assets/audio/q/lesson_21_q6_v1.ogg"
         },
         {
-          "prompt": "Hey friend — You want to: pick a hero, name them, and choose their power. What's the smart way?",
+          "prompt": "Hey friend — Pick a hero, name, and power. What is the smart way to work?",
           "options": [
             {
               "text": "Ask all three in one breath.",
@@ -1510,7 +1510,7 @@
           "_audio": "assets/audio/q/lesson_21_q6_v2.ogg"
         },
         {
-          "prompt": "Bytey wonders: You want to: pick a hero, name them, and choose their power. What's the smart way?",
+          "prompt": "Bytey wonders: Pick a hero, name, and power. What is the smart way to work?",
           "options": [
             {
               "text": "I think do them all at midnight.",
@@ -1536,7 +1536,7 @@
           "_audio": "assets/audio/q/lesson_21_q6_v3.ogg"
         },
         {
-          "prompt": "Tell me — You want to: pick a hero, name them, and choose their power. What's the smart way?",
+          "prompt": "Tell me — Pick a hero, name, and power. What is the smart way to work?",
           "options": [
             {
               "text": "Do them all at midnight... right?",
@@ -1562,7 +1562,7 @@
           "_audio": "assets/audio/q/lesson_21_q6_v4.ogg"
         },
         {
-          "prompt": "Wait wait wait — You want to: pick a hero, name them, and choose their power. What's the smart way?",
+          "prompt": "Wait wait wait — Pick a hero, name, and power. What is the smart way to work?",
           "options": [
             {
               "text": "Ask one thing first, then move to the next.",
@@ -1588,7 +1588,7 @@
           "_audio": "assets/audio/q/lesson_21_q6_v5.ogg"
         },
         {
-          "prompt": "Pop quiz! You want to: pick a hero, name them, and choose their power. What's the smart way?",
+          "prompt": "Pop quiz! Pick a hero, name, and power. What is the smart way to work?",
           "options": [
             {
               "text": "Maybe ask all three in one breath.",
@@ -1614,7 +1614,7 @@
           "_audio": "assets/audio/q/lesson_21_q6_v6.ogg"
         },
         {
-          "prompt": "Listen up — You want to: pick a hero, name them, and choose their power. What's the smart way?",
+          "prompt": "Listen up — Pick a hero, name, and power. What is the smart way to work?",
           "options": [
             {
               "text": "Ask one thing first, then move to the next.",
@@ -1640,7 +1640,7 @@
           "_audio": "assets/audio/q/lesson_21_q6_v7.ogg"
         },
         {
-          "prompt": "Think about this: You want to: pick a hero, name them, and choose their power. What's the smart way?",
+          "prompt": "Think about this: Pick a hero, name, and power. What is the smart way to work?",
           "options": [
             {
               "text": "Skip naming and rush — for real?",
@@ -1666,7 +1666,7 @@
           "_audio": "assets/audio/q/lesson_21_q6_v8.ogg"
         },
         {
-          "prompt": "Got a quick one: You want to: pick a hero, name them, and choose their power. What's the smart way?",
+          "prompt": "Got a quick one: Pick a hero, name, and power. What is the smart way to work?",
           "options": [
             {
               "text": "Ask one thing first, then move to the next.",
@@ -1696,21 +1696,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "even-and-odd",
+      "math_skill": "time",
+      "math_level": "Grade 2 core",
+      "math_tip": "Count minutes forward in jumps of five, then check the hour.",
+      "math_tip_audio": "assets/audio/o/afbdad225c.ogg",
       "variations": [
         {
-          "prompt": "Is 25 even or odd?",
+          "prompt": "The clock says 9:30. Which answer tells the time?",
           "_audio": "assets/audio/q/lesson_21_math1_v0.ogg",
           "options": [
             {
-              "text": "odd",
+              "text": "half past 9",
               "correct": true,
-              "_audio": "assets/audio/o/60f7a51208.ogg"
+              "_audio": "assets/audio/o/3641799df2.ogg"
             },
             {
-              "text": "even",
+              "text": "9 o'clock",
               "correct": false,
-              "_audio": "assets/audio/o/04b8c80bb7.ogg"
+              "_audio": "assets/audio/o/92a7c7d733.ogg"
+            },
+            {
+              "text": "half past 10",
+              "correct": false,
+              "_audio": "assets/audio/o/7a1dc9dcd5.ogg"
+            },
+            {
+              "text": "10 o'clock",
+              "correct": false,
+              "_audio": "assets/audio/o/f8da185abe.ogg"
             }
           ]
         }
@@ -1719,31 +1732,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "addition-to-20",
+      "math_skill": "money",
+      "math_level": "Grade 2 core",
+      "math_tip": "A dime is 10 cents, a nickel is 5, and a penny is 1. Add each value.",
+      "math_tip_audio": "assets/audio/o/a6320bb4b5.ogg",
       "variations": [
         {
-          "prompt": "What is 0 plus 14?",
+          "prompt": "You have 1 nickel, 6 pennies. How many cents is that?",
           "_audio": "assets/audio/q/lesson_21_math2_v0.ogg",
           "options": [
             {
-              "text": "14",
+              "text": "10 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/2ee56f7383.ogg"
+            },
+            {
+              "text": "16 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/58b2bc68af.ogg"
+            },
+            {
+              "text": "11 cents",
               "correct": true,
-              "_audio": "assets/audio/o/fa35e19212.ogg"
+              "_audio": "assets/audio/o/4b232622cb.ogg"
             },
             {
-              "text": "12",
+              "text": "12 cents",
               "correct": false,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
-            },
-            {
-              "text": "19",
-              "correct": false,
-              "_audio": "assets/audio/o/b3f0c7f6bb.ogg"
-            },
-            {
-              "text": "13",
-              "correct": false,
-              "_audio": "assets/audio/o/bd307a3ec3.ogg"
+              "_audio": "assets/audio/o/2000c226bf.ogg"
             }
           ]
         }
@@ -1752,31 +1768,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "subtraction-to-20",
+      "math_skill": "money",
+      "math_level": "Grade 2 core",
+      "math_tip": "A dime is 10 cents, a nickel is 5, and a penny is 1. Add each value.",
+      "math_tip_audio": "assets/audio/o/a6320bb4b5.ogg",
       "variations": [
         {
-          "prompt": "What is 4 minus 2?",
+          "prompt": "You have 3 dimes, 3 nickels, 6 pennies. How many cents is that?",
           "_audio": "assets/audio/q/lesson_21_math3_v0.ogg",
           "options": [
             {
-              "text": "1",
+              "text": "50 cents",
               "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "_audio": "assets/audio/o/546793b809.ogg"
             },
             {
-              "text": "7",
-              "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "2",
+              "text": "51 cents",
               "correct": true,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/fa7f610329.ogg"
             },
             {
-              "text": "0",
+              "text": "54 cents",
               "correct": false,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
+              "_audio": "assets/audio/o/6f2412c371.ogg"
+            },
+            {
+              "text": "49 cents",
+              "correct": false,
+              "_audio": "assets/audio/o/a413d8171e.ogg"
             }
           ]
         }

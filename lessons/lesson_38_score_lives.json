@@ -264,9 +264,9 @@
               "_audio": "assets/audio/o/4d24d95986.ogg"
             },
             {
-              "text": "Score must be shown in interpretive dance.",
+              "text": "Score must be shown in a dance routine.",
               "correct": false,
-              "_audio": "assets/audio/o/39f5ca5357.ogg"
+              "_audio": "assets/audio/o/ca0cb4636c.ogg"
             },
             {
               "text": "Score and lives are usually shown together.",
@@ -316,9 +316,9 @@
               "_audio": "assets/audio/o/f765fa225e.ogg"
             },
             {
-              "text": "Score must be shown in interpretive dance.",
+              "text": "Score must be shown in a dance routine.",
               "correct": false,
-              "_audio": "assets/audio/o/39f5ca5357.ogg"
+              "_audio": "assets/audio/o/ca0cb4636c.ogg"
             },
             {
               "text": "Lives are stored in a tiny safe somewhere.",
@@ -1113,9 +1113,9 @@
           "prompt": "One of these is silly! Pick the WRONG one about score and lives.",
           "options": [
             {
-              "text": "Score must be shown in interpretive dance.",
+              "text": "Score must be shown in a dance routine.",
               "correct": true,
-              "_audio": "assets/audio/o/39f5ca5357.ogg"
+              "_audio": "assets/audio/o/ca0cb4636c.ogg"
             },
             {
               "text": "We show the score on screen.",
@@ -1360,7 +1360,7 @@
           "_audio": "assets/audio/q/lesson_38_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about score and lives?",
+          "prompt": "Where do games often show score and lives?",
           "options": [
             {
               "text": "If your score gets too high, the game gets jealous.",
@@ -1813,21 +1813,14 @@
       "id": "math1",
       "skipGate": true,
       "math_skill": "fractions",
+      "math_level": "Grade 2 mastery",
+      "math_tip": "Equal parts must be the same size. The bottom number tells how many equal parts.",
+      "math_tip_audio": "assets/audio/o/cab1a26ce8.ogg",
       "variations": [
         {
-          "prompt": "A sandwich is split into 2 equal parts. What is one part called?",
+          "prompt": "A paper circle is split into 2 equal parts. What is one part called?",
           "_audio": "assets/audio/q/lesson_38_math1_v0.ogg",
           "options": [
-            {
-              "text": "one whole",
-              "correct": false,
-              "_audio": "assets/audio/o/f0e421bd49.ogg"
-            },
-            {
-              "text": "one third",
-              "correct": false,
-              "_audio": "assets/audio/o/fbac955eac.ogg"
-            },
             {
               "text": "one half",
               "correct": true,
@@ -1837,6 +1830,16 @@
               "text": "one fourth",
               "correct": false,
               "_audio": "assets/audio/o/fd031c00c3.ogg"
+            },
+            {
+              "text": "one whole",
+              "correct": false,
+              "_audio": "assets/audio/o/f0e421bd49.ogg"
+            },
+            {
+              "text": "one third",
+              "correct": false,
+              "_audio": "assets/audio/o/fbac955eac.ogg"
             }
           ]
         }
@@ -1845,31 +1848,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "measurement",
+      "math_skill": "area",
+      "math_level": "Grade 2 mastery",
+      "math_tip": "Area counts square tiles inside a shape: rows times columns.",
+      "math_tip_audio": "assets/audio/o/e079c1ea47.ogg",
       "variations": [
         {
-          "prompt": "A ribbon is 5 inches long. Another is 7 inches. How many inches longer is the second one?",
+          "prompt": "A rectangle has 3 rows of 3 square tiles. What is its area?",
           "_audio": "assets/audio/q/lesson_38_math2_v0.ogg",
           "options": [
             {
-              "text": "3",
+              "text": "7 square units",
               "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "_audio": "assets/audio/o/bfba267b7c.ogg"
             },
             {
-              "text": "7",
+              "text": "10 square units",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
+              "_audio": "assets/audio/o/a30a740930.ogg"
             },
             {
-              "text": "4",
-              "correct": false,
-              "_audio": "assets/audio/o/1b64538924.ogg"
-            },
-            {
-              "text": "2",
+              "text": "9 square units",
               "correct": true,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/3f357efd2b.ogg"
+            },
+            {
+              "text": "14 square units",
+              "correct": false,
+              "_audio": "assets/audio/o/e57f3301ba.ogg"
             }
           ]
         }
@@ -1878,31 +1884,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "subtraction-word-problem",
+      "math_skill": "perimeter",
+      "math_level": "Grade 2 mastery",
+      "math_tip": "Perimeter is the distance around. Add all four sides.",
+      "math_tip_audio": "assets/audio/o/ac3ba37561.ogg",
       "variations": [
         {
-          "prompt": "There are 3 ducks. 1 swim off. How many are left?",
+          "prompt": "A rectangle is 8 units long and 7 units wide. What is its perimeter?",
           "_audio": "assets/audio/q/lesson_38_math3_v0.ogg",
           "options": [
             {
-              "text": "5",
+              "text": "29 units",
               "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/14619daa8a.ogg"
             },
             {
-              "text": "2",
+              "text": "32 units",
+              "correct": false,
+              "_audio": "assets/audio/o/9f8b923195.ogg"
+            },
+            {
+              "text": "30 units",
               "correct": true,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/eec6bde38d.ogg"
             },
             {
-              "text": "7",
+              "text": "27 units",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "4",
-              "correct": false,
-              "_audio": "assets/audio/o/1b64538924.ogg"
+              "_audio": "assets/audio/o/be26027f50.ogg"
             }
           ]
         }

@@ -607,7 +607,7 @@
       },
       "variations": [
         {
-          "prompt": "What is the best way to ask Claude for help with a math game?",
+          "prompt": "You want Claude to build a math game. Which request gives it a clear job?",
           "options": [
             {
               "text": "Tell Claude exactly what the math game should do.",
@@ -1341,7 +1341,7 @@
           "_audio": "assets/audio/q/lesson_02_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about talking to Claude?",
+          "prompt": "Bytey says please but gives no details. Which fact should he remember?",
           "options": [
             {
               "text": "Claude can read what you're THINKING if you concentrate.",
@@ -1711,7 +1711,7 @@
       },
       "variations": [
         {
-          "prompt": "You want help writing a birthday card. What's the best thing to type to your helper?",
+          "prompt": "You need help with a birthday card. Which request is clearest?",
           "_audio": "assets/audio/q/lesson_02_q7_v0.ogg",
           "options": [
             {
@@ -1737,7 +1737,7 @@
           ]
         },
         {
-          "prompt": "Quick! You want help writing a birthday card. What's the best thing to type to your helper?",
+          "prompt": "Quick! You need help with a birthday card. Which request is clearest?",
           "_audio": "assets/audio/q/lesson_02_q7_v1.ogg",
           "options": [
             {
@@ -1763,7 +1763,7 @@
           ]
         },
         {
-          "prompt": "Bytey wonders: You want help writing a birthday card. What's the best thing to type to your helper?",
+          "prompt": "Bytey wonders: You need help with a birthday card. Which request is clearest?",
           "_audio": "assets/audio/q/lesson_02_q7_v2.ogg",
           "options": [
             {
@@ -1793,31 +1793,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "subtraction-to-10",
+      "math_skill": "doubles",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "A double means two equal groups. Add the same number twice.",
+      "math_tip_audio": "assets/audio/o/fce13a332d.ogg",
       "variations": [
         {
-          "prompt": "What is 3 minus 3?",
+          "prompt": "What is 4 plus 4?",
           "_audio": "assets/audio/q/lesson_02_math1_v0.ogg",
           "options": [
             {
-              "text": "0",
+              "text": "8",
               "correct": true,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
+              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
             },
             {
-              "text": "3",
+              "text": "7",
               "correct": false,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "_audio": "assets/audio/o/902ba3cda1.ogg"
             },
             {
-              "text": "1",
+              "text": "9",
               "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
             },
             {
-              "text": "2",
+              "text": "5",
               "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
             }
           ]
         }
@@ -1826,21 +1829,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "compare-numbers",
+      "math_skill": "missing-addend",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "Count up from the first number until you reach the total.",
+      "math_tip_audio": "assets/audio/o/fa78af0034.ogg",
       "variations": [
         {
-          "prompt": "Which number is bigger: 9 or 3?",
+          "prompt": "10 plus what makes 16?",
           "_audio": "assets/audio/q/lesson_02_math2_v0.ogg",
           "options": [
             {
-              "text": "9",
-              "correct": true,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+              "text": "8",
+              "correct": false,
+              "_audio": "assets/audio/o/fe5dbbcea5.ogg"
+            },
+            {
+              "text": "4",
+              "correct": false,
+              "_audio": "assets/audio/o/1b64538924.ogg"
             },
             {
               "text": "3",
               "correct": false,
               "_audio": "assets/audio/o/77de68daec.ogg"
+            },
+            {
+              "text": "6",
+              "correct": true,
+              "_audio": "assets/audio/o/c1dfd96eea.ogg"
             }
           ]
         }
@@ -1849,31 +1865,24 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "doubles",
+      "math_skill": "compare-within-100",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "Compare tens first. If the tens match, compare the ones.",
+      "math_tip_audio": "assets/audio/o/827d4d0734.ogg",
       "variations": [
         {
-          "prompt": "What is 1 plus 1?",
+          "prompt": "Which number is bigger: 56 or 82?",
           "_audio": "assets/audio/q/lesson_02_math3_v0.ogg",
           "options": [
             {
-              "text": "2",
+              "text": "82",
               "correct": true,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/76546f9a64.ogg"
             },
             {
-              "text": "7",
+              "text": "56",
               "correct": false,
-              "_audio": "assets/audio/o/902ba3cda1.ogg"
-            },
-            {
-              "text": "1",
-              "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
-            },
-            {
-              "text": "5",
-              "correct": false,
-              "_audio": "assets/audio/o/ac3478d69a.ogg"
+              "_audio": "assets/audio/o/54ceb91256.ogg"
             }
           ]
         }

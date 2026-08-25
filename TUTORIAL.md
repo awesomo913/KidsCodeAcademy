@@ -1,5 +1,5 @@
 # Kids Code Academy — Tutorial
-**Last updated:** 2026-08-25 (v0.8.0)
+**Last updated:** 2026-08-25 (v0.9.0)
 
 ---
 
@@ -34,7 +34,9 @@ That's it — no install, no setup, no internet.
 - **Gotchas** — authored narration uses pre-baked Piper OGG clips. Missing clips fall back gracefully; regenerate them with the scripts in `scripts/` before rebuilding.
 
 ### Mini-games
-Lessons mix quizzes, matching, ordering, typing, block-building, simulated tool conversations, game-design activities, review questions, and a short math minute. Every lesson has three math questions covering 26 skills such as place value, time, money, fractions, graphs, measurement, repeated addition, and fair sharing.
+Lessons mix quizzes, matching, ordering, typing, block-building, simulated tool conversations, game-design activities, review questions, and a short math minute. Every lesson has three unique math questions across 34 skills. Lessons 1–48 build and master Grade 2 foundations; Lessons 49–60 gently bridge into early Grade 3. **Show me how** reads and displays a strategy, and appears automatically after two wrong tries.
+
+Important coding words also appear in **Word Power** cards with a plain-language definition and speaker button.
 
 ### Pretend "Claude / Cursor / Gemini" chat
 - **What it does** — Lessons 2 and 8 give the kid a chat box that looks like a real AI helper.
@@ -47,7 +49,7 @@ Lessons mix quizzes, matching, ordering, typing, block-building, simulated tool 
 - **Result** — project JSON and a printable HTML card land in `%APPDATA%\KidsCodeAcademy\kid_projects\` and appear in Parent Corner → Projects.
 
 ### Chess break
-- **What it does** — offers a friendly 15-minute chess game after the current lesson. It includes a timer, hints, restart, and exit controls.
+- **What it does** — offers a friendly 15-minute chess game after the current lesson. It enforces check, checkmate, stalemate, castling, en passant, and promotion, and includes legal-move hints, short piece lessons, a timer, restart, and exit controls.
 - **Gotcha** — it is deliberately a beginner-friendly opponent, not a tournament chess engine.
 
 ### Parent Corner
@@ -94,6 +96,13 @@ Lessons mix quizzes, matching, ordering, typing, block-building, simulated tool 
 - **Q: Is this a real Claude?** A: No, and intentionally so. It's a sandbox that simulates the experience without internet access.
 
 ## 6. Changelog (user-facing)
+
+### 2026-08-25 — v0.9.0
+- Polished: all flagged long prompts, repeated prompt templates, and fragment answers were rewritten and re-recorded.
+- Expanded: 180 unique math questions across 34 skills, sequenced from Grade 2 foundations to an early Grade 3 bridge, with visible and read-aloud strategies.
+- Added: Word Power cards that explain and read important coding terms aloud.
+- Rebuilt: chess now enforces complete legal rules and offers useful legal-move hints plus piece lessons.
+- Improved: chess and learning controls fit shorter screens and remain keyboard accessible.
 
 ### 2026-08-25 — v0.8.0
 - Added: clear parent controls for choosing a resume lesson or marking progress through a lesson.

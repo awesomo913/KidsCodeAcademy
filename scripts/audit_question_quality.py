@@ -53,7 +53,9 @@ TEMPLATE_OPENERS = [
 
 
 def words(text: str) -> list[str]:
-    return re.findall(r"[A-Za-z][A-Za-z'-]*", text or "")
+    # Treat a friendly compound such as "back-and-forth" as three familiar
+    # words, not one 14-letter monster. Keep apostrophes inside contractions.
+    return re.findall(r"[A-Za-z]+(?:'[A-Za-z]+)?", text or "")
 
 
 def audit() -> dict:
@@ -71,6 +73,11 @@ def audit() -> dict:
 
     for f in sorted(LESSONS_DIR.glob("lesson_*.json")):
         data = json.loads(f.read_text(encoding="utf-8"))
+        glossary_words = {
+            token.lower()
+            for entry in data.get("vocabulary", [])
+            for token in words(str(entry.get("word", "")))
+        }
         totals["lessons"] += 1
         lid = f.name
         for q in data.get("questions", []):
@@ -92,7 +99,9 @@ def audit() -> dict:
 
                 for w in words(prompt) + [w for o in opts for w in words(str(o.get("text") or ""))]:
                     lw = w.lower()
-                    if (len(w) >= HARD_WORD_MIN or lw in JARGON) and lw not in {"everything", "something", "yourself"}:
+                    if ((len(w) >= HARD_WORD_MIN or lw in JARGON)
+                            and lw not in glossary_words
+                            and lw not in {"everything", "something", "yourself"}):
                         findings["hard_word"].append((where, w, prompt[:60]))
                         break
 

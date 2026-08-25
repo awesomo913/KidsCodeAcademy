@@ -1324,7 +1324,7 @@
           "_audio": "assets/audio/q/lesson_44_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about the level editor?",
+          "prompt": "Which control is common in a kid-friendly level editor?",
           "options": [
             {
               "text": "Level editors only edit one level then break.",
@@ -1406,31 +1406,34 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "money",
+      "math_skill": "arrays",
+      "math_level": "Grade 2 mastery",
+      "math_tip": "Rows are equal groups. Add each row or multiply rows by dots in each row.",
+      "math_tip_audio": "assets/audio/o/498299c93e.ogg",
       "variations": [
         {
-          "prompt": "You have 1 dime, 6 pennies. How many cents is that?",
+          "prompt": "An array has 5 rows of 5 dots. How many dots?",
           "_audio": "assets/audio/q/lesson_44_math1_v0.ogg",
           "options": [
             {
-              "text": "16 cents",
+              "text": "28",
+              "correct": false,
+              "_audio": "assets/audio/o/0a57cb53ba.ogg"
+            },
+            {
+              "text": "30",
+              "correct": false,
+              "_audio": "assets/audio/o/22d200f867.ogg"
+            },
+            {
+              "text": "25",
               "correct": true,
-              "_audio": "assets/audio/o/58b2bc68af.ogg"
+              "_audio": "assets/audio/o/f6e1126ced.ogg"
             },
             {
-              "text": "19 cents",
+              "text": "22",
               "correct": false,
-              "_audio": "assets/audio/o/995b7cc8bb.ogg"
-            },
-            {
-              "text": "14 cents",
-              "correct": false,
-              "_audio": "assets/audio/o/dd5884a9c8.ogg"
-            },
-            {
-              "text": "15 cents",
-              "correct": false,
-              "_audio": "assets/audio/o/01feea5b45.ogg"
+              "_audio": "assets/audio/o/12c6fc06c9.ogg"
             }
           ]
         }
@@ -1439,31 +1442,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "picture-graph",
+      "math_skill": "fair-sharing",
+      "math_level": "Grade 2 mastery",
+      "math_tip": "Deal one to each group again and again until none are left.",
+      "math_tip_audio": "assets/audio/o/aea4fef67a.ogg",
       "variations": [
         {
-          "prompt": "A picture graph shows 8 red votes and 7 blue votes. How many more votes did the winner get?",
+          "prompt": "Share 16 stickers equally among 4 kids. How many stickers does each kid get?",
           "_audio": "assets/audio/q/lesson_44_math2_v0.ogg",
           "options": [
             {
               "text": "4",
-              "correct": false,
+              "correct": true,
               "_audio": "assets/audio/o/1b64538924.ogg"
             },
             {
-              "text": "0",
+              "text": "9",
               "correct": false,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
+              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
             },
             {
-              "text": "2",
+              "text": "3",
               "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
             },
             {
-              "text": "1",
-              "correct": true,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "text": "7",
+              "correct": false,
+              "_audio": "assets/audio/o/902ba3cda1.ogg"
             }
           ]
         }
@@ -1473,11 +1479,19 @@
       "id": "math3",
       "skipGate": true,
       "math_skill": "fractions",
+      "math_level": "Grade 2 mastery",
+      "math_tip": "Equal parts must be the same size. The bottom number tells how many equal parts.",
+      "math_tip_audio": "assets/audio/o/cab1a26ce8.ogg",
       "variations": [
         {
-          "prompt": "A pizza is split into 4 equal parts. What is one part called?",
+          "prompt": "A paper circle is split into 4 equal parts. What is one part called?",
           "_audio": "assets/audio/q/lesson_44_math3_v0.ogg",
           "options": [
+            {
+              "text": "one third",
+              "correct": false,
+              "_audio": "assets/audio/o/fbac955eac.ogg"
+            },
             {
               "text": "one whole",
               "correct": false,
@@ -1489,11 +1503,6 @@
               "_audio": "assets/audio/o/fd031c00c3.ogg"
             },
             {
-              "text": "one third",
-              "correct": false,
-              "_audio": "assets/audio/o/fbac955eac.ogg"
-            },
-            {
               "text": "one half",
               "correct": false,
               "_audio": "assets/audio/o/2b526d5876.ogg"
@@ -1503,5 +1512,12 @@
       ]
     }
   ],
-  "schema": "v2"
+  "schema": "v2",
+  "vocabulary": [
+    {
+      "word": "iteration",
+      "meaning": "one round of building, testing, and improving",
+      "_audio": "assets/audio/o/a0e43cc55a.ogg"
+    }
+  ]
 }

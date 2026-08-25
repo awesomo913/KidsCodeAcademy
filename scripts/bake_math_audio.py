@@ -1,70 +1,66 @@
-"""Bake Piper audio for the Math Minute questions (id math*) only.
-
-Targeted + non-destructive (same approach as bake_q7_audio): touches just the
-math prompts and any missing number/word options, leaving all other audio and
-JSON alone. Synthesize to a temp WAV, encode to ogg/opus, delete temp. Retries
-on the transient Windows-Defender file lock.
-
-Run: python scripts/bake_math_audio.py
-"""
+"""Bake the complete Math Minute prompt set and any missing option audio."""
 from __future__ import annotations
 
 import json
-import logging
+import argparse
 import sys
-import tempfile
-import time
 from pathlib import Path
 
-logging.basicConfig(level=logging.INFO, format="%(message)s")
-log = logging.getLogger("bake-math")
-
 ROOT = Path(__file__).resolve().parent.parent
-LESSONS_DIR = ROOT / "lessons"
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from piper_bake import is_available, synth  # type: ignore  # noqa: E402
-from compress_audio_ogg import _find_ffmpeg, convert_wav_to_ogg  # type: ignore  # noqa: E402
-
-
-def bake_one(text: str, ogg_rel: str, ffmpeg: str, force: bool) -> str:
-    ogg_path = ROOT / ogg_rel
-    if ogg_path.exists() and not force:
-        return "skip"
-    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tf:
-        tmp = Path(tf.name)
-    try:
-        if not synth(text, tmp):
-            return "fail"
-        for attempt in range(4):
-            if convert_wav_to_ogg(ffmpeg, tmp, ogg_path):
-                return "baked"
-            time.sleep(0.4 * (attempt + 1))
-        return "fail"
-    finally:
-        tmp.unlink(missing_ok=True)
+LESSONS = ROOT / "lessons"
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--only-missing", action="store_true",
+                        help="skip prompt clips that already exist")
+    args = parser.parse_args()
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from compress_audio_ogg import _find_ffmpeg, convert_wav_to_ogg
+    from piper_bake import is_available, synth
+
     if not is_available():
-        log.error("Piper voice not available at voices/en_US-amy-medium.onnx")
+        print("Piper voice/runtime is unavailable", file=sys.stderr)
         return 1
     ffmpeg = _find_ffmpeg()
-    log.info("ffmpeg: %s", ffmpeg)
-    counts = {"baked": 0, "skip": 0, "fail": 0}
-    for f in sorted(LESSONS_DIR.glob("lesson_*.json")):
-        data = json.loads(f.read_text(encoding="utf-8"))
-        for q in data.get("questions", []):
-            if not str(q.get("id", "")).startswith("math"):
+    prompt_items: dict[str, str] = {}
+    option_items: dict[str, str] = {}
+    for lesson_file in sorted(LESSONS.glob("lesson_*.json")):
+        data = json.loads(lesson_file.read_text(encoding="utf-8"))
+        for question in data.get("questions", []):
+            if not str(question.get("id", "")).startswith("math"):
                 continue
-            for v in q.get("variations", []):
-                if v.get("_audio"):
-                    counts[bake_one(str(v.get("prompt") or ""), v["_audio"], ffmpeg, force=True)] += 1
-                for o in v.get("options", []):
-                    if o.get("_audio"):
-                        counts[bake_one(str(o.get("text") or ""), o["_audio"], ffmpeg, force=False)] += 1
-    log.info("done: baked=%(baked)d skip=%(skip)d fail=%(fail)d", counts)
-    return 1 if counts["fail"] else 0
+            if question.get("math_tip") and question.get("math_tip_audio"):
+                option_items[str(question["math_tip_audio"])] = str(question["math_tip"])
+            for variation in question.get("variations", []):
+                prompt_items[str(variation["_audio"])] = str(variation["prompt"])
+                for option in variation.get("options", []):
+                    option_items[str(option["_audio"])] = str(option["text"])
+
+    errors = 0
+    completed = 0
+    prompt_total = sum(1 for rel in prompt_items if not args.only_missing or not (ROOT / rel).is_file())
+    total = prompt_total + sum(1 for rel in option_items if not (ROOT / rel).is_file())
+    for rel, spoken_text in sorted(prompt_items.items()):
+        ogg = ROOT / rel
+        if args.only_missing and ogg.is_file():
+            continue
+        wav = ogg.with_suffix(".wav")
+        if not synth(spoken_text, wav) or not convert_wav_to_ogg(ffmpeg, wav, ogg):
+            errors += 1
+        completed += 1
+        if completed % 25 == 0: print(f"baked {completed}/{total}")
+    for rel, spoken_text in sorted(option_items.items()):
+        ogg = ROOT / rel
+        if ogg.is_file():
+            continue
+        wav = ogg.with_suffix(".wav")
+        if not synth(spoken_text, wav) or not convert_wav_to_ogg(ffmpeg, wav, ogg):
+            errors += 1
+        completed += 1
+        if completed % 25 == 0: print(f"baked {completed}/{total}")
+    print(f"math audio complete: {completed - errors} ok, {errors} errors")
+    return 1 if errors else 0
 
 
 if __name__ == "__main__":

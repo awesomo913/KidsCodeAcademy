@@ -1328,7 +1328,7 @@
           "_audio": "assets/audio/q/lesson_12_q5_v6.ogg"
         },
         {
-          "prompt": "Which one is TRUE about Cursor in depth?",
+          "prompt": "You want Cursor to edit one button. What should you point out?",
           "options": [
             {
               "text": "Cursor only works on Tuesdays before 3 PM.",
@@ -1410,16 +1410,19 @@
     {
       "id": "math1",
       "skipGate": true,
-      "math_skill": "subtraction-to-10",
+      "math_skill": "subtraction-within-20",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "Think: what number plus the smaller number makes the larger number?",
+      "math_tip_audio": "assets/audio/o/478a5e0b38.ogg",
       "variations": [
         {
-          "prompt": "What is 9 minus 8?",
+          "prompt": "What is 14 minus 13?",
           "_audio": "assets/audio/q/lesson_12_math1_v0.ogg",
           "options": [
             {
-              "text": "2",
+              "text": "0",
               "correct": false,
-              "_audio": "assets/audio/o/da4b9237ba.ogg"
+              "_audio": "assets/audio/o/b6589fc6ab.ogg"
             },
             {
               "text": "1",
@@ -1427,14 +1430,14 @@
               "_audio": "assets/audio/o/356a192b79.ogg"
             },
             {
-              "text": "0",
+              "text": "2",
               "correct": false,
-              "_audio": "assets/audio/o/b6589fc6ab.ogg"
+              "_audio": "assets/audio/o/da4b9237ba.ogg"
             },
             {
-              "text": "6",
+              "text": "4",
               "correct": false,
-              "_audio": "assets/audio/o/c1dfd96eea.ogg"
+              "_audio": "assets/audio/o/1b64538924.ogg"
             }
           ]
         }
@@ -1443,21 +1446,34 @@
     {
       "id": "math2",
       "skipGate": true,
-      "math_skill": "compare-numbers",
+      "math_skill": "missing-addend",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "Count up from the first number until you reach the total.",
+      "math_tip_audio": "assets/audio/o/fa78af0034.ogg",
       "variations": [
         {
-          "prompt": "Which number is bigger: 1 or 3?",
+          "prompt": "1 plus what makes 14?",
           "_audio": "assets/audio/q/lesson_12_math2_v0.ogg",
           "options": [
             {
-              "text": "1",
+              "text": "12",
               "correct": false,
-              "_audio": "assets/audio/o/356a192b79.ogg"
+              "_audio": "assets/audio/o/7b52009b64.ogg"
             },
             {
-              "text": "3",
+              "text": "10",
+              "correct": false,
+              "_audio": "assets/audio/o/b1d5781111.ogg"
+            },
+            {
+              "text": "18",
+              "correct": false,
+              "_audio": "assets/audio/o/9e6a55b6b4.ogg"
+            },
+            {
+              "text": "13",
               "correct": true,
-              "_audio": "assets/audio/o/77de68daec.ogg"
+              "_audio": "assets/audio/o/bd307a3ec3.ogg"
             }
           ]
         }
@@ -1466,31 +1482,34 @@
     {
       "id": "math3",
       "skipGate": true,
-      "math_skill": "addition-to-10",
+      "math_skill": "doubles",
+      "math_level": "Grade 2 foundation",
+      "math_tip": "A double means two equal groups. Add the same number twice.",
+      "math_tip_audio": "assets/audio/o/fce13a332d.ogg",
       "variations": [
         {
-          "prompt": "What is 8 plus 1?",
+          "prompt": "What is 2 plus 2?",
           "_audio": "assets/audio/q/lesson_12_math3_v0.ogg",
           "options": [
             {
-              "text": "11",
+              "text": "5",
               "correct": false,
-              "_audio": "assets/audio/o/17ba079149.ogg"
+              "_audio": "assets/audio/o/ac3478d69a.ogg"
             },
             {
-              "text": "12",
+              "text": "7",
               "correct": false,
-              "_audio": "assets/audio/o/7b52009b64.ogg"
+              "_audio": "assets/audio/o/902ba3cda1.ogg"
             },
             {
-              "text": "9",
+              "text": "4",
               "correct": true,
-              "_audio": "assets/audio/o/0ade7c2cf9.ogg"
+              "_audio": "assets/audio/o/1b64538924.ogg"
             },
             {
-              "text": "14",
+              "text": "3",
               "correct": false,
-              "_audio": "assets/audio/o/fa35e19212.ogg"
+              "_audio": "assets/audio/o/77de68daec.ogg"
             }
           ]
         }
@@ -1504,5 +1523,12 @@
     ],
     "complete_after": 3,
     "auto_complete": false
-  }
+  },
+  "vocabulary": [
+    {
+      "word": "function",
+      "meaning": "a named set of code steps that you can use again",
+      "_audio": "assets/audio/o/9c0d969cce.ogg"
+    }
+  ]
 }
