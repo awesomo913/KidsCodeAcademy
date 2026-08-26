@@ -76,6 +76,7 @@ def step_quality_tests() -> None:
     """Block packaging when curriculum, persistence, or chess rules regress."""
     log.info("=== step 1d: curriculum + backend regression checks ===")
     run([sys.executable, "scripts/audit_question_quality.py", "--check"])
+    run([sys.executable, "scripts/test_question_audit.py"])
     run([sys.executable, "scripts/test_backend.py"])
     node = shutil.which("node")
     if node:

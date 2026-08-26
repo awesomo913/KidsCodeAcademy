@@ -5,6 +5,7 @@ data-driven instead of eyeballed. Categories:
 
   prompt_too_long      prompt is hard to read aloud (long for a 7yo)
   hard_word            a word too advanced / jargon without a gloss
+  weak_vocabulary      a Word Power entry is missing a short, plain definition
   bare_option          an answer choice is too short/abstract to mean anything
                        (numeric Math Minute choices are intentionally short)
   all_silly_wrong      every wrong answer is absurd -> kid wins by elimination,
@@ -29,6 +30,9 @@ REPORT = ROOT / "logs" / "question_quality_audit.md"
 
 PROMPT_MAX = 95  # chars; longer is a mouthful for a 7yo read-aloud
 HARD_WORD_MIN = 12  # letters; very long words are usually too advanced
+VOCAB_MEANING_MAX = 95
+VOCAB_MEANING_MIN_WORDS = 4
+VOCAB_MEANING_MAX_WORDS = 18
 
 # Jargon a 7yo won't know unless it's glossed in the same string.
 JARGON = {
@@ -37,6 +41,8 @@ JARGON = {
     "neural", "gradient", "tensor", "asynchronous", "concurrency",
     "abstraction", "encapsulation", "polymorphism", "deprecated",
 }
+
+COMMON_LONG_WORDS = {"everything", "something", "yourself"}
 
 # Silly markers: if ALL wrong answers contain one, the question is too easy.
 SILLY = re.compile(
@@ -89,6 +95,7 @@ def audit() -> dict:
     findings: dict[str, list] = {
         "prompt_too_long": [],
         "hard_word": [],
+        "weak_vocabulary": [],
         "bare_option": [],
         "all_silly_wrong": [],
         "template_opener": [],
@@ -103,11 +110,51 @@ def audit() -> dict:
 
     for f in sorted(LESSONS_DIR.glob("lesson_*.json")):
         data = json.loads(f.read_text(encoding="utf-8"))
-        glossary_words = {
+        vocabulary = data.get("vocabulary", [])
+        declared_glossary_words = {
             token.lower()
-            for entry in data.get("vocabulary", [])
+            for entry in vocabulary
             for token in words(str(entry.get("word", "")))
         }
+        glossary_words: set[str] = set()
+        seen_vocabulary: set[str] = set()
+        for vocab_index, entry in enumerate(vocabulary):
+            word = str(entry.get("word") or "").strip()
+            meaning = str(entry.get("meaning") or "").strip()
+            key = word.casefold()
+            meaning_words = words(meaning)
+            reasons: list[str] = []
+            if not word:
+                reasons.append("missing word")
+            if key in seen_vocabulary:
+                reasons.append("duplicate word")
+            seen_vocabulary.add(key)
+            if not (VOCAB_MEANING_MIN_WORDS <= len(meaning_words) <= VOCAB_MEANING_MAX_WORDS):
+                reasons.append(
+                    f"definition must be {VOCAB_MEANING_MIN_WORDS}-{VOCAB_MEANING_MAX_WORDS} words"
+                )
+            if len(meaning) > VOCAB_MEANING_MAX:
+                reasons.append(f"definition is longer than {VOCAB_MEANING_MAX} characters")
+            hard_definition_words = [
+                token for token in meaning_words
+                if ((len(token) >= HARD_WORD_MIN or token.lower() in JARGON)
+                    and token.lower() not in declared_glossary_words
+                    and token.lower() not in COMMON_LONG_WORDS)
+            ]
+            if hard_definition_words:
+                reasons.append("definition contains hard word: " + hard_definition_words[0])
+            if reasons:
+                findings["weak_vocabulary"].append(
+                    (f"{f.name} vocabulary[{vocab_index}]", word or "(missing)", "; ".join(reasons))
+                )
+            else:
+                glossary_words.update(token.lower() for token in words(word))
+
+            vocab_audio = entry.get("_audio")
+            if not vocab_audio or not (ROOT / str(vocab_audio)).is_file():
+                findings["missing_audio"].append(
+                    (f"{f.name} vocabulary[{vocab_index}]", vocab_audio or "(missing _audio field)")
+                )
         totals["lessons"] += 1
         lid = f.name
         for q in data.get("questions", []):
@@ -146,7 +193,7 @@ def audit() -> dict:
                     lw = w.lower()
                     if ((len(w) >= HARD_WORD_MIN or lw in JARGON)
                             and lw not in glossary_words
-                            and lw not in {"everything", "something", "yourself"}):
+                            and lw not in COMMON_LONG_WORDS):
                         findings["hard_word"].append((where, w, prompt[:60]))
                         break
 

@@ -5,7 +5,7 @@ public-visible: true
 # Kids Code Academy — Handoff
 **Last updated:** 2026-08-25
 **Current owner:** User (primary designer) + Codex (implementation)
-**Status:** v0.9.1 quality hardening; 60-lesson curriculum complete
+**Status:** v0.9.2 vocabulary verification; 60-lesson curriculum complete
 
 ---
 
@@ -30,6 +30,13 @@ public-visible: true
 The user already ships an adult tutorial called "Claude Code Mastery" (`cc-mastery-pwa/`, packaged as `ClaudeCodeMastery.exe`/`.apk`). The kid version forks that engine pattern, swaps the curriculum and theme to age 7, and replaces real-AI with a sandboxed "pretend AI" so a child can practice safely. The user picked the fork-and-reskin approach over a fresh build to inherit the existing PyInstaller + pywebview + single-HTML pipeline. The user picked sandbox-only AI (over guarded real-Claude) to remove every safety failure mode and every cost line item — this is for daily kid use, not occasional supervised demos.
 
 ## 4. History
+
+### 2026-08-25 — v0.9.2: vocabulary verification and regression protection
+
+- Reproduced the original 378 hard-word findings and traced every location into the current curriculum: 150 were removed or simplified, 163 are necessary coding/AI terms with visible read-aloud Word Power definitions, and 65 are child-level compounds such as “back-and-forth” and “step-by-step.”
+- Confirmed that none of the 378 historical locations retains an unexplained advanced word.
+- Strengthened the build audit so a glossary entry only permits a technical term when it has a unique, short, plain-language definition and working baked audio.
+- Added regression tests proving that missing definitions and definitions containing new unexplained jargon fail the release gate.
 
 ### 2026-08-25 — v0.9.1: semantic quality, durability, accessibility, and ambient audio
 

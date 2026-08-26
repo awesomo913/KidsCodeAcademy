@@ -1,5 +1,5 @@
 # Kids Code Academy — Tutorial
-**Last updated:** 2026-08-25 (v0.9.1)
+**Last updated:** 2026-08-25 (v0.9.2)
 
 ---
 
@@ -96,6 +96,11 @@ Important coding words also appear in **Word Power** cards with a plain-language
 - **Q: Is this a real Claude?** A: No, and intentionally so. It's a sandbox that simulates the experience without internet access.
 
 ## 6. Changelog (user-facing)
+
+### 2026-08-25 — v0.9.2
+- Verified: all 378 historically flagged hard-word locations now use simpler language, a child-friendly compound, or a visible Word Power definition.
+- Improved: important coding and AI words remain teachable instead of being removed; every retained technical term has a plain explanation and read-aloud audio.
+- Protected: future builds fail if a Word Power definition is missing, too long, uses unexplained jargon, is duplicated, or lacks audio.
 
 ### 2026-08-25 — v0.9.1
 - Improved: answer choices now keep the meaning of each replay, include a believable misconception, and avoid filler wording and duplicate choices.
