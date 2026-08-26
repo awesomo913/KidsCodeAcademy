@@ -9,8 +9,8 @@
 [CmdletBinding()]
 param(
     [string]$InstallDir = (Join-Path $env:USERPROFILE 'Desktop'),
-    [string]$Tag = 'v0.9.0',
-    [string]$ExpectedSha256 = '32c0f62b81f09126c4747208ea7541b241e960739278d9f0777c0d062bc157f7',
+    [string]$Tag = 'v0.9.1',
+    [string]$ExpectedSha256 = '9baeeab4d55125f7c99a192b6ec9fcbc656777202f923e3153b15ceb0666a114',
     [switch]$NoLaunch
 )
 

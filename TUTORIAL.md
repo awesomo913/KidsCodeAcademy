@@ -1,5 +1,5 @@
 # Kids Code Academy — Tutorial
-**Last updated:** 2026-08-25 (v0.9.0)
+**Last updated:** 2026-08-25 (v0.9.1)
 
 ---
 
@@ -96,6 +96,13 @@ Important coding words also appear in **Word Power** cards with a plain-language
 - **Q: Is this a real Claude?** A: No, and intentionally so. It's a sandbox that simulates the experience without internet access.
 
 ## 6. Changelog (user-facing)
+
+### 2026-08-25 — v0.9.1
+- Improved: answer choices now keep the meaning of each replay, include a believable misconception, and avoid filler wording and duplicate choices.
+- Added: a calm built-in music loop; music remains off by default and automatically quiets under narration.
+- Improved: manual progress placement and file-backed progress storage reject corrupt writes instead of replacing good data.
+- Improved: keyboard and screen-reader support for lesson navigation, Parent Corner tabs, dialogs, and answer audio buttons.
+- Improved: Compact mode now works in half-screen windows down to 560px wide.
 
 ### 2026-08-25 — v0.9.0
 - Polished: all flagged long prompts, repeated prompt templates, and fragment answers were rewritten and re-recorded.

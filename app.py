@@ -38,8 +38,8 @@ except Exception as _exc:  # pragma: no cover
 APP_TITLE = "Kids Code Academy"
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 860
-MIN_WIDTH = 800
-MIN_HEIGHT = 600
+MIN_WIDTH = 560
+MIN_HEIGHT = 480
 HTML_FILENAME = "index.html"
 
 
@@ -179,9 +179,14 @@ class JSBridge:
         return str(get_user_data_dir())
 
     def save_kid_project(self, filename: str, data: str) -> dict:
+        if not isinstance(filename, str) or not isinstance(data, str):
+            return {"ok": False, "error": "filename and data must be strings"}
         safe_name = "".join(c for c in filename if c.isalnum() or c in ("_", "-", "."))
-        if not safe_name:
+        if (not safe_name or safe_name != filename or Path(filename).name != filename
+                or filename in {".", ".."} or not filename.lower().endswith((".json", ".html", ".svg", ".txt"))):
             return {"ok": False, "error": "invalid filename"}
+        if len(data.encode("utf-8")) > 2 * 1024 * 1024:
+            return {"ok": False, "error": "project too large (max 2 MB)"}
         target = get_user_data_dir() / safe_name
         try:
             target.write_text(data, encoding="utf-8")
@@ -197,6 +202,12 @@ class JSBridge:
         # Cap at 4 MB defensively — kid state should never approach this
         if len(json_blob) > 4 * 1024 * 1024:
             return {"ok": False, "error": "state too large"}
+        try:
+            parsed = __import__("json").loads(json_blob)
+        except (ValueError, TypeError):
+            return {"ok": False, "error": "state must be valid JSON"}
+        if not isinstance(parsed, dict):
+            return {"ok": False, "error": "state must be a JSON object"}
         target = get_state_file()
         tmp = target.with_suffix(".json.tmp")
         t0 = time.monotonic()
@@ -278,15 +289,21 @@ class JSBridge:
                 return {"ok": False, "error": "file too big (max 12 MB)"}
         except OSError as exc:
             return {"ok": False, "error": str(exc)}
+        dest = _appdata_root() / f"user_bg_music{ext}"
         # Clear any prior user track (different ext) so only one exists.
         for old in _appdata_root().glob("user_bg_music.*"):
+            try:
+                if old.resolve() == chosen.resolve() == dest.resolve():
+                    return {"ok": True, "name": chosen.name, "ext": ext}
+            except OSError:
+                pass
             try:
                 old.unlink()
             except OSError as exc:
                 # Locked file (being read?) would leave two tracks; glob order
                 # could then play the wrong one. Surface it loudly.
                 log.warning("pick_music_file: could not remove old track %s: %s", old, exc)
-        dest = _appdata_root() / f"user_bg_music{ext}"
+                return {"ok": False, "error": f"could not replace old music: {exc}"}
         try:
             shutil.copy2(chosen, dest)
         except OSError as exc:
@@ -343,6 +360,8 @@ class JSBridge:
                     raw = fp.read_text(encoding="utf-8")
                     obj = json.loads(raw)
                 except (OSError, json.JSONDecodeError):
+                    continue
+                if not isinstance(obj, dict):
                     continue
                 # Friendly name: capstone uses game_name; level saves get a
                 # readable "My Level" + date instead of the raw kid_level_<ts>.

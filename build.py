@@ -53,6 +53,7 @@ def step_assets() -> None:
     run([sys.executable, "gen_icons.py"])
     run([sys.executable, "gen_mascot.py"])
     run([sys.executable, "scripts/gen_sfx.py"])
+    run([sys.executable, "scripts/gen_bg_music.py"])
 
 
 def step_sandbox_lint() -> None:
@@ -66,11 +67,21 @@ def step_sandbox_lint() -> None:
 
 
 def step_distractor_lint() -> None:
-    """Block ship if any wrong-answer text repeats > 3 times in one question.
-    Defeats the kid's pattern-matching memorization. dedupe_distractors.py
-    auto-fixes locally; this lint enforces the cap at build time."""
+    """Block duplicate visible choices or one distractor reused too broadly."""
     log.info("=== step 1c: distractor dedupe check ===")
     run([sys.executable, "scripts/check_distractor_dupes.py", "--quiet"])
+
+
+def step_quality_tests() -> None:
+    """Block packaging when curriculum, persistence, or chess rules regress."""
+    log.info("=== step 1d: curriculum + backend regression checks ===")
+    run([sys.executable, "scripts/audit_question_quality.py", "--check"])
+    run([sys.executable, "scripts/test_backend.py"])
+    node = shutil.which("node")
+    if node:
+        run([node, "scripts/test_chess_rules.mjs"])
+    else:
+        log.warning("node unavailable; skipped chess engine regression test")
 
 
 def step_audio() -> None:
@@ -279,6 +290,7 @@ def main() -> None:
     step_assets()
     step_sandbox_lint()
     step_distractor_lint()
+    step_quality_tests()
 
     # Audio: skip on non-Windows by default (pyttsx3 + SAPI Zira is Windows-only;
     # the wavs in assets/audio/ are already pre-baked and committed to the repo).

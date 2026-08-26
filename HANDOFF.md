@@ -5,7 +5,7 @@ public-visible: true
 # Kids Code Academy — Handoff
 **Last updated:** 2026-08-25
 **Current owner:** User (primary designer) + Codex (implementation)
-**Status:** v0.9.0 desktop build verified; 60-lesson curriculum complete
+**Status:** v0.9.1 quality hardening; 60-lesson curriculum complete
 
 ---
 
@@ -30,6 +30,15 @@ public-visible: true
 The user already ships an adult tutorial called "Claude Code Mastery" (`cc-mastery-pwa/`, packaged as `ClaudeCodeMastery.exe`/`.apk`). The kid version forks that engine pattern, swaps the curriculum and theme to age 7, and replaces real-AI with a sandboxed "pretend AI" so a child can practice safely. The user picked the fork-and-reskin approach over a fresh build to inherit the existing PyInstaller + pywebview + single-HTML pipeline. The user picked sandbox-only AI (over guarded real-Claude) to remove every safety failure mode and every cost line item — this is for daily kid use, not occasional supervised demos.
 
 ## 4. History
+
+### 2026-08-25 — v0.9.1: semantic quality, durability, accessibility, and ambient audio
+
+- Removed synthetic prompt/answer wrappers and restored every replay's authored meaning; truth and incorrect-statement variants no longer share incompatible answer sets.
+- Strengthened the curriculum gate across all 60 lessons, 570 questions, and 3,870 variations: complete answer sets, one correct choice, no visible duplicates, no bare answers, no filler openers, no all-joke distractor sets, full math support, and complete audio references.
+- Hardened progress/project persistence against invalid JSON, non-object saves, malformed project files, unsafe filenames, oversize payloads, and failed music replacement.
+- Made lesson cards, chapters, Parent Corner tabs, dialog focus, Escape-close behavior, and answer speaker controls keyboard/screen-reader friendly.
+- Added a real compact layout for 560–900px windows and a deterministic, copyright-free 24-second stereo ambient loop that ducks under narration.
+- Added build-blocking backend, curriculum, and chess regression checks.
 
 ### 2026-08-25 — v0.9.0: editorial polish, guided math, and rules-correct chess
 

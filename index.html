@@ -18,6 +18,8 @@
   --accent-2: #6b8cff;
   --accent-3: #ffb84d;
   --accent-4: #5acf95;
+  --danger: #a51e3f;
+  --success: #187344;
   --locked: #cfd1e0;
   --shadow: 0 6px 0 rgba(26,26,58,0.12);
   --shadow-2: 0 8px 24px rgba(26,26,58,0.10);
@@ -42,6 +44,8 @@
   --accent-2: #6f8aff;
   --accent-3: #f0b853;
   --accent-4: #6ee0a8;
+  --danger: #ff9bad;
+  --success: #7ce3ad;
 }
 /* Reduced-motion respect — kid w/ sensory issues / vestibular sensitivity. */
 @media (prefers-reduced-motion: reduce) {
@@ -123,6 +127,8 @@ button { font-family: inherit; cursor: pointer; }
   border: 3px solid transparent;
   transition: transform var(--dur), border-color var(--dur);
   cursor: pointer;
+  width: 100%; color: inherit; font-size: inherit; text-align: left;
+  appearance: none;
 }
 .lesson-card:hover { transform: translateX(4px); border-color: var(--accent-2); }
 .lesson-card.locked { opacity: 0.55; cursor: not-allowed; }
@@ -164,6 +170,24 @@ button { font-family: inherit; cursor: pointer; }
   html[data-layout="compact"] .main,
   html[data-layout="compact"] #lessonView { padding: 14px; }
   html[data-layout="compact"] .topbar h1 { font-size: 18px; }
+}
+@media (max-width: 900px) {
+  html[data-layout="compact"] .layout { padding: 10px; gap: 10px; }
+  html[data-layout="compact"] .sidebar {
+    max-height: 30vh; overflow-y: auto; padding: 2px 6px 8px 2px;
+    scrollbar-gutter: stable;
+  }
+  html[data-layout="compact"] .chapter-head { padding: 9px 11px; }
+  html[data-layout="compact"] .chapter-body { gap: 7px; padding-top: 5px; }
+  html[data-layout="compact"] .lesson-card { padding: 9px 11px; }
+  html[data-layout="compact"] .main { min-height: 0; padding: 15px; }
+  html[data-layout="compact"] .stage { grid-template-columns: 130px 1fr; gap: 12px; }
+  html[data-layout="compact"] .mascot { width: 120px; height: 120px; }
+  html[data-layout="compact"] .bubble { font-size: 18px; padding: 12px 14px; }
+}
+@media (max-width: 720px) {
+  html[data-layout="compact"] .stage { grid-template-columns: 1fr; }
+  html[data-layout="compact"] .mascot { justify-self: center; }
 }
 @media (max-width: 360px) {
   html[data-layout="compact"] .mascot { width: 90px; height: 90px; }
@@ -261,8 +285,9 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 20px;
   text-align: center; cursor: pointer;
   transition: transform var(--dur), background var(--dur);
+  width: 100%; height: 100%; padding-right: 54px;
 }
-.choice { position: relative; }
+.choice-wrap { position: relative; min-width: 0; }
 .choice:hover { transform: translateY(-3px); background: var(--bg-1); }
 .choice.right { background: var(--accent-4); color: white; border-color: var(--accent-4); }
 .choice.wrong { background: rgba(255, 90, 120, 0.22); border-color: var(--accent); }
@@ -278,12 +303,13 @@ button { font-family: inherit; cursor: pointer; }
   display: inline-flex; align-items: center; justify-content: center;
   border-radius: 999px;
   background: rgba(255,255,255,0.55);
+  color: var(--ink); border: 0; padding: 0;
   cursor: pointer;
   user-select: none;
   opacity: 0.7;
   transition: opacity var(--dur), transform var(--dur);
 }
-.choice:hover .choice-speaker { opacity: 1; transform: scale(1.08); }
+.choice-wrap:hover .choice-speaker { opacity: 1; transform: scale(1.08); }
 .choice-speaker:hover { transform: scale(1.18); }
 .choice-speaker:active { transform: scale(0.92); }
 
@@ -1052,6 +1078,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 }
 .parent-pane { display: none; }
 .parent-pane.active { display: block; }
+#pinError { color: var(--danger); }
 
 .activity-row {
   display: grid;
@@ -1576,7 +1603,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
   </div>
 </div>
 
-<div class="overlay" id="parentOverlay" role="dialog" aria-label="Parent Corner">
+<div class="overlay" id="parentOverlay" role="dialog" aria-modal="true" aria-label="Parent Corner">
   <div class="overlay-card">
     <h2>Parent Corner</h2>
     <div id="parentLocked">
@@ -1591,7 +1618,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
       </p>
     </div>
     <div id="parentSetup" style="display:none;">
-      <p id="setupReason" class="muted" style="color:#c62828;font-weight:600;min-height:18px;margin:0 0 6px;"></p>
+      <p id="setupReason" class="muted" style="color:var(--danger);font-weight:600;min-height:18px;margin:0 0 6px;"></p>
       <h3 style="margin-top:0;">Set up your parent PIN</h3>
       <p>Pick a 4-digit number you'll remember. Your kid should NOT see you type this.</p>
       <p class="muted" style="font-size:13px;">
@@ -1611,32 +1638,32 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
                  style="font-size:24px;padding:10px;border-radius:10px;border:3px solid var(--accent-2);width:140px;letter-spacing:8px;" />
         </label>
       </div>
-      <p id="setupError" class="muted" style="color:#c62828;min-height:18px;"></p>
+      <p id="setupError" class="muted" style="color:var(--danger);min-height:18px;"></p>
       <button id="setupSave" class="btn-big">Save PIN &amp; continue</button>
     </div>
     <div id="parentUnlocked" style="display:none;">
       <div class="parent-tabs" role="tablist">
-        <button class="parent-tab active" data-tab="progress">Progress</button>
-        <button class="parent-tab" data-tab="activity">Activity</button>
-        <button class="parent-tab" data-tab="grade">Grade</button>
-        <button class="parent-tab" data-tab="chess">Chess</button>
-        <button class="parent-tab" data-tab="games">Games</button>
-        <button class="parent-tab" data-tab="memory">Memory</button>
-        <button class="parent-tab" data-tab="projects">Projects</button>
-        <button class="parent-tab" data-tab="transcripts">Transcripts</button>
-        <button class="parent-tab" data-tab="settings">Settings</button>
+        <button class="parent-tab active" role="tab" id="parentTab-progress" aria-controls="parentPane-progress" aria-selected="true" tabindex="0" data-tab="progress">Progress</button>
+        <button class="parent-tab" role="tab" id="parentTab-activity" aria-controls="parentPane-activity" aria-selected="false" tabindex="-1" data-tab="activity">Activity</button>
+        <button class="parent-tab" role="tab" id="parentTab-grade" aria-controls="parentPane-grade" aria-selected="false" tabindex="-1" data-tab="grade">Grade</button>
+        <button class="parent-tab" role="tab" id="parentTab-chess" aria-controls="parentPane-chess" aria-selected="false" tabindex="-1" data-tab="chess">Chess</button>
+        <button class="parent-tab" role="tab" id="parentTab-games" aria-controls="parentPane-games" aria-selected="false" tabindex="-1" data-tab="games">Games</button>
+        <button class="parent-tab" role="tab" id="parentTab-memory" aria-controls="parentPane-memory" aria-selected="false" tabindex="-1" data-tab="memory">Memory</button>
+        <button class="parent-tab" role="tab" id="parentTab-projects" aria-controls="parentPane-projects" aria-selected="false" tabindex="-1" data-tab="projects">Projects</button>
+        <button class="parent-tab" role="tab" id="parentTab-transcripts" aria-controls="parentPane-transcripts" aria-selected="false" tabindex="-1" data-tab="transcripts">Transcripts</button>
+        <button class="parent-tab" role="tab" id="parentTab-settings" aria-controls="parentPane-settings" aria-selected="false" tabindex="-1" data-tab="settings">Settings</button>
       </div>
 
-      <div class="parent-pane active" data-pane="progress">
+      <div class="parent-pane active" role="tabpanel" id="parentPane-progress" aria-labelledby="parentTab-progress" data-pane="progress">
         <div class="summary-card" id="parentSummary"></div>
       </div>
 
-      <div class="parent-pane" data-pane="activity">
+      <div class="parent-pane" role="tabpanel" id="parentPane-activity" aria-labelledby="parentTab-activity" data-pane="activity" hidden>
         <p class="muted">Every lesson session: time spent, number of clicks, retries, and grade.</p>
         <div id="parentActivity"><em class="muted">No activity yet.</em></div>
       </div>
 
-      <div class="parent-pane" data-pane="grade">
+      <div class="parent-pane" role="tabpanel" id="parentPane-grade" aria-labelledby="parentTab-grade" data-pane="grade" hidden>
         <div class="summary-card full-grade">
           <div class="big-grade" id="parentBigGrade">—</div>
           <div class="muted" id="parentGradeBlurb">Complete some lessons to see a coding grade.</div>
@@ -1644,37 +1671,37 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
         </div>
       </div>
 
-      <div class="parent-pane" data-pane="chess">
+      <div class="parent-pane" role="tabpanel" id="parentPane-chess" aria-labelledby="parentTab-chess" data-pane="chess" hidden>
         <p class="muted">Every chess match's grade. Stars: 1=tried, 2=good game, 3=excellent.</p>
         <div id="parentChessSummary" class="summary-card"></div>
         <div id="parentChessHistory" style="margin-top:10px;"><em class="muted">No chess matches yet.</em></div>
       </div>
 
-      <div class="parent-pane" data-pane="games">
+      <div class="parent-pane" role="tabpanel" id="parentPane-games" aria-labelledby="parentTab-games" data-pane="games" hidden>
         <p class="muted">Pick any game to play right now. Closes Parent Corner.</p>
         <div id="parentGameLauncher"></div>
       </div>
 
-      <div class="parent-pane" data-pane="memory">
+      <div class="parent-pane" role="tabpanel" id="parentPane-memory" aria-labelledby="parentTab-memory" data-pane="memory" hidden>
         <p class="muted">📓 Memory rules your kid composed in lesson 25. Capped at 20 newest.</p>
         <div id="parentMemoryList"><em class="muted">No rules saved yet.</em></div>
       </div>
 
-      <div class="parent-pane" data-pane="projects">
+      <div class="parent-pane" role="tabpanel" id="parentPane-projects" aria-labelledby="parentTab-projects" data-pane="projects" hidden>
         <p class="muted">🎮 Games + projects your kid finished (saved to AppData).</p>
         <div id="parentProjectsList"><em class="muted">No projects saved yet. Lesson 60 capstone creates the first one.</em></div>
       </div>
 
-      <div class="parent-pane" data-pane="transcripts">
+      <div class="parent-pane" role="tabpanel" id="parentPane-transcripts" aria-labelledby="parentTab-transcripts" data-pane="transcripts" hidden>
         <p class="muted">What your kid typed to the AI helpers.</p>
         <div id="parentTranscripts" class="transcript-box muted"><em>No conversations yet.</em></div>
       </div>
 
-      <div class="parent-pane" data-pane="settings">
+      <div class="parent-pane" role="tabpanel" id="parentPane-settings" aria-labelledby="parentTab-settings" data-pane="settings" hidden>
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
           <strong style="font-size:17px;">ℹ️ App version</strong>
           <p class="muted" style="font-size:14px;margin:6px 0 0;">
-            <b>v0.9.0</b> — polished lessons, guided Grade 2 math, rules-correct coached chess, and complete read-aloud support.
+            <b>v0.9.1</b> — stronger answer quality, safer progress storage, improved accessibility, and bundled calm music.
           </p>
         </div>
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
@@ -1779,7 +1806,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 <script>
 "use strict";
 
-const APP_VERSION = "v0.9.0";
+const APP_VERSION = "v0.9.1";
 
 /* ============================================================
  *  DOM helpers — never use innerHTML on caller-supplied strings.
@@ -1809,6 +1836,11 @@ function svgEl(tag, attrs) {
   return node;
 }
 function clearNode(n) { while (n.firstChild) n.removeChild(n.firstChild); }
+function escapeHtmlText(value) {
+  return String(value == null ? "" : value).replace(/[&<>"']/g, ch => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[ch]);
+}
 function isHexOrNamed(c) {
   if (typeof c !== "string") return false;
   if (/^#[0-9a-fA-F]{3,8}$/.test(c)) return true;
@@ -1833,17 +1865,20 @@ const Store = {
     catch (e) { console.warn("[Store.load]", k, e); return fb; }
   },
   save(k, v) {
+    let ok = true;
     try {
       localStorage.setItem(k, JSON.stringify(v));
     } catch (e) {
       // QuotaExceededError / serialization fail — logged so silent data-loss
       // is at least visible in console + caught by Persistence flush as backup.
       console.warn("[Store.save]", k, e && e.name, e && e.message);
+      ok = false;
     }
     // v0.3.4: every save also schedules a debounced flush to AppData state.json
     // via JSBridge. This is the durability fallback if WebView2 storage gets
     // wiped (PyInstaller's _MEI temp churn used to invalidate localStorage).
     if (typeof Persistence !== "undefined") Persistence.scheduleFlush();
+    return ok;
   },
 };
 
@@ -1892,7 +1927,8 @@ const Persistence = {
     this._flushPending = true;
     try {
       const blob = JSON.stringify(this._allKcaKeys());
-      await window.pywebview.api.save_state(blob);
+      const result = await window.pywebview.api.save_state(blob);
+      if (result && result.ok === false) console.warn("Persistence.flushNow rejected:", result.error || "unknown error");
     } catch (e) {
       console.warn("Persistence.flushNow failed", e);
     } finally {
@@ -1931,8 +1967,17 @@ const Persistence = {
   },
 };
 
+const _freshProgress = () => ({ completed: {}, stickers: 0, last: null });
+const _normalizeProgress = raw => (raw && typeof raw === "object" &&
+  raw.completed && typeof raw.completed === "object" && !Array.isArray(raw.completed))
+  ? {
+      completed: raw.completed,
+      stickers: Number.isFinite(Number(raw.stickers)) ? Math.max(0, Number(raw.stickers)) : 0,
+      last: typeof raw.last === "string" ? raw.last : null,
+    }
+  : _freshProgress();
 const Progress = {
-  state: Store.load(Store.K_PROG, { completed: {}, stickers: 0, last: null }),
+  state: _normalizeProgress(Store.load(Store.K_PROG, null)),
   isCompleted(id) { return !!this.state.completed[id]; },
   complete(id) {
     // Parent Preview Mode: don't touch the kid's progress.
@@ -1944,7 +1989,7 @@ const Progress = {
     Store.save(Store.K_PROG, this.state);
   },
   reset() {
-    this.state = { completed: {}, stickers: 0, last: null };
+    this.state = _freshProgress();
     Store.save(Store.K_PROG, this.state);
     Store.save(Store.K_TRANS, []);
     Store.save(Store.K_SESSIONS, []);
@@ -2507,8 +2552,8 @@ const Audio_ = {
  * volume while narration plays (via Audio_.playLesson hooks) so it never
  * fights the warm Piper voice that's the project's audio identity.
  *
- * Music file is OPTIONAL: ships as a fallback no-op when no file exists at
- * assets/bg_music/loop.ogg. Parent can drop their own ogg into that folder.
+ * A gentle copyright-free loop ships at assets/bg_music/loop.ogg. Parents can
+ * replace it through Settings; the custom track is stored safely in AppData.
  * Toggle persists in Store.K_BGMUSIC; default OFF so the program ships quiet.
  */
 const Ambient = {
@@ -2550,7 +2595,7 @@ const Ambient = {
         }
       }
     } catch (e) { console.warn("[Ambient] user-music load failed:", e); }
-    // Fall back to bundled loop (may 404 → _hasFile stays false, no-op).
+    // Fall back to the bundled loop.
     try { this._audio.src = "assets/bg_music/loop.ogg"; } catch (_) {}
   },
   isEnabled() { return this._enabled; },
@@ -4845,13 +4890,17 @@ const KidGame = {
                 }).join("") + "</tr>").join("") +
                 "</table>"
               : "<p style='color:#888;font-style:italic;'>(no level painted)</p>";
-            const html = "<!doctype html><html><head><meta charset='utf-8'><title>" + raw + "</title>" +
+            const safeName = escapeHtmlText(raw);
+            const safeIdea = escapeHtmlText(ideaSummary || "(no idea recorded)");
+            const safeSlug = escapeHtmlText(slug);
+            const safeVersion = escapeHtmlText(project.app_version);
+            const html = "<!doctype html><html><head><meta charset='utf-8'><title>" + safeName + "</title>" +
               "<style>body{font-family:'Segoe UI',sans-serif;background:#faf7f2;color:#2a2a2a;padding:24px;max-width:680px;margin:0 auto;}h1{color:#6c5ce7;margin:0 0 4px;}h2{font-size:14px;color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-top:24px;}p.idea{font-size:15px;line-height:1.5;background:#fff;padding:12px;border-radius:8px;border:1px solid #ddd;}@media print{body{background:#fff;}}</style></head><body>" +
-              "<h1>" + raw + "</h1><div style='color:#999;'>by your kid 🎮 — created " + created.slice(0, 10) + "</div>" +
-              "<h2>The idea</h2><p class='idea'>" + (ideaSummary || "(no idea recorded)") + "</p>" +
+              "<h1>" + safeName + "</h1><div style='color:#999;'>by your kid 🎮 — created " + created.slice(0, 10) + "</div>" +
+              "<h2>The idea</h2><p class='idea'>" + safeIdea + "</p>" +
               "<h2>The level</h2>" + gridHtml +
-              "<h2>Share link</h2><code style='background:#f0f0f4;padding:6px 10px;border-radius:6px;font-family:monospace;'>kidcode://share/" + slug + "</code>" +
-              "<p style='margin-top:24px;color:#999;font-size:12px;'>Made with Kids Code Academy " + project.app_version + ". Save or print this page!</p>" +
+              "<h2>Share link</h2><code style='background:#f0f0f4;padding:6px 10px;border-radius:6px;font-family:monospace;'>kidcode://share/" + safeSlug + "</code>" +
+              "<p style='margin-top:24px;color:#999;font-size:12px;'>Made with Kids Code Academy " + safeVersion + ". Save or print this page!</p>" +
               "</body></html>";
             const r2 = api.save_kid_project(slug + ".html", html);
             Promise.resolve(r2).then(rr => {
@@ -5345,13 +5394,13 @@ const QuestionFlow = {
         onfocus:      () => startHoverAudio(btn, optText, optAudio),
         onblur:       () => cancelHoverAudio(),
       }, optText);
-      // Touchscreen affordance — tap the speaker icon to hear without committing.
-      // Stop-prop on icon click so the answer doesn't get picked accidentally.
-      const speaker = el("span", {
+      // The speaker is a sibling button, not an interactive element nested
+      // inside the answer button. That keeps keyboard and screen-reader
+      // behavior valid while preserving the large tap target.
+      const speaker = el("button", {
+        type: "button",
         class: "choice-speaker",
         "aria-label": "Read this answer aloud",
-        role: "button",
-        tabindex: "0",
         onclick: (e) => {
           if (e && e.stopPropagation) e.stopPropagation();
           if (e && e.preventDefault) e.preventDefault();
@@ -5362,8 +5411,8 @@ const QuestionFlow = {
           speakOptionNow(btn, optText, optAudio);
         },
       }, "🔊");
-      btn.appendChild(speaker);
-      grid.appendChild(btn);
+      const wrap = el("div", { class: "choice-wrap" }, btn, speaker);
+      grid.appendChild(wrap);
     });
   },
 
@@ -7637,7 +7686,11 @@ const UI = {
         chapterLessons.includes(this.current);  // auto-expand chapter that holds current lesson
 
       const head = el("button", {
+        type: "button",
         class: "chapter-head" + (isExpanded ? " expanded" : "") + (isChapterUnlocked ? "" : " locked"),
+        "aria-expanded": String(isExpanded),
+        "aria-controls": `chapterBody-${chapter.id}`,
+        "aria-disabled": String(!isChapterUnlocked),
         onclick: () => {
           if (!isChapterUnlocked) { Audio_.sfx("Oops"); return; }
           ChapterUI.setExpanded(chapter.id, !isExpanded);
@@ -7651,7 +7704,10 @@ const UI = {
       );
       sb.appendChild(head);
 
-      const body = el("div", { class: "chapter-body" + (isExpanded ? " expanded" : "") });
+      const body = el("div", {
+        id: `chapterBody-${chapter.id}`,
+        class: "chapter-body" + (isExpanded ? " expanded" : ""),
+      });
       sb.appendChild(body);
 
       if (!isExpanded) return;
@@ -7660,11 +7716,14 @@ const UI = {
         const lesson = LessonStore.byId[id];
         const completed = Progress.isCompleted(id);
         const unlocked = LessonStore.isUnlocked(id);
-        const card = el("div", {
+        const card = el("button", {
+          type: "button",
           class: "lesson-card" +
             (completed ? " completed" : "") +
             (!unlocked ? " locked" : "") +
             (this.current === id ? " active" : ""),
+          "aria-disabled": String(!unlocked),
+          "aria-current": this.current === id ? "page" : null,
           onclick: () => {
             if (!unlocked) { Audio_.sfx("Oops"); return; }
             this.openLesson(id);
@@ -8364,6 +8423,7 @@ const Parent = {
     setTimeout(() => document.getElementById("setupPin1").focus(), 50);
   },
   open() {
+    this._returnFocus = document.activeElement;
     document.getElementById("parentOverlay").classList.add("show");
     if (this._isFirstSetup()) {
       const reason = this._corruptedPin
@@ -8440,6 +8500,10 @@ const Parent = {
     // and silently locks future answer-button hovers in the lesson view.
     try { cancelHoverAudio(); } catch (_) {}
     document.getElementById("parentOverlay").classList.remove("show");
+    const target = this._returnFocus && typeof this._returnFocus.focus === "function"
+      ? this._returnFocus : document.getElementById("parentBtn");
+    this._returnFocus = null;
+    setTimeout(() => target && target.focus(), 0);
   },
   unlock() {
     const stored = Store.load(Store.K_PIN, null);
@@ -8463,8 +8527,17 @@ const Parent = {
     this._fill();
   },
   showTab(name) {
-    document.querySelectorAll(".parent-tab").forEach(b => b.classList.toggle("active", b.dataset.tab === name));
-    document.querySelectorAll(".parent-pane").forEach(p => p.classList.toggle("active", p.dataset.pane === name));
+    document.querySelectorAll(".parent-tab").forEach(b => {
+      const selected = b.dataset.tab === name;
+      b.classList.toggle("active", selected);
+      b.setAttribute("aria-selected", String(selected));
+      b.tabIndex = selected ? 0 : -1;
+    });
+    document.querySelectorAll(".parent-pane").forEach(p => {
+      const selected = p.dataset.pane === name;
+      p.classList.toggle("active", selected);
+      p.hidden = !selected;
+    });
   },
   _fill() {
     this._fillProgress();
@@ -8865,9 +8938,11 @@ async function main() {
   // state was snapshotted at script-parse time, before localStorage was populated).
   await _waitForPywebview();
   await Persistence.hydrate();
-  Progress.state = Store.load(Store.K_PROG, { completed: {}, stickers: 0, last: null });
-  Sessions.list = Store.load(Store.K_SESSIONS, []);
-  Transcripts.list = Store.load(Store.K_TRANS, []);
+  Progress.state = _normalizeProgress(Store.load(Store.K_PROG, null));
+  const loadedSessions = Store.load(Store.K_SESSIONS, []);
+  const loadedTranscripts = Store.load(Store.K_TRANS, []);
+  Sessions.list = Array.isArray(loadedSessions) ? loadedSessions : [];
+  Transcripts.list = Array.isArray(loadedTranscripts) ? loadedTranscripts : [];
 
   // v0.7.11 Fix 3: bg music init (no-op if file missing or toggle off).
   Ambient.init();
@@ -8949,7 +9024,7 @@ async function main() {
   const _bgStatus = (msg, ok) => {
     if (!bgmusicStatus) return;
     bgmusicStatus.textContent = msg;
-    bgmusicStatus.style.color = ok ? "#2e7d32" : "#c62828";
+    bgmusicStatus.style.color = ok ? "var(--success)" : "var(--danger)";
   };
   const bgPreviewBtn = document.getElementById("bgmusicPreview");
   if (bgPreviewBtn) {
@@ -9041,14 +9116,14 @@ async function main() {
       const targetIdStr = (setProgSelect.value || "").trim();
       if (!targetIdStr) {
         setProgStatus.textContent = "Pick a lesson first.";
-        setProgStatus.style.color = "#c62828";
+        setProgStatus.style.color = "var(--danger)";
         return null;
       }
       const rows = _setProgList();
       const target = rows.find(r => r.idStr === targetIdStr);
       if (!target) {
         setProgStatus.textContent = "That lesson isn't loaded yet — reopen Settings and try again.";
-        setProgStatus.style.color = "#c62828";
+        setProgStatus.style.color = "var(--danger)";
         return null;
       }
       return { rows, target };
@@ -9061,17 +9136,17 @@ async function main() {
         Progress.state.stickers = completedCount;
       }
       try {
-        Store.save(Store.K_PROG, Progress.state);
+        if (!Store.save(Store.K_PROG, Progress.state)) throw new Error("localStorage write failed");
       } catch (e) {
         console.warn("[setProgress] save failed:", e);
         setProgStatus.textContent = "Save failed — storage may be disabled.";
-        setProgStatus.style.color = "#c62828";
+        setProgStatus.style.color = "var(--danger)";
         return false;
       }
       try { UI.renderSidebar(); } catch (_) {}
       _setProgRefreshOptions();
       setProgStatus.textContent = statusText(completedCount);
-      setProgStatus.style.color = "#2e7d32";
+      setProgStatus.style.color = "var(--success)";
       return true;
     };
     setProgBtn.addEventListener("click", () => {
@@ -9179,7 +9254,7 @@ async function main() {
   document.getElementById("resetBtn").addEventListener("click", async () => {
     if (!confirm("Reset all kid progress and PIN?")) return;
     Progress.reset();
-    Store.save(Store.K_PIN, "1234");
+    Store.save(Store.K_PIN, null);
     Transcripts.list = [];
     Sessions.list = [];
     // Wipe the file mirror too — otherwise next boot would re-hydrate the kid's
@@ -9190,6 +9265,38 @@ async function main() {
   });
   document.querySelectorAll(".parent-tab").forEach(b => {
     b.addEventListener("click", () => Parent.showTab(b.dataset.tab));
+    b.addEventListener("keydown", e => {
+      const tabs = Array.from(document.querySelectorAll(".parent-tab"));
+      const index = tabs.indexOf(b);
+      let next = -1;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") next = (index + 1) % tabs.length;
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") next = (index - 1 + tabs.length) % tabs.length;
+      if (e.key === "Home") next = 0;
+      if (e.key === "End") next = tabs.length - 1;
+      if (next < 0) return;
+      e.preventDefault();
+      Parent.showTab(tabs[next].dataset.tab);
+      tabs[next].focus();
+    });
+  });
+  document.addEventListener("keydown", e => {
+    const overlay = document.getElementById("parentOverlay");
+    if (!overlay.classList.contains("show")) return;
+    if (e.key === "Escape") {
+      e.preventDefault();
+      Parent.close();
+      return;
+    }
+    if (e.key === "Tab") {
+      const focusable = Array.from(overlay.querySelectorAll(
+        'button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )).filter(node => node.offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
   });
   // Celebration: "Next →" advances now (cancels auto-advance and goes); "Stay here" cancels and stays
   document.getElementById("celebrationOk").addEventListener("click", () => {

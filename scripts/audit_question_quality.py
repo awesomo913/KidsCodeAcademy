@@ -17,7 +17,9 @@ Run: python scripts/audit_question_quality.py
 from __future__ import annotations
 
 import json
+import argparse
 import re
+import sys
 from collections import Counter
 from pathlib import Path
 
@@ -38,17 +40,42 @@ JARGON = {
 
 # Silly markers: if ALL wrong answers contain one, the question is too easy.
 SILLY = re.compile(
-    r"\b(banana|sock|socks|sneeze|moon|pizza|lullaby|wizard|onion|slipper|"
-    r"jelly|cloud|whistle|bark|egg|hat|dance|spin|sing|tickle|burp|"
-    r"unicorn|dragon|spaghetti)\b",
+    r"\b(allergic|broccoli|sandwich|squirrel|dragon|giggle|couch|banana|"
+    r"pancakes?|butterfl|lamp|homework|sneaker|cookie|farm|oil|puppy|bees?|"
+    r"fridge|lasagna|tuesdays?|storm|carrots?|dreams?|cry|cheese|moth|"
+    r"breakfast|hat|goose|pizza|sock|sneeze|moon|lullaby|wizard|onion|"
+    r"slipper|jelly|cloud|whistle|bark|egg|dance|spin|sing|tickle|burp|"
+    r"unicorn|spaghetti|frog|candy|smell|melt|feelings?|lemon|shoe|teacup|"
+    r"leaf pile|bow before|parade|wifi|tiny chefs?|weather report|curfew|"
+    r"soprano|cello|goldfish|jealous|shelf space|jars?|sacred|odd hats?|"
+    r"sniff|snacks?|riddles?|butterfl|loud enough|vowels?|yelling|tiny dog|"
+    r"paid|shy compliments?|pictures? of your foot|mail your question|wall|"
+    r"invisible ink|computer needs a nap|slap the laptop|peanut|hot air balloon|"
+    r"tiny mice|one tiny book|gummy worms?|sip of water|magic stones?|pebbles|"
+    r"using its tail|spinning in circles|logs? out forever|bank closings?|holidays?|"
+    r"24 hours?|grocery list|in pencil|turns purple|only on weekdays|at midnight|"
+    r"taxes|sad and damp|rot if|scare people|approved by a committee|"
+    r"grandparent|afraid of them|required to make a sequel|disappears?|"
+    r"stacked on top|butterfl|smells? the code|loaf of bread|refuse to load|"
+    r"written sideways|earns? you .*stars?|bold is best|gets? shorter|"
+    r"invisible until .* says hi|x turns into y|song without lyrics|yell .?math|"
+    r"local models? can fly|helper cries|saturdays?|singing chef|sings? every change|"
+    r"inhaling crayons|because shy|tiny hats?|blob files?|gets? dizzy|sit there doing nothing|"
+    r"secret forever|helps? no one|grows? new keys|never work,? ever|metal trees|"
+    r"mushy notes?|only emoji|boring on purpose|does something fun|bigger ideas? are always|"
+    r"long stories with chapters|last part you build|flying horse|train on mars|"
+    r"slowest helper|llama .* closet|frowns? at parents|invisible coins|"
+    r"signatures? and a stamp|write a poem instead)\b",
     re.IGNORECASE,
 )
 
 TEMPLATE_OPENERS = [
+    re.compile(r"^(quick!|hey friend|bytey wonders|tell me|wait wait wait|pop quiz|listen up|think about this|got a quick one|brain time)", re.IGNORECASE),
     re.compile(r"^pick the most .+-y", re.IGNORECASE),
     re.compile(r"^which one is true about", re.IGNORECASE),
     re.compile(r"^pick the (silliest|wrong)", re.IGNORECASE),
-    re.compile(r"^what is\b", re.IGNORECASE),
+    re.compile(r"^one of these is silly", re.IGNORECASE),
+    re.compile(r"\b(the silliest claim|pick the wrong one)\b", re.IGNORECASE),
 ]
 
 
@@ -65,6 +92,9 @@ def audit() -> dict:
         "bare_option": [],
         "all_silly_wrong": [],
         "template_opener": [],
+        "invalid_answer_set": [],
+        "missing_audio": [],
+        "missing_math_support": [],
     }
     distractor_counts: Counter = Counter()
     math_prompt_counts: Counter = Counter()
@@ -93,6 +123,21 @@ def audit() -> dict:
                 opts = v.get("options") or []
                 if is_math:
                     math_prompt_counts[prompt] += 1
+                    if not q.get("math_level") or not q.get("math_tip") or not q.get("math_tip_audio"):
+                        findings["missing_math_support"].append((where, q.get("math_skill")))
+
+                correct_count = sum(1 for option in opts if option.get("correct"))
+                option_texts = [str(option.get("text") or "").strip() for option in opts]
+                valid_count = 2 <= len(opts) <= 4 if is_math else len(opts) == 4
+                if not valid_count or correct_count != 1 or len(set(option_texts)) != len(option_texts) or any(not text for text in option_texts):
+                    findings["invalid_answer_set"].append((where, len(opts), correct_count, option_texts))
+                audio_refs = [v.get("_audio")]
+                audio_refs.extend(option.get("_audio") for option in opts)
+                if is_math:
+                    audio_refs.append(q.get("math_tip_audio"))
+                for rel in audio_refs:
+                    if not rel or not (ROOT / str(rel)).is_file():
+                        findings["missing_audio"].append((where, rel or "(missing _audio field)"))
 
                 if len(prompt) > PROMPT_MAX:
                     findings["prompt_too_long"].append((where, len(prompt), prompt))
@@ -109,8 +154,13 @@ def audit() -> dict:
                 for ot in wrong:
                     if not is_math and len(words(ot)) <= 2:
                         findings["bare_option"].append((where, ot))
-                    if not is_math:
-                        distractor_counts[ot] += 1
+                # Count a distractor once per question rather than once per
+                # replay variation. Repeating a scenario's three authored
+                # choices across shuffled replays is honest reuse; artificial
+                # wrappers such as "Rumor:" are not quality.
+                if not is_math:
+                    for ot in set(wrong):
+                        distractor_counts[(lid, qid, ot)] += 1
                 if wrong and all(SILLY.search(ot) for ot in wrong):
                     findings["all_silly_wrong"].append((where, prompt[:50], wrong))
 
@@ -120,13 +170,19 @@ def audit() -> dict:
                             findings["template_opener"].append((where, prompt[:70]))
                             break
 
-    dupes = [(t, c) for t, c in distractor_counts.most_common(40) if c >= 8]
+    text_question_counts: Counter = Counter()
+    for (_lid, _qid, text), _count in distractor_counts.items():
+        text_question_counts[text] += 1
+    dupes = [(t, c) for t, c in text_question_counts.most_common(40) if c >= 8]
     math_dupes = [(t, c) for t, c in math_prompt_counts.most_common() if c > 1]
     return {"findings": findings, "dupes": dupes, "totals": totals,
             "math_dupes": math_dupes, "math_skills": math_skills}
 
 
-def main() -> None:
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true", help="exit 1 when any quality finding remains")
+    args = parser.parse_args()
     res = audit()
     REPORT.parent.mkdir(exist_ok=True)
     lines = ["# Question Quality Audit", ""]
@@ -161,7 +217,10 @@ def main() -> None:
     print(f"  {'math_duplicate_prompt':20s} {len(res['math_dupes'])}")
     print(f"  {'math_skill_categories':20s} {len(res['math_skills'])}")
     print(f"report -> {REPORT}")
+    issue_count = sum(len(items) for items in res["findings"].values())
+    issue_count += len(res["dupes"]) + len(res["math_dupes"])
+    return 1 if args.check and issue_count else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

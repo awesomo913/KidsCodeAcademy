@@ -1,20 +1,22 @@
-"""Audit lesson questions for over-repeated wrong-answer (distractor) text.
+"""Audit lesson questions for misleading distractor reuse.
 
-If the SAME wrong-answer string appears in many variations of one question, the
-kid pattern-matches: "I keep seeing 'pretty buttons' — that's the wrong one"
-within 1 lesson visit. Defeats the entire anti-memorization point of having
-multiple variations.
+Only one variation is shown during a lesson attempt, so reusing the same three
+authored scenario choices across shuffled replays is valid.  Earlier versions
+mistook that reuse for a defect and added low-quality wrappers such as
+``Rumor:`` or ``(no way)``.  This check now blocks the defects that matter:
+duplicate choices visible in one variation and one distractor reused across
+many different questions in the same lesson.
 
-This script scans every lesson's `questions[].variations[].options[]`, counts
-how often each wrong-answer text appears within the same question, and flags
-any string that appears more than `--max-repeats` times (default 3).
+This script scans every lesson's `questions[].variations[].options[]`, rejects
+duplicate choices visible together, and counts how many different questions
+reuse each wrong answer. It flags reuse beyond `--max-repeats` (default 3).
 
 Returns exit 1 on any flag — wired into `build.py` as a lint step so a future
 content edit that re-introduces dupes blocks the build with a clear error.
 
 Usage:
     python scripts/check_distractor_dupes.py             # exit 1 on flags
-    python scripts/check_distractor_dupes.py --max-repeats 2
+    python scripts/check_distractor_dupes.py --max-repeats 3
     python scripts/check_distractor_dupes.py --quiet     # only print failures
 """
 from __future__ import annotations
@@ -33,10 +35,14 @@ ROOT = Path(__file__).resolve().parent.parent
 LESSONS_DIR = ROOT / "lessons"
 
 
+def _key(text: str) -> str:
+    return text.strip().rstrip(".!?").casefold()
+
+
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--max-repeats", type=int, default=3,
-                   help="max times a wrong-answer text can appear in one question (default 3)")
+                   help="max different questions in one lesson that may reuse one distractor")
     p.add_argument("--quiet", action="store_true")
     args = p.parse_args()
 
@@ -52,34 +58,27 @@ def main() -> int:
         except json.JSONDecodeError as exc:
             flags.append(f"{lf.name}: invalid JSON ({exc})")
             continue
+        lesson_question_reuse: Counter[str] = Counter()
         for q_idx, q in enumerate(data.get("questions") or []):
             qid = q.get("id") or f"q{q_idx + 1}"
-            wrong_counts: Counter[str] = Counter()
+            for v in q.get("variations") or []:
+                visible = [_key(opt.get("text") or "") for opt in v.get("options") or []]
+                if len(visible) != len(set(visible)):
+                    flags.append(f"{lf.name} {qid}: one variation shows duplicate answer choices")
+            distinct_wrong: set[str] = set()
             for v in q.get("variations") or []:
                 for opt in v.get("options") or []:
                     if not opt.get("correct"):
-                        text = (opt.get("text") or "").strip()
+                        text = _key(opt.get("text") or "")
                         if text:
-                            wrong_counts[text] += 1
-            for text, n in wrong_counts.most_common():
-                if n > args.max_repeats:
-                    flags.append(f"{lf.name} {qid}: '{text[:50]}' repeats {n}x (max {args.max_repeats})")
-        # Also catch lesson-wide memorization patterns. Repeating one silly line
-        # across several questions is just as recognizable as repeating it in
-        # one question. Numeric Math Minute choices are excluded on purpose.
-        lesson_counts: Counter[str] = Counter()
-        for q in data.get("questions") or []:
+                            distinct_wrong.add(text)
             if str(q.get("id") or "").startswith("math"):
                 continue
-            for v in q.get("variations") or []:
-                for opt in v.get("options") or []:
-                    if not opt.get("correct"):
-                        text = (opt.get("text") or "").strip()
-                        if text:
-                            lesson_counts[text] += 1
-        for text, n in lesson_counts.most_common():
-            if n > 6:
-                flags.append(f"{lf.name}: '{text[:50]}' repeats {n}x across lesson (max 6)")
+            for text in distinct_wrong:
+                lesson_question_reuse[text] += 1
+        for text, n in lesson_question_reuse.most_common():
+            if n > args.max_repeats:
+                flags.append(f"{lf.name}: '{text[:50]}' appears in {n} different questions (max {args.max_repeats})")
 
     if flags:
         if not args.quiet:
