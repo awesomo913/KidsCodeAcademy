@@ -11,7 +11,7 @@ import audit_question_quality as audit_module
 
 
 class VocabularyAuditTests(unittest.TestCase):
-    def _audit(self, meaning: str) -> dict:
+    def _audit(self, meaning: str, typing_payload: dict | None = None) -> dict:
         with tempfile.TemporaryDirectory(prefix="kca_vocab_audit_") as temp:
             root = Path(temp)
             lessons = root / "lessons"
@@ -28,6 +28,15 @@ class VocabularyAuditTests(unittest.TestCase):
                 }],
                 "questions": [{
                     "id": "q1",
+                    "interaction": {
+                        "type": "type-this-word",
+                        "payload": typing_payload if typing_payload is not None else {
+                            "prompt": "Type the word CODE!",
+                            "target_display": "CODE",
+                            "targets": ["code"],
+                            "hint_wrong": "Type the word CODE.",
+                        },
+                    },
                     "variations": [{
                         "prompt": "Which description of a variable is correct?",
                         "_audio": "assets/audio/o/test.ogg",
@@ -64,6 +73,13 @@ class VocabularyAuditTests(unittest.TestCase):
         result = self._audit("a named box that uses polymorphism in code")
         self.assertEqual(1, len(result["findings"]["weak_vocabulary"]))
         self.assertEqual(1, len(result["findings"]["hard_word"]))
+
+    def test_typing_activity_requires_visible_target_and_accepted_answer(self) -> None:
+        result = self._audit(
+            "a named box in code that can hold a value",
+            {"prompt": "Type this word!", "word": "CODE"},
+        )
+        self.assertEqual(1, len(result["findings"]["invalid_interaction"]))
 
 
 if __name__ == "__main__":

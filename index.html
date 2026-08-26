@@ -761,6 +761,20 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 .match-target.filled { background: var(--accent-4); color: white; border-color: var(--accent-4); border-style: solid; }
 
 .type-row { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.type-target-card {
+  display: inline-flex; align-items: center; gap: 12px;
+  max-width: 100%; margin: 4px 0 14px; padding: 12px 14px 12px 18px;
+  border: 3px solid var(--accent-2); border-radius: var(--r-md);
+  background: linear-gradient(135deg, var(--panel), var(--bg-2));
+  box-shadow: var(--shadow); color: var(--ink);
+}
+.type-target-copy { display: grid; gap: 2px; }
+.type-target-label { color: var(--ink-soft); font-size: 15px; font-weight: 800; }
+.type-target-word {
+  overflow-wrap: anywhere; font-size: clamp(28px, 5vw, 40px); line-height: 1.1;
+  font-weight: 900; letter-spacing: .08em; color: var(--accent-2);
+}
+.type-input-label { font-size: 17px; font-weight: 800; color: var(--ink); }
 .type-row input[type="text"] {
   font-family: inherit; font-size: 22px;
   padding: 12px 16px;
@@ -1701,7 +1715,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
           <strong style="font-size:17px;">ℹ️ App version</strong>
           <p class="muted" style="font-size:14px;margin:6px 0 0;">
-            <b>v0.9.2</b> — verified child-level vocabulary, read-aloud Word Power definitions, and stronger curriculum checks.
+            <b>v0.9.3</b> — every typing activity clearly shows and reads aloud what the child should type.
           </p>
         </div>
         <div style="background:var(--panel-2);border-radius:var(--r-md);padding:14px;margin-bottom:14px;">
@@ -1806,7 +1820,7 @@ input.anim-input-shake   { animation: kca-input-shake 480ms ease-in-out; }
 <script>
 "use strict";
 
-const APP_VERSION = "v0.9.2";
+const APP_VERSION = "v0.9.3";
 
 /* ============================================================
  *  DOM helpers — never use innerHTML on caller-supplied strings.
@@ -4080,21 +4094,43 @@ const KidGame = {
 
     "type-this-word"(host, p, done) {
       host.appendChild(el("h3", null, p.prompt || "Type the word!"));
-      if (p.target_display) {
-        const tgt = el("p", null,
-          "Try typing: ",
-          el("span", { class: "kbd", style: { fontSize: "22px" } }, String(p.target_display))
-        );
-        host.appendChild(tgt);
+      const legacyWord = String(p.word || "").trim();
+      const configuredTargets = Array.isArray(p.targets) ? p.targets : [];
+      const displayTarget = String(p.target_display || legacyWord || configuredTargets[0] || "").trim();
+      const targets = (configuredTargets.length ? configuredTargets : [legacyWord || displayTarget])
+        .map(t => String(t).trim().toLowerCase())
+        .filter(Boolean);
+      if (displayTarget) {
+        const spokenTarget = displayTarget.replace(/_+/g, " blank ");
+        const speak = el("button", {
+          class: "vocab-speak", type: "button",
+          "aria-label": `Read the typing example ${displayTarget} aloud`,
+          onclick: () => {
+            Tracker.click();
+            speakText(`Type this: ${spokenTarget}`);
+          },
+        }, "🔊");
+        host.appendChild(el("div", {
+          class: "type-target-card", role: "group", "aria-label": `Text to type: ${displayTarget}`,
+        },
+        el("div", { class: "type-target-copy" },
+          el("div", { class: "type-target-label" }, "Type this:"),
+          el("div", { class: "type-target-word" }, displayTarget)
+        ), speak));
       }
       const row = el("div", { class: "type-row" });
       host.appendChild(row);
-      const inp = el("input", { type: "text", placeholder: "Type here...", maxlength: "80" });
-      const btn = el("button", { class: "btn-big" }, "Send");
-      const hint = el("div", { class: "hint" });
+      if (displayTarget) row.appendChild(el("div", { class: "type-input-label" }, `Now type ${displayTarget}:`));
+      const shortTarget = displayTarget && displayTarget.length <= 24;
+      const inp = el("input", {
+        type: "text", placeholder: shortTarget ? `Type ${displayTarget} here…` : "Type here…",
+        maxlength: "80", autocomplete: "off", autocapitalize: "characters", spellcheck: "false",
+        "aria-label": displayTarget ? `Type ${displayTarget}` : "Type the requested word",
+      });
+      const btn = el("button", { class: "btn-big", type: "button" }, "Send");
+      const hint = el("div", { class: "hint", role: "status", "aria-live": "polite" });
       row.appendChild(inp); row.appendChild(btn); row.appendChild(hint);
 
-      const targets = (p.targets || []).map(t => String(t).toLowerCase());
       const submit = () => {
         const v = (inp.value || "").trim().toLowerCase();
         Tracker.click();
@@ -4110,7 +4146,7 @@ const KidGame = {
           setTimeout(() => done(true), 1000);
         } else {
           Tracker.retry();
-          hint.textContent = p.hint_wrong || "Try again — read the hint above!";
+          hint.textContent = p.hint_wrong || (displayTarget ? `Try typing ${displayTarget}.` : "Try again — read the hint above!");
           inp.classList.add("anim-input-shake");
           setTimeout(() => inp.classList.remove("anim-input-shake"), 500);
           Audio_.sfx("Oops");

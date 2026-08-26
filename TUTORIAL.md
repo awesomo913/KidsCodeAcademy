@@ -1,5 +1,5 @@
 # Kids Code Academy — Tutorial
-**Last updated:** 2026-08-25 (v0.9.2)
+**Last updated:** 2026-08-26 (v0.9.3)
 
 ---
 
@@ -96,6 +96,12 @@ Important coding words also appear in **Word Power** cards with a plain-language
 - **Q: Is this a real Claude?** A: No, and intentionally so. It's a sandbox that simulates the experience without internet access.
 
 ## 6. Changelog (user-facing)
+
+### 2026-08-26 — v0.9.3
+- Fixed: every typing activity now clearly displays the exact word or phrase the child needs to enter.
+- Added: a high-contrast target card and speaker button that reads the typing example aloud.
+- Improved: input labels, placeholders, and retry hints now repeat the target clearly.
+- Protected: future builds fail if a typing activity lacks a visible target, accepted answer, or retry hint.
 
 ### 2026-08-25 — v0.9.2
 - Verified: all 378 historically flagged hard-word locations now use simpler language, a child-friendly compound, or a visible Word Power definition.

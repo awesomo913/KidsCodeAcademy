@@ -3,9 +3,9 @@ public-visible: true
 ---
 
 # Kids Code Academy — Handoff
-**Last updated:** 2026-08-25
+**Last updated:** 2026-08-26
 **Current owner:** User (primary designer) + Codex (implementation)
-**Status:** v0.9.2 vocabulary verification; 60-lesson curriculum complete
+**Status:** v0.9.3 visible typing targets; 60-lesson curriculum complete
 
 ---
 
@@ -30,6 +30,13 @@ public-visible: true
 The user already ships an adult tutorial called "Claude Code Mastery" (`cc-mastery-pwa/`, packaged as `ClaudeCodeMastery.exe`/`.apk`). The kid version forks that engine pattern, swaps the curriculum and theme to age 7, and replaces real-AI with a sandboxed "pretend AI" so a child can practice safely. The user picked the fork-and-reskin approach over a fresh build to inherit the existing PyInstaller + pywebview + single-HTML pipeline. The user picked sandbox-only AI (over guarded real-Claude) to remove every safety failure mode and every cost line item — this is for daily kid use, not occasional supervised demos.
 
 ## 4. History
+
+### 2026-08-26 — v0.9.3: visible, accessible typing activities
+
+- Fixed 12 older typing activities whose payload named the answer but did not provide the visible target or accepted-answer list expected by the renderer.
+- Added a large high-contrast target card, a spoken-example button, a specific input label, and a useful retry hint to every typing activity.
+- Kept backward-compatible rendering for older lesson files while migrating the full shipped curriculum to the canonical schema.
+- Added a release-blocking interaction audit so a typing task cannot ship without a visible target, accepted answer, and retry guidance.
 
 ### 2026-08-25 — v0.9.2: vocabulary verification and regression protection
 

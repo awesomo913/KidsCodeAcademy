@@ -60,9 +60,12 @@ def _swap_word(lesson_id: int, q_idx: int) -> str:
 
 
 def _make_typing_payload(lesson_id: int, q_idx: int) -> dict:
+    word = _swap_word(lesson_id, q_idx)
     return {
-        "prompt": "Type this word!",
-        "word": _swap_word(lesson_id, q_idx),
+        "prompt": f"Type the word {word}!",
+        "target_display": word,
+        "targets": [word.lower()],
+        "hint_wrong": f"Type the word {word}.",
     }
 
 

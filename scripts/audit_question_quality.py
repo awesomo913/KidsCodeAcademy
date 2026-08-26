@@ -6,6 +6,7 @@ data-driven instead of eyeballed. Categories:
   prompt_too_long      prompt is hard to read aloud (long for a 7yo)
   hard_word            a word too advanced / jargon without a gloss
   weak_vocabulary      a Word Power entry is missing a short, plain definition
+  invalid_interaction  a mini-game payload cannot render or validate its task
   bare_option          an answer choice is too short/abstract to mean anything
                        (numeric Math Minute choices are intentionally short)
   all_silly_wrong      every wrong answer is absurd -> kid wins by elimination,
@@ -96,6 +97,7 @@ def audit() -> dict:
         "prompt_too_long": [],
         "hard_word": [],
         "weak_vocabulary": [],
+        "invalid_interaction": [],
         "bare_option": [],
         "all_silly_wrong": [],
         "template_opener": [],
@@ -154,6 +156,42 @@ def audit() -> dict:
             if not vocab_audio or not (ROOT / str(vocab_audio)).is_file():
                 findings["missing_audio"].append(
                     (f"{f.name} vocabulary[{vocab_index}]", vocab_audio or "(missing _audio field)")
+                )
+
+        interaction_nodes = [("game", data.get("game"))]
+        interaction_nodes.extend(
+            (f"question {question.get('id', '?')}", question.get("interaction"))
+            for question in data.get("questions", [])
+        )
+        for interaction_where, interaction in interaction_nodes:
+            if not isinstance(interaction, dict) or interaction.get("type") != "type-this-word":
+                continue
+            payload = interaction.get("payload")
+            reasons: list[str] = []
+            if not isinstance(payload, dict):
+                reasons.append("payload must be an object")
+                payload = {}
+            prompt = str(payload.get("prompt") or "").strip()
+            display = str(payload.get("target_display") or "").strip()
+            targets = payload.get("targets")
+            hint = str(payload.get("hint_wrong") or "").strip()
+            if payload.get("word"):
+                reasons.append("uses legacy word field instead of target_display and targets")
+            if not prompt:
+                reasons.append("missing prompt")
+            if not display:
+                reasons.append("missing visible target_display")
+            elif len(display) > 80:
+                reasons.append("target_display is longer than 80 characters")
+            if not isinstance(targets, list) or not targets or any(not str(target).strip() for target in targets):
+                reasons.append("targets must be a non-empty list")
+            elif len({str(target).strip().casefold() for target in targets}) != len(targets):
+                reasons.append("targets contains duplicates")
+            if not hint:
+                reasons.append("missing retry hint")
+            if reasons:
+                findings["invalid_interaction"].append(
+                    (f"{f.name} {interaction_where}", "; ".join(reasons))
                 )
         totals["lessons"] += 1
         lid = f.name
